@@ -1,30 +1,28 @@
 h1. Shell 
 
-Dies soll nicht unbedingt ein vollständiger Guide zur Shell werden, sondern mehr eine kleine Ansammlung von Tipps, die vielleicht anderen vom Nutzen sein können.
+This is not a complete guide, but a collection of hints that makes the life with your shell easier. As my main system is OS X, some tipps might only work on this system.
 
 h2. Shortcuts
 
-* <code>ctrl + a</code> Anfang der Zeile springen 
-* <code>ctrl + e</code> Zu Ende der Zeile springen
-* <code>ctrl + r</code> Suche starten, wiederholt sucht frühere Eingaben
-* <code>ctrl + l</code> Terminal säubern
+* @ctrl + a@ Jump to beginning of line
+* @ctrl + e@ Jump to end of line
+* @ctrl + r@ Start search (just start typing), pressing multiple times toggles through occurences in history
+* @ctrl + l@ Clear terminal
 
 h2. Umlenken der Ausgabe
 
-* <code>></code> um _StdOut_ umzulenken, etwa in Datei oder vielleicht <code>/dev/null</code> um die Augabe ins Nirvan zu führen
-* <code>>></code> um anzuhängen
+* @>@ redirects _StdOut_, to a file or to @/dev/null@
+* @>>@ to append
 
-Ähnliches gilt für _StdErr_, dann muss nur eine <code>2</code> davor geschrieben werden, also:
-
-<code>2></code> bzw. <code>2>></code>.
+Similiar for _StdErr_, but use @2@ prefix like so @2>@ or respectively. @2>>@.
 
 h2. Nutzen der History
 
 Warum Shellbefehle merken müssen oder immer wieder neu eingeben, wenn man sie doch einfach aus der History wieder herausholen kann?
 
-Die Bash unterstützt <code>Ctrl + r</code> um in der History zu suchen. Leider ist die History zu klein um sie wirklich ausnutzen zu können. Also einfach mal den Speicherplatz vergrößern. Dies kann in der <code>.profile</code> bzw. in der <code>.bash_profile</code> passieren. Das zwei Namen existieren ist historisch begründet.
+Die Bash unterstützt @Ctrl + r@ um in der History zu suchen. Leider ist die History zu klein um sie wirklich ausnutzen zu können. Also einfach mal den Speicherplatz vergrößern. Dies kann in der @.profile@ bzw. in der @.bash_profile@ passieren. Das zwei Namen existieren ist historisch begründet.
 
-Hinweis: Gerade OSX macht einem hier gerne einen Stich durch die Rechnung und präferiert <code>.profile</code> gegenüber der </code>.bash_profile</code>. Da etwaige Installationen (etwa aus MacPorts) mal die eine oder andere anlegen, kann es zu Verwirrungen kommen.
+Hinweis: Gerade OSX macht einem hier gerne einen Stich durch die Rechnung und präferiert @.profile@ gegenüber der @.bash_profile@. Da etwaige Installationen (etwa aus MacPorts) mal die eine oder andere anlegen, kann es zu Verwirrungen kommen.
 
 <pre>        
  #.bash_profile or .profile
@@ -45,9 +43,9 @@ export HISTCONTROL=ignoreboth
 
 h2. .inputrc
 
-Neben de Profile gibt es auch noch eine <code>.inputrc</code>. Das ist eine Konfigurationsdatei für GNU Readline. Hiermit kann man schöne Dinge machen, falls einem <code>Ctrl + R</code> manchmal zu umständlich ist.
+Neben de Profile gibt es auch noch eine @.inputrc@. Das ist eine Konfigurationsdatei für GNU Readline. Hiermit kann man schöne Dinge machen, falls einem @Ctrl + R@ manchmal zu umständlich ist.
 
-Man muss sich in viele verschiedene Server einloggen, so dass die History voll mit <code>ssh ...</code> Befehlen ist. Man fängt also an und tippt <code>ssh </code>. Mit Hilfe des Schnipsels unten in der <code>.inputrc</code> kann man nun wie ewohnt mit Pfeil hoch und runter in der History arbeiten, aber die es werden nur die Einträge herausgesucht, die mit <code>ssh</code> beginnen.  
+Man muss sich in viele verschiedene Server einloggen, so dass die History voll mit @ssh ...@ Befehlen ist. Man fängt also an und tippt @ssh @. Mit Hilfe des Schnipsels unten in der @.inputrc@ kann man nun wie ewohnt mit Pfeil hoch und runter in der History arbeiten, aber die es werden nur die Einträge herausgesucht, die mit @ssh@ beginnen.  
    
 <pre>
 	# By default up/down are bound to previous-history
@@ -79,13 +77,13 @@ Hilfreich wenn man in Wörtern springen möchte
 
 h2. Finding stuff
 
-@ls -lSrh@ Sorts the current directory after size in human readable form
-@du -kx | egrep -v "\./.+/" | sort -n@ biggest directory
-@locate somefile | xargs ls -lsh@ finds a file and shows the space the use
+* *Sorts the current directory after size* in human readable form @ls -lSrh@ 
+* *Biggest directory* @du -kx | egrep -v "\./.+/" | sort -n@
+* *Finds a file and shows space in use* @locate somefile | xargs ls -lsh@
 
 h3. Grep
 
-<code>find . -name "*" -exec grep -il "searchphrase" {} \;</code>
+@find . -name "*" -exec grep -il "searchphrase" {} \;@
 
 <pre>
 -i ignores case
@@ -96,18 +94,19 @@ h2. Helpful commands
 
 h3. Various
 
-<code>ln -s /existing/path /destination/path</code> Creates a symbolic link in @/destination/path@ to @/existing/path@  
-<code>cd -</code> Zum letzen Arbeitsverzeichnis wechseln
-<code>sudo !!</code> Run the last command as root
-<code>^foo^bar</code> Runs previous command but replacing first instance of foo with bar
-<code>!!:gs/foo/bar</code> Runs previous command but replacing all instances of foo with bar
-<code>cat ~/.ssh/id_rsa.pub | ssh account@remoteserver.com "cat - >> .ssh/authorized_keys"</code> Copy ssh key
-<code>httrack "http://www.all.net/" -O "/tmp/www.all.net" "+*.all.net/*" -v</code>Spider a website
-<code>dig +short txt <keyword>.wp.dg.cx</code>query wikipedia via dns
-<code>time read</code>Stopwatch  (ctrl-d to stop)
-<code>ssh -t reachable_host ssh unreachable_host</code>SSH connection through host in the middle
-<code>nc -q 1 -w 5 -v -l -p 80 < file.ext</code>Sharing file through http 80 port, access with http://ip-address/
-<code>du -sh [file ...]</code> disk usage in readable form
+* *Create symbolic link* in @/destination/path@ to @/existing/path@ @ln -s /existing/path /destination/path@ 
+* *Change to previous working directory* @cd -@ 
+* Run the *last command as root* @sudo !!@ 
+* Runs *previous command but replacing first instance of foo with bar* @^foo^bar@ 
+* Runs *previous command but replacing all instances of foo with bar* @!!:gs/foo/bar@
+* *Copy ssh key* to server <code>cat ~/.ssh/id_rsa.pub | ssh account@remoteserver.com "cat - >> .ssh/authorized_keys"</code>
+* *Spider a website* @httrack "http://www.all.net/" -O "/tmp/www.all.net" "+*.all.net/*" -v@
+* *Query wikipedia via dns* @dig +short txt <keyword>.wp.dg.cx@
+* *Stopwatch* (ctrl-d to stop) @time read@
+* *SSH connection through host in the middle* @ssh -t reachable_host ssh unreachable_host@
+* *Sharing file through port 80*, access with @http://ip-address/@ @nc -q 1 -w 5 -v -l -p 80 < file.ext@
+* *Disk usage in readable form* @du -sh [file ...]@ 
+* *Rename all files in directory to lowercase* @for x in *; do mv "$x" "`echo $x | tr [A-Z] [a-z]`"; done@
 
 h2. FAQ/Problems
 
@@ -115,8 +114,10 @@ h3. Bash doesn't update the PATH; changes to .profile aren' registered
 
 Adding something like @EXPORT PATH=/usr/bin:$PATH@ doesn't update the @$PATH@ environment variable. The reason is that Bash tries to find local profile files in the following order:
 
-# @~/.bash_profile@
-# @~/.bash_login@
-# @~/.profile@
+<pre>
+# ~/.bash_profile
+# ~/.bash_login
+# ~/.profile
+</pre>
 
 @~/.profile@ is the last file in the list. So if OS X finds a file it stops processing. If an installer puts a @.bash_login@ in your home directory your @.profile@ would'nt be read.
