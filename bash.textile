@@ -47,14 +47,34 @@ h2. .inputrc
 
 Neben de Profile gibt es auch noch eine <code>.inputrc</code>. Das ist eine Konfigurationsdatei für GNU Readline. Hiermit kann man schöne Dinge machen, falls einem <code>Ctrl + R</code> manchmal zu umständlich ist.
 
-Szenario:
 Man muss sich in viele verschiedene Server einloggen, so dass die History voll mit <code>ssh ...</code> Befehlen ist. Man fängt also an und tippt <code>ssh </code>. Mit Hilfe des Schnipsels unten in der <code>.inputrc</code> kann man nun wie ewohnt mit Pfeil hoch und runter in der History arbeiten, aber die es werden nur die Einträge herausgesucht, die mit <code>ssh</code> beginnen.  
    
 <pre>
-# .inputrc
-# "\e[A" and "\e[B" being whatever your terminal uses for up & down.
-"\e[A": history-search-backward
-"\e[B": history-search-forward
+	# By default up/down are bound to previous-history
+	# and next-history respectively. The following does the
+	# same but gives the extra functionality where if you
+	# type any text (or more accurately, if there is any text
+	# between the start of the line and the cursor),
+	# the subset of the history starting with that text
+	# is searched (like 4dos for e.g.).
+	# Note to get rid of a line just Ctrl-C
+	"\e[A": history-search-backward
+	"\e[B": history-search-forward
+</pre>
+
+Hilfreich wenn man in Wörtern springen möchte
+
+<pre>
+	# move arround word for word with Strg + arrow keys
+	"\e[5C": forward-word
+	"\e[5D": backward-word
+	"\e\e[C": forward-word
+	"\e\e[D": backward-word
+</pre>
+
+<pre>
+	# case insensitivity for tab-completion
+	set completion-ignore-case On
 </pre> 
 
 h2. Finding stuff

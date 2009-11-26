@@ -81,8 +81,8 @@ h2. Setting up local Git
 h2. Push to Github
 
 <pre>	
-	git remote add origin git@github.com:username/reponame.git
-	git push origin master
+	$ git remote add origin git@github.com:username/reponame.git
+	$ git push origin master
 </pre>
 
 h2. Setting up remote Git
