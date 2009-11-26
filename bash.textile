@@ -90,6 +90,25 @@ h3. Grep
 -l shows filename
 </pre>
 
+h2. ls -l weirdness
+
+Sometimes when using @ls -l@ there is a @+@ or a <code>@</code> symbol
+
+<pre>
+	$ ls -la
+	-rwx------+ 1 testuser Admin     25600 Jul 12 02:04 file.ext
+	-rwx------@ 1 testuser Admin     25600 Jul 12 02:04 file.ext
+</pre>
+
+The @+@ indicates the user of ACL (Access Control Lists)
+The <code>@</code> indicates further file attributes
+
+h2. File attributes
+
+h3. Apple
+
+Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using <code>ls -ls</code> indicated by the <code>@</code> symbol. By calling <code>ls -@ you can see that an attribute @com.apple.quarantine@ has been added. To remove that call @sudo xattr -d com.apple.quarantine path@
+
 h2. Helpful commands
 
 h3. Various
@@ -107,6 +126,9 @@ h3. Various
 * *Sharing file through port 80*, access with @http://ip-address/@ @nc -q 1 -w 5 -v -l -p 80 < file.ext@
 * *Disk usage in readable form* @du -sh [file ...]@ 
 * *Rename all files in directory to lowercase* @for x in *; do mv "$x" "`echo $x | tr [A-Z] [a-z]`"; done@
+* *Replace "space" char with "dot"* char in current directory file names @ls -1 | while read a; do mv "$a" `echo $a | sed -e 's/\ /\./g'`; done@
+* *Batch rename files, replacing foo with bar* *@for file in *.*; do mv $file `echo $file | sed 's/foo/bar/g'` ; done@
+
 
 h2. FAQ/Problems
 
