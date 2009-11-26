@@ -1,0 +1,97 @@
+h1. Git
+
+h2. Installation on OS X
+
+<pre>
+	$sudo port install git-core +svn
+</pre>
+
+h2. Configuring Git
+
+<pre>
+	$ git config --global color.ui "auto"
+	$ git config --global user.name "FirstName LastName"	
+	$ git config --global user.email "your@email.address"
+</pre>
+
+h2(#migrate-svn). Migrate subversion repositories
+
+Create file with a list of your users and map them to git users, save it to <code>~/username/users.txt</code>
+
+<pre>
+	joesample = Joe Sample <joe.sample@domain.net>
+	janedoe = Jane Doe <jane.doe@company.com>
+</pre>
+
+<pre>
+	$mkdir project
+	$cd project
+	$git-svn init http://code.yoursite.net/project/trunk/ --no-metadata
+</pre>
+
+You get an answer like
+
+<pre>
+	Initialized empty Git repository in /absolute/path/temp/.git/
+</pre>		
+
+<pre>
+	$ cd .git
+	$ git config svn.authorsfile ~/Desktop/users.txt
+	$ cd ..
+	$ git-svn fetch
+</pre>
+
+Depending on the size of your repository and the number of changes you made the process made take while. If everything went fine you get a bunch of messages that look something like this:
+<pre>
+	[...]
+	r126 = 5ee70c02797f9f4d31238fcdbbcaaf830daf490d (refs/remotes/git-svn)
+		M	doc/notes.textile
+		D	src/com/project/keywords.properties
+		A	src/com/project/Entry.java
+	r127 = 4b38f4b2a740e8afc8a134f4d5425dbb2e42dc40 (refs/remotes/git-svn)
+	Checked out HEAD:
+	  http://code.yoursite.net/project/trunk/ r127
+</pre>
+
+You can use @git log@ to check if the users were setup correctly. The last step is too to another clone of the repository to get rid of all the stuff that is/was only needed for git svn to work.
+
+
+h2. Configuring for use with git-svn
+
+If you still have to work with some svn repositories you might consider setting up a global file for the svn users so that you don't have to do that for each project.
+
+See "Migrate SVN":#migrate-svn for some more information, but run add @--global@ to add it to the global .gitconfig like so:
+
+<pre>
+	$ git config --global svn.authorsfile ~/Desktop/users.txt
+</pre>
+
+h2. Setting up local Git
+
+<pre>
+  $ mkdir notes
+  $ cd notes
+  $ git init
+  $ touch README
+  $ git add README
+  $ git commit -m 'first commit'
+</pre>
+
+h2. Push to Github
+
+<pre>	
+	git remote add origin git@github.com:username/reponame.git
+	git push origin master
+</pre>
+
+h2. Setting up remote Git
+
+http://toolmantim.com/articles/setting_up_a_new_remote_git_repository
+
+h2. Using Git
+
+http://www.kernel.org/pub/software/scm/git/docs/everyday.html#Individual%20Developer%20%28Standalone%29
+http://git.or.cz/course/svn.html
+
+

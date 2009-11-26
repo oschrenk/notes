@@ -1,0 +1,350 @@
+= File Management =
+
+== Status ==
+
+Zeigt den Status der Dateien in der working copy an
+
+<pre>
+	$ svn status
+</pre>
+
+== Revert (eine alte Datei wiederherstellen) ==
+
+<pre>
+svn update -r 214 file.sh
+</pre>
+
+Stellt den Zustand der Datei in einer bestimmten Revision wieder her.
+
+<pre>
+svn revert file.sh
+</pre>
+
+Stellt den Head wieder her
+
+= Branching =
+
+== Erstellen eines Branches ==
+
+<pre>
+   $ svn copy http://svn.example.com/repos/calc/trunk \
+	      http://svn.example.com/repos/calc/branches/my-calc-branch \
+	      -m "Creating a private branch of /calc/trunk."
+</pre>
+
+Die Antwort sieht dann so (oder so ähnlich aus):
+<pre>
+  Committed revision 341.
+</pre>
+
+Mit dem Befehl wird sofort eine Kopie angelegt. Da es ein instant commit ist, ist auch hier eine Nachricht notwendig. 
+
+Jetzt kann man mit dem Branch arbeiten. Ich halte mir gerne mir gerne mindestens 1 Kopie des Trunks in einem Verzeichnis. So habe ich immer eine Referenz auf dem Dateisystem, auf die ich zurückgreifen kann.
+
+  $ svn checkout http://svn.example.com/repos/calc/branches/my-calc-branch
+
+Die Antwort sieht dann so oder so ähnlich aus:
+<pre>
+  A  my-calc-branch/Makefile
+  A  my-calc-branch/integer.c
+  A  my-calc-branch/button.c
+  Checked out revision 341.
+</pre>
+
+Von nun an existieren (mindestens) zwei Entwicklungsstränge. Der Trunk und der gerade erzeugte Branch. In beiden können Änderungen stattfinden. Jedoch schlagen sich Änderungen im Trunk nicht automatisch in ihrem Branch nieder. Dies ist jedoch oft wünschenswert und kann erzwungen werden.
+
+== Löschen eines Branches == 
+
+Es empfiehlt sich den Branch im IDE als Projekt zu entfernen bevor man den Branch löscht.
+
+<pre>
+  $ svn delete http://svn.example.com/repos/calc/branches/my-calc-branch \
+  	       -m "Remove my-calc-branch."
+	       Committed revision 392.
+</pre>
+
+
+= Merging =
+
+Leider kann es zu Problemen sogenannten Konflikten kommen sollte, sollte sich ein Branch zu weit vom Trunk entfernen. 
+
+== Änderungen vom Trunk in einen Branch übernehmen ==
+
+In den Zweig wechseln
+
+<pre>
+  $ cd /home/user/my-calc-branch
+</pre> 
+
+Sicherstellen dass mein Zweig sauber ist mit 
+
+<pre>
+  $ svn status
+</pre>
+	
+Realistischer Weise sind gerade bei Eclipse-Projekten kleine M übrig.
+
+etwa <code>.project</code>
+
+Folgendes Schnipseln mergt das Verzeichnus des Trunks (online) mit dem aktuellen Arbeitsverzeichnis, welches der Branch sei sollte:
+
+<pre>
+	$ pwd
+	/home/user/my-calc-branch
+
+	$ svn merge http://svn.example.com/repos/calc/trunk
+	--- Merging r345 through r356 into '.':
+	U    button.c
+	U    integer.c
+</pre>
+
+Mit Subversive erleichtert sich die Sache zu *Team > Merge > 1 URL*. Hier die Trunk URL eingeben und bestätigen. 
+
+Mit <pre>svn status</pre> kann man sich die Änderungen ansehen. Man sollte auch <pre>svn diff</pre> einsetzen oder sein IDE zu Rate ziehen, um sich alles genau anszusehen.
+
+Hinweis: Das Merging erzeugte oder änderte auch das Attribut svn:mergeinfo. Das sind Metadaten, die bei zukünftigen Merges benötigt werden und sollten nicht entfernt werden.
+
+Ist alles gut können sie alles Änderungen gewohnt mit
+
+<pre>
+	$ svn commit -m "Merged latest trunk changes to my-calc-branch."
+	Sending        .
+	Sending        button.c
+	Sending        integer.c
+	Transmitting file data ..
+	Committed revision 357.
+</pre>
+
+bestätigen und ist nun wieder synchron mit dem Trunk.
+
+== Änderungen vom Branch in den Trunk übernehmen ==
+
+Sollte die Arbeit am Branch abgeschlossen und comitted sein, nochmal mit Trunk mergen und schauen ob man wirklich aktuell ist.
+
+In eine Working Copy des Trunks wechseln (auch dewegen halte ich mir gerne eine Kopie). Mit <pre>svn status</pre> garantieren, dass man eine saubere Kopie hat. Oder einfach mit <pre>svn revert -R</pre> lokale Änderungen rückgängig machen und eventuell mit <pre>svn update</pre> das WC auf den neuesten Stand bringen. Damit kann man unnötige Merge Konflikte vermeiden.
+
+<pre>
+	$ pwd
+	/home/user/calc-trunk
+
+	$ svn update  # (stellen Sie sicher, dass die Arbeitskopie aktuell ist)
+	At revision 390.
+
+	$ svn merge --reintegrate http://svn.example.com/repos/calc/branches/my-calc-branch
+	--- Merging differences between repository URLs into '.':
+	U    button.c
+	U    integer.c
+	U    Makefile
+	U   .
+
+	$ # bauen, testen, überprüfen, ...
+
+	$ svn commit -m "Merge my-calc-branch back into trunk!"
+	Sending        .
+	Sending        button.c
+	Sending        integer.c
+	Sending        Makefile
+	Transmitting file data ..
+	Committed revision 391.
+</pre>
+
+Der Befehl ist ähnlich, hat aber dieses mal den Parameter <pre>--reintegrate</pre>.
+
+Am Ende kann man mit den angelegten Branch löschen. Es ist sogar sehr stark empfohlen, da man mit dem Branch leider nicht mehr normal arbeiten kann. Man sollte ihn danach erneut erzeugen, falls man ihn wieder benötigt
+
+
+== Änderungen von einem Branch in einen anderen Branch übernehmen ==
+
+Dieser Fall ist identisch zu [[#.C3.84nderungen_vom_Trunk_in_einen_Branch_.C3.BCbernehmen|Änderungen vom Trunk in einen Branch übernehmen ]]
+
+= Konflikte =
+
+Ab und an werden Sie einen Konflikt erhalten, wenn Sie Ihre Arbeitskopie aktualisieren oder zu einer anderen URL wechseln. Es gibt zwei Arten von Konflikten,
+Dateikonflikte und Baumkonflikte.
+
+== Dateikonflikte ==
+
+<pre>
+$ svn update
+C  sandwich.txt
+Updated to revision 2.
+$ ls -1
+sandwich.txt
+sandwich.txt.mine
+sandwich.txt.r1
+sandwich.txt.r2
+</pre>
+
+* _filename.mine_: Datei vor dem Merge
+* _filename.rOLDREV_ : Version im SVN vor den eigenen Änderungen
+* _filename.rNEWREV_ : HEAD Revision der angefragten Datei
+
+Die Dateien mit dem Konflikt enthält nun Marker, die die überlappenden Bereich markieren.
+
+Um den Konflikt zu lösen, kann man dann die aktuelle WC als "Resolved" markieren. Man kann auch auch hingehen und eine der drei angelegten Dateien als Lösung des Konflikts deklarieren, aber das kann man bei Bedarf dann nachlesen.
+
+<code>$ svn resolve --accept mine-full path-to-conflicted-file.ext</code>
+
+oder kürzer
+
+<code>$ svn resolved path-to-conflicted-file.ext</code>
+
+<pre>
+$ svn up
+Conflict discovered in 'foo.c'.
+Select: (p) postpone, (df) diff-full, (e) edit,
+        (h) help for more options: p
+C    foo.c
+Updated to revision 5.
+
+$ svn resolve --accept mine-full foo.c
+Resolved conflicted state of 'foo.c'
+</pre>
+
+== Baumkonflikte ==
+
+Ein Baumkonflikt entsteht, wenn ein Entwickler eine Datei oder einen Ordner umbenannt, verschoben oder gelöscht hat, den ein anderer Entwickler ebenfalls umbenannt, verschoben, gelöscht oder bearbeitet hat. Es gibt verschiedene Ursachen für Baumkonflikte und alle erfordern unterschiedliche Vorgehensweisen, um den Konflikt aufzulösen.
+
+Wenn eine Datei in Subversion lokal gelöscht wird, wird sie auch aus dem lokalen Dateisystem gelöscht. Das bedeutet, dass kein überlagertes Symbol angezeigt werden kann, wenn sie Teil eines Baumkonfliktes ist und dass Sie den Konflikt nicht mit Hilfe eines Rechtsklicks auflösen können. Verwenden Sie stattdessen den Auf Änderungen prüfen Dialog, um den Konflikt bearbeiten zu können.
+
+=== Lokal gelöscht, eingehende Änderung beim Aktualisieren ===
+
+# Entwickler A verändert die Datei Foo.c und überträgt die Änderung ins Projektarchiv.
+# Entwickler B benennt gleichzeitig die Datei Foo.c in seiner Arbeitskopie in Bar.c um oder löscht Foo.c bzw. den Elternordner.
+
+Eine Aktualisierung der Arbeitskopie von Entwickler B resultiert in einem Baumkonflikt:
+
+* Die Datei Foo.c wurde aus der Arbeitskopie gelöscht, ist aber gleichzeitig als Baumkonflikt markiert.
+* Wenn ein Konflikt nicht von einem Löschen, sondern von einem Umbenennen herrührt, ist die DateiBar.c als hinzugefügt markiert, enthält aber nicht die Änderungen von Entwickler A.
+
+Entwickler B muss sich nun entscheiden, ob er die Änderungen von Entwickler A übernehmen möchte. Im Fall des Umbenennens kann er die Änderungen an Foo.c in Bar.c zusammenführen. Für einfache Löschungen kann er das Objekt mit den Änderungen von Entwickler A beibehalten und das Löschen verwerfen. Oder er kann, indem er den Konflikt ohne weitere Aktionen als aufgelöst markiert, die Änderungen von Entwickler A verwerfen.
+
+Der Dialog zum Auflösen von Konflikten bietet Ihnen an, die Änderungen zusammenzuführen, wenn er das Original der umbenannten Datei Bar.c finden kann. Abhängig davon, von wo aus die Aktualisierung angestoßen wurde, kann das nicht möglich sein.
+
+=== Lokal geändert, eingehendes Löschen beim Aktualisieren ===
+
+# Entwickler A benennt die Datei Foo.c in Bar.c um und überträgt die Änderung ins Projektarchiv.
+# Entwickler B verschiebt die Datei Foo.c in seiner Arbeitskopie.
+
+Oder im Fall eines verschobenen Ordners...
+
+# Entwickler A benennt den Elternordner FooOrdner in BarFolder um und überträgt die Änderung ins Projektarchiv.
+# Entwickler B verschiebt die Datei Foo.c in seiner Arbeitskopie.
+
+Eine Aktualisierung der Arbeitskopie von Entwickler B führt zu einem Baumkonflikt. Für einen einfachen Dateikonflikt:
+* Die Datei Bar.c wird als normale Datei zur Arbeitskopie hinzugefügt.
+* Die Datei Foo.c ist als hinzugefügt mit Historie markiert und hat einen Baumkonflikt.
+
+Für einen Ordnerkonflikt:
+* BarOrdner wird als normaler Ordner zur Arbeitskopie hinzugefügt.
+* Der Ordner FooOrdner ist als hinzugefügt mit Historie markiert und hat einen Baumkonflikt.
+* Die Datei Foo.c ist als verändert markiert.
+
+Entwickler B muss nun entscheiden, ob er die Reorganisation durch Entwickler A übernehmen will und seine Änderungen in der entsprechenden Datei in der neuen Struktur zusammenführt oder ob er einfach die Änderungen von A rückgängig macht und die lokale Datei beibehält.
+
+Um seine lokalen Änderungen mit der Umstrukturierung zusammenzuführen, muss Entwickler B zunächst herausfinden wie die konfliktbehaftete Datei Foo.c im Projektarchiv umbenannt wurde. Dies kann mit Hilfe des Log-Dialogs geschehen. Die Änderungen müssen manuell zusammengeführt werden, da es derzeit keine Möglichkeit gibt, dies zu automatisieren oder zu vereinfachen. Sobald die Änderungen übernommen wurden, ist der konfliktbehaftete Pfad überflüssig und kann gelöscht werden. Verwenden Sie dazu die Entfernen Schaltfläche im Konflikteditor. Damit wird dieser Konflikt als aufgelöst markiert.
+
+Falls Entwickler B beschließt, dass die Änderungen von A falsch waren, muss er Beibehalten im Konflikteditor wählen. Dadurch wird der Konflikt als aufgeöst markiert, aber die Änderungen von Entwickler A müssen manuell zurückgenommen werden. Der Log-Dialog hilft Ihnen wieder dabei festzustellen, was verschoben wurde.
+
+=== Lokal gelöscht, eingehende Löschung beim Aktualisieren ===
+
+# Entwickler A benennt die Datei Foo.c in Bar.c um und überträgt die Änderung ins Projektarchiv.
+# Entwickler B benenntFoo.c in Bix.c um.
+
+Eine Aktualisierung der Arbeitskopie von Entwickler B resultiert in einem Baumkonflikt:
+* Die Datei Bix.c ist als hinzugefügt mit Historie markiert.
+* Die Datei Bar.c ist als normal markiert.
+* Die Datei Foo.c ist als gelöscht markiert und hat einen Baumkonflikt.
+
+Um diesen Konflikt aufzulösen, muss Entwickler B zunächst herausfinden wie die konfliktbehaftete Datei Foo.c im Projektarchiv umbenannt wurde. Dies kann mit Hilfe des Log-Dialogs geschehen.
+
+Danach muss sich Entwickler B entscheiden, welchen neuen Dateinamen von Foo.c er übernehmen möchte, den eigenen oder den von Entwickler A vergebenen Namen.
+
+Nachdem Entwickler B den Konflikt manuell aufgelöst hat, muss der Baumkonflikt mit der Schaltfläche im Konflikteditor als aufgelöst markiert werden.
+
+=== Lokal fehlend, eingehende Änderung beim Aktualisieren === 
+
+* Entwickler A verändert im Stamm die Datei Foo.c um und überträgt die Änderung ins Projektarchiv.
+* Entwickler B, der auf einem Zweig arbeitet, benennt Foo.c in Bar.c um und überträgt die Änderung ins Projektarchiv.
+
+Das Zusammenführen der Änderungen von Entwickler A im Stamm mit der Arbeitskopie von Entwickler B führt zu einem Baumkonflikt:
+* Die Datei Bar.c befindet sich bereits mit dem Status normal in der Arbeitskopie.
+* Die Datei Foo.c ist als fehlend markiert und hat einen Baumkonflikt.
+
+Um diesen Konflikt aufzulösen, muss Entwickler B den Dateikonflikt im Konflikteditor als aufgelöst markieren, wodurch er aus der Konfliktliste entfernt wird. Danach muss er entscheiden, ob er die fehlende Datei Foo.c aus dem Projektarchiv in die Arbeitskopie kopiert, die Änderungen von Entwickler A an Foo.c in die umbenannte Datei Bar.c überträgt oder die Änderungen ignoriert, indem er den Konflikt als aufgelöst markiert und nichts weiter unternimmt.
+
+Beachten Sie, dass wenn Sie die fehlende Datei aus dem Projektarchiv kopieren und danach den Konflikt als aufgelöst markieren, ihre Kopie wieder entfernt wird. Sie müssen den Konflikt erst auflösen und danach die Datei kopieren.
+
+==== Beispiel ==== 
+
+ $ svn status
+ !     C src/baufi/kernel/CalcBaufi.java
+       >   lokal fehlend, eingehend editiert bei Zusammenführung
+ $ svn resolve --accept working src/baufi/kernel/CalcBaufi.java
+
+=== Lokal bearbeitet, eingehende Löschung beim Zusammenführen ===
+
+# Entwickler A benennt im Stamm die Datei Foo.c in Bar.c um und überträgt die Änderung ins Projektarchiv.
+# Entwickler B, der auf einem Zweig arbeitet, modifiziert Foo.c und überträgt die Änderung ins Projektarchiv.
+
+Es gibt einen äquivalenten Fall für verschobene Ordner, dieser wird aber in Subversion 1.6 noch nicht erkannt ...
+
+# Entwickler A benennt im Stamm den Ordner FooOrdner in BarOrdner um und überträgt die Änderung ins Projektarchiv.
+# Entwickler B, der auf einem Zweig arbeitet, verändert Foo.c in seiner Arbeitskopie.
+
+Das Zusammenführen der Änderungen von Entwickler A im Stamm mit der Arbeitskopie von Entwickler B führt zu einem Baumkonflikt:
+
+* Die Datei Bar.c ist als hinzugefügt markiert.
+* Die Datei Foo.c ist als verändert markiert und hat einen Baumkonflikt.
+
+Entwickler B muss nun entscheiden, ob er die Reorganisation durch Entwickler A übernehmen will und seine Änderungen in der entsprechenden Datei in der neuen Struktur zusammenführt oder ob er einfach die Änderungen von A rückgängig macht und die lokale Datei beibehält.
+
+Um die lokalen Änderungen mit der Reorganisation zusammenzuführen, muss Entwickler B zunächst herausfinden wie die konfliktbehaftete Datei Foo.c im Projektarchiv umbenannt wurde. Dies kann mit Hilfe des Log-Dialogs für die Quelle des Zusammenführens geschehen. Der Konflikteditor zeigt nur das Log für die Arbeitskopie an, da er nicht wissen kann, welcher Pfad zum Zusammenführen genutzt wurde. Aus diesem Grund müssen Sie das selbst herausfinden. Die Änderungen müssen manuell zusammengeführt werden, da es derzeit keine Möglichkeit gibt, dies zu automatisieren oder zu vereinfachen. Sobald die Änderungen übernommen wurden, ist der konfliktbehaftete Pfad überflüssig und kann gelöscht werden. Verwenden Sie dazu die Entfernen Schaltfläche im Konflikteditor. Damit wird dieser Konflikt als aufgelöst markiert.
+
+Falls Entwickler B beschließt, dass die Änderungen von A falsch waren, muss er Beibehalten im Konflikteditor wählen. Dadurch wird der Konflikt als aufgeöst markiert, aber die Änderungen von Entwickler A müssen manuell zurückgenommen werden. Der Log-Dialog hilft Ihnen wieder dabei festzustellen, was verschoben wurde.
+
+=== Lokal gelöscht, eingehende Löschung beim Zusammenführen === 
+
+# Entwickler A benennt im Stamm die Datei Foo.c in Bar.c um und überträgt die Änderung ins Projektarchiv.
+# Entwickler B, der auf einem Zweig arbeitet, benennt Foo.c in Bix.c um und überträgt die Änderung ins Projektarchiv.
+
+Das Zusammenführen der Änderungen von Entwickler A im Stamm mit der Arbeitskopie von Entwickler B führt zu einem Baumkonflikt:
+
+* Die Datei Bix.c ist als normal (unverändert) markiert.
+* Die Datei Bar.c ist als hinzugefügt mit Historie markiert.
+* Die Datei Foo.c ist als fehlend markiert und hat einen Baumkonflikt.
+
+Um diesen Konflikt aufzulösen, muss Entwickler B zunächst herausfinden wie die konfliktbehaftete Datei Foo.c im Projektarchiv umbenannt wurde. Dies kann mit Hilfe des Log-Dialogs für die Quelle des Zusammenführens geschehen. Der Konflikteditor zeigt nur das Log für die Arbeitskopie an, da er nicht wissen kann, welcher Pfad zum Zusammenführen genutzt wurde. Aus diesem Grund müssen Sie das selbst herausfinden.
+
+Danach muss sich Entwickler B entscheiden, welchen neuen Dateinamen von Foo.c er übernehmen möchte, den eigenen oder den von Entwickler A vergebenen Namen.
+
+Nachdem Entwickler B den Konflikt manuell aufgelöst hat, muss der Baumkonflikt mit der Schaltfläche im Konflikteditor als aufgelöst markiert werden.
+
+= Fortgeschrittene Befehle = 
+
+== svn propset ==
+
+Ändern von Eigenschaften. Die Eigenschaften sind vielfältig. Man kann beispielsweise Commit-Messages nachträglich ändern oder Dateifilter einrichten um bestimmte Dateien zu ignorieren
+
+=== Commit Messages nachträglich ändern ===
+
+<pre>
+svn propset --revprop -r 25 svn:log "Journaled about trip to New York."
+</pre>
+
+=== Ignorieren von Dateien ===
+
+Editieren der Dateifilter von aktuellen Verzeichnis
+
+<pre>
+svn propset svn:ignore .
+</pre>
+
+Es sollte sich ein Editor öffnen. Dort kann man dann zeilenweise Muster eintragen, wie zum Beispiel:
+
+<pre>
+	*.tmp
+	*.aux
+	bin
+	dist
+</pre>
