@@ -94,4 +94,16 @@ h2. Using Git
 http://www.kernel.org/pub/software/scm/git/docs/everyday.html#Individual%20Developer%20%28Standalone%29
 http://git.or.cz/course/svn.html
 
+h3. Commit
 
+@git commit path@
+
+h3. Revert
+
+Unlike _SVN_ it is *NOT* @svn revert@ instead use 
+
+<pre>
+	$ git checkout filename
+</pre>
+
+to overwrite changes.
