@@ -145,6 +145,7 @@ h3. Various
 * *Rename all files in directory to lowercase* @for x in *; do mv "$x" "`echo $x | tr [A-Z] [a-z]`"; done@
 * *Replace "space" char with "dot"* char in current directory file names @ls -1 | while read a; do mv "$a" `echo $a | sed -e 's/\ /\./g'`; done@
 * *Batch rename files, replacing foo with bar* *@for file in *.*; do mv $file `echo $file | sed 's/foo/bar/g'` ; done@
+* *Create missing directory when moving files* @mkdir -p ./some/path/; mv yourfile.txt $_@
 
 h2. FAQ/Problems
 
