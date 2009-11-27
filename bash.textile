@@ -9,20 +9,20 @@ h2. Shortcuts
 * @ctrl + r@ Start search (just start typing), pressing multiple times toggles through occurences in history
 * @ctrl + l@ Clear terminal
 
-h2. Umlenken der Ausgabe
+h2. Redirecting/Appending Standard Output
 
-* @>@ redirects _StdOut_, to a file or to @/dev/null@
-* @>>@ to append
+* @>@ redirects _StdOut_, for example to a file @command > path@ or to @/dev/null@ (discards all data)
+* @>>@ appends the output to the path @command >> path@
 
 Similiar for _StdErr_, but use @2@ prefix like so @2>@ or respectively. @2>>@.
 
-h2. Nutzen der History
+h2. Using the history
 
-Warum Shellbefehle merken müssen oder immer wieder neu eingeben, wenn man sie doch einfach aus der History wieder herausholen kann?
+Why use your brain to remember all the commands you have to use again and again. Just rely on your terminal and the history file it keeps.
 
-Die Bash unterstützt @Ctrl + r@ um in der History zu suchen. Leider ist die History zu klein um sie wirklich ausnutzen zu können. Also einfach mal den Speicherplatz vergrößern. Dies kann in der @.profile@ bzw. in der @.bash_profile@ passieren. Das zwei Namen existieren ist historisch begründet.
+Bash supports @Ctrl + r@ to search the history. Per default the size history (and therefore the number of entries) is rather limited. You can do that by setting some variables in your @.profile@ or (@.bash_profile@)
 
-Hinweis: Gerade OSX macht einem hier gerne einen Stich durch die Rechnung und präferiert @.profile@ gegenüber der @.bash_profile@. Da etwaige Installationen (etwa aus MacPorts) mal die eine oder andere anlegen, kann es zu Verwirrungen kommen.
+WARNING: OSX preferes the @.profile@ to @.bash_profile@. If both exists *only*  @.profile@ will be read (see ".profile not read":#profile-not-read)
 
 <pre>        
  #.bash_profile or .profile
@@ -30,22 +30,37 @@ export HISTFILESIZE=1000000000      # sets history size to something really big
 export HISTSIZE=1000000             # sets history size to something really big
 </pre>
  
-Da ich häufig auch in einem Ordner bleibe und Befehle wiederhole (ls, ps, ..., svn update), weise ich die History an wiederholte Befehle zu ignorieren
+You can also set to ignore duplicates of commands (@ls@, @ps -ef@ are such candidates)
  
 <pre>        
  #.bash_profile or .profile
 export HISTCONTROL=ignoreboth
 </pre>
 
-@shopt -qs histappend@  append to the same history file when using multiple terminals
-@shopt -qs cdspell@ minor errors in the spelling of a directory component in a cd command will be corrected
-@shopt -qs nocaseglob@ when typing part of a filename and press Tab to autocomplete, Bash does a case-insensitive search.
+Other useful settings are
+
+<pre>
+# append to the same history file when using multiple terminals
+shopt -qs histappend
+</pre>
+
+<pre>
+# when typing part of a filename and press Tab to autocomplete, Bash does a case-insensitive search.
+shopt -qs nocaseglob
+</pre>
+
+<pre>
+# minor errors in the spelling of a directory component in a cd command will be corrected
+shopt -qs cdspell
+</pre>
 
 h2. .inputrc
 
-Neben de Profile gibt es auch noch eine @.inputrc@. Das ist eine Konfigurationsdatei für GNU Readline. Hiermit kann man schöne Dinge machen, falls einem @Ctrl + R@ manchmal zu umständlich ist.
+Next to @.profile@ there is also @.inputrc@. This is the configuration file for GNU Readline (a library that allows to edit commands as they are typed in) 
 
-Man muss sich in viele verschiedene Server einloggen, so dass die History voll mit @ssh ...@ Befehlen ist. Man fängt also an und tippt @ssh @. Mit Hilfe des Schnipsels unten in der @.inputrc@ kann man nun wie ewohnt mit Pfeil hoch und runter in der History arbeiten, aber die es werden nur die Einträge herausgesucht, die mit @ssh@ beginnen.  
+*An exemplary scenario* is when you have to login to multiple servers using @ssh ...@ commands. Instead of toggling through all the occurences in the history you can just start typing away @ssh @.
+
+With the following snippet in the @.inputrc@ file you can then just use your arrow keys to scroll through all the occurences starting with the prefix you have typed in so far. This is especially useful when multiple logins share the same user but have different hosts.
    
 <pre>
 	# By default up/down are bound to previous-history
@@ -60,7 +75,7 @@ Man muss sich in viele verschiedene Server einloggen, so dass die History voll m
 	"\e[B": history-search-forward
 </pre>
 
-Hilfreich wenn man in Wörtern springen möchte
+It doesn't stop there. If you like to move arround in your command more quickly you might find use in the following snippet, which allows to jump over words in your command using @Strg@ and the left or right arrow key.
 
 <pre>
 	# move arround word for word with Strg + arrow keys
@@ -69,6 +84,8 @@ Hilfreich wenn man in Wörtern springen möchte
 	"\e\e[C": forward-word
 	"\e\e[D": backward-word
 </pre>
+
+This one is very helpful when you just type away and realise later that the first character of is upper case instead of lower case (the default directories in the home directory of OSX all start with upper case letters).
 
 <pre>
 	# case insensitivity for tab-completion
@@ -107,7 +124,7 @@ h2. File attributes
 
 h3. Apple
 
-Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using <code>ls -ls</code> indicated by the <code>@</code> symbol. By calling <code>ls -@ you can see that an attribute @com.apple.quarantine@ has been added. To remove that call @sudo xattr -d com.apple.quarantine path@
+Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using <code>ls -ls</code> indicated by the <code>@</code> symbol. By calling <code>ls -@</code> you can see that an attribute @com.apple.quarantine@ has been added. To remove that call @sudo xattr -d com.apple.quarantine path@
 
 h2. Helpful commands
 
@@ -129,10 +146,9 @@ h3. Various
 * *Replace "space" char with "dot"* char in current directory file names @ls -1 | while read a; do mv "$a" `echo $a | sed -e 's/\ /\./g'`; done@
 * *Batch rename files, replacing foo with bar* *@for file in *.*; do mv $file `echo $file | sed 's/foo/bar/g'` ; done@
 
-
 h2. FAQ/Problems
 
-h3. Bash doesn't update the PATH; changes to .profile aren' registered
+h3(#profile-not-read). Bash doesn't update the PATH; changes to .profile aren' registered
 
 Adding something like @EXPORT PATH=/usr/bin:$PATH@ doesn't update the @$PATH@ environment variable. The reason is that Bash tries to find local profile files in the following order:
 
