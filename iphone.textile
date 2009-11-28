@@ -1,0 +1,61 @@
+h1. iPhone Development
+
+h2. Measurements
+
+The hit-region of a user interface element is recommended to be 44 x 44 pixels
+
+h3. Screen size
+
+- Complete screen:= 480x320 px
+- Status bar := 20x320 px
+- Navigation bar := 44x320 px
+- Tab bar := 49x320 px
+- Toolbar := 44x320 px
+- Visible Keyboard := 215x320 px
+
+h4. Icons
+
+- Home screen icon := 57x57 px
+- Spotlight icon := 29x29 px
+- Toolbar icon := 20x20 px
+- Tabbar icon := 30x30 px
+
+h3. Real size
+
+On "developer.apple.com/ipod/cases.html":http://developer.apple.com/ipod/cases.html Apple has released dimensional drawings of all mobile devices.
+
+iPhone 3G case
+
+- width := 62.1 mm
+- length := 115.5 mm
+- height := 12.3 mm
+
+iPhone 3G screen size
+
+- width  := 51.42 mm
+- length := 76.38 mm
+
+That means 
+
+- 1 mm := 6.28436764 px ≈ 6 px
+- 1 cm := 62.8436764 px ≈ 62 px
+- 1 px := 0.159125 mm ≈ 0,16 mm
+- 10 px := 1,59125 mm ≈ 1,6 mm
+- 100 px := 15,9125 mm ≈ 16 mm
+
+calculated using length as the dimension drawing . If you use it to calulcate the width it doesn't fit. The iPod drawings suggest that the active area has an edge of 0.75mm. Something that is missing from the iPhone dimension drawings. Let's consider that info.
+
+iPhone 3G active screen size:
+
+- width  := 49.92mm
+- length := 74.88mm
+
+which converts to
+
+- 1 mm := 6.410256 px ≈ 6 px
+- 1 cm := 64.10256 px ≈ 64 px
+- 1 px := 0.156 mm
+- 10 px := 1,56 mm
+- 100 px := 15,6 mm
+
+which if you use it to calculate the screen width results in 49.92 mm, which is absolutely correct. 
