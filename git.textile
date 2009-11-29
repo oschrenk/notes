@@ -32,30 +32,40 @@ Now you can add ignores by calling
 
 h2(#migrate-svn). Migrate subversion repositories
 
-Create file with a list of your users and map them to git users, save it to <code>~/username/users.txt</code>
+Create an empty directory and prepare the repository
+
+<pre>
+	$ mkdir project_tmp
+	$ cd project_tmp
+	$ git svn init http://code.yoursite.net/project/trunk/ --no-metadata
+</pre>
+
+You get an answer like
+
+<pre>
+	Initialized empty Git repository in /absolute/path/project_tmp/.git/
+</pre>		
+
+Now create a file with a list of your svn users and map them to git users, 
+save it to @~/username/users.txt@. The file contents have to look similiar
+to this:
 
 <pre>
 	joesample = Joe Sample <joe.sample@domain.net>
 	janedoe = Jane Doe <jane.doe@company.com>
 </pre>
 
+then run
+
 <pre>
-	$mkdir project
-	$cd project
-	$git-svn init http://code.yoursite.net/project/trunk/ --no-metadata
+	$ git config svn.authorsfile /path/to/svn.authorsfile
 </pre>
 
-You get an answer like
+
+Now we have to get the data from the svn repository by calling
 
 <pre>
-	Initialized empty Git repository in /absolute/path/temp/.git/
-</pre>		
-
-<pre>
-	$ cd .git
-	$ git config svn.authorsfile ~/Desktop/users.txt
-	$ cd ..
-	$ git-svn fetch
+	$ git svn fetch
 </pre>
 
 Depending on the size of your repository and the number of changes you made the process made take while. If everything went fine you get a bunch of messages that look something like this:
@@ -72,6 +82,11 @@ Depending on the size of your repository and the number of changes you made the 
 
 You can use @git log@ to check if the users were setup correctly. The last step is too to another clone of the repository to get rid of all the stuff that is/was only needed for git svn to work.
 
+<pre>
+	$ cd ..
+	$ git clone project_tmp project
+</pre>
+
 
 h2. Configuring for use with git-svn
 
@@ -83,7 +98,7 @@ See "Migrate SVN":#migrate-svn for some more information, but run add @--global@
 	$ git config --global svn.authorsfile ~/Desktop/users.txt
 </pre>
 
-h2. Setting up local Git
+h2(#create-local-repo). Setting up local Git
 
 <pre>
   $ mkdir notes
@@ -94,7 +109,17 @@ h2. Setting up local Git
   $ git commit -m 'first commit'
 </pre>
 
-h2. Push to Github
+h2. Github 
+
+h3. Set uo your keys
+
+Github needs you to set 
+
+h3. Push repository to Github
+
+Set up the repo on github using "github.com/repositories/new":http://github.com/repositories/new
+
+Github tells you what to do next, which is "setting up a local repo":#create-local-repo, making your commits, configure your local repo and push it.
 
 <pre>	
 	$ git remote add origin git@github.com:username/reponame.git
