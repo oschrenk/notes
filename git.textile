@@ -88,7 +88,7 @@ You can use @git log@ to check if the users were setup correctly. The last step 
 </pre>
 
 
-h2. Configuring for use with git-svn
+h2. Configuring for use with git svn
 
 If you still have to work with some svn repositories you might consider setting up a global file for the svn users so that you don't have to do that for each project.
 
@@ -111,9 +111,21 @@ h2(#create-local-repo). Setting up local Git
 
 h2. Github 
 
-h3. Set uo your keys
+h3. Setup
 
-Github needs you to set 
+Github needs you to generate a SSH key to communicate with the server. As always the Github team made it easy and posted a "tutorial":http://help.github.com/mac-key-setup/. In short:
+
+<pre>
+	$ ssh-keygen -t rsa -C "mail@host.com"
+</pre>	 
+
+Choose a passphrase, copy it to the clipboard.
+
+<pre>
+	$ cat ~/.ssh/id_rsa.pub | pbcopy
+</pre>
+
+Open the _SSH Public Keys_ tab of your "account":https://github.com/account and paste it.
 
 h3. Push repository to Github
 
