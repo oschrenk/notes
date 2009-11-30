@@ -1,0 +1,124 @@
+h1. Maven
+
+h2. Installation
+
+<pre>
+	$ sudo port install maven2
+</pre>
+
+h2. Setup
+
+The settings can be found under @~/.m2/settings.xml@
+
+h3. Proxy
+
+<pre>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd"> 
+  ...
+  <proxies>
+   <proxy>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>proxy.dbc-gmbh.com</host>
+      <port>3128</port>
+      <username></username>
+      <password></password>
+      <nonProxyHosts>www.google.com|*.somewhere.com</nonProxyHosts>
+    </proxy>
+  </proxies>
+  ...
+</settings>
+</pre> 
+
+
+h3. Move the local repository
+
+As I use multiple user on my machine for different clients (it helps keep my mind sane) and don't want to have a repository for each user I decided to move it to a shared location on my harddrive. Normally it is found in @~/.m2/repository@
+
+To change the path to the repository open your settings under @~/.m2/settings.xml@ and add/change the following
+
+<pre>
+	<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+	                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	  ...
+		<localRepository>/path/to/shared/repository</localRepository>
+	  ...
+	</settings>
+</pre>
+
+h2. Usage
+
+h3. Search for Maven projects
+
+http://mvnrepository.com/
+
+h3. New Maven Project
+
+<code>groupId</code> Unique identifier of the organization, eg. <code>org.codehaus.mojo</code>
+<code>artifactId</code> Name of the project
+<code>version</code>version number
+<code>packaging</code>defaults to jar
+<code>name</code>Descriptive name
+
+h3. Mavenize a 3-rd party library
+
+"Mavenizer":http://mavenizer.sourceforge.net/ is a tool that can help you mavenize 3rd party libraries
+
+This is a *very* simple example as the library doesn't have any external dependencies. Beware that the following code copies the mavenized project to your local maven repository.
+
+<pre>
+	$ mkdir mavenize
+	$ cd mavenize
+	$ wget http://downloads.sourceforge.net/project/mavenizer/Mavenizer%20CLI/1.0.0-alpha-1/mavenizer-cli-1.0.0-alpha-1-jar-with-dependencies.jar
+	$ wget http://downloads.sourceforge.net/project/java-base64/Java%20Base64/1.3.1/javabase64-1.3.1.zip
+	$ unzip javabase64-1.3.1.zip
+	$ rm javabase64-1.3.1.zip
+	$ mv javabase64-1.3.1/javabase64-1.3.1.jar .
+	$ rm -r javabase64-1.3.1
+	$ java -jar mavenizer-cli-1.0.0-alpha-1-jar-with-dependencies.jar analyse -workdir javabase64-mavenize javabase64-1.3.1.jar
+	$ java -jar mavenizer-cli-1.0.0-alpha-1-jar-with-dependencies.jar generate -workdir javabase64
+	$ cp -r javabase64/repository/ ~~/.m2/repository/
+</pre>
+
+Normally you will have more complex cases. Try to track down which libraries are used and put them next to library to be mavenized. Best to put all files in a directory and call mavenizer on that directory. The analyser will generate a @mavenizer.xml@ file, which you have to go trough yourself. Hopefully you can replace the dependency with known artifacts.
+
+h2. FAQ/Problems
+
+h3. MacRoman encoding creeping into build process
+
+Maven uses the platform encoding when building by default. It will produces warnings like that
+
+<pre>
+	[WARNING] Using platform encoding (MacRoman actually) to copy↩
+	filtered resources, i.e. build is platform dependent!
+</pre>
+
+Add a @project.build.sourceEncoding@ element and a @project.reporting.outputEncoding@ to your @pom.xml@.
+
+<pre>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 ↩
+http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.example</groupId>
+	<artifactId>mywebapp</artifactId>
+	<packaging>war</packaging>
+	<version>1.21</version>
+	<name>mywebapp</name>
+
+<!-- snip -->
+	<properties>
+    	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+<!-- snip -->
+</project>
+</pre>
