@@ -1,12 +1,12 @@
 h1. Shell 
 
-This is not a complete guide, but a collection of hints that makes the life with your shell easier. As my main system is OS X, some tipps might only work on this system.
+This is not a complete guide, but a collection of hints that makes the life with your shell easier. As my main system is a Mac, some hints might only work on OS X.
 
 h2. Shortcuts
 
 * @ctrl + a@ Jump to beginning of line
 * @ctrl + e@ Jump to end of line
-* @ctrl + r@ Start search (just start typing), pressing multiple times toggles through occurences in history
+* @ctrl + r@ Start search (just start typing), pressing multiple times toggles through occurrences in history
 * @ctrl + l@ Clear terminal
 
 h2. Redirecting/Appending Standard Output
@@ -14,7 +14,7 @@ h2. Redirecting/Appending Standard Output
 * @>@ redirects _StdOut_, for example to a file @command > path@ or to @/dev/null@ (discards all data)
 * @>>@ appends the output to the path @command >> path@
 
-Similiar for _StdErr_, but use @2@ prefix like so @2>@ or respectively. @2>>@.
+Similar for _StdErr_, but use @2@ prefix like so @2>@ or respectively. @2>>@.
 
 h2. Using the history
 
@@ -22,7 +22,7 @@ Why use your brain to remember all the commands you have to use again and again.
 
 Bash supports @Ctrl + r@ to search the history. Per default the size history (and therefore the number of entries) is rather limited. You can do that by setting some variables in your @.profile@ or (@.bash_profile@)
 
-WARNING: OSX preferes the @.profile@ to @.bash_profile@. If both exists *only*  @.profile@ will be read (see ".profile not read":#profile-not-read)
+WARNING: OSX prefers the @.profile@ to @.bash_profile@. If both exists *only*  @.profile@ will be read (see ".profile not read":#profile-not-read)
 
 <pre>        
  #.bash_profile or .profile
@@ -58,9 +58,9 @@ h2. .inputrc
 
 Next to @.profile@ there is also @.inputrc@. This is the configuration file for GNU Readline (a library that allows to edit commands as they are typed in) 
 
-*An exemplary scenario* is when you have to login to multiple servers using @ssh ...@ commands. Instead of toggling through all the occurences in the history you can just start typing away @ssh @.
+*An exemplary scenario* is when you have to login to multiple servers using @ssh ...@ commands. Instead of toggling through all the occurrences in the history you can just start typing away @ssh @.
 
-With the following snippet in the @.inputrc@ file you can then just use your arrow keys to scroll through all the occurences starting with the prefix you have typed in so far. This is especially useful when multiple logins share the same user but have different hosts.
+With the following snippet in the @.inputrc@ file you can then just use your arrow keys to scroll through all the occurrences starting with the prefix you have typed in so far. This is especially useful when multiple logins share the same user but have different hosts.
    
 <pre>
 	# By default up/down are bound to previous-history
@@ -75,17 +75,17 @@ With the following snippet in the @.inputrc@ file you can then just use your arr
 	"\e[B": history-search-forward
 </pre>
 
-It doesn't stop there. If you like to move arround in your command more quickly you might find use in the following snippet, which allows to jump over words in your command using @Strg@ and the left or right arrow key.
+It doesn't stop there. If you like to move around in your command more quickly you might find use in the following snippet, which allows to jump over words in your command using @Strg@ and the left or right arrow key.
 
 <pre>
-	# move arround word for word with Strg + arrow keys
+	# move around word for word with Strg + arrow keys
 	"\e[5C": forward-word
 	"\e[5D": backward-word
 	"\e\e[C": forward-word
 	"\e\e[D": backward-word
 </pre>
 
-This one is very helpful when you just type away and realise later that the first character of is upper case instead of lower case (the default directories in the home directory of OSX all start with upper case letters).
+This one is very helpful when you just type away and realize later that the first character of is upper case instead of lower case (the default directories in the home directory of OSX all start with upper case letters).
 
 <pre>
 	# case insensitivity for tab-completion
@@ -159,4 +159,4 @@ Adding something like @EXPORT PATH=/usr/bin:$PATH@ doesn't update the @$PATH@ en
 # ~/.profile
 </pre>
 
-@~/.profile@ is the last file in the list. So if OS X finds a file it stops processing. If an installer puts a @.bash_login@ in your home directory your @.profile@ would'nt be read.
+@~/.profile@ is the last file in the list. So if OS X finds a file it stops processing. If an installer puts a @.bash_login@ in your home directory your @.profile@ wouldn't be read.

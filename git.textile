@@ -47,7 +47,7 @@ You get an answer like
 </pre>		
 
 Now create a file with a list of your svn users and map them to git users, 
-save it to @~/username/users.txt@. The file contents have to look similiar
+save it to @~/username/users.txt@. The file contents have to look similar
 to this:
 
 <pre>
@@ -129,9 +129,9 @@ Open the _SSH Public Keys_ tab of your "account":https://github.com/account and 
 
 h3. Push repository to Github
 
-Set up the repo on github using "github.com/repositories/new":http://github.com/repositories/new
+Set up the repository on github using "github.com/repositories/new":http://github.com/repositories/new
 
-Github tells you what to do next, which is "setting up a local repo":#create-local-repo, making your commits, configure your local repo and push it.
+Github tells you what to do next, which is "setting up a local repository":#create-local-repo, making your commits, configure your local repository and push it.
 
 <pre>	
 	$ git remote add origin git@github.com:username/reponame.git

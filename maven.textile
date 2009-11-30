@@ -36,7 +36,7 @@ h3. Proxy
 
 h3. Move the local repository
 
-As I use multiple user on my machine for different clients (it helps keep my mind sane) and don't want to have a repository for each user I decided to move it to a shared location on my harddrive. Normally it is found in @~/.m2/repository@
+As I use multiple user on my machine for different clients (it helps keep my mind sane) and don't want to have a repository for each user I decided to move it to a shared location on my hard drive. Normally it is found in @~/.m2/repository@
 
 To change the path to the repository open your settings under @~/.m2/settings.xml@ and add/change the following
 
@@ -85,7 +85,7 @@ This is a *very* simple example as the library doesn't have any external depende
 	$ cp -r javabase64/repository/ ~~/.m2/repository/
 </pre>
 
-Normally you will have more complex cases. Try to track down which libraries are used and put them next to library to be mavenized. Best to put all files in a directory and call mavenizer on that directory. The analyser will generate a @mavenizer.xml@ file, which you have to go trough yourself. Hopefully you can replace the dependency with known artifacts.
+Normally you will have more complex cases. Try to track down which libraries are used and put them next to library to be mavenized. Best to put all files in a directory and call mavenizer on that directory. The analyzer will generate a @mavenizer.xml@ file, which you have to go trough yourself. Hopefully you can replace the dependency with known artifacts.
 
 h4. A simple (read lazy but quick) way
 
