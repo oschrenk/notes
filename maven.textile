@@ -65,7 +65,7 @@ h3. New Maven Project
 <code>packaging</code>defaults to jar
 <code>name</code>Descriptive name
 
-h3. Mavenize a 3-rd party library
+h3(#mavenize). Mavenize a 3-rd party library
 
 "Mavenizer":http://mavenizer.sourceforge.net/ is a tool that can help you mavenize 3rd party libraries
 
@@ -86,6 +86,14 @@ This is a *very* simple example as the library doesn't have any external depende
 </pre>
 
 Normally you will have more complex cases. Try to track down which libraries are used and put them next to library to be mavenized. Best to put all files in a directory and call mavenizer on that directory. The analyser will generate a @mavenizer.xml@ file, which you have to go trough yourself. Hopefully you can replace the dependency with known artifacts.
+
+h4. A simple (read lazy but quick) way
+
+The "Mavenize":#mavenize way is the better (more complete/correct) choice but sometimes you can't be bothered with dependency hell. Just use the following command and change according to your needs:
+
+<pre>
+	$ mvn install:install-file -Dfile=library.jar -DgroupId=com.company -DartifactId=libraryname -Dversion=1.2.3 -Dpackaging=jar
+</pre>
 
 h2. FAQ/Problems
 
