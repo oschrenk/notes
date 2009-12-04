@@ -147,6 +147,7 @@ h3. Various
 * *Batch rename files, replacing _foo_ with _bar_* *@for file in *.*; do mv $file `echo $file | sed 's/bar/foo/g'` ; done@
 * *Create missing directory when moving files* @mkdir -p ./some/path/; mv yourfile.txt $_@
 * *Download a file with "authorization" cookie* @wget --server-response --continue --load-cookies cookies.txt http://host.com/file.ext@
+* *Recursively remove @.svn@ directories* @find . -type d -name '.svn' -print0 | xargs -0 rm -rdf@
 
 h2. FAQ/Problems
 
