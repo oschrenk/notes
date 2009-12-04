@@ -147,3 +147,24 @@ http://maven.apache.org/maven-v4_0_0.xsd">
 <!-- snip -->
 </project>
 </pre>
+
+h3. Change source level of maven project
+
+Add the following snippet to your @pom.xml@
+
+<pre>	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.5</source>
+					<target>1.5</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</pre>
+
+Change the @source@ and @target@ tags according to your needs
