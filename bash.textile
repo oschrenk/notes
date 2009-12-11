@@ -24,16 +24,16 @@ Bash supports @Ctrl + r@ to search the history. Per default the size history (an
 
 WARNING: OSX prefers the @.profile@ to @.bash_profile@. If both exists *only*  @.profile@ will be read (see ".profile not read":#profile-not-read)
 
-<pre>        
- #.bash_profile or .profile
+<pre>
+#.bash_profile or .profile
 export HISTFILESIZE=1000000000      # sets history size to something really big
 export HISTSIZE=1000000             # sets history size to something really big
 </pre>
  
 You can also set to ignore duplicates of commands (@ls@, @ps -ef@ are such candidates)
- 
-<pre>        
- #.bash_profile or .profile
+
+<pre>
+#.bash_profile or .profile
 export HISTCONTROL=ignoreboth
 </pre>
 
@@ -61,7 +61,7 @@ Next to @.profile@ there is also @.inputrc@. This is the configuration file for 
 *An exemplary scenario* is when you have to login to multiple servers using @ssh ...@ commands. Instead of toggling through all the occurrences in the history you can just start typing away @ssh @.
 
 With the following snippet in the @.inputrc@ file you can then just use your arrow keys to scroll through all the occurrences starting with the prefix you have typed in so far. This is especially useful when multiple logins share the same user but have different hosts.
-   
+
 <pre>
 	# By default up/down are bound to previous-history
 	# and next-history respectively. The following does the
@@ -120,7 +120,6 @@ Sometimes when using @ls -l@ there is a @+@ or a <code>@</code> symbol
 	-rwx------+ 1 testuser Admin     25600 Jul 12 02:04 file.ext
 	-rwx------@ 1 testuser Admin     25600 Jul 12 02:04 file.ext
 </pre>
-
 
 The @+@ indicates the use of ACL (Access Control Lists). Consult "ACL":#acl for more infos.
 
