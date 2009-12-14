@@ -161,3 +161,9 @@ Unlike _SVN_ it is *NOT* @svn revert@ instead use
 </pre>
 
 to overwrite changes.
+
+h2. FAQ - Problems/Error Messages
+
+h3. @error: src refspec master does not match any.@
+
+The error message leads to the conclusion that you do not have a master branch in your local repository. Either push your main development branch (git push origin my-local-master:master which will rename it to master on github) or make a commit first. You can not push a completely empty repository.
