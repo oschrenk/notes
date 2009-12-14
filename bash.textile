@@ -111,7 +111,9 @@ h3. Search in man pages
 
 Just type @/@ and then the word you search for. 
 
-h2. ls -l "weirdness" +/@ symbol in @ls -l@
+h2. File attributes
+
+h3. ls -l "weirdness" +/@ symbol in @ls -l@
 
 Sometimes when using @ls -l@ there is a @+@ or a <code>@</code> symbol
 
@@ -124,8 +126,6 @@ Sometimes when using @ls -l@ there is a @+@ or a <code>@</code> symbol
 The @+@ indicates the use of ACL (Access Control Lists). Consult "ACL":#acl for more infos.
 
 The <code>@</code> indicates further file attributes. Consult "Apple File Attributes":#apple-file-attributes for more infos.
-
-h2. File attributes
 
 h3(#acl). Access Control lists
 
@@ -145,6 +145,75 @@ To delete an acl entry you have to run @chmod -a@ with the exact defintion of th
 h3(#apple-file-attributes). Apple File Attributes
 
 Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using <code>ls -ls</code> indicated by the <code>@</code> symbol. By calling <code>ls -@</code> you can see that an attribute @com.apple.quarantine@ has been added. To remove that call @sudo xattr -d com.apple.quarantine path@
+
+h2. SSH
+
+h3. Setting up a key
+
+<pre>
+	$ ssh-keygen -t rsa
+</pre>
+
+Using is secure password is recommended. Otherwise someone who has access to your terminal, or your key will automatically have access to all hosts. Worst case scenario: Someone with a minute and a USB stick to spare, copies your key-pair and your @known_hosts@ file. So please use a password. It might sound silly as you will still have to use a password, but there is a solution for that namely @ssh-agent@.
+
+You will get something like:
+
+<pre>
+	Your identification has been saved in ~/.ssh/id_rsa.
+	Your public key has been saved in ~/.ssh/id_rsa.pub.
+</pre>
+
+For further security you might want to consider to giveing only your user the right to read the files. 
+
+<pre>
+	# protect the keys from being read
+	cd ~/.ssh
+	$ chmod 600 id*
+	$ chmod 600 known_hosts
+</pre>
+
+h3. Using SSH Agent on OS X
+
+Call @ssh-add@ for every private key.
+
+<pre>
+	$ ssh-add -K ~/.ssh/id_rsa 
+</pre>
+
+h4. @Could not open a connection to your authentication agent.@
+
+The @ssh-agent@ hasn't started or isn't properly configured. To manually start an agent, enter
+
+<pre>
+	$ ssh-agent bash
+</pre>  
+
+Or just include this startup script on your @.profile@
+
+<pre>	
+	SSH_ENV="$HOME/.ssh/environment"
+
+	function start_agent {
+	     echo "Initialising new SSH agent..."
+	     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+	     echo succeeded
+	     chmod 600 "${SSH_ENV}"
+	     . "${SSH_ENV}" > /dev/null
+	     /usr/bin/ssh-add;
+	}
+
+	# Source SSH settings, if applicable
+
+	if [ -f "${SSH_ENV}" ]; then
+	     . "${SSH_ENV}" > /dev/null
+	     #ps ${SSH_AGENT_PID} doesn't work under cywgin
+	     ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+	         start_agent;
+	     }
+	else
+	     start_agent;
+	fi 
+</pre>
 
 h2. Helpful commands
 
