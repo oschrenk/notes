@@ -1,6 +1,8 @@
 h1. Textile
 
-h2. Adding anchor links
+h2. Reference
+
+h3. Adding anchor links
 
 Set your anchor links in your header tags by adding @(#yourAnchorId)@ like so:
 
@@ -10,7 +12,7 @@ h1(#yourAnchorId).
 
 Link to it by using the the normal link <code>"Text":#yourAnchorId</code>
 
-h2. Adding non textile html blocks
+h3. Adding non textile html blocks
 
 Just add @<notextile>@ blocks like so
 	
@@ -20,11 +22,11 @@ Just add @<notextile>@ blocks like so
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	  <head>
 	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	    <title>Shadowrun - the iPhone application</title>
+	    <title>Title</title>
 	  </head>
 	  <body>
 	</notextile>
 </pre>
 
-Especially useful for inclúding header information.
-	
+Especially useful for including header information.
+
