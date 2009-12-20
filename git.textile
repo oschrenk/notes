@@ -2,17 +2,13 @@ h1. Git
 
 h2. Installation on OS X
 
-<pre>
-	$sudo port install git-core +svn
-</pre>
+bc. $ sudo port install git-core +svn
 
 h2. Configuring Git
 
-<pre>
-	$ git config --global color.ui "auto"
-	$ git config --global user.name "FirstName LastName"	
-	$ git config --global user.email "your@email.address"
-</pre>
+bc. $ git config --global color.ui "auto"
+$ git config --global user.name "FirstName LastName"	
+$ git config --global user.email "your@email.address"
 
 h3. Global ignores 
 
@@ -20,73 +16,54 @@ You don't have to ignore files/paths on a per project basis. You can also have a
 
 Set the global ignore files
 
-<pre>
-	$ git config --global core.excludesfile ~/.gitignore
-</pre>
+bc. $ git config --global core.excludesfile ~/.gitignore
 
 Now you can add ignores by calling
 
-<pre>
-	$ echo .DS_Store >> ~/.gitignore
-</pre>
+bc. $ echo .DS_Store >> ~/.gitignore
 
 h2(#migrate-svn). Migrate subversion repositories
 
 Create an empty directory and prepare the repository
 
-<pre>
-	$ mkdir project_tmp
-	$ cd project_tmp
-	$ git svn init http://code.yoursite.net/project/trunk/ --no-metadata
-</pre>
+bc. $ mkdir project_tmp
+$ cd project_tmp
+$ git svn init http://code.yoursite.net/project/trunk/ --no-metadata
 
 You get an answer like
 
-<pre>
-	Initialized empty Git repository in /absolute/path/project_tmp/.git/
-</pre>		
+bc. Initialized empty Git repository in /absolute/path/project_tmp/.git/
 
 Now create a file with a list of your svn users and map them to git users, 
 save it to @~/username/users.txt@. The file contents have to look similar
 to this:
 
-<pre>
-	joesample = Joe Sample <joe.sample@domain.net>
-	janedoe = Jane Doe <jane.doe@company.com>
-</pre>
+bc. joesample = Joe Sample <joe.sample@domain.net>
+janedoe = Jane Doe <jane.doe@company.com>
 
 then run
 
-<pre>
-	$ git config svn.authorsfile /path/to/svn.authorsfile
-</pre>
-
+bc. $ git config svn.authorsfile /path/to/svn.authorsfile
 
 Now we have to get the data from the svn repository by calling
 
-<pre>
-	$ git svn fetch
-</pre>
+bc. $ git svn fetch
 
 Depending on the size of your repository and the number of changes you made the process made take while. If everything went fine you get a bunch of messages that look something like this:
-<pre>
-	[...]
-	r126 = 5ee70c02797f9f4d31238fcdbbcaaf830daf490d (refs/remotes/git-svn)
-		M	doc/notes.textile
-		D	src/com/project/keywords.properties
-		A	src/com/project/Entry.java
-	r127 = 4b38f4b2a740e8afc8a134f4d5425dbb2e42dc40 (refs/remotes/git-svn)
-	Checked out HEAD:
-	  http://code.yoursite.net/project/trunk/ r127
-</pre>
+
+bc. [...]
+r126 = 5ee70c02797f9f4d31238fcdbbcaaf830daf490d (refs/remotes/git-svn)
+	M	doc/notes.textile
+	D	src/com/project/keywords.properties
+	A	src/com/project/Entry.java
+r127 = 4b38f4b2a740e8afc8a134f4d5425dbb2e42dc40 (refs/remotes/git-svn)
+Checked out HEAD:
+http://code.yoursite.net/project/trunk/ r127
 
 You can use @git log@ to check if the users were setup correctly. The last step is too to another clone of the repository to get rid of all the stuff that is/was only needed for git svn to work.
 
-<pre>
-	$ cd ..
-	$ git clone project_tmp project
-</pre>
-
+bc. $ cd ..
+$ git clone project_tmp project
 
 h2. Configuring for use with git svn
 
@@ -94,20 +71,16 @@ If you still have to work with some svn repositories you might consider setting 
 
 See "Migrate SVN":#migrate-svn for some more information, but run add @--global@ to add it to the global .gitconfig like so:
 
-<pre>
-	$ git config --global svn.authorsfile ~/Desktop/users.txt
-</pre>
+bc. $ git config --global svn.authorsfile ~/Desktop/users.txt
 
 h2(#create-local-repo). Setting up local Git
 
-<pre>
-  $ mkdir notes
-  $ cd notes
-  $ git init
-  $ touch README
-  $ git add README
-  $ git commit -m 'first commit'
-</pre>
+bc.  $ mkdir notes
+ $ cd notes
+ $ git init
+ $ touch README
+ $ git add README
+ $ git commit -m 'first commit'
 
 h2. Github 
 
@@ -115,15 +88,11 @@ h3. Setup
 
 Github needs you to generate a SSH key to communicate with the server. As always the Github team made it easy and posted a "tutorial":http://help.github.com/mac-key-setup/. In short:
 
-<pre>
-	$ ssh-keygen -t rsa -C "mail@host.com"
-</pre>	 
+bc. $ ssh-keygen -t rsa -C "mail@host.com"
 
 Choose a passphrase, copy it to the clipboard.
 
-<pre>
-	$ cat ~/.ssh/id_rsa.pub | pbcopy
-</pre>
+bc. $ cat ~/.ssh/id_rsa.pub | pbcopy
 
 Open the _SSH Public Keys_ tab of your "account":https://github.com/account and paste it.
 
@@ -133,20 +102,14 @@ Set up the repository on github using "github.com/repositories/new":http://githu
 
 Github tells you what to do next, which is "setting up a local repository":#create-local-repo, making your commits, configure your local repository and push it.
 
-<pre>	
-	$ git remote add origin git@github.com:username/reponame.git
-	$ git push origin master
-</pre>
+bc. $ git remote add origin git@github.com:username/reponame.git
+$ git push origin master
 
 h2. Setting up remote Git
 
-http://toolmantim.com/articles/setting_up_a_new_remote_git_repository
+http://toolmantim.com/articles/setting_up_a_new_remote_git_repository:http://toolmantim.com/articles/setting_up_a_new_remote_git_repository
 
 h2. Using Git
-
-http://www.kernel.org/pub/software/scm/git/docs/everyday.html#Individual%20Developer%20%28Standalone%29
-http://git.or.cz/course/svn.html
-http://www.gitready.com/
 
 h3. Commit
 
@@ -156,9 +119,7 @@ h3. Revert
 
 Unlike _SVN_ it is *NOT* @svn revert@ instead use 
 
-<pre>
-	$ git checkout filename
-</pre>
+bc. $ git checkout filename
 
 to overwrite changes.
 
