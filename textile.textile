@@ -30,6 +30,6 @@ h2. FAQ/Problems
 
 h3. Commands aren't replaced leaving @<command>. content@ in output
 
-This can happen if there is a tab after the command instead of the space, which is not distuingishable from one another if a tab represents four spaces and the command is two spaces long.
+This can happen if there is a tab after the command instead of the space, which is not distinguishable from one another if a tab represents four spaces and the command is two spaces long.
 
 Remove the tab and replace it with a space character.
