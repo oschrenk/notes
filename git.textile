@@ -53,7 +53,7 @@ bc. $ git config --global svn.authorsfile ~/Desktop/users.txt
 
 h2. Basic Git
 
-h2(#create-local-repo). Create a new local Git repository
+h3(#new-project). Start a new project with Git
 
 bc.  $ mkdir notes
  $ cd notes
@@ -62,19 +62,101 @@ bc.  $ mkdir notes
  $ git add README
  $ git commit -m 'first commit'
 
-h3. Commit
+h4. Commit
 
-bc. git commit
-git commit /path/file
-git commit -m 'message'
+bc. $ git commit /path/file
+$ git commit -m 'message' /path/file
+$ git commit -a /path/auto-added.file
 
-h3. Revert
+h4. Rename
+
+bc. $ git mv <src> <dst>
+
+h4. Diff
+
+bc. $ git diff
+
+h4. Revert
 
 Unlike _SVN_ it is *NOT* @svn revert@ instead use 
 
 bc. $ git checkout filename
 
 to overwrite changes.
+
+h3. Branching
+
+Show the available branches (an asterisk @*@ represents the active branch)
+
+bc. $ git branch 
+
+Show the remote branches
+
+bc. $ git branch -r
+
+Make a new branch called "experiment"
+
+bc. $ git branch experiment
+
+Switch to a branch called "experiment". Git will warn you if you have uncommitted changes.
+
+bc. $ git checkout experiment
+
+h3. Merging
+
+Git will complain if the working copy has uncommitted changes and about conflicts
+
+bc. $ git merge <branch-name> 
+
+To delete a branch (normally not necessary)
+
+bc. $ git branch -d name-of-branch  
+
+h3. Tagging
+
+Shows a log of the commits (SHA1 id)
+
+bc. $ git log
+
+A log message looks like this:
+
+bc.. commit 589b3ce058b38cc83e54f122200cd250a6a26427
+Author: Johne Doe <john.doe@host.tld>
+Date:   Tue Dec 22 01:14:19 2009 +0100
+
+    Commit message 
+
+p. To tag a commit (_lightweight tag_)
+
+bc. $ git tag name-of-tag <sha1-id>
+
+or to tag it with a message (_annotated tag_)
+
+bc. $ git tag -a name-of-tag <sha1-id> -m "message"
+
+View available tags
+
+bc. $ git tag -l
+
+Show all the tags matching pattern "release*"
+
+bc. $ git tag -l release*
+
+Show a tag's messages/signature
+
+bc. git show name-of-tag
+
+To remove a tag
+
+bc. $ git tag -d name-of-tag
+
+To remove a tag on a remote repository, you should do a special push:
+
+bc. $ git push origin :refs/tags/tag_name
+
+To push your tags to a remote repository, use the following command to push all tags:
+
+bc. $ git push origin --tags
 
 h2. Advanced Git
 
@@ -129,7 +211,7 @@ h3. Push repository to Github
 
 Set up the repository on github using "github.com/repositories/new":http://github.com/repositories/new
 
-Github tells you what to do next, which is "setting up a local repository":#create-local-repo, making your commits, configure your local repository and push it.
+Github tells you what to do next, which is "setting up a local repository":#new-project, making your commits, configure your local repository and push it.
 
 bc. $ git remote add origin git@github.com:username/reponame.git
 $ git push origin master
