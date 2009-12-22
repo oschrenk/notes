@@ -1,16 +1,18 @@
 h1. Git
 
-h2. Installation on OS X
+h2. Setup
+
+h3. Installation
 
 bc. $ sudo port install git-core +svn
 
-h2. Configuring Git
+h3. Configuring Git
 
 bc. $ git config --global color.ui "auto"
 $ git config --global user.name "FirstName LastName"	
 $ git config --global user.email "your@email.address"
 
-h3. Global ignores 
+h4. Global ignores 
 
 You don't have to ignore files/paths on a per project basis. You can also have a global ignore list. This is helpful when ignoring such files as @.DS_Store@, which OS X tends to create.
 
@@ -22,50 +24,7 @@ Now you can add ignores by calling
 
 bc. $ echo .DS_Store >> ~/.gitignore
 
-h2(#migrate-svn). Migrate subversion repositories
-
-Create an empty directory and prepare the repository
-
-bc. $ mkdir project_tmp
-$ cd project_tmp
-$ git svn init http://code.yoursite.net/project/trunk/ --no-metadata
-
-You get an answer like
-
-bc. Initialized empty Git repository in /absolute/path/project_tmp/.git/
-
-Now create a file with a list of your svn users and map them to git users, 
-save it to @~/username/users.txt@. The file contents have to look similar
-to this:
-
-bc. joesample = Joe Sample <joe.sample@domain.net>
-janedoe = Jane Doe <jane.doe@company.com>
-
-then run
-
-bc. $ git config svn.authorsfile /path/to/svn.authorsfile
-
-Now we have to get the data from the svn repository by calling
-
-bc. $ git svn fetch
-
-Depending on the size of your repository and the number of changes you made the process made take while. If everything went fine you get a bunch of messages that look something like this:
-
-bc. [...]
-r126 = 5ee70c02797f9f4d31238fcdbbcaaf830daf490d (refs/remotes/git-svn)
-	M	doc/notes.textile
-	D	src/com/project/keywords.properties
-	A	src/com/project/Entry.java
-r127 = 4b38f4b2a740e8afc8a134f4d5425dbb2e42dc40 (refs/remotes/git-svn)
-Checked out HEAD:
-http://code.yoursite.net/project/trunk/ r127
-
-You can use @git log@ to check if the users were setup correctly. The last step is too to another clone of the repository to get rid of all the stuff that is/was only needed for git svn to work.
-
-bc. $ cd ..
-$ git clone project_tmp project
-
-h2. Configuring for use with git svn
+h4. Configuring for use with git svn
 
 If you still have to work with some svn repositories you might consider setting up a global file for the svn users so that you don't have to do that for each project.
 
@@ -73,7 +32,11 @@ See "Migrate SVN":#migrate-svn for some more information, but run add @--global@
 
 bc. $ git config --global svn.authorsfile ~/Desktop/users.txt
 
-h2(#create-local-repo). Setting up local Git
+h2. Concept
+
+h2. Basic Git
+
+h2(#create-local-repo). Create a new local Git repository
 
 bc.  $ mkdir notes
  $ cd notes
@@ -81,35 +44,6 @@ bc.  $ mkdir notes
  $ touch README
  $ git add README
  $ git commit -m 'first commit'
-
-h2. Github 
-
-h3. Setup
-
-Github needs you to generate a SSH key to communicate with the server. As always the Github team made it easy and posted a "tutorial":http://help.github.com/mac-key-setup/. In short:
-
-bc. $ ssh-keygen -t rsa -C "mail@host.com"
-
-Choose a passphrase, copy it to the clipboard.
-
-bc. $ cat ~/.ssh/id_rsa.pub | pbcopy
-
-Open the _SSH Public Keys_ tab of your "account":https://github.com/account and paste it.
-
-h3. Push repository to Github
-
-Set up the repository on github using "github.com/repositories/new":http://github.com/repositories/new
-
-Github tells you what to do next, which is "setting up a local repository":#create-local-repo, making your commits, configure your local repository and push it.
-
-bc. $ git remote add origin git@github.com:username/reponame.git
-$ git push origin master
-
-h2. Setting up remote Git
-
-http://toolmantim.com/articles/setting_up_a_new_remote_git_repository:http://toolmantim.com/articles/setting_up_a_new_remote_git_repository
-
-h2. Using Git
 
 h3. Commit
 
@@ -157,6 +91,74 @@ $ git filter-branch --prune-empty --subdirectory-filter subdirectory master
 Then change the remote repository and push the changes.
 
 If you want you can then remove all infos about the subdirectory in your repository (or better on a backup) by "removing the path from history":#remove-file-from-history.
+
+h2. Github 
+
+h3. Setup
+
+Github needs you to generate a SSH key to communicate with the server. As always the Github team made it easy and posted a "tutorial":http://help.github.com/mac-key-setup/. In short:
+
+bc. $ ssh-keygen -t rsa -C "mail@host.com"
+
+Choose a passphrase, copy it to the clipboard.
+
+bc. $ cat ~/.ssh/id_rsa.pub | pbcopy
+
+Open the _SSH Public Keys_ tab of your "account":https://github.com/account and paste it.
+
+h3. Push repository to Github
+
+Set up the repository on github using "github.com/repositories/new":http://github.com/repositories/new
+
+Github tells you what to do next, which is "setting up a local repository":#create-local-repo, making your commits, configure your local repository and push it.
+
+bc. $ git remote add origin git@github.com:username/reponame.git
+$ git push origin master
+
+h2. Use cases
+
+h3(#migrate-svn). Migrate subversion repositories
+
+Create an empty directory and prepare the repository
+
+bc. $ mkdir project_tmp
+$ cd project_tmp
+$ git svn init http://code.yoursite.net/project/trunk/ --no-metadata
+
+You get an answer like
+
+bc. Initialized empty Git repository in /absolute/path/project_tmp/.git/
+
+Now create a file with a list of your svn users and map them to git users, 
+save it to @~/username/users.txt@. The file contents have to look similar
+to this:
+
+bc. joesample = Joe Sample <joe.sample@domain.net>
+janedoe = Jane Doe <jane.doe@company.com>
+
+then run
+
+bc. $ git config svn.authorsfile /path/to/svn.authorsfile
+
+Now we have to get the data from the svn repository by calling
+
+bc. $ git svn fetch
+
+Depending on the size of your repository and the number of changes you made the process made take while. If everything went fine you get a bunch of messages that look something like this:
+
+bc. [...]
+r126 = 5ee70c02797f9f4d31238fcdbbcaaf830daf490d (refs/remotes/git-svn)
+	M	doc/notes.textile
+	D	src/com/project/keywords.properties
+	A	src/com/project/Entry.java
+r127 = 4b38f4b2a740e8afc8a134f4d5425dbb2e42dc40 (refs/remotes/git-svn)
+Checked out HEAD:
+http://code.yoursite.net/project/trunk/ r127
+
+You can use @git log@ to check if the users were setup correctly. The last step is too to another clone of the repository to get rid of all the stuff that is/was only needed for git svn to work.
+
+bc. $ cd ..
+$ git clone project_tmp project
 
 h2. FAQ - Problems/Error Messages
 
