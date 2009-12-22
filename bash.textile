@@ -111,6 +111,16 @@ h3. Search in man pages
 
 Just type @/@ and then the word you search for. 
 
+h3. Useful search queries
+
+* Files *greater than 1GB* @find /path -size +1024000k -print@
+* Files *less than 7 days old* @find /path -mtime -7 -print@
+* Files *longer than 7 days old* @find /path -mtime +7 -print@
+* *Executable files* @find /path -perm -100 -print@
+* Files *with @-r--r--r--@ permissions* @find /path -perm 444 -print@
+* *Directories with write permissions* @find /path -type -perm 777 -print@
+* Files *with specific extension* @find /path -name '*.ext' -print@
+
 h2. File attributes
 
 h3. ls -l "weirdness" +/@ symbol in @ls -l@
