@@ -216,6 +216,39 @@ Github tells you what to do next, which is "setting up a local repository":#new-
 bc. $ git remote add origin git@github.com:username/reponame.git
 $ git push origin master
 
+h3. Specify GitHub as a remote repository
+
+bc. $ cd ~/path/to/repos/repo
+$ vi .git/config
+
+You should see something like
+
+bc. [core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	
+We want to add github as a remote repository, so we add
+
+bc. [remote "github"]
+	url = git@github.com:git_username/projectname.git
+	fetch =  +refs/heads/:refs/remotes/origin/
+	push = refs/heads/master:refs/heads/master
+
+The name @github@ can be anything, but it should be helpful if intend to use different remote repositories in the future
+
+Above code can also be added by a command
+
+bc. git remote add github git@github.com:git_username/projectname.git
+
+Do some hacking and commit the changes. To push your changes to github call
+
+bc. $ $ git push github master
+
+Replace @github@ with the name you used.
+
 h2. Use cases
 
 h3(#migrate-svn). Migrate subversion repositories
@@ -265,7 +298,28 @@ h2. FAQ - Problems/Error Messages
 
 h3. @error: src refspec master does not match any.@
 
-The error message leads to the conclusion that you do not have a master branch in your local repository. Either push your main development branch (git push origin my-local-master:master which will rename it to master on github) or make a commit first. You can not push a completely empty repository.
+The error message leads to the conclusion that you do not have a master branch in your local repository. Either push your main development branch (@git push origin my-local-master:master@ which will rename it to master on github) or make a commit first. You can not push a completely empty repository.
+
+h3. @Your branch is ahead of 'origin/master' by 11 commits.@
+
+Recently a repository of mine gave me
+
+bc. # On branch master
+# Your branch is ahead of 'origin/master' by 11 commits.
+
+When calling 
+
+bc. $ git status
+
+As its a local repository, only I work on It kinda baffled my as to why this message occurs. As expected @.git/config@ shows
+
+bc. 	[remote "origin"]
+	fetch = +refs/heads/*:refs/remotes/origin/*
+	url = /Users/some/path
+
+My guess is that I accidently called @git push origin master@. In my case I can safely delete the remote branch
+
+bc. $ git remote rm origin
 
 h2. Sources
 
