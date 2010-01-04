@@ -186,13 +186,11 @@ While the history is rewritten, the files might still be in your local repositor
 
 Make sure you get all files and directories. Maybe you have renamed the file or directory in the past.
 
-
 h3(#cleanup). Cleanup and reclaiming space
 
 bc. $ rm -rf .git/refs/original/
 $ git reflog expire --all
 $ git gc --aggressive --prune
-
 
 h3(#backup-repository). Backup your local repository
 
@@ -271,9 +269,25 @@ bc. $ $ git push github master
 
 Replace @github@ with the name you used.
 
-h3(#submodule-private). Adding private repository as submodule
+h3. Working with submodules
+
+h4(#submodule-private). Adding private repository as submodule
 
 bc. git submodule add git@github.com:username/plugin.git plugins/plugin
+
+h4. Pulling submodules
+
+If a project uses submodules and a developer clones that repository it looks like a normal checkout. But a closer look shows that the directories exist but are in fact empty.
+
+Use
+
+bc. $ git submodule init
+
+to add the submodule repository URLs to @.git/config@. Then run
+
+bc. $ git submodule update
+
+to clone the repositories.
 
 h2. Use cases
 
