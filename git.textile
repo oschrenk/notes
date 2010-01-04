@@ -62,17 +62,21 @@ bc.  $ mkdir notes
  $ git add README
  $ git commit -m 'first commit'
 
-h4. Commit
+h3. Clone existing repository
+
+bc. $ git clone git@github.com:username/project.git
+
+h3. Commit
 
 bc. $ git commit /path/file
 $ git commit -m 'message' /path/file
 $ git commit -a /path/auto-added.file
 
-h4. Rename
+h3. Rename
 
 bc. $ git mv <src> <dst>
 
-h4. Diff
+h3. Diff
 
 bc. $ git diff
 
