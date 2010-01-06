@@ -1,5 +1,17 @@
 h1. Textmate
 
+h2. Appearance
+
+h3. Themes for Webpreview
+
+You might have to create the directory containing the user themes first.
+
+bc. $ mkdir ~/Library/Application\ Support/TextMate/Themes/WebPreview
+
+Create a subdirectory for each theme you intend to create. Then let your creative juices flow and create your own stylesheets. Just remember to call the stylesheet
+
+bc. style.css
+
 h2. Useful Plugins/Bundles
 
 h3. XMLMate
