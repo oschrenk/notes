@@ -12,6 +12,8 @@ Create a subdirectory for each theme you intend to create. Then let your creativ
 
 bc. style.css
 
+All selectors should be prefixed with @.<themename>@ to avoid affecting other themes.
+
 h2. Useful Plugins/Bundles
 
 h3. XMLMate
