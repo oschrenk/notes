@@ -361,6 +361,29 @@ My guess is that I accidently called @git push origin master@. In my case I can 
 
 bc. $ git remote rm origin
 
+h3. @error: failed to push some refs to 'git@github.com:usernname/project.git@
+
+I tried pusing changes to github when i got
+
+bc. $ git push github master
+To git@github.com:username/project.git
+ ! [rejected]        master -> master (non-fast forward)
+error: failed to push some refs to 'git@github.com:username/project.git'
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes before pushing again.  See the 'non-fast forward'
+section of 'git push --help' for details.
+
+Ok. I had no idea. A quick google search answered it. Just do a pull first.
+
+bc. $ git pull github master
+From github.com:username/project
+ * branch            master     -> FETCH_HEAD
+Merge made by recursive.
+ file.textile |   14 ++++++++++++++
+ 1 files changed, 14 insertions(+), 0 deletions(-)
+
+And sure enough I remembered that I edited this file when I was at the office.
+
 h2. Sources
 
 fn1. "Git from the bottom up":http://ftp.newartisans.com/pub/git.from.bottom.up.pdf (John Wiegley, 09-12-02)
