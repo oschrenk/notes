@@ -1,0 +1,9 @@
+h1. Tea
+
+h2. Preperation
+
+h3. Mom's Water Boiler 
+
+- 90° := 2m 30s
+- 80° := 7m 30s
+- 70° := 15m 15s
