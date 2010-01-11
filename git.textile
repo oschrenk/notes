@@ -227,6 +227,14 @@ bc. $ cat ~/.ssh/id_rsa.pub | pbcopy
 
 Open the _SSH Public Keys_ tab of your "account":https://github.com/account and paste it.
 
+h3. Github User pages
+
+If you publish a repository to github named @username.github.com@, it will autmomatically be used as your github pages website accesible via "username.github.com":http://username.github.com
+
+It support static HTMl content, but also supports "Jekyll":http://github.com/mojombo/jekyll/, a static site generator. For more nfo you can read up on it on "pages.github.com":http://pages.github.com/
+
+Be advised that only a push from your local repisitory does trigger a publish of your homepage, editing the pages via the webinterface does not trigger the publishing service.
+
 h3. Push repository to Github
 
 Set up the repository on github using "github.com/repositories/new":http://github.com/repositories/new
