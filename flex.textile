@@ -1,0 +1,27 @@
+h1. Flex
+
+h2. Data Bindings
+
+h3. @[Bindable]@
+
+If you use @[Bindable]@ on your class (or on the respective fields/methods) make sure that the instance of the class is also marked as @[Bindable]@.
+
+h2. FAQ/Problems
+
+h3. Invalid Embed directive in stylesheet - can't resolve source 'Embed("/assets/path/file.png")'.
+
+This can be a pain. You might try clearing the cache, cleaning the project, deleting your files in the @bin@ directorym but still run into this error.
+
+The cause was not the css file but a custom component using an Embed statement. In this statement a graphic resource has been referenced that wasn't there yet. For some reasons Flex Builder spews the above errors first but the root cause later
+
+bc. unable to resolve '/assets/path/file2.png' for transcoding	project/components	Component.mxml	line 224	1263378739408	3433
+
+If you try to resolve your compile error from top to bottom, you won't see the error and, even worse, if you have more than 100 Embed directives in your css file you won't even see the other error message, as Flex Builder per default only shows the first 100 error messages.
+
+To show more error messages use the white triangle on the top right corner in the problems pane and choose @Preferences...@ to change the 	number of errors.
+
+h2. Links
+
+h3. XPATH Library
+
+"code.google.com/p/xpath-as3":http://code.google.com/p/xpath-as3/
