@@ -301,6 +301,10 @@ bc. wget --server-response --continue --load-cookies cookies.txt http://host.com
 
 bc. find . -type d -name '.svn' -print0 | xargs -0 rm -rdf
 
+*Get public IP address*
+
+bc. curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
+
 h3. rsync
 
 bc. rsync -rv
