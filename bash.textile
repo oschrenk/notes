@@ -229,24 +229,77 @@ h2. Helpful commands
 
 h3. Various
 
-* *Create symbolic link* in @/destination/path@ to @/existing/path@ @ln -s /existing/path /destination/path@ 
-* *Change to previous working directory* @cd -@ 
-* Run the *last command as root* @sudo !!@ 
-* Runs *previous command but replacing first instance of foo with bar* @^foo^bar@ 
-* Runs *previous command but replacing all instances of foo with bar* @!!:gs/foo/bar@
-* *Copy ssh key* to server <code>cat ~/.ssh/id_rsa.pub | ssh account@remoteserver.com "cat - >> .ssh/authorized_keys"</code>
-* *Spider a website* @httrack "http://www.all.net/" -O "/tmp/www.all.net" "+*.all.net/*" -v@
-* *Query wikipedia via dns* @dig +short txt <keyword>.wp.dg.cx@
-* *Stopwatch* (ctrl-d to stop) @time read@
-* *SSH connection through host in the middle* @ssh -t reachable_host ssh unreachable_host@
-* *Sharing file through port 80*, access with @http://ip-address/@ @nc -q 1 -w 5 -v -l -p 80 < file.ext@
-* *Disk usage in readable form* @du -sh [file ...]@ 
-* *Rename all files in directory to lowercase* @for x in *; do mv "$x" "`echo $x | tr [A-Z] [a-z]`"; done@
-* *Replace "space" char with "dot"* char in current directory file names @ls -1 | while read a; do mv "$a" `echo $a | sed -e 's/\ /\./g'`; done@
-* *Batch rename files, replacing _foo_ with _bar_* *@for file in *.*; do mv $file `echo $file | sed 's/bar/foo/g'` ; done@
-* *Create missing directory when moving files* @mkdir -p ./some/path/; mv yourfile.txt $_@
-* *Download a file with "authorization" cookie* @wget --server-response --continue --load-cookies cookies.txt http://host.com/file.ext@
-* *Recursively remove @.svn@ directories* @find . -type d -name '.svn' -print0 | xargs -0 rm -rdf@
+*Create symbolic link* in @/destination/path@ to @/existing/path@ 
+
+bc. ln -s /existing/path /destination/path
+ 
+*Change to previous working directory* 
+
+bc. cd -@ 
+
+Run the *last command as root* 
+
+bc. sudo !!
+
+Runs *previous command but replacing first instance of foo with bar* 
+
+bc. ^foo^bar
+
+Runs *previous command but replacing all instances of foo with bar* 
+
+bc. !!:gs/foo/bar
+
+*Copy ssh key* to server 
+
+bc. cat ~/.ssh/id_rsa.pub | ssh account@remoteserver.com "cat - >> .ssh/authorized_keys"
+
+*Spider a website* 
+
+bc. httrack "http://www.all.net/" -O "/tmp/www.all.net" "+*.all.net/*" -v
+
+*Query wikipedia via dns* 
+
+bc. dig +short txt <keyword>.wp.dg.cx
+
+*Stopwatch* (ctrl-d to stop) 
+
+bc. time read
+
+*SSH connection through host in the middle* 
+
+bc. ssh -t reachable_host ssh unreachable_host
+
+*Sharing file through port 80*, access with @http://ip-address/@ 
+
+bc. nc -q 1 -w 5 -v -l -p 80 < file.ext
+
+*Disk usage in readable form* 
+
+bc. du -sh [file ...]
+
+*Rename all files in directory to lowercase* 
+
+bc. for x in *; do mv "$x" "`echo $x | tr [A-Z] [a-z]`"; done
+
+*Replace "space" char with "dot"* char in current directory file names 
+
+bc. ls -1 | while read a; do mv "$a" `echo $a | sed -e 's/\ /\./g'`; done
+
+*Batch rename files, replacing _foo_ with _bar_*
+
+bc. for file in *.*; do mv $file `echo $file | sed 's/bar/foo/g'` ; done
+
+*Create missing directory when moving files* 
+
+bc. mkdir -p ./some/path/; mv yourfile.txt $_
+
+*Download a file with "authorization" cookie* 
+
+bc. wget --server-response --continue --load-cookies cookies.txt http://host.com/file.ext
+
+*Recursively remove @.svn@ directories* 
+
+bc. find . -type d -name '.svn' -print0 | xargs -0 rm -rdf
 
 h3. rsync
 
