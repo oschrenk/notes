@@ -229,6 +229,10 @@ h2. Helpful commands
 
 h3. Various
 
+*Resolve to canonical path*. Useful if you used symbolic links to switch into a director
+
+bc. pwd -P
+
 *Create symbolic link* in @/destination/path@ to @/existing/path@ 
 
 bc. ln -s /existing/path /destination/path
