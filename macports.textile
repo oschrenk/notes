@@ -6,18 +6,14 @@ h3. Update Macports
 
 To update macports and its ports tree, run
 
-<pre>
-	$ sudo port selfupdate
-</pre>
+bc. $ sudo port selfupdate
 
 h3. Upgrading Ports and dependencies
 
 After the @selfupdate@ run to update the ports
 
-<pre>
-	$ sudo port -vu upgrade outdated´
-</pre>
-
+bc. $ sudo port -vu upgrade outdated´
+	
 - @-R@ := upgrading dependents (ports that depend on the port being upgraded)
 - @-u@ := uninstall the old version after installing the new version
 - @-v@ := verbose output 
@@ -32,37 +28,35 @@ h3. Install a new port
 
 To install a port run 
 
-<pre>
-	$ sudo port install <portname>
-</pre>
+bc. $ sudo port install <portname>
 
 h3. Uninstall
 
+h4. Uninstall specific port
+
+bc. $ sudo port -f uninstall <portname> [... <other_portname>]
+
+You can spefify multiple ports to uninstall by just appending their names to the command
+
+- -f := Force Mode
+
 h4. Uninstall all non active ports
 
-<pre>
-	$ sudo port -f uninstall inactive
-</pre>
+bc. $ sudo port -f uninstall inactive
 
 - -f := Force Mode
 
 h3. Activate a port 
 
-<pre>
-	$ sudo port -f activate portname
-</pre>
+bc. $ sudo port -f activate portname
 
 h3. clean
 
 Deletes temporary and cached files. Normally you would only use it to save some space., but there are occurrences where cleaning resolves some build problems.
 To clean a specific port run 
 
-<pre>
-	$ sudo port clean <portname>
-</pre>
+bc. $ sudo port clean <portname>
 
- and to clean all installed ports run
+and to clean all installed ports run
 
-<pre>
-	$ sudo port clean --all installed
-</pre>
+bc. $ sudo port clean --all installed
