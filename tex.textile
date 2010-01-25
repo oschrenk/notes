@@ -1,31 +1,26 @@
-h1. Tex on OSX with Textmate and Skim and SVN
+h1. Tex on OSX with Textmate and Skim
 
 h2. Setting up xetex
 
 xetex allows proper utf-8 support and using otf fonts
 
 Writhe this into the header of your texfile
-<pre>
-	%!TEX TS-program = xelatex
+
+bc. 	%!TEX TS-program = xelatex
 	%!TEX encoding = UTF-8 Unicode
-</pre>
 
-Your editor of choice should recognize it. When not use command line and run <code>xelatex</code>
+Your editor of choice should recognize it. When not use command line and run @xelatex@
 
-*DON'T* use <code>%\usepackage[utf8x]{inputenc}</code> as xetex already manages the encoding. Whenyou use the package you will get weird errors as xetex does soemthing to the file and again the utf8x package prodcing wrong utf8 character sequences.
+*DON'T* use @%\usepackage[utf8x]{inputenc}@ as xetex already manages the encoding. Whenyou use the package you will get weird errors as xetex does soemthing to the file and again the utf8x package prodcing wrong utf8 character sequences.
 
 h2. Using otf fonts
 
-<pre>
-	otfinfo --family /Library/Fonts/GaramondPremrPro.otf
-</pre>
+bc. otfinfo --family /Library/Fonts/GaramondPremrPro.otf
 
-Your tex distribution should come with <code>otfinfo</code> tool which identifies the name of the font family for use with
+Your tex distribution should come with @otfinfo@ tool which identifies the name of the font family for use with
 
-<pre>
-	\usepackage{fontspec}
+bc. 	\usepackage{fontspec}
 	\setromanfont{Bembo Std}
-</pre>
 
 I ran into problems under Snow Leopard. The error was something like "... 256..." as if the font wasn't installed. Clearing the font cache with Onyx did the trick, restarting your terminal might also help.
 
@@ -33,7 +28,7 @@ h2. Setting up pdfsync
 
 pdfsync allows switching from the viewer into the editor directly to the line producing the content and vice versa
 
-# Select Skim as my viewer in the Textmate preferences. <code>Bundles > LaTeX > Preferences ... </code>
+# Select Skim as my viewer in the Textmate preferences. @<code>@Bundles > LaTeX > Preferences ...@
 # Select "View in Skim" from the LaTeX preferences in Textmate.
 # Sync (from inside Skim preferences) with Textmate.
 # Put the pdfsync.sty file in \user\texmf\tex\latex (normaly comes with distribution)
@@ -42,13 +37,11 @@ pdfsync allows switching from the viewer into the editor directly to the line pr
 
 h3. Setting up TM_LATEX_MASTER
 
-<code>TM_LATEX_MASTER</code> defines the master latex which is called when building the tex from an included file. 
+@<code>@TM_LATEX_MASTER defines the master latex which is called when building the tex from an included file. 
 
 Open project window, press that little "i" button in the drawer. Set up variable
 
-<code>
-TM_LATEX_MASTER main.tex
-</code>
+bc. TM_LATEX_MASTER main.tex
 
 h2. Skim
 
@@ -56,10 +49,9 @@ Once you have Skim installed, activate Skim > Preferences > Sync > Check for fil
 
 h2. Under version control
 
-Tex creates a lot of temporary files that would ony clutter the version control. Create a file called "ignore-these" with the (patterns of) files you want svn to ignore.
+Tex creates a lot of temporary files that would ony clutter the version control. Create a file called "ignore-these" with the (patterns of) files you want to ignore.
 
-<pre>
-*.aux
+bc. *.aux
 *.bbl
 *.blg
 *.bst
@@ -75,10 +67,12 @@ Tex creates a lot of temporary files that would ony clutter the version control.
 *.ind
 *.ilg
 *.pdfsync
-</pre>
+
+h3. SVN
 
 Then run
-<code>svn -R propset svn:ignore . -F ignore-these<code>
+
+bc. svn -R propset svn:ignore . -F ignore-these
 
 To edit these properties later use
-<code>svn propedit svn:ignore .</code>
+bc. svn propedit svn:ignore .
