@@ -204,7 +204,7 @@ Or just include this startup script on your @.profile@
 	SSH_ENV="$HOME/.ssh/environment"
 
 	function start_agent {
-	     echo "Initialising new SSH agent..."
+	     echo "Initializing new SSH agent..."
 	     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
 	     echo succeeded
 	     chmod 600 "${SSH_ENV}"
@@ -224,6 +224,17 @@ Or just include this startup script on your @.profile@
 	     start_agent;
 	fi 
 </pre>
+
+h3. Change SSH Passphrase
+
+You can easily change the passphrase of your key by calling
+
+bc. $ ssh-keygen -p
+Enter file in which the key is (/Users/username/.ssh/id_rsa):
+Key has comment '/Users/username/.ssh/id_rsa'
+Enter new passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved with the new passphrase.
 
 h2. Helpful commands
 
