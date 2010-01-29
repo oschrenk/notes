@@ -6,6 +6,13 @@ The hint I always give other mac users: Try pressing @Alt@. It works wonders. Fo
 
 h2. Hints
 
+h3. Keyboard
+
+h4. Diacritical Marks
+
+- é := @´ then e@
+- è := @shift + ´ then e@ 
+
 h3. Screenshots
 
 * Command-Shift-3: Take a screenshot of the screen, and save it as a file on the desktop
@@ -33,16 +40,20 @@ h3. Force expanded dialogs
 
 These commands force expanded dialog boxes for saving (top) and printing (bottom), if an app doesn't already have a custom setting. Use 'false' to reverse the commands.
 
-<pre>
-	$ defaults write -g NSNavPanelExpandedStateForSaveMode -boolean true
-	$ defaults write -g PMPrintingExpandedStateForPrint -boolean true
-</pre>
+bc. $ defaults write -g NSNavPanelExpandedStateForSaveMode -boolean true
+$ defaults write -g PMPrintingExpandedStateForPrint -boolean true
+
+h3. Remove Spotight icon from menu bar
+
+bc. $ sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
+
+Restart the menu bar
+
+bc. killall SystemUIServer
 
 h3. Disable Dashboard
 
-<pre>
-	$ defaults write com.apple.dashboard mcx-disabled -boolean yes
-</pre>
+bc. $ defaults write com.apple.dashboard mcx-disabled -boolean yes
 
 h3. Disable Rosetta
 
