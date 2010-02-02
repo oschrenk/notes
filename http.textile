@@ -1,0 +1,18 @@
+h1. HTTP Testing
+
+h2. cURL
+
+A good ressource for testing HTTP with CURL can be found "here":http://curl.haxx.se/docs/httpscripting.html
+
+h3. POST a file
+
+Given this form
+
+bc. <form method="POST" enctype='multipart/form-data' action="upload.cgi">
+	<input type=file name=upload>
+	<input type=submit name=press value="OK">
+</form>
+
+you can POST it with
+
+bc. curl -F upload=@localfilename -F press=OK [URL]
