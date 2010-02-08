@@ -59,15 +59,11 @@ h3. Disable Rosetta
 
 To disable Rosetta, simply run the following command in Terminal:
 
-<pre>
-	$ sudo sysctl -w kern.exec.archhandler.powerpc=/usr/libexec/oah/RosettaNonGrata
-</pre>
+bc. $ sudo sysctl -w kern.exec.archhandler.powerpc=/usr/libexec/oah/RosettaNonGrata
 
 To re-enable Rosetta after it's been disabled, just run the following command in Terminal:
 
-<pre>
-	sudo sysctl -w kern.exec.archhandler.powerpc=/usr/libexec/oah/translate
-</pre>
+bc. $ sudo sysctl -w kern.exec.archhandler.powerpc=/usr/libexec/oah/translate
 
 These commands set a system environment variable that tells the system which program to run when you try to launch a non-native app: to ask you to install Rosetta, or to run it using Rosetta.
 
@@ -104,9 +100,17 @@ h3. iTunes
 
 To use @Command+F@ for searching.
 
-<pre>
-	$ defaults write com.apple.iTunes \NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
-</pre>
+bc.	$ defaults write com.apple.iTunes \NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
+
+h3. VLC
+
+After upgrading to VLC 1.0.5 VLC didn't start anymore. The console showed
+
+bc. 09.02.10 9. Feb 00:41:46	[0x0-0xc7fc7f].org.videolan.vlc[67847]	[0x4722b8] main interface error: no interface module matched "globalhotkeys,none"
+
+Resetting the configuration worked for me
+
+bc. /Applications/VLC.app/Contents/MacOS/VLC --reset-config
 
 h2. Using multiple accounts
 
