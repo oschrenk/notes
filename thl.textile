@@ -1,0 +1,5 @@
+h1. The Hit List
+
+h2. Close tabs
+
+bc. defaults write com.potionfactory.TheHitList commandWClosesTab -bool YES 
