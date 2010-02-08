@@ -125,7 +125,7 @@ bc. $ git log
 A log message looks like this:
 
 bc.. commit 589b3ce058b38cc83e54f122200cd250a6a26427
-Author: Johne Doe <john.doe@host.tld>
+Author: John Doe <john.doe@host.tld>
 Date:   Tue Dec 22 01:14:19 2009 +0100
 
     Commit message 
@@ -182,7 +182,7 @@ bc. $ git filter-branch --index-filter 'git rm -rf --cached --ignore-unmatch fil
 
 The normal use case would be to call the changes to @HEAD@ and not to a range with @merge-point..HEAD@.
 
-While the history is rewritten, the files might still be in your local repository until they have been garbage collected. You might want to "cleamup":#cleanup your repository.
+While the history is rewritten, the files might still be in your local repository until they have been garbage collected. You might want to "cleanup":#cleanup your repository.
 
 Make sure you get all files and directories. Maybe you have renamed the file or directory in the past.
 
@@ -198,7 +198,7 @@ bc. # --bare creates a bare repository
 # forces copying of files instead of hard-linking to it
 $ git clone --bare --no-hardlinks /home/proj-a /tmp/proj-a.git
 
-h3. Splitting a subpath out into a new repo
+h3. Splitting a subpath into a new repository
 
 First of we clone the project 
 
@@ -229,11 +229,11 @@ Open the _SSH Public Keys_ tab of your "account":https://github.com/account and 
 
 h3. Github User pages
 
-If you publish a repository to github named @username.github.com@, it will autmomatically be used as your github pages website accesible via "username.github.com":http://username.github.com
+If you publish a repository to github named @username.github.com@, it will automatically be used as your github pages website accessible via "username.github.com":http://username.github.com
 
-It support static HTMl content, but also supports "Jekyll":http://github.com/mojombo/jekyll/, a static site generator. For more nfo you can read up on it on "pages.github.com":http://pages.github.com/
+It support static HTMl content, but also supports "Jekyll":http://github.com/mojombo/jekyll/, a static site generator. For more info you can read up on it on "pages.github.com":http://pages.github.com/
 
-Be advised that only a push from your local repisitory does trigger a publish of your homepage, editing the pages via the webinterface does not trigger the publishing service.
+Be advised that only a push from your local repository does trigger a publish of your homepage, editing the pages via the web interface does not trigger the publishing service.
 
 h3. Push repository to Github
 
@@ -398,13 +398,13 @@ bc. 	[remote "origin"]
 	fetch = +refs/heads/*:refs/remotes/origin/*
 	url = /Users/some/path
 
-My guess is that I accidently called @git push origin master@. In my case I can safely delete the remote branch
+My guess is that I accidentally called @git push origin master@. In my case I can safely delete the remote branch
 
 bc. $ git remote rm origin
 
-h3. @error: failed to push some refs to 'git@github.com:usernname/project.git@
+h3. error: failed to push some refs to 'git@github.com:usernname/project.git
 
-I tried pusing changes to github when i got
+I tried pushing changes to github and got
 
 bc. $ git push github master
 To git@github.com:username/project.git
@@ -414,7 +414,7 @@ To prevent you from losing history, non-fast-forward updates were rejected
 Merge the remote changes before pushing again.  See the 'non-fast forward'
 section of 'git push --help' for details.
 
-Ok. I had no idea. A quick google search answered it. Just do a pull first.
+Very confusing error message. All it means (at least in my case) that you have to pull changes made to the remote repository.
 
 bc. $ git pull github master
 From github.com:username/project
@@ -422,8 +422,6 @@ From github.com:username/project
 Merge made by recursive.
  file.textile |   14 ++++++++++++++
  1 files changed, 14 insertions(+), 0 deletions(-)
-
-And sure enough I remembered that I edited this file when I was at the office.
 
 h2. Sources
 
