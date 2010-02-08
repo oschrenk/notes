@@ -2,16 +2,16 @@ h1. Tex on OSX with Textmate and Skim
 
 h2. Setting up xetex
 
-xetex allows proper utf-8 support and using otf fonts
+Xetex allows proper UTF-8 support and using otf fonts
 
-Writhe this into the header of your texfile
+Write this into the header of your texfile
 
 bc. 	%!TEX TS-program = xelatex
 	%!TEX encoding = UTF-8 Unicode
 
 Your editor of choice should recognize it. When not use command line and run @xelatex@
 
-*DON'T* use @%\usepackage[utf8x]{inputenc}@ as xetex already manages the encoding. Whenyou use the package you will get weird errors as xetex does soemthing to the file and again the utf8x package prodcing wrong utf8 character sequences.
+*DON'T* use @%\usepackage[utf8x]{inputenc}@ as xetex already manages the encoding. When you use the package you will get weird errors as xetex does something to the file and again the utf8x package producing wrong UTF-8 character sequences.
 
 h2. Using otf fonts
 
@@ -31,7 +31,7 @@ pdfsync allows switching from the viewer into the editor directly to the line pr
 # Select Skim as my viewer in the Textmate preferences. @<code>@Bundles > LaTeX > Preferences ...@
 # Select "View in Skim" from the LaTeX preferences in Textmate.
 # Sync (from inside Skim preferences) with Textmate.
-# Put the pdfsync.sty file in \user\texmf\tex\latex (normaly comes with distribution)
+# Put the pdfsync.sty file in \user\texmf\tex\latex (normally comes with distribution)
 # Inserted the \usepackage{pdfsync} in my document. (not needed with xetex)
 # Forward search with "shift-command-click"  and backward search with "Show in Viewer (pdfsync)".
 
@@ -49,7 +49,7 @@ Once you have Skim installed, activate Skim > Preferences > Sync > Check for fil
 
 h2. Under version control
 
-Tex creates a lot of temporary files that would ony clutter the version control. Create a file called "ignore-these" with the (patterns of) files you want to ignore.
+Tex creates a lot of temporary files that would only clutter the version control. Create a file called "ignore-these" with the (patterns of) files you want to ignore.
 
 bc. *.aux
 *.bbl
