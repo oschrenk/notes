@@ -66,6 +66,16 @@ h3. Clone existing repository
 
 bc. $ git clone git@github.com:username/project.git
 
+h3. Tracking
+
+To track a file or directory
+
+bc. $ git add <path>
+
+To untrack a file
+
+bc. git rm --cached <path>
+
 h3. Commit
 
 bc. $ git commit /path/file
