@@ -16,6 +16,10 @@ All selectors should be prefixed with @.<themename>@ to avoid affecting other th
 
 h2. Useful Plugins/Bundles
 
+If you put a new bundle into the @Bundles@ directory you might want and Textmate is running and don't want to close it, you can reload your bundles with
+
+bc. $ osascript -e 'tell app "TextMate" to reload bundles'
+
 h3. XMLMate
 
 bq. The XMLMate Plug-In adds an XML parsing palette to the popular TextMate text editor for Mac OS X. While editing an XML (or XHTML) document in TextMate, you can open the XMLMate palette to conveniently check your document for well-formedness or validity against a DTD, W3C XML Schema, RELAX NG schema, or Schematron schema.
