@@ -77,7 +77,7 @@ bc..     [mxmlc] Error: Java heap space
 BUILD FAILED
 ...
 
-What helped was to allow ANT to take more RAM by running 
+p. What helped was to allow ANT to take more RAM by running 
 
 bc. $ export ANT_OPTS=-Xmx1024M
 
