@@ -1,8 +1,22 @@
 h1. Flex
 
+h2. Installation
+
+h3. OSX
+
+bc. $ wget http://download.macromedia.com/pub/flex/sdk/flex_sdk_3.5.zip
+$ sudo cp -r flex_sdk_3 /Developer/SDKs/
+
+
+Add it to the path by editing your @.profile@
+
+bc. export PATH="/Developer/SDKs/flex_sdk_3/bin:$PATH"/
+
+If you have the Flex Builder installed, the SDK should be found under @/Developer/SDKs/flex_sdk_3@. Just add it to the path in that case.
+
 h2. Data Bindings
 
-h3. @[Bindable]@
+h3. Bindable
 
 If you use @[Bindable]@ on your class (or on the respective fields/methods) make sure that the instance of the class is also marked as @[Bindable]@.
 
@@ -10,7 +24,7 @@ h2. FAQ/Problems
 
 h3. Invalid Embed directive in stylesheet - can't resolve source 'Embed("/assets/path/file.png")'.
 
-This can be a pain. You might try clearing the cache, cleaning the project, deleting your files in the @bin@ directorym but still run into this error.
+This can be a pain. You might try clearing the cache, cleaning the project, deleting your files in the @bin@ directory but still run into this error.
 
 The cause was not the css file but a custom component using an Embed statement. In this statement a graphic resource has been referenced that wasn't there yet. For some reasons Flex Builder spews the above errors first but the root cause later
 
