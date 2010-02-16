@@ -34,6 +34,55 @@ If you try to resolve your compile error from top to bottom, you won't see the e
 
 To show more error messages use the white triangle on the top right corner in the problems pane and choose @Preferences...@ to change the 	number of errors.
 
+h3. Building project via Ant results in OutOfMemoryError
+
+When trying to compile the sources via Ant from the command line I got this output
+
+bc..     [mxmlc] Error: Java heap space
+    [mxmlc] 
+    [mxmlc] java.lang.OutOfMemoryError: Java heap space
+    [mxmlc] 	at macromedia.asc.parser.NodeFactory.getExpression(NodeFactory.java:869)
+    [mxmlc] 	at macromedia.asc.parser.NodeFactory.getExpression(NodeFactory.java:864)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseAttributeExpression(Parser.java:2213)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parsePostfixExpression(Parser.java:2028)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseUnaryExpression(Parser.java:2930)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseMultiplicativeExpression(Parser.java:2960)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseAdditiveExpression(Parser.java:3050)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseShiftExpression(Parser.java:3118)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseRelationalExpression(Parser.java:3196)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseEqualityExpression(Parser.java:3298)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseBitwiseAndExpression(Parser.java:3373)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseBitwiseXorExpression(Parser.java:3430)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseBitwiseOrExpression(Parser.java:3487)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseLogicalAndExpression(Parser.java:3544)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseLogicalXorExpression(Parser.java:3601)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseLogicalOrExpression(Parser.java:3658)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseConditionalExpression(Parser.java:3715)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseAssignmentExpression(Parser.java:3810)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseListExpression(Parser.java:3895)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseLabeledOrExpressionStatement(Parser.java:4352)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseAnnotatedDirectiveOrStatement(Parser.java:5287)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseDirective(Parser.java:5223)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseDirectives(Parser.java:5601)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseBlock(Parser.java:4398)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseBlock(Parser.java:4384)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseFunctionCommon(Parser.java:1623)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseFunctionDefinition(Parser.java:6514)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseAnnotatableDirectiveOrPragmaOrInclude(Parser.java:5532)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseAnnotatedDirectiveOrStatement(Parser.java:5341)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseDirective(Parser.java:5223)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseDirectives(Parser.java:5601)
+    [mxmlc] 	at macromedia.asc.parser.Parser.parseBlock(Parser.java:4398)
+
+BUILD FAILED
+...
+
+What helped was to allow ANT to take more RAM by running 
+
+bc. $ export ANT_OPTS=-Xmx1024M
+
+prior to the build.
+
 h2. Links
 
 h3. XPATH Library
