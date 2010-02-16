@@ -354,7 +354,7 @@ bc. --cvs-exclude
 
 h2. FAQ/Problems
 
-h3(#profile-not-read). Bash doesn't update the PATH; changes to .profile aren' registered
+h3(#profile-not-read). Bash doesn't update the PATH; changes to .profile aren't registered
 
 Adding something like @EXPORT PATH=/usr/bin:$PATH@ doesn't update the @$PATH@ environment variable. The reason is that Bash tries to find local profile files in the following order:
 
@@ -365,3 +365,7 @@ Adding something like @EXPORT PATH=/usr/bin:$PATH@ doesn't update the @$PATH@ en
 </pre>
 
 @~/.profile@ is the last file in the list. So if OS X finds a file it stops processing. If an installer puts a @.bash_login@ in your home directory your @.profile@ wouldn't be read.
+
+h3. Reload .profile
+
+bc. $ . ~/.profile
