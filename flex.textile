@@ -83,6 +83,31 @@ bc. $ export ANT_OPTS=-Xmx1024M
 
 prior to the build.
 
+When running Ant through Flex Builder and setting @ANT_OPTS@ in your @.profile@ doesn't work, you can pass an argument to the JRE when starting Ant
+
+# Run Menu > External Tools > Open External Tools Dialog…
+# Select your Ant build file on the left
+# Click the JRE tab on the right
+# Enter “-Xmx640m” in the VM arguments field ( without quotes )
+# Click Apply, then Run
+
+h3. Missing Ant in Flex Builder
+
+Why Adobe chooses to include Ant Tasks with the SDK but not to install the Ant Tools for Eclipse by default is beyond me.
+
+To install them seperatly
+
+# Launch Flex Builder 3
+# Go to @Help > Software Updates > Find and Install@
+# Choose "Search for new features to install", click "Next"
+# Select “The Eclipse Project Updates”, click "Finish"
+# Let the Update Manager do the search and go grab a coffee
+# In @Eclipse Project Updates > Eclipse SDK Eclipse 3.3.2@, select "Eclipse Java Development Tools...", or otherwise known as JDT, click "Next"
+# Accept the license agreement, click "Next"
+# Click "Finish" to start the download process
+# Click "Install all" to install Java Development Tools
+# Restart Flex Builder
+
 h2. Links
 
 h3. XPATH Library
