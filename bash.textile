@@ -24,35 +24,25 @@ Bash supports @Ctrl + r@ to search the history. Per default the size history (an
 
 WARNING: OSX prefers the @.profile@ to @.bash_profile@. If both exists *only*  @.profile@ will be read (see ".profile not read":#profile-not-read)
 
-<pre>
-#.bash_profile or .profile
+bc. #.bash_profile or .profile
 export HISTFILESIZE=1000000000      # sets history size to something really big
 export HISTSIZE=1000000             # sets history size to something really big
-</pre>
  
 You can also set to ignore duplicates of commands (@ls@, @ps -ef@ are such candidates)
 
-<pre>
-#.bash_profile or .profile
+bc. #.bash_profile or .profile
 export HISTCONTROL=ignoreboth
-</pre>
 
 Other useful settings are
 
-<pre>
-# append to the same history file when using multiple terminals
+bc. # append to the same history file when using multiple terminals
 shopt -qs histappend
-</pre>
 
-<pre>
-# when typing part of a filename and press Tab to autocomplete, Bash does a case-insensitive search.
+bc. # when typing part of a filename and press Tab to autocomplete, Bash does a case-insensitive search.
 shopt -qs nocaseglob
-</pre>
 
-<pre>
-# minor errors in the spelling of a directory component in a cd command will be corrected
+bc. # minor errors in the spelling of a directory component in a cd command will be corrected
 shopt -qs cdspell
-</pre>
 
 h2. .inputrc
 
@@ -62,8 +52,7 @@ Next to @.profile@ there is also @.inputrc@. This is the configuration file for 
 
 With the following snippet in the @.inputrc@ file you can then just use your arrow keys to scroll through all the occurrences starting with the prefix you have typed in so far. This is especially useful when multiple logins share the same user but have different hosts.
 
-<pre>
-	# By default up/down are bound to previous-history
+bc. 	# By default up/down are bound to previous-history
 	# and next-history respectively. The following does the
 	# same but gives the extra functionality where if you
 	# type any text (or more accurately, if there is any text
@@ -73,24 +62,19 @@ With the following snippet in the @.inputrc@ file you can then just use your arr
 	# Note to get rid of a line just Ctrl-C
 	"\e[A": history-search-backward
 	"\e[B": history-search-forward
-</pre>
 
 It doesn't stop there. If you like to move around in your command more quickly you might find use in the following snippet, which allows to jump over words in your command using @Strg@ and the left or right arrow key.
 
-<pre>
-	# move around word for word with Strg + arrow keys
+bc. 	# move around word for word with Strg + arrow keys
 	"\e[5C": forward-word
 	"\e[5D": backward-word
 	"\e\e[C": forward-word
 	"\e\e[D": backward-word
-</pre>
 
 This one is very helpful when you just type away and realize later that the first character of is upper case instead of lower case (the default directories in the home directory of OSX all start with upper case letters).
 
-<pre>
-	# case insensitivity for tab-completion
+bc. 	# case insensitivity for tab-completion
 	set completion-ignore-case On
-</pre> 
 
 h2. Finding stuff
 
@@ -102,10 +86,8 @@ h3. Grep
 
 @find . -name "*" -exec grep -il "searchphrase" {} \;@
 
-<pre>
--i ignores case
+bc. -i ignores case
 -l shows filename
-</pre>
 
 h3. Search in man pages
 
@@ -125,17 +107,15 @@ h2. File attributes
 
 h3. ls -l "weirdness" +/@ symbol in @ls -l@
 
-Sometimes when using @ls -l@ there is a @+@ or a <code>@</code> symbol
+Sometimes when using @ls -l@ there is a @+@ or a @@@ symbol
 
-<pre>
-	$ ls -la
+bc. 	$ ls -la
 	-rwx------+ 1 testuser Admin     25600 Jul 12 02:04 file.ext
 	-rwx------@ 1 testuser Admin     25600 Jul 12 02:04 file.ext
-</pre>
 
 The @+@ indicates the use of ACL (Access Control Lists). Consult "ACL":#acl for more infos.
 
-The <code>@</code> indicates further file attributes. Consult "Apple File Attributes":#apple-file-attributes for more infos.
+The @@@ indicates further file attributes. Consult "Apple File Attributes":#apple-file-attributes for more infos.
 
 h3(#acl). Access Control lists
 
@@ -145,63 +125,50 @@ This is a rather huge topic. Run @man chmod@ and search for acl for a complete d
 
 To delete an acl entry you have to run @chmod -a@ with the exact defintion of the acl. For example:
 
-<pre>
-	$ ls -le
+bc. 	$ ls -le
 	-rw-rw----+ 1 Joe  staff      14336  1 Dez 12:23 file.ext
 	0: group:everyone deny delete
 	$ chmod -a "group:everyone deny delete" file.ext
-</pre>
 
 h3(#apple-file-attributes). Apple File Attributes
 
-Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using <code>ls -ls</code> indicated by the <code>@</code> symbol. By calling <code>ls -@</code> you can see that an attribute @com.apple.quarantine@ has been added. To remove that call @sudo xattr -d com.apple.quarantine path@
+Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using @ls -ls@ indicated by the @@@ symbol. By calling @ls -@@ you can see that an attribute @com.apple.quarantine@ has been added. To remove that call @sudo xattr -d com.apple.quarantine path@
 
 h2. SSH
 
 h3. Setting up a key
 
-<pre>
-	$ ssh-keygen -t rsa
-</pre>
+bc. 	$ ssh-keygen -t rsa
 
 Using is secure password is recommended. Otherwise someone who has access to your terminal, or your key will automatically have access to all hosts. Worst case scenario: Someone with a minute and a USB stick to spare, copies your key-pair and your @known_hosts@ file. So please use a password. It might sound silly as you will still have to use a password, but there is a solution for that namely @ssh-agent@.
 
 You will get something like:
 
-<pre>
-	Your identification has been saved in ~/.ssh/id_rsa.
+bc. 	Your identification has been saved in ~/.ssh/id_rsa.
 	Your public key has been saved in ~/.ssh/id_rsa.pub.
-</pre>
 
 For further security you might want to consider to giveing only your user the right to read the files. 
 
-<pre>
-	# protect the keys from being read
+bc. 	# protect the keys from being read
 	cd ~/.ssh
 	$ chmod 600 id*
 	$ chmod 600 known_hosts
-</pre>
 
 h3. Using SSH Agent on OS X
 
 Call @ssh-add@ for every private key.
 
-<pre>
-	$ ssh-add -K ~/.ssh/id_rsa 
-</pre>
+bc. 	$ ssh-add -K ~/.ssh/id_rsa 
 
-h4. @Could not open a connection to your authentication agent.@
+h4. Could not open a connection to your authentication agent
 
 The @ssh-agent@ hasn't started or isn't properly configured. To manually start an agent, enter
 
-<pre>
-	$ ssh-agent bash
-</pre>  
+bc. 	$ ssh-agent bash
 
 Or just include this startup script on your @.profile@
 
-<pre>	
-	SSH_ENV="$HOME/.ssh/environment"
+bc.. 	SSH_ENV="$HOME/.ssh/environment"
 
 	function start_agent {
 	     echo "Initializing new SSH agent..."
@@ -223,7 +190,6 @@ Or just include this startup script on your @.profile@
 	else
 	     start_agent;
 	fi 
-</pre>
 
 h3. Change SSH Passphrase
 
@@ -358,11 +324,9 @@ h3(#profile-not-read). Bash doesn't update the PATH; changes to .profile aren't 
 
 Adding something like @EXPORT PATH=/usr/bin:$PATH@ doesn't update the @$PATH@ environment variable. The reason is that Bash tries to find local profile files in the following order:
 
-<pre>
-# ~/.bash_profile
+bc. # ~/.bash_profile
 # ~/.bash_login
 # ~/.profile
-</pre>
 
 @~/.profile@ is the last file in the list. So if OS X finds a file it stops processing. If an installer puts a @.bash_login@ in your home directory your @.profile@ wouldn't be read.
 
