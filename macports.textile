@@ -153,6 +153,8 @@ Since it succeeded, "file a ticket":http://trac.macports.org/newticket to upgrad
 bc. $ diff -u Portfile.orig Portfile | sudo tee <portname>.diff
 
 Then specify the @<portname>.diff@ as a file to be attached to the new ticket.
+	
+If you edit the ticket please CC the maintainer, remove the version number put @haspatch@ as keyword, put in the correct portname and maybe give it directly to the maintainer.	
 
 h4. Step 7: Cleaning up
 
