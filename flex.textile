@@ -7,7 +7,6 @@ h3. OSX
 bc. $ wget http://download.macromedia.com/pub/flex/sdk/flex_sdk_3.5.zip
 $ sudo cp -r flex_sdk_3 /Developer/SDKs/
 
-
 Add it to the path by editing your @.profile@
 
 bc. export PATH="/Developer/SDKs/flex_sdk_3/bin:$PATH"/
