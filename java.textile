@@ -57,6 +57,16 @@ Every thrown @Exception@ stops the @finalize()@ method, but doesn't stop the GC 
 
 h2. Problems/FAQ
 
+h3. Missing Java 1.4 on OS X
+
+Peope from "OneSwarm":http://oneswarm.cs.washington.edu/ were so kind providing a 1.4.2 version for Snow Leopard
+
+bc. curl -o java.1.4.2-leopard.tar.gz http://www.cs.washington.edu/homes/isdal/snow_leopard_workaround/java.1.4.2-leopard.tar.gz
+tar -xvzf java.1.4.2-leopard.tar.gz
+sudo mv 1.4.2 /System/Library/Frameworks/JavaVM.framework/Versions/1.4.2
+cd /System/Library/Frameworks/JavaVM.framework/Versions/
+sudo ln -s 1.4.2 1.4
+
 h3. Running junit from ant causes @ClassNotFoundException@
 
 I ran into some problems when trying to calling JUnit tests from an ant script. Some people had the "same poblem":http://blog.anthonychaves.net/java/2006/12/01/solution-for-classnotfoundexception-with-junit-and-ant/comment-page-1#comment-9478 
