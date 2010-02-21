@@ -1,0 +1,7 @@
+h1. Chrome
+
+h2. Use specific proxy
+
+bc. open -a /Applications/Google Chrome.app --args --proxy-server=host#:port#
+
+Replace host# and port# with the host and port numbers that you need to use
