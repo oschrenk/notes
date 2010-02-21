@@ -31,21 +31,7 @@ h2. API/Framework Design
 
 h3. Fluent Interfaces
 
-Fluent interfaces [2] only make sense if a developer uses them but not if he has to write classes, but not if he has not write classes fulfilling the contract.
-
-h2. Web Services
-
-A _web service_ creates a communication channel across to machines.
-
-h3. REST
-
-h4. HTTP
-
-The foundation of the web is the HTTP protocoll ("RFC 2616":http://www.ietf.org/rfc/rfc2616.txt covers HTTP 1.1). The protocol is part of the application layer (layer 5-7 according to the iso model). Key figures defining the protocol were Roy Fielding and Time Berners Lee.
-
-In short HTTP bringes pages from the servers to your browser. With it you can uniquely identify resources worldwide. A web page is just a representation of such a resource. The URL tell the browser, that there is a concept for this particular resource. A browser can than ask for a representation of this concept. HTML is one type of a representation. A _web service_ is just another one. 
-
-URLs are a key component of the language of a machine. There are much like a noun. To use these nouns we need verbs: POST, GET, PUT, DELETE. These verbs sufice to describe a CRUD system. You just need to agree on what information is being exchanged.
+Fluent interfaces [2] only make sense if a developer uses them but not if he has to write classes fulfilling the contract.
 
 h2. Sources
 
