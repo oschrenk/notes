@@ -140,10 +140,10 @@ If there are conflicts, you can take a llok at alle the versions with
 bc. # common base version of the file
 $ git show :1:file.txt
 
-bc.# 'our' version of the file
+bc. # 'our' version of the file
 $ git show :2:file.txt
 
-bc.# 'their' version of the file
+bc. # 'their' version of the file
 $git show :3:file.txt
 
 h4. Resolve conflict by using remote version verbatim
