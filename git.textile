@@ -100,17 +100,30 @@ to overwrite changes.
 
 h3. Branching
 
+h4. Show Branches
+
 Show the available branches (an asterisk @*@ represents the active branch)
 
 bc. $ git branch 
 
-Show the remote branches
+with options 
+* @-r@ show the remote branches
+* @-a@ show all branches
 
-bc. $ git branch -r
+h4. Create branches
 
 Make a new branch called "experiment"
 
 bc. $ git branch experiment
+
+h4. Deleting branches
+
+bc. $ git-branch (-d | -D) <branchname>...
+
+* @-d@ Delete a branch. The branch must be fully merged in HEAD.
+* @-D@ Delete a branch irrespective of its merged status.
+
+h4. Working with branches
 
 Switch to a branch called "experiment". Git will warn you if you have uncommitted changes.
 
@@ -118,13 +131,25 @@ bc. $ git checkout experiment
 
 h3. Merging
 
-Git will complain if the working copy has uncommitted changes and about conflicts
+Just change into the branch you want xhanges to ber merged into and type
 
-bc. $ git merge <branch-name> 
+bc. $ git merge <branch-name-to-be-merged-in> 
 
-To delete a branch (normally not necessary)
+If there are conflicts, you can take a llok at alle the versions with
 
-bc. $ git branch -d name-of-branch  
+bc. # common base version of the file
+$ git show :1:file.txt
+
+bc.# 'our' version of the file
+$ git show :2:file.txt
+
+bc.# 'their' version of the file
+$git show :3:file.txt
+
+h4. Resolve conflict by using remote version verbatim
+
+bc. $ git show :3:file.txt > file.txt
+$ git file.txt
 
 h3. Tagging
 
