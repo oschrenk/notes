@@ -520,6 +520,23 @@ Merge made by recursive.
  file.textile |   14 ++++++++++++++
  1 files changed, 14 insertions(+), 0 deletions(-)
 
+h3. Your branch is ahead of 'origin/master' by xx commits.
+
+I noticed this message
+
+bc. git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 11 commits.
+
+When I did a @git push github master@ Git reported that @Everything up-to-date@, which I found weird. Of course the problem was easy to solve and easy to spot. I forgot to remove @origin@ as remote source when I added @github@ as my default remote. Also both pointed to the same repository origin/master was reporting the "problem". Git obviously stores infos about the stat of remotes.
+
+An easy 
+
+bc. git remote rm origin
+
+solved the problem for me, as I don't need two copies of the same remote. 
+
+
 h2. Sources
 
 fn1. "Git from the bottom up":http://ftp.newartisans.com/pub/git.from.bottom.up.pdf (John Wiegley, 09-12-02)
