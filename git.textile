@@ -66,7 +66,7 @@ h3. Clone existing repository
 
 bc. $ git clone git@github.com:username/project.git
 
-h3. Tracking
+h3. Adding
 
 To track a file or directory
 
@@ -75,6 +75,10 @@ bc. $ git add <path>
 To untrack a file
 
 bc. git rm --cached <path>
+
+h3. Undo Adding
+
+bc. git reset FILE
 
 h3. Commit
 
@@ -478,12 +482,12 @@ h3. @error: src refspec master does not match any.@
 
 The error message leads to the conclusion that you do not have a master branch in your local repository. Either push your main development branch (@git push origin my-local-master:master@ which will rename it to master on github) or make a commit first. You can not push a completely empty repository.
 
-h3. @Your branch is ahead of 'origin/master' by 11 commits.@
+h3. Your branch is ahead of 'origin/master' by xx commits.
 
 Recently a repository of mine gave me
 
 bc. # On branch master
-# Your branch is ahead of 'origin/master' by 11 commits.
+# Your branch is ahead of 'origin/master' by xx commits.
 
 When calling 
 
@@ -498,6 +502,15 @@ bc. 	[remote "origin"]
 My guess is that I accidentally called @git push origin master@. In my case I can safely delete the remote branch
 
 bc. $ git remote rm origin
+
+Another case might be:
+When I did a @git push github master@ Git reported that @Everything up-to-date@, which I found weird. Of course the problem was easy to solve and easy to spot. I forgot to remove @origin@ as remote source when I added @github@ as my default remote. Also both pointed to the same repository origin/master was reporting the "problem". Git obviously stores infos about the stat of remotes.
+
+An easy 
+
+bc. git remote rm origin
+
+solved the problem for me, as I don't need two copies of the same remote.
 
 h3. error: failed to push some refs to 'git@github.com:usernname/project.git
 
@@ -519,23 +532,6 @@ From github.com:username/project
 Merge made by recursive.
  file.textile |   14 ++++++++++++++
  1 files changed, 14 insertions(+), 0 deletions(-)
-
-h3. Your branch is ahead of 'origin/master' by xx commits.
-
-I noticed this message
-
-bc. git status
-# On branch master
-# Your branch is ahead of 'origin/master' by 11 commits.
-
-When I did a @git push github master@ Git reported that @Everything up-to-date@, which I found weird. Of course the problem was easy to solve and easy to spot. I forgot to remove @origin@ as remote source when I added @github@ as my default remote. Also both pointed to the same repository origin/master was reporting the "problem". Git obviously stores infos about the stat of remotes.
-
-An easy 
-
-bc. git remote rm origin
-
-solved the problem for me, as I don't need two copies of the same remote. 
-
 
 h2. Sources
 
