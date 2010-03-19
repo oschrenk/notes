@@ -1,5 +1,11 @@
 h1. Java Developer Handbook
 
+h2. Basics
+
+h3. Format a String
+
+bc. String.format("First param %s, second param %2s", firstParam, secondParam);
+
 h2. Garbage Collection
 
 Java makes uses of Garbage Collection to remove objects from memory that are no longer being used. "_Being used_" normally meaning being _referenced_ by other objects. So this makes life for the developer easier, but it doesn't mean that he doesn't have to think about the lifecycle of an object. The developer could forget to de-reference an object no longer in use (caches and hash maps are a good candidate for such a mistake).
