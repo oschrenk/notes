@@ -1,5 +1,11 @@
 h1. Textmate
 
+h2. Shortcuts
+
+h3. Close XML Tag
+
+bc. Alt + Cmd + .
+
 h2. Appearance
 
 h3. Themes for Webpreview
