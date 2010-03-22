@@ -80,6 +80,15 @@ h3. Undo Adding
 
 bc. git reset FILE
 
+h3. Undo changes
+
+h3. Undo all changes in working dir, deleting untracked files
+
+bc. git reset --hard
+git clean -f -d
+
+You can also use @git clean -f -x -d@, which also deletes the ignored files
+
 h3. Commit
 
 bc. $ git commit /path/file
