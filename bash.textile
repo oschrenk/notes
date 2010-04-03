@@ -8,6 +8,7 @@ h2. Shortcuts
 * @ctrl + e@ Jump to end of line
 * @ctrl + r@ Start search (just start typing), pressing multiple times toggles through occurrences in history
 * @ctrl + l@ Clear terminal
+* @ctrl + x, ctrl +e@ Fires up @$EDITOR@ to finish a long command in your favorite editor
 
 h2. Redirecting/Appending Standard Output
 
