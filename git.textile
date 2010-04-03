@@ -76,13 +76,13 @@ To untrack a file
 
 bc. git rm --cached <path>
 
-h3. Undo Adding
+h4. Undo Adding
 
 bc. git reset FILE
 
 h3. Undo changes
 
-h3. Undo all changes in working dir, deleting untracked files
+h4. Undo all changes in working dir, deleting untracked files
 
 bc. git reset --hard
 git clean -f -d
@@ -144,7 +144,7 @@ bc. $ git checkout experiment
 
 h3. Merging
 
-Just change into the branch you want xhanges to ber merged into and type
+Just change into the branch you want changes to be merged into and type
 
 bc. $ git merge <branch-name-to-be-merged-in> 
 
