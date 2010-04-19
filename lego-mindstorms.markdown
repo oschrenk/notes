@@ -114,4 +114,4 @@ to
 [lejos]: http://lejos.sourceforge.net/
 [lejos.download]: http://sourceforge.net/projects/lejos/files/lejos-NXJ/0.8.5beta/lejos_NXJ_0_8_5beta.tar.gz/download
 
-
+[lejos.sourceforge]: http://lejos.sourceforge.net/forum/viewtopic.php?t=1696&postdays=0&postorder=asc&start=30
