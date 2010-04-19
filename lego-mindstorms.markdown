@@ -4,14 +4,14 @@
 
 ### Standard Lego software
 
-Before you install any software be adivsed that the software on the CD will not work on Snow Leopard aka OS X 10.6. It will install without any error messages, even prompting you to restart, but the installer will not install the software (at least not all of it). Lego is aware of the fact and released a "patch", which is actuall just a ruby script, which copies content from the CD to the desktop, deletes one file before running the installer. The [script][patch-sl] has some additional checks, but here is the important part (the disk has to be loaded):
+Before you install any software be advised that the software on the CD will not work on Snow Leopard aka OS X 10.6. It will install without any error messages, even prompting you to restart, but the installer will not install the software (at least not all of it). Lego is aware of the fact and released a "patch", which is actually just a ruby script, which copies content from the CD to the desktop, deletes one file before running the installer. The [script][patch-sl] has some additional checks, but here is the important part (the disk has to be loaded):
 
 	$ mkdir ~/Desktop/"MINDSTORMS\ NXT\ Desktop\ Copy
 	$ cp -R /Volumes/"MINDSTORMS\ NXT"/* ~/Desktop/"MINDSTORMS\ NXT\ Desktop\ Copy
 	$ rm ~/Desktop/"MINDSTORMS\ NXT\ Desktop\ Copy"/Parts/MindstormsUniv[RE][ed][tu].pkg/Contents/Resources/preflight
 	$ open -a ~/Desktop/"MINDSTORMS\ NXT\ Desktop\ Copy"/Install.app
 
-The script also chgecks if you have the retail or the educational version. There seems to be a different software package.
+The script also checks if you have the retail or the educational version. There seems to be a different software package.
 
 ## Bluetooth ##
 
@@ -49,7 +49,7 @@ Make the script files in the bin directory executable
 
 ## Flashing the Firmware ##
 
-LEJOS NXJ is a firmware replacement, you will need to to flash the firmware on your NXT. Be advise that you willhaveto run Java 1.5 32bit version. If you run intp problems please consult the FAQ.
+LEJOS NXJ is a firmware replacement, you will need to to flash the firmware on your NXT. Be advise that you will have to run Java 1.5 32bit version. If you run into problems please consult the FAQ.
 
 1. Connect the NXT to your Mac with the USB cable
 2. Open a terminal and change into the `lejos_nxj/bin` directory
@@ -85,7 +85,51 @@ For me it was option 1, after that the console reports
 	Verified 94208 bytes ok.
 	Restarting the device.
 
-and the device makes some noise reporting that its changing its firmware. After it has been flashed, it starts up woith a new boot logo and startup sound and the device will greet you with a nice menu.
+and the device makes some noise reporting that its changing its firmware. After it has been flashed, it starts up with a new boot logo and startup sound and the device will greet you with a nice menu.
+
+## Compiling using the command line ##
+
+	cd /path/to/projects
+	mkdir/lejos
+	cd lejos
+	touch HelloWorld.java
+
+### Hello World
+	
+Use the following source as an example
+
+	import lejos.nxt.*;
+
+	public class HelloWorld {
+		public static void main (String[] args) {
+			System.out.println("Hello World");
+			Button.waitForPress();
+		}
+	}
+	
+### Compile
+
+	nxjc HelloWorld.java
+	
+### Create the binary
+
+	nxjlink -v HelloWorld -o HelloWorld.nxj
+
+The -v or --verbose flag causes a list of class names and method signatures included in the binary to be sent to the standard output.
+
+### Upload a program ###
+
+Again be advised that you need to run Java 1.5 32bit. Consult the FAQ if you have problems although the NXT is on and is connected properly.
+
+	nxjupload HelloWorld.nxj
+
+### Link, Upload, Run ###
+
+After compiling you can immediately run the program on your NXT by running
+
+	nxj -r HelloWorld
+
+Without `-r` the application is just linked and uploaded, but not run.
 
 ## FAQs/Problems ##
 
