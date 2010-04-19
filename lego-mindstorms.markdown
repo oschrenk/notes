@@ -153,6 +153,14 @@ to
 
 	java -d32 -Dnxj.home="$NXJ_HOME" -DCOMMAND_NAME="$NXJ_COMMAND" -Djava.library.path="$NXJ_BIN" -classpath "$NXJ_CP_TOOL" lejos.pc.tools.NXJBrowser  "$@" 
 
+## Bluetooth ##
+
+I had some problems connecting the NXT device with my Mac bluetooth. When I started to pair from the NXT the pairing failed even if I got to the point where I had to type in the key phrase on my Mac. When i started the pairing process from my Mac, I wasn't asked for the key phrase on my NXT.
+
+I notices though that OS X tried to pair with the key phrase `0000`. So what I did was choosing `Blueooth >  Change PIN` on my NXT and set it to `0000`, then I added it the device on my Mac. It found the NXT, tried to pair using `0000` and did so successfully.
+
+Uploading the program takes significantly more time. Applications took more than a minute to got transferred.
+
 [patch-sl]: http://cache.lego.com/upload/contentTemplating/Mindstorms2SupportFilesDownloads/otherfiles/download19F59F05CF386B50188A5B9FFE3C9BF2.zip
 
 [lejos]: http://lejos.sourceforge.net/
