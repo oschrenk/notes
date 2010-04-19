@@ -22,7 +22,7 @@ h3. Proxy
    <proxy>
       <active>true</active>
       <protocol>http</protocol>
-      <host>proxy.dbc-gmbh.com</host>
+      <host>proxy.acme.com</host>
       <port>3128</port>
       <username></username>
       <password></password>
