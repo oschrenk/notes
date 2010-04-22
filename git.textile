@@ -78,7 +78,9 @@ bc. git rm --cached <path>
 
 h4. Undo Adding
 
-bc. git reset FILE
+You might also call it revert adding a file: 
+
+bc. git reset HEAD filename
 
 h3. Undo changes
 
