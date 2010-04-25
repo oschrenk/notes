@@ -167,3 +167,4 @@ Uploading the program takes significantly more time. Applications took more than
 [lejos.download]: http://sourceforge.net/projects/lejos/files/lejos-NXJ/0.8.5beta/lejos_NXJ_0_8_5beta.tar.gz/download
 
 [lejos.sourceforge]: http://lejos.sourceforge.net/forum/viewtopic.php?t=1696&postdays=0&postorder=asc&start=30
+[lejos.api]: http://lejos.sourceforge.net/p_technologies/nxt/nxj/api/index.html
