@@ -134,6 +134,25 @@ Normally a `war` (Web archive) is created. The **Portlet-Deployment-Deskriptor**
 		</portlet-info>
 	</portlet>
 
+## Example
+
+Maven
+
+Liferay
+
+Deployment
+ 
+Portlet Tag Library
+
+<portlet:defineObjects/>: This tag must appear to define the following variables in the JSP page: renderRequest, renderResponse, and portletConfig. A JSP using the defineObjects tag may use these variables from scriptlets throughout the page.
+
+<portlet:actionURL/>: The portlet actionURL tag creates a URL that must point to the current portlet and must trigger an action request with the supplied parameter. The parameters may be added to the URL by including the param tag between the actionURL start and end tags:
+
+<portlet:actionURL windowState="maximized" portletMode="edit">
+        <portlet:param name="action" value="editStocks">
+</portlet:actionURL>
+The example creates a URL that brings the portlet into EDIT mode and MAXIMIZED windowState to edit the stock quote list.
+
 ## Appendix
 
 ### Definitions

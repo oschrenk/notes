@@ -45,6 +45,18 @@ bc. protected void finalize() throws Throwable {
 
 Every thrown @Exception@ stops the @finalize()@ method, but doesn't stop the GC process
 
+h2. Conventions
+
+h3. JavaBeans
+
+A _JavaBean_ has to conform to three properties
+
+- parameter less constructor
+- class has (private ) member variables
+- public setter/getter method to access the values 
+
+Sometimes these objects are also called _POJOs_ (Plain Old Java Object), describing the fact that the don't implement an interface, or extend another class, they are just a normal object.
+
 h2. Interview Questions
 
 h3. Servlet Engine
