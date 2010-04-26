@@ -27,6 +27,16 @@ h3. REST vs WS-*
 
 REST precedes the WS-* standards. Most of the communication today is based on HTTP. Web services are independent from the underlying communication protocols. They can't make use of the advantages of a particular protocol.
 
+h2. Best-Practices
+
+h3. Post-Redirect-Get
+
+A pattern for web development.
+
+Problem: When a form is submitted through HTTP POST, a user that refreshes the page can cause the POST to be resubmitted.
+
+The PRG Pattern solves this problem by returning a 303 (or sometimes 302) REDIRECT upon the POST operation instructing the browser to load a different page via HTP GET. This page can then be safely refreshed.
+
 h2. cURL
 
 A good ressource for testing HTTP with CURL can be found "here":http://curl.haxx.se/docs/httpscripting.html
