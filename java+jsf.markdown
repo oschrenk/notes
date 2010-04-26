@@ -153,10 +153,83 @@ Just use a bean!
 
 This is a good example for a `MethodExpression` as we refer to a method and not a member.
 
+### Post-Redirect-Get
+
+If you carefully examine the example of the static navigation you will see that the URL in the address bar lags behind. It shows the URL of the last visited URL instead of the one currently displayed. Some people think of this as a bug in JSF or sthe browser or even as an architectural problem within JSF.
+
+Per default JSF handles URLs only afterwards and doesn't forward the browser the current/correct URL. This is because navigation is handled on the server with JSF - when sumbmitting a form JSF return the originating address. On the server the request will be forwarded to the following page.
+
+This has some disadvantages
+- it's confusing
+- you can't boomark a page
+
+To circumvent this problem you can add a redirection rule.
+
+	<navigation-case>
+		<from-outcome>chapter_3</from-outcome>
+		<to-view-id>/faces/navigation/chapter_3.jsp</to-view-id>
+		<redirect/>
+	</navigation-case> 
+
+This uses the POST-Redirect-GET Pattern
 
 ## Conversion and Validation
 
-## Internalization
+Until now we assumed that every data we received via for input was correct. What if the user enters wrong data?
+
+JSF solves that problem with its own concepts. If the data doesn't isn't correct JSF throws a `javax.faces.convert.ConverterException`. To display error messages you can use `<h:messages />`, a placeholder for all error messages that occured while loading this page.
+
+### Conversion
+
+If you use only digits as your input and the method expects an `int`, JSF will convert the number implicitly. Sometimes this isn't possible. 
+
+A good example when a conversion can't be decided automatically is when you are using a date or a time, you have to coerce it. An example
+
+	<h:outputText value="#{PersonBean.birthday}" >
+		<f:convertDateTime type="date" dateStyle="full"/>
+	</h:outputText>
+		
+	<h:inputText value="#{PersonBean.birthday}">
+		<f:convertDateTime type="date" dateStyle="short"/>
+	</h:inputText>
+
+There are many different prebuilt converters, even for floating point numbers. Keep in mind that when you use converter you (almost) always have to convert in two directions, when you convert a String into the needed datatype and the other way when displaying it.
+
+### Validation
+
+Even if the Convererts can ensure a syntactic correct data type, it can't ensure semantic correctness. A *validator* can do that. Each validator is called _after_ the conversion.
+
+There are many prebuilt validators. Examples:
+
+	<h:inputText value="#{PersonBean.lastname}">
+		<f:validateLength minimum="3" maximum="10" />
+	</h:inputText>
+
+For validating more complex data you will have to write your own methods. I suggest putting it in a ManagedBean called `***Controller.java` with content similiar to this
+
+	public class PersonController {
+		public void validateMail(FacesContext jsfContext, UIComponent component,
+				Object value) throws ValidatorException {
+			String input = value.toString();
+			boolean valid = input.indexOf("@") > 0;		
+			if (!valid) {
+				throw new ValidatorException(
+						new FacesMessage("Not a valid address"));
+			}
+		}
+	}
+	
+Just wire it up in your `faces-config.xml` (I set the scope to `application`) and use it like so:
+
+	<h:inputText value="#{PersonBean.email}" validator="#{PersonController.validateMail}" />
+	
+As you may have noticed the `ValidatorException` takes a `FacesMessage` as its argument. A FacesMessages can and should be constructed using this 
+
+	FacesMessage message = new FacesMessages("Short Message/Detail", "Long Message/Summary", FacesMessage.SEVERITY_WARN)
+
+You can use other `SEVERITY` levels. The short message and long messaged can be displayed with:
+
+	<h:messages showDetail="true" showSummary="true" />
 
 ## Event Handling
 
@@ -167,3 +240,32 @@ This is a good example for a `MethodExpression` as we refer to a method and not 
 ## FAQ/Problems
 
 ### java.lang.RuntimeException: Cannot find FacesContext
+
+You are calling a page that uses JSF components/tags but isn't served through a `FacesServlet`
+
+### Calling a page results in an empty page
+
+This page will result in an empty page without an error message:
+
+	<%@ taglib uri="http://java.sun.com/jsf/html" prefix="h"%>
+	<%@ taglib uri="http://java.sun.com/jsf/core" prefix="f"%>
+	<html>
+	<head>
+	<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+	<title>Calculator sample</title>
+	</head>
+	<f:view>
+		<h:form>
+		Summand 1:
+		<h:inputText value="#{CalculatorBean.summand1}" />	
+		Summand 2:
+		<h:inputText value="#{CalculatorBean.summand2}" />	
+		Sum is: <h:outputText value="#{CalculatorBean.sum}" />
+		<h:commandButton action="#{CalculatorBean.calculate}"
+				value="Calculate the sum" />
+		</h:form>
+	</f:view>
+	<h:messages />
+	</html>
+	
+The error was using `<h:messages />` out of the `<f:view>` scope.
