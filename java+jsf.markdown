@@ -41,9 +41,9 @@ The `faces-config.xml` is empty for now.
 
 
 
-## Bean Managment
+## Bean Management
 
-With regard to the MVC (ModelViewController) Pattern the _Bean Managment_ is the modell. Beans are used for persisting data during a request or a user session.
+With regard to the MVC (ModelViewController) Pattern the _Bean Management_ is the model. Beans are used for persisting data during a request or a user session.
 
 JSF takes the role of managing the beans.
 
@@ -64,7 +64,7 @@ All beans are being lazy instantiated, meaning that they are only created on fir
 ## Scopes
 
 - _Application_ Managed Bean will be created once for the VM. All users share the same object. Good for configuration parameters
-- _Session_ Managed Beanwill be created for each HTTP session.
+- _Session_ Managed Bean will be created for each HTTP session.
 - _Request_ Objects live only the time of the request. For the next request a new object will be created. If possible objects should live in the request scope as too much objects in the session are unwieldy.
 	- _None_ Not really a scope. Very short lifetime. Object will be created for each call () e.g. a method call). After that it goes to garbage collection. Used very little in practice
 
@@ -155,13 +155,13 @@ This is a good example for a `MethodExpression` as we refer to a method and not 
 
 ### Post-Redirect-Get
 
-If you carefully examine the example of the static navigation you will see that the URL in the address bar lags behind. It shows the URL of the last visited URL instead of the one currently displayed. Some people think of this as a bug in JSF or sthe browser or even as an architectural problem within JSF.
+If you carefully examine the example of the static navigation you will see that the URL in the address bar lags behind. It shows the URL of the last visited URL instead of the one currently displayed. Some people think of this as a bug in JSF or the browser or even as an architectural problem within JSF.
 
-Per default JSF handles URLs only afterwards and doesn't forward the browser the current/correct URL. This is because navigation is handled on the server with JSF - when sumbmitting a form JSF return the originating address. On the server the request will be forwarded to the following page.
+Per default JSF handles URLs only afterwards and doesn't forward the browser the current/correct URL. This is because navigation is handled on the server with JSF - when submitting a form JSF return the originating address. On the server the request will be forwarded to the following page.
 
 This has some disadvantages
 - it's confusing
-- you can't boomark a page
+- you can't bookmark a page
 
 To circumvent this problem you can add a redirection rule.
 
@@ -177,7 +177,7 @@ This uses the POST-Redirect-GET Pattern
 
 Until now we assumed that every data we received via for input was correct. What if the user enters wrong data?
 
-JSF solves that problem with its own concepts. If the data doesn't isn't correct JSF throws a `javax.faces.convert.ConverterException`. To display error messages you can use `<h:messages />`, a placeholder for all error messages that occured while loading this page.
+JSF solves that problem with its own concepts. If the data doesn't isn't correct JSF throws a `javax.faces.convert.ConverterException`. To display error messages you can use `<h:messages />`, a placeholder for all error messages that occurred while loading this page.
 
 ### Conversion
 
@@ -197,7 +197,7 @@ There are many different prebuilt converters, even for floating point numbers. K
 
 ### Validation
 
-Even if the Convererts can ensure a syntactic correct data type, it can't ensure semantic correctness. A *validator* can do that. Each validator is called _after_ the conversion.
+Even if the converters can ensure a syntactic correct data type, it can't ensure semantic correctness. A *validator* can do that. Each validator is called _after_ the conversion.
 
 There are many prebuilt validators. Examples:
 
@@ -205,7 +205,7 @@ There are many prebuilt validators. Examples:
 		<f:validateLength minimum="3" maximum="10" />
 	</h:inputText>
 
-For validating more complex data you will have to write your own methods. I suggest putting it in a ManagedBean called `***Controller.java` with content similiar to this
+For validating more complex data you will have to write your own methods. I suggest putting it in a ManagedBean called `***Controller.java` with content similar to this
 
 	public class PersonController {
 		public void validateMail(FacesContext jsfContext, UIComponent component,
@@ -258,7 +258,7 @@ Of course you can register multiple ActionListener.
 
 Sometimes there is the question why there are ActionListener and Action methods. For me an action method results in a change of the navigation and therefore is visible for the user and an ActionListener adds functionality on the server side.
 
-### ValueChangeEvents und ValueChangeListener
+### ValueChangeEvents and ValueChangeListener
 
 You can also monitor changes of values by adding a `ValueChangeListener` to a component
 
@@ -325,6 +325,31 @@ The first element is always of type `UIViewRoot`. Mostly you don't have to care 
 	UIComponent component = formComponent.findComponent("summand1");
 
 Of course you can search for the `summand1` element directly from the `viewRoot`, but then you have to use the full client id `calculator:summand1`.
+
+# State Management
+
+State Management is used to store information about the view beyond multiple requests. Especially if you develop your own components you have to worry about state management.
+
+The state is usually stored on the server using a part of the HTTP session. You can store the state on the client, by setting it in the `web.xml`
+
+	<context-param>
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+		<param-value>client</param-value>
+	</context-param>
+
+The state will then be stored in a hidden field. As the state can grow to several KB or even MB this course of action is to be taken with a pinch of salt.
+
+Without loosing too much breath on it: JSF also manages the last `x`component trees and `y` occurrences of each. These are set somewhere but not part of the official specification. The reference implementation uses the following parameter
+
+	<context-param>
+		<param-name>com.sun.faces.numberOfLogicalViews</param-name>
+		<param-value>15</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>com.sun.faces.numberOfViewsInSession</param-name>
+		<param-value>15</param-value>
+	</context-param>
 
 # Appendix
 
