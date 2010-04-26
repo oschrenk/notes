@@ -233,6 +233,53 @@ You can use other `SEVERITY` levels. The short message and long messaged can be 
 
 ## Event Handling
 
+### ActionEvents and ActionListener
+
+You can write `ActionListener` by implementing `javax.faces.event.ActionListener`. Here is one that writes some info to StandardOutput
+
+	public class DemoActionListener implements ActionListener {
+		public void processAction(ActionEvent event)
+				throws AbortProcessingException {
+			UIComponent component = event.getComponent();
+			int phase = event.getPhaseId().getOrdinal();
+			System.out.println("Command triggered by: " + component.getId()
+					+ " in phase" + phase);
+		}
+	}
+	
+Use it by registering it:
+
+	<h:commandButton action="#{CalculatorBean.calculate}"
+			value="Calculate the sum with Event">
+		<f:actionListener type="demo.jsf.DemoActionListener" />
+	</h:commandButton>
+	
+Of course you can register multiple ActionListener.
+
+Sometimes there is the question why there are ActionListener and Action methods. For me an action method results in a change of the navigation and therefore is visible for the user and an ActionListener adds functionality on the server side.
+
+### ValueChangeEvents und ValueChangeListener
+
+You can also monitor changes of values by adding a `ValueChangeListener` to a component
+
+	public class DemoValueChangeListener implements ValueChangeListener {
+		public void processValueChange(ValueChangeEvent event)
+				throws AbortProcessingException {
+			System.out.println(
+					"ValueChange: \n" +
+					"Old value:" + event.getOldValue() + "\n" + 
+					"New value:" + event.getNewValue());
+		}
+	}
+
+You add it via
+
+	<h:inputText value="#{PersonBean.firstname}">
+		<f:valueChangeListener type="demo.jsf.DemoValueChangeListener" />
+	</h:inputText>
+
+Of course these events are only fired if the value of the component has really changed that means that converting and validating the data was successful.
+
 # UI Components
 
 # Appendix
