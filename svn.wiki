@@ -1,5 +1,12 @@
 = File Management =
 
+== Checkout ==
+
+<pre>
+	$ svn checkout <url> 
+	$ svn checkout --username john.doe <url> 
+</pre>
+
 == Status ==
 
 Zeigt den Status der Dateien in der working copy an
