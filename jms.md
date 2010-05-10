@@ -24,3 +24,8 @@ _Subscribers_ my register interest in receiving messages on a particular message
 - multiple consumers can get the message
 - subscriber has to remain active to receive messages, unless a durable subscription has been established which could trigger a redistribution of unread messages
 
+## Provider
+
+[Apache ActiveMQ][apache.activemq]
+
+[apache.activemq]: http://activemq.apache.org/
