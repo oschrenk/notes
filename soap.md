@@ -90,3 +90,9 @@ A SOAP request could be an HTTP POST or an HTTP GET request.
 	POST /item HTTP/1.1
 	Content-Type: application/soap+xml; charset=utf-8
 	Content-Length: 250
+	
+## Testing
+
+[SoapUI][soapui] is a testing tool for SOA.
+
+[soapui]: http://www.soapui.org/
