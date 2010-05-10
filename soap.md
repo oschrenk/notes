@@ -2,6 +2,8 @@
 
 Simple Object Access Protocol (SOAP) is a XML-based communication protocol for exchanging information between two applications over HTTP. It is a protocol for accessing a Web Service.
 
+It doesn't rely on a specific tranport layer. In practice mainly HTTP is used.
+
 ## Syntax 
 
 	<?xml version="1.0"?>
