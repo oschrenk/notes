@@ -33,3 +33,7 @@ h2. FAQ/Problems
 h3. Delete obsolete workspaces under OS X
 
 The used workspaces are stored in @/Applications/eclipse/configuration/.settings/org.eclipse.ui.ide.prefs@
+
+h3. "Waiting For Virtual Machine To Exit"
+
+I had this error when I was trying to deploy a web application to a local JBoss Application Server. The problem was that the ANT home setting of Eclipse were pointing to non existing directories and files. So I removed the false entries and reset me ANT Home in @Preferences > Ant > Runtime@
