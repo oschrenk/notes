@@ -35,7 +35,7 @@ When creating a Web service using a bottom-up approach, first you create a Java 
 
 #### Top Down
 
-When creating a Web service using a top-down approach, first you design the implementation of the Web service by creating a WSDL file. You can do this using the WSDL Editor. You can then use the Web services wizard to create the Web service and skeleton Java™ classes to which you can add the required code.
+When creating a Web service using a top-down approach, first you design the implementation of the Web service by creating a WSDL file. You can do this using the WSDL Editor. You can then use the Web services wizard to create the Web service and skeleton Java classes to which you can add the required code.
 
 By creating the WSDL file first you will ultimately have more control over the Web service, and can eliminate interoperability issues that may arise when creating a Web service using the bottom-up method.
 
@@ -59,7 +59,7 @@ JAX-WS hides the complexity of SOAP. On the server side the developer specifies 
 
 #### Service Endpoint
 
-Annotating a class with `javax.jws.WebService` defines it as a web service end point. You may ecplitly implement the `endPointInterface` but normally you can depend on the implicit implementation.
+Annotating a class with `javax.jws.WebService` defines it as a web service end point. You may explicitly implement the `endPointInterface` but normally you can depend on the implicit implementation.
 
 You use the endpoint implementation and the `wsgen` tool to generate the web service artifacts and stubs.
 

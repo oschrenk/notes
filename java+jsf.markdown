@@ -355,7 +355,7 @@ Without loosing too much breath on it: JSF also manages the last `x`component tr
 
 ### Phase 1: Restore View
 
-A request comes throught the `FacesServlet` controller. The controller examines the requjest and extracts the view ID, the name of the JSP page.
+A request comes through the `FacesServlet` controller. The controller examines the request and extracts the view ID, the name of the JSP page.
 
 JSF uses this id to look up components. If the the view doesn't exist, it will be created. There are three view instances
 1. _New View_: JSF builds the view of the `Faces` page, wires event handlers and validators. View is saved in a `FacesContext` object.

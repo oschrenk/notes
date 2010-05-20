@@ -65,14 +65,14 @@ A portlet only has to support the View Mode, any other mode is optional. Which m
 
 ## Portlet Lifecycle
 
-The lifecycle of a portlet is a little more complet than that of a servlet. 
+The lifecycle of a portlet is a little more complex than that of a servlet. 
 
 	Servlet
 		init(ServletConfig config) throws ServletException<br />
 		service(ServletRequest req, ServletResponse res) throws ServletException, IOException<br />
 		void destroy()
 
-This is because on page (which can be rendered throuigh one servlet) can consist of multiple portlets. When clicking/interacting with one portlet, the triggered action has to be processed only by the one portlet.
+This is because on page (which can be rendered through one servlet) can consist of multiple portlets. When clicking/interacting with one portlet, the triggered action has to be processed only by the one portlet.
 
 Therefore the portlet standard defines two phases, the **Render-Phase** and the **Action-Phase**.  
 
@@ -82,7 +82,7 @@ Therefore the portlet standard defines two phases, the **Render-Phase** and the 
 		render(RenderRequest, RenderResponse)
 		destroy()
 		
-Similiar to the servlet architecture each Portlet runs `init()` first. At the end of the lifecycle the `destroy()` method is called.
+Similar to the servlet architecture each Portlet runs `init()` first. At the end of the lifecycle the `destroy()` method is called.
 
 During the lifecycle render and action phase alternate. On the first run only the render action is called, displaying the initial markup.
 

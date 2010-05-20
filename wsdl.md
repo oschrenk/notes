@@ -50,7 +50,7 @@ Defines the data elements of an operation. Each message can consist of one or mo
 
 Is the most important element. It describes a web service, the operations and the messages. It can be compared to a class of a traditional programming language. Each operation can be compared to function.
 
-There are four types of oeration
+There are four types of operations:
 - One-way: The operation can receive a message but will not return a response
 - Request-response:	The operation can receive a request and will return a response
 - Solicit-response: The operation can send a request and will wait for a response

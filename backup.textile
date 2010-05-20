@@ -30,7 +30,7 @@ Dann besitze ich noch natürlich bei allen großen Drei ein Account um entsprech
 * Yahoo für Flickr
 * Windows Live
 
-Im Abschluss kann ich nur jedem empfehlen sich seine Email Konto mit IMAP einzurichten. Dadurch verliert man einige Sorgen über verloren gegangene Mails. Für den Einsteiger empfiehlt sich hier Google Mail, der hier klar im Wettbewerbsvorteil ist und als einziger IMAP Unterstützung umsonst anbietet.
+Im Abschluss kann ich nur jedem empfehlen sich seine Email Konto mit IMAP einzurichten. Dadurch verliert man einige Sorgen über verloren gegangene E-Mails. Für den Einsteiger empfiehlt sich hier Google Mail, der hier klar im Wettbewerbsvorteil ist und als einziger IMAP Unterstützung umsonst anbietet.
 
 h3. Dokumente
 

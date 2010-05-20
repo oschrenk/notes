@@ -1,25 +1,25 @@
 h1. HTTP
 
-The foundation of the web is the HTTP protocoll ("RFC 2616":http://www.ietf.org/rfc/rfc2616.txt covers HTTP 1.1). The protocol is part of the application layer (layer 5-7 according to the iso model). Key figures defining the protocol were "Roy Fielding":http://www.ics.uci.edu/~fielding/ and Tim Berners Lee.
+The foundation of the web is the HTTP protocol ("RFC 2616":http://www.ietf.org/rfc/rfc2616.txt covers HTTP 1.1). The protocol is part of the application layer (layer 5-7 according to the ISO model). Key figures defining the protocol were "Roy Fielding":http://www.ics.uci.edu/~fielding/ and Tim Berners Lee.
 
-In short HTTP bringes pages from the servers to your browser. With it you can uniquely identify resources worldwide. A web page is just a representation of such a resource. The URL tell the browser, that there is a concept for this particular resource. A browser can than ask for a representation of this concept. HTML is one type of a representation. A _web service_ is just another one. 
+In short HTTP brings pages from the servers to your browser. With it you can uniquely identify resources worldwide. A web page is just a representation of such a resource. The URL tell the browser, that there is a concept for this particular resource. A browser can than ask for a representation of this concept. HTML is one type of a representation. A _web service_ is just another one. 
 
-URLs are a key component of the language of a machine. There are much like a noun. To use these nouns we need verbs: POST, GET, PUT, DELETE. These verbs sufice to describe a CRUD system. You just need to agree on what information is being exchanged.
+URLs are a key component of the language of a machine. There are much like a noun. To use these nouns we need verbs: POST, GET, PUT, DELETE. These verbs suffice to describe a CRUD system. You just need to agree on what information is being exchanged.
 
 h2. REST
 
 Is an abstract architecture style defined by "Roy Fielding":http://www.ics.uci.edu/~fielding/ defined in his dissertation "Architectural Styles and the Design of Network-based Software Architectures":http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm.
 
-RESTful HTTP is an application of the web standards in particular HTTP aligned with the REST architecural style.
+RESTful HTTP is an application of the web standards in particular HTTP aligned with the REST architectural style.
 
 5 key ideas:
-* each conecpt gets its own ID, a URI
+* each concept gets its own ID, a URI
 * standard methods to interact with resources (@GET@, @PUT@, @POST@, @DELETE@)
 * you can link to other resources (with the URI)
 * each resource can have different representations
 * stateless communication to have entry points in the application
 
-@GET@ is a safe operation, meaning that it a read only operation, easily cachable, easily scalable
+@GET@ is a safe operation, meaning that it a read only operation, easily cacheable, easily scalable
 
 RESTful HTTP is when I don't (want to) know much about the infrastructure of the communication partner. It't not a good choice when you develop performance critical systems and you use strongly coupled systems.
 
@@ -39,7 +39,7 @@ The PRG Pattern solves this problem by returning a 303 (or sometimes 302) REDIRE
 
 h2. cURL
 
-A good ressource for testing HTTP with CURL can be found "here":http://curl.haxx.se/docs/httpscripting.html
+A good resource for testing HTTP with CURL can be found "here":http://curl.haxx.se/docs/httpscripting.html
 
 h3. POST a file
 

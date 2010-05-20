@@ -43,7 +43,7 @@ Can take various parameter; to be set in the `web.xml`
 In addition to these parameters you can also set attributes in the portlet context. But as the portlet context is in effect for all portlets, parameters are defined using the name of the portlet
 
 - `javax.portlet.faces.[portletname].excludedRequestAttributes` Some request attributes of the bridge managed scope shouldn't be persisted.
-- `javax.portlet.faces.[portletname].preserveActionParams` Boolean. Decides if action parameters are stored for the duration of bridge request scope. If set to `false` thwe action parameters are only preserved int the action request but not in the render request.
+- `javax.portlet.faces.[portletname].preserveActionParams` Boolean. Decides if action parameters are stored for the duration of bridge request scope. If set to `false` the action parameters are only preserved int the action request but not in the render request.
 - `javax.portlet.faces.[portletname].defaultViewIdMap` Stores a map of each portlet mode to the according JSF page.
 
 ### Request Handling
@@ -95,7 +95,7 @@ If a render request comes in the applicable bridge managed scope is to be found.
 
 ### Exclusion of Attributes ###
 
-The bridge buffers request attributes. Sometimes this behaviour isn't needed or is even harmful. You can exclude attributes
+The bridge buffers request attributes. Sometimes this behavior isn't needed or is even harmful. You can exclude attributes
 
 - using `javax.portlet.faces.annotation.ExcludeFromManagedRequestScope` annotation
 - using `javax.portlet.faces.[portletname].excludedRequestAttributes` attribute
@@ -125,4 +125,4 @@ The bridge buffers request attributes. Sometimes this behaviour isn't needed or 
 - _Servlet Request Scope_: validity period of a request being consumed by servlet container
 - _Portlet Request Scope_: Difference between ActionRequest and Render Request. One client request can generate two server side requests.
 - _Faces Request Scope_: validity period within JSF. As JSF was developed for the servlet world each JSF life cycle is handled in one request.
-- _Bridge Request Scope/Managed Request Scope_: validity period managed by the bridge. Can be longer than portal request, to ensure that data from the action requestt are still available to the render requests.
+- _Bridge Request Scope/Managed Request Scope_: validity period managed by the bridge. Can be longer than portal request, to ensure that data from the action request are still available to the render requests.

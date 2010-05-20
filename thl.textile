@@ -101,7 +101,7 @@ RF	Projects
 			
 			RF Open Source // not restricted to computer stuff
 				LL Ideas // brain farts for future projects
-				LL Project A // build a papermache table
+				LL Project A // build a paper-mâché table
 				LL Project B // build twitter client
 				[...]
 				

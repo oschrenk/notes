@@ -12,7 +12,7 @@ A message system is classified into three different messages models
 JMS only supports the first two.
 
 ### Point-to-Point model
-A _sender_ posts messages to a particular _queue_. A _receiver_ reads the messages from the same queue. The sender knows the destination of the message and pists the message directly to the queue of the receiver.
+A _sender_ posts messages to a particular _queue_. A _receiver_ reads the messages from the same queue. The sender knows the destination of the message and posts the message directly to the queue of the receiver.
 
 - only one consumer gets the message
 - the producer does not have to be running, when the consumer consumes the message or vice versa

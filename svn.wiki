@@ -89,11 +89,11 @@ Sicherstellen dass mein Zweig sauber ist mit
   $ svn status
 </pre>
 	
-Realistischer Weise sind gerade bei Eclipse-Projekten kleine M übrig.
+Realistischerweise sind gerade bei Eclipse-Projekten kleine M übrig.
 
 etwa <code>.project</code>
 
-Folgendes Schnipseln mergt das Verzeichnus des Trunks (online) mit dem aktuellen Arbeitsverzeichnis, welches der Branch sei sollte:
+Folgendes Schnipseln mergt das Verzeichnis des Trunks (online) mit dem aktuellen Arbeitsverzeichnis, welches der Branch sei sollte:
 
 <pre>
 	$ pwd
@@ -107,7 +107,7 @@ Folgendes Schnipseln mergt das Verzeichnus des Trunks (online) mit dem aktuellen
 
 Mit Subversive erleichtert sich die Sache zu *Team > Merge > 1 URL*. Hier die Trunk URL eingeben und bestätigen. 
 
-Mit <pre>svn status</pre> kann man sich die Änderungen ansehen. Man sollte auch <pre>svn diff</pre> einsetzen oder sein IDE zu Rate ziehen, um sich alles genau anszusehen.
+Mit <pre>svn status</pre> kann man sich die Änderungen ansehen. Man sollte auch <pre>svn diff</pre> einsetzen oder sein IDE zu Rate ziehen, um sich alles genau anzusehen.
 
 Hinweis: Das Merging erzeugte oder änderte auch das Attribut svn:mergeinfo. Das sind Metadaten, die bei zukünftigen Merges benötigt werden und sollten nicht entfernt werden.
 
@@ -126,9 +126,9 @@ bestätigen und ist nun wieder synchron mit dem Trunk.
 
 == Änderungen vom Branch in den Trunk übernehmen ==
 
-Sollte die Arbeit am Branch abgeschlossen und comitted sein, nochmal mit Trunk mergen und schauen ob man wirklich aktuell ist.
+Sollte die Arbeit am Branch abgeschlossen und committed sein, nochmals mit Trunk mergen und schauen ob man wirklich aktuell ist.
 
-In eine Working Copy des Trunks wechseln (auch dewegen halte ich mir gerne eine Kopie). Mit <pre>svn status</pre> garantieren, dass man eine saubere Kopie hat. Oder einfach mit <pre>svn revert -R</pre> lokale Änderungen rückgängig machen und eventuell mit <pre>svn update</pre> das WC auf den neuesten Stand bringen. Damit kann man unnötige Merge Konflikte vermeiden.
+In eine Working Copy des Trunks wechseln (auch deswegen halte ich mir gerne eine Kopie). Mit <pre>svn status</pre> garantieren, dass man eine saubere Kopie hat. Oder einfach mit <pre>svn revert -R</pre> lokale Änderungen rückgängig machen und eventuell mit <pre>svn update</pre> das WC auf den neuesten Stand bringen. Damit kann man unnötige Merge Konflikte vermeiden.
 
 <pre>
 	$ pwd
@@ -251,7 +251,7 @@ Entwickler B muss nun entscheiden, ob er die Reorganisation durch Entwickler A �
 
 Um seine lokalen Änderungen mit der Umstrukturierung zusammenzuführen, muss Entwickler B zunächst herausfinden wie die konfliktbehaftete Datei Foo.c im Projektarchiv umbenannt wurde. Dies kann mit Hilfe des Log-Dialogs geschehen. Die Änderungen müssen manuell zusammengeführt werden, da es derzeit keine Möglichkeit gibt, dies zu automatisieren oder zu vereinfachen. Sobald die Änderungen übernommen wurden, ist der konfliktbehaftete Pfad überflüssig und kann gelöscht werden. Verwenden Sie dazu die Entfernen Schaltfläche im Konflikteditor. Damit wird dieser Konflikt als aufgelöst markiert.
 
-Falls Entwickler B beschließt, dass die Änderungen von A falsch waren, muss er Beibehalten im Konflikteditor wählen. Dadurch wird der Konflikt als aufgeöst markiert, aber die Änderungen von Entwickler A müssen manuell zurückgenommen werden. Der Log-Dialog hilft Ihnen wieder dabei festzustellen, was verschoben wurde.
+Falls Entwickler B beschließt, dass die Änderungen von A falsch waren, muss er Beibehalten im Konflikteditor wählen. Dadurch wird der Konflikt als aufgelöst markiert, aber die Änderungen von Entwickler A müssen manuell zurückgenommen werden. Der Log-Dialog hilft Ihnen wieder dabei festzustellen, was verschoben wurde.
 
 === Lokal gelöscht, eingehende Löschung beim Aktualisieren ===
 
@@ -308,7 +308,7 @@ Entwickler B muss nun entscheiden, ob er die Reorganisation durch Entwickler A �
 
 Um die lokalen Änderungen mit der Reorganisation zusammenzuführen, muss Entwickler B zunächst herausfinden wie die konfliktbehaftete Datei Foo.c im Projektarchiv umbenannt wurde. Dies kann mit Hilfe des Log-Dialogs für die Quelle des Zusammenführens geschehen. Der Konflikteditor zeigt nur das Log für die Arbeitskopie an, da er nicht wissen kann, welcher Pfad zum Zusammenführen genutzt wurde. Aus diesem Grund müssen Sie das selbst herausfinden. Die Änderungen müssen manuell zusammengeführt werden, da es derzeit keine Möglichkeit gibt, dies zu automatisieren oder zu vereinfachen. Sobald die Änderungen übernommen wurden, ist der konfliktbehaftete Pfad überflüssig und kann gelöscht werden. Verwenden Sie dazu die Entfernen Schaltfläche im Konflikteditor. Damit wird dieser Konflikt als aufgelöst markiert.
 
-Falls Entwickler B beschließt, dass die Änderungen von A falsch waren, muss er Beibehalten im Konflikteditor wählen. Dadurch wird der Konflikt als aufgeöst markiert, aber die Änderungen von Entwickler A müssen manuell zurückgenommen werden. Der Log-Dialog hilft Ihnen wieder dabei festzustellen, was verschoben wurde.
+Falls Entwickler B beschließt, dass die Änderungen von A falsch waren, muss er Beibehalten im Konflikteditor wählen. Dadurch wird der Konflikt als aufgelöst markiert, aber die Änderungen von Entwickler A müssen manuell zurückgenommen werden. Der Log-Dialog hilft Ihnen wieder dabei festzustellen, was verschoben wurde.
 
 === Lokal gelöscht, eingehende Löschung beim Zusammenführen === 
 

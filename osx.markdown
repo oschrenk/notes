@@ -2,4 +2,4 @@
 
 ## What I like
 
-- OS has built in spell checker - no need to to reproduce that feauture for an application
+- OS has built in spell checker - no need to to reproduce that feature for an application

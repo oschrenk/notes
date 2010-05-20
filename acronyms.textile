@@ -9,4 +9,4 @@ h1. Acronyms
 - JAXB := Java Architecture for XML Binding allows Java developers to map Java classes to XML representations.
 - JWS := Java Web Services
 - WAR := Web application ARchive is a JAR file used to distribute a collection of JavaServer Pages, servlets, Java classes, XML files, tag libraries and static Web pages hat together constitute a Web application.
-- WSDL := The Web Services Description Language (WSDL, pronounced 'wiz-d?l') is an XML-based language that provides a model for describing Web services. The meaning of the acronym has changed from version 1.1 where the D stood for Definition.
+- WSDL := The Web Services Description Language is an XML-based language that provides a model for describing Web services. The meaning of the acronym has changed from version 1.1 where the D stood for Definition.

@@ -29,7 +29,7 @@ Add index.php to the `dir_module `directive in `httpd.conf`
 	    DirectoryIndex index.html index.php
 	</IfModule>
 	
-Add a new mimetype so that Apache will direct files ending in .php to the PHP module for processing. Add the following within the <IfModule mime_module> block. Without this, all you'll see is the text of your PHP scripts
+Add a new MIME type so that Apache will direct files ending in .php to the PHP module for processing. Add the following within the <IfModule mime_module> block. Without this, all you'll see is the text of your PHP scripts
 
 	AddType application/x-httpd-php .php
 	AddType application/x-httpd-php-source .phps
@@ -54,7 +54,7 @@ Test it's working:
 
 ### Fix mysql.sock location in php.ini
 
-In `/etc/php.ini`, replace the three occurences of `/var/mysql/mysql.sock` by `/tmp/mysql.sock`
+In `/etc/php.ini`, replace the three occurrences of `/var/mysql/mysql.sock` by `/tmp/mysql.sock`
 	pdo_mysql.default_socket=/tmp/mysql.sock
 	mysql.default_socket = /tmp/mysql.sock
 	mysqli.default_socket = /tmp/mysql.sock

@@ -2,4 +2,4 @@
 
 ## ESB
 
-A bus is a system that fordwards data to other parts. An Enterprise Service Bus (ESB) is an architectural concept for disctributed systems following SOA.
+A bus is a system that forwards data to other parts. An Enterprise Service Bus (ESB) is an architectural concept for distributed systems following SOA.

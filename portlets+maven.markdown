@@ -34,6 +34,3 @@ mvn archetype:generate\
  -DarchetypeArtifactId=1.2-basic\
  -DgroupId=com.acme\
  -DartifactId=project2
-
-## Creating Base Portlet
-
