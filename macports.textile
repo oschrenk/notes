@@ -8,6 +8,10 @@ To update macports and its ports tree, run
 
 bc. $ sudo port selfupdate
 
+h3. Show outdated ports
+
+bc. $ sudo port outdated
+
 h3. Upgrading Ports and dependencies
 
 After the @selfupdate@ run to update the ports
