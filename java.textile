@@ -95,7 +95,7 @@ bq. Apparently Ant expects all the classes to be in Jar files rather than in dir
 
 The hint is to pack the classes into a jar, and add the jar to the classpath and not the directory whee the classes reside.
 
-h2. Resources
+h2. Appendix
 
 h3. JavaDoc
 
@@ -109,3 +109,24 @@ h3. JavaDoc
 "Java EE 1.4":http://java.sun.com/j2ee/1.4/docs/api/index.html
 "Java EE 5":http://java.sun.com/javaee/5/docs/api/
 "Java EE 6":http://java.sun.com/javaee/6/docs/api/
+
+h3. Frameworks/APIs
+
+Apache CXF
+Geronimo
+Quartz
+Hibernate
+Spring
+ActiveMQ
+
+h3. Definitions
+
+- JAXB := 
+- JWS := 
+- AOP:= 
+- WSDL := 
+- DAO := 
+- EAR := 
+- JAR := 
+- WAR := 
+- EJB := 
