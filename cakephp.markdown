@@ -2,13 +2,13 @@
 
 I downloaded the [1.3.0 RC4][cake.1.3RC4] as the [1.2.7][cake.1.2.7] release threw some deprecated warning in my face.
 
-In unpacked the release into my `htdocs` directory and started my apache and pointed my browser to [localhost][localhost]. If the apache2 is properly configured it shuld already output some cakePHP information.
+In unpacked the release into my `htdocs` directory and started my apache and pointed my browser to [localhost][localhost]. If the apache2 is properly configured it should already output some cakePHP information.
 
 I got some errors:
 
 	/tmp/cache/ is not writable
 
-The soultion is to make the `cache` directory writable. I made th `tmp` directory writable for everyone, by adding the permissions using Finder's information menu.
+The solution is to make the `cache` directory writable. I made the `tmp` directory writable for everyone, by adding the permissions using Finder's information menu.
 
 	Please change the value of 'Security.salt'
 
@@ -44,7 +44,7 @@ In the end I used:
 
 When I used `localhost` as my host I couldn't connect even If I added the socket at `/tmp/mysql.sock` as the port (which works for my [Sequel Pro][sequelpro])
 
-I also had to create a virtual host in `/opt/local/apache2/conf/httpd-vhosts.conf` (keep in mind to activate the extra conf file in `httpd.conf` by uncommenting `#Include conf/extra/httpd-vhosts.conf`) that pointed to the csake php webroot, as css and images weren't loaded properly:
+I also had to create a virtual host in `/opt/local/apache2/conf/httpd-vhosts.conf` (keep in mind to activate the extra conf file in `httpd.conf` by uncommenting `#Include conf/extra/httpd-vhosts.conf`) that pointed to the cake php webroot, as css and images weren't loaded properly:
 
 	<VirtualHost *:80>
 	    ServerAdmin webmaster@dummy-host.example.com
