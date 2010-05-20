@@ -81,7 +81,38 @@ A response to the above rquest could contain
 
 ### Faults
 
-Optional. Muste b child of body. Can only appear once. Indicates error.
+Optional. Muste be child of body. Can only appear once. Indicates error.
+
+Example from [here](http://www.herongyang.com/Web-Services/SOAP-Fault-Message-Structure.html):
+
+	<?xml version='1.0' ?>
+	<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope"
+				xmlns:rpc='http://www.w3.org/2003/05/soap-rpc'>
+	  <env:Body>
+	   <env:Fault>
+		 <env:Code>
+		   <env:Value>env:Sender</env:Value>
+		   <env:Subcode>
+			<env:Value>rpc:BadArguments</env:Value>
+		   </env:Subcode>
+		 </env:Code>
+		 <env:Reason>
+		  <env:Text xml:lang="en-US">Processing error</env:Text>
+		  <env:Text xml:lang="fr-CA">Error</env:Text>
+		 </env:Reason>
+		 <env:Detail>
+		  <e:myFaultDetails 
+			xmlns:e="http://travelcompany.example.org/faults">
+			<e:message>Name does not match card number</e:message>
+			<e:errorcode>999</e:errorcode>
+		  </e:myFaultDetails>
+		 </env:Detail>
+	   </env:Fault>
+	 </env:Body>
+	</env:Envelope>
+
+
+
 
 ### HTTP
 
