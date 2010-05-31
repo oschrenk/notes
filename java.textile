@@ -57,6 +57,14 @@ A _JavaBean_ has to conform to three properties
 
 Sometimes these objects are also called _POJOs_ (Plain Old Java Object), describing the fact that the don't implement an interface, or extend another class, they are just a normal object.
 
+h2. Documentation
+
+h3. JavaDoc
+
+h4. Proposed Tags
+
+@@category@ For logically grouping classes, methods, fields together
+
 h2. Interview Questions
 
 h3. Servlet Engine
