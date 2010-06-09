@@ -1,14 +1,36 @@
-# MKV #
+# Audio & Video #
 
-Matroska Video (MKV) files
+## Splitting Mp3 ##
 
-## Installation
+Install via
+
+	sudo port install mp3splt
+
+Usage:
+
+	mp3splt -c music.cue music.mp3
+	
+Which pumps out the named files into the same directory
+
+## Extracting audio track ##
+
+### From AVI Container ###
+
+Install via
+
+	sudo port install ffmpeg
+
+Usage:
+
+	ffmpeg -i file.avi -f mp3 file.mp3
+
+### From Matroska Video (MKV) files ###
+
+Install via
 
 	sudo port install mkvtoolnix
 	
 Which took ages (2+ hours, mainly because of Boost).
-
-## Extract Audio/Video/Subtitles ##
 
 List contents of mkv file
 
@@ -28,5 +50,3 @@ Extract tracks with `mkvextract`
 Or just the audio track
 
 	mkvextract tracks MovieFile.mkv 2:theaudio.mp3 
-
-
