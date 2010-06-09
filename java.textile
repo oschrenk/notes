@@ -4,7 +4,11 @@ h2. Basics
 
 h3. Format a String
 
-bc. String.format("First param %s, second param %2s", firstParam, secondParam);
+bc. String.format("First param %s, second param %s", firstParam, secondParam);
+
+"Formatting Syntax":http://java.sun.com/j2se/1.5.0/docs/api/java/util/Formatter.html#syntax
+
+bc.  %[argument_index$][flags][width][.precision]conversion
 
 h2. Garbage Collection
 
