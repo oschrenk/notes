@@ -214,6 +214,10 @@ bc. $ git push origin --tags
 
 h2. Advanced Git
 
+h3. Remove last commit from history
+
+bc. git rebase --onto HEAD~1 HEAD
+
 h3(#remove-file-from-history). Remove a file/directory from history
 
 Suppose you want to remove a file (containing confidential information or copyright violation) from all commits:
