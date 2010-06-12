@@ -214,6 +214,19 @@ bc. $ git push origin --tags
 
 h2. Advanced Git
 
+h3. Track/ignore changes
+
+Sometimes you make changes to a file, which you don't want to commit. Adding the file to @.gitignore@ doesn't work as changes will still be commited if you use the @-a@ parameter.
+
+To ignore changes of a file simply:
+
+bc. git update-index --assume-unchanged <file>
+
+To track changes again:
+
+bc. git update-index --no-assume-unchanged <file>
+
+
 h3. Remove last commit from history
 
 bc. git rebase --onto HEAD~1 HEAD
