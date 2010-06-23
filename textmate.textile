@@ -2,9 +2,14 @@ h1. Textmate
 
 h2. Shortcuts
 
-h3. Close XML Tag
+- ⌃ := Control 
+- ⌥ := Alt
+- ⇧ := Shift
+- ⌘ := Command
 
-bc. Alt + Cmd + .
+⌥⌘. Close XML Tag
+
+⌃⌘T Selecting bundle item 
 
 h2. Appearance
 
