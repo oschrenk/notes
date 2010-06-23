@@ -22,7 +22,6 @@ You need to to configure your timezone in `/opt/local/etc/php5/php.ini`
 	; http://php.net/date.timezone
 	;date.timezone =
 	
-
 Add index.php to the `dir_module `directive in `httpd.conf`
 
 	<IfModule dir_module>
@@ -42,6 +41,17 @@ Restart the server
 
 	sudo /opt/local/apache2/bin/apachectl graceful
 	
+### mb string extension ###
+
+	sudo port install php5-mbstring
+	sudo /opt/local/apache2/bin/apachectl graceful
+	
+### PEAR ###
+
+Libraries are installed to 
+
+	/opt/local/lib/php
+
 ## MySQL ##
 
 Download the MySQL package for Mac OS X.5 (32 or 64 bits depending on your machine)
@@ -50,7 +60,6 @@ Start MySQL in the preference pane.
 Test it's working:
 
 	/usr/local/mysql/bin/mysql
-
 
 ### Fix mysql.sock location in php.ini
 
