@@ -50,15 +50,15 @@ h3. Create a new Maven Project
 
 Create a basic layout and pom.xml file
 
-bc. $ mvn archetype:create -DgroupId=com.mycompany.org -DartifactId=project
+bc. $ mvn archetype:create -DgroupId=com.acme -DartifactId=project
 
 You get a pom file like this:
 
 bc. <?xml version="1.0"?>
 	<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.mycompany.org</groupId>
-	<artifactId>java-examples</artifactId>
+	<groupId>com.acme</groupId>
+	<artifactId>project</artifactId>
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>project</name>
