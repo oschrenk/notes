@@ -113,7 +113,7 @@ h3. Manage Repository index
 
 The view to add more indexes can be found under
 
-@Window > Show View > Other ... > Maven > Maven Indexes@   
+@Window > Show View > Other ... > Maven > Maven Repositories@   
 
 Open the context menu (right click) choose @Add Index@. There you can add the Repository URL and the display name. 
 
