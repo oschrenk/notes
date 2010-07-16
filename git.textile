@@ -133,7 +133,7 @@ bc. $ git branch experiment
 
 h4. Deleting branches
 
-bc. $ git-branch (-d | -D) <branchname>...
+bc. $ git branch (-d | -D) <branchname>...
 
 * @-d@ Delete a branch. The branch must be fully merged in HEAD.
 * @-D@ Delete a branch irrespective of its merged status.
@@ -150,7 +150,7 @@ Just change into the branch you want changes to be merged into and type
 
 bc. $ git merge <branch-name-to-be-merged-in> 
 
-If there are conflicts, you can take a llok at alle the versions with
+If there are conflicts, you can take a look at all the versions with
 
 bc. # common base version of the file
 $ git show :1:file.txt
@@ -168,45 +168,13 @@ $ git file.txt
 
 h3. Tagging
 
-Shows a log of the commits (SHA1 id)
+To tag a commit (_lightweight tag_)
 
-bc. $ git log
+bc. $ git tag name-of-tag
 
-A log message looks like this:
-
-bc.. commit 589b3ce058b38cc83e54f122200cd250a6a26427
-Author: John Doe <john.doe@host.tld>
-Date:   Tue Dec 22 01:14:19 2009 +0100
-
-    Commit message 
-
-p. To tag a commit (_lightweight tag_)
-
-bc. $ git tag name-of-tag <sha1-id>
-
-or to tag it with a message (_annotated tag_)
+But its better to create an _annotated tag_ by supplying @-a@ option and adding a message with @-m@ 
 
 bc. $ git tag -a name-of-tag <sha1-id> -m "message"
-
-View available tags
-
-bc. $ git tag -l
-
-Show all the tags matching pattern "release*"
-
-bc. $ git tag -l release*
-
-Show a tag's messages/signature
-
-bc. git show name-of-tag
-
-To remove a tag
-
-bc. $ git tag -d name-of-tag
-
-To remove a tag on a remote repository, you should do a special push:
-
-bc. $ git push origin :refs/tags/tag_name
 
 To push your tags to a remote repository, use the following command to push all tags:
 
