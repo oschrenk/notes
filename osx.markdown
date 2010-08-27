@@ -2,9 +2,8 @@
 
 ## What I like
 
-*   OS has built in spell checker -- no need to to reproduce that feature for an application
+*  OS has built in spell checker -- no need to to reproduce that feature for an application
     
-
 ## Hints
 
 The hint I always give other mac users: Try pressing `Alt`. It works wonders. For example: _iTunes_ doesn't allow you to delete songs from your hard drive, when your are looking at a play list (not via `Cmd + Backspace` nor via context menu) pressing `Alt + Backspace` does the trick.
@@ -30,14 +29,12 @@ The hint I always give other mac users: Try pressing `Alt`. It works wonders. Fo
 *   Command-Control-Shift-4, then select an area: Take a screenshot of an area and save it to the clipboard
 *   Command-Control-Shift-4, then space, then click a window: Take a screenshot of a window and save it to the clipboard
     
-
 In Leopard, the following keys can be held down while selecting an area (via Command-Shift-4 or Command-Control-Shift-4):
 
 *   Space, to lock the size of the selected region and instead move it when the mouse moves
 *   Shift, to resize only one edge of the selected region
 *   Option, to resize the selected region with its center as the anchor point
     
-
 ### Change folder in (save) dialogs
 
 Press `Command + Shift + G`
@@ -92,7 +89,6 @@ Depending on the security policy of the VPN Server this hint may not work.
 1.  $ cat filename.00? \> filename.zip
 1.  $ unzip filename.zip
     
-
 The last command did output some warnings but it produced the correct file anyway
 
 ## Software
@@ -150,4 +146,3 @@ Sometimes you will find OS not deleting a file from trash because it's in use. T
     $ lsof | grep [file]
 
 Replace `[file]` with (part of) the filename which you can't remove from trash. It's case sensitive.
-
