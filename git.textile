@@ -91,6 +91,10 @@ git clean -f -d
 
 You can also use @git clean -f -x -d@, which also deletes the ignored files
 
+h4. Restore deleted file
+
+bc. git checkout HEAD^ foo.bar
+
 h3. Commit
 
 bc. $ git commit /path/file
