@@ -344,7 +344,7 @@ svn propset --revprop -r 25 svn:log "Journaled about trip to New York."
 Editieren der Dateifilter von aktuellen Verzeichnis
 
 <pre>
-svn propset svn:ignore .
+svn propedit svn:ignore .
 </pre>
 
 Es sollte sich ein Editor öffnen. Dort kann man dann zeilenweise Muster eintragen, wie zum Beispiel:
