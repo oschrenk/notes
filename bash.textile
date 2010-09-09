@@ -231,8 +231,13 @@ bc. find . -type d -name '.svn' -print0 | xargs -0 rm -rdf
 bc. curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -e 's/<.*$//'
 
 *Get geographic locatio from ip*
+
 bc. curl -s "http://www.geody.com/geoip.php?ip=10.0.0.1" | sed '/^IP:/!d;s/<[^>][^>]*>//g' ;
 curl -s "http://geoip.pidgets.com?ip=10.0.0.1&format=json"
+
+*Copy directory structure without files keeping attributes, timestamps, permissions, ...*
+
+bc. rsync -a /path/from/ /path/to/ --include \*/ --exclude \*
 
 h3. rsync
 
