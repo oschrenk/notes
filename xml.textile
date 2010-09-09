@@ -1,7 +1,0 @@
-h1. XML
-
-h2. Useful XPATH expressions
-
-h3. Selecting distinct/unique attributes
-
-bc. //path/to/item[not(@attribute=preceding-sibling::*/@attribute)]/@attribute
