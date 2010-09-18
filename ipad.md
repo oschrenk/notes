@@ -1,5 +1,31 @@
 # iPad
 
+## Dimensions ## ##
+
+On [developer.apple.com/ipod/cases.html](http://developer.apple.com/ipod/cases.html) Apple has released dimensional drawings of all mobile devices.
+
+Screen Size:
+
+width
+:	149 mm
+length
+:	198.1 mm
+
+1024x768 px
+
+That means
+
+1 mm
+:	5.154 px ≈ 5 px
+1 cm
+:	62.8436764 px ≈ 50 px
+1 px
+:	0.19345 mm ≈ 0,19 mm
+10 px
+:	1,9345 mm ≈ 1,9 mm
+100 px
+:	19,345 mm ≈ 19 mm
+
 ## Usability ##
 
 [Nielsen Norman Group Report][nngroup.ipad]
@@ -49,7 +75,6 @@ Conclusion
 
 - good for pulling information into single view
 - don't disconnect action/feedback
-
 
 [nngroup.ipad]:http://s3.amazonaws.com/nngroup/ipad-usability.pdf
 
