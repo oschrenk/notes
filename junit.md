@@ -8,7 +8,6 @@
 	
 	@RunWith(Suite.class)
 	@SuiteClasses( { MySuite1.class, MySuite2.class, MySuite3.class })
-
 	public class AllTests {
 		// empty by choice
 	}
