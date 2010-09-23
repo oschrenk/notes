@@ -1,5 +1,7 @@
 # Oracle Database #
 
+## System ##
+
 ### Datenbank herunterfahren/neustarten ###
 
 	sqlplus '/ as sysdba
@@ -34,3 +36,15 @@ Man kann die aktuellen Verbindungen als user `sys` in der Rolle `sysdba` so eins
 Bestehende Verbindungen beendet man mit:
 
 	alter system kill session 'sid,serial#' immediate;
+
+## Nützliche SQL Statements
+
+### Oracle show trigger on table ###
+
+	select    trigger_name,
+					trigger_type,
+					status
+	from      dba_triggers
+	where  
+	table_name = '&table' 
+	-- and owner = '&owner'
