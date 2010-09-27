@@ -190,7 +190,7 @@ Runs **previous command but replacing all instances of foo with bar**
 
     time read
 
-**<span class="caps">SSH</span> connection through host in the middle**
+**SSH connection through host in the middle**
 
     ssh -t reachable_host ssh unreachable_host
 
