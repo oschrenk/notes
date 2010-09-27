@@ -107,6 +107,22 @@ To use `Command+F` for searching.
 
 	$ defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
+To disable Ping DropDown Box
+	
+	$ defaults write com.apple.iTunes hide-ping-dropdown 1 
+
+To restore default Ping DropDown Box behaviour 
+
+	$ defaults delete com.apple.iTunes hide-ping-dropdown 
+	
+Restore iTunes Arrows
+
+	$ defaults write com.apple.iTunes show-store-link-arrows 1 
+
+Let the arrows point to my own iTunes library. This allows you to search for song/artist/album in your library. Very handy!
+
+	$ defaults write com.apple.iTunes invertStoreLinks 1 
+
 ### VLC
 
 After upgrading to VLC 1.0.5 VLC didn't start anymore. The console showed
