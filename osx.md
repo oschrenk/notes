@@ -99,15 +99,13 @@ The last command did output some warnings but it produced the correct file anywa
 
 Mail needs to be configured which folders it needs to use for trash, drafts and spam, otherwise it will use its own folders leaving the other folder untouched and also annoyingly visible in the side bar.
 
-Select the folder that matches the function and choose
-
-`Mailbox → Use This Mailbox For → [function name] (e.g. “Sent” again)`
+Select the folder that matches the function and choose `Mailbox → Use This Mailbox For → [function name] (e.g. “Sent” again)`
 
 ### iTunes
 
 To use `Command+F` for searching.
 
-bc. $ defaults write com.apple.iTunes \\NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
+	$ defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
 
 ### VLC
 
@@ -127,10 +125,10 @@ Resetting the configuration worked for me
 1.  Open Terminal:
     
     1.  `$ cd /Users/Shared`
-    1.  `$ mkdir Local`.
-    1.  `$ sudo chown admin:local Local`
-    1.  Change the default permissions, if you wish: `sudo chmod 770 Local` (this is optional if you're happy with the default permissions).
-    1.  Create the ACL entry for the new folder:  
+    2.  `$ mkdir Local`.
+    3.  `$ sudo chown admin:local Local`
+    4.  Change the default permissions, if you wish: `sudo chmod 770 Local` (this is optional if you're happy with the default permissions).
+    5.  Create the ACL entry for the new folder:  
         `$ sudo chmod +a "group:local allow delete,readattr,writeattr,readextattr,writeextattr,list,search,add_file,add_subdirectory,delete_child,file_inherit,directory_inherit" Local`
         
 You now have a folder where all members of the group friday can read, write and delete files, as well as read, write to and create new sub folders. The ACL rule takes precedence over standard UNIX file permissions and is automatically inherited. It's this automatic inheritance that is really important. Now you are ready to copy your iTunes, Aperture, iPhoto libraries, plus anything else you want to share, into the shared folder.
