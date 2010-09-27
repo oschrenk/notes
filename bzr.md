@@ -12,7 +12,7 @@
 	
 ## Merging ##
 
-
+	bzr merge
 
 
 
