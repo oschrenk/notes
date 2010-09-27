@@ -13,13 +13,19 @@
 	ln -s play-1.1-bzr/ play
 	cd play/framework/
 	ant
+	
+## Update Play Framework ##
 
+	cd play
+	bzr merge
+	cd framework
+	ant
+	
 ## Setup Play
 
 - make sure that Java is in your @path@ (use @java -version). Play will use the default Java or the one available at the @$JAVA_HOME@ path if defined.
 - I also setup $PLAY_HOME in my @.profile@
 - make sure that play is in your @path@. For example via @export PATH=$PLAY_HOME:$PATH@ 
-
 
 	# PLAY
 	export PLAY_HOME=$SDKS/play
