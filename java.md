@@ -55,39 +55,9 @@ A nested top-level class is a member classes with a `static` modifier. A nested 
 
 If your main class has a few smaller helper classes that can be used outside the class and make sense only with your main class, it's a good idea to make them nested top-level classes. To use the nested top-level class, write: `TopLevelClass.NestedClass`. 
 
-	public class Filter {
-		Vector criteria = new Vector();
-		public addCriterion(Criterion c) {
-			criteria.addElement(c);
-		}
-		public boolean isTrue(Record rec) {
-			for(Enumeration e=criteria.elements();
-			e.hasMoreElements();) {
-				if(! ((Criterion)e.nextElement()).isTrue(rec))
-					return false;
-			}
-			return true;
-		}
-		public static class Criterion {
-			String colName, colValue;
-			public Criterion(Stirng name, String val) {
-				colName = name; colValue = val;
-			}
-			public boolean isTrue(Record rec) {
-				String data = rec.getData(colName);
-				if(data.equals(colValue)) return true;
-				return false;
-			}
-		}
-	}
+If you define a member class, that doesn't reference the surrounding top-level class, **do not** forget to declare it as `static` as otherwise each instance of this class has a reference to the surrounding class[p. 101][#Bloch:2002].
 
-To use it
-
-	Filter f = new Filter();
-	f.addCriterion(new Filter.Criterion("SYMBOL", "SUNW"));
-	f.addCriterion(new Filter.Criterion("SIDE", "BUY"));
-	[...]
-	if(f.isTrue(someRec)) //do some thing
+Nested top level classes are often usd to capsule objects representing components of the surrounding class (eg `Map.Entry`).
 
 One **important note**: The `static` keyword does **not** do to a class declaration what it does to a variable or a method declaration. 
 	 
@@ -208,3 +178,6 @@ JVM starts with `-Xms` amount of memory for the heap (storing objects etc.) and 
 [Java EE 1.4](http://java.sun.com/j2ee/1.4/docs/api/index.html)  
 [Java EE 5](http://java.sun.com/javaee/5/docs/api/)  
 [Java EE 6](http://java.sun.com/javaee/6/docs/api/)
+
+
+[#Doe:2006]: Joshua Bloch. *Effektiv Java Programmieren*.  Addison-Wesley, 2002.
