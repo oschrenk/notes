@@ -72,7 +72,7 @@ It doesn’t stop there. If you like to move around in your command more quickly
    	"\e\e[C": forward-word
    	"\e\e[D": backward-word
 
-This one is very helpful when you just type away and realize later that the first character of is upper case instead of lower case (the default directories in the home directory of <span `OSX` all start with upper case letters).
+This one is very helpful when you just type away and realize later that the first character of is upper case instead of lower case (the default directories in the home directory of `OSX` all start with upper case letters).
 
    	# case insensitivity for tab-completion
    	set completion-ignore-case On
@@ -125,7 +125,7 @@ Sometimes when using `ls -l` there is a `+` or a `@` symbol
     	-rwx------+ 1 testuser Admin     25600 Jul 12 02:04 file.ext
     	-rwx------@ 1 testuser Admin     25600 Jul 12 02:04 file.ext
 
-The `+` indicates the use of <span class="caps">ACL</span> (Access Control Lists). Consult [<span class="caps">ACL</span>][2] for more infos.
+The `+` indicates the use of ACL (Access Control Lists). Consult [ACL][2] for more infos.
 
 The `@` indicates further file attributes. Consult [Apple File Attributes][3] for more infos.
 
@@ -274,9 +274,9 @@ rsync even has an built in option to exclude `cvs` or `svn` files, just add
 
     --cvs-exclude
 
-## <span class="caps">FAQ</span>/Problems
+## FAQ/Problems
 
-### Bash doesn’t update the <span class="caps">PATH</span>; changes to .profile aren’t registered {#profile-not-read}
+### Bash doesn’t update the PATH; changes to .profile aren’t registered {#profile-not-read}
 
 Adding something like `EXPORT PATH=/usr/bin:$PATH` doesn’t update the `$PATH` environment variable. The reason is that Bash tries to find local profile files in the following order:
 
