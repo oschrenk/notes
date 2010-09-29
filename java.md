@@ -183,6 +183,19 @@ The hint is to pack the classes into a jar, and add the jar to the classpath and
 
 ## Appendix ##
 
+### FAQ/Problems ###
+
+#### Out of Heap Space ####
+
+Just add the following VM parameter
+
+- `-Xms<size>` set initial Java heap size
+- `-Xmx<size>`  set maximum Java heap size
+
+For example `-Xms512m -Xmx768m` whereas the m would stand for megabyte.
+
+JVM starts with `-Xms` amount of memory for the heap (storing objects etc.) and can grow to a maximum of `-Xmx` amount of memory. 
+
 ### JavaDoc ###
 
 [Java SE 1.3](http://java.sun.com/j2se/1.3/docs/api/)  
