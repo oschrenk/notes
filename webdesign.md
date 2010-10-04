@@ -1,5 +1,15 @@
 # Web Design #
 
+## Planning a website ##
+
+1. Set a goal
+2. Identify your market
+3. What is the content?
+4. Choose a domain name
+5. Choose a web host
+6. Launch your site
+7. Promote oyur website
+
 ## Ideas ##
 
 *   Golden Ratio
