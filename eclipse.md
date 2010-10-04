@@ -9,7 +9,7 @@ Some default settings are weird, especially the encoding and line delimiter sett
 *   Change encoding `General -> Workspace > Text File Encoding -> Other -> UTF-8`
 *   Line Delimiter to Unix `General -> Workspace -> New text file line delimiter -> Other -> Unix`
 
-### Plugins ###
+### Plugins ###	
 
 Subversive `http://download.eclipse.org/technology/subversive/0.7/update-site/`  
 Maven `http://m2eclipse.sonatype.org/update/`
@@ -42,3 +42,7 @@ The used workspaces are stored in
 ### &#8220;Waiting For Virtual Machine To Exit&#8221; ###
 
 I had this error when I was trying to deploy a web application to a local JBoss Application Server. The problem was that the ANT home setting of Eclipse were pointing to non existing directories and files. So I removed the false entries and reset me ANT Home in `Preferences > Ant > Runtime`
+
+### Out of Heap Space, Give Run/Debug Configurations more RAM ###
+
+Goto `Run > [Run|Debug] Configurations` and select the configuration you want to change, select the `Arguments` tab and add sensible parameter to the `VM Arguments` box. For example `-Xms512m -Xmx768m` 
