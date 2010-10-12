@@ -9,7 +9,7 @@ Use `man brew` to view the manpage.
 | `brew install foo`					| Installs foo 	|
 | `brew search`							| Lists all formula that you can install |
 | `brew search foo`						| Searches for foo in formula available to install |
-| `brew search /foo						| Same as above but parses /foo/ as a regex |
+| `brew search /foo`					| Same as above but parses /foo/ as a regex |
 | `brew list` 				  			| Lists all installed formulae |
 | `brew list foo`			  			| Lists the installed files for foo |
 | `brew info --github foo` 	  			| Open your browser at the Github History page for formula foo |
