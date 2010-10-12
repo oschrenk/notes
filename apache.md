@@ -1,6 +1,6 @@
 # Apache #
 
-## <span class="caps">FAQ</span>/Problems ##
+## FAQ/Problems ##
 
 ### `CFURLWriteDataAndPropertiesToResource(/System/Library/LaunchDaemons/org.apache.httpd.plist) failed: -10` ###
 
