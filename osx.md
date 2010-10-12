@@ -161,13 +161,13 @@ Sometimes you will find OS not deleting a file from trash because it's in use. T
 
 Replace `[file]` with (part of) the filename which you can't remove from trash. It's case sensitive.
 
-### Mac would always eject discs ###
+### Mac would always eject discs ####
 
 Try resettings SMC
 
 What helped me (for a few dvds) was to flip the Macbook 90° (no joke) and trying to load the disc. This is a strong indicator for having hardware issues.
 
-## How to reset SMC ##
+### How to reset SMC ###
 
 Try each of the following steps in this order before you reset the SMC.  Test the issue after completing each troubleshooting step to determine if the issue still occurs.
 
@@ -186,3 +186,9 @@ Resetting the SMC on Mac portables with a battery you can remove
 5. Release the power button.
 6. Reconnect the battery and MagSafe power adapter.
 7. Press the power button to turn on the computer.
+
+### Clean up double _Open with..._ entries ###
+
+After I cloned my harddrive the _Open with..._ menu was showing double entries. Rebuilding my LaunchServices database helped:
+
+	/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
