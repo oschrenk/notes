@@ -1,6 +1,8 @@
 # Audio & Video #
 
-## Splitting Mp3 ##
+## Audio ##
+
+### Splitting Mp3 ###
 
 Install via
 
@@ -12,9 +14,9 @@ Usage:
 	
 Which pumps out the named files into the same directory
 
-## Extracting audio track ##
+### Extracting audio track ###
 
-### From AVI Container ###
+#### From AVI Container ####
 
 Install via
 
@@ -24,7 +26,7 @@ Usage:
 
 	ffmpeg -i file.avi -f mp3 file.mp3
 
-### From Matroska Video (MKV) files ###
+#### From Matroska Video (MKV) files ####
 
 Install via
 
@@ -50,3 +52,17 @@ Extract tracks with `mkvextract`
 Or just the audio track
 
 	mkvextract tracks MovieFile.mkv 2:theaudio.mp3 
+	
+## Video ##
+
+### Split Quicktime movies ###
+
+[http://www.3am.pair.com/QTCoffee.html](http://www.3am.pair.com/QTCoffee.html)
+
+To split a movie
+
+	splitmovie video.mov -splitAt 1:06.5 -splitAt 1:32.02 -self-contained -o movie.mov
+	
+To join videos
+	
+	catmovie movie1.mov movie2.mov movie3.mov ‑self‑contained ‑o bigmovie.mov
