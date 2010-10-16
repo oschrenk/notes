@@ -9,6 +9,8 @@ Try if it work `http://localhost/`
 
 ## PHP ##
 
+### With macports ###
+
 	sudo port install php5 +apache2 +pear
 	cd /opt/local/apache2/modules
 	sudo /opt/local/apache2/bin/apxs -a -e -n "php5" libphp5.so
@@ -41,6 +43,16 @@ Restart the server
 
 	sudo /opt/local/apache2/bin/apachectl graceful
 	
+### With homebrew ###
+
+I you need to install your own php via homebrew you might want to try this
+
+	curl -O http://github.com/ampt/homebrew/raw/php/Library/Formula/php.rb
+	mv php.rb `brew --prefix`/Library/Formula
+	brew install php --with-apache --with-mysql
+	
+I ran into compilation problems and used OSX php installation instead
+
 ### mb string extension ###
 
 	sudo port install php5-mbstring
