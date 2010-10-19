@@ -30,7 +30,7 @@ Three types of DI:
 *   _Type 3_ or _Constructor Injection_ the constructor of the module
     contains the dependencies
 
-## <span class="caps">API</span>/Framework Design ##
+## API/Framework Design ##
 
 ### Fluent Interfaces ###
 

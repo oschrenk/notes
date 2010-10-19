@@ -1,4 +1,4 @@
-# MySQL on <span class="caps">OSX</span> #
+# MySQL on OSX #
 
 ## Remove it ##
 

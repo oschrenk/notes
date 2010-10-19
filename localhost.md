@@ -110,11 +110,11 @@ amount of money the seem fit.
 *   Vorträge
 *   Git Server
 *   Gaming area (XBox, PS3, Wii)
-    *   Rockband parties
+*   Rockband parties
 *   Role playing games
 *   Brettspiele
 *   Comics
-*   <span class="caps">LAN</span> Parties
+*   LAN Parties
 
 ## Finances ##
 
@@ -154,8 +154,7 @@ A place that seats 25 will have to employ at least two people for
 every shift: someone to work the front and someone for the kitchen
 (assuming you find a guy who will both uncomplainingly wash dishes and
 reliably whip up pretty crepes; if you've found that guy,
-you're already in better shape than most <span
-class="caps">NYC</span> restaurateurs. You're also, most likely,
+you're already in better shape than most NYC restaurateurs. You're also, most likely,
 already in trouble with immigration services). Budgeting $15 for the
 payroll for every hour your charming cafe is open (let's say 10
 hours a day) relieves you of $4,500 a month. That gives you another

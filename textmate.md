@@ -2,6 +2,10 @@
 
 ## Shortcuts ##
 
+*⌥⌘.* Close XML Tag
+
+*⌃⌘T* Selecting bundle item
+
 <dl>
 	<dt>⌃</dt>
 	<dd>Control</dd>
@@ -12,10 +16,6 @@
 	<dt>⌘</dt>
 	<dd>Command</dd>
 </dl>
-
-⌥⌘. Close <span class="caps">XML</span> Tag
-
-⌃⌘T Selecting bundle item
 
 ## Appearance ##
 
@@ -45,14 +45,11 @@ reload your bundles with
 
 ### XMLMate ###
 
-> The XMLMate Plug-In adds an <span class="caps">XML</span> parsing
-> palette to the popular TextMate text editor for Mac OS X. While
-> editing an <span class="caps">XML</span> (or <span
-> class="caps">XHTML</span>) document in TextMate, you can open the
-> XMLMate palette to conveniently check your document for
-> well-formedness or validity against a <span class="caps">DTD</span>,
-> W3C <span class="caps">XML</span> Schema, <span
-> class="caps">RELAX</span> NG schema, or Schematron schema.
+> The XMLMate Plug-In adds an XML parsing palette to the popular TextMate text
+> editor for Mac OS X. While editing an XML (or XHTML) document in TextMate, 
+> you can open the XMLMate palette to conveniently check your document for
+> well-formedness or validity against a DTD, W3C XMLSchema, RELAX NG schema, or
+> Schematron schema.
 
 Get it [here](//www.ditchnet.org/xmlmate/).
 

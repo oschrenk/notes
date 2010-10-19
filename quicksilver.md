@@ -10,7 +10,7 @@ To relaunch Quicksilver
 
 press period `.`
 
-## <span class="caps">FAQ</span>/Problems ##
+## FAQ/Problems ##
 
 ## Define directories as conent types ##
 

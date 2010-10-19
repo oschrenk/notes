@@ -1,11 +1,9 @@
-# <span class="caps">OCR</span> #
+# OCR #
 
 ## Sources ##
 
-http://aldeby.org/blog/index.php/how-to-professionally-scan-and-ocr-with-open-source-tools.html:http://aldeby.org/blog/index.php/how-to-professionally-scan-and-ocr-with-open-source-tools.html  
-http://gl.ib.ly/archives/35-Doing-<span
-class="caps">OCR</span>-on-linuxMac.html:http://gl.ib.ly/archives/35-Doing-<span
-class="caps">OCR</span>-on-linuxMac.html
+[Professionally scan with Open Source tools](http://aldeby.org/blog/index.php/how-to-professionally-scan-and-ocr-with-open-source-tools.html)
+[OCR on Linux & Mac](http://gl.ib.ly/archives/35-Doing-OCR-on-linuxMac.html:http://gl.ib.ly/archives/35-Doing-OCR-on-linuxMac.html)
 
 ## Notes ##
 
@@ -21,7 +19,7 @@ Convert to multiple pages
 
     convert multipage.tif single%d.tif
 
-## <span class="caps">FAQ</span>/Problems ##
+## FAQ/Problems ##
 
 ### `sh: gs: command not found` ###
 
@@ -31,7 +29,7 @@ If you get a message like
     convert: Postscript delegate failed `name.pdf': No such file or directory @ pdf.c/ReadPDFImage/634.
     convert: missing an image filename `name.tiff' @ convert.c/ConvertImageCommand/2838.
 
-Ghostscript isn&#8217;t (properly) installed. You can to so by
+Ghostscript isn't (properly) installed. You can to so by
 
     $ sudo port install ghostscript
 

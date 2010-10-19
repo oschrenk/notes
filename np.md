@@ -80,8 +80,7 @@ Dieses Problem ist nicht lösbar.
 
 ## Praktische Lösbarkeit ##
 
-Quelle:Grundkurs Algorithmen und Datenstrukturen in <span
-class="caps">JAVA</span>  
+Quelle:Grundkurs Algorithmen und Datenstrukturen in JAVA
 Andreas Solymosi und Ulrich Grude  
 Vieweg+Teubner Verlag  
-<span class="caps">ISBN</span> 978-3-8348-0350-4
+ISBN 978-3-8348-0350-4

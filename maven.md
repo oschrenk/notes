@@ -127,7 +127,7 @@ Java.net | [http://download.java.net/maven/2/](http://download.java.net/maven/2/
 
 The indexing process might take a while.
 
-## <span class="caps">FAQ</span>/Problems ##
+## FAQ/Problems ##
 
 ### MacRoman encoding creeping into build process ###
 
