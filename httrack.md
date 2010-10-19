@@ -7,7 +7,7 @@
 -O
 :	backup directory
 -%P
-:	extended parsing, attempt to parse all links, even in unknown tags or Javascript (%P0 don&#8217;t use) (--extended-parsing[=N])
+:	extended parsing, attempt to parse all links, even in unknown tags or Javascript (%P0 don't use) (--extended-parsing[=N])
 -N0
 :	Saves files like in site Site-structure (default)
 -s0
@@ -30,4 +30,3 @@
 :	Build option, replace external html links by error pages
 -%x
 :	Build option, do not include any password for external password protected websites (%x0 include) (--no-passwords)
-

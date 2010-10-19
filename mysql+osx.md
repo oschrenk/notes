@@ -1,6 +1,6 @@
 # MySQL on OSX #
 
-## Remove it ##
+## Uninstall ##
 
 From [forums.mysql](http://forums.mysql.com/read.php?11,71860,72130#msg-72130)
 
@@ -17,7 +17,7 @@ From [forums.mysql](http://forums.mysql.com/read.php?11,71860,72130#msg-72130)
 All locations need to be deleted as root, so you will need to use sudo
 to do it.  
 If you are not used to doing this, then post again after checking the
-above four locations to make sure that&#8217;s where everything is
+above four locations to make sure that's where everything is
 installed. That way some one can give you the exact commands needed to
 delete the folders.
 

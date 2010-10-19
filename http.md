@@ -22,11 +22,11 @@ RESTful HTTP is an application of the web standards in particular HTTP aligned w
 
 `GET` is a safe operation, meaning that it a read only operation, easily cacheable, easily scalable
 
-RESTful HTTP is when I don&#8217;t (want to) know much about the infrastructure of the communication partner. It&#8217;t not a good choice when you develop performance critical systems and you use strongly coupled systems.
+RESTful HTTP is when I don't (want to) know much about the infrastructure of the communication partner. It't not a good choice when you develop performance critical systems and you use strongly coupled systems.
 
 ### REST vs WS-\* ###
 
-REST precedes the WS-\* standards. Most of the communication today is based on HTTP. Web services are independent from the underlying communication protocols. They can&#8217;t make use of the advantages of a particular protocol.
+REST precedes the WS-\* standards. Most of the communication today is based on HTTP. Web services are independent from the underlying communication protocols. They can't make use of the advantages of a particular protocol.
 
 ## Best-Practices ##
 

@@ -1,6 +1,6 @@
 # Quotes #
 
-bq[de].: &#8220;The best presents don&#8217;t come in boxes.&#8221;
+bq[de].: &#8220;The best presents don't come in boxes.&#8221;
 
 Hobbes (Calvin & Hobbes, Bill Watterson)
 
@@ -23,7 +23,7 @@ Eleanor Roosevelt
 Jess Crichton (Character from Nick Hornby)
 
 <blockquote lang="en">
-<p lang="en">&#8220;Twenty years from now you will be more disappointed by the things that you didn&#8217;t do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.&#8221;</p>
+<p lang="en">&#8220;Twenty years from now you will be more disappointed by the things that you didn't do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover.&#8221;</p>
 </blockquote>
 
 Mark Twain
@@ -77,7 +77,7 @@ William Morris
 Albert Einstein
 
 <blockquote lang="en">
-<p lang="en">&#8220;Don&#8217;t cry because it&#8217;s over. Smile because it happened.&#8221;</p>
+<p lang="en">&#8220;Don't cry because it's over. Smile because it happened.&#8221;</p>
 </blockquote>
 
 Dr. Seuss
@@ -107,7 +107,7 @@ Unbekannt
 T. S. Eliot
 
 <blockquote lang="en">
-<p lang="en">When you don&#8217;t create things, you become defined by your tastes rather than ability. Your tastes only narrow &amp; exclude people. So create.</p>
+<p lang="en">When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow &amp; exclude people. So create.</p>
 </blockquote>
 
 @\_why

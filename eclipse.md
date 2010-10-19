@@ -26,7 +26,7 @@ In the project explorer there is a small triangle or arrow facing down. Pressing
 
 ### Convert &#8220;General Project&#8221; to &#8220;Java Project&#8221; by adding Java Nature ###
 
-Eclipse doesn&#8217;t seem to offer a GUI variant of changing adding the nature of a project. You can do it manually by opening the relevant `.project` file and add (or change it to, if it is already there)
+Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a project. You can do it manually by opening the relevant `.project` file and add (or change it to, if it is already there)
 
     <natures>
     	<nature>org.eclipse.jdt.core.javanature</nature>
