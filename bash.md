@@ -210,6 +210,12 @@ Runs **previous command but replacing all instances of foo with bar**
 
     ls -1 | while read a; do mv "$a" `echo $a | sed -e 's/\ /\./g'`; done
 
+**Recursive Search and Replace** with given String 
+	
+	$ find . -type f -exec sed -ie "s/old/new/g" {} +;
+	
+`-l` means that only lines that match will be displayed
+
 **Batch rename files, replacing *foo* with *bar***
 
     for file in *.*; do mv $file `echo $file | sed 's/bar/foo/g'` ; done
