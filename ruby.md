@@ -8,6 +8,10 @@
 
 ## RubyGems ##
 
+### Install a gem ###
+
+	gem install name-of-gem
+
 ### Updating your gems ###
 
 	sudo gem update
