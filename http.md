@@ -88,20 +88,6 @@ Taken from Google's [HTTP status codes](http://www.google.com/support/webmasters
 | 504 (Gateway timeout) | The server was acting as a gateway or proxy and didn't receive a timely request from the upstream server. |
 | 505 (HTTP version not supported) | The server doesn't support the HTTP protocol version used in the request. |
 
-
-## cURL ##
+## Testing ##
 
 A good resource for testing HTTP with CURL can be found [here](http://curl.haxx.se/docs/httpscripting.html)
-
-### POST a file ###
-
-Given this form
-
-    <form method="POST" enctype='multipart/form-data' action="upload.cgi">
-    	<input type=file name=upload>
-    	<input type=submit name=press value="OK">
-    </form>
-
-you can POST it with
-
-    curl -F upload=@localfilename -F press=OK [URL]$1
