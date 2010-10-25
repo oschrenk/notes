@@ -223,7 +223,15 @@ Runs **previous command but replacing all instances of foo with bar**
 **Create missing directory when moving files**
 
     mkdir -p ./some/path/; mv yourfile.txt $_
+	
+**Reverse output** 
 
+	tac
+	
+eg. `svn log | tac` or if `tac` is not available
+
+	awk '{ x = $0 "\n" x } END { printf "%s", x }'
+ 	
 **Download a file with “authorization” cookie**
 
     wget --server-response --continue --load-cookies cookies.txt http://host.com/file.ext
