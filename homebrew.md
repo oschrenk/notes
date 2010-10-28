@@ -62,4 +62,27 @@ I had some problems with the PHP installation and ran `brew doctor` to check for
 
 [^4]: To delete only a specific out of date version, just go to the folder in the Cellar and `rm -rf` it, or drag it to the trash in Finder.
 
+### Can't update ###
+
+I had some troubles updating my homebrew via `brew update`. It always produced an error message about some untracked data.
+
+I fixed this by 
+
+	cd /usr/local
+	git reset --hard
+
+adding
+
+	[branch "master"]
+		remote = origin
+		merge = refs/heads/master
+	[remote "origin"]
+	    url = http://github.com/mxcl/homebrew.git
+	    fetch = refs/heads/*:refs/remotes/origin/*
+
+to the `.git/config` file
+
+	git pull
+
+
 
