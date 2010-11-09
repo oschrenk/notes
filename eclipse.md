@@ -16,10 +16,6 @@ Maven `http://m2eclipse.sonatype.org/update/`
 
 ## Hints ##
 
-### Shortcuts ###
-
-Close All Windows `Cmd + Shift + W`
-
 ### Show hidden (`.*`) files ###
 
 In the project explorer there is a small triangle or arrow facing down. Pressing it will open the _View Menu_. Choose `Customize View > Filters` and deselect `.*-resources`
