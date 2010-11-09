@@ -38,3 +38,22 @@ rsync even has an built in option to exclude `cvs` or `svn` files, just add
 Copy files from `path` to `backup` deleting files that don't exist on the sending side, ignoring `.git`
 
 	rsync -arvz --delete --exclude=.git /path /backup
+	
+## FAQ/Problems ## ##
+
+### rsync: command not found ###
+
+I was trying to sync data to a Solaris machine but ran into this error:
+
+	> /usr/bin/rsync -avuz --stats someuser@remote-solaris-machine:/export/CVS-xcert/* /export/HCL-CVS 
+	bash: rsync: command not found
+	rsync: connection unexpectedly closed (0 bytes received so far) [sender]
+	rsync error: remote command not found (code 127) at io.c(454) [sender=2.6.9]
+	
+Rsync was installed on both machines but somehow the solaris machine wasn't able find rsync in the given path. I guess this is its trying to sync over ssh, and when by doing so doesn't include the `/usr/local/bin` directory.
+
+Luckily you can pass the path of rsync as a parameter
+
+	/usr/bin/rsync -avuz --stats --rsync-path=/usr/local/bin/rsync someuser@remote-solaris-machine:/export/CVS-xcert/* /export/HCL-CVS 
+	
+Taken from [Siddesh BG](http://siddesh-bg.blogspot.com/2009/02/rsync-command-not-found-error-even.html)
