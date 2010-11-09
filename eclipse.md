@@ -24,7 +24,7 @@ Close All Windows `Cmd + Shift + W`
 
 In the project explorer there is a small triangle or arrow facing down. Pressing it will open the _View Menu_. Choose `Customize View > Filters` and deselect `.*-resources`
 
-### Convert &#8220;General Project&#8221; to &#8220;Java Project&#8221; by adding Java Nature ###
+### Convert General Project to Java Project by adding Java Nature ###
 
 Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a project. You can do it manually by opening the relevant `.project` file and add (or change it to, if it is already there)
 
@@ -39,7 +39,7 @@ Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a p
 The used workspaces are stored in
 `/Applications/eclipse/configuration/.settings/org.eclipse.ui.ide.prefs`
 
-### &#8220;Waiting For Virtual Machine To Exit&#8221; ###
+### Waiting For Virtual Machine To Exit ###
 
 I had this error when I was trying to deploy a web application to a local JBoss Application Server. The problem was that the ANT home setting of Eclipse were pointing to non existing directories and files. So I removed the false entries and reset me ANT Home in `Preferences > Ant > Runtime`
 
