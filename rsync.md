@@ -32,3 +32,9 @@ Exclude files by adding patterns, for example you can exclude hidden files ba ad
 rsync even has an built in option to exclude `cvs` or `svn` files, just add
 
     --cvs-exclude
+
+## Useful examples ##
+
+Copy files from `path` to `backup` deleting files that don't exist on the sending side, ignoring `.git`
+
+	rsync -arvz --delete --exclude=.git /path /backup
