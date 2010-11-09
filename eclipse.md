@@ -9,11 +9,6 @@ Some default settings are weird, especially the encoding and line delimiter sett
 *   Change encoding `General -> Workspace > Text File Encoding -> Other -> UTF-8`
 *   Line Delimiter to Unix `General -> Workspace -> New text file line delimiter -> Other -> Unix`
 
-### Plugins ###	
-
-Subversive `http://download.eclipse.org/technology/subversive/0.7/update-site/`  
-Maven `http://m2eclipse.sonatype.org/update/`
-
 ## Hints ##
 
 ### Show hidden (`.*`) files ###
