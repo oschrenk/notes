@@ -54,6 +54,6 @@ Rsync was installed on both machines but somehow the solaris machine wasn't able
 
 Luckily you can pass the path of rsync as a parameter
 
-	/usr/bin/rsync -avuz --stats --rsync-path=/usr/local/bin/rsync someuser@remote-solaris-machine:/export/CVS-xcert/* /export/HCL-CVS 
+	rsync -arvz --stats --rsync-path=/usr/local/bin/rsync someuser@remote-solaris-machine:path/to/project/ /path/to/remote/project 
 	
 Taken from [Siddesh BG](http://siddesh-bg.blogspot.com/2009/02/rsync-command-not-found-error-even.html)
