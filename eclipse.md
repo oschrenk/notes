@@ -9,7 +9,19 @@ Some default settings are weird, especially the encoding and line delimiter sett
 *   Change encoding `General -> Workspace > Text File Encoding -> Other -> UTF-8`
 *   Line Delimiter to Unix `General -> Workspace -> New text file line delimiter -> Other -> Unix`
 
+### Change the @author JavaDoc value ###
+
+The default is that Eclipse uses the currently logged in username. To change the default settings edit the `eclipse.ini` and add
+
+	-Duser.name=My Name
+	
+In OSX the  `eclipse.ini` can be found under `path/to/Eclipse.app/Contents/MacOS/eclipse.ini`
+
+If you need some more flexibility eg. setting it depending on your workspace you might want to look into the usage of [JAutoDoc
+](http://jautodoc.sourceforge.net/) and changing the default template and setting a property.
+
 ## Hints ##
+
 
 ### Show hidden (`.*`) files ###
 
