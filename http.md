@@ -38,6 +38,24 @@ Problem: When a form is submitted through HTTP POST, a user that refreshes the p
 
 The PRG Pattern solves this problem by returning a 303 (or sometimes 302) REDIRECT upon the POST operation instructing the browser to load a different page via HTP GET. This page can then be safely refreshed.
 
+## HTTP Methods ##
+
+Taken from [Wikipedia](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+
+HTTP defines nine methods (sometimes referred to as "verbs") indicating the desired action to be performed on the identified '''resource'''. What this resource represents, whether pre-existing data or data that is generated dynamically, depends on the implementation of the server. Often, the resource corresponds to a file or the output of an executable residing on the server.
+
+| Method | Description |
+| :---- | :---- |
+| HEAD | Asks for the response identical to the one that would correspond to a GET request, but without the response body. This is useful for retrieving meta-information written in response headers, without having to transport the entire content. |
+| GET | Requests a representation of the specified resource. Requests using GET (and a few other HTTP methods) "SHOULD NOT have the significance of taking an action other than retrieval".The W3C has published guidance principles on this distinction, saying, "Web application design should be informed by the above principles, but also by the relevant limitations." |
+| POST | Submits data to be processed (e.g., from an HTML form) to the identified resource. The data is included in the body of the request. This may result in the creation of a new resource or the updates of existing resources or both. |
+| PUT | Uploads a representation of the specified resource. |
+| DELETE | Deletes the specified resource. |
+| TRACE | Echoes back the received request, so that a client can see what (if any) changes or additions have been made by intermediate servers. |
+| OPTIONS | Returns the HTTP methods that the server supports for specified URL. This can be used to check the functionality of a web server by requesting '*' instead of a specific resource. |
+| CONNECT | Converts the request connection to a transparent TCP/IP tunnel, usually to facilitate SSL-encrypted communication (HTTPS) through an unencrypted HTTP proxy. |
+| PATCH | Is used to apply partial modifications to a resource. |
+
 ## HTTP Error Codes ##
 
 Taken from Google's [HTTP status codes](http://www.google.com/support/webmasters/bin/answer.py?hl=en&answer=40132). Removed references to Google Bot.
