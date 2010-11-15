@@ -272,3 +272,20 @@ Adding something like `EXPORT PATH=/usr/bin:$PATH` doesn’t update the `$PATH` 
  [1]: #profile-not-read
  [2]: #acl
  [3]: #apple-file-attributes
+
+### event not found ###	
+
+I was trying to add a file to git that had an exclamation mark in the filename. Not a good idea.
+
+	git add Play!.tmTheme
+	git add "Play!.tmTheme"
+	
+both returned with	
+
+	-bash: !.tmTheme: event not found
+	
+What helped was escaping the string with a single apostrohe
+
+	git add -u 'Play!.tmTheme'
+
+	
