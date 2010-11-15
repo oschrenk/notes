@@ -14,10 +14,23 @@
 	cd play/framework/
 	ant
 	
+or
+
+	git clone http://github.com/playframework/play.git
+	cd play/framework/
+	ant
+
 ## Update Play Framework ##
 
 	cd play
 	bzr merge
+	cd framework
+	ant
+	
+or
+
+	cd play
+	git pull origin master
 	cd framework
 	ant
 	
