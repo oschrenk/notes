@@ -39,6 +39,10 @@ Copy files from `path` to `backup` deleting files that don't exist on the sendin
 
 	rsync -arvz --delete --exclude=.git /path /backup
 	
+Sync `.git` directory of the `~/Library/Scripts directory`
+
+	rsync -arvz --cvs-exclude --exclude=.git --exclude=sync --exclude=.DS_Store . ~/Library/Scripts/	
+	
 ## FAQ/Problems ## ##
 
 ### rsync: command not found ###
