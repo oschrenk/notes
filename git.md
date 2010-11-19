@@ -270,6 +270,10 @@ If you want you can then remove all infos about the subdirectory in your reposit
 
 Most of it is taken from <sup class="footnote">[2](#fn2)</sup>.
 
+#### Adding submodules ####
+
+	 	git@github.com:user/repo.git
+
 #### Pulling submodules ####
 
 If a project uses submodules and a developer clones that repository it looks like a normal checkout. But a closer look shows that the directories exist but are in fact empty.
