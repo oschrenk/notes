@@ -619,6 +619,29 @@ Very confusing error message. All it means (at least in my case) that you have t
      file.textile |   14 ++++++++++++++
      1 files changed, 14 insertions(+), 0 deletions(-)
 
+### Commited to non-existing branch ###
+
+I recently used submodules and forgot to checkout a branch before I commited
+
+	git commit -m "My excellent commit"
+	[detached HEAD d2bdb98] My excellent commit
+	3 files changed, 3 insertions(+), 3 deletions(-)
+	git push origin master
+	Everything up-to-date
+
+and I wondered "No. I just made changes. It isn't up to date"
+
+I found a solution [here](http://edspencer.net/2009/10/git-what-to-do-if-you-commit-to-no-branch.html)
+
+	# checkout the branch you wanted to commit to
+	git checkout master
+	# merge into commit SHA
+	git merge d2bdb98
+
+Then push again
+
+	git push origin master
+
 ## Sources ##
 
 <p class="footnote" id="fn1"><sup>1</sup> <a href="http://ftp.newartisans.com/pub/git.from.bottom.up.pdf">Git from the bottom up</a> (John Wiegley, 09-12-02)</p>
