@@ -15,7 +15,7 @@
 ## Transportation ##
 
 
-## Sehenswürdigkeiten ##
+## Sightseeing ##
 
 [Cite des Sciences](http://www.qype.com/place/108445-Cite-des-Sciences-Paris)
 
@@ -24,3 +24,11 @@
 [Opera](http://www.qype.com/place/203598-Opera-De-Paris-Palais-Garnier-Paris)
 
 [Le Train Bleu](http://www.qype.com/place/83957-Le-Train-Bleu-Paris)
+
+
+### Modern Art ###
+
+http://www.centrepompidou.fr/
+
+http://mam.paris.fr/
+
