@@ -21,6 +21,7 @@ Which pumps out the named files into the same directory
 Install via
 
 	sudo port install ffmpeg
+	brew insall ffmpeg
 
 Usage:
 
@@ -31,6 +32,7 @@ Usage:
 Install via
 
 	sudo port install mkvtoolnix
+	brew install mkvtoolnix
 	
 Which took ages (2+ hours, mainly because of Boost).
 
