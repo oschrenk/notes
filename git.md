@@ -272,7 +272,7 @@ Most of it is taken from <sup class="footnote">[2](#fn2)</sup>.
 
 #### Adding submodules ####
 
-	 	git@github.com:user/repo.git
+	 git submodule add git@github.com:user/repo.git
 
 #### Pulling submodules ####
 
