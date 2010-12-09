@@ -3,6 +3,7 @@
 Sources:
 
 - [GitSubmoduleTutorial](http://git.wiki.kernel.org/index.php/GitSubmoduleTutorial)
+- [Git Submodules: Adding, Using, Removing, Updating](http://chrisjean.com/2009/04/20/git-submodules-adding-using-removing-and-updating/)
 
 ## Adding submodules ##
 
@@ -75,6 +76,31 @@ After (!) you pushed all submodules you have changed (do not do a `git submodule
 **BEWARE**
 
 ! If you use `git add subproject/` instead of `git add subproject` Git will think you want to delete the submodule and want to add all the files in the submodule directory.
+
+## Removing a submodule ##
+
+1. Remove the submodule’s entry in the `.gitmodules` file
+
+There should be an entry like:
+
+	[submodule "lib/billboard"]
+    path = lib/billboard
+    url = git@mygithost:billboard
+
+2. Remove the submodule’s entry in the `.git/config`
+
+There should be an entry like:
+
+	[submodule "billboard"]
+	url = git@mygithost:billboard
+	
+3. Remove the path created for the submodule
+
+Simply run
+
+	git rm –cached [plugin path]
+	
+Do **not** put a trailing slash as the command will fail.
 
 ## FAQ/Problems ##
 
