@@ -93,6 +93,14 @@ On OSX the public key is hiding in
 
     $ ssh-keygen -l -f /etc/ssh_host_rsa_key.pub
 
+## Type less ##
+
+	vi ~/.ssh/config
+
+	Host aliasname
+	HostName yourdomain.com
+	User yourusername
+
 ## FAQ/Problems ##
 
 ### Permissions are too open ###
