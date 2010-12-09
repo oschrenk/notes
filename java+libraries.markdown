@@ -1,0 +1,15 @@
+# Java Libraries #
+
+- [Lucene](http://lucene.apache.org/)
+- [Solr](http://lucene.apache.org/)
+- [Play Framework](http://www.playframework.org/)
+- [Jersey](http://jersey.java.net/)
+- [JChronic](https://github.com/samtingleff/jchronic)
+- [Natty](https://github.com/joestelmach/natty)
+- [Hazelcast](http://www.hazelcast.com/)
+- [async-http-client](http://github.com/AsyncHttpClient/async-http-client)
+- [Google Guava](http://code.google.com/p/guava-libraries/)
+- [Caliper](http://code.google.com/p/caliper/)
+- [Joda Time](http://joda-time.sourceforge.net/)
+- [Simple Logging Facade 4 Java(SLF4J)]()
+- [Quartz Scheduler](http://www.quartz-scheduler.org/)
