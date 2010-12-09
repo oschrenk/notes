@@ -1,0 +1,36 @@
+h1. Accessing GPS Devices under Mac OSX with Java
+
+h2. Hardware
+
+Unfortunately the hardware offered by Apple, doesn't provide a RS232 based interface. 
+
+This small tutorial helps setting up a bluetooth enabled GPS Receiver. The Belkin GPS Mouse will serve as an example.
+
+h2. Set up bluetooth connection
+
+h2. Accessing the COM interface with a terminal
+
+h2. Accessing the COM with JAVA
+
+h3. RXTX
+
+bc.. 	#!/bin/sh
+	# A script to fix permissions for lock files on Mac OS X
+	# Contributed by Dmitry Markman <dimitry.markman@verizon.net>
+	# Fri Aug 23 15:46:46 MDT 2002
+	
+	curruser=`sudo id -p | grep 'login' | sed 's/login.//'`
+
+	if [ ! -d /var/lock ]
+	then
+	sudo mkdir /var/lock
+	fi
+
+	sudo chgrp uucp /var/lock
+	sudo chmod 775 /var/lock
+	if [ ! `sudo niutil -readprop / /groups/uucp users | grep 'Oliver' > /dev/null` ]
+	then
+	  sudo niutil -mergeprop / /groups/uucp users $curruser
+	fi
+
+h2. Reading the GPS Data with JAVA

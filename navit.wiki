@@ -1,0 +1,119 @@
+'''Here are some notes about running navit under Apple Mac OSX.'''
+
+=What you will need=
+
+You need Xcode Tools and MacPorts in order to install navit.
+
+MacPorts developers suggest to install Xcode Tools from http://developer.apple.com/tools/xcode/ and not from the Mac OSX install disk.
+
+Make sure you don't have fink installed on your system, it can confuse MacPorts package building and installation.
+
+==GTK Gui==
+You should only need gtk2 and glib2 via macPorts
+
+==SDL Gui==
+Untested yet.
+
+=Installation instruction=
+Download Xcode Tools from http://developer.apple.com/tools/xcode/ and install it with X11 SDK
+
+Download and Install MacPorts from http://www.macports.org/, or update your version
+  sudo port -d selfupdate
+
+Open up a terminal
+
+make sure your PATH variables has /opt/local/bin and /opt/local/sbin in it:
+  echo $PATH 
+
+
+Install automake, wget, libtool, gpsd (if you want gps support), gtk2 and glib2 (for gkt GUI) with
+  sudo port install automake wget gpsd gtk2 glib2 libtool
+
+Download navit or checkout it from SVN
+   svn co https://navit.svn.sourceforge.net/svnroot/navit/trunk/navit navit
+
+You may also need a header file to handle endian issues (for PPC only)
+ wget https://navit.svn.sourceforge.net/svnroot/navit/tags/R0_1_0/navit/projs/CodeBlocks/Win32Extra/byteswap.h
+
+Edit configure.in and add
+  -I/opt/local/include -L/opt/local/lib
+to the CFLAGS variable and add
+  -I/opt/local/include/gtk-2.0 -L/opt/local/lib
+to the GTK2_CFLAGS variable; oh wait, there is no GTK2_CFLAGS variable in this file. 
+
+Change
+  LIBS="$LIBS -lm -rdynamic"
+by
+  LIBS="$LIBS -lm"
+(on some systems, the "-rdynamic" option ensures that the executable has it's global symbols put into the symbol table. This is already the default
+behavior on darwin.)
+
+Edit autogen.sh and change
+ libtool
+to
+ glibtool
+
+If you want to install navit along the MacPorts packages, you need to use the /opt/local directory as prefix:
+  ./autogen.sh && ./configure --prefix=/opt/local
+
+--[[User:Dctucker|Dctucker]] 03:29, 10 July 2009 (UTC)
+I had good results getting everything to compile after installing a bunch of ports using the following configure line:
+  ./configure --prefix=/opt/local --enable-graphics-gd --enable-svg2png-scaling --with-svg2png-use-rsvg-convert --enable-graphics-qt-qpainter
+
+type
+  make
+to build NavIt, and
+  sudo make install
+to install it.
+
+Then, you may edit and adapt your navit.xml file (the jokers of the original file are not supported)
+
+--[[User:Dctucker|Dctucker]] 06:49, 12 July 2009 (UTC)I didn't have to do this on Leopard.
+
+You may need to replace the <plugins> section of your navit.xml file by
+  <plugins>		
+  	<plugin path="/opt/local/lib/navit/binding/libbinding_python.dylib"/>
+  	<plugin path="/opt/local/lib/navit/data/libdata_binfile.dylib"/>
+  	<plugin path="/opt/local/lib/navit/data/libdata_mg.dylib"/>
+  	<plugin path="/opt/local/lib/navit/data/libdata_poi_geodownload.dylib"/>
+  	<plugin path="/opt/local/lib/navit/data/libdata_textfile.dylib"/>
+  	<plugin path="/opt/local/lib/navit/graphics/libgraphics_gtk_drawing_area.dylib" />
+  	<plugin path="/opt/local/lib/navit/graphics/libgraphics_null.dylib" active="no"/>
+  	<plugin path="/opt/local/lib/navit/gui/libgui_gtk.dylib" />
+  	<plugin path="/opt/local/lib/navit/osd/libosd_core.dylib" />
+  	<plugin path="/opt/local/lib/navit/speech/libspeech_cmdline.dylib" />
+  	<plugin path="/opt/local/lib/navit/vehicle/libvehicle_demo.dylib" />
+  	<plugin path="/opt/local/lib/navit/vehicle/libvehicle_file.dylib" />
+  </plugins>
+and if you want to use the sample maps installed, you may need to change the maps' path
+ <mapset enabled="yes">
+  	<map type="binfile" enabled="yes" data="/opt/local/share/navit/maps/osm_bbox_11.3,47.9,11.7,48.2.bin"/>
+  </mapset>
+
+=Speech=
+If you want (spoken) directions, get espeak from http://espeak.sourceforge.net, install as advised and use the following snippet in your navit.xml:
+
+           <speech type="cmdline" data="speak -vde+f4 '%s'"/>
+
+This will tell speak to use a female (f) german (de) voice.   
+
+=Something went wrong?=
+
+Please see [[Talk:Navit on MacOS]].
+
+plugins in navit.xml
+
+  convert: Delegate failed `"wmf2eps" -o "%o" "%i"'.
+  convert: unable to open image `/var/tmp/magick-TxvFOsaM': No such file or directory.
+  convert: unable to open file `/var/tmp/magick-TxvFOsaM': No such file or directory.
+  convert: missing an image filename `country_DM_32_32.png'.
+  SRCDIR=. ./navit_svg2png "/usr/local/bin/convert" "country_DO_32_32.png"
+  sh: wmf2eps: command not found
+  convert: Delegate failed `"wmf2eps" -o "%o" "%i"'.
+  convert: unable to open image `/var/tmp/magick-HWAT6nkQ': No such file or directory.
+  convert: unable to open file `/var/tmp/magick-HWAT6nkQ': No such file or directory.
+
+config parameter
+
+navit:file_wordexp_new:wordexp('/Users/Oliver/.navit/bookmark.txt') returned 6
+Xlib:  extension "RANDR" missing on display "/tmp/launch-V7ycil/:0".
