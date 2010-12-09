@@ -152,6 +152,10 @@ Apple adds an extra file attribute when files have been downloaded from the inte
 
 	tar -pczf name_of_your_archive.tar.gz /path/to/directory
 
+**Untar a tar.gz archive**
+
+	tar xvfz /path/to/file.tar.gz
+
 ### Various ###
 
 **Resolve to canonical path**. Useful if you used symbolic links to switch into a directory
