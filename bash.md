@@ -146,11 +146,15 @@ To delete an acl entry you have to run `chmod -a` with the exact defintion of th
 
 Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using `ls -ls` indicated by the `@` symbol. By calling `ls -`@ you can see that an attribute `com.apple.quarantine` has been added. To remove that call `sudo xattr -d com.apple.quarantine path`
 
-## Helpful commands
+## Helpful commands ##
 
-### Various
+**Tar a directory**
 
-**Resolve to canonical path**. Useful if you used symbolic links to switch into a director
+	tar -pczf name_of_your_archive.tar.gz /path/to/directory
+
+### Various ###
+
+**Resolve to canonical path**. Useful if you used symbolic links to switch into a directory
 
     pwd -P
 
