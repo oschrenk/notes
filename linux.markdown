@@ -4,9 +4,9 @@
 
 From [here](http://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/)
 
-To edit your crontab
-
-	crontab -e
+	crontab -e	## edit crontab
+	crontab -l	## view crontab	
+	crontab -r	## remove crontab file
 
 ### Syntax ###
 
