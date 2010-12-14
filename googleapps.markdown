@@ -1,25 +1,25 @@
 # Google Apps #
 
-## Signing Up ##
+The [signup page](https://www.google.com/a/cpanel/domain/new) offers you two options, to use an existing domain or to buy a domain name for 10$ a year.
 
-https://www.google.com/a/cpanel/domain/new
+## Gooogle Apps Suite
 
-offers you two options, to use an existing domain or to buy a domain name for 10$ a year.
+### Verifying your domain ###
 
-As I already own the domain i just enter the domain name and select the `Administrator: I own or control this domain` box. 
+As I already own the domain i just enter the domain name during the setup and select the `Administrator: I own or control this domain` box. 
 
 You have to fill out some infos about you (forename, surname, email address, phone number ) and the organizsation you represent.
 
 After you register you have to verify the domain. There are several possibilities
 
 * through Upload of html file http://www.google.com/support/a/bin/static.py?page=guide.cs&hl=en&guide=22229&topic=22391
-*  through CNAME entry http://www.google.com/support/a/bin/answer.py?answer=47283
+* through CNAME entry http://www.google.com/support/a/bin/answer.py?answer=47283
 
-## Set up users ##
+### Set up users ###
 
 I only did that via the web user interface - one by one. I just copied the initial passwords into some text file and informed each user of their new username/pasword.
 
-## Access to your services ##
+### Access to your services ###
 
 You can always access your account with the URLs below:
 
@@ -53,7 +53,7 @@ sites		| CNAME	| ghs.google.com.	|
 docs		| CNAME	| ghs.google.com.	|
 [CNAME entries]
 
-## Activating Email Services ##
+### Activating Email Services ###
 
 I only investigated on how to switch services and not how to do phased deployments. You will need to inform the users of the change, asking them to backup their data just in case and plan some time on where the changes will be made.
 
@@ -70,33 +70,25 @@ You have to change the DNS settings of your domain.
 			| MX	| ASPMX5.GOOGLEMAIL.COM.	| 30		|
 [MX entries]
 
-## Settings ##
+### Settings ###
 
-### Domain Settings ###
+#### Domain Settings ####
 
 https://www.google.com/a/cpanel/acme.com/DomainSettings
 
 * Set the Default Language, Time Zone
 * Set Control Panel to current version
 
-## Services ##
+### Services ###
 
-### Email ###
+#### Email ####
 
-#### Set up language ####
-
-#### Set up Imap ####
-
-#### Forwarding Emails ####
-
-#### Adding Email alias ####
-
-#### Send as... ####
+##### Send as... #####
 
 Mail > Settings > Accounts Send Mails as
 Mail > Einstellungen > Konten > Email senden als > Weitere E-Mail-Adressse hinzufügen
 
-#### Internal mailing list ####
+#### Groups ####
 
 https://www.google.com/a/cpanel/acme.com/CreateGroup
 
@@ -107,8 +99,18 @@ Group email address *
 
 Set the `Access Level` to `Team` (should be preselected) and check the box `Add all users within Acme Inc. to this group`
 
-### Calendar ###
+## Google Apps Domain ##
 
-#### Change Language ####
+Google Apps is also the gateway to Google Domain registrar service.
 
-#### Change Time Format/Week Start Time 
+### Creating a subdomain ###
+
+First you have to find out where your site is hosted by visiting [Domain settings > Domain names](https://www.google.com/a/cpanel/oschrenk.com/DomainSettingsDomains)
+
+Click on the Advanced DNS settings and follow the instructiosn
+
+#### GoDaddy ####
+
+ - Select the domain you want to change. 
+ - Click Forward, and then select Forward Subdomain.
+ - In the Add subdomain field, enter the subdomain.
