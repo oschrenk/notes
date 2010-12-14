@@ -2,11 +2,19 @@
 
 I was interested in mirroring an Open Source project from a SVN repository to a Github repository.
 
-Of course someone else already did [this](http://www.fnokd.com/2008/08/20/mirroring-svn-repository-to-github/). I do a slight variation as I'm using a Linode slice for the mirror.
+Basically there are two methods:
+
+1. Using git's own `git svn`, which can [handles one path](http://www.fnokd.com/2008/08/20/mirroring-svn-repository-to-github/) eg. only the trunk or
+2. Using [`svn2git`](https://github.com/nirvdrum/svn2git) which is also able to mirror branches and tags
+
+I'm using a [Linode](http://www.linode.com/) slice to do the mirroring jobs via crontab.
+
+
+## with git svn ##
 
 I use Osmosis as an example. I only wanted the mirror the trunk from the [SVN Repository](http://svn.openstreetmap.org/applications/utils/osmosis/trunk/). 
 
-## Local ##
+### Local ###
 
 	mkdir osmosis
 	cd osmosis
@@ -38,13 +46,13 @@ Finish the feature
 	git flow feature finish ignore
 	git push origin develop
 	
-## Push repository to remote server ##
+### Push repository to remote server ###
 
 Time to make the auto-merging happen. First we copy the created git repo to the remote server.
 
 	cd ..
 	tar -pczf osmosis.tar.gz osmosis
-	scp osmosis.tar.gz user@linode
+	scp osmosis.tar.gz user@linode:/home/user
 	
 I created a SSH alias for my Linode slice
 
@@ -57,22 +65,90 @@ Create a ssh key for github (don't use a passphrase)
 	
 Copy the key to your [Github Account settings](https://github.com/account).
 
-## Create mirroring script ## ##
+### Create mirroring script ###
 
-	touch svn2github
-	vi svn2github
+	touch svninit2github
+	vi svninit2github
 	
 	#!/bin/sh
 	cd /home/user/github-svn-mirrors/$1
 	git svn rebase
 	git push origin vendor
 
-	chmod u+x svn2github
+Make the script executable
+
+	chmod u+x svninit2github
 	
 Try it out for the first time. It should ask you to add `github.com` to the list of known hosts.
 
-## Create cron job ##
+### Create cron job ###
 
 	crontab -e
-	*/15 * * * * /home/user/scripts/svn2github osmosis
+	00 3 * * * /home/user/scripts/svn2github osmosis
 	
+## with svn2git ##
+
+! svn2git can only push to `master` when rebasing
+
+You need
+
+	sudo apt-get install git-core git-svn ruby rubygems
+	sudo gem install svn2git --source http://gemcutter.org
+
+You may have problems running them `gem install` command if you just installed it. Reininitialize your profile. 
+
+I will use the Lejos project as an example
+
+Lejos has only a trunk and tags at the root level of the repo, but no branches, so
+
+	mkdir lejos
+	cd lejos
+	svn2git https://lejos.svn.sourceforge.net/svnroot/lejos --nobranches
+	
+Get a coffee or tea, or two or three (it took two hours for me)
+
+	git gc
+	hub create
+	# repo needs a proper master
+	git push origin master
+	# push the tags
+	git push --tags
+
+### Push repository to remote server ###
+
+	cd ..
+	tar -pczf lejos.tar.gz lejos
+	scp lejos.tar.gz user@linode:/home/user
+
+I created a SSH alias for my Linode slice
+
+	ssh user@linode
+	tar xvfz lejos.tar.gz
+
+Create a ssh key for github (don't use a passphrase)
+
+	ssh keygen
+
+Copy the key to your [Github Account settings](https://github.com/account).
+
+### Create mirroring script ###
+
+	touch svn2git2github
+	vi svn2git2github
+
+	#!/bin/sh
+	cd /home/user/github-svn-mirrors/$1
+	svn2git --rebase
+	git push origin master
+	git push --tags
+
+Make the script executable
+
+	chmod u+x svn2git2github
+
+### Create cron job ###
+
+Every morning at 5
+
+	crontab -e
+	00 5 * * * /home/user/scripts/svn2github lejos
