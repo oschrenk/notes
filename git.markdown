@@ -157,6 +157,16 @@ Make a new branch called "experiment"
 *   `-d` Delete a branch. The branch must be fully merged in HEAD
 *   `-D` Delete a branch irrespective of its merged status.
 
+#### Push to remote branch ####
+
+	git push origin branch
+
+#### Deleting remote branches ####
+
+Kinda weird syntax
+
+	git push origin :branch
+
 #### Working with branches ####
 
 Switch to a branch called "experiment". Git will warn you if you have uncommitted changes.
