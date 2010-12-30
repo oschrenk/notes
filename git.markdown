@@ -385,40 +385,6 @@ Replace `github` with the name you used.
 
 ## Use cases ##
 
-### Creating a mirror of SVN repository on Github ###
-
-I wanted to mirror the [Lejos](http://lejos.sourceforge.net/) project on github, because working with SVN started to feel weird.
-
-Taken from <http://www.icoretech.org/2009/08/how-to-mirror-a-svn-repository-on-github/>
-
-First you have to create the project on GitHub. Then
-
-    cd path/to/projects
-    mkdir lejos
-    cd lejos
-    git init
-
-Now setup the SVN repository as a remote source to track.It should be noted that the `-T` switch points git directly to the trunk, which is fine for our purposes.
-
-    git svn init -T ttps://lejos.svn.sourceforge.net/svnroot/lejos
-
-Perform the initial pull.
-
-    git svn fetch
-
-This will take some time, based on the size of the remote repository.
-
-After the first pull is finished, go ahead and run the garbage collector, this will help to speed up things and reduce size.
-
-    git gc
-
-The [original blog entry](http://www.icoretech.org/2009/08/how-to-mirror-a-svn-repository-on-github/) explains on how to setup automatic syncing via cronjob and an additional ssh key without passphrase. For my usecase that is not needed, I sync manually.
-
-To keep stuff in sync we need to do
-
-    git svn rebase
-    git push origin master
-
 ### Migrate subversion repositories ###
 
 Create an empty directory and prepare the repository
