@@ -7,7 +7,7 @@ Sources:
 
 ## Adding submodules ##
 
-	 git submodule add git@github.com:user/repo.git
+	 git submodule add git@github.com:user/repo.git path
 
 ## Pulling submodules ##
 
