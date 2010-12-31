@@ -74,6 +74,10 @@ To re-enable Rosetta after it's been disabled, just run the following command in
 
 These commands set a system environment variable that tells the system which program to run when you try to launch a non-native app: to ask you to install Rosetta, or to run it using Rosetta.
 
+### List known WLAN ###
+
+	defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences KnownNetworks | egrep -o '(SSID_STR|_timeStamp).+' | sed 's/^.*= \(.*\);$/\1/' | sed 's/^"\(.*\)"$/\1/' | sed 's/\([0-9]\{4\}-..-..\).*/\1/' | sed 'N;s/\n/: /'
+
 ### Save Password when using Cisco VPN
 
 Mac OS X asks you to manually enter the password every time you connect. TO change this behavior open the Keychain Access Application, select the System keychain and find your saved XAuth password entry in the list. Its Kind field will say IPSec XAuth Password.
