@@ -1,5 +1,15 @@
 # Software Development #
 
+## XML vs. JSON ##
+
+Over the time I learned to really dislike the verbosity of xml. There are nice tools out there to handle the data and the complexity but they all seem to try to solve a problem by throwing only more stuff at it.
+
+Xml normally undergoes these transitions:
+ 
+	data space > document space > data space
+
+Other formats such as JSON and its spiritual ancestors like yaml on live in `data space`. I especially like JSON as a JSON object is already a JavaScript object and an Ruby (1.9+) object. Isn't that neat!
+
 ## Modularity and Testability ##
 
 ### Dependency Injection ###
