@@ -158,6 +158,10 @@ Apple adds an extra file attribute when files have been downloaded from the inte
 
 ### Various ###
 
+**Kill process via grep**
+	
+	ps -ef | grep <name> | grep -v grep | awk '{print $2}' | xargs kill -9
+
 **Resolve to canonical path**. Useful if you used symbolic links to switch into a directory
 
     pwd -P
