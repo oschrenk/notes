@@ -173,6 +173,16 @@ Switch to a branch called "experiment". Git will warn you if you have uncommitte
 
     $ git checkout experiment
 
+#### Track remote branches ####
+
+As of Git 1.7.0:
+
+	$ git branch --set-upstream foo upstream/foo
+
+For example
+
+	$ git branch --set-upstream master origin/master
+
 ### Merging ###
 
 Just change into the branch you want changes to be merged into and type
