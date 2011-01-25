@@ -1,6 +1,10 @@
 # Music #
 
-## Classical ##
+## Composer ##
+
+- Sibelius
+
+## Instruments ##
 
 ### Piano ###
 
