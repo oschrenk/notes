@@ -1,8 +1,10 @@
 # JavaScript #
 
-## Language ##
+## Basics ##
 
-In JavaScript everything except some primitive types, are objects, even functions. Every object can be treated as an associative array and can be accessed via `object.name = name` also known as dot notation (There are some problems with some reserved keyword though).
+In JavaScript everything (except some primitive types) is an object, even a function. Every object can be treated as an associative array and can be accessed via `object.name = name` also known as dot notation (There are some problems with some reserved keyword though).
+
+## Advanced ##
 
 ### Constructing objects ###
 
@@ -102,4 +104,9 @@ If you want more information the `istanceof` operator can help
 [QUnit](http://docs.jquery.com/Qunit)
 
 > QUnit is a powerful, easy-to-use, JavaScript test suite. It's used by the jQuery project to test its code and plugins but is capable of testing any generic JavaScript code (and even capable of testing JavaScript code on the server-side).
+
+[arbor.js]( http://arborjs.org)
+
+> Arbor is a graph visualization library built with web workers and jQuery. Rather than trying to be an all-encompassing framework, arbor provides an efficient, force-directed layout algorithm plusabstractions for graph organization and screen refresh handling.
+
 
