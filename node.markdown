@@ -6,6 +6,55 @@ Die [offizielle Homepage](http://nodejs.org/) erklärt `node.js` erst einmal seh
 
 Was heißt das und warum sollte uns das interessieren?
 
+- nodejs ist geschrieben in C
+- nutzt CommonJS
+
+Thinking about IO is wrong. You query the database and tan you use the result. In most cases you wait for the database to respond. Better not waste CPU Cycles.
+
+Apache uses much Ram when faced with many requests.
+NGINX doesn't.
+
+NGINX uses event loop instead of threads. Context-Switcng between thread (Apache) cosrts time. Each thread costs memory. Threads are not good for concurrency. Event loops are better.
+
+You have to have have non blocking IO.
+
+Threads
+Grren-Threads
+Co-Routines
+
+Threaded concurrency is a leaky abstraction. 
+
+Code liek this
+
+	var result = db.query("select ...")
+	
+blocks io. Better write with Callback. All we need is a pointer to the callback function.
+
+
+_Cultursal Bias_ against non-blocking io. We are taught to demand input. We have learned it that way.
+
+_Missing Infrastructure_  missing presentation
+
+Existing Infratructure. Evermahine, Twisted, AnyEvent. But ruby-mysql blocks.
+
+
+JavaSript was dsigned for an event loop. onCLick Callback. Annonymoius functions, closures. The culture of JavaScript is already geared towards evented programming.
+
+
+node.js provides a _purely evented_, _non blocking infrastructure_ to script _highly concurrent_ programs.
+
+Design Goals
+- no function should perform i/o. To rceive something from we need callback
+- never force the user to buffer data
+- support many http features (slide)
+- API shpuld be both familar to client side JS programmer and old school UNIX hackers
+
+Examples
+
+Promise is an EventEmiter. Send a request to the disk. Tell me mdoefied date of file. "Success" here is the answwer.	
+
+- node js/long poll hang requests
+
 - was ist v8
 
 http://code.google.com/apis/v8/intro.html
@@ -109,3 +158,14 @@ Videos zu Java Script: http://jsconfeu.blip.tv/posts?view=archive&nsfw=dc
 
 nodejs. video: http://jsconfeu.blip.tv/file/2899135/
 
+
+
+
+??????????
+CommonJS
+- good proposals (modules, binary, package)
+Threads
+Grren-Threads
+Co-Routines
+POSIX Layer
+long poll
