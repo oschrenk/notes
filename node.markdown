@@ -160,6 +160,7 @@ nodejs. video: http://jsconfeu.blip.tv/file/2899135/
 
 http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/
 
+http://howtonode.org/how-to-module
 
 node.js makes its trivial to manage thousand of connections
 
