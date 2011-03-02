@@ -158,8 +158,10 @@ Videos zu Java Script: http://jsconfeu.blip.tv/posts?view=archive&nsfw=dc
 
 nodejs. video: http://jsconfeu.blip.tv/file/2899135/
 
+http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/
 
 
+node.js makes its trivial to manage thousand of connections
 
 ??????????
 CommonJS
