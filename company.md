@@ -49,6 +49,7 @@ Code is king.
 - if they should be a direct dependency create a super project and add project as submodules
 - continous integration
 - make status visible (eg. status monitoring, whiteboard). make it a game.
+- automate everything
 
 ### Versioning ###
 
