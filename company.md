@@ -58,11 +58,24 @@ Use [Semantic Versioning](http://semver.org/)
 ## People ##
 
 - everybody gets their own laptop, mouse, keyboard, monitor, os (only unix based though)
-- put teams together
 - create open space
 - offer books, place to read
 - release partys
 - release cookies
+
+### New Hires ###
+
+- check what harware he wants/needs before he starts 
+- assign a mentor for the first day 
+- mentor should be project lead/member of the project the new hire should work in
+- email/scm/... should be setup when he sits down
+- give him something to do that can go live today
+- whole company or a least project team has meal together on first day with new hire
+- feedback chat after 1d, 1w, 1m
+
+## Teams ##
+
+- put teams in same space to support direct communication
 
 ## Technology ##
 
