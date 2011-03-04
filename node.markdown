@@ -164,7 +164,16 @@ http://howtonode.org/how-to-module
 
 node.js makes its trivial to manage thousand of connections
 
-??????????
+http://www.travisglines.com/web-coding/what-its-like-building-a-real-website-in-node-js 
+
+http://www.travisglines.com/web-coding/a-simple-mvc-setup-in-node-js
+
+### Frameworks ###
+
+### Projects/Companies using node.js ###
+
+### Terminology ###
+
 CommonJS
 - good proposals (modules, binary, package)
 Threads
