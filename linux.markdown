@@ -101,6 +101,7 @@ You then want your key to be authorized. You do that by adding your key to the `
 	sudo add-apt-repository ppa:jerome-etienne/neoip
 	sudo apt-get update
 	sudo apt-get install nodejs
+	curl http://npmjs.org/install.sh | sh
 
 	## java
 	sudo apt-get install maven2
