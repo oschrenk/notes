@@ -16,6 +16,15 @@ Code is king.
 - everybody can watch other developers and projects
 - everybody can fork the source code and file pull reqests
 
+### Style ###
+
+- utf8, unix line encoding
+- agree on company style
+- enforce style, via IDE, via commit hooks
+
+- api > framework
+- dependency injection > dependency injection container
+
 ### Commits ###
 
 - SCM is not a backup system: NO end-of-day commits!
