@@ -1,5 +1,32 @@
 # Setup #
 
+## OSX ##
+
+	## basics
+	ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
+	brew install ack
+	brew install bash-completion
+	
+	## scms
+	brew install svn
+	brew install git
+	brew install git-flow
+	brew install hub
+	
+	## node.js
+	brew install node
+	curl http://npmjs.org/install.sh | sh
+	
+	## java
+	brew install maven
+	brew install maven-shell
+	brew install play
+
+	## http
+	brew install curl
+	brew install wget
+	brew install httrack
+
 ## Ubuntu ##
 
 	## basics
