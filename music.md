@@ -3,6 +3,7 @@
 ## Composer ##
 
 - Sibelius
+- Béla Bartók
 
 ## Instruments ##
 
