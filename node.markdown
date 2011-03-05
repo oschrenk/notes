@@ -1,121 +1,67 @@
 # node.js #
 
-Die [offizielle Homepage](http://nodejs.org/) erklärt `node.js` erst einmal sehr knapp mit der Tagline:
+## Overview ##
+
+The [officicial homepage](http://nodejs.org/) explains `node.js` as
 
 > Evented I/O for V8 JavaScript. 
 
-Was heißt das und warum sollte uns das interessieren?
+[V8](http://code.google.com/p/v8/) is a JavaScript Engine by Google. It does a very good Job of increasing JavaScripts performance by compiling it into machine code. V8 itself is written in C++ and so are most parts of node.js.  
 
-- nodejs ist geschrieben in C
-- nutzt CommonJS
+Ryan Dahl saw the value in using JavaScript as a server side scripting language. He is very opnionated on how I/O should be done and node.js is his answer to the problems developers are faced when dealing with I/O.
 
-Thinking about IO is wrong. You query the database and tan you use the result. In most cases you wait for the database to respond. Better not waste CPU Cycles.
-
-Apache uses much Ram when faced with many requests.
-NGINX doesn't.
-
-NGINX uses event loop instead of threads. Context-Switcng between thread (Apache) cosrts time. Each thread costs memory. Threads are not good for concurrency. Event loops are better.
-
-You have to have have non blocking IO.
-
-Threads
-Grren-Threads
-Co-Routines
-
-Threaded concurrency is a leaky abstraction. 
-
-Code liek this
+Currently most I/O code is blocking - meaning that a code block waits for some I/O to work finish before further execution.
 
 	var result = db.query("select ...")
-	
-blocks io. Better write with Callback. All we need is a pointer to the callback function.
 
+This wastes CPU cycles. We deal with this problem by writing multitreaded programs, so that other threads can take over, when one thread has to wait. Threads come with an overhead. Each thread costs memory and the context-switching between can be hard and time consuming. 
 
-_Cultursal Bias_ against non-blocking io. We are taught to demand input. We have learned it that way.
+For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His propsosed solution is using an event loop and using non blocking I/O all the way done. JavaScript is a good candidate for this abstraction layer as its language and API specification has no notion of binary data and has some nice language features, such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
 
-_Missing Infrastructure_  missing presentation
+	var http = require('http');
+	http.createServer(function (req, res) {
+	  res.writeHead(200, {'Content-Type': 'text/plain'});
+	  res.end('Hello World\n');
+	}).listen(8124, "127.0.0.1");
+	console.log('Server running at http://127.0.0.1:8124/');
 
-Existing Infratructure. Evermahine, Twisted, AnyEvent. But ruby-mysql blocks.
+`node.js` provides a _purely evented_, _non blocking infrastructure_ to script _highly concurrent_ programs. It's design goals are
 
+- everything is asynchronous. The base environment has been built essentially from scratch. It's hard to make blocking code.
+- HTTP and sockets are first class citizens. The example Hello World is over HTTP. Node keeps you focused on on dealing with the data, rather than spending all your time dealing with the sockets or protocols.
+- API is both familar to client side JS developers and old school UNIX hackers
 
-JavaSript was dsigned for an event loop. onCLick Callback. Annonymoius functions, closures. The culture of JavaScript is already geared towards evented programming.
+Don't underestimate the last point. [Github](https://github.com/), a source code repository lists JavaScript as the most used language with [19% of all committed code](https://github.com/languages) being JavaScript.
 
+> The overarching point, however, is that Node is optimal for the new breed of real-time web apps. Yes, there are other means of building real-time tools, but Node lets you build real-time tools on the same platform that runs the rest of your site.
+-- Cade Metz
 
-node.js provides a _purely evented_, _non blocking infrastructure_ to script _highly concurrent_ programs.
+## The event loop ##
 
-Design Goals
-- no function should perform i/o. To rceive something from we need callback
-- never force the user to buffer data
-- support many http features (slide)
-- API shpuld be both familar to client side JS programmer and old school UNIX hackers
+The event loop is the system that JavaScript uses to deal with these incoming request from various parts of the system in a sane manner. JavaScript takes a simple approach that makes the process much more understandable but does introduce a few constraints.
 
-Examples
+On the server there isn't a user to drive a variety of interactions. Instead we have a whole range of reactions to take on many different kinds of events. Node takes the approach that all I/O activities should be non-blocking (for reasons we'll explain more later). This means that all HTTP requests, database queries, file I/O, etc. do not halt execution until they return, instead they run independantly and then emit an event when the data is available.
 
-Promise is an EventEmiter. Send a request to the disk. Tell me mdoefied date of file. "Success" here is the answwer.	
+In every day life we are used to having all sorts of internal callbacks for dealing with events, and yet, like JavaScript, we only ever do one thing at once. JavaScript uses a single-threaded concept to deal with events.
 
-- node js/long poll hang requests
+[1](http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/)
+[2](http://ofps.oreilly.com/titles/9781449398583/ch03.html)
 
-- was ist v8
+## Usage ##
 
-http://code.google.com/apis/v8/intro.html
+### Extending node.js ###
 
-Welcome to the developer documentation for V8. V8 is Google's open source, high performance JavaScript engine. It is written in C++ and is used in Google Chrome, Google's open source browser.
+https://www.cloudkick.com/blog/2010/aug/23/writing-nodejs-native-extensions/
+https://github.com/pquerna/node-extension-examples
+https://github.com/rbranson/node-ffi
 
-V8 compiles and executes JavaScript source code, handles memory allocation for objects, and garbage collects objects it no longer needs. V8's stop-the-world, generational, accurate garbage collector is one of the keys to V8's performance. You can learn about this and other performance aspects in V8 Design Elements.
+### Fun with node.js ###
 
-JavaScript is most commonly used for client-side scripting in a browser, being used to manipulate Document Object Model (DOM) objects for example. The DOM is not, however, typically provided by the JavaScript engine but instead by a browser. The same is true of V8—Google Chrome provides the DOM. V8 does however provide all the data types, operators, objects and functions specified in the ECMA standard.
+- [talk to serial devices](https://github.com/voodootikigod/node-serialport)
+- [talk to usb devices](https://github.com/schakko/node-usb)
+- [talk to arduino](https://github.com/tobeytailor/node-arduino)	
 
-- was ist "server-seitiges" javascript
-
-Vorteile:
-- http://www.readwriteweb.com/hack/2010/10/why-developers-should-pay-atte.php
-
-- laut github ist Javascript mit 19% die beliebteste Sprache
-- Es wird vorzugsweise im Frontend eingesetzt
-- Vorteil dieses nutzen auch im Backendbereich einzuseten
-- open source, community
-
-Was macht nodejs anders (event loops i/o)
-http://www.beakkon.com/geek/node.js/why-node.js-single-thread-event-loop-javascript
-http://journal.paul.querna.org/articles/2010/06/12/node-js/
-
-    * Everything is Async:  Because the base environment has been built essentially from scratch, everything is asynchronous.  This means there is no ‘defer to thread’ like in Twisted Python;  You just can’t make blocking code.
-    * No existing standard library: While this is somewhat a disadvantage today, because its harder to get going with ‘batteries included’ development, it means every bit of  Javascript is written specifically for Node.js, in a style that fits in with Node.
-    * First Class Sockets and HTTP: The example Hello World is over HTTP.  Node keeps you focused on on dealing with the data, rather than spending all your time dealing with the sockets or protocols.
-
-
-Its easy!
-- Beispiel
-
-
-[Nachteile]
-- http://nodejs.org/jsconf-eu-2010.pdf
-Problem 1: TLS / SSL
-  - Fixed in 0.4
-Problem 2: Continuous Integration Perf Testing
-  - There is some thingie at http://arlolra.no.de/ that tests request/
-response perf, but nothing really substantial I think.
-Problem 3: Debugging
-  - There is a node interactive debugger
-  - There is DTrace probes
-  - No event origin backtrace yet
-Problem 4: Windows
-  - Work in progress, node compiles on mingw but a bunch of features
-is missing.
-  - The switch to iocp (see slides) hasn't been made yet.
-Problem 5: V8 on x64 limited to 1 GB heap
-  - The bar has been raised to 1.9GB. I don't know how close the V8
-team is to pushing it further.
-Problem 6: Copying Strings out of V8 heap
-  - Nothing changed I think.
-Problem 7: Bunching Writes
-  - There have been experiments with writev, but it was backed out
-because of performance regressions.
-Problem 8: File System Event Notification
-  - No news.
-Problem 9: Kernel AIO
-  - No news. 
-
+## Appendix ##
 
 ## Installation ##
 
@@ -137,52 +83,23 @@ Problem 9: Kernel AIO
 	sudo apt-get update
 	sudo apt-get install nodejs
 
-
-## Was brauchen wir ##
-
-Vorteile hin oder her? Wie können wir es einsetzen.
-
-
-## Extensions ##
-
-https://www.cloudkick.com/blog/2010/aug/23/writing-nodejs-native-extensions/
-https://github.com/pquerna/node-extension-examples
-https://github.com/rbranson/node-ffi
-
-## Appendix ##
-
-Mailing List ; http://groups.google.com/group/nodejs
-
-
-Videos zu Java Script: http://jsconfeu.blip.tv/posts?view=archive&nsfw=dc
-
-nodejs. video: http://jsconfeu.blip.tv/file/2899135/
-
-http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/
-
-http://howtonode.org/how-to-module
-
-node.js makes its trivial to manage thousand of connections
-
-http://www.travisglines.com/web-coding/what-its-like-building-a-real-website-in-node-js 
-
-http://www.travisglines.com/web-coding/a-simple-mvc-setup-in-node-js
-
 ### Frameworks ###
+
+- [socket.io](http://socket.io/)  An abstraction over all the realtime transports (WebSocket, long polling, XHR multipart, etc) for the Node HTTP server
+- [Connect](http://senchalabs.github.com/connect/) Connect is a middleware framework for node, shipping with over 11 bundled middleware and a rich choice of 3rd-party middleware.
+- [mongooose](http://mongoosejs.com/) Mongoose is a MongoDB object modeling tool designed to work in an asychronous environment.
 
 ### Projects/Companies using node.js ###
 
-### Citations ###
+- [Github](https://github.com/blog/678-meet-nodeload-the-new-download-server) Archive downloads
+- [Etsy](http://www.etsy.com/) Website/Application status analysis with UDP
+- [transloadit/](http://transloadit.com/) Uploading and processing in one step.
 
-> The overarching point, however, is that Node is optimal for the new breed of real-time web apps. Yes, there are other means of building real-time tools, but Node lets you build real-time tools on the same platform that runs the rest of your site.
--- Cade Metz
+## References ##
 
-### Terminology ###
-
-CommonJS
-- good proposals (modules, binary, package)
-Threads
-Grren-Threads
-Co-Routines
-POSIX Layer
-long poll
+- [Ryan Dahl: node.js at jsconf.eu 2010](http://jsconfeu.blip.tv/file/2899135/)
+- [Felix Geissendörfer, 27C3, node.js as a networking tool](http://www.youtube.com/watch?v=g29PemqW7lQ)
+- [Tim Caswell: node.js at jsconf 2010](http://creationix.com/jsconf.pdf)
+- [What it’s like building a real website in Node.js](http://www.travisglines.com/web-coding/what-its-like-building-a-real-website-in-node-js)
+- [How to Node](http://howtonode.org/), Blog about node.js by [Tim Caswell](http://creationix.com/)
+- [Official node.js mailing list](http://groups.google.com/group/nodejs)
