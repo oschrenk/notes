@@ -39,6 +39,9 @@
 	apt-get install ack-grep
 	apt-get install bash-completion
 	
+	## edit
+	sudo apt-get install gedit-plugins
+	
 	## install scms
 	apt-get install subversion
 	apt-get install git
