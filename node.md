@@ -16,7 +16,7 @@ Currently most I/O code is blocking - meaning that a code block waits for some I
 
 This wastes CPU cycles. We deal with this problem by writing multitreaded programs, so that other threads can take over, when one thread has to wait. Threads come with an overhead. Each thread costs memory and the context-switching between can be hard and time consuming. 
 
-For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His propsosed solution is using an event loop and using non blocking I/O all the way done. JavaScript is a good candidate for this abstraction layer as its language and API specification has no notion of binary data and has some nice language features, such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
+For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His propsosed solution is using an event loop and using non blocking I/O all the way down. JavaScript is a good candidate for this abstraction layer as its language and API specification has no notion of binary data and has some nice language features, such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
 
 	var http = require('http');
 	http.createServer(function (req, res) {
@@ -39,6 +39,8 @@ Don't underestimate the last point. [Github](https://github.com/), a source code
 ## Core Concepts ##
 
 ### The event loop ###
+
+The of using an event loop instead of creating new threads isn't new. Projects like [nginx](http://nginx.org/), [Lighttp](http://www.lighttpd.net/), [Cherokke](http://www.cherokee-project.com/) are examples that the approach does work quite well.
 
 The event loop is the system that JavaScript uses to deal with these incoming request from various parts of the system in a sane manner. JavaScript takes a simple approach that makes the process much more understandable but does introduce a few constraints.
 
