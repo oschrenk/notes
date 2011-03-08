@@ -16,7 +16,7 @@ Currently most I/O code is blocking - meaning that a code block waits for some I
 
 This wastes CPU cycles. We deal with this problem by writing multitreaded programs, so that other threads can take over, when one thread has to wait. Threads come with an overhead. Each thread costs memory and the context-switching between can be hard and time consuming. Projects like [nginx](http://nginx.org/), [Lighttp](http://www.lighttpd.net/), [Cherokke](http://www.cherokee-project.com/) are examples that the approach of a single-treaded event loop does work quite well.
 
-For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His propsosed solution is using an event loop and using non blocking I/O all the way down. JavaScript is a good candidate for this abstraction layer as its language and API specification has no notion of binary data and has some nice language features, such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
+For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His propsosed solution is using an event loop and using non blocking I/O all the way down. JavaScript is a good candidate for this abstraction layer as its language and API specification has no notion of binary data or I/O and has some nice language features, such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
 
 	var http = require('http');
 	http.createServer(function (req, res) {
@@ -222,7 +222,7 @@ http://howtonode.org/how-to-module
 - [Connect](http://senchalabs.github.com/connect/) Connect is a middleware framework for node, shipping with over 11 bundled middleware and a rich choice of 3rd-party middleware.
 - [mongooose](http://mongoosejs.com/) Mongoose is a MongoDB object modeling tool designed to work in an asychronous environment.
 - [coffee-resque](https://github.com/technoweenie/coffee-resque) Node.js port of Resque
-- [node-worker](https://github.com/cramforce/node-worker) An implementation of the WebWorker API for node.js
+- [node-webworker](https://github.com/pgriess/node-webworker) A WebWorkers implementation for NodeJS
 
 ### Projects/Companies using node.js ###
 
@@ -233,8 +233,10 @@ http://howtonode.org/how-to-module
 ## References ##
 
 - [Ryan Dahl: node.js at jsconf.eu 2010](http://jsconfeu.blip.tv/file/2899135/)
+- [Ryan Dahl, Google Texh Talks, July 2010, Node.js: JavaScript on the Server](http://www.youtube.com/watch?v=F6k8lTrAE2g)
 - [Felix Geissendörfer, 27C3, node.js as a networking tool](http://www.youtube.com/watch?v=g29PemqW7lQ)
 - [Tim Caswell: node.js at jsconf 2010](http://creationix.com/jsconf.pdf)
+- [Up and Running with Node.js](http://ofps.oreilly.com/titles/9781449398583/), Upcoming book about node.js by Tom Hughes-Croucher
 - [What it’s like building a real website in Node.js](http://www.travisglines.com/web-coding/what-its-like-building-a-real-website-in-node-js)
 - [How to Node](http://howtonode.org/), Blog about node.js by Tim Caswell
 - [Official node.js mailing list](http://groups.google.com/group/nodejs)
