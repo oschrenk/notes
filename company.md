@@ -6,7 +6,7 @@ Only use open source software. Exceptions are allowed when it comes to OS (OS X)
 
 - Project Managment: [Redmine](http://www.redmine.org/)
 - Sourcecode: [Git](http://git-scm.com/), [Gitolite](https://github.com/sitaramc/gitolite)
-- Messaging: Email, [MicroMessaging](http://status.net/)
+- Messaging: Email, MicroMessaging: [status.net](http://status.net/)
 
 ## Code ##
 
