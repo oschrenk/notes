@@ -112,7 +112,7 @@ Making outoging requests. A simple HTTP client:
 	});
 	req.end();
 	
-YOu can even make this code shorter by dropping the `method: 'GET'` property and removing the `req.end();` line because `node.js` implies the use of `GET`.
+You can even make this code shorter by dropping the `method: 'GET'` property and removing the `req.end();` line because `node.js` implies the use of `GET`.
 
 `POST`ing data:
 
@@ -175,12 +175,6 @@ http://howtonode.org/how-to-module
 
 ### Task queues ###
 
-### Fun with node.js ###
-
-- [talk to serial devices](https://github.com/voodootikigod/node-serialport)
-- [talk to usb devices](https://github.com/schakko/node-usb)
-- [talk to arduino](https://github.com/tobeytailor/node-arduino)	
-
 ## Appendix ##
 
 ### Compilation ###
@@ -218,17 +212,37 @@ http://howtonode.org/how-to-module
 
 ### APIs/Frameworks ###
 
+- [Connect](http://senchalabs.github.com/connect/) Connect is a middleware framework for node, shipping with over 11 bundled middleware and a rich choice of 3rd-party middleware. Connect makes it easy to build fully features HTTP servers complete with logging, gzipping, smart caching, and all the other goodies that Connect provides out of the box.
+
 - [socket.io](http://socket.io/)  An abstraction over all the realtime transports (WebSocket, long polling, XHR multipart, etc) for the Node HTTP server
-- [Connect](http://senchalabs.github.com/connect/) Connect is a middleware framework for node, shipping with over 11 bundled middleware and a rich choice of 3rd-party middleware.
+ 
 - [mongooose](http://mongoosejs.com/) Mongoose is a MongoDB object modeling tool designed to work in an asychronous environment.
+
+- [faye](https://github.com/jcoglan/faye) Dirt-simple publish/subscribe messaging over HTTP for Node.js and Rack 
 - [coffee-resque](https://github.com/technoweenie/coffee-resque) Node.js port of Resque
 - [node-webworker](https://github.com/pgriess/node-webworker) A WebWorkers implementation for NodeJS
+
+- [spark](https://github.com/senchalabs/spark) Spark is a command-line tool used to start up node server instances written by Tj Holowaychuk and Tim Caswell. It's part of the Connect framework, however can be used standalone with any node server.
+- [cluster](https://github.com/LearnBoost/cluster) Node.JS multi-core server manager with plugins support.
+
+- [express](http://expressjs.com/) Insanely fast (and small) server-side JavaScript web development framework built on node and Connect.
 
 ### Projects/Companies using node.js ###
 
 - [Github](https://github.com/blog/678-meet-nodeload-the-new-download-server) Archive downloads
 - [Etsy](http://www.etsy.com/) Website/Application status analysis with UDP
 - [transloadit](http://transloadit.com/) Uploading and processing in one step.
+
+### Fun with node.js ###
+
+- [talk to serial devices](https://github.com/voodootikigod/node-serialport)
+- [talk to usb devices](https://github.com/schakko/node-usb)
+- [talk to arduino](https://github.com/tobeytailor/node-arduino)	
+
+- [umeboshi](https://github.com/nko/umeboshi-fireteam) A message server to help web developers build apps with detachable UI ([demo](http://vimeo.com/14626831)).
+- [four.walls](http://four.w4lls.com/) Wohnungssuche/-angebot
+
+- [fightly](https://github.com/AdrianGaudebert/fightly-game-engine) Turn based game engine
 
 ## References ##
 
