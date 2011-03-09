@@ -52,24 +52,26 @@ Once you have Skim installed, activate `Skim > Preferences > Sync > Check for fi
 
 Tex creates a lot of temporary files that would only clutter the version control. Create a file called "ignore-these" with the (patterns of) files you want to ignore.
 
-    *.aux
-    *.bbl
-    *.blg
-    *.bst
-    *.dvi
-    *.idx
-    *.lof
-    *.log
+	*.aux
+	*.bbl
+	*.blg
+	*.bst
+	*.dvi
+	*.glo
+	*.idx
+	*.ilg
+	*.ind
+	*.lof
+	*.log
+	*.lot
 	*.nav
-    *.pdf
-    *.toc
-    *.out
+	*.out
+	*.pdf
+	!*/*.pdf
+	*.pdfsync
 	*.snm
-    *.synctex.gz
-    *.glo
-    *.ind
-    *.ilg
-    *.pdfsync
+	*.synctex.gz
+	*.toc
 
 ### SVN ###
 
