@@ -146,6 +146,52 @@ Many components in Node provide continuos output or can process continuos input.
 
 The basic stream in the example simply reads data from a file in chunks. Every time a new chunk is made available it is exposed to a callback in the variable called data. In this example we simply log the data to the console.
 
+JavaScript can't natively deal with binary data. Node.js introduces `Buffers` to compensate for that. 
+
+	> new Buffer(10);
+	<Buffer e1 43 17 05 01 00 00 00 41 90>
+	>
+	
+`Buffer` allocates memory and leaves it uniinitialized which does mean that it might be initialized with dirty bytes.
+
+Writing strings to a buffer means that if you to cope with encodings. When creating a buffer with a string, it defaults to `UTF-8`
+
+	> new Buffer('é');
+	<Buffer c3 a9>
+
+You can specify other encoding, but that does mean that characters might get truncated to one bit
+
+	> new Buffer('é', 'ascii');
+	<Buffer e9>
+	
+Although JavaScript supports strings as primitives, you would normally write them to a `Buffer` in nodes. You can partially write into a buffer.
+
+	> var b = new Buffer(1);
+	> b
+	<Buffer 00>
+	> b.write('a');
+	1
+	> b
+	<Buffer 61>
+	> b.write('é');
+	0
+	> b
+	<Buffer 61>
+	>
+
+The `write` method will return the number of written bytes. If characters won't fit (bytewise) no character will be written. Be carfeul when you write with an offset though as it will insert the `null` character as a terminator.
+
+	> var b = new Buffer(5);
+	> b.write('fffff');
+	5
+	> b
+	<Buffer 66 66 66 66 66>
+	> b.write('ab', 1);
+	2
+	> b
+	<Buffer 66 61 62 00 66>
+	>
+
 [1](http://ofps.oreilly.com/titles/9781449398583/ch05.html)
 
 ## Patterns ##
