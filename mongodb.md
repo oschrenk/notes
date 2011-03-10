@@ -47,6 +47,9 @@ You can directly connect to a database by issueing
 **Query a collection**
 
 	db.foo.find();
+	db.things.find({name:"mongo"}) # returns things with name = "mongo"
+	db.things.findOne({name:"mongo"}) # syntactic sugar; returns the first thing with name = "mongo"
+	db.things.find().limit(3); # specify the number of results
 
 **Insert data**
 
