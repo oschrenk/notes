@@ -17,7 +17,7 @@ Use `man brew` to view the manpage.
 | `brew info foo` 			  			| Gives all available information for installed or not installed formula foo |
 | `brew home` 				  			| Open's Homebrew's homepage in your default browser |
 | `brew home foo` 			  			| Opens foo's homepage in your default browser |
-| `brew update` 						| Update  homebrew formulae and homebrew itself |
+| `brew update` 						| Update homebrew formulae and homebrew itself |
 | `brew remove foo`						| Uninstalls foo |
 | `brew create [url]` 					| Generates a formula for the downloadable file at url and opens it in TextMate [^1] |
 | `brew create url-of-tarball --cache` 	| Generates a formula, then downloads the tarball. Adds the md5 to the formula template for you |
@@ -31,7 +31,7 @@ Use `man brew` to view the manpage.
 | `brew --config` 						| Print some useful system configuration to the console |
 | `brew --prefix` 						| Display the real path to your Homebrew prefix (Usually /usr/local) |
 | `brew --prefix (formula)`				| Display the path where this formula is installed |
-| `brew --cellar` 						| Display the real path to your Homebrew Cellar (Usually /usr/local/Cellar)  |
+| `brew --cellar` 						| Display the real path to your Homebrew Cellar (Usually `/usr/local/Cellar`)  |
 | `brew --cache` 						| Display the real path to where Homebrew caches downloads (Usually ~/Library/Caches/Homebrew)  |
 | `brew doctor` 						| Checks your installation for common issues |
 | `brew audit` 							| Audits all formulae for common code and style issues |
@@ -83,6 +83,3 @@ adding
 to the `.git/config` file
 
 	git pull
-
-
-
