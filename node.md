@@ -268,6 +268,7 @@ http://howtonode.org/how-to-module
 
 - [mongooose](http://mongoosejs.com/) Mongoose is a MongoDB object modeling tool designed to work in an asychronous environment.
 - [cradle](https://github.com/cloudhead/cradle) A high-level, caching, CouchDB library for Node.js
+- [nodegit](http://tbranyen.github.com/nodegit/) A collection of non-blocking Node.js libgit2 bindings, raw api, convenience api, unit tests, documentation and accomodations to make contributing easier
 
 #### Messaging & Background tasks ####
 
