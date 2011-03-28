@@ -213,13 +213,7 @@ _Spooling pattern_. Is used when we need an entire resource available before we 
 
 ### C(++) library bindings ###
 
-https://www.cloudkick.com/blog/2010/aug/23/writing-nodejs-native-extensions/
-https://github.com/pquerna/node-extension-examples
-https://github.com/pkrumins/node-png
-https://github.com/pkrumins/node-async
-http://howtonode.org/how-to-module
-
-### Task queues ###
+I built my [own hello world extension](https://github.com/oschrenk/node-hello) using the [Writing Node.js Native Extensions](https://www.cloudkick.com/blog/2010/aug/23/writing-nodejs-native-extensions/) blog post.
 
 ## Appendix ##
 
