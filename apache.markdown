@@ -30,14 +30,16 @@ Now open  `/etc/apache2/extra/httpd-vhosts.conf`. Remove the example virtual hos
 		ServerName srpad
 	    DocumentRoot "/Users/jdoe/development/www/project1"
 	</VirtualHost>
-	
+
+The id `srpad` is used in the `VirtualHost` directive and as the `ServerName` property
+
 Edit `etc/hosts`
 
 	127.0.0.1	project1
 
 Try accessing your project via `http://project1`.
 
-If you get an `Access Denied error` you have to enable access to that directory. I suggest that all your web development projects have a common top directory that you than ca give access to. Edit `/etc/apache2/extra/httpd-vhosts.conf` and add
+If you get an `Access Denied error` you have to enable access to that directory. I suggest that all your web development projects have a common top directory that you than can give access to. Edit `/etc/apache2/extra/httpd-vhosts.conf` and add
 
 	<Directory /Users/jdoe/development/www/>
 	  Order Deny,Allow

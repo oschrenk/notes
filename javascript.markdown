@@ -1,8 +1,74 @@
 # JavaScript #
 
-## Language ##
+Introduced 1995.
 
-In JavaScript everything except some primitive types, are objects, even functions. Every object can be treated as an associative array and can be accessed via `object.name = name` also known as dot notation (There are some problems with some reserved keyword though).
+## Basics ##
+
+In JavaScript everything (except some primitive types) is an object, even a function. Every object can be treated as an associative array and can be accessed via `object.name = name` also known as dot notation (There are some problems with some reserved keyword though).
+
+### Bad Parts ###
+
+Taken from [JavaScript: The Good Parts](http://www.youtube.com/watch?v=hQVTIJBZook) by Douglas Crockford
+
+* Global Variables. No linker. Common global namespace where variables collide => Reliability, Security problems
+* `+` adds and concatenates. Same as in Java, but as Java is strinlgy typed you could predict what happens, not with JavaScript.
+* Semicolon Insertion. If compiler gets an error, it searches for a linefeed and inserts a semicolon, sometimes were its not intended 
+* typeof. Typeof array object -> not helpful, Typeof null is Object which is wrong
+* with and eval. Eval most misused. If you want to use it step away and think.
+* phony arrays. Normally linear arranged bucket. In JS arrays are like hashmaps. No dimensions. 
+* `==` and `!=`
+* `false`, `null`, `undefined`, `NaN` 
+
+#### Transivity? ####
+
+Type coercion on quality operator
+
+	'' == '0' 			// false
+	0 == '' 			// true
+	0 == '0'			// true
+	false = 'false'		// false
+	false == '0'		// true
+	false == undefined	// false
+	false == null		// false
+	null == undefined	// true
+	" \t\r\n " == 0		// true
+	
+Always use triple equal operator, which does not use type coercion, and always used false in the cases above.
+
+#### For..in ####
+
+Does deep drilling. User has to filter own object's own properties
+
+### Good Parts ###
+
+* Lambda (Function as first class members)
+* Dynamic Objects
+* Loose Typing
+* Object Literals
+
+### Stuff ###
+
+We have function scope not block scope 
+
+### Style ###
+
+Rightness on brackets is neccesary! In the following example you would expect Javascript to return a new object with the `ok` member being `false`
+
+	return
+	{
+		ok: false
+	};
+
+but it returns `undefined` because of semicolon inserion and its inherited c syntax. It becomes:
+
+	return;
+	{
+		ok: false;
+	}
+	
+with the block being ignored.
+
+## Advanced ##
 
 ### Constructing objects ###
 
@@ -87,7 +153,7 @@ If you want more information the `istanceof` operator can help
 
 ## Libraries/Frameworks ##
 
-[zepto.js](https://github.com/madrobby/zepto)
+[zepto.js](https://github.com/madrobby/zepto) 
 
 > Zepto.js is a minimalist inlinable framework for mobile WebKit browsers, with a jQuery-like chaining syntax
 
@@ -99,7 +165,18 @@ If you want more information the `istanceof` operator can help
 
 > Backbone supplies structure to JavaScript-heavy applications by providing models key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing application over a RESTful JSON interface.
 
+[underscore.js](https://github.com/documentcloud/underscore/)
+
+> Underscore is a utility-belt library for JavaScript that provides a lot of the functional programming support that you would expect in Prototype.js (or Ruby), but without extending any of the built-in JavaScript objects. It's the tie to go along with jQuery's tux.
+
 [QUnit](http://docs.jquery.com/Qunit)
 
 > QUnit is a powerful, easy-to-use, JavaScript test suite. It's used by the jQuery project to test its code and plugins but is capable of testing any generic JavaScript code (and even capable of testing JavaScript code on the server-side).
 
+[arbor.js]( http://arborjs.org)
+
+> Arbor is a graph visualization library built with web workers and jQuery. Rather than trying to be an all-encompassing framework, arbor provides an efficient, force-directed layout algorithm plusabstractions for graph organization and screen refresh handling.
+
+[mustache.js](https://github.com/janl/mustache.js)
+
+> Minimal templating with {{mustaches}} in JavaScript

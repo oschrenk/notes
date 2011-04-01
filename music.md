@@ -1,6 +1,11 @@
 # Music #
 
-## Classical ##
+## Composer ##
+
+- Sibelius
+- Béla Bartók
+
+## Instruments ##
 
 ### Piano ###
 

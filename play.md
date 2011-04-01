@@ -1,85 +1,84 @@
-## Google App Engine Java SDK
-
-	svn checkout http://googleappengine.googlecode.com/svn/trunk/java appengine-java-sdk-svn
-	ln -s appengine-java-sdk-svn/ gae
-
-	# GAE
-	export GAE_HOME=$SDKS/gae
-	export PATH=$GAE_HOME/bin:$PATH
+# Play #
 	
-## Get Play Framework
-
-	bzr branch lp:play/1.1 play-1.1-bzr
-	ln -s play-1.1-bzr/ play
-	cd play/framework/
-	ant
+## Setup ##	
 	
-or
+### Get Play Framework ###
 
 	git clone http://github.com/playframework/play.git
 	cd play/framework/
 	ant
 
-## Update Play Framework ##
-
-	cd play
-	bzr merge
-	cd framework
-	ant
-	
-or
+### Update Play Framework ###
 
 	cd play
 	git pull origin master
 	cd framework
 	ant
 	
-## Setup Play
+### Setup Play#
 
 - make sure that Java is in your @path@ (use @java -version). Play will use the default Java or the one available at the @$JAVA_HOME@ path if defined.
 - I also setup $PLAY_HOME in my @.profile@
 - make sure that play is in your @path@. For example via @export PATH=$PLAY_HOME:$PATH@ 
 
+
+I put the play framework in an `$SDKS` directory.
+
 	# PLAY
 	export PLAY_HOME=$SDKS/play
 	export PATH=$PLAY_HOME:$PATH
 
-## Create the app
+# Usage #
+
+## Create an app ##
 
 	play new acmeapp
 	
-## Get modules
+## Modules ##
+
+### Installing modules ###
 
 	play install gae
 	play install siena
 	
-## Setup modules
+### Setup modules ###
 
 	open acmeapp/conf/application.conf
 	
 	# Modules
-	module.siena=${play.path}/modules/siena-1.1
-	module.gae=${play.path}/modules/gae-1.0.2
+	module.siena=${play.path}/modules/siena-1.3
+	module.gae=${play.path}/modules/gae-1.4
+	
+## With maven ##
 
-## Register your application with GAE
+Install maven support via
 
+	play install maven
+	
+Enable module in conf
 
-## Run once to create neccesary stub files ##
+	module.maven=${play.path}/modules/maven
 
-Add your GAE application ID to @acmeapp/war/WEB-INF/appengine-web.xml@
+Commands:
 
-## Deployment ##
+	play mvn:init
+	
+Installs play-parent project (a Maven pom project) into local Maven repository. Then creates the appropriate `pom.xml`. After this step, you can add your dependencies to `pom.xml`
 
-### Local ###
+	play mvn:update // or play mvn:up
 
-	play war myappname -o myappname-war
-	$GAE_HOME/bin/dev_appserver myappname-war
+Rretrieves all defined dependencies and then it copies them into your `app/lib` folder
 
-### Live ###
+	play mvn:refresh // or play mvn:re
 
-	play war myappname -o ../myappname-war
-	$GAE_HOME/bin/appcfg update myappname-war/
+Clears your `app/lib` folder first, then it executes play `mvn:up`
 
-# Managing GAE Application #
+	play mvn:source // or play mvn:src
 
-http://code.google.com/appengine/docs/java/tools/uploadinganapp.html
+Retrieves all sources (if available) of defined dependencies and then it copies them into `app/lib` folder
+
+## Eclipse ##
+
+To transform a play application into a working Eclipse project, use the eclipsify command:
+
+	play eclipsify

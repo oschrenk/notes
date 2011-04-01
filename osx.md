@@ -2,7 +2,8 @@
 
 ## What I like
 
-*  OS has built in spell checker -- no need to to reproduce that feature for an application
+* Window managment. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
+* Consistency. `cmd+.` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application. 
     
 ## Hints
 

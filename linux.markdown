@@ -2,15 +2,13 @@
 
 ## Update ##
 
-Update packages
-
 	apt-get update
 	apt-get upgrade
+	
+To search packages
 
-Add useful packages
+	apt-cache --name-only search apache
 
-	apt-get install make
-	apt-get install cron
 	
 ## User Managment ##
 

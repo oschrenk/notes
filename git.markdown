@@ -173,6 +173,16 @@ Switch to a branch called "experiment". Git will warn you if you have uncommitte
 
     $ git checkout experiment
 
+#### Track remote branches ####
+
+As of Git 1.7.0:
+
+	$ git branch --set-upstream foo upstream/foo
+
+For example
+
+	$ git branch --set-upstream master origin/master
+
 ### Merging ###
 
 Just change into the branch you want changes to be merged into and type
@@ -384,47 +394,6 @@ Replace `github` with the name you used.
     git submodule add git@github.com:username/plugin.git plugins/plugin
 
 ## Use cases ##
-
-### Migrate subversion repositories ###
-
-Create an empty directory and prepare the repository
-
-    $ mkdir project_tmp
-    $ cd project_tmp
-    $ git svn init http://code.yoursite.net/project/trunk/ --no-metadata
-
-You get an answer like
-
-    Initialized empty Git repository in /absolute/path/project_tmp/.git/
-
-Now create a file with a list of your svn users and map them to git users, save it to `~/username/users.txt`. The file contents have to look similar to this:
-
-    joesample = Joe Sample <joe.sample@domain.net>
-    janedoe = Jane Doe <jane.doe@company.com>
-
-then run
-
-    $ git config svn.authorsfile /path/to/svn.authorsfile
-
-Now we have to get the data from the svn repository by calling
-
-    $ git svn fetch
-
-Depending on the size of your repository and the number of changes you made the process made take while. If everything went fine you get a bunch of messages that look something like this:
-
-    [...]
-    r126 = 5ee70c02797f9f4d31238fcdbbcaaf830daf490d (refs/remotes/git-svn)
-    	M	doc/notes.textile
-    	D	src/com/project/keywords.properties
-    	A	src/com/project/Entry.java
-    r127 = 4b38f4b2a740e8afc8a134f4d5425dbb2e42dc40 (refs/remotes/git-svn)
-    Checked out HEAD:
-    http://code.yoursite.net/project/trunk/ r127
-
-You can use `git log` to check if the users were setup correctly. The last step is too to another clone of the repository to get rid of all the stuff that is/was only needed for git svn to work.
-
-    $ cd ..
-    $ git clone project_tmp project
 
 ## FAQ: Problems/Error Messages ##
 

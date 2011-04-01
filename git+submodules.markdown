@@ -98,7 +98,7 @@ There should be an entry like:
 
 Simply run
 
-	git rm –cached [plugin path]
+	git rm --cached [plugin path] # without trailing slash
 	
 Do **not** put a trailing slash as the command will fail.
 

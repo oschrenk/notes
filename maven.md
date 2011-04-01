@@ -81,7 +81,7 @@ Where
 *   `packaging` defaults to jar
 *   `name` is a descriptive name
 
-### Mavenize a 3-rd party library ###
+### Install a 3-rd party library ###
 
 [Mavenizer](http://mavenizer.sourceforge.net/) is a tool that can help
 you mavenize 3rd party libraries
@@ -107,6 +107,18 @@ Normally you will have more complex cases. Try to track down which libraries are
 The [Mavenize](#mavenize) way is the better (more complete/correct) choice but sometimes you can't be bothered with dependency hell. Just use the following command and change according to your needs:
 
     $ mvn install:install-file -Dfile=library.jar -DgroupId=com.company -DartifactId=libraryname -Dversion=1.2.3 -Dpackaging=jar
+
+
+### Deploy a 3rd party library ###
+
+	mvn deploy:deploy-file -DgroupId=<group-id> \
+	  -DartifactId=<artifact-id> \
+	  -Dversion=<version> \
+	  -Dpackaging=<type-of-packaging> \
+	  -Dfile=<path-to-file> \
+	  -DrepositoryId=<id-to-map-on-server-section-of-settings.xml> \
+	  -Durl=<url-of-the-repositor-to-deploy>
+
 
 ## M2Eclipse ##
 
