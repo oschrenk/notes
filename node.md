@@ -2,11 +2,11 @@
 
 ## Overview ##
 
-The [officicial homepage](http://nodejs.org/) explains `node.js` as
+The [official homepage](http://nodejs.org/) explains `node.js` as
 
 > Evented I/O for V8 JavaScript. 
 
-[V8](http://code.google.com/p/v8/) is a JavaScript Engine by Google. It does a very good Job of increasing JavaScripts performance by compiling it into machine code. V8 itself is written in C++ and so are most parts of node.js.  
+[V8](http://code.google.com/p/v8/) is a JavaScript Engine by Google. It does a very good Job of increasing JavaScripts performance by compiling it into machine code. V8 itself is written in C++ and so are most parts of node.js. 
 
 Ryan Dahl saw the value in using JavaScript as a server side scripting language. He is very opnionated on how I/O should be done and node.js is his answer to the problems developers are faced when dealing with I/O.
 
@@ -38,6 +38,33 @@ Don't underestimate the last point. [Github](https://github.com/), a source code
 
 ## Core Concepts ##
 
+### Modules ###
+
+`node.js` supports the [CommonJS](http://www.commonjs.org/) [module specification](http://www.commonjs.org/specs/modules/1.0/).
+
+The module system helps to structure your program into different files. 
+
+For instance `main.js` could require the `hello` module
+
+	var hello = require('./hello');
+	hello.world(); 	
+
+`require('./hello');` imports contents from another JavaScript file. The initial '`./`' indicates that the file is located in the same directory 'main.js'. Also note that you don't have to provide the file extension, as '`.js`' is assumed by default.
+
+The implementation of `hello.js` could look lie this:
+
+	exports.world = function() {
+	  console.log('Hello World');
+	} 
+
+We are assigning a property called '`world`' to an object called '`exports`'. Such an '`exports`' object is available in every module, and it is returned whenever the require function is used to include the module.
+
+If you don't supply a relative path, as in
+
+	var http = require('http');
+
+node.js will first try to load a core module named `http`. If it can't find a core module with the supplied name node.js will start searching for a directory called `node_modules` in the directory of the current file and will try to load the module from there. If the directory doesn't exists it will change into the directory above and re-start the search until it finds the  `node_modules` directory and the module. If the root directory is reached node.js will give up and throw a exception.
+
 ### The event loop ###
 
 The event loop is the system that JavaScript uses to deal with these incoming request from various parts of the system in a sane manner. JavaScript takes a simple approach that makes the process much more understandable but does introduce a few constraints.
@@ -51,7 +78,7 @@ In every day life we are used to having all sorts of internal callbacks for deal
 
 ### Event API ###
 
-If you used JavaScript before you probably cam e across events. The events in the browser are normally originating from the DOM. In the DOM we have a user-driven event model which is based on user interaction with a set of interface elements arranged in a tree structure (HTML, XML, etc). This means when a user interacts with a particular part of the interface there is an event and a context. That context has a parent and potentially children. Since the context (the HTML/XML element interacted with) is within a tree we get the concepts of bubbling and capturing. This allows elements either up or down the tree to receive the event that was called. For example, if I have an HTML list then a click event on an `<li>` can be captured by a listening on the `<ul>`. Conversely a click on the `<ul>` can be bubbled to a listener on the `<li>`. Since JavaScript objects don't have this kind of tree structure the model in Node is much simpler.
+If you used JavaScript before you probably came across events. The events in the browser are normally originating from the DOM. In the DOM we have a user-driven event model which is based on user interaction with a set of interface elements arranged in a tree structure (HTML, XML, etc). This means when a user interacts with a particular part of the interface there is an event and a context. That context has a parent and potentially children. Since the context (the HTML/XML element interacted with) is within a tree we get the concepts of bubbling and capturing. This allows elements either up or down the tree to receive the event that was called. For example, if I have an HTML list then a click event on an `<li>` can be captured by a listening on the `<ul>`. Conversely a click on the `<ul>` can be bubbled to a listener on the `<li>`. Since JavaScript objects don't have this kind of tree structure the model in Node is much simpler.
 
 All event functionality in Node resolves around `EventEmitter`. The `on` methods creates and event listeners for an event:
 
