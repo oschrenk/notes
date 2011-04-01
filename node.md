@@ -8,22 +8,15 @@ The [official homepage](http://nodejs.org/) explains `node.js` as
 
 [V8](http://code.google.com/p/v8/) is a JavaScript Engine by Google. It does a very good Job of increasing JavaScripts performance by compiling it into machine code. V8 itself is written in C++ and so are most parts of node.js. 
 
-Ryan Dahl saw the value in using JavaScript as a server side scripting language. He is very opnionated on how I/O should be done and node.js is his answer to the problems developers are faced when dealing with I/O.
+[Ryan Dahl](http://tinyclouds.org/) saw the value in using JavaScript as a server side scripting language. He is very opnionated on how I/O should be done and node.js is his answer to the problems developers are faced when dealing with I/O.
 
 Currently most I/O code is blocking - meaning that a code block waits for some I/O to work finish before further execution.
 
 	var result = db.query("select ...")
 
-This wastes CPU cycles. We deal with this problem by writing multitreaded programs, so that other threads can take over, when one thread has to wait. Threads come with an overhead. Each thread costs memory and the context-switching between can be hard and time consuming. Projects like [nginx](http://nginx.org/), [Lighttp](http://www.lighttpd.net/), [Cherokke](http://www.cherokee-project.com/) are examples that the approach of a single-treaded event loop does work quite well.
+This wastes CPU cycles. Normally developers deal with this problem by writing multitreaded programs, so that other threads can take over, when one thread has to wait. Threads come with an overhead. Each thread costs memory and the context-switching between them can be hard and time consuming. Projects like [nginx](http://nginx.org/), [Lighttp](http://www.lighttpd.net/), [Cherokke](http://www.cherokee-project.com/) are examples that the approach of a single-treaded event loop do work quite well.
 
-For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His propsosed solution is using an event loop and using non blocking I/O all the way down. JavaScript is a good candidate for this abstraction layer as its language and API specification has no notion of binary data or I/O and has some nice language features, such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
-
-	var http = require('http');
-	http.createServer(function (req, res) {
-	  res.writeHead(200, {'Content-Type': 'text/plain'});
-	  res.end('Hello World\n');
-	}).listen(8124, "127.0.0.1");
-	console.log('Server running at http://127.0.0.1:8124/');
+For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His propsosed solution is using an event loop and using non blocking I/O all the way down. JavaScript is a good candidate for this abstraction layer as its language and API specification have no notion of binary data or I/O and offers some nice language features such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
 
 `node.js` provides a _purely evented_, _non blocking infrastructure_ to script _highly concurrent_ programs. It's design goals are
 
@@ -42,16 +35,14 @@ Don't underestimate the last point. [Github](https://github.com/), a source code
 
 `node.js` supports the [CommonJS](http://www.commonjs.org/) [module specification](http://www.commonjs.org/specs/modules/1.0/).
 
-The module system helps to structure your program into different files. 
-
-For instance `main.js` could require the `hello` module
+The module system helps to structure your program into different files. For instance `main.js` could require the `hello` module
 
 	var hello = require('./hello');
 	hello.world(); 	
 
 `require('./hello');` imports contents from another JavaScript file. The initial '`./`' indicates that the file is located in the same directory 'main.js'. Also note that you don't have to provide the file extension, as '`.js`' is assumed by default.
 
-The implementation of `hello.js` could look lie this:
+The implementation of `hello.js` could look like this:
 
 	exports.world = function() {
 	  console.log('Hello World');
@@ -63,13 +54,13 @@ If you don't supply a relative path, as in
 
 	var http = require('http');
 
-node.js will first try to load a core module named `http`. If it can't find a core module with the supplied name node.js will start searching for a directory called `node_modules` in the directory of the current file and will try to load the module from there. If the directory doesn't exists it will change into the directory above and re-start the search until it finds the  `node_modules` directory and the module. If the root directory is reached node.js will give up and throw a exception.
+node.js will first try to load a core module named `http`. If it can't find a core module with the supplied name node.js will start searching for a directory called `node_modules` starting in the directory of the current file and will try to load the module from there. If the directory doesn't exists it will change into the parent directory and re-start the search until it finds the  `node_modules` directory and the module. If the root directory is reached node.js will give up and throw a exception.
 
 ### The event loop ###
 
 The event loop is the system that JavaScript uses to deal with these incoming request from various parts of the system in a sane manner. JavaScript takes a simple approach that makes the process much more understandable but does introduce a few constraints.
 
-On the server there isn't a user to drive a variety of interactions. Instead we have a whole range of reactions to take on many different kinds of events. Node takes the approach that all I/O activities should be non-blocking (for reasons we'll explain more later). This means that all HTTP requests, database queries, file I/O, etc. do not halt execution until they return, instead they run independantly and then emit an event when the data is available.
+On the server there isn't a user to drive a variety of interactions. Instead we have a whole range of reactions to take on many different kinds of events. Node takes the approach that all I/O activities should be non-blocking. This means that all HTTP requests, database queries, file I/O, etc. do not halt execution until they return, instead they run independantly and then emit an event when the data is available.
 
 In every day life we are used to having all sorts of internal callbacks for dealing with events, and yet, like JavaScript, we only ever do one thing at once. JavaScript uses a single-threaded concept to deal with events.
 
@@ -163,7 +154,7 @@ You can even make this code shorter by dropping the `method: 'GET'` property and
 
 ### I/O ###
 
-Many components in Node provide continuos output or can process continuos input. To make these components act in a consistent way the stream API provides an abstract interface for them. This API provides common methods and properties that are available in specific implementation of streams. Streams can be readable, writable or both. All streams are EventEmitter instances, this allows them to emit events.
+Many components in Node provide continuous output or can process continuous input. To make these components act in a consistent way the stream API provides an abstract interface for them. This API provides common methods and properties that are available in specific implementation of streams. Streams can be readable, writable or both. All streams are EventEmitter instances, this allows them to emit events.
 
 	var fs = require('fs');
 	fs.readFile('warandpeace.txt', function(e, data) {
@@ -178,8 +169,8 @@ JavaScript can't natively deal with binary data. Node.js introduces `Buffers` to
 	> new Buffer(10);
 	<Buffer e1 43 17 05 01 00 00 00 41 90>
 	>
-	
-`Buffer` allocates memory and leaves it uniinitialized which does mean that it might be initialized with dirty bytes.
+
+`Buffer` allocates memory and leaves it uninitialized which does mean that it might be initialized with dirty bytes.
 
 Writing strings to a buffer means that if you to cope with encodings. When creating a buffer with a string, it defaults to `UTF-8`
 
@@ -240,18 +231,20 @@ _Spooling pattern_. Is used when we need an entire resource available before we 
 
 ### C(++) library bindings ###
 
-I built my [own hello world extension](https://github.com/oschrenk/node-hello) using the [Writing Node.js Native Extensions](https://www.cloudkick.com/blog/2010/aug/23/writing-nodejs-native-extensions/) blog post.
+I built my [own hello world extension](https://github.com/oschrenk/node-hello-extension) using the [Writing Node.js Native Extensions](https://www.cloudkick.com/blog/2010/aug/23/writing-nodejs-native-extensions/) blog post.
 
 ## Appendix ##
 
 ### Compilation ###
 
-	curl -O http://nodejs.org/dist/node-v0.4.2.tar.gz
-	tar xzf node-v0.4.2.tar.gz
-	cd node-v0.4.2
-	./configure
+	git clone https://github.com/joyent/node.git
+	cd node
+	export JOBS=2 # optional, sets number of parallel commands.
+	mkdir ~/local
+	./configure --prefix=$HOME/local/node
 	make
-	sudo make install
+	make install
+	export PATH=$HOME/local/node/bin:$PATH
 
 ### Installation ###
 
