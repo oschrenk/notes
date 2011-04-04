@@ -12,11 +12,11 @@ Messages are sent to a queue. Normally they will be persisted for later consumpt
 
 The queue can have many consumers, but a particular message message will only be consumed by one. Senders (also known as producers) are completely decoupled from the receivers (also known as consumers).
 
-The consumer consumes the message and acknowledges the message. Once acknowledged the message is removed from the queue. If the systemc crashes before it receives the acknowledgment the message will still be available and will be delivered again.
+The consumer consumes the message and acknowledges the message. Once acknowledged the message is removed from the queue. If the system crashes before it receives the acknowledgment the message will still be available and will be delivered again.
 
 [Messaging concepts][#jboss.messaging]
 
-### Publisher/Subscriber###
+### Publisher/Subscriber ###
 
 _Publish/subscribe_ (or _pub/sub_) is a messaging pattern in which the senders are sending their messages to an entity on the server, often called a topic or channel. 
 
