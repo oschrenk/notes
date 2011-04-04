@@ -54,7 +54,7 @@ If you don't supply a relative path, as in
 
 	var http = require('http');
 
-node.js will first try to load a core module named `http`. If it can't find a core module with the supplied name node.js will start searching for a directory called `node_modules` starting in the directory of the current file and will try to load the module from there. If the directory doesn't exists it will change into the parent directory and re-start the search until it finds the  `node_modules` directory and the module. If the root directory is reached node.js will give up and throw a exception.
+node.js will first try to load a core module named `http`. If it can't find a core module with the supplied name node.js will start searching for a directory called `node_modules` starting in the directory of the current file and will try to load the module from there. If the directory doesn't exists it walk up the directory tree searching for the `node_modules` directory and the module. If the root directory is reached and no module has been found, node.js will give up and throw a exception.
 
 ### The event loop ###
 
