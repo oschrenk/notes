@@ -81,6 +81,13 @@
 	curl http://betterthangrep.com/ack-standalone > ~/bin/ack && chmod 0755 !#:3
 	sudo zypper install bash-completion
 	
+	## java
+	# sudo apt-get install maven2
+	
+	## ruby
+	sudo zypper install ruby
+	sudo zypper install rubygems
+	
 	## install scms
 	apt-get install subversion
 	apt-get install git
@@ -96,13 +103,3 @@
 	sudo zypper in nodejs nodejs-devel
 	curl http://npmjs.org/install.sh | sh
 
-
-	## java
-	sudo apt-get install maven2
-
-	## ruby
-	sudo apt-get install ruby
-	sudo apt-get install rubygems
-	
-	## http
-	sudo apt-get install curl
