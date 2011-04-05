@@ -47,6 +47,7 @@
 	apt-get install git
 	apt-get install git-svn
 	# apt-get install gitolite
+	sudo apt-get install meld
 	# hub
 	curl http://chriswanstrath.com/hub/standalone -sLo ~/bin/hub && chmod 755 ~/bin/hub
 	# git flow	
