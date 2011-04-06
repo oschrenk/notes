@@ -377,6 +377,12 @@ This would be what you would normally would program. You just want to use module
 - [four.walls](http://four.w4lls.com/) Wohnungssuche/-angebot
 - [fightly](https://github.com/AdrianGaudebert/fightly-game-engine) Turn based game engine
 
+## Quotes ##
+
+> Windows is very important. Just like PHP
+
+by Ryan Dahl  
+
 ## References ##
 
 - [Ryan Dahl: node.js at jsconf.eu 2010](http://jsconfeu.blip.tv/file/2899135/)
