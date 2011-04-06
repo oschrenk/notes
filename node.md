@@ -246,6 +246,9 @@ You can start debugger by running `node debug script.js` and you get a debugging
 
 	debug> backtrace
 	debug> list
+	debug> quit
+
+V8 offers access to its debugger. The primitive `gdb` style debugger is only way to access it. [node-inspector](https://github.com/dannycoates/node-inspector) offers a web inspector much like the Inspector from Chrome.
 
 ## Appendix ##
 
