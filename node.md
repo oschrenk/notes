@@ -315,6 +315,8 @@ There are [plans/ways around it](nodejs.org/illuminati0.pdf).
 
 ### Creating a module ###
 
+[Source]([1](http://howtonode.org/how-to-module)
+
 Follow good engineering standards: 
 
 - use a version control system. You should prefer `git` as most of the node community uses it.
@@ -433,14 +435,26 @@ This would be what you would normally would program. You just want to use module
 
 ## References ##
 
+### Videos ###
+
 - [Ryan Dahl, Google Tech Talks, July 2010, Node.js: JavaScript on the Server](http://www.youtube.com/watch?v=F6k8lTrAE2g)
 - [Ryan Dahl, jsconf.eu, September 2010, node.js](http://jsconfeu.blip.tv/file/2899135/)
 - [Ryan Dahl, The SF PHP Meetup Group, February 2011, Introduction To node.js](http://www.youtube.com/watch?v=jo_B4LTHi3I)
 - [Felix Geissendörfer, 27C3, node.js as a networking tool](http://www.youtube.com/watch?v=g29PemqW7lQ)
+
+### Guides/Books ###
+
 - [Felix Geissendörfer, nodeguide](http://nodeguide.com)
-- [Tim Caswell: node.js at jsconf 2010](http://creationix.com/jsconf.pdf)
 - [Up and Running with Node.js](http://ofps.oreilly.com/titles/9781449398583/), Upcoming book about node.js by Tom Hughes-Croucher
-- [What it’s like building a real website in Node.js](http://www.travisglines.com/web-coding/what-its-like-building-a-real-website-in-node-js)
+
+### Presentations ###
+
+- [Tim Caswell: node.js at jsconf 2010](http://creationix.com/jsconf.pdf)
+
+### Blogs ###
+
 - [How to Node](http://howtonode.org/), Blog about node.js by Tim Caswell
-- [How to module]([1](http://howtonode.org/how-to-module) Write you own node.js module
+
+### Other ###
+
 - [Official node.js mailing list](http://groups.google.com/group/nodejs)
