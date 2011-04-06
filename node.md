@@ -266,7 +266,7 @@ I built my [own hello world extension](https://github.com/oschrenk/node-hello-ex
 	sudo apt-get update
 	sudo apt-get install nodejs
 	
-### Node Package Manager ###	
+### Node Package Manager ###
 
 	curl http://npmjs.org/install.sh | sh
 
