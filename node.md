@@ -250,6 +250,29 @@ You can start debugger by running `node debug script.js` and you get a debugging
 
 V8 offers access to its debugger. The primitive `gdb` style debugger is only way to access it. [node-inspector](https://github.com/dannycoates/node-inspector) offers a web inspector much like the Inspector from Chrome.
 
+## Problems ##
+
+### Debugging ###
+
+When executing the following code
+
+	function foo() {
+		console.log("foo");
+		setTimeout(bar, 1000);
+	}
+	function bar() {
+		console.log("world");
+		throw new Error("hit a peoblem")
+	}
+	setTimeout(foo, 2000);
+	console.log("hello");
+
+an error will be thrown after 3 seconds. Normally you would have a big stacktrace which you can follow backwards in order to find your bug. Now, in node.js we have a rather small stack traces. 
+
+In the above example we will only get the stacktrace from `bar()`. Every time we return the event loop we will loose the current stack. That makes analyzing problems hard.
+
+There are [plans/ways around it](nodejs.org/illuminati0.pdf).
+
 ## Appendix ##
 
 ### Compilation ###
