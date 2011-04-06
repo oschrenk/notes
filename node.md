@@ -419,6 +419,7 @@ This would be what you would normally would program. You just want to use module
 - [umeboshi](https://github.com/nko/umeboshi-fireteam) A message server to help web developers build apps with detachable UI ([demo](http://vimeo.com/14626831)).
 - [four.walls](http://four.w4lls.com/) Wohnungssuche/-angebot
 - [fightly](https://github.com/AdrianGaudebert/fightly-game-engine) Turn based game engine
+- [nodegit](https://github.com/tbranyen/nodegit) Node.js libgit2 asynchronous native bindings
 
 ## Quotes ##
 
