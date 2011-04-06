@@ -197,3 +197,7 @@ Resetting the SMC on Mac portables with a battery you can remove
 After I cloned my harddrive the _Open with..._ menu was showing double entries. Rebuilding my LaunchServices database helped:
 
 	/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
+	
+### Audio doesn't work ### ###
+
+At some point audio output didn't work. I couldn't even change volume. What happened was that somehow my Macbook was outputting digital audio (indicated by a red light from the headphone jack). Inserting a headphone plug a few times and wiggling it around helped reset things.
