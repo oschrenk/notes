@@ -6,6 +6,14 @@
 
 	curl http://npmjs.org/install.sh | sh
 
+## To _sudo_ or not to _sudo_ ##
+
+Normally you shouldn't use `sudo` for a package manager unless there is a very good reason to - and normally there isn't. [Homebrew](http://mxcl.github.com/homebrew/) (an excellent package manager for OSX) doesn't need it.
+
+Since version 0.3 of though usage of `sudo npm ...` is advised in order to set the correct user id. npm will degrade the user privileges before running build scripts provided by user packages.
+
+Up until now I didn't run into problems without using `sudo` and I don't plan to change my behaviour until I run into problems.
+
 ## Usage ##
 
 | Command | Description |
