@@ -270,6 +270,73 @@ I built my [own hello world extension](https://github.com/oschrenk/node-hello-ex
 
 	curl http://npmjs.org/install.sh | sh
 
+### Creating a module ###
+
+Follow good engineering standards: 
+
+- use a version control system. You should prefer `git` as most of the node community uses it.
+- write a proper `README` and documentation
+- write tests
+
+Also:
+
+- write a `package.json` file
+
+#### Modules Types ####
+
+- A binding to some C or C++ library.
+- A library of functionality to be used in other node programs, written primarily in JavaScript.
+- A command-line program.
+- A website or server or something. (That is, an implementation that you'll put on an actual server, not a framework.)
+
+##### Binding #####
+
+- put your C++ sourcecode in `./src`.
+- put minimum effort into the c++ layer, prefer wrapping the raw functions again in your JavaScript code to make them more usable.
+- node.js programs are compiled using `node-waf` (included with node). Create a `wscript` file and run `node-waf configure build`
+-  use `eio` thread pool to do any actions that perform synchronous I/O
+
+Examples:
+
+- [https://github.com/pkrumins/node-async](https://github.com/pkrumins/node-async)
+- [https://github.com/isaacs/node-async-simple](https://github.com/isaacs/node-async-simple)
+- [https://github.com/pkrumins/node-png](https://github.com/pkrumins/node-png)
+- [https://github.com/mranney/node_pcap](https://github.com/mranney/node_pcap)
+- [https://github.com/ry/node_postgres](https://github.com/ry/node_postgres)
+- [https://github.com/isaacs/node-glob](https://github.com/isaacs/node-glob)
+
+##### Library #####
+
+- organize your own code by using `./lib` directory
+- specify `main` module in your `package.json` to expose functionality
+
+Examples:
+
+- [https://github.com/learnboost/Socket.IO-node](https://github.com/learnboost/Socket.IO-node)
+- [http://documentcloud.github.com/underscore](http://documentcloud.github.com/underscore)
+- [https://github.com/visionmedia/connect](https://github.com/visionmedia/connect)
+- [https://github.com/mikeal/request](https://github.com/mikeal/request)
+- [http://github.com/tmpvar/jsdom](http://github.com/tmpvar/jsdom)
+
+##### Command Line Tool #####
+
+- define `bin` field in your `package.json` telling `npm` which executables should be in your `PATH`
+- `process.argv` is the string array of arguments that represents the command the user started node with. The first item is your executing environment (normally node), the second is the name of your program. To get your arguments you would normally call `var args = process.argv.slice(2)`
+- current working directory can be obtained via `process.cwd()`
+
+Examples:
+
+- [http://npmjs.org/](http://npmjs.org/)
+- [https://github.com/zpoley/json-command](https://github.com/zpoley/json-command)
+- [https://github.com/cloudhead/vows](https://github.com/cloudhead/vows)
+- [https://github.com/LearnBoost/cluster](https://github.com/LearnBoost/cluster)
+
+##### Standalone Server #####
+
+This would be what you would normally would program. You just want to use modules. 
+
+- avoid re-inventing modules. [Search](http://search.npmjs.org/) for existing solutions and try to improve them
+
 ### APIs/Frameworks ###
 
 #### Middleware ####
@@ -322,4 +389,5 @@ I built my [own hello world extension](https://github.com/oschrenk/node-hello-ex
 - [Up and Running with Node.js](http://ofps.oreilly.com/titles/9781449398583/), Upcoming book about node.js by Tom Hughes-Croucher
 - [What it’s like building a real website in Node.js](http://www.travisglines.com/web-coding/what-its-like-building-a-real-website-in-node-js)
 - [How to Node](http://howtonode.org/), Blog about node.js by Tim Caswell
+- [How to module]([1](http://howtonode.org/how-to-module) Write you own node.js module
 - [Official node.js mailing list](http://groups.google.com/group/nodejs)
