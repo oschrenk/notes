@@ -382,7 +382,8 @@ This would be what you would normally would program. You just want to use module
 ## References ##
 
 - [Ryan Dahl: node.js at jsconf.eu 2010](http://jsconfeu.blip.tv/file/2899135/)
-- [Ryan Dahl, Google Texh Talks, July 2010, Node.js: JavaScript on the Server](http://www.youtube.com/watch?v=F6k8lTrAE2g)
+- [Ryan Dahl, Google Tech Talks, July 2010, Node.js: JavaScript on the Server](http://www.youtube.com/watch?v=F6k8lTrAE2g)
+- [Ryan Dahl, The SF PHP Meetup Group, February 2011, Introduction To node.js](http://www.youtube.com/watch?v=jo_B4LTHi3I)
 - [Felix Geissendörfer, 27C3, node.js as a networking tool](http://www.youtube.com/watch?v=g29PemqW7lQ)
 - [Felix Geissendörfer, nodeguide](http://nodeguide.com)
 - [Tim Caswell: node.js at jsconf 2010](http://creationix.com/jsconf.pdf)
