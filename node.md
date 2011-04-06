@@ -370,13 +370,11 @@ This would be what you would normally would program. You just want to use module
 
 ### Fun with node.js ###
 
-- [talk to serial devices](https://github.com/voodootikigod/node-serialport)
-- [talk to usb devices](https://github.com/schakko/node-usb)
-- [talk to arduino](https://github.com/tobeytailor/node-arduino)	
-
+- [node-serialport](https://github.com/voodootikigod/node-serialport) talk to serial devices
+- [node-usb](https://github.com/schakko/node-usb)talk to usb devices
+- [node-arduino](https://github.com/tobeytailor/node-arduino) talk with arduino
 - [umeboshi](https://github.com/nko/umeboshi-fireteam) A message server to help web developers build apps with detachable UI ([demo](http://vimeo.com/14626831)).
 - [four.walls](http://four.w4lls.com/) Wohnungssuche/-angebot
-
 - [fightly](https://github.com/AdrianGaudebert/fightly-game-engine) Turn based game engine
 
 ## References ##
