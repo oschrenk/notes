@@ -252,6 +252,9 @@ V8 offers access to its debugger. The primitive `gdb` style debugger is only way
 
 ## Problems ##
 
+- spaghetti code
+- usage of single thread on multi core machines
+
 ### Debugging ###
 
 When executing the following code
