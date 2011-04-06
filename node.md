@@ -233,6 +233,20 @@ _Spooling pattern_. Is used when we need an entire resource available before we 
 
 I built my [own hello world extension](https://github.com/oschrenk/node-hello-extension) using the [Writing Node.js Native Extensions](https://www.cloudkick.com/blog/2010/aug/23/writing-nodejs-native-extensions/) blog post.
 
+### Debugging ###
+
+You can set breakpoints in your script by adding `debugger;` statements;
+
+	function foo() {
+		debugger;
+		return 1+2;
+	}
+	
+You can start debugger by running `node debug script.js` and you get a debugging prompt. Its like `gdb` - try: 
+
+	debug> backtrace
+	debug> list
+
 ## Appendix ##
 
 ### Compilation ###
