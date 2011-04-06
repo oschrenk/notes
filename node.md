@@ -379,8 +379,10 @@ This would be what you would normally would program. You just want to use module
 
 ## Quotes ##
 
-> Windows is very important. Just like PHP
+> Windows is very important. Just like PHP.
 -- Ryan Dahl  
+
+> Node [is] very bleeding edge. Looks kinda of snappy and cool here but wait until you get into production - right in the gut. -- Ryan Dahl
 
 > The overarching point, however, is that Node is optimal for the new breed of real-time web apps. Yes, there are other means of building real-time tools, but Node lets you build real-time tools on the same platform that runs the rest of your site.
 -- Cade Metz
