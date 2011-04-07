@@ -456,6 +456,7 @@ This would be what you would normally would program. You just want to use module
 
 - [How to Node](http://howtonode.org/), Blog about node.js by Tim Caswell
 - [nodejitsu](http://blog.nodejitsu.com/), Blog from a node.js hosting company
+- [nodenerd.net](http://nodenerd.net/) node.js links and tutorials
 
 ### Other ###
 
