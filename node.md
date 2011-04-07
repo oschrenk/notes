@@ -455,6 +455,7 @@ This would be what you would normally would program. You just want to use module
 ### Blogs ###
 
 - [How to Node](http://howtonode.org/), Blog about node.js by Tim Caswell
+- [nodejitsu](http://blog.nodejitsu.com/), Blog from a node.js hosting company
 
 ### Other ###
 
