@@ -83,3 +83,13 @@ Retrieves all sources (if available) of defined dependencies and then it copies 
 To transform a play application into a working Eclipse project, use the eclipsify command:
 
 	play eclipsify
+	
+## FAQ/Problems ##
+
+### Generating war results in `[Errno 63] File name too long` ###
+
+You have to specify a path that is not inside you application when you 
+generate the war archive. Otherwise it ends with an infinite 
+recursion. 
+
+	play war -o ../project.war
