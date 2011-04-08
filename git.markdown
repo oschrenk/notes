@@ -322,8 +322,6 @@ you would call
     	        git commit-tree "$@";
     	fi' HEAD
 
-## Use cases ##
-
 ## FAQ: Problems/Error Messages ##
 
 ### Git behind a proxy ###
