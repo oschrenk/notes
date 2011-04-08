@@ -2,8 +2,6 @@
 
 ## FreeBSD Interrupt Signals ##
 
-Signal Name 	Signal Number 	Signal Description
-
 | Signal Name | Signal Number | Signal Description | 
 | :---- | :---- | :---- |
 | SIGHUP | 1 | Terminal line hangup
