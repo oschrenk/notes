@@ -15,12 +15,11 @@
 	cd framework
 	ant
 	
-### Setup Play#
+### Setup Play ###
 
-- make sure that Java is in your @path@ (use @java -version). Play will use the default Java or the one available at the @$JAVA_HOME@ path if defined.
-- I also setup $PLAY_HOME in my @.profile@
-- make sure that play is in your @path@. For example via @export PATH=$PLAY_HOME:$PATH@ 
-
+- make sure that Java is in your `PATH` (use `java -version`). Play will use the default Java or the one available at the `$JAVA_HOME` path if defined.
+- I also setup `$PLAY_HOME` in my `.profile`
+- make sure that play is in your `PATH`. For example via `export PATH=$PLAY_HOME:$PATH` 
 
 I put the play framework in an `$SDKS` directory.
 
@@ -48,8 +47,10 @@ I put the play framework in an `$SDKS` directory.
 	# Modules
 	module.siena=${play.path}/modules/siena-1.3
 	module.gae=${play.path}/modules/gae-1.4
+
+## Usage ##
 	
-## With maven ##
+### Maven support ###
 
 Install maven support via
 
@@ -77,7 +78,7 @@ Clears your `app/lib` folder first, then it executes play `mvn:up`
 
 Retrieves all sources (if available) of defined dependencies and then it copies them into `app/lib` folder
 
-## Eclipse ##
+### Eclipse ###
 
 To transform a play application into a working Eclipse project, use the eclipsify command:
 
