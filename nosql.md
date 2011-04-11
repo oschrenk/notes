@@ -1,5 +1,7 @@
 # NoSQL #
 
+- allows heterogeneous data structures 
+
 Offers BASE (Basically Available, Soft state, Eventual consistency) as a consistency model as opposed to the reltational database conecpt of ACID (Atomicity, Consistency, Isolation, Durability), which means that given a sufficiently long period of time over which no updates are sent, we can expect that during this period, all updates will eventually propagate through the system and all the replicas will be consistent.
 
 ## Data models ##
