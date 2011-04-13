@@ -1,6 +1,18 @@
 # Apache #
 
-## Default Paths on OSX ##
+## Installation ##
+
+### Ubuntu ###
+
+	sudo apt-get install apache2
+
+### OSX ###
+
+Comes with the OS
+
+## Default Configuration ##
+
+## OSX ##
 
 	ServerRoot              ::      /usr
 	Primary Config Fle      ::      /etc/apache2/httpd.conf
@@ -10,6 +22,18 @@
 	cgi-bin                 ::      /Library/WebServer/CGI-Executables (empty by default)
 	binary                  ::      /usr/sbin/httpd
 	start/stop              ::      /usr/sbin/apachectl (start|stop|restart|fullstatus|status|graceful|graceful-stop|configtest|help)
+
+## Ubuntu ##
+
+	ServerRoot "/etc/apache2"
+	ErrorLog /var/log/apache2/error.log
+	# Include module configuration:
+	Include /etc/apache2/mods-enabled/*.load
+	Include /etc/apache2/mods-enabled/*.conf
+	# Include all the user configurations:
+	Include /etc/apache2/httpd.conf
+	# Include the virtual host configurations:
+	Include /etc/apache2/sites-enabled/
 
 ## Local Web Development ##
 
@@ -26,12 +50,12 @@ Restart apache with
 
 Now open  `/etc/apache2/extra/httpd-vhosts.conf`. Remove the example virtual hosts and for each project add
 
-	<VirtualHost srpad>
-		ServerName srpad
+	<VirtualHost project1>
+		ServerName project1
 	    DocumentRoot "/Users/jdoe/development/www/project1"
 	</VirtualHost>
 
-The id `srpad` is used in the `VirtualHost` directive and as the `ServerName` property
+The id `project1` is used in the `VirtualHost` directive and as the `ServerName` property
 
 Edit `etc/hosts`
 
