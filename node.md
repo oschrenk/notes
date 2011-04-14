@@ -448,10 +448,6 @@ This would be what you would normally would program. You just want to use module
 - [Up and Running with Node.js](http://ofps.oreilly.com/titles/9781449398583/), Upcoming book about node.js by Tom Hughes-Croucher
 - [Mastering node.js, Open Source eBook](http://visionmedia.github.com/masteringnode/), Public book by TJ Holowaychuk
 
-### Presentations ###
-
-- [Tim Caswell: node.js at jsconf 2010](http://creationix.com/jsconf.pdf)
-
 ### Blogs ###
 
 - [How to Node](http://howtonode.org/), Blog about node.js by Tim Caswell
@@ -461,3 +457,4 @@ This would be what you would normally would program. You just want to use module
 ### Other ###
 
 - [Official node.js mailing list](http://groups.google.com/group/nodejs)
+- [Tim Caswell: node.js at jsconf 2010](http://creationix.com/jsconf.pdf), Presentation (PDF slides)
