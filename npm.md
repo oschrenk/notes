@@ -23,6 +23,8 @@ Up until now I didn't run into problems without using `sudo` and I don't plan to
 | `npm ls` | Searches the local system and the remote registry. |
 | `npm ls installed` | Shows installed modules. |
 | `npm update` | Updates packages. |
+| `npm bundle` | Retrieves the dependencies from the `package.json` and puts them into `./node_modules`  |
+| `npm bundle <path>` | Retrieves the dependencies from the `package.json` and puts them into `<path>`  |
 
 ## Creating a package ##
 
