@@ -2,11 +2,11 @@
 
 [Hub](https://github.com/defunkt/hub) is a command line tool which adds GitHub knowledge to `git`
 
-## Install ## ##
+## Install ##
 
 	brew install hub
 	
-## Configuration ## ##
+## Configuration ##
 
 You must ste github user and token in your `.gitconfig`
 
