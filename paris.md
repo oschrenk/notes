@@ -27,7 +27,7 @@ The Musée d'Orsay (French pronunciation: [myze dɔʁsɛ]) is a museum in Paris,
 
 Centre Georges Pompidou (French pronunciation: [sɑ̃tʁ ʒɔʁʒ pɔ̃pidu]; also known as the Pompidou Centre in English) is a complex in the Beaubourg area of the 4th arrondissement of Paris, near Les Halles, rue Montorgueil and the Marais. It was designed in the style of high-tech architecture.
 
-# Cafés #
+## Cafés ##
 
 *Aux Folies*
 
