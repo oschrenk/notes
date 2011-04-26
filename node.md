@@ -406,6 +406,7 @@ This would be what you would normally would program. You just want to use module
 
 - [spark](https://github.com/senchalabs/spark) Spark is a command-line tool used to start up node server instances written by Tj Holowaychuk and Tim Caswell.
 - [cluster](https://github.com/LearnBoost/cluster) Node.JS multi-core server manager with plugins support.
+- [supervisor](https://github.com/isaacs/node-supervisor) Watches for code changes and restarts the the node instance.
 
 ### Projects/Companies using node.js ###
 
