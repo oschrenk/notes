@@ -20,3 +20,4 @@ tags: things | open hardware | materials
 - [formulor.de](http://www.formulor.de) A webservice for cutting materials. Send them vecor file, choose material and they send you the stuff.
 - [modulor](http://www.modulor.de/) A website for different materials, stationery needs
 - [inventables.com](http://www.inventables.com/) We sell materials that designers, artists, and inventors use to develop new products and pushes the boundaries of what's possible.
+- [maedler.de](http://www.maedler.de/) Metal, cogs and stuff.
