@@ -66,7 +66,7 @@ If you don't have an SSH key, you can generate one via
 
 	ssh-keygen
 	
-By default your private key will be stored in `~/.ssh/id_rsa` and he private key into `~/.ssh/id_rsa.pub`.
+By default your private key will be stored in `~/.ssh/id_rsa` and the private key into `~/.ssh/id_rsa.pub`.
 
 You then want your key to be authorized. You do that by adding your key to the `~/.ssh/authorized_keys` file on the machine you want to log into.
 
