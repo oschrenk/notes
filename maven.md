@@ -108,7 +108,6 @@ The [Mavenize](#mavenize) way is the better (more complete/correct) choice but s
 
     $ mvn install:install-file -Dfile=library.jar -DgroupId=com.company -DartifactId=libraryname -Dversion=1.2.3 -Dpackaging=jar
 
-
 ### Deploy a 3rd party library ###
 
 	mvn deploy:deploy-file -DgroupId=<group-id> \
