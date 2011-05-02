@@ -1,5 +1,13 @@
 # Oracle Database #
 
+## Concepts ##
+
+### Synonyms ###
+
+A synonym is an alternative name for a table, view, sequence and other database objects. The references object does not need to exist at the time of creation of the synonym.
+
+A public synonym is owned by `public` and is therefore valid for each schema. It is also the normal usecase to access objects in another schema without referencing the other schema.
+
 ## FAQ/Problems ##
 
 ### Datenbank herunterfahren/neustarten ###
