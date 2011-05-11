@@ -1,5 +1,11 @@
 # Oracle Database #
 
+## SQL ##
+
+### `EXECUTE IMMEDIATE` implicitly commits before executing DDL statements ###
+
+When executing a `SQL` command in `PL/SQL` via `EXECUTE IMMEDIATE` and its an DDL commmand it implicitly makes a commit.
+
 ## System ##
 
 ### Datenbank herunterfahren/neustarten ###
