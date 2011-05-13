@@ -61,6 +61,8 @@
 	curl http://npmjs.org/install.sh | sh
 
 	## java
+	sudo apt-get install openjdk-6-jdk
+	sudo apt-get install ant
 	sudo apt-get install maven2
 
 	## ruby
