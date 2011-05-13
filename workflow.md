@@ -2,7 +2,7 @@
 
 I never read the book by [David Allen](http://www.davidco.com/). I just read about the method here and there and put together my own method, which might resemble the "official" method more or less -- I don't know. What I did gather was that the book opened many eyes and introduced a solid structure and a vocabulary when discussing workflows and systems for getting things done.
 
-But I realized over time though that the key to get things done is not just listings all the tasks you should do but t rather keeping track of what you have accomplished. It sounds like semantics but it has a high psychological impact.
+But I realized over time though was that the key to get things done is not listing all the tasks you should but keeping track of what you have accomplished. It sounds like semantics but it has a high psychological impact.
 
 They key is not too overload yourself.
 
