@@ -22,6 +22,7 @@
 	sudo src/gl-system-install /usr/local/bin /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
 	cd $HOME
 	gl-setup john.doe.pub
+	rm john.doe.pub
 	
 ## Adminstration ##
 
@@ -40,6 +41,38 @@ Checkout the installation configuration
 	repo    testing
 	        RW+     =   @all
 
+## Usage ##
+
+The layout of the repositories should be as follows:
+
+	repositories/projects/<project-name>/repo
+	repositories/users/<forename.surname>/repo
+	repositories/mirrors/repo
+	repositories/fetching/repo
+
+A project name could be the name of a service/product/client or just an identifier to group projects together. Each user should have his own repo space. If projects of a user are later of general interest they can be promoted kinto the projects namespace. The mirror namespace is just for mirroring external projects - just an idea I don't know if it's super useful.
+
+This is only possible by making use of the _wildcard_ feature which can be enabled by setting `$GL_WILDREPOS` to `1` in `~/.gitolite.rc`
+
+By making use of gitolite's [admin defined commands](http://sitaramc.github.com/gitolite/doc/admin-defined-commands.html) one can do incredible stuff. Forking a project, getting notified of project creatins or commits
+
+## Configuration ##
+
+	@admins 	= john.doe
+	@leads 		= @admins
+	@developers = @leads
+	@users		= @developers
+	
+	repo    projects/acme/.*
+		C	= @leads
+		RW+	= @leads
+		R	= @all
+	
+	repo    users/CREATOR/.*
+		C	= @users
+		RW+ = CREATOR
+		R	= @all
+		
 ## FAQ/Problems ##
 
 ### fatal: 'gitolite-admin' does not appear to be a git repository ###
