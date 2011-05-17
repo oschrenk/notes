@@ -75,3 +75,15 @@ OAuth has different flavors:
 
 **Tip**
 - put the `access_token` in the HTTP header instead as a query param. Prevents (some) caching. Looks better.
+
+## HMac ##
+
+> A server and a client know a public and private key; only the server and client know the private key, but everyone can know the public key… who cares what they know.
+> A client creates a unique HMAC (hash) representing it’s request to the server. It does this by combining the request data (arguments and values or XML/JSON or whatever it was planning on sending) and hashing the blob of request data along with the private key.
+>The client then sends that HASH to the server, along with all the arguments and values it was going to send anyway.
+> The server gets the request and re-generates it’s own unique HMAC (hash) based on the submitted values using the same methods the client used.
+> The server then compares the two HMACs, if they are equal, then the server trusts the client, and runs the request.
+
+- the client does not encode the payload
+- the client sends a checksum(hash) of the payload along with the payload using a private key that only the client and server know
+- as the server also  has access to the private key it can generate the same hash of the payload and can compare the results
