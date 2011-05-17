@@ -1,13 +1,5 @@
 # Company #
 
-## Organisation ##
-
-Only use open source software. Exceptions are allowed when it comes to OS (OS X) and specialized software (Photoshop et al). 
-
-- Project Managment: [Redmine](http://www.redmine.org/)
-- Sourcecode: [Git](http://git-scm.com/), [Gitolite](https://github.com/sitaramc/gitolite)
-- Messaging: Email, MicroMessaging: [status.net](http://status.net/)
-
 ## Code ##
 
 Code is king. 
@@ -52,6 +44,26 @@ Code is king.
 
 [source](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
 
+## Office ##
+
+### Desks ###
+
+- have power outlets on top of the desks
+- have easy accesible ethernet ports available on or near the desk
+
+### Technology ###
+
+- fileserver
+- map/reduce cluster
+
+## Organisation ##
+
+Only use open source software. Exceptions are allowed when it comes to OS (OS X) and specialized software (Photoshop et al). 
+
+- Project Managment: [Redmine](http://www.redmine.org/)
+- Sourcecode: [Git](http://git-scm.com/), [Gitolite](https://github.com/sitaramc/gitolite)
+- Messaging: Email, MicroMessaging: [status.net](http://status.net/)
+
 ## Projects ##
 
 - everything should be in version control
@@ -64,6 +76,10 @@ Code is king.
 ### Versioning ###
 
 Use [Semantic Versioning](http://semver.org/)
+
+## Teams ##
+
+- put teams in same space to support direct communication
 
 ## People ##
 
@@ -82,15 +98,6 @@ Use [Semantic Versioning](http://semver.org/)
 - give him something to do that can go live today
 - whole company or a least project team has meal together on first day with new hire
 - feedback chat after 1d, 1w, 1m
-
-## Teams ##
-
-- put teams in same space to support direct communication
-
-## Technology ##
-
-- fileserver
-- map/reduce cluster
 
 ## Communiy ##
 
