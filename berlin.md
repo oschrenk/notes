@@ -43,6 +43,22 @@ Everything a hobbyist and tinkerer might need
 
 ### Books ###
 
+[Books in Berlin](http://www.booksinberlin.de/)
+
+	Books in Berlin
+	Goethestrasse 69
+	10625 Berlin
+	Tel./Fax: (030) 31 31 233
+	Monday to Friday: 12:00 - 20:00 hrs | Saturday: 10:00 - 16:00 hrs
+
+[Fair Exchange](http://www.fair-exchange.de)
+
+	Dieffenbachstr. 58
+	10967 Berlin
+	Tel.: +49 (0)30 694 46 75
+	E-Mail: info@fair-exchange.de
+	Mo-Fr: 11-19h, 	Sa: 10-18h
+
 ## Co-Working ##
 
 [betahaus](http://betahaus.de/)
