@@ -1,7 +1,7 @@
 # Authentication #
 
-- **Authentication** is any process by which you verify that someone is who they claim they are
-- **Authorization** is finding out if the person, once identified, is permitted to have the resource.
+- **Authentication** is any process by which you verify that someone is who they claim they are. It is about identifying the identidy of the user. Is the user who say they are?
+- **Authorization** is finding out if the person, once identified, is permitted to have the resource, it is requesting. 
 - **Access Control** is about controlling entrance by some arbitrary condition which may or may not have anything to do with the attributes of the particular visitor.
 
 ## Http BasicAuth ##
@@ -17,14 +17,61 @@ It provides access to web resources by providing a username and password when ma
 
 ## OpenId ##
 
+### Terminology ###
+
+- **Identity Provider**: In the real world one of the most commonyly known identity provider is the DMV. You provide the information and they give you a drivers licence.
+- **Relying Party**: If a cop stops you, he relies on the information provided by the the DMV, the *Identity Provider*, to issue you a ticket. He puts trust into the idenitiy provider that the information is correct.
+
+### Idea ###
+
 Open ID gives you one login for multiple sites. Each time you need to log into a site using Open ID you will be redirected to your Open ID site where you login, and then back to the site you wanted orignally to log into.
 
 With Open ID, there is no suggestion of two web apps sharing your data. Except in the very limited sense that the Open ID provider may hold some general information about you, e.g. some photos, addresses, phone numbers, etc., and with your consent, send it back to the consumer so you don’t have to re-enter all the boring profile details again. However, this is data of a generic, non-application-specific, nature. (And even this limited form of sharing is an extension to the core Open ID spec.) 
 
 ## OAuth ##
 
+### Idea ###
+
 OAuth lets you authorise one website – the consumer – to access your data from another website – the provider. For instance, you want to authorise a printing provider – call it Moo – to grab your photos from a photo repository – call it Flickr. Moo will redirect you to Flickr which will ask you, for instance, “Moo wants to download your Flickr photos. Is that cool?”, and then back to Moo to print your photos.
 
 With OAuth, you still need to log into the provider. e.g. When Moo sends you to Flickr, you still have to log into Flickr (or be logged in already). How Flickr decides you’re logged in is completely orthogonal to OAuth. It could be a standard username-password login, it could be via a physical password device, or it could well be via Open ID.
 
 With OAuth, any information you hold on any website can be shared with another website. You could share your GMail with a clever consumer that automatically tags items by inspecting the content, if GMail was an OpenAuth consumer.
+
+### O-Auth 2.0 ###
+
+#### Terminology ####
+
+**Protected Resource**:
+
+- resides on a server
+- requires authorization
+
+**Resource Owner**:
+
+- owns protected respource
+- approves access
+
+**Server**:
+
+- holds the protected resource
+
+**Cient**:
+
+- web application
+- needs access to protected resource
+
+OAuth has different flavors:
+
+1. individual own the resource, decides whether to grant access 
+2. comapny own the ressource, access is granted by IT guraians
+
+#### Individual own the resource, decides whether to grant access ####
+
+- developer registers application with Google, gets a `client_id` and `client_secret`
+- application redirects user to Google specifiying `client_id`, `redirect_uri` (uri where to redirect the user on success), `scope` (what api is the application is tryng to get acess to)
+- Googe redirects back to the application `redirect_url` and includes an `authorization_code` in the URL.
+- the application performs a HTTP `Post` request to Google, including `client_id`, `client_secret` and `code`. Google returns an `access_token` and a `refresh_token`. `refresh_token_` is aused to regain access when the `access_token` expires.
+
+**Tip**
+- put the `access_token` in the HTTP header instead as a query param. Prevents (some) caching. Looks better.
