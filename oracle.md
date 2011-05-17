@@ -6,9 +6,17 @@
 
 When executing a `SQL` command in `PL/SQL` via `EXECUTE IMMEDIATE` and its an DDL commmand it implicitly makes a commit.
 
-## System ##
+## Concepts ##
 
-### Datenbank herunterfahren/neustarten ###
+### Synonyms ###
+
+A synonym is an alternative name for a table, view, sequence and other database objects. The references object does not need to exist at the time of creation of the synonym.
+
+A public synonym is owned by `public` and is therefore valid for each schema. It is also the normal usecase to access objects in another schema without referencing the other schema.
+
+## FAQ/Problems ##
+
+### Shutdown/restart server ###
 
 	sqlplus '/ as sysdba
 	SQL> shutdown immediate
@@ -18,7 +26,7 @@ When executing a `SQL` command in `PL/SQL` via `EXECUTE IMMEDIATE` and its an DD
 
 Das kann natürlich viele Ursachen haben. bei mir war es das ich ein valides Statement mit einem Semikolon abgeschlossen habe.
 
-### Datenbank neu starten nach Reboot der Machine###
+###  Restart Oracle after machine reboot ###
 
 	ssh user@oracle-db
 	 # listener neu	 starten
@@ -30,7 +38,7 @@ Das kann natürlich viele Ursachen haben. bei mir war es das ich ein valides Stat
 	# Enterprise Manager starten:
 	emctl start dbconsole
 
-### Bestehende Verbindungen/Sessions entfernen
+### Bestehende Verbindungen/Sessions entfernen ###
 
 Leider blieben bei manchen Debugging sessions Verbindungen zur Datenbank bestehen. Diese haben
 verhindert Import fahren zu können.

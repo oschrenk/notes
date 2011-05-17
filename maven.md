@@ -189,3 +189,16 @@ Add the following snippet to your `pom.xml`
     </build>
 
 Change the `source` and `target` tags according to your needs
+
+### To change source encoding ###
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<encoding>iso-8859-1</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
