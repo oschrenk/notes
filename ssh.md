@@ -107,19 +107,19 @@ On OSX the public key is hiding in
 
 After moving my profile from a cygwin installation back to my linux machine, I got the folllowing error messages when I tried to clone a git repository:
 
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-  @ WARNING: UNPROTECTED PRIVATE KEY FILE! @
-  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-  Permissions 0644 for '/home/me/.ssh/id_rsa_targethost' are too open.
-  It is recommended that your private key files are NOT accessible by others.
-  This private key will be ignored.
-  bad permissions: ignore key: /home/me/.ssh/id_rsa_targethost
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	@ WARNING: UNPROTECTED PRIVATE KEY FILE! @
+	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+	Permissions 0644 for '/home/me/.ssh/id_rsa_targethost' are too open.
+	It is recommended that your private key files are NOT accessible by others.
+	This private key will be ignored.
+	bad permissions: ignore key: /home/me/.ssh/id_rsa_targethost
 
 The problem can't be better explained, so I just leave you with
 
-  $ chmod -v -R 600 ~/.ssh
+	$ chmod -v -R 600 ~/.ssh
 
 or in human readable form:
 
-  $ chmod -v -R a-rwx ~/.ssh
-  $ chmod -v -R u+rw ~/.ssh
+	$ chmod -v -R a-rwx ~/.ssh
+	$ chmod -v -R u+rw ~/.ssh
