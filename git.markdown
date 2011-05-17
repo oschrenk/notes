@@ -219,6 +219,24 @@ To push your tags to a remote repository, use the following command to push all 
 
     $ git push origin --tags
 
+#### Rename tag ####
+
+Don't do it. Admit you screwed up. Create a tag with the correct name pointing to the same commit an move on. This keeps your team sane.
+
+If you're a lone ranger you don't have a team to keep sane so go ahead.
+
+Create a tag based on old tag
+
+	git tag new_tag old_tag
+	
+Delete tag locally
+
+	git tag -d old_tag
+
+Delete tag on remote (this hurts other developers and has therefore a ugly syntax)	
+	
+	git push origin :refs/tags/old_tag 
+
 ## Advanced Git ##
 
 ### Track/ignore changes ###
