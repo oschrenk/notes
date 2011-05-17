@@ -24,7 +24,7 @@ A public synonym is owned by `public` and is therefore valid for each schema. It
 	
 ### SQLException: ORA-00911: invalid character ###
 
-Das kann natürlich viele Ursachen haben. bei mir war es das ich ein valides Statement mit einem Semikolon abgeschlossen habe.
+There are many possible reasons. I closed a valid statement with a semicolon.
 
 ###  Restart Oracle after machine reboot ###
 
@@ -38,26 +38,23 @@ Das kann natürlich viele Ursachen haben. bei mir war es das ich ein valides Stat
 	# Enterprise Manager starten:
 	emctl start dbconsole
 
-### Bestehende Verbindungen/Sessions entfernen ###
+### Close/Remove open connections/sessions ###
 
-Leider blieben bei manchen Debugging sessions Verbindungen zur Datenbank bestehen. Diese haben
-verhindert Import fahren zu können.
+Adter some botched coding and debugging sessions there were some open connections left.
 
-Man kann die aktuellen Verbindungen als user `sys` in der Rolle `sysdba` so einsehen:
+To view current connections as user `sys` in the role `sysdba`:
 
 	select * from v_$session
 
-Bestehende Verbindungen beendet man mit:
+Existing connections can be closed with:
 
 	alter system kill session 'sid,serial#' immediate;
 
-## Nützliche SQL Statements
+## Helpful SQL Statements ##
 
 ### Oracle show trigger on table ###
 
-	select    trigger_name,
-					trigger_type,
-					status
+	select    trigger_name,	trigger_type, status
 	from      dba_triggers
 	where  
 	table_name = '&table' 
