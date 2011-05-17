@@ -157,6 +157,12 @@ Make a new branch called "experiment"
 *   `-d` Delete a branch. The branch must be fully merged in HEAD
 *   `-D` Delete a branch irrespective of its merged status.
 
+##### Delete remote branches #####
+
+It has a weird syntax (always a indicator that you should not use it)
+
+	git push origin :newfeature
+
 #### Push to remote branch ####
 
 	git push origin branch
