@@ -25,6 +25,16 @@ Code is king.
 - api > framework
 - dependency injection > dependency injection container
 
+### Logging ###
+
+- first class citizen
+- always use [iso 8601](http://en.wikipedia.org/wiki/ISO_8601) for date formatting
+- *Be professional*. Write in professional english.
+- *Concise*.
+- *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future. 
+
+[Ned Batchelder, Logging Style Guide](http://nedbatchelder.com/text/log-style-guide.html)
+
 ### Commits ###
 
 - SCM is not a backup system: NO end-of-day commits!
