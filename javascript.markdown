@@ -180,3 +180,8 @@ If you want more information the `istanceof` operator can help
 [mustache.js](https://github.com/janl/mustache.js)
 
 > Minimal templating with {{mustaches}} in JavaScript
+
+
+Data.js http://substance.io/#michael/data-js
+
+Alert Alernative (no Jquery) http://thrivingkings.com/apprise/
