@@ -28,15 +28,25 @@
 
 > QUnit is a powerful, easy-to-use, JavaScript test suite. It's used by the jQuery project to test its code and plugins but is capable of testing any generic JavaScript code (and even capable of testing JavaScript code on the server-side).
 
-## Graphs ##
+## Algorithms & Datastructures
+
+[data.js](http://substance.io/#michael/data-js)
+
+> Data Manipulation and Graph Persistence for Node.js and the Browser.
+
+[brain](http://harthur.github.com/brain/)
+
+> brain is a JavaScript library for neural networks and Bayesian classifiers
+
+## Visualization ##
 
 [arbor.js]( http://arborjs.org)
 
 > Arbor is a graph visualization library built with web workers and jQuery. Rather than trying to be an all-encompassing framework, arbor provides an efficient, force-directed layout algorithm plusabstractions for graph organization and screen refresh handling.
 
-[data.js](http://substance.io/#michael/data-js)
+[delorean.js](https://github.com/jsmestad/delorean.js)
 
-> Data Manipulation and Graph Persistence for Node.js and the Browser.
+> Time-Series graphing library utilizing Raphael.js
 
 ## Graphics ##
 
