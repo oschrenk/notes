@@ -423,6 +423,7 @@ This would be what you would normally would program. You just want to use module
 - [four.walls](http://four.w4lls.com/) Wohnungssuche/-angebot
 - [fightly](https://github.com/AdrianGaudebert/fightly-game-engine) Turn based game engine
 - [nodegit](https://github.com/tbranyen/nodegit) Node.js libgit2 asynchronous native bindings
+- [nTunes](https://github.com/TooTallNate/nTunes) nTunes is an HTTP-based API for interacting with your iTunes installation
 
 ## Quotes ##
 
