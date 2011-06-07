@@ -82,3 +82,11 @@ By making use of gitolite's [admin defined commands](http://sitaramc.github.com/
 	fatal: The remote end hung up unexpectedly
 
 The problem is that gitolite appends the authorized keys to the .`ssh/authorized_keys` file. Now if there is a prexisting key without the `command` prefix, it will try to use it, and will fail. Just delete the key without the prefix.
+
+### Restrict read access on per-branch basis ###
+
+
+On 07.06.2011, 16:28 Sitaram Chamarty wrote:
+> You can't do it with gitolite.  At one time I thought I found a clever
+way around it, but it wasn't as clever as I thought :-)
+> Use [gerrit](http://code.google.com/p/gerrit/) if you absolutely need that feature. The best solution is to have 2 repos otherwise
