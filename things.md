@@ -4,6 +4,11 @@ tags: things | open hardware | materials
 
 ## Materials ##
 
+### Clay/Polymer/Silicon ###
+
+- [Fimo](http://www.fimo.com/) Polymer clay. Hardened in oven.
+- [sugru](http://sugru.com/) Silicone stuff. Cures at room temperature. Cold/Heat resistant. Dishwasher proof.
+
 ### Glas ###
 
 - to cut glass bottles, use a glass cuter to make a small incision (don't overdo it). Pour hot water slowly over the incision, cool it down.
