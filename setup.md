@@ -11,6 +11,7 @@
 	brew install svn
 	brew install git
 	brew install git-flow
+	brew install git-extras
 	brew install hub
 	
 	## node.js
