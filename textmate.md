@@ -1,21 +1,17 @@
 # Textmate #
 
-## Shortcuts ##
+## Important shortcuts ##
 
-*⌥⌘.* Close XML Tag
+- *⌃⌘T* **Selecting bundle item**
 
-*⌃⌘T* Selecting bundle item
+- *⌥⌘.* Close XML Tag
 
-<dl>
-	<dt>⌃</dt>
-	<dd>Control</dd>
-	<dt>⌥</dt>
-	<dd>Alt</dd>
-	<dt>⇧</dt>
-	<dd>Shift</dd>
-	<dt>⌘</dt>
-	<dd>Command</dd>
-</dl>
+with
+
+- ⌃ Control
+- ⌥ Alt
+- ⇧ Shift
+- ⌘ Command
 
 ## Appearance ##
 
