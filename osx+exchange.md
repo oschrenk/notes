@@ -1,8 +1,8 @@
-# Exchange on OSX
+# Exchange on OSX #
 
 As Exchange support is growing for OSX, I still had problems getting access in an Exchange in a Exchange 2003 environment - even the Exchange IMAP implementation, which I suspected to work with the standard IMAP implementation, didn't work.
 
-## DavMail
+## DavMail ##
 
 In the end "DavMail":http://davmail.sourceforge.net/ came to the rescue. It's an application that serves as a proxy to the Outlook Web Access and exposes the services offered on that page as default Mail, LDAP, CalDav services on localhost.
 

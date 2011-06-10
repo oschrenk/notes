@@ -6,7 +6,7 @@ Code is king.
 
 - everybody and not only developers have access to source repositories
 - everybody can watch other developers and projects
-- everybody can fork the source code and file pull reqests
+- everybody can fork the source code and file pull requests
 
 ### Style ###
 
@@ -32,7 +32,7 @@ Code is king.
 - SCM is not a backup system: NO end-of-day commits!
 - Commit changes and not single files!
 - One change per commit!
-- Dont' change Whitespace/Formatting with the code!
+- Don't change whitespace/formatting with the code!
 
 ### Commit Messages ###
 
@@ -49,18 +49,18 @@ Code is king.
 ### Desks ###
 
 - have power outlets on top of the desks
-- have easy accesible ethernet ports available on or near the desk
+- have easy accessible ethernet ports available on or near the desk
 
 ### Technology ###
 
 - fileserver
 - map/reduce cluster
 
-## Organisation ##
+## Organization ##
 
 Only use open source software. Exceptions are allowed when it comes to OS (OS X) and specialized software (Photoshop et al). 
 
-- Project Managment: [Redmine](http://www.redmine.org/)
+- Project Management: [Redmine](http://www.redmine.org/)
 - Sourcecode: [Git](http://git-scm.com/), [Gitolite](https://github.com/sitaramc/gitolite)
 - Messaging: Email, MicroMessaging: [status.net](http://status.net/)
 
@@ -69,8 +69,8 @@ Only use open source software. Exceptions are allowed when it comes to OS (OS X)
 - everything should be in version control
 - documents aren't code and should live in their own source code repository 
 - if they should be a direct dependency create a super project and add project as submodules
-- continous integration
-- make status visible (eg. status monitoring, whiteboard). make it a game.
+- continuos integration
+- make status visible (e.g.. status monitoring, whiteboard). make it a game.
 - automate everything
 
 ### Versioning ###
@@ -86,12 +86,12 @@ Use [Semantic Versioning](http://semver.org/)
 - everybody gets their own laptop, mouse, keyboard, monitor, os (only unix based though)
 - create open space
 - offer books, place to read
-- release partys
+- release parties
 - release cookies
 
 ### New Hires ###
 
-- check what harware he wants/needs before he starts 
+- check what hardware he wants/needs before he starts 
 - assign a mentor for the first day 
 - mentor should be project lead/member of the project the new hire should work in
 - email/scm/... should be setup when he sits down
@@ -99,7 +99,7 @@ Use [Semantic Versioning](http://semver.org/)
 - whole company or a least project team has meal together on first day with new hire
 - feedback chat after 1d, 1w, 1m
 
-## Communiy ##
+## Community ##
 
 - have hackathons with the local developers
 - organize talks and presentations

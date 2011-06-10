@@ -6,7 +6,7 @@
 
 ## Sightseeing ##
 
-I love the look of the (old) town. Just walk arround. Take the small roads, avoid the Royal Mile. There are so many lovely shops there with so funny names. Oh the british - how they love puns.
+I love the look of the (old) town. Just walk around. Take the small roads, avoid the Royal Mile. There are so many lovely shops there with so funny names. Oh the british - how they love puns.
 
 - [Royal Botanical Garden](http://www.rbge.org.uk/). Lovely in the summer.
 - [Edinburgh Castle](http://www.edinburghcastle.gov.uk/). Expensive. Full of tourists. There are far more interesting castles in Scotland (Sterling Castle) and more beautiful castles (Eilean Donan Castle). It works as background. 
@@ -15,9 +15,9 @@ I love the look of the (old) town. Just walk arround. Take the small roads, avoi
 - [Holyrood Park](http://en.wikipedia.org/wiki/Holyrood_Park) A must visit. Try to get up on [Arthur's Seat](http://en.wikipedia.org/wiki/Arthur%27s_Seat,_Edinburgh) during sunset and enjoy!
 - National Museum of Scotland
 
-## Getting arround ##
+## Getting around ##
 
-Just walk. Take your time and walk. It's the best way to get arround. But if you must:
+Just walk. Take your time and walk. It's the best way to get around. But if you must:
 
 - Central Radio Taxis (Black Cabs) - 0131 229 2468
 - City Cabs (Black Cabs) - 0131 228 1211

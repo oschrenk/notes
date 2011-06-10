@@ -8,7 +8,7 @@ Grande Caffe Mocha
 :	260 kcal
 Grande Caffe Mocha mit Sahne
 :	330 kcal
-Grande Caramel Macchiato
+Grande Karamell Macchiato
 :	240 kcal
 Grande White Chocolate Mocha
 :	400 kcal

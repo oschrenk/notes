@@ -7,7 +7,7 @@ From [forums.mysql](http://forums.mysql.com/read.php?11,71860,72130#msg-72130)
 *   Main directory folder at `/usr/local/mysql` (maybe with a version
     suffix) which contains all the subdirectories. If it contains a
     version suffix there will also be a soft link called mysql that
-    points to the actuall directory folder.
+    points to the actual directory folder.
 *   A folder at `/Library/StartupItems/MySQLCOM`
 *   A preference pane in `/Library/PreferencePanes/` as well and that
     is all there is to it.

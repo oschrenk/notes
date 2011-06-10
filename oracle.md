@@ -4,7 +4,7 @@
 
 ### `EXECUTE IMMEDIATE` implicitly commits before executing DDL statements ###
 
-When executing a `SQL` command in `PL/SQL` via `EXECUTE IMMEDIATE` and its an DDL commmand it implicitly makes a commit.
+When executing a `SQL` command in `PL/SQL` via `EXECUTE IMMEDIATE` and its an DDL command it implicitly makes a commit.
 
 ## Concepts ##
 
@@ -40,7 +40,7 @@ There are many possible reasons. I closed a valid statement with a semicolon.
 
 ### Close/Remove open connections/sessions ###
 
-Adter some botched coding and debugging sessions there were some open connections left.
+After some botched coding and debugging sessions there were some open connections left.
 
 To view current connections as user `sys` in the role `sysdba`:
 

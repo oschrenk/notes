@@ -2,19 +2,19 @@
 
 ## Durham ##
 
-[Durham Universiy](http://www.dur.ac.uk/) Beautiful Campus. The uni itself was closed, but the library was open, showing first edition folios of Shakespeare, Newton's Mathematica. Oh yeah...
+[Durham University](http://www.dur.ac.uk/) Beautiful Campus. The uni itself was closed, but the library was open, showing first edition folios of Shakespeare, Newton's Mathematica. Oh yeah...
 
-There is a small second hand shop at the end of North Road, just befire the bridge (Silver Street), left, down. I bought an awesome sweater there!
+There is a small second hand shop at the end of North Road, just before the bridge (Silver Street), left, down. I bought an awesome sweater there!
 
 Forget the Durham Indoor Market. All rubbish.
 
-[Durham Cathedral](http://www.durhamcathedral.co.uk/) Forh the money over and walk up the stairs. Awesome view. The courtyard and the cathedral itself (with an added twoer) are used in the Harry Potter movies.
+[Durham Cathedral](http://www.durhamcathedral.co.uk/) Fork the money over and walk up the stairs. Awesome view. The courtyard and the cathedral itself (with an added tower) are used in the Harry Potter movies.
 
 ## Whitby ##
 
 There is a bus from Durham to Whitby (but only from April to September). It takes a few hours by Bus. It isn't really faster by train. If you have a car take it. 
 
-Ther is a beach. Dip your toe in the water.
+There is a beach. Dip your toe in the water.
 
 [Whitby Abbey](http://www.english-heritage.org.uk/daysout/properties/whitby-abbey/) First up the 199 stairs. The Abbey itself is a ruin. YOu have to pay to visit it. Must see. It was closed, but there was opening, where you can sneak in. Being alone there was breathtaking. It is beautiful. 
 
@@ -22,7 +22,7 @@ Ther is a beach. Dip your toe in the water.
 
 ## York ##
 
-Such a lovely town to just walk arround, go shopping. Get some butterfudge. 
+Such a lovely town to just walk around, go shopping. Get some butter fudge. 
 
 [York Minster](http://www.yorkminster.org/) Beautiful. 
 

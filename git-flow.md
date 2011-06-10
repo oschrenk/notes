@@ -40,7 +40,7 @@ To finish a feature
 - Must merge back into: `develop` and `master`
 - Branch naming convention: `release-*`
 
-Used for preperation of a release. Miniscule changes and change metadata (eg. version number). Create a release when `develop` is ready for new release. Only now version number changes, what version number must be decided now.
+Used for preparation of a release. Minuscule changes and change metadata (e.g.. version number). Create a release when `develop` is ready for new release. Only now version number changes, what version number must be decided now.
 
 To start a release
 

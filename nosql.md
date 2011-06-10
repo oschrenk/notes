@@ -2,7 +2,7 @@
 
 - allows heterogeneous data structures 
 
-Offers BASE (Basically Available, Soft state, Eventual consistency) as a consistency model as opposed to the reltational database conecpt of ACID (Atomicity, Consistency, Isolation, Durability), which means that given a sufficiently long period of time over which no updates are sent, we can expect that during this period, all updates will eventually propagate through the system and all the replicas will be consistent.
+Offers BASE (Basically Available, Soft state, Eventual consistency) as a consistency model as opposed to the relational database concept of ACID (Atomicity, Consistency, Isolation, Durability), which means that given a sufficiently long period of time over which no updates are sent, we can expect that during this period, all updates will eventually propagate through the system and all the replicas will be consistent.
 
 ## Data models ##
 
@@ -54,7 +54,7 @@ Column oriented databases when data needs to be aggregated
 ## Notes ##
 
 - persistence vs non-persistence, i.e., some NoSQL technologies are entirely in-memory data stores
-- Be ready to deal with no standard interface like JDBC/ODBC or standarized query language like SQL; every NoSQL tool has a different interface
+- Be ready to deal with no standard interface like JDBC/ODBC or standardized query language like SQL; every NoSQL tool has a different interface
 - web-scale/large-scale NoSQL systems are distributed across dozens to hundreds of servers and networks as opposed to a shared database system
 - Get used to the possibly uncomfortable realization that you won’t know where data lives (most of the time)
 - Get used to the fact that data may not always be consistent; ‘eventually consistent’ is one of the key elements of the BASE model

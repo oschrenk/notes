@@ -4,17 +4,18 @@
 
 - Sibelius
 - Béla Bartók
+- Ryuichi Sakamoto
 
 ## Instruments ##
 
 ### Piano ###
 
-*   Ryuichi Sakamoto
+- Ryuichi Sakamoto
 
 ### Cello ###
 
-*   Jaques Morelenbaum
+- Jaques Morelenbaum
 
 ### Violin ###
 
-*   Everton Nelson
+- Everton Nelson

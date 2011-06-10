@@ -8,7 +8,7 @@ It is also a requirement for a given hook to be executable. However - in a fresh
 
 Most of the hooks fall into one of two categories
 
-1. `pre` hooks will be executed before an action (eg. a commit). It can therefore be used to deny or accept an action. Return values unequal to zero deny an action.
+1. `pre` hooks will be executed before an action (e.g.. a commit). It can therefore be used to deny or accept an action. Return values unequal to zero deny an action.
 2. `post`hooks will be executed after an action. It can be used for triggering the dispatch of emails or other notifications. The exit codes are ignored.	
 
 | Hook					| Description 	|

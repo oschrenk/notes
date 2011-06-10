@@ -2,7 +2,7 @@
 
 [SableCC](http://sablecc.org/)
 
-### Commpiler ###
+### Compiler ###
 
 #### Lexer ####
 

@@ -94,7 +94,7 @@ When running Ant through Flex Builder and setting `ANT_OPTS` in your `.profile` 
 
 Why Adobe chooses to include Ant Tasks with the SDK but not to install the Ant Tools for Eclipse by default is beyond me.
 
-To install them seperatly
+To install them separately
 
 1.  Launch Flex Builder 3
 2.  Go to `Help > Software Updates > Find and Install`

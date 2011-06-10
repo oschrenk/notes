@@ -40,7 +40,7 @@ To install a port run
 
 	$ sudo port -f uninstall <portname> [... <other_portname>]
 
-You can spefify multiple ports to uninstall by just appending their names to the command
+You can specify multiple ports to uninstall by just appending their names to the command
 
 - -f := Force Mode
 

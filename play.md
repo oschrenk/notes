@@ -68,7 +68,7 @@ Installs play-parent project (a Maven pom project) into local Maven repository. 
 
 	play mvn:update // or play mvn:up
 
-Rretrieves all defined dependencies and then it copies them into your `app/lib` folder
+Retrieves all defined dependencies and then it copies them into your `app/lib` folder
 
 	play mvn:refresh // or play mvn:re
 
@@ -99,13 +99,13 @@ You can then change your settings according to your environment by prefixing it 
 	%production.db.user=root
 	%production.db.pass=1515312
 
-You can start your environment by passing it to play `start` or `play run` eg.
+You can start your environment by passing it to play `start` or `play run` e.g..
 
 	play start --%production
 
 ### Logging ###
 
-You should define proper logging mechanisms yb dropp
+You should define proper logging mechanisms
 
 	log4j.rootLogger=ERROR, Rolling
 

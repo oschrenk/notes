@@ -1,6 +1,6 @@
 # Privoxy + Tor #
 
-The bundle that the Tor project offers [online](http://www.torproject.org/easy-download.html.en) offers a gui, Tor itself and according to [this](http://www.torproject.org/download.html.en) also [Privoxy](http://www.privoxy.org/). Opening the package contents or just a quick glance at the settings reveals that it is bundled with [Polipo](http://www.pps.jussieu.fr/~jch/software/polipo/), another web proxy.
+The bundle that the Tor project offers [online](http://www.torproject.org/easy-download.html.en) offers a GUI, Tor itself and according to [this](http://www.torproject.org/download.html.en) also [Privoxy](http://www.privoxy.org/). Opening the package contents or just a quick glance at the settings reveals that it is bundled with [Polipo](http://www.pps.jussieu.fr/~jch/software/polipo/), another web proxy.
 
 Let's get the sources and configure it ourselves:
 
@@ -28,7 +28,7 @@ Now you can use Privoxy as your Proxy. To use it in your favorite terminal, use
 
     $ export http_proxy=http://127.0.0.1:8118/
 
-To use it on Firefox open the preferences (`Cmd + ,`) and click through to `Advanced > Network > Settings... > Manual proxy configuration` and enter the above address. To use it in Safari you have to hange your network settings as Safari uses the system proxy settings.
+To use it on Firefox open the preferences (`Cmd + ,`) and click through to `Advanced > Network > Settings... > Manual proxy configuration` and enter the above address. To use it in Safari you have to change your network settings as Safari uses the system proxy settings.
 
 You can forward to Tor by editing the config file
 

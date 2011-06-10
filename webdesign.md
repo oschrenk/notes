@@ -8,7 +8,7 @@
 4. Choose a domain name
 5. Choose a web host
 6. Launch your site
-7. Promote oyur website
+7. Promote your website
 
 ## Ideas ##
 

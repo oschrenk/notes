@@ -7,9 +7,9 @@
 
 ## Subversive
 
-Subversive ist das offizielle Project der Eclipse Foundation, dass die Eclipse Plattform um einen Subversion Team Provider erweitert. Es ist nicht Teil der Standarddistribution, so dass es nachinstalliert werden muss. 
+Subversive ist das offizielle Projekt der Eclipse Foundation, dass die Eclipse Plattform um einen Subversion Team Provider erweitert. Es ist nicht Teil der Standarddistribution, so dass es nachinstalliert werden muss. 
 
-Leider ist die Installation ein wenig anstrengender als sie sein sollte, da Subversive in 2 Teile aufgesplittet ist, dem Plug-In und dem Connector. Während das Plug-In auf der Seite des Ecipse Projektes gehostet wird, ist der Connector auf der Seite von Polarion[1].
+Leider ist die Installation ein wenig anstrengender als sie sein sollte, da Subversive in 2 Teile aufgesplittert ist, dem Plug-In und dem Connector. Während das Plug-In auf der Seite des Eclipse Projektes gehostet wird, ist der Connector auf der Seite von Polarion[1].
 
 Die Downloads bzw. Links zu der Update Seite des Plug-Ins sind hier:
 
@@ -40,9 +40,9 @@ oder
 		> Subversive SVN Team Provider (Incubation)
 
 
-Problem mit Subversive
-Native JAVA Libraries sollen nicht da sein trotz
-sudo port install subversion-javahlbindings
+Problem mit Subversive. Native JAVA Libraries sollen nicht da sein, trotz
+	
+	sudo port install subversion-javahlbindings
 
 Probeweise
 
@@ -63,7 +63,7 @@ Auch gerne mal einfach auswählen und probieren. Trotz der Anzeige das sie nicht
 
 ##Nutzen von SSL geschützten Repositories
 
-Es empfiehlt sich das CA Zertifikat als vertrauenswürdig einzustufen. man besorgt sich also das CA Zertigikat vom admin und legt es irgendwo ab, wo man es wiederfindet.
+Es empfiehlt sich das CA Zertifikat als vertrauenswürdig einzustufen. man besorgt sich also das CA Zertifikat vom admin und legt es irgendwo ab, wo man es wieder findet.
 
 Die Datei
 
@@ -85,7 +85,7 @@ Billige Kopien
 
 #### Eclipse SVN Client
 
-Mir ist danach Eclipse erst einmal abgestürzt - Eclipse und die lieben Plugins... irgendwann finde ich nochmal eine Möglichkeit sie ordentlich zu managen.
+Mir ist danach Eclipse erst einmal abgestürzt - Eclipse und die lieben Plugins... irgendwann finde ich nochmals eine Möglichkeit sie ordentlich zu managen.
 
 Fehlermeldung:
 
@@ -94,8 +94,8 @@ Fehlermeldung:
 	Keep location anyway?
 
 * Userrechte?
-* Firewall (Little Snitch?)`
-* Falsche Pfadangabe? Sicher das `http://localhost/svn/REPO` angegegben wurde?
+* Firewall (Little Snitch?)
+* Falsche Pfadangabe? Sicher das `http://localhost/svn/REPO` angegeben wurde?
 
 Prüfen ob repo über Browser erreichbar
 
@@ -138,7 +138,7 @@ Bei Eclipse
 
 ##### Modify Apache’s httpd.confOn OS X #
 
-The Apache configuration file httpd.conf is located in `/etc/apache2/httpd.conf `. This file is only writeble for the root user. Therefore you have to edit it using 
+The Apache configuration file httpd.conf is located in `/etc/apache2/httpd.conf `. This file is only writeable for the root user. Therefore you have to edit it using 
 
 	sudo vi /etc/apache2/httpd.conf 
 	
@@ -166,7 +166,7 @@ Now you can access the repository using the URL `http://localhost/repo`
 
 ### Permission denied
 
-Gerade wenn man Eclipse nutzt kann es zu einigen Problemen kommen wenn es um SVN geht. Etwa wenn man Projekte migriert. Dann kann es auch gerne mal dazu kommen, dass svn cleanup nicht mehr funktioniert, da DAteirechte nocht mehr stimmen. Es kann sogar passieren das das Immutable Flag gesetzt wird, was dafür sorgt dass nichtmal root etwas ändern kann.
+Gerade wenn man Eclipse nutzt kann es zu einigen Problemen kommen wenn es um SVN geht. Etwa wenn man Projekte migriert. Dann kann es auch gerne mal dazu kommen, dass svn cleanup nicht mehr funktioniert, da Dateirechte nicht mehr stimmen. Es kann sogar passieren das das Immutable Flag gesetzt wird, was dafür sorgt dass nichtmal root etwas ändern kann.
 
  	$ cd .svn
 	$ chflags -R nouchg .

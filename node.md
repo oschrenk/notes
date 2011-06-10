@@ -8,21 +8,21 @@ The [official homepage](http://nodejs.org/) explains `node.js` as
 
 [V8](http://code.google.com/p/v8/) is a JavaScript Engine by Google. It does a very good Job of increasing JavaScripts performance by compiling it into machine code. V8 itself is written in C++ and so are most parts of node.js. 
 
-[Ryan Dahl](http://tinyclouds.org/) saw the value in using JavaScript as a server side scripting language. He is very opnionated on how I/O should be done and node.js is his answer to the problems developers are faced when dealing with I/O.
+[Ryan Dahl](http://tinyclouds.org/) saw the value in using JavaScript as a server side scripting language. He is very opinionated on how I/O should be done and node.js is his answer to the problems developers are faced when dealing with I/O.
 
 Currently most I/O code is blocking - meaning that a code block waits for some I/O to work finish before further execution.
 
 	var result = db.query("select ...")
 
-This wastes CPU cycles. Normally developers deal with this problem by writing multitreaded programs, so that other threads can take over, when one thread has to wait. Threads come with an overhead. Each thread costs memory and the context-switching between them can be hard and time consuming. Projects like [nginx](http://nginx.org/), [Lighttp](http://www.lighttpd.net/), [Cherokke](http://www.cherokee-project.com/) are examples that the approach of a single-treaded event loop do work quite well.
+This wastes CPU cycles. Normally developers deal with this problem by writing multithreaded programs, so that other threads can take over, when one thread has to wait. Threads come with an overhead. Each thread costs memory and the context-switching between them can be hard and time consuming. Projects like [nginx](http://nginx.org/), [Lighttp](http://www.lighttpd.net/), [Cherokee](http://www.cherokee-project.com/) are examples that the approach of a single-treaded event loop do work quite well.
 
-For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His propsosed solution is using an event loop and using non blocking I/O all the way down. JavaScript is a good candidate for this abstraction layer as its language and API specification have no notion of binary data or I/O and offers some nice language features such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
+For Ryan Dahl _"threaded concurrency is a leaky abstraction"_. His proposed solution is using an event loop and using non blocking I/O all the way down. JavaScript is a good candidate for this abstraction layer as its language and API specification have no notion of binary data or I/O and offers some nice language features such as closures. In fact JavaScript was designed for using an event loop. On the user interface level you have events such as `onClick` to which you can bind a callback function. The culture of JavaScript is already geared towards evented programming.
 
 `node.js` provides a _purely evented_, _non blocking infrastructure_ to script _highly concurrent_ programs. It's design goals are
 
 - everything is asynchronous. The base environment has been built essentially from scratch. It's hard to make blocking code.
 - HTTP and sockets are first class citizens. The example Hello World is over HTTP. Node keeps you focused on on dealing with the data, rather than spending all your time dealing with the sockets or protocols.
-- API is both familar to client side JS developers and old school UNIX hackers
+- API is both familiar to client side JS developers and old school UNIX hackers
 
 Don't underestimate the last point. [Github](https://github.com/), a source code repository lists JavaScript as the most used language with [19% of all committed code](https://github.com/languages) being JavaScript.
 
@@ -60,7 +60,7 @@ node.js will first try to load a core module named `http`. If it can't find a co
 
 The event loop is the system that JavaScript uses to deal with these incoming request from various parts of the system in a sane manner. JavaScript takes a simple approach that makes the process much more understandable but does introduce a few constraints.
 
-On the server there isn't a user to drive a variety of interactions. Instead we have a whole range of reactions to take on many different kinds of events. Node takes the approach that all I/O activities should be non-blocking. This means that all HTTP requests, database queries, file I/O, etc. do not halt execution until they return, instead they run independantly and then emit an event when the data is available.
+On the server there isn't a user to drive a variety of interactions. Instead we have a whole range of reactions to take on many different kinds of events. Node takes the approach that all I/O activities should be non-blocking. This means that all HTTP requests, database queries, file I/O, etc. do not halt execution until they return, instead they run independently and then emit an event when the data is available.
 
 In every day life we are used to having all sorts of internal callbacks for dealing with events, and yet, like JavaScript, we only ever do one thing at once. JavaScript uses a single-threaded concept to deal with events.
 
@@ -102,7 +102,7 @@ It's important to note that these events are instance based. There are no global
 
 ### HTTP ###
 
-A simpe HTTP server:
+A simple HTTP server:
 
 	var http = require('http');
 	var server = http.createServer();
@@ -113,7 +113,7 @@ A simpe HTTP server:
 	server.on('request', handleReq);
 	server.listen(8125);
 
-Making outoging requests. A simple HTTP client:
+Making outgoing requests. A simple HTTP client:
 
 	var http = require('http');
 	var opts = {
@@ -197,7 +197,7 @@ Although JavaScript supports strings as primitives, you would normally write the
 	<Buffer 61>
 	>
 
-The `write` method will return the number of written bytes. If characters won't fit (bytewise) no character will be written. Be carfeul when you write with an offset though as it will insert the `null` character as a terminator.
+The `write` method will return the number of written bytes. If characters won't fit (byte wise) no character will be written. Be careful when you write with an offset though as it will insert the `null` character as a terminator.
 
 	> var b = new Buffer(5);
 	> b.write('fffff');

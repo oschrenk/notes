@@ -1,6 +1,6 @@
 # Spring Framework
 
-- Framwork to address complexity of JavaEE development
+- Framework to address complexity of JavaEE development
 - Offers multiple modules/components
 
 ## Core Container
@@ -10,8 +10,8 @@
 	- Type2: Setter Injection
 	- Type3: Constructor Injection
 
-Dependeny Injection is a form IoC (Inversion of COntrol) that removes explicit dependence on container API. Java methods are used to inject dependencies
-- application code is easier to test. Beans have simple, core Java properties and method whhich are easy to test.
+Dependency Injection is a form IoC (Inversion of COntrol) that removes explicit dependence on container API. Java methods are used to inject dependencies
+- application code is easier to test. Beans have simple, core Java properties and method which are easy to test.
 - explicit dependencies. All objects needed for execution of a method are known without reading the code.
 	
 `BeanFactory` to create objects, two modes

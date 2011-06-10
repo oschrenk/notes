@@ -10,7 +10,7 @@ When you look at your computer memory, it is organized into three segments:
 
 ## Multi Threading ##
 
-- _Process_. Are independet from each other. Processes carry considerable state information. They have separate address space. They interact only through system-provided inter-process communication mechanisms
+- _Process_. Are independent from each other. Processes carry considerable state information. They have separate address space. They interact only through system-provided inter-process communication mechanisms
 - _Threads_. Exists as subsets of a process. Multiple threads within a process share state as well as memory and other resources. Threads share their address space.
 - _Green-Threads_. Are threads that are scheduled by a virtual machine (VM) instead of natively by the underlying operating system. They emulate multithreaded environments without relying on any native OS capabilities, and they are managed in user space instead of kernel space, enabling them to work in environments that do not have native thread support. [Sintes2001][#Sintes:2001]
 

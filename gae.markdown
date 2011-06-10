@@ -11,7 +11,7 @@
 	
 ## Register your application with GAE
 
-## Run once to create neccesary stub files ##
+## Run once to create necessary stub files ##
 
 Add your GAE application ID to @acmeapp/war/WEB-INF/appengine-web.xml@
 

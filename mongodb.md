@@ -27,7 +27,7 @@ For just trying out some stuff you can use the mongo shell
 	mongo 
 	>
 	
-You can directly connect to a database by issueing
+You can directly connect to a database by issuing
 
 	mongo foo
 	mongo 192.168.13.7/foo

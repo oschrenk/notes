@@ -2,7 +2,7 @@
 
 ## Sourceforge ##
 
-To checkout complete projects using cvs from sourceforge
+To checkout complete projects using cvs from Sourceforge
 
 	mkdir PROJECTNAME
 	cd PROJECTNAME

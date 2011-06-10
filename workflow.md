@@ -52,11 +52,11 @@ Mainly because of calls I still depend on good old pen and paper right beside my
 
 It sounds strange but If a colleague has a question, they normally don't get my attention right away, at least not always. Thats somewhat because of my line of work. When you do software development, you often find yourself in deep concentration. I know it sounds harsh but if you do have a problem, do your own research first. Maybe it has a simple solution. Only if you know your problem approach the guy who you suppose has an answer to it, but be so considerate to ask if he has the time for you if its a bigger issue. Chances are if its a bigger a problem, I also want to solve it, as I might run into it. I always try to free up some time as quickly as I can.
 
-If you have other tasks you can do in the meantime just ask them for 10 minutes and ask them to approach you If they do have the time. Aswith telephone calls, using a PC isn't as expressive and fast as pen and paper. It is better to just use a trusty pencil if you have to communicate ideas and record actions that present yourself during the exchange.
+If you have other tasks you can do in the meantime just ask them for 10 minutes and ask them to approach you If they do have the time. As with telephone calls, using a PC isn't as expressive and fast as pen and paper. It is better to just use a trusty pencil if you have to communicate ideas and record actions that present yourself during the exchange.
 
 Of course there are exceptions to this rule. If it is really important, make your point clear. If a production server is down and clients can't use some service, don't wait half a day until the administrator has time for you.
 
-Sometimes you don't have a specific problem, but a rather fuzzyproblem, maybe a design decision or you need someone to bounce ideas to and from. Just ask for the time and have a go at that whiteboard.
+Sometimes you don't have a specific problem, but a rather fuzzy problem, maybe a design decision or you need someone to bounce ideas to and from. Just ask for the time and have a go at that whiteboard.
 
 ### Meetings ###
 

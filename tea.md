@@ -4,27 +4,24 @@
 
 ### Mao Jian ###
 
-China
-
-little sweet, hint of grass
+- China
+- little sweet, hint of grass
 
 ### Sencha ###
 
-Japan
-
-Light, Grassy
+- Japan
+- Light, Grassy
 
 ### Hojicha ###
 
-Japan
-
-Roasted, Wooden
+- Japan
+- Roasted, Wooden
 
 ## Tableware ##
 
 ## Gai Wan ##
 
-## Preperation ##
+## Preparation ##
 
 ### Mom's Water Boiler ###
 
@@ -52,7 +49,7 @@ Taken from [essen & trinken](http://www.essen-und-trinken.de/rezept/119704/marok
 
 #### Cooking ####
 
-- First infusion of the green tea. Brew for 1-2 minutes, drink or pour away, keep leaves in teapot, as they are needed fpr the second infusion.  
+- First infusion of the green tea. Brew for 1-2 minutes, drink or pour away, keep leaves in teapot, as they are needed for the second infusion.  
 - Clean mint leaves. Add directly into teapot. Add saffron, anise and sugar. Brew with 70-80°C hot water.
 - Brew for 5-8 minutes. Swing the teapot from time to time.
 
@@ -60,15 +57,15 @@ Serve hot, add sugar if needed.
 
 #### Notes ####
 
-The tase of the tea highly depends on the mint leaves. Only "Mentha Spicata var crispa 'Marokko'" offers the original moroccan mint tea aroma. Other blends offer different flavors
+The taste of the tea highly depends on the mint leaves. Only "Mentha Spicata var crispa 'Marokko'" offers the original moroccan mint tea aroma. Other blends offer different flavors
 
-*   Mentha Spicata var crispa &#8216;Nane' (consumed with black tea in Turkey and Tunesia &#8211; distinct, aromatic)
+*   Mentha Spicata var crispa &#8216;Nane' (consumed with black tea in Turkey and Tunisia &#8211; distinct, aromatic)
 *   Mentha suaveolens (apple mint &#8211; light, fruity)
 *   Mentha species 'Hillary's Sweet Lemon' (light, sweet, bloomy)
 
 *   Soft and jung light green leaves fresh sprouts taste sweet, full-bodied aromatic, light in taste.
 *   Hard and old dark green leaves taste more spicy, less sweet. More distinct taste.
 
-It is better to clean the leaves with hot water before the brewing, it infuses better, and tastes less earthy, leaving you with golden yellow color instead of greenisch color.
+It is better to clean the leaves with hot water before the brewing, it infuses better, and tastes less earthy, leaving you with golden yellow color instead of greenish color.
 
 Even better than the hot washing is a steam bath. Just steam it for 1-2 minutes. The water will be bleary and of a greenish color, containing all the unwanted substances. Just pour it away.

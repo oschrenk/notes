@@ -10,7 +10,7 @@ To search packages
 	apt-cache --name-only search apache
 
 	
-## User Managment ##
+## User Management ##
 
 You shouldn't be working with a `root` account. Create another user first:
 
@@ -43,7 +43,7 @@ add
 
 	jdoe ALL=(ALL) ALL
 
-Save the via by exiting via `^X` and save it to the suggested filename. `visudo` takres care of sanity checking.
+Save the via by exiting via `^X` and save it to the suggested filename. `visudo` takes care of sanity checking.
 
 Open another shell and ssh into your linode with the newly created user. Check if the home directory exists and try if you can `sudo`.
 

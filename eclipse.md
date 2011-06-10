@@ -17,7 +17,7 @@ The default is that Eclipse uses the currently logged in username. To change the
 	
 In OSX the  `eclipse.ini` can be found under `path/to/Eclipse.app/Contents/MacOS/eclipse.ini`
 
-If you need some more flexibility eg. setting it depending on your workspace you might want to look into the usage of [JAutoDoc
+If you need some more flexibility e.g.. setting it depending on your workspace you might want to look into the usage of [JAutoDoc
 ](http://jautodoc.sourceforge.net/) and changing the default template and setting a property.
 
 ## Hints ##

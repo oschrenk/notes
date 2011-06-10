@@ -42,7 +42,7 @@
 
 [arbor.js]( http://arborjs.org)
 
-> Arbor is a graph visualization library built with web workers and jQuery. Rather than trying to be an all-encompassing framework, arbor provides an efficient, force-directed layout algorithm plusabstractions for graph organization and screen refresh handling.
+> Arbor is a graph visualization library built with web workers and jQuery. Rather than trying to be an all-encompassing framework, arbor provides an efficient, force-directed layout algorithm plus abstractions for graph organization and screen refresh handling.
 
 [delorean.js](https://github.com/jsmestad/delorean.js)
 
@@ -64,4 +64,4 @@
 
 Makes use of the Entity Component System
 - every object is an entity
-- compontents are objects that extend the functionality of entities
+- components are objects that extend the functionality of entities

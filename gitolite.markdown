@@ -24,7 +24,7 @@
 	gl-setup john.doe.pub
 	rm john.doe.pub
 	
-## Adminstration ##
+## Administration ##
 
 Check out the administration repository
 
@@ -50,11 +50,11 @@ The layout of the repositories should be as follows:
 	repositories/mirrors/repo
 	repositories/fetching/repo
 
-A project name could be the name of a service/product/client or just an identifier to group projects together. Each user should have his own repo space. If projects of a user are later of general interest they can be promoted kinto the projects namespace. The mirror namespace is just for mirroring external projects - just an idea I don't know if it's super useful.
+A project name could be the name of a service/product/client or just an identifier to group projects together. Each user should have his own repo space. If projects of a user are later of general interest they can be promoted to the projects namespace. The mirror namespace is just for mirroring external projects - just an idea I don't know if it's super useful.
 
 This is only possible by making use of the _wildcard_ feature which can be enabled by setting `$GL_WILDREPOS` to `1` in `~/.gitolite.rc`
 
-By making use of gitolite's [admin defined commands](http://sitaramc.github.com/gitolite/doc/admin-defined-commands.html) one can do incredible stuff. Forking a project, getting notified of project creatins or commits
+By making use of gitolite's [admin defined commands](http://sitaramc.github.com/gitolite/doc/admin-defined-commands.html) one can do incredible stuff. Forking a project, getting notified of project being created or committed to.
 
 ## Configuration ##
 
@@ -81,10 +81,9 @@ By making use of gitolite's [admin defined commands](http://sitaramc.github.com/
 	fatal: 'gitolite-admin' does not appear to be a git repository
 	fatal: The remote end hung up unexpectedly
 
-The problem is that gitolite appends the authorized keys to the .`ssh/authorized_keys` file. Now if there is a prexisting key without the `command` prefix, it will try to use it, and will fail. Just delete the key without the prefix.
+The problem is that gitolite appends the authorized keys to the .`ssh/authorized_keys` file. Now if there is a preexisting key without the `command` prefix, it will try to use it, and will fail. Just delete the key without the prefix.
 
 ### Restrict read access on per-branch basis ###
-
 
 On 07.06.2011, 16:28 Sitaram Chamarty wrote:
 > You can't do it with gitolite.  At one time I thought I found a clever

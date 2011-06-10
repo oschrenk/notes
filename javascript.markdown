@@ -175,13 +175,8 @@ If you want more information the `istanceof` operator can help
 
 [arbor.js]( http://arborjs.org)
 
-> Arbor is a graph visualization library built with web workers and jQuery. Rather than trying to be an all-encompassing framework, arbor provides an efficient, force-directed layout algorithm plusabstractions for graph organization and screen refresh handling.
+> Arbor is a graph visualization library built with web workers and jQuery. Rather than trying to be an all-encompassing framework, arbor provides an efficient, force-directed layout algorithm plus abstractions for graph organization and screen refresh handling.
 
 [mustache.js](https://github.com/janl/mustache.js)
 
 > Minimal templating with {{mustaches}} in JavaScript
-
-
-Data.js http://substance.io/#michael/data-js
-
-Alert Alernative (no Jquery) http://thrivingkings.com/apprise/

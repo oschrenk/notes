@@ -83,7 +83,7 @@ Get it [here](//www.ditchnet.org/xmlmate/).
     $ git clone git://github.com/timcharper/git-tmbundle.git Git.tmbundle
 
 *   In the TextMate preferences, advanced tab, shell variables, set
-    the TM\_GIT variable to point to your installation of git (ie
+    the TM\_GIT variable to point to your installation of git (i.e.
     `/usr/local/bin/git`)
 *   Many shortcuts are available from the Git-shortcut (Ctrl-Shift-G).
     Subversion commands are Command-Option-g.  Less frequent commands

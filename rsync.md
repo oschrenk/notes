@@ -25,7 +25,7 @@ To copy the folder `path` and its contents to `/volume/path` (it will create the
 
 Without the final slash, rsync will copy the directory in its entirety. With the trailing slash, it will copy the contents of the directory but won’t recreate the directory
 
-Exclude files by adding patterns, for example you can exclude hidden files ba adding
+Exclude files by adding patterns, for example you can exclude hidden files by adding
 
     --exclude=".*/"
 

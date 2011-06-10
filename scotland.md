@@ -25,8 +25,8 @@ Plan your trip even if you are off season. Many hostels bb might be closed or no
 
 The city itself offers nothing much. I guess it's a nice base for visiting [Ben Nevis](http://en.wikipedia.org/wiki/Ben_Nevis)
 
-Let it be known here that I despice the guys at the Ben Nevis Destillery. They wouldn't offer us a tour just because we were only two persons. They really must love their product.
+Let it be known here that I despise the guys at the Ben Nevis Distillery. They wouldn't offer us a tour just because we were only two persons. They really must love their product.
 
 ### Eilean Donan Castle ###
 
-- [Eilean Donan Castle](http://www.eileandonancastle.com/) It's awesome. Go there early in the morning clib arround and have a picnic at the sea.
+- [Eilean Donan Castle](http://www.eileandonancastle.com/) It's awesome. Go there early in the morning walk around and have a picnic at the sea.

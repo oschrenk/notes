@@ -2,7 +2,7 @@
 
 ## What I like
 
-* Window managment. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
+* Window management. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
 * Consistency. `cmd+.` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application. 
     
 ## Hints
@@ -51,7 +51,7 @@ These commands force expanded dialog boxes for saving (top) and printing (bottom
     $ defaults write -g NSNavPanelExpandedStateForSaveMode -boolean true
     $ defaults write -g PMPrintingExpandedStateForPrint -boolean true
 
-### Remove Spotight icon from menu bar
+### Remove Spotlight icon from menu bar
 
     $ sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
 
@@ -116,7 +116,7 @@ To disable Ping DropDown Box
 	
 	$ defaults write com.apple.iTunes hide-ping-dropdown 1 
 
-To restore default Ping DropDown Box behaviour 
+To restore default Ping DropDown Box behavior 
 
 	$ defaults delete com.apple.iTunes hide-ping-dropdown 
 	
@@ -154,7 +154,7 @@ Resetting the configuration worked for me
         
 You now have a folder where all members of the group friday can read, write and delete files, as well as read, write to and create new sub folders. The ACL rule takes precedence over standard UNIX file permissions and is automatically inherited. It's this automatic inheritance that is really important. Now you are ready to copy your iTunes, Aperture, iPhoto libraries, plus anything else you want to share, into the shared folder.
 
-IMPORTANT: You must copy (hold down Option in Finder prior to dragging), and not merely move, items. Moving items doesn't inherit the correct ACL rules. Moving doesn't change POSIX file atributes, permssions, ...
+IMPORTANT: You must copy (hold down Option in Finder prior to dragging), and not merely move, items. Moving items doesn't inherit the correct ACL rules. Moving doesn't change POSIX file attributes, permissions, ...
 
 ## FAQ/Problems
 

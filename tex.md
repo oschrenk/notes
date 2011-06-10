@@ -2,8 +2,7 @@
 
 ## Setting up xetex ##
 
-Xetex allows proper UTF-8 support and using
-otf fonts
+Xetex allows proper UTF-8 support and using otf fonts
 
 Write this into the header of your texfile
 

@@ -65,7 +65,7 @@ Twyla Tharp, The Creative Habit
 
 Thomas Edison
 
-> Lass mich ich kann das!&#8230;Oh, Kaputt.
+> Lass mich, ich kann das!&#8230;Oh, Kaputt.
 
 Unbekannt
 

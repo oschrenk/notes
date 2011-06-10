@@ -105,7 +105,7 @@ On OSX the public key is hiding in
 
 ### Permissions are too open ###
 
-After moving my profile from a cygwin installation back to my linux machine, I got the folllowing error messages when I tried to clone a git repository:
+After moving my profile from a cygwin installation back to my linux machine, I got the following error messages when I tried to clone a git repository:
 
 	@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 	@ WARNING: UNPROTECTED PRIVATE KEY FILE! @

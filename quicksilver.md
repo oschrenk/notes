@@ -12,7 +12,7 @@ press period `.`
 
 ## FAQ/Problems ##
 
-## Define directories as conent types ##
+## Define directories as content types ##
 
 Just type
 

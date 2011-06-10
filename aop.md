@@ -1,10 +1,10 @@
-# Aspect Oriented Programming with AspectJ
+# Aspect Oriented Programming with AspectJ #
 
 	<aop:config>
 		<aop:advisor advice-ref="txAdvice" pointcut="execution(* com.acme.ServiceImpl.*(..))" order="1"/>
 	</aop:config>
 	
-## Pointcuts
+## Pointcuts ##
 
 A pointcut is a set of join points defined with a query. Whenever the program execution reaches such a join point, a piece of code, the *advice* is executed.
 
