@@ -12,7 +12,7 @@ Normally you shouldn't use `sudo` for a package manager unless there is a very g
 
 Since version 0.3 of though usage of `sudo npm ...` is advised in order to set the correct user id. npm will degrade the user privileges before running build scripts provided by user packages.
 
-Up until now I didn't run into problems without using `sudo` and I don't plan to change my behaviour until I run into problems.
+Up until now I didn't run into problems without using `sudo` and I don't plan to change my behavior until I run into problems.
 
 ## Usage ##
 
