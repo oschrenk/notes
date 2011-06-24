@@ -12,13 +12,13 @@
 
 A **host** is connected to one or more OpenCL **devices** (collection of one or more *compute units* (arguably cores)). A system can offer multiple devices. Pick the best device for your algorithm. To execute code on these devices the developer writes kernels in OpenCL (a sort of C) and a host program to control the environment (in C or C++).
 
-Think of the **kernel** as the entry points to the device program. They are the only functions that can be called from the host. 
+Think of the **kernel** as the entry points to the device program. They are the only functions that can be called from the host.
 
 When writing a kernel you will have to think about the execution model. The code you write will be executed by many (many, many) different threads with each thread executing the same code but handling different data (**SIMD**: Single instruction, multiple data).
 
 Every time a kernel is launched lots of **work items** are launched. A work item is the smallest execution entity. Each work-item has an ID, which is accessible from the kernel, and which is used to distinguish the data to be processed by each work-item.
 
-You can define local **work groups** to allow communication and cooperation between work-items (they share memory). Each has their own ID and using events can be used organized and synchronize the work items,. 
+You can define local **work groups** to allow communication and cooperation between work-items (they share memory). Each has their own ID and using events can be used organized and synchronize the work items,.
 
 Work groups are organized through the *ND-Range*, an abstract organization layer.
 
@@ -49,7 +49,7 @@ Try it out
 	make
 
 Basic `Makefile`:
-	
+
 	CXX = g++
 	DIR=/home/john.doe/NVIDIA_GPU_Computing_SDK/OpenCL/common
 	#----------------------------------------------------------------
@@ -79,7 +79,7 @@ Basic `Makefile`:
 
 ## OS X ##
 
-OS X > 10.6.x comes preinstalled with OpenCL. 
+OS X > 10.6.x comes preinstalled with OpenCL.
 
 Basic `Makefile`:
 
@@ -133,8 +133,8 @@ Example code
 
 	clGetDeviceIDs (cl_platform_id platform, cl_device_type device_type, cl_uint num_entries, cl_device_id *devices, cl_uint *num_devices)
 
-- `platform` refers to the platform ID returned by `clGetPlatformIDs` or can be `NULL`. If platform is `NULL`, the behavior is implementation-defined.	
-- `device_type` is a bitfield that identifies the type of OpenCL device. 
+- `platform` refers to the platform ID returned by `clGetPlatformIDs` or can be `NULL`. If platform is `NULL`, the behavior is implementation-defined.
+- `device_type` is a bitfield that identifies the type of OpenCL device.
 	- `CL_DEVICE_TYPE_CPU` An OpenCL device that is the host processor. The host processor runs the OpenCL implementations and is a single or multi-core CPU.
 	- `CL_DEVICE_TYPE_GPU` An OpenCL device that is a GPU. By this we mean that the device can also be used to accelerate a 3D API such as OpenGL or DirectX.
 	- `CL_DEVICE_TYPE_ACCELERATOR` Dedicated OpenCL accelerators (for example the IBM CELL Blade). These devices communicate with the host processor using a peripheral interconnect such as PCIe.
@@ -147,7 +147,7 @@ Example code
 	cl_device_id devices[2];
 	err = clGetDeviceIDs(NULL, CL_DEVICE_TYPE_GPU, 1, &devices[0], &num_devices_returned);
 	err = clGetDeviceIDs(NULL, CL_DEVICE_TYPE_CPU, 1, &devices[1], &num_devices_returned);
-		
+
 **Create a context**
 
 	cl_context clCreateContext (const cl_context_properties *properties, cl_uint num_devices, const cl_device_id *devices, void (CL_CALLBACK *pfn_notify)(const char *errinfo, const void *private_info, size_t cb, void *user_data), void *user_data, cl_int *errcode_ret)
@@ -170,7 +170,7 @@ Sample
 
 - `context` must be a valid OpenCL context.
 - `device` must be a device associated with the context.
-- `properties` specifies a list of properties (see spec for details. One is for ordering command, the other is for enabling profiling) for the command-queue. The list is terminated with `0`. 
+- `properties` specifies a list of properties (see spec for details. One is for ordering command, the other is for enabling profiling) for the command-queue. The list is terminated with `0`.
 - `errcode_ret` will return an appropriate error code. If `errcode_ret` is `NULL`, no error code is returned.
 
 Sample
@@ -187,7 +187,7 @@ To execute our kernels we first have to move our data from the host to the globa
 
 - `context` is a valid OpenCL context used to create the buffer object.
 - `flags` is a bit-field that is used to specify allocation and usage information
-	- `CL_MEM_READ_WRITE` Default. The memory object will be read and written by a kernel 
+	- `CL_MEM_READ_WRITE` Default. The memory object will be read and written by a kernel
 	- `CL_MEM_WRITE_ONLY` The memory object will be written but not read by a kernel.
 	- `CL_MEM_READ_ONLY` The memory object is a read-only memory object when used inside a kernel.
 	- `CL_MEM_COPY_HOST_PTR` Valid only if `host_ptr` is not `NULL`. If specified, it indicates that the application wants the OpenCL implementation to allocate memory for the memory object and copy the data from memory referenced by `host_ptr`.
@@ -226,8 +226,8 @@ Sample code
 	size_t sourcesize[] = { strlen(openclsource) };
 	cl_program program = clCreateProgramWithSource(curr_ctxt, 1, &openclsource, sourcesize, &clresult);
 	if (clresult != CL_SUCCESS) printf("Compile error\n");
-	
-In practice it seems that `clCreateProgramWithSource` will never return an error.  
+
+In practice it seems that `clCreateProgramWithSource` will never return an error.
 
 To compile and build the program you use
 
@@ -250,7 +250,7 @@ Create a Kernel
 	cl_kernel	clCreateKernel (cl_program program, const char *kernel_name, cl_int *errcode_ret)
 
  - `program` is a program object with a successfully built executable.
- - `kernel_name` is a function name in the program declared with the `__kernel` qualifier. 
+ - `kernel_name` is a function name in the program declared with the `__kernel` qualifier.
  - `errcode_ret` will return an appropriate error code. If `errcode_ret` is `NULL`, no error code is returned.
 
 Sample
@@ -270,7 +270,7 @@ Use `clSetKernelArg` to set the argument value for a specific argument of a kern
 ### Launching the kernel ###
 
 	cl_int clEnqueueNDRangeKernel (cl_command_queue command_queue, cl_kernel kernel, cl_uint work_dim, const size_t *global_work_offset, const size_t *global_work_size, const size_t *local_work_size, cl_uint num_events_in_wait_list, const cl_event *event_wait_list, cl_event *event)
-	
+
 - `command_queue` is a valid command-queue
 - `kernel` is a valid kernel object. The OpenCL context associated with *kernel* and *command-queue* must be the same.
 - `work_dim` is the number of dimensions. Must be greater than zero and less than or equal to `CL_DEVICE_MAX_WORK_ITEM_DIMENSIONS`
@@ -299,7 +299,7 @@ Reading the buffer and getting the results back to the host
 
 	cl_int	clEnqueueReadBuffer (	cl_command_queue command_queue,
 	 								cl_mem buffer,
-	 								cl_bool blocking_read, 
+	 								cl_bool blocking_read,
 									size_t offset,
 									size_t cb,
 									void *ptr,
@@ -308,10 +308,10 @@ Reading the buffer and getting the results back to the host
 									cl_event *event)
 
 - `command_queue` and `buffer` must be created with the same OpenCL context
-- If `blocking_read` is `CL_TRUE`, clEnqueueReadBuffer is blocking and does not return until the buffer has been read	and copied into `ptr`. If `CL_FALSE` clEnqueueReadBuffer is non blocking and returns. The contents of the buffer that `ptr` points to cannot be used until the read command has completed. `event` argument returns an event object which can be used to query the execution status of the read command.
+- If `blocking_read` is `CL_TRUE`, clEnqueueReadBuffer is blocking and does not return until the buffer has been read and copied into `ptr`. If `CL_FALSE` clEnqueueReadBuffer is non blocking and returns. The contents of the buffer that `ptr` points to cannot be used until the read command has completed. `event` argument returns an event object which can be used to query the execution status of the read command.
 - `offset` is the offset in bytes in the buffer object to read from or write to
 - `cb` is the size in bytes of data being read or written.
-- `ptr` is the pointer to buffer in host memory where data is to be read 
+- `ptr` is the pointer to buffer in host memory where data is to be read
 - `event_wait_list` and `num_events_in_wait_list` specify events that need to complete before this particular command can be executed. If `event_wait_list` is `NULL`, then this particular command does not wait on any event to complete. If `event_wait_list` is `NULL`, `num_events_in_wait_list` must be `0`.
 - `event` returns an event object that identifies this particular read command. Can be `NULL`
 
@@ -340,7 +340,7 @@ Clean up behind yourself. Everything allocated with `clCreate...` must be destro
 
 ###	`./../../../x86_64-suse-linux/bin/ld: cannot find -lGLU ` ###
 
-I just started up yast and install the `freeglut-devel` package
+I just started up yast and installed the `freeglut-devel` package
 
 ### `"error: ‘uint’ does not name a type" types.h` ###
 
