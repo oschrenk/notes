@@ -34,3 +34,7 @@
 - [fightly](https://github.com/AdrianGaudebert/fightly-game-engine) Turn based game engine
 - [nodegit](https://github.com/tbranyen/nodegit) Node.js libgit2 asynchronous native bindings
 - [nTunes](https://github.com/TooTallNate/nTunes) nTunes is an HTTP-based API for interacting with your iTunes installation
+
+## IO ##
+
+- [log.io](http://logio.org/) Real-time log monitoring in your browser
