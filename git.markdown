@@ -475,6 +475,29 @@ Then push again
 
 	git push origin master
 
+### fatal: git checkout: updating paths is incompatible with switching branches. ###
+
+I wa trying to fetch a remote branch when I got the error message:
+
+	fatal: git checkout: updating paths is incompatible with switching branches.
+	Did you intend to checkout 'origin/1.0' which can not be resolved as commit?
+
+This occurs when you are trying to checkout a remote branch that your local git repo is not aware of yet. Try:
+
+	git remote show origin
+
+If the remote branch you want to checkout is under "New remote branches" and not "Tracked remote branches" then you need to fetch them first:
+
+	git fetch
+	
+Now you can:
+
+	git checkout --track -b 1.0 origin/1.0
+	
+or shorter
+
+	git co -t origin/1.0
+
 ## Sources ##
 
 <p class="footnote" id="fn1"><sup>1</sup> <a href="http://ftp.newartisans.com/pub/git.from.bottom.up.pdf">Git from the bottom up</a> (John Wiegley, 09-12-02)</p>
