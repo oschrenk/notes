@@ -6,5 +6,6 @@ Use [Gitolite](https://github.com/sitaramc/gitolite/)
 
 ## Serving the web ##
 
-[Gitalist](http://www.gitalist.com/)
+- [cgit](http://hjemli.net/git/cgit/)
+- [Gitalist](http://www.gitalist.com/)
 
