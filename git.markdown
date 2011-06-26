@@ -28,7 +28,7 @@ repository
 :	A **repository** is a collection of _commits_, each of which is an archive of what the project's working tree looked like at a past date, whether on your machine or someone else's. It also defines _HEAD_ (see below), which identifies the _branch_ or commit the current working tree stemmed from. Lastly, it contains a set of branches and _tags_, to identify certain commits by name.
 
 the index
-:	Also known as _staging area_ or just _stage_.Git does not commit changes directly from the working tree into the repository. Instead, changes are first registered in something called the index. Think of it as a way of “confirming” your changes, one by one, before doing a commit (which records all your approved changes at once).
+:	Also known as _staging area_ or just _stage_. Git does not commit changes directly from the working tree into the repository. Instead, changes are first registered in something called the index. Think of it as a way of “confirming” your changes, one by one, before doing a commit (which records all your approved changes at once).
 
 commit
 :	A **commit** is a snapshot of your working tree at some point in time. The state of _HEAD_ (see below) at the time your commit is made becomes that commit’s parent. This is what creates the notion of a "revision history".
@@ -80,7 +80,9 @@ See [Migrate SVN](#migrate-svn) for some more information, but run add `--global
 
 ## Basic Git ##
 
-### Start a new project with Git ###
+### Creating a repo ###
+
+Create a repo
 
      $ mkdir notes
      $ cd notes
@@ -89,27 +91,11 @@ See [Migrate SVN](#migrate-svn) for some more information, but run add `--global
      $ git add README
      $ git commit -m 'first commit'
 
-### Clone existing repository ###
+Or just clone it
 
     $ git clone git@github.com:username/project.git
 
-### Adding ###
-
-To track a file or directory
-
-    $ git add <path>
-
-To untrack a file
-
-    git rm --cached <path>
-
-#### Undo Adding ####
-
-You might also call it revert adding a file:
-
-    git reset HEAD filename
-
-### Undo changes ###
+### Changes ###
 
 #### Undo all changes in working dir, deleting untracked files ####
 
@@ -117,6 +103,12 @@ You might also call it revert adding a file:
     git clean -f -d
 
 You can also use `git clean -f -x -d`, which also deletes the ignored files
+
+### Staging ###
+
+To stage a file or directory
+
+    $ git add <path>
 
 #### Restore deleted file ####
 
@@ -169,6 +161,10 @@ Make a new branch called "experiment"
 
 *   `-d` Delete a branch. The branch must be fully merged in HEAD
 *   `-D` Delete a branch irrespective of its merged status.
+
+#### Rename branch ####
+
+	git branch -m old_branch new_branch
 
 ##### Delete remote branches #####
 
@@ -282,7 +278,7 @@ Suppose you want to remove a file (containing confidential information or copyri
 
 However, if the file is absent from the tree of some commit, a simple `rm` filename will fail for that tree and commit. Thus you may instead want to use `rm -f` filename as the script.
 
-Using `--index-filter` with git-rm yields a significantly faster version. Like with using `rm` filename, `git rm --cached filename` will fail if the file is absent from the tree of a commit. If you want to "completely forget" a file, it does not matter when it entered history, so we also add `--ignore-unmatch`
+Using `--index-filter` with `git-rm` yields a significantly faster version. Like with using `rm` filename, `git rm --cached filename` will fail if the file is absent from the tree of a commit. If you want to "completely forget" a file, it does not matter when it entered history, so we also add `--ignore-unmatch`
 
     $ git filter-branch --index-filter 'git rm --cached --ignore-unmatch filename' merge-point..HEAD
 
@@ -477,7 +473,7 @@ Then push again
 
 ### fatal: git checkout: updating paths is incompatible with switching branches. ###
 
-I wa trying to fetch a remote branch when I got the error message:
+I was trying to fetch a remote branch when I got the error message:
 
 	fatal: git checkout: updating paths is incompatible with switching branches.
 	Did you intend to checkout 'origin/1.0' which can not be resolved as commit?
