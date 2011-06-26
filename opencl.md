@@ -206,6 +206,30 @@ Sample
 	cl_mem src_b_d = clCreateBuffer(context, CL_MEM_READ_ONLY | CL_MEM_COPY_HOST_PTR, mem_size, src_b_h, &error);
 	cl_mem res_d = clCreateBuffer(context, CL_MEM_WRITE_ONLY, mem_size, NULL, &error);
 
+### Writing to a buffer ###
+
+If you data is aligned in a away so that you can't copy it directly to the device with `clCreateBuffer` you can use `clEnqueueWriteBuffer` to write to the memory of the device.
+
+	cli_int	clEnqueueWriteBuffer 	(
+										cl_command_queue command_queue,
+										cl_mem buffer,
+										cl_bool blocking_write,
+										size_t offset,
+										size_t cb,
+										const void *ptr,
+										cl_uint num_events_in_wait_list,
+										const cl_event *event_wait_list,
+										cl_event *event
+									)
+
+- `command_queue` refers to the command-queue in which the write command will be queued. `command_queue` and `buffer` must be created with the same OpenCL context.
+- `buffer` refers to a valid buffer object.
+- If `blocking_write` is `CL_TRUE`, the OpenCL implementation copies the data referred to by `ptr` and enqueues the write operation in the command-queue. The memory pointed to by ptr can be reused by the application after the clEnqueueWriteBuffer call returns. If `blocking_write` is `CL_FALSE`, the OpenCL implementation will use `ptr` to perform a non-blocking write. As the write is non-blocking the implementation can return immediately. The memory pointed to by `ptr` cannot be reused by the application after the call returns.
+- `offset` is the offset in bytes in the buffer object to write to.
+- `cb` is the size in bytes of data being read or written.
+- `ptr` is the pointer to buffer in host memory
+- `event_wait_list` and `num_events_in_wait_list` specify events that need to complete before this particular command can be executed. For more information please look into the spec.
+
 ### Preparing the kernel ###
 
 There are two ways of creating a kernel either from source (`clCreateProgramWithSource`) or from a binary (`clCreateProgramWithBinary`).
