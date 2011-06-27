@@ -37,4 +37,5 @@
 
 ## IO ##
 
+- [colors.js](https://github.com/Marak/colors.js) Get color and style in your node.js console
 - [log.io](http://logio.org/) Real-time log monitoring in your browser
