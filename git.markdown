@@ -110,6 +110,10 @@ To stage a file or directory
 
     $ git add <path>
 
+#### Unstage a file ####
+
+	git reset HEAD path/to/file
+
 #### Restore deleted file ####
 
     git checkout HEAD^ foo.bar
