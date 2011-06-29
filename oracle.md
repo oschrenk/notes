@@ -59,3 +59,7 @@ Existing connections can be closed with:
 	where  
 	table_name = '&table' 
 	-- and owner = '&owner'
+
+### Which database version am I running ###
+
+	select version from v$instance;
