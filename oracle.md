@@ -59,3 +59,13 @@ Existing connections can be closed with:
 	where  
 	table_name = '&table' 
 	-- and owner = '&owner'
+
+### Which database version am I running ###
+
+	select version from v$instance;
+
+## Resources ##
+
+- [AskTom](http://asktom.oracle.com)
+- [Oracle consulting support](http://dba-oracle.com/)
+- [Oracle Expert](http://hoopercharles.wordpress.com/)
