@@ -226,7 +226,7 @@ If you data is aligned in a away so that you can't copy it directly to the devic
 - `buffer` refers to a valid buffer object.
 - If `blocking_write` is `CL_TRUE`, the OpenCL implementation copies the data referred to by `ptr` and enqueues the write operation in the command-queue. The memory pointed to by ptr can be reused by the application after the clEnqueueWriteBuffer call returns. If `blocking_write` is `CL_FALSE`, the OpenCL implementation will use `ptr` to perform a non-blocking write. As the write is non-blocking the implementation can return immediately. The memory pointed to by `ptr` cannot be reused by the application after the call returns.
 - `offset` is the offset in bytes in the buffer object to write to.
-- `cb` is the size in bytes of data being read or written.
+- `cb` is the size in bytes of data being written.
 - `ptr` is the pointer to buffer in host memory
 - `event_wait_list` and `num_events_in_wait_list` specify events that need to complete before this particular command can be executed. For more information please look into the spec.
 
@@ -333,7 +333,7 @@ Reading the buffer and getting the results back to the host
 
 - `command_queue` and `buffer` must be created with the same OpenCL context
 - If `blocking_read` is `CL_TRUE`, clEnqueueReadBuffer is blocking and does not return until the buffer has been read and copied into `ptr`. If `CL_FALSE` clEnqueueReadBuffer is non blocking and returns. The contents of the buffer that `ptr` points to cannot be used until the read command has completed. `event` argument returns an event object which can be used to query the execution status of the read command.
-- `offset` is the offset in bytes in the buffer object to read from or write to
+- `offset` is the offset in bytes in the buffer object to write to
 - `cb` is the size in bytes of data being read or written.
 - `ptr` is the pointer to buffer in host memory where data is to be read
 - `event_wait_list` and `num_events_in_wait_list` specify events that need to complete before this particular command can be executed. If `event_wait_list` is `NULL`, then this particular command does not wait on any event to complete. If `event_wait_list` is `NULL`, `num_events_in_wait_list` must be `0`.
