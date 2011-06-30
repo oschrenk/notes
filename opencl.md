@@ -124,7 +124,11 @@ Basic `Makefile`:
 
 **Get platforms**
 
-	cl_int	clGetPlatformIDs (cl_uint num_entries, cl_platform_id *platforms, cl_uint *num_platforms)
+	cl_int	clGetPlatformIDs	(
+									cl_uint num_entries, 
+									cl_platform_id *platforms, 
+									cl_uint *num_platforms
+								)
 
 - `num_entries` is the number of cl_platform_id entries that can be added to `platforms`. If `platforms`
 	is not `NULL`, the `num_entries` must be greater than zero.
@@ -139,7 +143,13 @@ Example code
 
 **Get the device**
 
-	clGetDeviceIDs (cl_platform_id platform, cl_device_type device_type, cl_uint num_entries, cl_device_id *devices, cl_uint *num_devices)
+	clGetDeviceIDs	(
+						cl_platform_id platform, 
+						cl_device_type device_type, 
+						cl_uint num_entries, 
+						cl_device_id *devices, 
+						cl_uint *num_devices
+					)
 
 - `platform` refers to the platform ID returned by `clGetPlatformIDs` or can be `NULL`. If platform is `NULL`, the behavior is implementation-defined.
 - `device_type` is a bitfield that identifies the type of OpenCL device.
@@ -158,7 +168,17 @@ Example code
 
 **Create a context**
 
-	cl_context clCreateContext (const cl_context_properties *properties, cl_uint num_devices, const cl_device_id *devices, void (CL_CALLBACK *pfn_notify)(const char *errinfo, const void *private_info, size_t cb, void *user_data), void *user_data, cl_int *errcode_ret)
+	cl_context clCreateContext	(	
+									const cl_context_properties *properties, 
+									cl_uint num_devices, 
+									const cl_device_id *devices, 
+									void (CL_CALLBACK *pfn_notify)(
+										const char *errinfo, 
+										const void *private_info, 
+										size_t cb, void *user_data), 
+									void *user_data,
+									cl_int *errcode_ret
+								)
 
 - `properties` specifies a list of context property names and their corresponding values. Each property name is immediately followed by the corresponding desired value. The list is terminated with `0`. Currently (1.1. spec) only the `CL_CONTEXT_PLATFORM` property with possible values of `cl_platform_id` specifying the platform to use is supported.
 - `num_devices` is the number of devices specified in the `devices` argument
@@ -174,7 +194,12 @@ Sample
 
 **Create command queue(s)**
 
-	cl_command_queue	clCreateCommandQueue (cl_context context, cl_device_id device, cl_command_queue_properties properties, cl_int *errcode_ret)
+	cl_command_queue	clCreateCommandQueue	(
+													cl_context context, 
+													cl_device_id device,
+													cl_command_queue_properties properties, 
+													cl_int *errcode_ret
+												)
 
 - `context` must be a valid OpenCL context.
 - `device` must be a device associated with the context.
@@ -191,7 +216,13 @@ Sample
 
 To execute our kernels we first have to move our data from the host to the global memory of the device. You can create a buffer by using:
 
-	cl_mem	clCreateBuffer (cl_context context, cl_mem_flags flags, size_t size, void *host_ptr, cl_int *errcode_ret)
+	cl_mem	clCreateBuffer	(
+								cl_context context, 
+								cl_mem_flags flags, 
+								size_t size, 
+								void *host_ptr, 
+								cl_int *errcode_ret
+							)
 
 - `context` is a valid OpenCL context used to create the buffer object.
 - `flags` is a bit-field that is used to specify allocation and usage information
@@ -244,7 +275,13 @@ There are two ways of creating a kernel either from source (`clCreateProgramWith
 
 Creating the program from source
 
-	cl_program 	clCreateProgramWithSource (cl_context context, cl_uint count, const char **strings, const size_t *lengths, cl_int *errcode_ret)
+	cl_program 	clCreateProgramWithSource	(
+												cl_context context, 
+												cl_uint count, 
+												const char **strings, 
+												const size_t *lengths, 
+												cl_int *errcode_ret
+											)
 
 - `context` must be a valid OpenCL context.
 - `strings` is an array of `count` pointers to optionally null-terminated character strings that make up the source code.
@@ -263,7 +300,16 @@ In practice it seems that `clCreateProgramWithSource` will never return an error
 
 To compile and build the program you use
 
-	cl_int clBuildProgram (cl_program program, cl_uint num_devices, const cl_device_id *device_list, const char *options, void (CL_CALLBACK *pfn_notify)(cl_program program, void *user_data), void *user_data)
+	cl_int 	clBuildProgram 	(
+								cl_program program, 
+								cl_uint num_devices, 
+								const cl_device_id *device_list, 
+								const char *options, 
+								void (CL_CALLBACK *pfn_notify)(
+										cl_program program, 
+										void *user_data),
+								void *user_data
+							)
 
  - `program` is the program object
 - `device_list` is a pointer to a list of devices associated with program.	If `device_list` is a `NULL` value, the program executable is built for all devices associated with program for which a source or binary has been loaded. If `device_list` is a non-`NULL` value, the program executable is built for devices specified in this list for which a source or binary has been loaded.
@@ -279,7 +325,11 @@ Sample
 
 Create a Kernel
 
-	cl_kernel	clCreateKernel (cl_program program, const char *kernel_name, cl_int *errcode_ret)
+	cl_kernel	clCreateKernel	(
+									cl_program program, 
+									const char *kernel_name, 
+									cl_int *errcode_ret
+								)
 
  - `program` is a program object with a successfully built executable.
  - `kernel_name` is a function name in the program declared with the `__kernel` qualifier.
@@ -292,7 +342,12 @@ Sample
 
 Use `clSetKernelArg` to set the argument value for a specific argument of a kernel.
 
-	cl_int	clSetKernelArg (cl_kernel kernel, cl_uint arg_index, size_t arg_size, const void *arg_value)
+	cl_int	clSetKernelArg	(
+								cl_kernel kernel, 
+								cl_uint arg_index, 
+								size_t arg_size, 
+								const void *arg_value
+							)
 
 - `kernel` is a valid kernel object.
 - `arg_index` is the argument index.
@@ -301,7 +356,17 @@ Use `clSetKernelArg` to set the argument value for a specific argument of a kern
 
 ### Launching the kernel ###
 
-	cl_int clEnqueueNDRangeKernel (cl_command_queue command_queue, cl_kernel kernel, cl_uint work_dim, const size_t *global_work_offset, const size_t *global_work_size, const size_t *local_work_size, cl_uint num_events_in_wait_list, const cl_event *event_wait_list, cl_event *event)
+	cl_int	clEnqueueNDRangeKernel	(
+										cl_command_queue command_queue,
+										cl_kernel kernel, 
+										cl_uint work_dim, 
+										const size_t *global_work_offset, 
+										const size_t *global_work_size, 
+										const size_t *local_work_size, 
+										cl_uint num_events_in_wait_list, 
+										const cl_event *event_wait_list, 
+										cl_event *event
+									)
 
 - `command_queue` is a valid command-queue
 - `kernel` is a valid kernel object. The OpenCL context associated with *kernel* and *command-queue* must be the same.
@@ -329,7 +394,8 @@ Sample
 
 Reading the buffer and getting the results back to the host
 
-	cl_int	clEnqueueReadBuffer (	cl_command_queue command_queue,
+	cl_int	clEnqueueReadBuffer	(
+									cl_command_queue command_queue,
 	 								cl_mem buffer,
 	 								cl_bool blocking_read,
 									size_t offset,
@@ -337,7 +403,8 @@ Reading the buffer and getting the results back to the host
 									void *ptr,
 									cl_uint num_events_in_wait_list,
 									const cl_event *event_wait_list,
-									cl_event *event)
+									cl_event *event
+								)
 
 - `command_queue` and `buffer` must be created with the same OpenCL context
 - If `blocking_read` is `CL_TRUE`, clEnqueueReadBuffer is blocking and does not return until the buffer has been read and copied into `ptr`. If `CL_FALSE` clEnqueueReadBuffer is non blocking and returns. The contents of the buffer that `ptr` points to cannot be used until the read command has completed. `event` argument returns an event object which can be used to query the execution status of the read command.
