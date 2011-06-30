@@ -26,6 +26,14 @@ In order to get work done on your device(s) you have to do **Explicit Memory man
 
 Work is than submitted to a **Command Queue**. Each device must have queue.
 
+## Paradigms ##
+
+OpenCL isn't hard. The API is easy enough. The hardware is there and it will only get more powerful over time. The hard part is rewriting algorithms to work in parallel on data. That also means rewiring your brain.
+
+Writing code in a SIMD (Single instruction, multiple data) way can be quite challenging. You will often find yourself thinking more deeply about how to handle your data on a byte level.
+
+OpenCL seems to handle data very goody that comes in blocks. Writing and reading from the device costs time, doing so in blocks will save you some.
+
 ## Setup ##
 
 The first hurdle to take is to [get approval](https://registration.nvidia.com/Cuda.aspx) for the login for the NVidia Open CL developer program. (It took several weeks). Once approved you can get access to early developer tools (like the 1.1 implementation of the SDK and more current drivers).
