@@ -72,6 +72,8 @@ Only use open source software. Exceptions are allowed when it comes to OS (OS X)
 - continuos integration
 - make status visible (e.g.. status monitoring, whiteboard). make it a game.
 - automate everything
+- configuration should be under version control
+- configuration files should be textual with ability to comment (comments communicate intend, which is not possible with GUI control)
 
 ### Versioning ###
 
