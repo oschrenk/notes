@@ -1,5 +1,13 @@
 # MySQL on OSX #
 
+## Install ##
+
+### Homebrew ###
+
+	brew install mysql
+	mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+	mysql.server start
+
 ## Uninstall ##
 
 From [forums.mysql](http://forums.mysql.com/read.php?11,71860,72130#msg-72130)
