@@ -180,12 +180,6 @@ It has a weird syntax (always a indicator that you should not use it)
 
 	git push origin branch
 
-#### Deleting remote branches ####
-
-Kinda weird syntax
-
-	git push origin :branch
-
 #### Working with branches ####
 
 Switch to a branch called "experiment". Git will warn you if you have uncommitted changes.
