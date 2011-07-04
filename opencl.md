@@ -122,7 +122,7 @@ Basic `Makefile`:
 
 ### Datatypes ###
 
-The datatypes are defined in `cl_platform.h`
+The host datatypes are defined in `cl_platform.h`
 
 #### Scalar data types ####
 
