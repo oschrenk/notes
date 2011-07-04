@@ -497,6 +497,8 @@ On OSX you have to include `types.h`
 - [AMD, OpenCL: Introductory Tutorial](http://developer.amd.com/zones/openclzone/courses/pages/introductory-opencl-saahpc10.aspx)
 - [Codeplex, Tutorial](http://opencl.codeplex.com/wikipage?title=OpenCL%20Tutorials%20-%201)
 
+- [StreamComputing, Books on OpenCL](http://www.streamcomputing.eu/education/books/)
+
 [#Khronos:2011]: [Khronos, OpenCL 1.1 Specification](http://www.khronos.org/registry/cl/specs/opencl-1.1.pdf), 2011.
 
 [#AMD:2010]: [AMD, OpenCL: Introductory Tutorial, Course Presentation	](http://developer.amd.com/zones/OpenCLZone/courses/Documents/AMD_OpenCL_Tutorial_SAAHPC2010.pdf), 2010.
