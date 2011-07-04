@@ -120,6 +120,46 @@ Basic `Makefile`:
 
 ## Usage ##
 
+### Datatypes ###
+
+The datatypes are defined in `cl_platform.h`
+
+#### Scalar data types ####
+
+	cl_char
+	cl_uchar
+	cl_short
+	cl_ushort
+	cl_int
+	cl_uint
+	cl_long
+	cl_ulong
+	cl_half
+	cl_float
+	cl_double
+
+#### Vector data types ####
+
+The platform also offers the following vectors of the above application scalar types
+
+	cl_charn
+	cl_ucharn
+	cl_shortn
+	cl_ushortn
+	cl_intn
+	cl_uintn
+	cl_longn
+	cl_ulongn
+	cl_halfn
+	cl_floatn
+	cl_doublen
+
+Where `n` can be `2`, `3`, `4`, `8` or `16` 
+
+The vector components can be adressed using the `<vector_name>.s[<index>]` notation. For example:
+	
+	foo.s[0] = 1.0f; // Sets the 1st vector component of foo
+
 ### Preparing the environment ###
 
 **Get platforms**
