@@ -54,6 +54,24 @@ Git format preferred
 
 [source](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
 
+### Code Review ###
+
+Each code that goes into production should be checked by a peer
+
+- having a **second set of eyes** look over code before it gets checked in catches bugs.
+- **good kind of peer pressure** knowing that a coworker, whose opionon matters to you will result in neater, better documented, and better organized code.
+- **spreading knowledge** in larger groups each person is responsible for a core component. With code review at least two people are familiar with the code
+
+Keep in mind
+
+>  As a reviewer, your job isn't to make sure that the code is what you would have written - because it won't be. Your job as a reviewer of a piece of code is to make sure that the code as written by its author is correct. When this rule gets broken, you end up with hard feelings and frustration all around - which isn't a good thing.
+
+> The second major pitfall of review is that people feel obligated to say something. You know that the author spent a lot of time and effort working on the code - shouldn't you say something?
+
+> There is never anything wrong with just saying "Yup, looks good". If you constantly go hunting to try to find something to criticize, then all that you accomplish is to wreck your own credibility
+
+Inspired by [blog entry](http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/) from [scientopia.org/](http://scientopia.org/)
+
 ## Office ##
 
 ### Desks ###
