@@ -22,6 +22,7 @@ tags: things | open hardware | materials
 
 ### Resources ###
 
+- [Offene Werkstätten](http://offene-werkstaetten.org) Index of Open Spaces/Fablabs in Germany
 - [formulor.de](http://www.formulor.de) A webservice for cutting materials. Send them vector file, choose material and they send you the stuff.
 - [modulor](http://www.modulor.de/) A website for different materials, stationery needs
 - [inventables.com](http://www.inventables.com/) We sell materials that designers, artists, and inventors use to develop new products and pushes the boundaries of what's possible.
