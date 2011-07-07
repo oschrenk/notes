@@ -42,7 +42,7 @@ Git centric approach:
 
 Taken from the Git Cheat Sheet from the guys who made [tower](http://www.git-tower.de)
 
-### Commit Messages ###
+#### Commit Messages ####
 
 Git format preferred
 
