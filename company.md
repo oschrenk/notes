@@ -5,7 +5,7 @@
 Code is king. 
 
 - everybody and not only developers have access to source repositories
-- everybody can watch other developers and projects
+- everybody can see the code from other developers and projects
 - everybody can fork the source code and file pull requests
 
 ### Style ###
@@ -22,25 +22,35 @@ Code is king.
 - first class citizen
 - always use [iso 8601](http://en.wikipedia.org/wiki/ISO_8601) for date formatting
 - *Be professional*. Write in professional english.
-- *Concise*.
+- *Be concise*.
 - *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future. 
 
 [Ned Batchelder, Logging Style Guide](http://nedbatchelder.com/text/log-style-guide.html)
 
-### Commits ###
+### Version Control ###
 
-- SCM is not a backup system: NO end-of-day commits!
-- Commit changes and not single files!
-- One change per commit!
-- Don't change whitespace/formatting with the code!
+Git centric approach:
+
+- **commit related changes** a commit should be a wrapper for related changes. Fixing two different bugs should produce  seperate commits. Small commits make it easier for other developers to understand the changes and roll them back if something went wrong
+- **seperate formatting changes from code changes** don't change whitespace/formatting with the code
+- **commit often** Committing often keeps your commits small and, again, helps you commit only related changes. Moreover, it allows you to share your code more frequently with others. That way it‘s easier for everyone to integrate changes regularly and avoid having merge conflicts. Having few large commits and sharing them rarely, in con- trast, makes it hard to solve conflicts.
+- **don't commit half done work** You should only commit code when it‘s completed. This doesn‘t mean you have to complete a whole, large feature before committing. Quite the contrary: split the feature‘s implementation into logical chunks and remember to commit early and often. But don‘t commit just to have something in the repository before leaving the office at the end of the day.
+- **test code before you commit** Resist the temptation to commit some- thing that you «think» is completed. Test it thoroughly to make sure it really is completed and has no side effects (as far as one can tell). While committing half- baked things in your local repository only requires you to forgive yourself, having your code tested is even more important when it comes to pushing/sharing your code with others.
+- **version control is not a backup system** When doing version control, you should pay attention to committing semantically
+- **use branches** Branches are the perfect tool to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, ideas.
+- **agree on a workflow** Git lets you pick from a lot of different workflows: long-running branches, topic branches, merge or rebase, git-flow... Which one you choose depends on a couple of factors: your project, your overall development and deployment workflows and (maybe most important- ly) on your and your teammates‘ personal preferences. However you choose to work, just make sure to agree on a com- mon workflow that everyone follows. 
+
+Taken from the Git Cheat Sheet from the guys who made [tower](http://www.git-tower.de)
 
 ### Commit Messages ###
 
-- git format preferred
+Git format preferred
+
 - one line summary (50 to max 78 chars)
 - then empty line
 - then multiple paragraphs explaining the patch in detail (if needed)
-- don't describe the code, describe the intent and the approach. And keep the log in a present tense.
+- don't describe the code, describe the intent and the approach
+- keep the log in a present tense (to be consistent with generated messages from cimmands like `git merge`)
 
 [source](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
 
@@ -79,10 +89,6 @@ Only use open source software. Exceptions are allowed when it comes to OS (OS X)
 
 Use [Semantic Versioning](http://semver.org/)
 
-## Teams ##
-
-- put teams in same space to support direct communication
-
 ## People ##
 
 - everybody gets their own laptop, mouse, keyboard, monitor, os (only unix based though)
@@ -100,6 +106,10 @@ Use [Semantic Versioning](http://semver.org/)
 - give him something to do that can go live today
 - whole company or a least project team has meal together on first day with new hire
 - feedback chat after 1d, 1w, 1m
+
+## Teams ##
+
+- put teams in same space to support direct communication
 
 ## Community ##
 
