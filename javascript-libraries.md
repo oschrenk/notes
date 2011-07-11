@@ -48,6 +48,10 @@
 
 > Time-Series graphing library utilizing Raphael.js
 
+[d3](http://mbostock.github.com/d3/)
+
+> D3.js is a small, free JavaScript library for manipulating documents based on data.
+
 ## Graphics ##
 
 [raphaël.js](https://github.com/DmitryBaranovskiy/raphael/)
