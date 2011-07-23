@@ -40,9 +40,22 @@ Tel. 0211-154548
 Fax 0211-151893
 jeden Samstag, 10:00
 
+### Radschlägernarkt ###
+
+	http://www.radschlaegermarkt.de/
+
+	Großmarkt Düsseldorf
+	Ulmenstraße 275
+	40468 Düsseldorf
+
+Termine 2011
+14. August, 11. September, 09. Oktober, 06. November und 11. Dezember.
+
 ## Second Hand ##
 
 ### Oxfam ###
+
+In both shops you can find a (very) small collection of english bookss	
 
 	Nordstr. 9, Düsseldorf 
 	0211 1577793
