@@ -8,7 +8,7 @@ While storing the spatial attributes might be an easy task, working with it and 
 
 ### Partial Match Queries ###
 
-Heraussuchend von Objekten in der Datenbank von dem ein oder mehrere Koordinaten mit der Suchanfrag übereinstimmen
+Heraussuchend von Objekten in der Datenbank von dem ein oder mehrere Koordinaten mit der Suchanfrage übereinstimmen
 
 ### Orthogonal Range Queries ###
 
@@ -18,15 +18,27 @@ Gegeben ist ein d-dimensionaler Raum mit n Punkten. Eine "Orthogonal Range Query
 
 Suche den oder die n-nächsten Objekte.
 
+### Generalization ###
+
+- Douglas-Peucker
+
 ## Geometrie ##
 
-Typische Metriken sind alle auf floats und relativ komplex.
+Distanzberechnungen passieren auf Gleitkommazahlen. Um Distanzen zwischen zwei Punkten auf einem Ellipsoiden zu berechnen gibt es mehrere Möglichkeiten, die sich nach Genauigkeit und Schnelligkeit unterscheiden.
 
-## Indexing structures ##
+Übliche Metriken
+- Euklid
+- Haversine
+- LawOfCosine
+- Loxodrome 
+- Orthodrome
+
+## Data Structures ##
+
+### Hierachical data structures ###
 
 - K-D-B-tree, hB-tree and Bkd-tree, Adaptive kdtree
 - Building a static kd-tree from n points takes O(n log 2 n)
-- Unform Grid
 - OCTree
 - Quad Tree
 - PR Tree
@@ -40,22 +52,22 @@ Typische Metriken sind alle auf floats und relativ komplex.
 - Hilbert R-tree
 - SKD Tree
 
-## Database ##
+### Grids ###
+
+- Uniform Grid
+
+### Hashing ###
+
+- [Natural Area Code](http://en.wikipedia.org/wiki/Natural_Area_Code)
+- [Military Grid Reference System](http://en.wikipedia.org/wiki/Military_grid_reference_system)
+- Geohash
+
+## Implementierungen ##
+
+sind zu finden in
 
 - Neo4J
 - MongoDB
-
-## Algorithms ##
-
-## Hashing ##
-
-### Geometry ###
-
-- Distanzberechnungen (Euklid, Haversine, LawOfCosie, Loxodrome, Orthodrome)!
-
-### Generalization ###
-
-- Douglas-Peucker
 
 ## Parallized ##
 
