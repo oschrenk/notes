@@ -4,8 +4,10 @@
 
 ### German ###
 
+- Goethe
 - Hermann Hesse
 - Jean Paul
+- Schiller
 
 ### French ###
 
@@ -13,6 +15,8 @@
 
 ### English ###
 
+- Byron
+- Keats
 - Oscar Wilde
 - Woodhouse
 
