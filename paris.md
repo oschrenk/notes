@@ -52,3 +52,13 @@ Cheap bread, cheese plates
 	France
 
 For partying
+
+## Books ##
+
+[Shakespeare and Company](http://www.shakespeareandcompany.com/)
+
+	37 Rue Bûcherie
+	75005 Paris
+	France
+
+English books in Paris
