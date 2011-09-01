@@ -6,13 +6,21 @@
 
 Install via
 
-	sudo port install mp3splt
+	brew pull 6088
+	brew install mp3splt
 
 Usage:
 
 	mp3splt -c music.cue music.mp3
+	mp3splt file.mp3 0.32 3.56
 	
 Which pumps out the named files into the same directory
+
+	mp3splt [OPTIONS] FILE_OR_DIR1 [FILE_OR_DIR2] ... [BEGIN_TIME] [TIME2] ... [END_TIME]
+
+Time format:
+
+	minutes.seconds[.hundredths] or EOF-minutes.seconds[.hundredths]
 
 ### Extracting audio track ###
 
@@ -21,7 +29,7 @@ Which pumps out the named files into the same directory
 Install via
 
 	sudo port install ffmpeg
-	brew insall ffmpeg
+	brew install ffmpeg
 
 Usage:
 
