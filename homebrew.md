@@ -47,6 +47,10 @@ or
 
 ## FAQ/Problems ##
 
+### Alternative Formulae ###
+
+The official repo doesn't accept all formulae for one reason or another. You can find some of these in (https://github.com/adamv/homebrew-alt
+
 ### brew doctor ###
 
 I had some problems with the PHP installation and ran `brew doctor` to check for problems. 
