@@ -38,6 +38,12 @@
 
 > brain is a JavaScript library for neural networks and Bayesian classifiers
 
+## I/O ##
+
+[keymaster](https://github.com/madrobby/keymaster)
+
+> Keymaster is a simple micro-library for defining and dispatching keyboard shortcuts.
+
 ## Visualization ##
 
 [arbor.js]( http://arborjs.org)
