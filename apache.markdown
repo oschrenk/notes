@@ -12,7 +12,7 @@ Comes with the OS
 
 ## Default Configuration ##
 
-## OSX ##
+### OSX ###
 
 	ServerRoot              ::      /usr
 	Primary Config Fle      ::      /etc/apache2/httpd.conf
@@ -23,7 +23,7 @@ Comes with the OS
 	binary                  ::      /usr/sbin/httpd
 	start/stop              ::      /usr/sbin/apachectl (start|stop|restart|fullstatus|status|graceful|graceful-stop|configtest|help)
 
-## Ubuntu ##
+### Ubuntu ###
 
 	ServerRoot "/etc/apache2"
 	ErrorLog /var/log/apache2/error.log
@@ -35,7 +35,9 @@ Comes with the OS
 	# Include the virtual host configurations:
 	Include /etc/apache2/sites-enabled/
 
-## Local Web Development ##
+## Usage ##
+
+### Local Web Development ###
 
 To enable access to your local websites via `http://project` you first have to include the 
 
@@ -69,6 +71,10 @@ If you get an `Access Denied error` you have to enable access to that directory.
 	  Order Deny,Allow
 	  Allow from all
 	</Directory>
+
+### Which version am I running ###
+
+	httpd -v
 
 ## FAQ/Problems ##
 
