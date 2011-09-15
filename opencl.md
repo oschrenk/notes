@@ -489,6 +489,8 @@ On OSX you have to include `types.h`
 
 ## Resources ##
 
+### Texts ###
+
 - [Khronos, OpenCL 1.1 Specification](http://www.khronos.org/registry/cl/specs/opencl-1.1.pdf)
 - [Khronos, OpenCL 1.1 C++ Bindings Specification](http://www.khronos.org/registry/cl/specs/opencl-cplusplus-1.1.pdf)
 - [Khronos, OpenCL 1.1 Quick Reference](http://www.khronos.org/files/opencl-1-1-quick-reference-card.pdf)
@@ -498,6 +500,12 @@ On OSX you have to include `types.h`
 - [Codeplex, Tutorial](http://opencl.codeplex.com/wikipage?title=OpenCL%20Tutorials%20-%201)
 
 - [StreamComputing, Books on OpenCL](http://www.streamcomputing.eu/education/books/)
+
+### Code ###
+
+- [clpp](http://code.google.com/p/clpp/) OpenCL Data Parallel Primitives Library
+- [libCL](http://code.google.com/p/libcl/) OpenCL Parallel Algorithm Library (incl. RadixSort Vounding Volume Hierarchy
+
 
 [#Khronos:2011]: [Khronos, OpenCL 1.1 Specification](http://www.khronos.org/registry/cl/specs/opencl-1.1.pdf), 2011.
 
