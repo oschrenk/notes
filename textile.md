@@ -27,7 +27,7 @@ Just add `<notextile>` blocks like so
 
 Especially useful for including header information.
 
-## <span class="caps">FAQ</span>/Problems ##
+## FAQ/Problems ##
 
 ### Commands aren't replaced leaving `<command>. content` in output ###
 
