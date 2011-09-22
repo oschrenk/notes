@@ -23,7 +23,7 @@ Comes with the OS
 	binary                  ::      /usr/sbin/httpd
 	start/stop              ::      /usr/sbin/apachectl (start|stop|restart|fullstatus|status|graceful|graceful-stop|configtest|help)
 
-### Ubuntu ###
+### Ubuntu, OpenSuse ###
 
 	ServerRoot "/etc/apache2"
 	ErrorLog /var/log/apache2/error.log
