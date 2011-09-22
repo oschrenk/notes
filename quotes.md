@@ -116,3 +116,7 @@ Antoine de Saint-Exupéry
 > Cats have nine lives. Which makes them ideal for experimentation.
 
 Jimmy Carr
+
+> A story's job is beyond morality, it's beyond truth. It's job is to tell you that the world could be a way we know inherently what it couldn't be.
+
+Jad Abumrad
