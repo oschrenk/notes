@@ -5,12 +5,12 @@
 	brew install mongodb
 	==> Caveats
 	If this is your first install, automatically load on login with:
-	    cp /usr/local/Cellar/mongodb/1.6.5-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents
+	    cp /usr/local/Cellar/mongodb/2.0.0-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents
 	    launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 	If this is an upgrade and you already have the org.mongodb.mongod.plist loaded:
 	    launchctl unload -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
-	    cp /usr/local/Cellar/mongodb/1.6.5-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents
+	    cp /usr/local/Cellar/mongodb/2.0.0-x86_64/org.mongodb.mongod.plist ~/Library/LaunchAgents
 	    launchctl load -w ~/Library/LaunchAgents/org.mongodb.mongod.plist
 
 	Or start it manually:
@@ -20,7 +20,7 @@
 
 Start the database. If you used the `homebrew` installation and didn't create launch agents you have to start _mongoDB_ manually. Open a terminal and run
 
-	 mongod run --config /usr/local/Cellar/mongodb/1.6.5-x86_64/mongod.conf
+	 mongod run --config /usr/local/Cellar/mongodb/2.0.0-x86_64/mongod.conf
 	
 For just trying out some stuff you can use the mongo shell
 
