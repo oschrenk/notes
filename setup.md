@@ -9,14 +9,28 @@
 	
 	## scms
 	brew install svn
+	brew install https://raw.github.com/adamv/homebrew-alt/master/other/mercurial.rb
+	brew install bazaar
 	brew install git
-	brew install git-flow
 	brew install git-extras
+	brew install git-flow
+	brew install git-sh
 	brew install hub
+	
+	## usefull apps and tools
+	brew install mongodb
+	brew install mp3splt
+	brew install httrack
+	brew install closure-compiler
 	
 	## node.js
 	brew install node
 	curl http://npmjs.org/install.sh | sh
+	
+	## node modules
+	npm install -g express
+	npm install -g markdown-wiki
+	npm install -g deja
 	
 	## java
 	brew install maven
@@ -27,6 +41,18 @@
 	brew install curl
 	brew install wget
 	brew install httrack
+	
+	## dev
+	mkdir -p ~/Development
+	cd ~/Development
+	git clone git@github.com:oschrenk/notes.git
+	git clone git@github.com:oschrenk/scripts.git
+	
+	## home	
+	deja clone oschrenk/dotfiles
+	
+	## applications
+	~/Development/scripts/mateup
 
 ## Ubuntu ##
 
@@ -62,7 +88,7 @@
 	curl http://npmjs.org/install.sh | sh
 
 	## java
-	sudo apt-get install openjdk-6-jdk
+	sudo apt-get install openjdk-7-jdk
 	sudo apt-get install ant
 	sudo apt-get install maven2
 
