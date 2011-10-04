@@ -1,8 +1,6 @@
 # Firefox
 
-## Customized builds for OSX
-
-[http://www.latko.org/downloads/](http://www.latko.org/downloads/)
+## Development ##
 
 ## Make extensions work with newer version of Firefox
 
