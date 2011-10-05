@@ -487,6 +487,43 @@ On OSX you have to include `types.h`
 
 	#include <sys/types.h>
 
+## Expanding the Universe ##
+
+### Mobile ###
+
+#### iOS ####
+
+Current devices do have a chip supporting OpenCL, but [currently](http://www.streamcomputing.eu/blog/2011-08-19/is-opencl-coming-to-apple-ios/) there is no way to access these capablities. 
+
+#### Android ####
+
+Support should be coming the end of 2011.
+
+### Browser ###
+
+Support for the browser will be as part of some kind of extension. Currently there is a activity trying to develop a standard called [WebCL](http://www.khronos.org/webcl/) defining JavaScript bindings to OpenCL
+
+It should also be possible to develop ones own extension with access to OpenCL.
+
+#### Firefox ####
+
+Nokia open sourced prototype for Firefox in May 2011 (LGPL). It is currently only tested on 32-bit Windows/Linux (may work on 64-bit)
+
+Available [here](http://webcl.nokiaresearch.com/)
+
+#### Chrome ####
+
+Samsung open sourced prototype for WebKit in July 2011 (BSD)
+
+Tested on Safari
+- OS: Mac OSX 10.6 Snow Leopard
+- OS: Mac OSX 10.7 Lion
+- GPU: AMD Radeon HD 6970M
+- GPU: Nvidia GeForce GT 120
+- GPU: Nvidia GeForce GT 330M
+
+Available [here](http://code.google.com/p/webcl/)
+
 ## Resources ##
 
 ### Texts ###
@@ -505,6 +542,9 @@ On OSX you have to include `types.h`
 
 - [clpp](http://code.google.com/p/clpp/) OpenCL Data Parallel Primitives Library
 - [libCL](http://code.google.com/p/libcl/) OpenCL Parallel Algorithm Library (incl. RadixSort Vounding Volume Hierarchy
+
+aparapi
+
 
 
 [#Khronos:2011]: [Khronos, OpenCL 1.1 Specification](http://www.khronos.org/registry/cl/specs/opencl-1.1.pdf), 2011.
