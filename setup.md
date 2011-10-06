@@ -18,6 +18,7 @@
 	brew install hub
 	
 	## usefull apps and tools
+	brew install autojump
 	brew install mongodb
 	brew install mp3splt
 	brew install httrack
