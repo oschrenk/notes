@@ -1,6 +1,6 @@
 # Web Design #
 
-## Planning a website ##
+## Planning ##
 
 1. Set a goal
 2. Identify your market
@@ -10,11 +10,15 @@
 6. Launch your site
 7. Promote your website
 
+## Design ##
+
+- [Noise Background](http://rappdaniel.com/noisy/)
+
 ## Ideas ##
 
-*   Golden Ratio
+*   Use Golden Ratio
 
-## ems ##
+### ems ###
 
     1em = 16px;
     0.875 = 14px
