@@ -87,3 +87,12 @@ adding
 to the `.git/config` file
 
 	git pull
+
+### Merge conflicts during update ###
+
+Somehow my tree and remote diverged and `brew update` threw conflict errors at me. I reset the upstream via
+
+	cd $(brew --prefix)
+	git remote add origin git://github.com/mxcl/homebrew.git
+	git fetch origin
+	git reset --hard origin/master
