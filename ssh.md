@@ -123,3 +123,11 @@ or in human readable form:
 
 	$ chmod -v -R a-rwx ~/.ssh
 	$ chmod -v -R u+rw ~/.ssh
+	
+### SSH Agent (key) forwarding on Mac OS Lion doesn't work anymore ###
+
+The problem is, taht Lions new feature to reopen all windows on restart somehone broke the ssh-agent. It won't start before Terminal.app
+	
+Lion wil ask to unlock the keychain but it won't help. This helped	
+	
+	ssh-add
