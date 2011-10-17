@@ -6,6 +6,7 @@
 	ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
 	brew install ack
 	brew install bash-completion
+	brew install autojump
 	
 	## scms
 	brew install svn
@@ -17,13 +18,15 @@
 	brew install git-sh
 	brew install hub
 	
-	## usefull apps and tools
-	brew install autojump
+	## dev tools
 	brew install mongodb
+	brew install closure-compiler
+	brew install multimarkdown
+	
+	## apps
 	brew install mp3splt
 	brew install httrack
-	brew install closure-compiler
-	
+
 	## node.js
 	brew install node
 	curl http://npmjs.org/install.sh | sh
@@ -32,6 +35,7 @@
 	npm install -g express
 	npm install -g markdown-wiki
 	npm install -g deja
+	npm install -g pegjs
 	
 	## java
 	brew install maven
