@@ -2,8 +2,8 @@
 
 ## What I like
 
-* Window management. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
-* Consistency. `cmd+.` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application. 
+* **Window management**. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
+* **Consistency**. `cmd+,` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application. 
     
 ## Hints
 
@@ -13,13 +13,8 @@ The hint I always give other mac users: Try pressing `Alt`. It works wonders. Fo
 
 #### Diacritical Marks
 
-**é**
-
-> `´ then e`
-
-**è**
-
-> `shift + ´ then e`
+- **é**, press `´` then `e`
+- **è**, press `shift + ´ ` then `e`
 
 ### Screenshots
 
@@ -98,9 +93,7 @@ The last command did output some warnings but it produced the correct file anywa
 
 ## Software
 
-### Mail
-
-#### IMAP -- Used Default folder from Mail host instead of Apple's
+### OSX Mail - Setting  mail folders 
 
 Mail needs to be configured which folders it needs to use for trash, drafts and spam, otherwise it will use its own folders leaving the other folder untouched and also annoyingly visible in the side bar.
 
@@ -198,6 +191,6 @@ After I cloned my harddrive the _Open with..._ menu was showing double entries. 
 
 	/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 	
-### Audio doesn't work ### ###
+### Audio doesn't work ###
 
 At some point audio output didn't work. I couldn't even change volume. What happened was that somehow my Macbook was outputting digital audio (indicated by a red light from the headphone jack). Inserting a headphone plug a few times and wiggling it around helped reset things.
