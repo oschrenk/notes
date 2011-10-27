@@ -9,7 +9,6 @@ To search packages
 
 	apt-cache --name-only search apache
 
-	
 ## User Management ##
 
 You shouldn't be working with a `root` account. Create another user first:
@@ -30,11 +29,11 @@ Remove a user
 	
 	userdel -r  jdoe      ## Remove user incl. home directory
 
-Allow him to sudo via
+To give a user access to the sudo command you have to edit the `/etc/sudoers` file. Instead of editing it directly call
 
 	visudo
 	
-Opens `nano` in my case, below
+In my case it opens `nano`. To give `joe` permission 
 
 	# User privilege specification
 	root    ALL=(ALL) ALL
@@ -43,9 +42,13 @@ add
 
 	jdoe ALL=(ALL) ALL
 
-Save the via by exiting via `^X` and save it to the suggested filename. `visudo` takes care of sanity checking.
+Save the via by exiting via `^X` and save it to the suggested filename. `visudo` takes care of sanity checking. 
 
-Open another shell and ssh into your linode with the newly created user. Check if the home directory exists and try if you can `sudo`.
+I some distribution the option `targetpw` is set
+
+	Defaults targetpw    # ask for the password of the target user i.e. root
+
+It will ask for root's password regardless of the logged in user. Disable it to prompt for the user's password.
 
 ## Security ##
 
