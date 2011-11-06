@@ -14,6 +14,26 @@ A synonym is an alternative name for a table, view, sequence and other database 
 
 A public synonym is owned by `public` and is therefore valid for each schema. It is also the normal usecase to access objects in another schema without referencing the other schema.
 
+### Materilaized Views ###
+
+Materilaized Views are a view of pre-generating data for retrieval.
+
+You should first analyze all involved tables
+
+	analyze table <table> compute statistics;
+
+Create the view
+
+	create materialized view mv1
+	  build deferred
+	  refresh on demand
+	  enable query rewrite
+	  as
+		<select statement>
+
+- `build deferred` means that the view isn't created directly after command execution; you have to start the creation process manually
+- `refresh on demand` means that re-creation/refreshing is done manually
+	
 ## FAQ/Problems ##
 
 ### Shutdown/restart server ###
