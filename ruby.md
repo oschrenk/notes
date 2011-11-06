@@ -19,3 +19,11 @@
 ### Update RubyGems ###
 
 	sudo gem update --system
+
+## FAQ/ Problems ##
+
+### Invalid gemspec in [<path>]: invalid date format in specification ###
+
+	vi <path>
+	
+Change `s.date = %q{2011-05-21 00:00:00.000000000Z}` to `s.date = %q{2011-05-21}`
