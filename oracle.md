@@ -14,9 +14,9 @@ A synonym is an alternative name for a table, view, sequence and other database 
 
 A public synonym is owned by `public` and is therefore valid for each schema. It is also the normal usecase to access objects in another schema without referencing the other schema.
 
-### Materilaized Views ###
+### Materialized Views ###
 
-Materilaized Views are a view of pre-generating data for retrieval.
+Materialized Views aren't live, they contain a view of pre-generated data for retrieval.
 
 You should first analyze all involved tables
 
