@@ -13,6 +13,11 @@ tags: things | open hardware | materials
 
 - to cut glass bottles, use a glass cuter to make a small incision (don't overdo it). Pour hot water slowly over the incision, cool it down.
 
+### Metal ###
+
+- [metallstore](http://www.metallstore.de/) Aluminium, Brass, Copper
+- [alu-verkauf](http://www.alu-verkauf.de/) Aluminium, Copper
+
 ## Ideas ##
 
  - sound waves as objects with 3d printing
