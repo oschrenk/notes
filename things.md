@@ -18,6 +18,10 @@ tags: things | open hardware | materials
 - [metallstore](http://www.metallstore.de/) Aluminium, Brass, Copper
 - [alu-verkauf](http://www.alu-verkauf.de/) Aluminium, Copper
 
+### Electronics ###
+
+- [TinkerSoup](http://www.tinkersoup.de/)
+
 ## Ideas ##
 
  - sound waves as objects with 3d printing
