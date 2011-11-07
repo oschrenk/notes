@@ -7,3 +7,7 @@
 ## DIY ##
 
 - [ikeahackers](http://www.ikeahackers.net)
+
+## Shops ##
+
+- [bolefloor](http://www.bolefloor.com/) The most beautiful hardwood floor
