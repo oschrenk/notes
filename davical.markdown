@@ -143,7 +143,6 @@ You should see some output like this:
 	NOTE
 	====
 	*  The password for the 'admin' user has been set to 'gQshTv8w'"
-	
 
 Write down the admin password when it is displayed. You will need it later. Once the creation script has run correctly, again edit the `pg_hba.conf` file:
 
@@ -186,7 +185,6 @@ You can merely include the following lines:
 	
 ## Startup ## 
 	
-	
 ## FAQ/Problems ##
 
 ### DBI connect('dbname=davical','davical_dba',...) failed: FATAL:  Ident authentication failed ###
@@ -203,4 +201,3 @@ The problem was that I added the lines in the `/etc/postgresql/8.4/main/pg_hba.c
 
 	sudo /etc/init.d/apache2 [start|restart|stop] 
 	sudo /etc/init.d/postgresql-8.4 [restart|stop]
-	
