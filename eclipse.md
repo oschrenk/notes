@@ -14,14 +14,13 @@ Some default settings are weird, especially the encoding and line delimiter sett
 The default is that Eclipse uses the currently logged in username. To change the default settings edit the `eclipse.ini` and add
 
 	-Duser.name=My Name
-	
+
 In OSX the  `eclipse.ini` can be found under `path/to/Eclipse.app/Contents/MacOS/eclipse.ini`
 
 If you need some more flexibility e.g.. setting it depending on your workspace you might want to look into the usage of [JAutoDoc
 ](http://jautodoc.sourceforge.net/) and changing the default template and setting a property.
 
 ## Hints ##
-
 
 ### Show hidden (`.*`) files ###
 
@@ -48,4 +47,4 @@ I had this error when I was trying to deploy a web application to a local JBoss 
 
 ### Out of Heap Space, Give Run/Debug Configurations more RAM ###
 
-Goto `Run > [Run|Debug] Configurations` and select the configuration you want to change, select the `Arguments` tab and add sensible parameter to the `VM Arguments` box. For example `-Xms512m -Xmx768m` 
+Goto `Run > [Run|Debug] Configurations` and select the configuration you want to change, select the `Arguments` tab and add sensible parameter to the `VM Arguments` box. For example `-Xms512m -Xmx768m`
