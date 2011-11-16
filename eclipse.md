@@ -1,5 +1,11 @@
 # Eclipse #
 
+## Plugins ##
+
+Update Sites
+
+- [JAutoDoc](http://jautodoc.sourceforge.net/update/)
+
 ## Configuration ##
 
 Some default settings are weird, especially the encoding and line delimiter settings. Keep them consistent within your development team.
