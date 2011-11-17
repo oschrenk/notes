@@ -64,14 +64,12 @@
 
 > Raphaël is a small JavaScript library that should simplify your work with vector graphics on the web. (It) uses the SVG W3C Recommendation and VML as a base for creating graphics. This means every graphical object you create is also a DOM object, so you can attach JavaScript event handlers or modify them later. Raphaël’s goal is to provide an adapter that will make drawing vector art compatible cross-browser and easy.
 
+[EaselJS](http://easeljs.com/)
+
+> JavaScript library for working with the html5 canvas element. The Easel Javascript library provides a retained graphics mode for canvas including a full, hierarchical display list, a core interaction model, and helper classes to make working with Canvas much easier. Released under the MIT license
+
 ## Game Engines #
 
-[Crafty](https://github.com/louisstow/Crafty) 
-[Hydra](https://github.com/aduros/hydra)
-[Propulsion](https://github.com/calebh/Propulsion)
-
-### Crafty ###
-
-Makes use of the Entity Component System
-- every object is an entity
-- components are objects that extend the functionality of entities
+- [Crafty](https://github.com/louisstow/Crafty) 
+- [Hydra](https://github.com/aduros/hydra)
+- [Propulsion](https://github.com/calebh/Propulsion)
