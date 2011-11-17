@@ -168,16 +168,17 @@ JVM starts with `-Xms` amount of memory for the heap (storing objects etc.) and 
 
 ### JavaDoc ###
 
-[Java SE 1.3](http://java.sun.com/j2se/1.3/docs/api/)  
-[Java SE 1.4](http://java.sun.com/j2se/1.4.2/docs/api/)  
-[Java SE 1.5](http://java.sun.com/j2se/1.5.0/docs/api/)  
-[Java SE 6](http://java.sun.com/javase/6/docs/api/)
+[Java SE 1.3](http://download.oracle.com/javase/1.3/docs/api/)  
+[Java SE 1.4](http://download.oracle.com/javase/1.4.2/docs/api/)  
+[Java SE 1.5](http://download.oracle.com/javase/1.5.0/docs/api/)  
+[Java SE 6](http://download.oracle.com/javase/6/docs/api/)
+[Java SE 7](http://download.oracle.com/javase/7/docs/api/)
 
-[Java EE 1.2](http://java.sun.com/j2ee/sdk_1.2.1/techdocs/api/index.html)  
-[Java EE 1.3](http://java.sun.com/j2ee/sdk_1.3/techdocs/api/)  
-[Java EE 1.4](http://java.sun.com/j2ee/1.4/docs/api/index.html)  
-[Java EE 5](http://java.sun.com/javaee/5/docs/api/)  
-[Java EE 6](http://java.sun.com/javaee/6/docs/api/)
+[Java EE 1.2](http://download.oracle.com/javaee/1.2.1/api/)  
+[Java EE 1.3](http://download.oracle.com/javaee/1.3/api/)  
+[Java EE 1.4](http://download.oracle.com/javaee/1.4/api/)  
+[Java EE 5](http://download.oracle.com/javaee/5/api/)  
+[Java EE 6](http://download.oracle.com/javaee/6/api/)
 
 
 [#Doe:2006]: Joshua Bloch. *Effektiv Java Programmieren*.  Addison-Wesley, 2002.
