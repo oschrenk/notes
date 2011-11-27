@@ -1,5 +1,9 @@
 # Design #
 
+## Icons ##
+
+- [The Noun Project](http://thenounproject.com/)
+
 ## Inspiration ##
 
 - [bananaandegg.tumblr.com](http://bananaandegg.tumblr.com/)
