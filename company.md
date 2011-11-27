@@ -46,13 +46,29 @@ Taken from the Git Cheat Sheet from the guys who made [tower](http://www.git-tow
 
 Git format preferred
 
-- one line summary (50 to max 78 chars)
+- one line summary (max 74 chars)
 - then empty line
 - then multiple paragraphs explaining the patch in detail (if needed)
 - don't describe the code, describe the intent and the approach
 - keep the log in a present tense (to be consistent with generated messages from cimmands like `git merge`)
 
 [source](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
+
+Example
+
+	header line: explaining the commit in one line
+
+	Body of commit message is a few lines of text, explaining things
+	in more detail, possibly giving some background about the issue
+	being fixed, etc etc.
+
+	The body of the commit message can be several paragrahps, and
+	please do proper word-wrap and keep columns shorter than about
+	74 characters or so. That way "git log" will show things
+	nicely even when it's indented.
+
+	Reported-by: whoever-reported-it
+	Signed-off-by: Your Name <youremail@yourhost.com>
 
 ### Code Review ###
 
