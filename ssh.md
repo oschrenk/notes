@@ -126,8 +126,15 @@ or in human readable form:
 	
 ### SSH Agent (key) forwarding on Mac OS Lion doesn't work anymore ###
 
-The problem is, taht Lions new feature to reopen all windows on restart somehone broke the ssh-agent. It won't start before Terminal.app
+The problem is, thht Lion's new feature to reopen all windows on restart somehow broke the ssh-agent. It won't start before Terminal.app
+
+In OS X Lion if the login keychain is set to lock on sleep, the ssh-agent becomes confused. Instead of asking to unlock the login keychain and using the stored password from that, it instead asks for the ssh key pass phrase. If the ssh-agent is killed off after the keychain is locked, the process spawned as a result of further requests acts properly (asking to unlock the keychain).
+
+[ssh-agent-locker](https://github.com/gdcbyers/ssh-agent-locker) helps with this. I installed it via
+
+	brew install https://raw.github.com/rsenk330/homebrew/ssh-agent-locker/Library/Formula/ssh-agent-locker.rb
 	
-Lion wil ask to unlock the keychain but it won't help. This helped	
-	
-	ssh-add
+	If this is your first install, automatically load on login with:
+	  mkdir -p ~/Library/LaunchAgents
+	  cp /usr/local/Cellar/ssh-agent-locker/0.1.0/com.seaandco.geoff.ssh-agent-locker.plist ~/Library/LaunchAgents/
+	  launchctl load -w ~/Library/LaunchAgents/com.seaandco.geoff.ssh-agent-locker.plist
