@@ -6,7 +6,14 @@
 	ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
 	brew install ack
 	brew install bash-completion
-	brew install autojump
+	brew install z
+	brew install multimarkdown
+	
+	## system, lion broke keyhchain/ssh-agent
+	brew install ssh-agent-locker
+	mkdir -p ~/Library/LaunchAgents
+	cp /usr/local/Cellar/ssh-agent-locker/0.1.0/com.seaandco.geoff.ssh-agent-locker.plist ~/Library/LaunchAgents/
+	launchctl load -w ~/Library/LaunchAgents/com.seaandco.geoff.ssh-agent-locker.plist
 	
 	## scms
 	brew install svn
@@ -18,15 +25,28 @@
 	brew install git-sh
 	brew install hub
 	
-	## dev tools
+	## databases
 	brew install mongodb
-	brew install closure-compiler
-	brew install multimarkdown
+	brew install redis
+	brew install mysql
+	brew install postgresql
+	brew install sqlite
 	
-	## apps
+	## geo
+	brew install proj
+	brew install geos
+	brew install osmosis
+	brew install postgis
+	
+	## a/v
+	brew install ffmpeg
+	brew install flac
+	brew install lame
+	brew install libmp3splt
 	brew install mp3splt
-	brew install httrack
-
+	brew install x264
+	brew install xvid
+	
 	## node.js
 	brew install node
 	curl http://npmjs.org/install.sh | sh
@@ -54,10 +74,11 @@
 	git clone git@github.com:oschrenk/scripts.git
 	
 	## home	
+	cd ~
 	deja clone oschrenk/dotfiles
 	
-	## applications
-	~/Development/scripts/mateup
+	## update textmate bundles
+	. ~/Development/scripts/mateup
 
 ## Ubuntu ##
 
