@@ -13,7 +13,9 @@ Code is king.
 - utf8, unix line encoding
 - agree on company style
 - enforce style, via IDE, via commit hooks
-
+- Limit lines to 80 characters. 
+	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
+	by [Node.js Style Guide](http://nodeguide.com/style.html#line-length)
 - api > framework
 - dependency injection > dependency injection container
 
