@@ -29,6 +29,10 @@ tags: things | open hardware | materials
 
 ## Appendix ##
 
+### Software ###
+
+http://www.123dapp.com/make
+
 ### Resources ###
 
 - [Offene Werkstätten](http://offene-werkstaetten.org) Index of Open Spaces/Fablabs in Germany
@@ -36,3 +40,4 @@ tags: things | open hardware | materials
 - [modulor](http://www.modulor.de/) A website for different materials, stationery needs
 - [inventables.com](http://www.inventables.com/) We sell materials that designers, artists, and inventors use to develop new products and pushes the boundaries of what's possible.
 - [maedler.de](http://www.maedler.de/) Metal, cogs and stuff.
+- [fasterpoly.de](http://www.fasterpoly.de/de_wp/3d-modell-shop/) 3d-Druckservice in Düsseldorf
