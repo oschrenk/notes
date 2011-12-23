@@ -129,6 +129,24 @@ Sa 10-16 Uhr
 	
 ## Food ##
 
+### Markets ###
+
+### Friedensplätzchen ###
+
+- [On Google Maps](http://maps.google.de/maps?q=Friedenspl%C3%A4tzchen&hl=en&ie=UTF8&hnear=Friedenspl%C3%A4tzchen&t=m&z=14&vpsrc=0)
+- [Official Page](http://bauernmarkt.netzwerkagrarbuero.de/index.php?id=101)
+- [Review](http://www.friedensplaetzchen.de/bauernmarkt/)
+
+Dienstags von 8.00-13.00 Uhr und
+Freitags von 10.00-18.00 Uhr
+
+### Fürstenplatz ###
+
+- [On Google Maps](http://maps.google.com/maps?q=F%C3%BCrstenplatz,+D%C3%BCsseldorf,+Deutschland&hl=de&ie=UTF8&sll=51.2132,6.78504&sspn=0.014302,0.035191&vpsrc=0&hnear=F%C3%BCrstenplatz,+40215+D%C3%BCsseldorf,+Nordrhein-Westfalen,+Deutschland&t=m&z=16)
+
+Mittwoch: 07.00 Uhr - 13.00 Uhr
+Samstag: 07.00 Uhr - 13.00 Uhr
+
 ### Organic Vegetable Box 
 
 - [Lammertzhof](http://www.lammertzhof.info/)
