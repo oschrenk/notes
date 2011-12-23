@@ -8,6 +8,11 @@
 
 ## Objects ##
 
+### Lamps / Lighting ###
+
+- [Benjamin Hubert](http://www.benjaminhubert.co.uk/) Designer that creates beautiful lamps
+- [Plumen](http://eushop.plumen.com/) Designer bulb
+
 ### Inspiration ###
 
 - [bananaandegg.tumblr.com](http://bananaandegg.tumblr.com/)
