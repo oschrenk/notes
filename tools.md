@@ -1,5 +1,7 @@
 # Tools #
 
+## Basics ##
+
 - a hammer
 - a crowbar
 - a flat head screwdriver
@@ -30,3 +32,6 @@
 - high quality angled brushes
 - an assortment of nails and screws
 
+## Cleaning ##
+
+- [Kärcher NT35/1 Eco Te with TACT](http://www.kaerchershop-schreiber.de/krcher-tact-p-860.html)
