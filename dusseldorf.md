@@ -10,9 +10,8 @@
 
 ## Twitter ##
 
-- @flingern
-- @garagebilk
-- @duesseldorfbilk
+- [@flingern](http://twitter.com/#!/flingern) Blog für Flingern 
+- [@garagebilk](http://twitter.com/#!/garagebilk) Coworking Space in Düsseldorf
 
 ## Trödelmärkte ##
 
@@ -121,4 +120,3 @@ Sa 10-16 Uhr
 	Oststr. 89
 	40210 Düsseldorf
 	Telefon: 0211.13653360
-	
