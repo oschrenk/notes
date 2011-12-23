@@ -1,6 +1,8 @@
 # Düsseldorf #
 
-## Blogs ##
+## Online ##
+
+### Blogs ###
 
 - [düsseldorfbilk](http://duesseldorfbilk.de/)
 - [fuerstenplatz](http://www.fuerstenplatz.de/)
@@ -8,7 +10,7 @@
 - [flingern.net](http://www.flingern.net/)
 - [bilkorama](http://www.bilkorama.de/)
 
-## Twitter ##
+### Twitter ###
 
 - [@flingern](http://twitter.com/#!/flingern) Blog für Flingern 
 - [@garagebilk](http://twitter.com/#!/garagebilk) Coworking Space in Düsseldorf
