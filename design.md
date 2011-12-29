@@ -12,6 +12,7 @@
 
 - [Benjamin Hubert](http://www.benjaminhubert.co.uk/) Designer that creates beautiful lamps
 - [Plumen](http://eushop.plumen.com/) Designer bulb
+- [nud](http://www.nudcollection.com) Textile cable with porcelain holder
 
 ### Inspiration ###
 
