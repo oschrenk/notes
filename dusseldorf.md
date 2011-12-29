@@ -126,6 +126,22 @@ Sa 10-16 Uhr
 	Oststr. 89
 	40210 Düsseldorf
 	Telefon: 0211.13653360
+
+## Furniture ##
+
+### Caritas ###
+
+- Möbelbörse
+- Fahrradwrkstatt
+
+Völklinger Straße 24-36
+40221 Düsseldorf
+
+Tel:0211 1602 23 40
+Fax: 0211 1602 23 10
+
+	Mo. - Do.:   08.00 Uhr - 16.00 Uhr 
+	Fr:          08.00 Uhr - 12.00 Uhr
 	
 ## Food ##
 
