@@ -24,6 +24,16 @@
 - [cluster](https://github.com/LearnBoost/cluster) Node.JS multi-core server manager with plugins support.
 - [supervisor](https://github.com/isaacs/node-supervisor) Watches for code changes and restarts the the node instance.
 
+## Visualization ##
+
+- [cube](https://github.com/square/cube) A system for time series visualization
+
+## IO ##
+
+- [colors.js](https://github.com/Marak/colors.js) Get color and style in your node.js console
+- [log.io](http://logio.org/) Real-time log monitoring in your browser
+- [PDFKit](http://devongovett.github.com/pdfkit/) PDF document generation library
+
 ## Fun with node.js ##
 
 - [node-serialport](https://github.com/voodootikigod/node-serialport) talk to serial devices
@@ -34,9 +44,3 @@
 - [fightly](https://github.com/AdrianGaudebert/fightly-game-engine) Turn based game engine
 - [nodegit](https://github.com/tbranyen/nodegit) Node.js libgit2 asynchronous native bindings
 - [nTunes](https://github.com/TooTallNate/nTunes) nTunes is an HTTP-based API for interacting with your iTunes installation
-
-## IO ##
-
-- [colors.js](https://github.com/Marak/colors.js) Get color and style in your node.js console
-- [log.io](http://logio.org/) Real-time log monitoring in your browser
-- [PDFKit](http://devongovett.github.com/pdfkit/) PDF document generation library
