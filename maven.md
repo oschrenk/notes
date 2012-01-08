@@ -1,8 +1,12 @@
 # Maven #
 
+http://maven.apache.org/plugins/index.html
+
+Descriptor reference http://maven.apache.org/ref/3.0.3/maven-model/maven.html
+
 ## Installation ##
 
-    $ sudo port install maven2
+    $ brew install maven
 
 ## Setup ##
 
