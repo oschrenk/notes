@@ -1,8 +1,7 @@
 # Maven #
 
-http://maven.apache.org/plugins/index.html
-
-Descriptor reference http://maven.apache.org/ref/3.0.3/maven-model/maven.html
+- [Available Plugins](http://maven.apache.org/plugins/index.html)
+- [Descriptor reference](http://maven.apache.org/ref/3.0.3/maven-model/maven.html)
 
 ## Installation ##
 
