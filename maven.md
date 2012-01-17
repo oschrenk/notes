@@ -3,6 +3,8 @@
 - [Available Plugins](http://maven.apache.org/plugins/index.html)
 - [Descriptor reference](http://maven.apache.org/ref/3.0.3/maven-model/maven.html)
 
+- create base directories `mkdir -p src/{main,test}/{java,resources}`
+
 ## Installation ##
 
     $ brew install maven
