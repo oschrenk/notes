@@ -1,5 +1,9 @@
 # OCR #
 
+- [GOCR](http://jocr.sourceforge.net/) `brew install gocr`
+- [tesseract](http://code.google.com/p/tesseract-ocr/) `brew install tesseract`
+- [orcad](http://www.gnu.org/software/ocrad/) `brew install ocrad`
+
 ## Sources ##
 
 [Professionally scan with Open Source tools](http://aldeby.org/blog/index.php/how-to-professionally-scan-and-ocr-with-open-source-tools.html)
