@@ -32,7 +32,3 @@ If you get a message like
 Ghostscript isn't (properly) installed. You can to so by
 
     $ sudo port install ghostscript
-
-### Tesseract ###
-
-Tesseract only supports `.tif` files; rename `.tiff` to `.tif`
