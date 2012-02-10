@@ -1,4 +1,6 @@
-# Virtual Private Server #
+# Hosting #
+
+## Virtual Private Server ##
 
 - [linode.com](http://www.linode.com/)
 - [prgmr.com](http://prgmr.com/)
@@ -22,3 +24,7 @@
 | linode 	| $39.95	| $239.7	| 479.4		| 1024MB	| 40GB		| 400GB		|
 | linode 	| $59.95	| $359.7	| 719.4		| 1536MB	| 60GB		| 600GB		|
 | linode 	| $79.95	| $479.7	| 959.4		| 2048MB	| 80GB		| 800GB		|
+
+## Amazon EC2 ##
+
+[Amazon EC2 Instance Comparison](http://www.ec2instances.info/)
