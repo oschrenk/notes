@@ -163,3 +163,7 @@ After I cloned my harddrive the _Open with..._ menu was showing double entries. 
 ### Audio doesn't work ###
 
 At some point audio output didn't work. I couldn't even change volume. What happened was that somehow my Macbook was outputting digital audio (indicated by a red light from the headphone jack). Inserting a headphone plug a few times and wiggling it around helped reset things.
+
+### Show hidden files in Dialogs ###
+
+Press `⌘⇧.` and the the dialog box now will display any hidden files or folders within its list items. You can toggle between the hidden files and folders being displayed by pressing it again.
