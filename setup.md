@@ -9,16 +9,23 @@
 	brew install z
 	brew install multimarkdown
 	
-	## system, lion broke keyhchain/ssh-agent
+	## system
+	# lion broke keyhchain/ssh-agent
 	brew install ssh-agent-locker
 	mkdir -p ~/Library/LaunchAgents
 	cp /usr/local/Cellar/ssh-agent-locker/0.1.0/com.seaandco.geoff.ssh-agent-locker.plist ~/Library/LaunchAgents/
 	launchctl load -w ~/Library/LaunchAgents/com.seaandco.geoff.ssh-agent-locker.plist
+	# brew install fuse4x
+	# brew install sshfs
+	
+	## tools
+	brew install xmlstarlet
 	
 	## scms
 	brew install svn
 	brew install https://raw.github.com/adamv/homebrew-alt/master/other/mercurial.rb
 	brew install bazaar
+	
 	brew install git
 	brew install git-extras
 	brew install git-flow
