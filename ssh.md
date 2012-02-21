@@ -1,24 +1,32 @@
 # SSH #
 
-## Setting up a key ##
+[SSH](http://tools.ietf.org/html/rfc4252) is a protocol for authenticating and encrypting remote shell sessions.
+
+## Configuration ##
+
+- per-user configuration is in `~/.ssh/config`.
+- system-wide client configuration is in `/etc/ssh/ssh_config`.
+- system-wide daemon configurtion is in `/etc/ssh/sshd_config`.
+
+### Creating a key ###
 
     $ ssh-keygen -t rsa
 
-Using is secure password is recommended. Otherwise someone who has access to your terminal, or your key will automatically have access to all hosts. Worst case scenario: Someone with a minute and a USB stick to spare, copies your key-pair and your `known_hosts` file. So please use a password. It might sound silly as you will still have to use a password, but there is a solution for that namely `ssh-agent`.
+**Using a secure password is recommended**. Otherwise someone who has access to your terminal, or your key will automatically have access to all hosts. Worst case scenario: Someone with a minute and a USB stick to spare, copies your key-pair and your `known_hosts` file. So **please use a password**. It might sound silly as you will still have to use a password, but there is a solution for that namely `ssh-agent`.
 
 You will get something like:
 
     	Your identification has been saved in ~/.ssh/id_rsa.
     	Your public key has been saved in ~/.ssh/id_rsa.pub.
 
-For further security you might want to consider to giving only your user the right to read the files.
+Guard the private key as if it were your password. You should at least give only your user the right to read the files.
 
     	# protect the keys from being read
     	cd ~/.ssh
     	$ chmod 600 id*
     	$ chmod 600 known_hosts
 
-## Using SSH Agent on OS X ##
+### Using an SSH Agent ###
 
 Call `ssh-add` for every private key.
 
@@ -55,7 +63,7 @@ Or just include this startup script on your `.profile`
     	     start_agent;
     	fi`
 
-## Change SSH Passphrase ##
+### Change SSH Passphrase ###
 
 You can easily change the passphrase of your key by calling
 
@@ -66,11 +74,11 @@ You can easily change the passphrase of your key by calling
     Enter same passphrase again:
     Your identification has been saved with the new passphrase.
 
-## Copy SSH key to server ##
+### Copy SSH key to server ###
 
     cat ~/.ssh/id_rsa.pub | ssh account@remoteserver.com "cat - >> .ssh/authorized_keys"
 
-## Verify SSH Host fingerprint ##
+### Verify SSH Host fingerprint ###
 
     The authenticity of host 'host.domain (194.77.33.57)' can't be established.
     RSA key fingerprint is a8:04:af:ea:e0:8a:16:cf:f9:62:ba:1e:d2:16:f5:5a.
