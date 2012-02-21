@@ -2,9 +2,12 @@
 
 ## Plugins ##
 
-Update Sites
-
-- [JAutoDoc](http://jautodoc.sourceforge.net/update/)
+- [Marketplace](http://www.eclipse.org/mpc/). Search for Marketplace. Or add Indigo Update Site[http://download.eclipse.org/mpc/indigo/] to your repos
+- [M2Eclipse](http://eclipse.org/m2e/). [Update Site](http://download.eclipse.org/technology/m2e/releases)
+- Mantis Plugin
+- [Git](http://www.eclipse.org/egit/) [Update Site](http://download.eclipse.org/egit/updates)
+- [JAutoDoc](http://jautodoc.sourceforge.net/). [Update Site](http://jautodoc.sourceforge.net/update/)
+- [Xtend](http://www.eclipse.org/xtend/) Add through marketplace.
 
 ## Configuration ##
 
@@ -23,8 +26,7 @@ The default is that Eclipse uses the currently logged in username. To change the
 
 In OSX the  `eclipse.ini` can be found under `path/to/Eclipse.app/Contents/MacOS/eclipse.ini`
 
-If you need some more flexibility e.g.. setting it depending on your workspace you might want to look into the usage of [JAutoDoc
-](http://jautodoc.sourceforge.net/) and changing the default template and setting a property.
+If you need some more flexibility e.g.. setting it depending on your workspace you might want to look into the usage of [JAutoDoc](http://jautodoc.sourceforge.net/) and changing the default template and setting a property.
 
 ## Hints ##
 
@@ -39,6 +41,18 @@ Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a p
     <natures>
     	<nature>org.eclipse.jdt.core.javanature</nature>
     </natures>
+
+## Appendix ##
+
+### Notable Changes in 3.8 ###
+
+- Quick Assist to convert enhanced `for` loop. 
+	- Convert to indexed `for` loop is available for expressions of `array`- and `List`-based types.
+	- Convert to Iterator-based `for` loop is available for expressions of type `Iterable`
+- Resource Leak Detection. The compiler can now detect leakage of resources i.e. local variables of type `java.lang.AutoCloseable` (compliance >= 1.7) and `java.io.Closeable` (compliance <= 1.6).
+- Annotation-based null analysis. JDT can now be configured to use annotations designated as null annotations to perform enhanced inter-procedural null analysis. This feature can be enabled in `Preferences > Java > Compiler > Errors/Warnings > Null analysis`
+- Null analysis for fields. JDT can now raise null related errors/warnings for fields. You can configure null analysis for fields in Preferences > Java > Compiler > Errors/Warnings > Null analysis.
+- Export detail formatters. Detail formatters can now be exported as separate preferences.
 
 ## FAQ/Problems ##
 
