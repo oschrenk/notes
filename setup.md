@@ -18,6 +18,8 @@
 	# brew install fuse4x
 	# brew install sshfs
 	
+	## tools
+	brew install xmlstarlet
 	
 	## scms
 	brew install svn
