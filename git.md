@@ -78,6 +78,32 @@ To stage a file or directory
     $ git commit -m 'message' /path/file
     $ git commit -a /path/auto-added.file
 
+#### Partial commits ####
+
+	$ git add -p /path/file
+	... # changes
+	Stage this hunk [y,n,q,a,d,/,s,e,?]?
+	
+You will see a selection of *hunks* and Git asks you what to do with these hunks. `?` explains each of the possible choices.
+
+	Stage this hunk [y,n,q,a,d,/,s,e,?]? ?
+	y - stage this hunk
+	n - do not stage this hunk
+	q - quit; do not stage this hunk nor any of the remaining ones
+	a - stage this hunk and all later hunks in the file
+	d - do not stage this hunk nor any of the later hunks in the file
+	g - select a hunk to go to
+	/ - search for a hunk matching the given regex
+	j - leave this hunk undecided, see next undecided hunk
+	J - leave this hunk undecided, see next hunk
+	k - leave this hunk undecided, see previous undecided hunk
+	K - leave this hunk undecided, see previous hunk
+	s - split the current hunk into smaller hunks
+	e - manually edit the current hunk
+	? - print help
+
+So to commit a hunk, press `y`, then `q` and commit the change via `git commit`
+
 ### Rename ###
 
     $ git mv <src> <dst>
