@@ -1,14 +1,6 @@
 # Java Developer Handbook #
 
-## Basics ##
-
-### Format a String ###
-
-    String.format("First param %s, second param %s", firstParam, secondParam);
-
-[Formatting Syntax](http://java.sun.com/j2se/1.5.0/docs/api/java/util/Formatter.html#syntax)
-
-     %[argument_index$][flags][width][.precision]conversion
+## Concepts ##
 
 ## Class Hierarchy ##
 
@@ -92,11 +84,9 @@ At some time myObject might return `null`
 
 Every thrown `Exception` stops the `finalize()` method, but doesn’t stop the GC process
 
-## Conventions ##
-
 ### JavaBeans ###
 
-A _JavaBean_ has to conform to three properties
+Java and the programminjg world itself thrive on conventions. A _JavaBean_ has to conform to three properties
 
 - parameter less constructor  
 - class has (private ) member variables  
@@ -104,13 +94,15 @@ A _JavaBean_ has to conform to three properties
 
 Sometimes these objects are also called _POJOs_ (Plain Old Java Object), describing the fact that the don’t implement an interface, or extend another class, they are just a normal object.
 
-## Documentation ##
+## Basics ##
 
-### JavaDoc ###
+### Format a String ###
 
-#### Proposed Tags ####
+    String.format("First param %s, second param %s", firstParam, secondParam);
 
-`@category` For logically grouping classes, methods, fields together
+[Formatting Syntax](http://java.sun.com/j2se/1.5.0/docs/api/java/util/Formatter.html#syntax)
+
+     %[argument_index$][flags][width][.precision]conversion
 
 ## Interview Questions ##
 
@@ -128,7 +120,7 @@ The servlet lifecycle consists of the following steps:
 3.  After initialization, the servlet can service client requests. Each request is serviced in its own separate thread. The container calls the `service()` method of the servlet for every request. The `service()` method determines the kind of request being made and dispatches it to an appropriate method to handle the request. The developer of the servlet must provide an implementation for these methods. If a request for a method that is not implemented by the servlet is made, the method of the parent class is called, typically resulting in an error being returned to the requester.  
 Finally, the container calls the `destroy()` method that takes the servlet out of service. The destroy() method, like init(), is called only once in the lifecycle of a servlet.
 
-## Problems/##
+## FAQ/Problems ###
 
 ### Missing Java 1.4 on OS X ###
 
@@ -151,11 +143,7 @@ problem](http://blog.anthonychaves.net/java/2006/12/01/solution-for-classnotfoun
 
 The hint is to pack the classes into a jar, and add the jar to the classpath and not the directory whee the classes reside.
 
-## Appendix ##
-
-### FAQ/Problems ###
-
-#### Out of Heap Space ####
+### Out of Heap Space ####
 
 Just add the following VM parameter
 
@@ -180,5 +168,4 @@ JVM starts with `-Xms` amount of memory for the heap (storing objects etc.) and 
 [Java EE 5](http://download.oracle.com/javaee/5/api/)  
 [Java EE 6](http://download.oracle.com/javaee/6/api/)
 
-
-[#Doe:2006]: Joshua Bloch. *Effektiv Java Programmieren*.  Addison-Wesley, 2002.
+[#Bloch:2002]: Joshua Bloch. *Effektiv Java Programmieren*.  Addison-Wesley, 2002.
