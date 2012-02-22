@@ -2,7 +2,7 @@
 
 ## Concepts ##
 
-## Class Hierarchy ##
+### Class Hierarchy ###
 
 Mostly taken from [http://www.javaworld.com/javaworld/javaqa/1999-08/01-qa-static2.html](http://www.javaworld.com/javaworld/javaqa/1999-08/01-qa-static2.html)
 
@@ -42,6 +42,7 @@ Member classes are defined within the body of a class. You can use member classe
 The member class is the only class that you can declare `static`. When you declare a member class, you can instantiate that member class only within the context of an object of the outer class in which this member class is declared. If you want to remove this restriction, you declare the member class a `static` class.
 
 When you declare a member class with a `static` modifier, it becomes a nested top-level class and can be used as a normal top-level class as explained above. 
+
 4. **Nested Top-Level**
 A nested top-level class is a member classes with a `static` modifier. A nested top-level class is just like any other top-level class except that it is declared within another class or interface. Nested top-level classes are typically used as a convenient way to group related classes without creating a new package. 
 
@@ -53,7 +54,7 @@ Nested top level classes are often usd to capsule objects representing component
 
 One **important note**: The `static` keyword does **not** do to a class declaration what it does to a variable or a method declaration. 
 	 
-## Garbage Collection ##
+### Garbage Collection ###
 
 Java makes uses of Garbage Collection to remove objects from memory that are no longer being used. "_Being used_" normally meaning being _referenced_ by other objects. So this makes life for the developer easier, but it doesn’t mean that he doesn’t have to think about the lifecycle of an object. The developer could forget to de-reference an object no longer in use (caches and hash maps are a good candidate for such a mistake).
 
@@ -67,7 +68,7 @@ The _Strong Reference_
 
 This is just your ordinary reference used every day, a new `StringBuffer` is created and the variable `buffer` holds a strong reference to it. Remember an object reachable through a chain of strong references is not eligible for garbage collection. This is expected behavior, you don’t want the garbage collector to destroy objects you are currently working with.
 
-#### Weak Reference ####
+The _Weak Reference_
 
 A weak reference is a reference that is strong. It can’t force an object to remain in memory. You can create a weak reference like so:
 
