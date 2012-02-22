@@ -2,9 +2,49 @@
 
 ## Concepts ##
 
+### Java Class Loader ###
+
+The Java Class Loader is a part of the JRE that dynmacilly loads Java Classes into the Java Virtual Machine. Usually classes are loaded on demand (lazy initialization). The Java Run Time does not need to know about files and filesystems because of class loaders. They are an abstraction (or indirection) between a resource name and its actual location.
+
+In Java a library, a collection of object code, is typically packaged in Jar files. Tge class loader is reponsible for locating libraries, reading their contents and loading the classes. 
+
+When the JVM is started´, three class loaders are used.
+
+1. Bootstrap class loader. Loads core Java Libraries (in `$JAVA_HOME/lib`). Written in native code.
+2. Extensions class loader. Loads extensions code (in `$JAVA_HOME/lib/ext` or other dirs specified in `java.ext.dirs` system property). Implemented by the `sun.misc.Launcher$ExtClassLoader` class.
+3. System class loader. Loads code found on `java.class.path`, which maps to the system `CLASSPATH` variable. Implemented by the `sun.misc.Launcher$AppClassLoader` class.
+
+All class loaders are of type `java.lang.ClassLoader`
+
+#### Loading Properties and Configuration Files ####
+
+In part taken from [Java World, Smartly load your properties](http://www.javaworld.com/javaworld/javaqa/2003-08/01-qa-0808-property.html)
+
+Say No to `java.io`.
+	- Absolute filenames aren't portable
+	- Relative file	names are better but are resolved to JVM's current directory, which details can change (depending on JVM setup, deployment context, servlet container, ...)
+
+Use classloader instead. They are an abstraction between a resource name and its actual location.
+
+You can get at `some/pkg/resource.properties` programmatically from your Java code in several ways:
+
+	ClassLoader.getResourceAsStream ("some/pkg/resource.properties");
+	Class.getResourceAsStream ("/some/pkg/resource.properties");
+	ResourceBundle.getBundle ("some.pkg.resource");
+
+Additionally, if the code is in a class within a `some.pkg` Java package, then the following works as well:
+
+	  Class.getResourceAsStream ("resource.properties");
+
+| Method | Parameter format | Lookup failure behavior | Usage example |
+| :---- | :---- | :---- | :---- |
+| `ClassLoader. getResourceAsStream()` | `/`-separated; no leading `/` (all names are absolute) | Silent (returns `null`) | `this.getClass(). getClassLoader(). getResourceAsStream ("some/pkg/resource.properties")` | 
+| `Class. getResourceAsStream()` | `/`-separated; leading `/` indicates absolute names; others are relative to the class's package | Silent (returns `null`) | `this.getClass(). getResourceAsStream ("resource.properties")` |
+| `ResourceBundle. getBundle()` | `.`-separated names; all names are absolute; `.properties` suffix implied | Throws unchecked `java.util.MissingResourceException` | `ResourceBundle. getBundle ("some.pkg.resource") `|
+
 ### Class Hierarchy ###
 
-Mostly taken from [http://www.javaworld.com/javaworld/javaqa/1999-08/01-qa-static2.html](http://www.javaworld.com/javaworld/javaqa/1999-08/01-qa-static2.html)
+Mostly taken from [Java World, Static class declarations](http://www.javaworld.com/javaworld/javaqa/1999-08/01-qa-static2.html)
 
 **Top level classes** are classes is declared at the top level of a package, declared in its own file with the same name as the class name. A top level class is by definition top-level, adding a `static`keyword has no point and is in fact an error that the compiler will detect.
 **Inner classes** are, as the name suggests, declared within in top-level classes. An inner class cane be one of the following four types:
