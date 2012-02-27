@@ -1,18 +1,50 @@
 # Java Developer Handbook #
 
-## Basics ##
+## Concepts ##
 
-### Format a String ###
+### Java Class Loader ###
 
-    String.format("First param %s, second param %s", firstParam, secondParam);
+The Java Class Loader is a part of the JRE that dynmacilly loads Java Classes into the Java Virtual Machine. Usually classes are loaded on demand (lazy initialization). The Java Run Time does not need to know about files and filesystems because of class loaders. They are an abstraction (or indirection) between a resource name and its actual location.
 
-[Formatting Syntax](http://java.sun.com/j2se/1.5.0/docs/api/java/util/Formatter.html#syntax)
+In Java a library, a collection of object code, is typically packaged in Jar files. Tge class loader is reponsible for locating libraries, reading their contents and loading the classes. 
 
-     %[argument_index$][flags][width][.precision]conversion
+When the JVM is started´, three class loaders are used.
 
-## Class Hierarchy ##
+1. Bootstrap class loader. Loads core Java Libraries (in `$JAVA_HOME/lib`). Written in native code.
+2. Extensions class loader. Loads extensions code (in `$JAVA_HOME/lib/ext` or other dirs specified in `java.ext.dirs` system property). Implemented by the `sun.misc.Launcher$ExtClassLoader` class.
+3. System class loader. Loads code found on `java.class.path`, which maps to the system `CLASSPATH` variable. Implemented by the `sun.misc.Launcher$AppClassLoader` class.
 
-Mostly taken from [http://www.javaworld.com/javaworld/javaqa/1999-08/01-qa-static2.html](http://www.javaworld.com/javaworld/javaqa/1999-08/01-qa-static2.html)
+All class loaders are of type `java.lang.ClassLoader`
+
+#### Loading Properties and Configuration Files ####
+
+In part taken from [Java World, Smartly load your properties](http://www.javaworld.com/javaworld/javaqa/2003-08/01-qa-0808-property.html)
+
+Say No to `java.io`.
+	- Absolute filenames aren't portable
+	- Relative file	names are better but are resolved to JVM's current directory, which details can change (depending on JVM setup, deployment context, servlet container, ...)
+
+Use classloader instead. They are an abstraction between a resource name and its actual location.
+
+You can get at `some/pkg/resource.properties` programmatically from your Java code in several ways:
+
+	ClassLoader.getResourceAsStream ("some/pkg/resource.properties");
+	Class.getResourceAsStream ("/some/pkg/resource.properties");
+	ResourceBundle.getBundle ("some.pkg.resource");
+
+Additionally, if the code is in a class within a `some.pkg` Java package, then the following works as well:
+
+	  Class.getResourceAsStream ("resource.properties");
+
+| Method | Parameter format | Lookup failure behavior | Usage example |
+| :---- | :---- | :---- | :---- |
+| `ClassLoader. getResourceAsStream()` | `/`-separated; no leading `/` (all names are absolute) | Silent (returns `null`) | `this.getClass(). getClassLoader(). getResourceAsStream ("some/pkg/resource.properties")` | 
+| `Class. getResourceAsStream()` | `/`-separated; leading `/` indicates absolute names; others are relative to the class's package | Silent (returns `null`) | `this.getClass(). getResourceAsStream ("resource.properties")` |
+| `ResourceBundle. getBundle()` | `.`-separated names; all names are absolute; `.properties` suffix implied | Throws unchecked `java.util.MissingResourceException` | `ResourceBundle. getBundle ("some.pkg.resource") `|
+
+### Class Hierarchy ###
+
+Mostly taken from [Java World, Static class declarations](http://www.javaworld.com/javaworld/javaqa/1999-08/01-qa-static2.html)
 
 **Top level classes** are classes is declared at the top level of a package, declared in its own file with the same name as the class name. A top level class is by definition top-level, adding a `static`keyword has no point and is in fact an error that the compiler will detect.
 **Inner classes** are, as the name suggests, declared within in top-level classes. An inner class cane be one of the following four types:
@@ -50,6 +82,7 @@ Member classes are defined within the body of a class. You can use member classe
 The member class is the only class that you can declare `static`. When you declare a member class, you can instantiate that member class only within the context of an object of the outer class in which this member class is declared. If you want to remove this restriction, you declare the member class a `static` class.
 
 When you declare a member class with a `static` modifier, it becomes a nested top-level class and can be used as a normal top-level class as explained above. 
+
 4. **Nested Top-Level**
 A nested top-level class is a member classes with a `static` modifier. A nested top-level class is just like any other top-level class except that it is declared within another class or interface. Nested top-level classes are typically used as a convenient way to group related classes without creating a new package. 
 
@@ -61,7 +94,7 @@ Nested top level classes are often usd to capsule objects representing component
 
 One **important note**: The `static` keyword does **not** do to a class declaration what it does to a variable or a method declaration. 
 	 
-## Garbage Collection ##
+### Garbage Collection ###
 
 Java makes uses of Garbage Collection to remove objects from memory that are no longer being used. "_Being used_" normally meaning being _referenced_ by other objects. So this makes life for the developer easier, but it doesn’t mean that he doesn’t have to think about the lifecycle of an object. The developer could forget to de-reference an object no longer in use (caches and hash maps are a good candidate for such a mistake).
 
@@ -75,7 +108,7 @@ The _Strong Reference_
 
 This is just your ordinary reference used every day, a new `StringBuffer` is created and the variable `buffer` holds a strong reference to it. Remember an object reachable through a chain of strong references is not eligible for garbage collection. This is expected behavior, you don’t want the garbage collector to destroy objects you are currently working with.
 
-#### Weak Reference ####
+The _Weak Reference_
 
 A weak reference is a reference that is strong. It can’t force an object to remain in memory. You can create a weak reference like so:
 
@@ -92,11 +125,9 @@ At some time myObject might return `null`
 
 Every thrown `Exception` stops the `finalize()` method, but doesn’t stop the GC process
 
-## Conventions ##
-
 ### JavaBeans ###
 
-A _JavaBean_ has to conform to three properties
+Java and the programminjg world itself thrive on conventions. A _JavaBean_ has to conform to three properties
 
 - parameter less constructor  
 - class has (private ) member variables  
@@ -104,13 +135,15 @@ A _JavaBean_ has to conform to three properties
 
 Sometimes these objects are also called _POJOs_ (Plain Old Java Object), describing the fact that the don’t implement an interface, or extend another class, they are just a normal object.
 
-## Documentation ##
+## Basics ##
 
-### JavaDoc ###
+### Format a String ###
 
-#### Proposed Tags ####
+    String.format("First param %s, second param %s", firstParam, secondParam);
 
-`@category` For logically grouping classes, methods, fields together
+[Formatting Syntax](http://java.sun.com/j2se/1.5.0/docs/api/java/util/Formatter.html#syntax)
+
+     %[argument_index$][flags][width][.precision]conversion
 
 ## Interview Questions ##
 
@@ -128,7 +161,7 @@ The servlet lifecycle consists of the following steps:
 3.  After initialization, the servlet can service client requests. Each request is serviced in its own separate thread. The container calls the `service()` method of the servlet for every request. The `service()` method determines the kind of request being made and dispatches it to an appropriate method to handle the request. The developer of the servlet must provide an implementation for these methods. If a request for a method that is not implemented by the servlet is made, the method of the parent class is called, typically resulting in an error being returned to the requester.  
 Finally, the container calls the `destroy()` method that takes the servlet out of service. The destroy() method, like init(), is called only once in the lifecycle of a servlet.
 
-## Problems/##
+## FAQ/Problems ###
 
 ### Missing Java 1.4 on OS X ###
 
@@ -151,11 +184,7 @@ problem](http://blog.anthonychaves.net/java/2006/12/01/solution-for-classnotfoun
 
 The hint is to pack the classes into a jar, and add the jar to the classpath and not the directory whee the classes reside.
 
-## Appendix ##
-
-### FAQ/Problems ###
-
-#### Out of Heap Space ####
+### Out of Heap Space ####
 
 Just add the following VM parameter
 
@@ -180,5 +209,4 @@ JVM starts with `-Xms` amount of memory for the heap (storing objects etc.) and 
 [Java EE 5](http://download.oracle.com/javaee/5/api/)  
 [Java EE 6](http://download.oracle.com/javaee/6/api/)
 
-
-[#Doe:2006]: Joshua Bloch. *Effektiv Java Programmieren*.  Addison-Wesley, 2002.
+[#Bloch:2002]: Joshua Bloch. *Effektiv Java Programmieren*.  Addison-Wesley, 2002.
