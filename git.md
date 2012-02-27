@@ -159,9 +159,15 @@ Other commands
 
 ### Merging ###
 
-Just change into the branch you want changes to be merged into and type
+Just change into the branch you want to merged to and type
 
-    $ git merge <branch-name-to-be-merged-in> 
+    $ git merge <branch_you_want_to_merge_from> 
+
+To merge only selective files
+
+	$ git co <branch_you_want_to_merge_from> <file_paths...
+
+#### Conflicts ####
 
 If there are conflicts, you can take a look at all the versions with
 
@@ -174,10 +180,10 @@ If there are conflicts, you can take a look at all the versions with
     # 'their' version of the file
     $git show :3:file.txt
 
-#### Resolve conflict by using remote version verbatim ####
+Resolve conflict by using the remote version verbatim
 
     $ git show :3:file.txt > file.txt
-    $ git file.txt
+    $ git add file.txt
 
 ### Tagging ###
 
