@@ -4,7 +4,7 @@
 
 ### Installation ###
 
-    $ sudo port install git-core +svn
+    $ brew install git
 
 ### Configuring Git ###
 
