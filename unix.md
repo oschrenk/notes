@@ -1,5 +1,47 @@
 # Unix #
 
+## File attributes
+
+### Chmod
+
+    read write execute = 111 = 1 + 2 + 4 = 7
+    read write no execute = 110 = 4 + 2 = 6
+    read no write execute = 101 = 4 + 1 = 5
+    read no write no execute = 100 = 4
+    no read write execute = 011 = 2 + 1 = 3
+    no read write no execute = 010 = 2
+    no read no write execute = 001 = 1
+    no read no write no execute = 000 = 0
+
+### ls -l “weirdness” +/@ symbol in `ls -l`
+
+Sometimes when using `ls -l` there is a `+` or a `@` symbol
+
+    	$ ls -la
+    	-rwx------+ 1 testuser Admin     25600 Jul 12 02:04 file.ext
+    	-rwx------@ 1 testuser Admin     25600 Jul 12 02:04 file.ext
+
+The `+` indicates the use of ACL (Access Control Lists). Consult [ACL][2] for more infos.
+
+The `@` indicates further file attributes. Consult [Apple File Attributes][3] for more infos.
+
+### Access Control lists {#acl}
+
+To view them just use `ls -le`.
+
+This is a rather huge topic. Run `man chmod` and search for acl for a complete description.
+
+To delete an acl entry you have to run `chmod -a` with the exact defintion of the acl. For example:
+
+    	$ ls -le
+    	-rw-rw----+ 1 Joe  staff      14336  1 Dez 12:23 file.ext
+    	0: group:everyone deny delete
+    	$ chmod -a "group:everyone deny delete" file.ext
+
+### Apple File Attributes {#apple-file-attributes}
+
+Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using `ls -ls` indicated by the `@` symbol. By calling `ls -@` or `xattr`you can see that an attribute `com.apple.quarantine` has been added. To remove that call `sudo xattr -d com.apple.quarantine path` or `xattr -d com.apple.quarantine path`
+
 ## FreeBSD Interrupt Signals ##
 
 | Signal Name | Signal Number | Signal Description | 
