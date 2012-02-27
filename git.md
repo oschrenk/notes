@@ -34,13 +34,19 @@ See [Migrate SVN](#migrate-svn) for some more information, but run add `--global
 
 ## Basic Git ##
 
+All Git commands begin with `git` and is followed by a sub-command (and then their respective parameter), e.g.
+
+	$ git add
+
 ### Creating a repo ###
 
 Create a repo
 
-     $ mkdir notes
-     $ cd notes
+     $ mkdir notes && cd notes
      $ git init
+
+Make changes and commit
+
      $ touch README
      $ git add README
      $ git commit -m 'first commit'
@@ -51,32 +57,36 @@ Or just clone it
 
 ### Changes ###
 
-#### Undo all changes in working dir, deleting untracked files ####
+To add a file to stage
 
-    git reset --hard
-    git clean -f -d
+	$ git add <path>
 
-You can also use `git clean -f -x -d`, which also deletes the ignored files
+Other commands
 
-### Staging ###
+* `git reset HEAD path/to/file` removes a file from stage
+* `git mv <src> <dst>` renames a file
+* `git co <path>` reverts file to HEAD (this command does not work like its _SVN_ partner)
+* `git checkout HEAD^ foo.bar` restore deleted file
+* `git diff` diff a file to its HEAD
+* `git reset --hard` Undo all changes in working dir
 
-To stage a file or directory
+To cleanup unwanted (untracked) files and directories in you working dir
 
-    $ git add <path>
+	$ git clean <path>
 
-#### Unstage a file ####
+Offering you the following options
 
-	git reset HEAD path/to/file
-
-#### Restore deleted file ####
-
-    git checkout HEAD^ foo.bar
+* `-d` Also removes untracked directories
+* `-n` Dry run. Only show what would be done.
+* `-x` Don't use the ignore rules.
 
 ### Commit ###
 
-    $ git commit /path/file
-    $ git commit -m 'message' /path/file
-    $ git commit -a /path/auto-added.file
+To commit
+
+	$ git commit /path/file
+	$ git commit -m 'message' /path/file
+	$ git commit -a /path/auto-added.file
 
 #### Partial commits ####
 
@@ -104,77 +114,48 @@ You will see a selection of *hunks* and Git asks you what to do with these hunks
 
 So to commit a hunk, press `y`, then `q` and commit the change via `git commit`
 
-### Rename ###
-
-    $ git mv <src> <dst>
-
-### Diff ###
-
-    $ git diff
-
-#### Revert ####
-
-Unlike _SVN_ it is **NOT** `svn revert` instead use
-
-    $ git checkout filename
-
-to overwrite changes.
-
 ### Branching ###
 
-#### Show Branches ####
+There are two types of branches: *local* and *remote-tracking*. 
 
-Show the available branches (an asterisk `*` represents the active branch)
+Local branches are just in another path in the Git graph that you can commit to.
+
+Remote tracking branches have a few different purposes:
+
+- they are used to link what you work on locally to what is on remote
+- they know what remote branch to get changes from when you use `git fetch` or `git pull`
+
+#### Working with local branches ####
+
+To show the available branches (an asterisk `*` represents the active branch) just type
 
     $ git branch 
 
-with options
+To create a new branch called `experiment`
 
-*   `-r` show the remote branches
-*   `-a` show all branches
+	$ git branch experiment
 
-#### Create branches ####
-
-Make a new branch called "experiment"
-
-    $ git branch experiment
-
-#### Deleting branches ####
-
-    $ git branch (-d | -D) <branchname>...
-
-*   `-d` Delete a branch. The branch must be fully merged in HEAD
-*   `-D` Delete a branch irrespective of its merged status.
-
-#### Rename branch ####
-
-	git branch -m old_branch new_branch
-
-##### Delete remote branches #####
-
-It has a weird syntax (always a indicator that you should not use it)
-
-	git push origin :newfeature
-
-#### Push to remote branch ####
-
-	git push origin branch
-
-#### Working with branches ####
-
-Switch to a branch called "experiment". Git will warn you if you have uncommitted changes.
+To switch to a branch called `experiment` (Git will warn you if you have uncommitted changes)
 
     $ git checkout experiment
 
-#### Track remote branches ####
+To work with branches you can add the following parameters
+ 
+* `-r` show the remote branches
+* `-a` show all branches
+* `-d <branchname>` Delete a branch. The branch must be fully merged in HEAD
+* `-D <branchname>` Delete a branch irrespective of its merged status.
+* `.m <oldBranchName> <newBranchName>` Rename a branch
 
-As of Git 1.7.0:
+#### Working with remote-tracking ####
 
-	$ git branch --set-upstream foo upstream/foo
+To push to a remote branch
 
-For example
+	$ git push origin branch
 
-	$ git branch --set-upstream master origin/master
+Other commands
+
+- `git push origin :experiment` Deletes remote branch. The weird syntax is an indicator that you should not use it.
 
 ### Merging ###
 
