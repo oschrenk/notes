@@ -54,17 +54,30 @@ Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a p
 - Null analysis for fields. JDT can now raise null related errors/warnings for fields. You can configure null analysis for fields in Preferences > Java > Compiler > Errors/Warnings > Null analysis.
 - Export detail formatters. Detail formatters can now be exported as separate preferences.
 
-## FAQ/Problems ##
+### FAQ/Problems ###
 
-### Delete obsolete workspaces under OS X ###
+#### Delete obsolete workspaces under OS X ####
 
 The used workspaces are stored in
 `/Applications/eclipse/configuration/.settings/org.eclipse.ui.ide.prefs`
 
-### Waiting For Virtual Machine To Exit ###
+#### Waiting For Virtual Machine To Exit ####
 
 I had this error when I was trying to deploy a web application to a local JBoss Application Server. The problem was that the ANT home setting of Eclipse were pointing to non existing directories and files. So I removed the false entries and reset me ANT Home in `Preferences > Ant > Runtime`
 
-### Out of Heap Space, Give Run/Debug Configurations more RAM ###
+#### Out of Heap Space, Give Run/Debug Configurations more RAM ####
 
 Goto `Run > [Run|Debug] Configurations` and select the configuration you want to change, select the `Arguments` tab and add sensible parameter to the `VM Arguments` box. For example `-Xms512m -Xmx768m`
+
+#### Unexpected element "{}assembly" {antlib:org.apache.tools.ant}assembly Ant Buildfile Problem ####
+
+This seems to be a bug in Eclipse. Rightclick and delete it.
+
+To disable validation for good:
+
+1. Select the Validation category in the left pane.
+2. Find the Validator named "XML Validator" (in the right pane) and click its ellipses (...) button.
+3. In the following dialogue, select the "Exclude Group" and click "Add Rule...".
+4. On the first page of the New Filter Rule Wizard, select the Content Type option and click Next>.
+5. Finally, on the Content Type drop down, select "Ant Buildfile".
+6. Click Finish and a couple of OKs and that should take care of existing and future Ant Build file validation warnings.
