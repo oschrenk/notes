@@ -29,6 +29,28 @@ Code is king.
 
 [#Batchelder:2003]
 
+### Comments ###
+
+1. Primary Rule
+
+> Comments are for things that **cannot** be expressed in code.
+ 
+The code must be readable. It must clearly express its the developers intents. A good example is a comment to the paper that introduced a specific but complex algorithm.
+
+2. Single Truth Rule
+
+> Comments which restate code must be deleted.
+
+Any restatement of the code is unlikely to be maintained over time. If the comment is maintained, it just adds to the cost, if not maintained they at best waste your time at worst cause confusion and introduce bugs.
+
+3. Single Truth Rule
+
+> If the comment says what the code could say, then the code must change to make the comment redundant.
+
+or example, a comment explaining that the variable `x` represents the principal amount of a loan violates the single truth rule. The variable ought to be named `loanPrincipal`.
+
+[#Ottinger:2009]
+
 ### Version Control ###
 
 Git centric approach:
@@ -163,3 +185,5 @@ Use [Semantic Versioning](http://semver.org/)
 [#Tower:2011]: [Tower](http://www.git-tower.de). [Git Cheat Sheet](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf) from the guys who made [tower](http://www.git-tower.de) 2011
 
 [#MarkCC:2011]: MarkCC [Things Everyone Should Do: Code Review](http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/) from [scientopia.org/](http://scientopia.org/) 2011
+
+[#Ottinger:2009]: Tim Ottinger, [Rules for Commenting](http://agileinaflash.blogspot.com/2009/04/rules-for-commenting.html) 2009
