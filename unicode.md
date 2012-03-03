@@ -2,6 +2,8 @@
 
 - [UniSearcher](http://www.isthisthingon.org/unicode/index.php)
 
+**Computer Keyboard Symbols**
+
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
 - `` - &#xF8FF; - &#63743; - differs from OS to OS, on Mac its an Apple
 - `⌘` - &#x2318; - &#8984; - the Command Key symbol
@@ -20,3 +22,8 @@
 - `⇲`- &#x21F2; - &#8690; - `South East Arrow To Corner`
 - `⇞`- &#x21DE; - &#8670; - the Page Up symbol (`Upwards Arrow With Double Stroke`)
 - `⇟`- &#x21DF; - &#8671; - the Page Down symbol (`Downwards Arrow With Double Stroke`)
+
+**Mathematical Symbols**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `±` - &#x00B1; - &#177; - Plus-minus Sign
