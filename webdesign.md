@@ -3,6 +3,7 @@
 ## Graphics ##
 
 - [Noise Background](http://rappdaniel.com/noisy/)
+- [Subtle Patterns](http://subtlepatterns.com/)
 
 ## Layout ##
 
