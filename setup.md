@@ -17,6 +17,7 @@
 	launchctl load -w ~/Library/LaunchAgents/com.seaandco.geoff.ssh-agent-locker.plist
 	# brew install fuse4x
 	# brew install sshfs
+	# sudo gem install vagrant
 	
 	## tools
 	brew install xmlstarlet
