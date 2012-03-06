@@ -167,3 +167,8 @@ At some point audio output didn't work. I couldn't even change volume. What happ
 ### Show hidden files in Dialogs ###
 
 Press `⌘⇧.` and the the dialog box now will display any hidden files or folders within its list items. You can toggle between the hidden files and folders being displayed by pressing it again.
+
+### Report problems ###
+
+Apple offers a [bug reporting tool](https://bugreport.apple.com/) whre you can submit your bugs.
+

@@ -145,7 +145,7 @@ To work with branches you can add the following parameters
 * `-a` show all branches
 * `-d <branchname>` Delete a branch. The branch must be fully merged in HEAD
 * `-D <branchname>` Delete a branch irrespective of its merged status.
-* `.m <oldBranchName> <newBranchName>` Rename a branch
+* `-m <oldBranchName> <newBranchName>` Rename a branch
 
 #### Working with remote-tracking ####
 
