@@ -8,6 +8,22 @@
 *   `ctrl + l` Clear terminal
 *   `ctrl + x, ctrl +e` Fires up `$EDITOR` to finish a long command in your favorite editor
 
+## Globbing ##
+
+Wildcards in bash are referred to as pathname expansion. Pathname expansion is also sometimes referred to as **globbing**
+
+Pathname expansion that is done by the shell (in this case bash) and not by the operating system or by the program that is being run.
+
+Pathname expansion "expands" the `*`, `?`, and `[...]` syntaxes when you type them as part of a command, for example:
+
+	$ ls *.jpg         # List all JPEG files
+	$ ls ?.jpg         # List JPEG files with 1 char names (eg a.jpg, 1.jpg)
+	$ rm [A-Z]*.jpg    # Remove JPEG files that start with a capital letter
+
+## Bash Completion ##
+
+With Bash completion enabled, the default is to complete the current path to the longest unique string it can on the first press of the Tab key, and then show a list of all the possible completions if the Tab key is then pressed a second time.
+
 ## Output Streams ##
 
 *   `>` redirects *StdOut*, for example to a file `command > path` or to `/dev/null` (discards all data)
