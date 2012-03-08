@@ -1,7 +1,5 @@
 # Bash #
 
-This is not a complete guide, but a collection of hints that makes the life with your shell easier. As my main system is a Mac, some hints might only work on OS X.
-
 ## Shortcuts ##
 
 *   `ctrl + a` Jump to beginning of line
