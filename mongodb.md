@@ -27,7 +27,7 @@ Read the following info
 
 Start the database. If you used the `homebrew` installation and didn't create launch agents you have to start _mongoDB_ manually. Open a terminal and run
 
-	 mongod run --config /usr/local/Cellar/mongodb/2.0.1-x86_64/mongod.conf
+	 mongod run --config /usr/local/Cellar/mongodb/2.0.3-x86_64/mongod.conf
 	
 For just trying out some stuff you can use the mongo shell
 
