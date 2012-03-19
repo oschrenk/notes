@@ -40,9 +40,9 @@ In my case it opens `nano`. To give `joe` permission
 	
 add
 
-	jdoe ALL=(ALL) ALL
+	joe ALL=(ALL) ALL
 
-Save the via by exiting via `^X` and save it to the suggested filename. `visudo` takes care of sanity checking. 
+Save the file. `visudo` takes care of sanity checks. 
 
 I some distribution the option `targetpw` is set
 
