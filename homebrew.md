@@ -96,3 +96,13 @@ Somehow my tree and remote diverged and `brew update` threw conflict errors at m
 	git remote add origin git://github.com/mxcl/homebrew.git
 	git fetch origin
 	git reset --hard origin/master
+	
+### Get revison of homebrew ###
+
+You can get the version of homebrew via
+
+	brew --version
+
+To get the revision just
+
+	brew log -1 --format="%H"
