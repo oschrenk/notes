@@ -15,7 +15,7 @@ Code is king.
 - enforce style, via IDE, via commit hooks
 - Limit lines to 80 characters. 
 	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
-	by [Node.js Style Guide](http://nodeguide.com/style.html#line-length)
+	[#Geissendörfer:2011]
 - api > framework
 - dependency injection > dependency injection container
 
@@ -27,7 +27,29 @@ Code is king.
 - *Be concise*.
 - *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future. 
 
-[Ned Batchelder, Logging Style Guide](http://nedbatchelder.com/text/log-style-guide.html)
+[#Batchelder:2003]
+
+### Comments ###
+
+1. Primary Rule
+
+> Comments are for things that **cannot** be expressed in code.
+ 
+The code must be readable. It must clearly express its the developers intents. A good example is a comment to the paper that introduced a specific but complex algorithm.
+
+2. Single Truth Rule
+
+> Comments which restate code must be deleted.
+
+Any restatement of the code is unlikely to be maintained over time. If the comment is maintained, it just adds to the cost, if not maintained they at best waste your time at worst cause confusion and introduce bugs.
+
+3. Single Truth Rule
+
+> If the comment says what the code could say, then the code must change to make the comment redundant.
+
+or example, a comment explaining that the variable `x` represents the principal amount of a loan violates the single truth rule. The variable ought to be named `loanPrincipal`.
+
+[#Ottinger:2009]
 
 ### Version Control ###
 
@@ -42,7 +64,7 @@ Git centric approach:
 - **use branches** Branches are the perfect tool to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, ideas.
 - **agree on a workflow** Git lets you pick from a lot of different workflows: long-running branches, topic branches, merge or rebase, git-flow... Which one you choose depends on a couple of factors: your project, your overall development and deployment workflows and (maybe most important- ly) on your and your teammates‘ personal preferences. However you choose to work, just make sure to agree on a com- mon workflow that everyone follows. 
 
-Taken from the Git Cheat Sheet from the guys who made [tower](http://www.git-tower.de)
+[#Tower:2011]
 
 #### Commit Messages ####
 
@@ -88,19 +110,21 @@ Keep in mind
 
 > There is never anything wrong with just saying "Yup, looks good". If you constantly go hunting to try to find something to criticize, then all that you accomplish is to wreck your own credibility
 
-Inspired by [blog entry](http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/) from [scientopia.org/](http://scientopia.org/)
+[#MarkCC:2011]
 
 ## Office ##
 
 ### Desks ###
 
-- have power outlets on top of the desks
+- each to his own but provide room, stationary and helpers (like cord organizers) for keeping the workplace cleam
+- have power easy accessible
 - have easy accessible ethernet ports available on or near the desk
 
 ### Technology ###
 
 - fileserver
 - map/reduce cluster
+- easy way to spin up virtual machines 
 
 ## Organization ##
 
@@ -151,3 +175,15 @@ Use [Semantic Versioning](http://semver.org/)
 
 - have hackathons with the local developers
 - organize talks and presentations
+
+## Bibliography ##
+
+[#Geissendörfer:2011]: Felix Geissendörfer [Node.js Style Guide](http://nodeguide.com/style.html#line-length) 2011
+
+[#Batchelder:2003]: Ned Batchelder. [Logging Style Guide](http://nedbatchelder.com/text/log-style-guide.html) 2006
+
+[#Tower:2011]: [Tower](http://www.git-tower.de). [Git Cheat Sheet](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf) from the guys who made [tower](http://www.git-tower.de) 2011
+
+[#MarkCC:2011]: MarkCC [Things Everyone Should Do: Code Review](http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/) from [scientopia.org/](http://scientopia.org/) 2011
+
+[#Ottinger:2009]: Tim Ottinger, [Rules for Commenting](http://agileinaflash.blogspot.com/2009/04/rules-for-commenting.html) 2009

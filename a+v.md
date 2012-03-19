@@ -28,7 +28,6 @@ Time format:
 
 Install via
 
-	sudo port install ffmpeg
 	brew install ffmpeg
 
 Usage:
