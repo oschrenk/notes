@@ -22,6 +22,10 @@
 - `⇲`- &#x21F2; - &#8690; - `South East Arrow To Corner`
 - `⇞`- &#x21DE; - &#8670; - the Page Up symbol (`Upwards Arrow With Double Stroke`)
 - `⇟`- &#x21DF; - &#8671; - the Page Down symbol (`Downwards Arrow With Double Stroke`)
+- `←`- &#x2190; - &#8592; - `Leftwards Arrow`
+- `↑`- &#x2191; - &#8593; - `Upwards Arrow`
+- `→`- &#x2192; - &#8594; - `Rightwards Arrow`
+- `↓`- &#x2193; - &#8595; - `Downwards Arrow`
 
 **Mathematical Symbols**
 
