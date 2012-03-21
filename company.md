@@ -12,7 +12,10 @@ Code is king.
 
 - utf8, unix line encoding
 - agree on company style
-- enforce style, via IDE, via commit hooks
+- enforce style
+	- with shared IDE/editor preferences
+	- with tools like [FindBugs](http://findbugs.sourceforge.net/), [PMD](http://pmd.sourceforge.net/), [JSLint](http://www.jslint.com/), [JSHint](http://www.jshint.com/) and the likes and appropate pre-commit hooks
+	- pre-commit hooks
 - Limit lines to 80 characters. 
 	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
 	[#Geissendörfer:2011]
