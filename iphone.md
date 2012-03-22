@@ -1,4 +1,4 @@
-# iPhone Development #
+# iPhone #
 
 ## Measurements ##
 
