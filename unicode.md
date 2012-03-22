@@ -6,22 +6,29 @@
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
 - `` - &#xF8FF; - &#63743; - differs from OS to OS, on Mac its an Apple
-- `⌘` - &#x2318; - &#8984; - the Command Key symbol
-- `⌥` - &#x2325; - &#8997; - the Option Key symbol
-- `⇧` - &#x21E7; - &#8679; - the Shift Key
+- `⌘` - &#x2318; - &#8984; - Command Key symbol
+- `⌥` - &#x2325; - &#8997; - Option Key symbol
+- `⇧` - &#x21E7; - &#8679; - Shift Key
 - `⇪` - &#8681; - the Caps Lock Key symbol
 - `⎋` - &#x238B; - &#9099; - the Escape Key (`BROKEN CIRCLE WITH NORTHWEST ARROW`, or an escape character from ISO 9995-7).
-- `⇥` - &#x21E5; - &#8677; - the Tab Key symbol
 - `⏎` - &#x23CE; - &#9166; - the Return Key symbol
 - `⌫` - &#x232B; - &#9003; - the Delete Key symbol
 - `⌦` - &#x2326; - &#8998; - the Forward Delete Key symbol (`Erase To The Right`)
 - `⌽` - &#x233D; - &#9021; - a possible substitute for the Power symbol
 - `⏏` - &#x23CF; - &#9167; - the Eject symbol
-- `⌤` - &#x2324; - &#8996; - `Up Arrowhead Between Two Horizontal Bars`
-- `⇱`- &#x21F1; - &#8689; - `North West Arrow To Corner`
-- `⇲`- &#x21F2; - &#8690; - `South East Arrow To Corner`
-- `⇞`- &#x21DE; - &#8670; - the Page Up symbol (`Upwards Arrow With Double Stroke`)
-- `⇟`- &#x21DF; - &#8671; - the Page Down symbol (`Downwards Arrow With Double Stroke`)
+- `␣` - &#x2423; - &#9251; - Space (`Open Box`)
+
+**Arrow Symbols**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `⌤` - &#x2324; - &#8996; - Enter, `Up Arrowhead Between Two Horizontal Bars`
+- `⌃` - &#x2303; - &#8963; - Control Key symbol, (`Up Arrowhead`)
+- `⇤` - &#x21E4; - &#8676; - Tab backward, (`Leftwards Arrow To Bar`)
+- `⇥` - &#x21E5; - &#8677; - Tab forward, (`Rightwards Arrow To Bar`)
+- `⇱`- &#x21F1; - &#8689; - Home, `North West Arrow To Corner`
+- `⇲`- &#x21F2; - &#8690; - End, `South East Arrow To Corner`
+- `⇞`- &#x21DE; - &#8670; - Page Up, (`Upwards Arrow With Double Stroke`)
+- `⇟`- &#x21DF; - &#8671; - Page Down,  (`Downwards Arrow With Double Stroke`)
 - `←`- &#x2190; - &#8592; - `Leftwards Arrow`
 - `↑`- &#x2191; - &#8593; - `Upwards Arrow`
 - `→`- &#x2192; - &#8594; - `Rightwards Arrow`
