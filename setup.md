@@ -2,11 +2,14 @@
 
 ## OSX ##
 
-	## basics
+	## homebrew
 	ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
+	
+	## command line
 	brew install ack
 	brew install bash-completion
 	brew install z
+		
 	brew install multimarkdown
 	
 	## system
@@ -15,23 +18,25 @@
 	mkdir -p ~/Library/LaunchAgents
 	cp /usr/local/Cellar/ssh-agent-locker/0.1.0/com.seaandco.geoff.ssh-agent-locker.plist ~/Library/LaunchAgents/
 	launchctl load -w ~/Library/LaunchAgents/com.seaandco.geoff.ssh-agent-locker.plist
-	# brew install fuse4x
-	# brew install sshfs
-	# sudo gem install vagrant
-	
+
 	## tools
 	brew install xmlstarlet
+	brew install curl
+	brew install wget
+	brew install httrack
+
 	
-	## scms
-	brew install svn
-	brew install https://raw.github.com/adamv/homebrew-alt/master/other/mercurial.rb
-	brew install bazaar
-	
+	## git
 	brew install git
 	brew install git-extras
 	brew install git-flow
 	brew install git-sh
 	brew install hub
+	
+	## scms
+	brew install svn
+	brew install https://raw.github.com/adamv/homebrew-alt/master/other/mercurial.rb
+	brew install bazaar
 	
 	## databases
 	brew install mongodb
@@ -55,6 +60,11 @@
 	brew install x264
 	brew install xvid
 	
+	## java
+	brew install maven
+	brew install maven-shell
+	brew install play
+	
 	## node.js
 	brew install node
 	curl http://npmjs.org/install.sh | sh
@@ -64,17 +74,7 @@
 	npm install -g markdown-wiki
 	npm install -g deja
 	npm install -g pegjs
-	
-	## java
-	brew install maven
-	brew install maven-shell
-	brew install play
-
-	## http
-	brew install curl
-	brew install wget
-	brew install httrack
-	
+		
 	## dev
 	mkdir -p ~/Development
 	cd ~/Development
