@@ -5,26 +5,31 @@
 	## homebrew
 	ruby -e "$(curl -fsSLk https://gist.github.com/raw/323731/install_homebrew.rb)"
 	
-	## command line
-	brew install ack
-	brew install bash-completion
-	brew install z
-		
-	brew install multimarkdown
-	
 	## system
 	# lion broke keyhchain/ssh-agent
 	brew install ssh-agent-locker
 	mkdir -p ~/Library/LaunchAgents
 	cp /usr/local/Cellar/ssh-agent-locker/0.1.0/com.seaandco.geoff.ssh-agent-locker.plist ~/Library/LaunchAgents/
 	launchctl load -w ~/Library/LaunchAgents/com.seaandco.geoff.ssh-agent-locker.plist
-
+	
+	## Install newest bash
+	brew install bash
+	# Add the new shell to the list of legit shells
+	sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
+	# Change the shell for the user
+	chsh -s /usr/local/bin/bash
+	
+	## command line
+	brew install bash-completion
+	brew install z
+	
 	## tools
-	brew install xmlstarlet
+	brew install ack
 	brew install curl
-	brew install wget
 	brew install httrack
-
+	brew install multimarkdown
+	brew install wget
+	brew install xmlstarlet
 	
 	## git
 	brew install git
