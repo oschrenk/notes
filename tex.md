@@ -64,6 +64,8 @@ Tex creates a lot of temporary files that would only clutter the version control
 	*.log
 	*.lot
 	*.nav
+	*.nlo
+	*.nls
 	*.out
 	*.pdf
 	!*/*.pdf
