@@ -2,6 +2,8 @@
 
 ## Installation
 
+- [MINDSTORMS NXT 2.0 Download](http://mindstorms.lego.com/en-gb/News/ReadMore/Default.aspx?id=351334)
+
 ### Standard Lego software
 
 Before you install any software be advised that the software on the CD will not work on Snow Leopard aka OS X 10.6. It will install without any error messages, even prompting you to restart, but the installer will not install the software (at least not all of it). Lego is aware of the fact and released a "patch", which is actually just a ruby script, which copies content from the CD to the desktop, deletes one file before running the installer. The [script][patch-sl] has some additional checks, but here is the important part (the disk has to be loaded):
