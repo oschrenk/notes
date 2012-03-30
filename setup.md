@@ -28,6 +28,7 @@
 	brew install curl
 	brew install httrack
 	brew install multimarkdown
+	brew install synergy
 	brew install wget
 	brew install xmlstarlet
 	
