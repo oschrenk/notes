@@ -90,6 +90,7 @@
 	## home	
 	cd ~
 	deja clone oschrenk/dotfiles
+	deja update
 	
 	## update textmate bundles
 	. ~/Development/scripts/mateup
