@@ -14,6 +14,8 @@ Create an empty directory and prepare the repository
     $ cd project_tmp
     $ git svn init http://code.yoursite.net/project/trunk/ --no-metadata
 
+The `--no-metadata` is for one-shot imports only. Do not use it when you plamn to fetch from the repository again.
+
 You get an answer like
 
     Initialized empty Git repository in /absolute/path/project_tmp/.git/
