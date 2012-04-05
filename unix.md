@@ -1,5 +1,56 @@
 # Unix #
 
+## Terminal ##
+
+### Bash ###
+
+Wildcards in bash are referred to as pathname expansion. Pathname expansion is also sometimes referred to as **globbing**
+
+Pathname expansion that is done by the shell (in this case bash) and not by the operating system or by the program that is being run.
+
+Pathname expansion "expands" the `*`, `?`, and `[...]` syntaxes when you type them as part of a command, for example:
+
+	$ ls *.jpg         # List all JPEG files
+	$ ls ?.jpg         # List JPEG files with 1 char names (eg a.jpg, 1.jpg)
+	$ rm [A-Z]*.jpg    # Remove JPEG files that start with a capital letter
+
+## Working with directories and files ##
+
+`ls` 
+- `-t` List files in order of last modification date, newest first. This is useful for very large directories when you want to get a quick list of the most recent files change. Probably most useful combined with `-l`. If you want the oldest files, you can add `-r` to reverse the list.
+- `-X` Group files by extension; handy for polyglot code, to group header files and source files separately, or to separate source files from directories or build files.
+- `-v` Naturally sort version numbers in filenames.
+- `-S` Sort by filesize.
+- `-R` List files recursively. This one is good combined with `-l`
+
+### Finding files ###
+
+`find` has a complex filtering syntax all of its own; the following examples show some of the most useful filters you can apply to retrieve lists of certain files:
+
+- `find -name '*.c'` Find files with names matching a shell-style pattern. Use `-iname` for a case-insensitive search.
+- `find -path '*test*'` Find files with paths matching a shell-style pattern. Use `-ipath` for a case-insensitive search.
+- `find -mtime -5` Find files edited within the last five days. You can use `+5` instead to find files edited before five days ago.
+- `find -newer server.c` Find files more recently modified than `server.c`.
+- `find -type d` Find directories. For files, use `-type f`; for symbolic links, use `-type l`.
+
+You can combine these to get even more powerful filters, for example a filter that shows C source code edited in the last two days.
+
+	$ find -name '*.c' -mtime -2
+
+### Searching in files ###
+
+`grep [options] PATTERN [FILE...]` is useful here
+
+- `grep -R somevar` This searches the current directory tree recursively for anything matching `someVar`
+
+- `grep -iR`  By default grep works with fixed case. Change the behaviour by setting the insensitivity flag.
+
+- `grep -l` Prints a list of files that match without printing the matches themselves with. This is very useful for building a list of files to edit in your chosen text editor.
+
+- `grep -v` Exclude matches from result.
+
+- `grep -F` Matches for a fixed string-
+
 ## File attributes
 
 ### Chmod
@@ -113,3 +164,8 @@ The meaning of the codes is approximately as follows:
 | EX_PROTOCOL | 76 | The remote system returned something that was `not possible` during a protocol exchange.
 | EX_NOPERM | 77 | You did not have sufficient permission to perform the operation.  This is not intended for file system problems, which should use `EX_NOINPUT` or `EX_CANTCREAT`, but rather for higher level permissions.
 | EX_CONFIG | 78 | Something was found in an unconfigured or miscon figured state.
+
+## Sources ##
+
+- [Arabesque](http://blog.sanctum.geek.nz/)
+- [Linux Journal](http://www.linuxjournal.com/content/bash-extended-globbing)
