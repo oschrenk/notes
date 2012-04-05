@@ -179,6 +179,14 @@ Use [Semantic Versioning](http://semver.org/)
 - have hackathons with the local developers
 - organize talks and presentations
 
+## Customer ##
+
+- send customer emails based on certain rules
+	- "Automatically email users after 7 days if they haven’t added a teammate or created a project"
+	- "On day 15 tell all iPhone users about the iPhone app, if they haven’t already installed it"
+- send emails based on time (after 1d, 1w, 1m)
+- send emails based on activity
+
 ## Bibliography ##
 
 [#Geissendörfer:2011]: Felix Geissendörfer [Node.js Style Guide](http://nodeguide.com/style.html#line-length) 2011
