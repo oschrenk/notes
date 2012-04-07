@@ -129,10 +129,14 @@ The [Mavenize](#mavenize) way is the better (more complete/correct) choice but s
 
 I found a [blog entry](http://davidmarquis.posterous.com/maven-custom-properties-precedence) that has solved the (documentation) problem and found the following precedence:
 
-1. System properties: set with -Dxyz=value on the command line.
+1. System properties: set with `-Dxyz=value` on the command line.
 2. From currently active profile(s): `settings.xml` in user home directory first, then `profiles.xml` in project root directory, then in profiles defined in your `pom.xml`. If many profiles are active, and a property is defined in more than one of those, the order of precedence is based on the last profile in which this property is defined, in alphabetical order of profile name.
-3. In the properties section of your pom.xml.
+3. In the properties section of your `pom.xml`.
 4. Lastly, in properties defined in filters. If a property is defined in multiple filters, then the last one (in order of appearance in your filters section) has precedence over the others.
+
+## Site ##
+
+- [Fluido Skin](http://maven.apache.org/skins/maven-fluido-skin/)
 
 ## M2Eclipse ##
 
