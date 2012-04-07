@@ -51,7 +51,109 @@ You can combine these to get even more powerful filters, for example a filter th
 
 - `grep -F` Matches for a fixed string-
 
-## File attributes
+### Streams & Pipes ###
+
+Most processes initiated by UNIX commands write to the standard output (that is, they write to the terminal screen), and many take their input from the standard input (that is, they read it from the keyboard). There is also the standard error, where processes write their error messages, by default, to the terminal screen.
+
+The `cat` command can be used to write the contents of a file to the screen. Using `cat` without specifying a file to read from can be used to read from  standard input.
+
+	$ cat
+
+Press `Ctrl` key down and press `d` (written as `^D` for short) to end the input.
+
+If you run the cat command without specifing a file to read, it reads the standard input (the keyboard), and on receiving the 'end of file' (`^D`), copies it to the standard output (the screen).
+
+In UNIX, we can redirect both the input and the output of commands.
+
+#### Redirecting the Output ####
+
+The `>` symbol redirects the output of a command. For example, to create a file called `list1` containing a list of fruit, type  
+
+	$ cat > list1
+
+Then type in the names of some fruit. Press `Return` after each one.
+
+	pear
+	banana
+	apple
+	^D {this means press [Ctrl] and [d] to stop}
+
+What happens is the `cat` command reads the standard input (the keyboard) and the `>` redirects the output, which normally goes to the screen, into a file called `list1`
+
+#### Appending to a file
+
+The form `>>` appends standard output to a file. So to add more items to the file `list1`, type
+
+	$ cat >> list1
+
+Then type in the names of more fruit
+
+	peach
+	grape
+	orange
+	^D (Control D to stop)
+
+To read the contents of the file, type
+
+	$ cat list1
+
+It contains six fruit.
+
+#### Redirecting the Input  
+
+The `<` symbol redirects the input of a command.
+
+The command `sort` alphabetically or numerically sorts a list. Type
+
+	$ sort
+
+Then type in the names of some animals. Press [Return] after each one.
+
+	dog
+	cat
+	bird
+	ape
+	^D (control d to stop)
+
+The output will be
+
+	ape
+	bird 
+	cat 
+	dog
+
+Using `<` you can redirect the input to come from a file rather than the keyboard. For example, to sort the list of fruit, type
+
+	$ sort < list1
+
+To output the sorted list to a file, type,
+
+	$ sort < list1 > slist
+
+#### Pipes
+
+To see who is on the system with you, type
+
+	$ who
+
+One method to get a sorted list of names is to type,
+
+	$ who > names.txt
+	$ sort < names.txt
+
+This is a bit slow and you have to remember to remove the temporary file called names when you have finished. What you really want to do is connect the output of the who command directly to the input of the sort command. This is exactly what pipes do. The symbol for a pipe is the vertical bar `|`
+
+For example, typing
+
+	$ who | sort
+
+will give the same result as above, but quicker and cleaner.
+
+To find out how many users are logged on, type
+
+	$ who | wc -l
+
+## Files ##
 
 ### Chmod
 
