@@ -9,9 +9,18 @@
 
     $ brew install maven
 
-## Setup ##
+## Configuration ##
 
 The settings can be found under `~/.m2/settings.xml`
+
+### Custom Properties Precedence ###
+
+I found a [blog entry](http://davidmarquis.posterous.com/maven-custom-properties-precedence) that has solved the (documentation) problem and found the following precedence:
+
+1. System properties: set with `-Dxyz=value` on the command line.
+2. From currently active profile(s): `settings.xml` in user home directory first, then `profiles.xml` in project root directory, then in profiles defined in your `pom.xml`. If many profiles are active, and a property is defined in more than one of those, the order of precedence is based on the last profile in which this property is defined, in alphabetical order of profile name.
+3. In the properties section of your `pom.xml`.
+4. Lastly, in properties defined in filters. If a property is defined in multiple filters, then the last one (in order of appearance in your filters section) has precedence over the others.
 
 ### Proxy ###
 
@@ -34,7 +43,7 @@ The settings can be found under `~/.m2/settings.xml`
       ...
     </settings>
 
-### Move the local repository ###
+### Set the local repository ###
 
 As I use multiple user on my machine for different clients (it helps keep my mind sane) and don't want to have a repository for each user I decided to move it to a shared location on my hard drive. Normally it is found in `~/.m2/repository`
 
@@ -122,17 +131,6 @@ The [Mavenize](#mavenize) way is the better (more complete/correct) choice but s
 	  -Dfile=<path-to-file> \
 	  -DrepositoryId=<id-to-map-on-server-section-of-settings.xml> \
 	  -Durl=<url-of-the-repositor-to-deploy>
-
-## Configuration ##
-
-### Custom Properties Precedence ###
-
-I found a [blog entry](http://davidmarquis.posterous.com/maven-custom-properties-precedence) that has solved the (documentation) problem and found the following precedence:
-
-1. System properties: set with `-Dxyz=value` on the command line.
-2. From currently active profile(s): `settings.xml` in user home directory first, then `profiles.xml` in project root directory, then in profiles defined in your `pom.xml`. If many profiles are active, and a property is defined in more than one of those, the order of precedence is based on the last profile in which this property is defined, in alphabetical order of profile name.
-3. In the properties section of your `pom.xml`.
-4. Lastly, in properties defined in filters. If a property is defined in multiple filters, then the last one (in order of appearance in your filters section) has precedence over the others.
 
 ## Site ##
 
