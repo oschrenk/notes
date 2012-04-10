@@ -200,3 +200,14 @@ Change the `source` and `target` tags according to your needs
 			</plugin>
 		</plugins>
 	</build>
+
+
+### Maven, Junit tests and resource loading ###
+
+I always forget.
+	
+	private static final String PATH="/path/to/file.csv";
+	[...]
+	final File file=new File(this.getClass().getResource(PATH).getFile());
+
+This way the classloader finds the proper resource
