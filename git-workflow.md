@@ -4,9 +4,9 @@
 
 There are two popular models of collaborative development on GitHub:
 
-The Fork + Pull Model lets anyone fork an existing repository and push changes to their personal fork without requiring access be granted to the source repository. The changes must then be pulled into the source repository by the project maintainer. This model reduces the amount of friction for new contributors and is popular with open source projects because it allows people to work independently without upfront coordination.
+1. The Fork + Pull Model lets anyone fork an existing repository and push changes to their personal fork without requiring access be granted to the source repository. The changes must then be pulled into the source repository by the project maintainer. This model reduces the amount of friction for new contributors and is popular with open source projects because it allows people to work independently without upfront coordination.
 
-The Shared Repository Model is more prevalent with small teams and organizations collaborating on private projects. Everyone is granted push access to a single shared repository and topic branches are used to isolate changes.
+2. The Shared Repository Model is more prevalent with small teams and organizations collaborating on private projects. Everyone is granted push access to a single shared repository and topic branches are used to isolate changes.
 
 Pull requests are especially useful in the Fork + Pull Model because they provide a way to notify project maintainers about changes in your fork. However, they’re also useful in the Shared Repository Model where they’re used to initiate code review and general discussion about a set of changes before being merged into a mainline branch.
 
