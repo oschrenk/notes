@@ -13,3 +13,11 @@ Some handy key combo's are:
 - `G` - Increase Audio Delay in milliseconds
 - `H` - Decrease Subtitle Delay
 - `J` - Increase Subtitle Delay
+
+## FAQ/Problems ##
+
+### Disable "This AVI is broken. Seeking will not work correctly" Repair ###
+
+Go to `Settings > Preferences... > Input / Codecs > Demuxers > AVI > Force index creation`
+
+Select "Never fix" Next time a broken AVI file is opened the message should no longer appear.
