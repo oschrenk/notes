@@ -168,7 +168,12 @@ At some point audio output didn't work. I couldn't even change volume. What happ
 
 Press `⌘⇧.` and the the dialog box now will display any hidden files or folders within its list items. You can toggle between the hidden files and folders being displayed by pressing it again.
 
+### OSX freezes when changing network locations ###
+
+- http://reviews.cnet.com/8301-13727_7-10329065-263.html?tag=mfiredir
+- https://discussions.apple.com/thread/1086078?start=15&tstart=0
+- http://reviews.cnet.com/8301-13727_7-10329060-263.html
+
 ### Report problems ###
 
 Apple offers a [bug reporting tool](https://bugreport.apple.com/) whre you can submit your bugs.
-
