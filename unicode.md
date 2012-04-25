@@ -40,8 +40,8 @@
 - `±` - &#x00B1; - &#177; - Plus-minus Sign
 - `∈` - &#x2208; - &#8712; - Element Of
 - `∉` - &#x2209; - &#8713; - Not An Element Of
-- `ℕ` - &#x2215; - &#8469; - Natural Numbers Symbol - Double-struck Capital N
-- `ℝ` - &#x221D; - &#8477; - Real Numbers Symbol - Double-struck Capital R
+- `ℕ` - &#x2115; - &#8469; - Natural Numbers Symbol - Double-struck Capital N
+- `ℝ` - &#x211D; - &#8477; - Real Numbers Symbol - Double-struck Capital R
 
 **Currency Symbols**
 
