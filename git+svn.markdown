@@ -6,7 +6,7 @@
 	cd localpath
 	git svn fetch --username
 
-## Migrate subversion repositories ##
+## Move from svn to git ##
 
 Create an empty directory and prepare the repository
 
@@ -204,3 +204,35 @@ Every morning at 5
 
 	crontab -e
 	00 5 * * * /home/user/scripts/svn2github lejos
+
+## Import Git into subversion ##
+
+Usecase:
+
+- You have an existing svn repository
+- You have a project in git
+- You want to copy/move the git repository into a subdirectory of the svn repository
+
+This is what you do
+
+1. Create an appropiate directory in the subversion directory
+
+	mkdir my-project
+	svn add my-project
+	svn commit
+	
+2. Clone a git repository from the subversion one you just imported
+
+	git svn clone http://some/svn/repo/my-project
+	
+3. Add your working git repository as a remote repository.
+
+	cd my-project
+	git remote add dev /path/to/working/git/repository
+	
+4. Do the magic	
+	
+	git pull dev master
+	git svn rebase
+	git svn dcommit
+
