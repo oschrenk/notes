@@ -8,6 +8,7 @@
 - [Jersey](http://jersey.java.net/) Jersey is the open source, production quality, JAX-RS (JSR 311) Reference Implementation for building RESTful Web services.
 - [Joda Time](http://joda-time.sourceforge.net/) Joda-Time provides a quality replacement for the Java date and time classes.
 - [libphonenumber](http://code.google.com/p/libphonenumber/) Google's common Java library for parsing, formatting, storing and validating international phone numbers. Optimized for running on smartphones. A direct port to Javascript is also available.
+- [logback](http://logback.qos.ch/) Successor to the popular log4j project implementing the SLF4J API
 - [Lucene](http://lucene.apache.org/) Java-based indexing and search implementation, as well as spellchecking, hit highlighting and advanced analysis/tokenization capabilities.
 - [Natty](https://github.com/joestelmach/natty) Java natural language date parser 
 - [Play Framework](http://www.playframework.org/) Java web framework made by Web developers. Discover a clean alternative to bloated enterprise Java stacks. Play focuses on developer productivity and targets RESTful architectures.

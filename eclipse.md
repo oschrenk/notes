@@ -53,6 +53,8 @@ Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a p
 - Annotation-based null analysis. JDT can now be configured to use annotations designated as null annotations to perform enhanced inter-procedural null analysis. This feature can be enabled in `Preferences > Java > Compiler > Errors/Warnings > Null analysis`
 - Null analysis for fields. JDT can now raise null related errors/warnings for fields. You can configure null analysis for fields in Preferences > Java > Compiler > Errors/Warnings > Null analysis.
 - Export detail formatters. Detail formatters can now be exported as separate preferences.
+- Improved bracket matching support in Java editor. Also, the `Navigate > Go To > Matching Bracket action (Ctrl+Shift+P)` now works everywhere in a file. If a bracket is not selected before invoking the action, the action navigates to the nearest enclosing end bracket.
+- Enhanced diagnostics for detection of incomplete switch statements
 
 ### FAQ/Problems ###
 
