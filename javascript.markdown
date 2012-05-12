@@ -142,7 +142,7 @@ The method is provided by the function object. With it you can define which obje
 
 You can get general type information via `typeof`, but that would only return `Object` but the name of the constructor function.
 
-If you want more information the `istanceof` operator can help
+If you want more information the `instanceof` operator can help
 
 	var toni = new Person("Toni", "Mustermann");
 	var max  = new Employee("Max", "Muster", "Sales");
