@@ -122,6 +122,36 @@ You will see a selection of *hunks* and Git asks you what to do with these hunks
 
 So to commit a hunk, press `y`, then `q` and commit the change via `git commit`
 
+####  Undo a local commit
+
+Lets say I committed locally, but now want to remove that commit.
+
+    git log
+        commit 101: bad commit    # latest commit, this would be called 'HEAD'
+        commit 100: good commit   # second to last commit, this is the one we want
+
+To restore everything back to the way it was prior to the last commit, we need to reset to the commit before HEAD:
+
+    git reset --soft HEAD^     # use --soft if you want to keep your changes
+    git reset --hard HEAD^     # use --hard if you don't care about keeping the changes you made
+
+Now git log will show that our last commit has been removed.
+
+#### Undo a public commit ####
+
+If you have already made your commits public, you will want to create a new commit which will "revert" the changes you made in your previous commit (current HEAD).
+
+    git revert HEAD
+
+Your changes will now be reverted and ready for you to commit:
+
+    git commit -m 'restoring the file I removed on accident'
+    git log
+        commit 102: restoring the file I removed on accident
+        commit 101: removing a file we dont need
+        commit 100: adding a file that we need
+
+
 ### Branching ###
 
 There are two types of branches: *local* and *remote-tracking*. 
