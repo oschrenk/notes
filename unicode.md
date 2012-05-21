@@ -1,6 +1,7 @@
 # Characters #
 
 - [UniSearcher](http://www.isthisthingon.org/unicode/index.php)
+- [Graphemica](http://graphemica.com/)
 
 **Computer Keyboard Symbols**
 
