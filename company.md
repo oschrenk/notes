@@ -26,11 +26,16 @@ Code is king.
 
 - first class citizen
 - always use [iso 8601](http://en.wikipedia.org/wiki/ISO_8601) for date formatting
+
 - *Be professional*. Write in professional english.
 - *Be concise*.
 - *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future. 
 
 [#Batchelder:2003]
+
+- no debugging logs in production
+- do not log locally
+- monitor your logs
 
 ### Comments ###
 
