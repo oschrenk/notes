@@ -2,6 +2,7 @@
 
 - [Available Plugins](http://maven.apache.org/plugins/index.html)
 - [Descriptor reference](http://maven.apache.org/ref/3.0.3/maven-model/maven.html)
+- [Subscribe to Announcements](mailto:announce-subscribe@maven.apache.org) Updates to core and plugins
 
 - create base directories `mkdir -p src/{main,test}/{java,resources}`
 

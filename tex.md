@@ -1,4 +1,6 @@
-# Tex on OSX with Textmate and Skim #
+# Tex #
+
+- [Detexify](http://detexify.kirelabs.org/classify.html) Draw to recognize symbol
 
 ## Setting up xetex ##
 
