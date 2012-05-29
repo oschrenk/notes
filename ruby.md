@@ -2,9 +2,7 @@
 
 ## Installation ##
 
-### Windows ###
-
-[http://rubyinstaller.org/](http://rubyinstaller.org/)
+If you use windows download and run the installer from [http://rubyinstaller.org/](http://rubyinstaller.org/)
 
 ## RubyGems ##
 
