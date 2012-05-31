@@ -119,7 +119,7 @@ This one is very helpful when you just type away and realize later that the firs
 
 ## FAQ/Problems
 
-### Bash doesn’t update the PATH; changes to .profile aren’t registered {#profile-not-read}
+### Bash doesn’t update the PATH; changes to .profile aren’t registered
 
 Adding something like `export PATH=/usr/bin:$PATH` doesn’t update the `$PATH` environment variable. The reason is that Bash tries to find local profile files in the following order:
 
@@ -132,7 +132,3 @@ Adding something like `export PATH=/usr/bin:$PATH` doesn’t update the `$PATH` 
 ### Reload .profile
 
     $ . ~/.profile
-
- [1]: #profile-not-read
- [2]: #acl
- [3]: #apple-file-attributes
