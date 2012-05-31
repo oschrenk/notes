@@ -1,5 +1,42 @@
 # Bash #
 
+## Startup ##
+
+When bash starts it reads the following files every time you login. For the purposes of OS X, this means every time you open a new Terminal window.
+
+  /etc/profile
+  ~/.bash_profile
+  ~/.bash_login   (if .bash_profile does not exist)
+  ~/.profile      (if .bash_login does not exist)
+
+When you start a new shell by typing bash on the command line, it reads .bashrc
+
+Finally, OS X also uses `~/.MacOSX/environment.plist` to set more environment variables, including paths if necessary.
+
+[#Folly:2009]
+
+### about .bashrc, .bash_profile, .profile, /etc/profile, etc/bash.bashrc and others ##
+
+> When bash is invoked as an interactive *login shell*, or as a non-interactive shell with the `--login` option, it first reads and executes commands from the file `/etc/profile`, if that file exists. After reading that file, it looks for `~/.bash_profile`, `~/.bash_login`, and `~/.profile`, in that order, and reads and executes commands from the first one that exists and is readable. The `--noprofile` option may be used when the shell is started to inhibit this behavior.
+...
+When an interactive shell that is *not a login shell* is started, bash reads and executes commands from `/etc/bash.bashrc` and `~/.bashrc`, if these files exist. This may be inhibited by using the `--norc` option. The `--rcfile` file option will force bash to read and execute commands from file instead of `/etc/bash.bashrc` and `~/.bashrc`.
+
+- a *login shell* means a session where you log in to the system and directly end up in Bash, like a remote ssh session or logging in through a non-graphical text terminal
+- a *non-login shell* is then the type of shells you open after logging in: typically in a graphical session when you open a new terminal window
+
+So
+
+- `.profile` is for things that are not specifically related to Bash, like environment variables, `PATH` and friends, and should be available anytime. For example, `.profile` should also be loaded when starting a graphical desktop session.
+- `.bashrc` is for the configuring the interactive Bash usage, like Bash aliases, setting your favorite editor, setting the Bash prompt, etc.
+- `.bash_profile` is for making sure that both the things in `.profile` and `.bashrc` are loaded for login shells. For example, `.bash_profile` could be something simple like
+
+  . ~/.profile
+  . ~/.bashrc
+
+As stated in the man page excerpt above, if you would omit `.bash_profile`, only `.profile` would be loaded.
+
+[#Lippens:2005]
+
 ## Shortcuts ##
 
 *   `ctrl + a` Jump to beginning of line
@@ -12,7 +49,7 @@
 
 Wildcards in bash are referred to as pathname expansion. Pathname expansion is also sometimes referred to as **globbing**
 
-Pathname expansion that is done by the shell (in this case bash) and not by the operating system or by the program that is being run.
+Pathname expansion that is done by the shell (in this case bash) and not by the operating system or by the program that is being run.2
 
 Pathname expansion "expands" the `*`, `?`, and `[...]` syntaxes when you type them as part of a command, for example:
 
@@ -119,7 +156,7 @@ This one is very helpful when you just type away and realize later that the firs
 
 ## FAQ/Problems
 
-### Bash doesn’t update the PATH; changes to .profile aren’t registered {#profile-not-read}
+### Bash doesn’t update the PATH; changes to .profile aren’t registered
 
 Adding something like `export PATH=/usr/bin:$PATH` doesn’t update the `$PATH` environment variable. The reason is that Bash tries to find local profile files in the following order:
 
@@ -133,6 +170,5 @@ Adding something like `export PATH=/usr/bin:$PATH` doesn’t update the `$PATH` 
 
     $ . ~/.profile
 
- [1]: #profile-not-read
- [2]: #acl
- [3]: #apple-file-attributes
+[#Folly:2009]: Steve Folly. [Where does $PATH get set in OS X 10.6 Snow Leopard?](http://superuser.com/questions/69130/where-does-path-get-set-in-os-x-10-6-snow-leopard#69190) Stackoverflow, 2009
+[#Lippens:2005]: Stefan Lippens. [about .bashrc, .bash_profile, .profile, /etc/profile, etc/bash.bashrc and others](http://stefaanlippens.net/bashrc_and_others). Personal Blog, 2005.
