@@ -1,6 +1,6 @@
 # JavaScript #
 
-Introduced 1995.
+- use [jsFiddle](http://jsfiddle.net/) as test playground
 
 ## Basics ##
 
@@ -20,6 +20,8 @@ Taken from [JavaScript: The Good Parts](http://www.youtube.com/watch?v=hQVTIJBZo
 * `false`, `null`, `undefined`, `NaN` 
 
 #### Transivity? ####
+
+- look at [zero](http://zero.milosz.ca/) for an overview of type coercions
 
 Type coercion on quality operator
 
