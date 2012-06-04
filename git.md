@@ -358,6 +358,18 @@ you would call
     	        git commit-tree "$@";
     	fi' HEAD
 
+### Move file from repo to repo preserving history ###
+
+
+    mkdir /tmp/mergepatchs
+    cd ~/repo/org
+    export reposrc=myfile.c #or mydir
+    git format-patch -o /tmp/mergepatchs $(git log $reposrc|grep ^commit|tail -1|awk '{print $2}')^..HEAD $reposrc
+    cd ~/repo/dest
+    git am /tmp/mergepatchs/*.patch
+
+Taken from [here](http://blog.neutrino.es/2012/git-copy-a-file-or-directory-from-another-repository-preserving-history/comment-page-1/#comment-522)
+
 ### Git Hooks ###
 
 [Manual](http://www.kernel.org/pub/software/scm/git/docs/githooks.html)
