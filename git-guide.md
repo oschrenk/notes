@@ -110,6 +110,8 @@ It is like nailing down a part of the graph that you might want to come back to.
 
 ## Transitioning from SVN to GIT ##
 
+The best way to try Git inside the organization is go to Git-SVN mode. It will allow to use SVN as primary repo, but allow Git features like local branching, cool merging, stashes and other stuff described here.
+
 ### Install git
 
 - OS X: run `brew install git`
