@@ -108,7 +108,33 @@ We now come to one of the main ideas:
 
 It is like nailing down a part of the graph that you might want to come back to. Or think of creating a branch is like saving a game, before you fight the boss.
 
-## Transition Phase ##
+## Transitioning from SVN to GIT ##
+
+### Install git
+
+- OS X: run `brew install git`
+- Windows: [Download](http://code.google.com/p/msysgit/downloads/list?q=full+installer+official+git) and install
+- Debian based (e.g. Ubuntu): `apt-get install git-core git-svn`
+- Fedora `yum install git-core git-svn`
+
+### Setup your environment
+
+Setup local user information, example
+
+	git config --global user.name "John Doe"
+	git config --global user.email "john.doe@domain.com"
+
+The default choice taken by the GIT developers is to use *nix style EOL character (LF only) whenever possible. The recommendation is that locally each user converts to *nix LF endings when committing (in order to have common SHA-1 hashes) and to locally set the recreation option to their local system setting.
+
+If you are on Windows, it is recommended to turn off `autocrlf`
+
+	git config --global core.autocrlf false
+
+If your are on *nix, set
+
+	git config --global core.autocrlf input
+
+### Working with git svn ###
 
 Git supports access to SVN repositories via the `git svn` subcommand.
 
@@ -120,17 +146,34 @@ If you further want to track branches and/or tags.
 
 	`git svn clone svn://server.network/project project --trunk trunk --branches branches --tags tags`
 
-**Fetching (Updating)**. You can pull the latest changes from the SVN repository via
+**Branching**. By default, git repository contains one branch called master. Good style is do not do direct commits into master at all, just keep it as synchronization point between SVN repository and your local repository. So, to do actual job you to create branch.
 
-	git svn fetch
+	git checkout -b bugfix-id-1453
 
-If you have local changes, that may have not been committed, you may be prompted to stash your changes.
+This command will create new branch called `bugfix-id-1453` and immediately switch to it. If you haven't noticed how that happened - please welcome to git's high performance world.
 
-	git stash
-	git svn fetch
-	git stash apply
+**Changes**. You changed some file and ready to commit. In git it's a 2 steps operation. First, you need to put content to stage.. second, you store the content in new commit object.
 
-**Committing**. You can commit changes via
+    git add .
+    git commit -m "issue has been fixed"
+
+You can commit changes back to SVN via
+
+You've fixed a bug and now fixed is placed in `bugfix-id-1453`. But you should give it back to rest of the world.
+
+Checkout your master branch:
+
+	git checkout master
+
+**Rebase**. Get the latest changes from SVN:
+
+	git svn rebase
+
+Now SVN server and local master branch are identical. We have to merge our fix into master:
+
+    git merge bugfix-id-1453
+
+**Commit**. Now master contains previous SVN state + new fix. We have to synchronize local repository and SVN server:
 
 	git svn dcommit
 
