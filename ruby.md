@@ -4,6 +4,10 @@
 
 If you use windows download and run the installer from [http://rubyinstaller.org/](http://rubyinstaller.org/)
 
+On OS X you can just run
+
+	brew install ruby
+
 ## RubyGems ##
 
 ### Install a gem ###
