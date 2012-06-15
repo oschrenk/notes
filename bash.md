@@ -4,12 +4,12 @@
 
 When bash starts it reads the following files every time you login. For the purposes of OS X, this means every time you open a new Terminal window.
 
-  /etc/profile
-  ~/.bash_profile
-  ~/.bash_login   (if .bash_profile does not exist)
-  ~/.profile      (if .bash_login does not exist)
+	/etc/profile
+	~/.bash_profile
+	~/.bash_login   (if .bash_profile does not exist)
+	~/.profile      (if .bash_login does not exist)
 
-When you start a new shell by typing bash on the command line, it reads .bashrc
+When you start a new shell by typing bash on the command line, it reads `.bashrc`
 
 Finally, OS X also uses `~/.MacOSX/environment.plist` to set more environment variables, including paths if necessary.
 
@@ -39,11 +39,11 @@ As stated in the man page excerpt above, if you would omit `.bash_profile`, only
 
 ## Shortcuts ##
 
-*   `ctrl + a` Jump to beginning of line
-*   `ctrl + e` Jump to end of line
-*   `ctrl + r` Start search (just start typing), pressing multiple times toggles through occurrences in history
-*   `ctrl + l` Clear terminal
-*   `ctrl + x, ctrl +e` Fires up `$EDITOR` to finish a long command in your favorite editor
+* `ctrl + a` Jump to beginning of line
+* `ctrl + e` Jump to end of line
+* `ctrl + r` Start search (just start typing), pressing multiple times toggles through occurrences in history
+* `ctrl + l` Clear terminal
+* `ctrl + x, ctrl +e` Fires up `$EDITOR` to finish a long command in your favorite editor
 
 ## Globbing ##
 
@@ -63,8 +63,8 @@ With Bash completion enabled, the default is to complete the current path to the
 
 ## Output Streams ##
 
-*   `>` redirects *StdOut*, for example to a file `command > path` or to `/dev/null` (discards all data)
-*   `>>` appends the output to the path `command >> path`
+* `>` redirects *StdOut*, for example to a file `command > path` or to `/dev/null` (discards all data)
+* `>>` appends the output to the path `command >> path`
 
 Similar for *StdErr*, but use `2` prefix like so `2>` or respectively. `2>>`.
 
@@ -130,29 +130,29 @@ Next to `.profile` there is also `.inputrc`. This is the configuration file for 
 
 With the following snippet in the `.inputrc` file you can then just use your arrow keys to scroll through all the occurrences starting with the prefix you have typed in so far. This is especially useful when multiple logins share the same user but have different hosts.
 
-   	# By default up/down are bound to previous-history
-   	# and next-history respectively. The following does the
-   	# same but gives the extra functionality where if you
-   	# type any text (or more accurately, if there is any text
-   	# between the start of the line and the cursor),
-   	# the subset of the history starting with that text
-   	# is searched (like 4dos for e.g.).
-   	# Note to get rid of a line just Ctrl-C
-   	"\e[A": history-search-backward
-   	"\e[B": history-search-forward
+	# By default up/down are bound to previous-history
+	# and next-history respectively. The following does the
+	# same but gives the extra functionality where if you
+	# type any text (or more accurately, if there is any text
+	# between the start of the line and the cursor),
+	# the subset of the history starting with that text
+	# is searched (like 4dos for e.g.).
+	# Note to get rid of a line just Ctrl-C
+	"\e[A": history-search-backward
+	"\e[B": history-search-forward
 
 It doesn’t stop there. If you like to move around in your command more quickly you might find use in the following snippet, which allows to jump over words in your command using `Strg` and the left or right arrow key.
 
-   	# move around word for word with Strg + arrow keys
-   	"\e[5C": forward-word
-   	"\e[5D": backward-word
-   	"\e\e[C": forward-word
-   	"\e\e[D": backward-word
+	# move around word for word with Strg + arrow keys
+	"\e[5C": forward-word
+	"\e[5D": backward-word
+	"\e\e[C": forward-word
+	"\e\e[D": backward-word
 
 This one is very helpful when you just type away and realize later that the first character of is upper case instead of lower case (the default directories in the home directory of `OSX` all start with upper case letters).
 
-   	# case insensitivity for tab-completion
-   	set completion-ignore-case On
+	# case insensitivity for tab-completion
+	set completion-ignore-case On
 
 ## FAQ/Problems
 
