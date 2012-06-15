@@ -29,7 +29,7 @@ It won't extract the file. libarchive has been updated to 3.0.4. homebrew doesn'
 	$ /usr/local/bin/bsdtar -xvf ubuntu-12.04-alternate-i386.iso 
 	sudo rm /usr/bin/tar
 	cd /usr/bin
-	sudo n -s /usr/local/bin/bsdtar tar
+	sudo ln -s /usr/local/bin/bsdtar tar
 
 Every day a new bug to squash, a new yak to shave
 
