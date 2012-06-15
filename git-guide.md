@@ -54,9 +54,9 @@ The city of Königsberg. A city set on both sides of the river Pregel. It includ
 	  +-----------+|      |
 	               +------+
 
-Now imagine this: You want to walk throught the city and cross every bridge exactly once. Is this possible?
+Now imagine this: You want to walk through the city and cross every bridge exactly once. Is this possible?
 
-In 1735, a mathematician named Leonhard Euler proved that such a route doesn't exist. In doing so, be layed the groundworks for a new field of mathematics, we now call graph theory.
+In 1735, a mathematician named Leonhard Euler proved that such a route doesn't exist. In doing so, he laid the groundworks for a new field of mathematics, we now call graph theory.
 
 Euler reduced the problem to this:
 - each land mass can be represented by a point
@@ -64,9 +64,9 @@ Euler reduced the problem to this:
 
 Think of graph theory as the study of **places to go, and ways to get there**. Only in graph theory the places are called **nodes** and the ways are called **edges**
 
-To do something with graphs we (developers) normally apply labels to the edges and nodes. Think of a public transit plan. Every station has a name and every line is a train, or an edge connectiong these stations. 
+To do something with graphs we (developers) normally apply labels to the edges and nodes. Think of a public transit plan. Every station has a name and every line is a train, or an edge connecting these stations. 
 
-By adding labels can not only attach informations like names but also semantic meaning like relationships or directions. Having directions or not is one of the key characterstics of a graph. They are either **directed** or **undirected**. Think of it like a street map, there are two-way streets and one way street.
+By adding labels can not only attach informations like names but also semantic meaning like relationships or directions. Having directions or not is one of the key characteristics of a graph. They are either **directed** or **undirected**. Think of it like a street map, there are two-way streets and one way street.
 
 Having directions in a graph also means that sometimes you can't reach nodes from any node in your graphs. 
 		
@@ -80,7 +80,7 @@ Once you went from `B` to `F`, you can't go back. You can only reach `G` and fro
 
 ### Graphs and Git ###
 
-A Git repository is one gian graph.
+A Git repository is one giant graph.
 
 When you interact with git, you're working with commits in one or the other. A Git commit consists of two things
 
@@ -100,7 +100,7 @@ you may notice some labels like `master`.
 These are references. **References are pointers to commits**. There are three kind of references:
 - `local branch references` a local branch reference is a file in your projects `.git/refs/heads` directory containing a 40-byte identifier to the commit the reference points to. This is aprt of why branching is "cheap". Creating a branch means writing 40 byte to a file. Local branch references are specific to a single repository: your local one.
 - `remote branch references` are also specific to a single repository, but one that's been defined as a remote.
-- `tag references` are basically like branch references that never move. **Once you created a tag, it will never change** (unless you `--force` it; wwhich is not a good idea). You can use it to mark specific versions.
+- `tag references` are basically like branch references that never move. **Once you created a tag, it will never change** (unless you `--force` it; which is not a good idea). You can use it to mark specific versions.
 
 We now come to one of the main ideas:
 
@@ -120,17 +120,17 @@ If you further want to track branches and/or tags.
 
 	`git svn clone svn://server.network/project project --trunk trunk --branches branches --tags tags`
 
-**Fetching (Updating)**. You can pull the lastest changes from the SVN repository via
+**Fetching (Updating)**. You can pull the latest changes from the SVN repository via
 
 	git svn fetch
 
-If you have local changes, that may have not been comitted, you may be prompted to stash your changes.
+If you have local changes, that may have not been committed, you may be prompted to stash your changes.
 
 	git stash
 	git svn fetch
 	git stash apply
 
-**Commiting**. You can comit changes via
+**Committing**. You can commit changes via
 
 	git svn dcommit
 
@@ -141,7 +141,7 @@ If you have local changes, that may have not been comitted, you may be prompted 
 These terms (in parts taken from [#Wiegley:2009][]) should help understanding the concept behind Git
 
 working tree
-:	A **working tree** is any directory on your filesystem which has a repository associated with it (typically indicated by the presence of a sub-directory within it named `.git`.). It includes all the files and sub-directories in that directory.
+:	A **working tree** is any directory on your file system which has a repository associated with it (typically indicated by the presence of a sub-directory within it named `.git`.). It includes all the files and sub-directories in that directory.
 
 repository
 :	A **repository** is a collection of _commits_, each of which is an archive of what the project's working tree looked like at a past date, whether on your machine or someone else's. It also defines _HEAD_ (see below), which identifies the _branch_ or commit the current working tree stemmed from. Lastly, it contains a set of branches and _tags_, to identify certain commits by name.
