@@ -122,7 +122,7 @@ You will see a selection of *hunks* and Git asks you what to do with these hunks
 
 So to commit a hunk, press `y`, then `q` and commit the change via `git commit`
 
-####  Undo a local commit
+#### Undo a local commit
 
 Lets say I committed locally, but now want to remove that commit.
 
