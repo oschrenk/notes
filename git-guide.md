@@ -211,3 +211,4 @@ HEAD
 
 [#Livingston:2011]: Sam Livingston-Gray. [Think Like (a) Git](http://think-like-a-git.net/). 2011
 [#Wiegley:2009]: John Wiegley. [Git from the Bottom Up](http://ftp.newartisans.com/pub/git.from.bottom.up.pdf). 09-12-02
+[#Beletsky:2012]: Alexamder Beletsky. [A Yewar with Git](http://java.dzone.com/articles/year-git). 13-06-2012.
