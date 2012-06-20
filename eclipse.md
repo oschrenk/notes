@@ -59,6 +59,7 @@ A new lightweight refresh mechanism was introduced. Files discovered to be out-o
 - Export detail formatters. Detail formatters can now be exported as separate preferences.
 - Improved bracket matching support in Java editor. Also, the `Navigate > Go To > Matching Bracket action (Ctrl+Shift+P)` now works everywhere in a file. If a bracket is not selected before invoking the action, the action navigates to the nearest enclosing end bracket.
 - Enhanced diagnostics for detection of incomplete switch statements
+- Toggle Full Screen command is now supported on MacOS X Lion
 
 ### FAQ/Problems ###
 
