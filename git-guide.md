@@ -8,8 +8,8 @@ Copyright: This document is provided under the terms of the Creative Commons Att
 ## Why Git ##
 
 - working offline
-- Local commits
-- Local branches
+- local commits
+- local branches
 - staging commits
 - easy merging
 - rebasing (pull changes from remote on top of local commits)
