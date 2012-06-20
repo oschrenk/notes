@@ -44,6 +44,10 @@ Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a p
 
 ## Appendix ##
 
+### Notable Changes in 3.7 ###
+
+A new lightweight refresh mechanism was introduced. Files discovered to be out-of-sync by the workspace, for example while accessing the file content by an editor, are automatically asynchronously refreshed. In Eclipse 3.7 and 3.8 you have to enable this yourself via Preferences > General > Workspace and select Refresh on access. In Eclipse SDK 4.2 the mechanism is enabled by default.
+
 ### Notable Changes in 3.8 ###
 
 - Quick Assist to convert enhanced `for` loop. 
