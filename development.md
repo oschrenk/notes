@@ -18,14 +18,13 @@ _Dependency Injection_ or _DI_ in short is the process of defining dependencies 
 
 Three types of DI:
 
-*   _Type 1_ or _Interface Injection_: an interface is added to the
-    class
-*   _Type 2_ or _Setter Injection_: _Setter_-methods to inject a
-    dependency
-*   _Type 3_ or _Constructor Injection_ the constructor of the module
-    contains the dependencies
+*   _Type 1_ or _Interface Injection_: an interface is added to the class
+*   _Type 2_ or _Setter Injection_: _Setter_-methods to inject a dependency
+*   _Type 3_ or _Constructor Injection_ the constructor of the module contains the dependencies
 
 [#Fowler:2004][]
+
+Dependency Injection is about testability
 
 ## API/Framework Design ##
 
