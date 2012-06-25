@@ -5,26 +5,125 @@ Copyright: This document is provided under the terms of the Creative Commons Att
 
 # Git #
 
+## What is Git ##
+
+TODO
+
 ## Why Git ##
 
-- working offline
-- local commits
-- local branches
-- staging commits
-- easy merging
-- rebasing (pull changes from remote on top of local commits)
-- rebasing (combine commits)
-- speed
-- github
-- easy accessible version control uris
+### Offline productivity, speed, and multitasking ###
 
-Git is a tool. It offers a lot of features each rolled into its own command. Each feature is simple, but learning to use them together can be quite a bit of work.
+Git encourages multitasking and experimentation. Fast and easy local branching means the ability to keep bugs and features you’re working on in different workspaces, and to experiment more with throwaway branches. Having everything local means you can have fast diffs and history logs, and commit to your repo while on the go without being online.
 
-Why is subversion complex
-- the stuff o the server is different from what you have locally
-- all interaction goes over the network and the information is hard to get at
-- everybody is tangled together using the same repository
-- because branches are completely disconnected
+### Less cognitive noise ###
+
+Working offline and local branching and the staging process helps dampening the *cognitive noise*.
+
+### Remote collaboration and code review ###
+
+The ability to pull down other people’s changesets for code review and collaboration is made easy with git’s multiple remotes capability. Being able to create cheap local branches and experiment with integrating other developer’s changesets makes it ideal for open source projects and outsourced collaboration with junior developers, where you want to review other people’s code before it becomes part of the master branch. And because anyone who has access to a repo can clone it, they can do development on a fork without asking for your approval, which also encourages experimentation.
+
+Even the web interface talking about code, it offers easy accessible version control URIs.
+
+### Changeset cleanliness ### 
+
+How many times have you tried to trace down a feature across many commits, or even worse, tease apart changesets that are clusters of unrelated features? Git offers multiple ways to keep changesets clean, from the index/staging area, to topic branches, to amending commits and completely rewriting your commit history. It’s amazing what clean changesets can do to save you time in code review and release management.
+
+## Why is DVCS better than Subversion ? ##
+
+The claim of why merging is better in a DVCS than in Subversion was largely based on how branching and merge worked in Subversion a while ago. Subversion prior to 1.5.0 didn't store any information about when branches were merged, thus when you wanted to merge you had to specify which range of revisions that had to be merged.
+
+### So why did Subversion merges *suck*? ###
+
+Ponder this example:
+
+	      1   2   4     6     8
+	trunk o-->o-->o---->o---->o
+	       \
+	        \   3     5     7
+	b1       +->o---->o---->o
+
+When we want to merge `b1`'s changes into the trunk we'd issue the following command, while standing on a folder that has trunk checked out:
+
+	svn merge -r 3:7 {link to branch b1}
+
+which will attempt to merge the changes from b1 into your local working directory. And then you commit the changes after you resolve any conflicts and tested the result. When you commit the revision tree would look like this:
+
+	      1   2   4     6     8   9
+	trunk o-->o-->o---->o---->o-->o      "the merge commit is at r9"
+	       \
+	        \   3     5     7
+	b1       +->o---->o---->o
+
+However this way of specifying ranges of revisions gets quickly out of hand when the version tree grows as subversion didn't have any meta data on when and what revisions got merged together. Ponder on what happens later:
+
+	           12        14
+	trunk  …-->o-------->o
+	                                     "Okay, so when did we merge last time?"
+	              13        15
+	b1     …----->o-------->o
+
+This is largely an issue by the repository design that Subversion has, in order to create a branch you need to create a new virtual directory in the repository which will house a copy of the trunk but it doesn't store any information regarding when and what things got merged back in. That will lead to nasty merge conflicts at times. What was even worse is that Subversion used two-way merging by default, which has some crippling limitations in automatic merging when two branch heads are not compared with their common ancestor.
+
+To mitigate this Subversion now stores meta data for branch and merge. That would solve all problems right?
+
+On a centralized system, like subversion, _virtual directories_ suck. Why? Because everyone has access to view them… even the garbage experimental ones.
+
+Branching is good if you want to experiment but you don't want to see everyones' and their aunts experimentation. This is serious **cognitive noise**. The more branches you add, the more crap you'll get to see.
+The more public branches you have in a repository the harder it will be to keep track of all the different branches. So the question you'll have is if the branch is still in development or if it is really dead which is hard to tell in any centralized version control system.
+Most of the time, from what I've seen, an organization will default to use one big branch anyway. Which is a shame because that in turn will be difficult to keep track of testing and release versions, and whatever else good comes from branching.
+
+### So why are DVCS, such as Git, Mercurial and Bazaar, better than Subversion at branching and merging? ###
+
+There is a very simple reason why: **branching is a first-class concept**. There are no virtual directories by design and branches are hard objects in DVCS which it needs to be such in order to work simply with synchronization of repositories (i.e. *push* and *pull*).
+
+The first thing you do when you work with a DVCS is to clone repositories (git's `clone`, hg's `clone` and bzr's `branch`). Cloning is conceptually the same thing as creating a branch in version control. Some call this forking or branching (although the latter is often also used to refer to co-located branches), but it's just the same thing. Every user runs their own repository which means you have a per-user *branching* going on.
+
+The version structure is not a tree, but rather a graph instead. More specifically a directed acyclic graph (DAG, meaning a graph that doesn't have any cycles). You really don't need to dwell into the specifics of a DAG other than each commit has one or more parent references (which what the commit was based on). So the following graphs will show the arrows between revisions in reverse because of this.
+
+A very simple example of merging would be this; imagine a central repository called `origin` and a user, Alice, cloning the repository to her machine.
+
+	         a…   b…   c…
+	origin   o<---o<---o
+	                   ^master
+	         |
+	         | clone
+	         v
+
+	         a…   b…   c…
+	alice    o<---o<---o
+	                   ^master
+	                   ^origin/master
+
+What happens during a clone is that every revision is copied to Alice exactly as they were (which is validated by the uniquely identifiable hash-id's), and marks where the origin's branches are at.
+Alice then works on her repo, committing in her own repository and decides to push her changes:
+
+	         a…   b…   c…
+	origin   o<---o<---o
+	                   ^ master
+
+	              "what'll happen after a push?"
+
+
+	         a…   b…   c…   d…   e…
+	alice    o<---o<---o<---o<---o
+	                             ^master
+	                   ^origin/master
+
+The solution is rather simple, the only thing that the _origin_ repository needs to do is to take in all the new revisions and move it's branch to the newest revision (which git calls "fast-forward"):
+
+	         a…   b…   c…   d…   e…
+	origin   o<---o<---o<---o<---o
+	                             ^ master
+
+	         a…   b…   c…   d…   e…
+	alice    o<---o<---o<---o<---o
+	                             ^master
+	                             ^origin/master
+
+The use case, which I illustrated above, **doesn't even need to merge anything**.
+
+So the issue really isn't with merging algorithms since three-way merge algorithm is pretty much the same between all version control systems. **The issue is more about structure than anything**.
 
 ## Birds Eye View ##
 
