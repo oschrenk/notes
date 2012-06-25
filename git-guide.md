@@ -311,3 +311,5 @@ HEAD
 [#Livingston:2011]: Sam Livingston-Gray. [Think Like (a) Git](http://think-like-a-git.net/). 2011
 [#Wiegley:2009]: John Wiegley. [Git from the Bottom Up](http://ftp.newartisans.com/pub/git.from.bottom.up.pdf). 09-12-02
 [#Beletsky:2012]: Alexamder Beletsky. [A Year with Git](http://java.dzone.com/articles/year-git). 13-06-2012.
+[#Piotrowski:2010]: Mikael Piotrowski. [How and/or why is merging in Git better than in SVN?](http://stackoverflow.com/questions/2471606/how-and-or-why-is-merging-in-git-better-than-in-svn/2472251#2472251). March 2010.
+[#Pritzker:2011]: Yan Pritzker [Git Workflows](http://yanpritzker.com/git-book/). 2011.
