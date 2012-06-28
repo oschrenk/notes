@@ -71,29 +71,7 @@ The last command did output some warnings but it produced the correct file anywa
 Mail needs to be configured which folders it needs to use for trash, drafts and spam, otherwise it will use its own folders leaving the other folder untouched and also annoyingly visible in the side bar.
 
 Select the folder that matches the function and choose `Mailbox → Use This Mailbox For → [function name] (e.g. “Sent” again)`
-
-### iTunes
-
-To use `Command+F` for searching.
-
-	$ defaults write com.apple.iTunes NSUserKeyEquivalents -dict-add "Target Search Field" "@F"
-
-To disable Ping DropDown Box
-	
-	$ defaults write com.apple.iTunes hide-ping-dropdown 1 
-
-To restore default Ping DropDown Box behavior 
-
-	$ defaults delete com.apple.iTunes hide-ping-dropdown 
-	
-Restore iTunes Arrows
-
-	$ defaults write com.apple.iTunes show-store-link-arrows 1 
-
-Let the arrows point to my own iTunes library. This allows you to search for song/artist/album in your library. Very handy!
-
-	$ defaults write com.apple.iTunes invertStoreLinks 1 
-
+:
 ### VLC
 
 After upgrading to VLC 1.0.5 VLC didn't start anymore. The console showed
