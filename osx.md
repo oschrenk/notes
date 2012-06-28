@@ -13,8 +13,12 @@ The hint I always give other mac users: Try pressing `Alt`. It works wonders. Fo
 
 #### Diacritical Marks
 
+The normal approach on keboard layout with [dead keys](http://en.wikipedia.org/wiki/Dead_key) (like the german keyboard), would be to the following
+
 - **é**, press `´` then `e`
 - **è**, press `shift + ´ ` then `e`
+
+If you have set up your keyboard to don't use dead keys, you can use OS C 10.7 feature th old down the appropiate base key, such as `e` and wait a second or two for a small pop up window to appear.
 
 ### Screenshots
 
