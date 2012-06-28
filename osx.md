@@ -22,14 +22,14 @@ If you have set up your keyboard to don't use dead keys, you can use OS C 10.7 f
 
 ### Screenshots
 
-*   Command-Shift-3: Take a screenshot of the screen, and save it as a file on the desktop
-*   Command-Shift-4, then select an area: Take a screenshot of an area and save it as a file on the desktop
-*   Command-Shift-4, then space, then click a window: Take a screenshot of a window and save it as a file on the desktop
-*   Command-Control-Shift-3: Take a screenshot of the screen, and save it to the clipboard
-*   Command-Control-Shift-4, then select an area: Take a screenshot of an area and save it to the clipboard
-*   Command-Control-Shift-4, then space, then click a window: Take a screenshot of a window and save it to the clipboard
+*   `Command-Shift-3`: Take a screenshot of the screen, and save it as a file on the desktop
+*   `Command-Shift-4`, then select an area: Take a screenshot of an area and save it as a file on the desktop
+*   `Command-Shift-4, Space`, then click a window: Take a screenshot of a window and save it as a file on the desktop
+*   `Command-Control-Shift-3`: Take a screenshot of the screen, and save it to the clipboard
+*   `Command-Control-Shift-4`, then select an area: Take a screenshot of an area and save it to the clipboard
+*   `Command-Control-Shift-4, Space`, then click a window: Take a screenshot of a window and save it to the clipboard
     
-In Leopard, the following keys can be held down while selecting an area (via Command-Shift-4 or Command-Control-Shift-4):
+In Leopard, the following keys can be held down while selecting an area (via `Command-Shift-4` or `Command-Control-Shift-4`):
 
 *   Space, to lock the size of the selected region and instead move it when the mouse moves
 *   Shift, to resize only one edge of the selected region
@@ -57,10 +57,10 @@ Depending on the security policy of the VPN Server this hint may not work.
 
 ### Problems decrunching zip archives formed `*.z00?`
 
-1.  Change all the .z01, .z02, etc. file extensions to .001, .002, etc.
-1.  Change the file extension of the .zip file to .00X (X= the last numeric file extension from the .001, .002, etc. files + 1)
-1.  $ cat filename.00? \> filename.zip
-1.  $ unzip filename.zip
+1.  Change all the `.z01`, `.z02`, etc. file extensions to `.001`, `.002`, etc.
+2.  Change the file extension of the `.zip` file to `.00X` (`X`= the last numeric file extension from the `.001`, `.002`, etc. files + 1)
+3.  `$ cat filename.00? \> filename.zip`
+4.  `$ unzip filename.zip`
     
 The last command did output some warnings but it produced the correct file anyway
 
@@ -142,7 +142,7 @@ What helped me (for a few dvds) was to flip the Macbook 90° (no joke) and tryin
 
 Try each of the following steps in this order before you reset the SMC.  Test the issue after completing each troubleshooting step to determine if the issue still occurs.
 
- - Press Command + Option + Escape to force quit any application that is not responding.
+ - Press `Command + Option + Escape` to force quit any application that is not responding.
  - Put your Mac to sleep by choosing the Apple () menu from the upper-left menu bar and then choosing Sleep. Wake the computer after it has gone to sleep.
  - Restart your Mac by by choosing the Apple () menu from the upper-left menu bar and then choosing Restart.
  - Shut down your Mac by by choosing the Apple () menu from the upper-left menu bar and then choosing Shut Down.
