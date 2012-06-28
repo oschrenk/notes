@@ -4,7 +4,21 @@
 
 * **Window management**. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
 * **Consistency**. `cmd+,` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application. 
-    
+  
+## Defaults 
+
+OS X stores the preferences and application settings in `.plist` files. These are (binary enocded) XML files. OSX offers the command line tool `defaults` to read from and write to them.
+
+But
+
+	read /Library/Preferences/.GlobalPreferences
+
+is not the same as
+
+	read NSGlobalDomain
+
+`defaults {read,write} NSGlobalDomain` is equivalent to `defaults write -g`.
+
 ## Hints
 
 The hint I always give other mac users: Try pressing `Alt`. It works wonders. For example: _iTunes_ doesn't allow you to delete songs from your hard drive, when your are looking at a play list (not via `Cmd + Backspace` nor via context menu) pressing `Alt + Backspace` does the trick.
