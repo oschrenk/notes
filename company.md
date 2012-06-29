@@ -123,6 +123,16 @@ Keep in mind
 
 [#MarkCC:2011]
 
+## Communication ##
+
+- get people out of the office out into the open
+- flat hierachy
+- behave like an open source project
+- optimze for happiness (everything follows from that)
+- meetings are waste (calcualate time/money wasted)
+- async communication (important if remote (locality/time)) via email, pull requests, messages, ...
+- no set work hours (I work when I'm inspired - software development is creative process)
+
 ## Office ##
 
 ### Desks ###
