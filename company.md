@@ -188,16 +188,16 @@ Use [Semantic Versioning](http://semver.org/)
 - whole company or a least project team has meal together on first day with new hire
 - feedback chat after 1d, 1w, 1m
 
-## Teams ##
+### Teams ###
 
 - put teams in same space to support direct communication
 
-## Community ##
+### Community ###
 
 - have hackathons with the local developers
 - organize talks and presentations
 
-## Customer ##
+### Customer ###
 
 - send customer emails based on certain rules
 	- "Automatically email users after 7 days if they haven’t added a teammate or created a project"
