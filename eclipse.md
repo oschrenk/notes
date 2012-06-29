@@ -2,7 +2,7 @@
 
 ## Plugins ##
 
-- [Marketplace](http://www.eclipse.org/mpc/). Search for Marketplace. Or add Indigo Update Site[http://download.eclipse.org/mpc/indigo/] to your repos
+- [Marketplace](http://www.eclipse.org/mpc/). Search for Marketplace. Or add Indigo [Update Site](http://download.eclipse.org/mpc/indigo/) to your repos
 - [M2Eclipse](http://eclipse.org/m2e/). [Update Site](http://download.eclipse.org/technology/m2e/releases)
 - Mantis Plugin
 - [Git](http://www.eclipse.org/egit/) [Update Site](http://download.eclipse.org/egit/updates). Integrated as default.
