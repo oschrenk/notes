@@ -8,6 +8,7 @@
 - [Git](http://www.eclipse.org/egit/) [Update Site](http://download.eclipse.org/egit/updates)
 - [JAutoDoc](http://jautodoc.sourceforge.net/). [Update Site](http://jautodoc.sourceforge.net/update/)
 - [Xtend](http://www.eclipse.org/xtend/) Add through marketplace.
+- [Workspace Mechanic](http://code.google.com/a/eclipselabs.org/p/workspacemechanic/). [Update Site](http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic/)
 
 ## Configuration ##
 
