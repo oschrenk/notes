@@ -15,7 +15,7 @@ Code is king.
 - agree on company style
 - enforce style
 	- with shared IDE/editor preferences
-	- with tools like [FindBugs](http://findbugs.sourceforge.net/), [PMD](http://pmd.sourceforge.net/), [JSLint](http://www.jslint.com/), [JSHint](http://www.jshint.com/) and the likes and appropate pre-commit hooks
+	- with tools like [FindBugs](http://findbugs.sourceforge.net/), [PMD](http://pmd.sourceforge.net/), [JSLint](http://www.jslint.com/), [JSHint](http://www.jshint.com/) and the likes
 	- pre-commit hooks
 - Limit lines to 80 characters. 
 	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
@@ -28,7 +28,7 @@ Code is king.
 - first class citizen
 - always use [iso 8601](http://en.wikipedia.org/wiki/ISO_8601) for date formatting
 
-- *Be professional*. Write in professional english.
+- *Be professional*. Write in professional English.
 - *Be concise*.
 - *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future. 
 
@@ -66,14 +66,14 @@ or example, a comment explaining that the variable `x` represents the principal 
 
 Git centric approach:
 
-- **commit related changes** a commit should be a wrapper for related changes. Fixing two different bugs should produce  seperate commits. Small commits make it easier for other developers to understand the changes and roll them back if something went wrong
+- **commit related changes** a commit should be a wrapper for related changes. Fixing two different bugs should produce  separate commits. Small commits make it easier for other developers to understand the changes and roll them back if something went wrong
 - **seperate formatting changes from code changes** don't change whitespace/formatting with the code
-- **commit often** Committing often keeps your commits small and, again, helps you commit only related changes. Moreover, it allows you to share your code more frequently with others. That way it‘s easier for everyone to integrate changes regularly and avoid having merge conflicts. Having few large commits and sharing them rarely, in con- trast, makes it hard to solve conflicts.
-- **don't commit half done work** You should only commit code when it‘s completed. This doesn‘t mean you have to complete a whole, large feature before committing. Quite the contrary: split the feature‘s implementation into logical chunks and remember to commit early and often. But don‘t commit just to have something in the repository before leaving the office at the end of the day.
-- **test code before you commit** Resist the temptation to commit some- thing that you «think» is completed. Test it thoroughly to make sure it really is completed and has no side effects (as far as one can tell). While committing half- baked things in your local repository only requires you to forgive yourself, having your code tested is even more important when it comes to pushing/sharing your code with others.
+- **commit often** Committing often keeps your commits small and, again, helps you commit only related changes. Moreover, it allows you to share your code more frequently with others. That way it is easier for everyone to integrate changes regularly and avoid having merge conflicts. Having few large commits and sharing them rarely, in contrast, makes it hard to solve conflicts.
+- **don't commit half done work** You should only commit code when it's completed. This doesn‘t mean you have to complete a whole, large feature before committing. Quite the contrary: split the feature's implementation into logical chunks and remember to commit early and often. But don't commit just to have something in the repository before leaving the office at the end of the day.
+- **test code before you commit** Resist the temptation to commit some- thing that you _think_ is completed. Test it thoroughly to make sure it really is completed and has no side effects (as far as one can tell). While committing half- baked things in your local repository only requires you to forgive yourself, having your code tested is even more important when it comes to pushing/sharing your code with others.
 - **version control is not a backup system** When doing version control, you should pay attention to committing semantically
 - **use branches** Branches are the perfect tool to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, ideas.
-- **agree on a workflow** Git lets you pick from a lot of different workflows: long-running branches, topic branches, merge or rebase, git-flow... Which one you choose depends on a couple of factors: your project, your overall development and deployment workflows and (maybe most important- ly) on your and your teammates‘ personal preferences. However you choose to work, just make sure to agree on a com- mon workflow that everyone follows. 
+- **agree on a workflow** Git lets you pick from a lot of different workflows: long-running branches, topic branches, merge or rebase, git-flow... Which one you choose depends on a couple of factors: your project, your overall development and deployment workflows and (maybe most importantly) on your and your teammates' personal preferences. However you choose to work, just make sure to agree on a common workflow that everyone follows. 
 
 [#Tower:2011]
 
@@ -85,7 +85,7 @@ Git format preferred
 - then empty line
 - then multiple paragraphs explaining the patch in detail (if needed)
 - don't describe the code, describe the intent and the approach
-- keep the log in a present tense (to be consistent with generated messages from cimmands like `git merge`)
+- keep the log in a present tense (to be consistent with generated messages from commands like `git merge`)
 
 [source](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
 
@@ -97,7 +97,7 @@ Example
 	in more detail, possibly giving some background about the issue
 	being fixed, etc etc.
 
-	The body of the commit message can be several paragrahps, and
+	The body of the commit message can be several paragraphs, and
 	please do proper word-wrap and keep columns shorter than about
 	74 characters or so. That way "git log" will show things
 	nicely even when it's indented.
@@ -110,7 +110,7 @@ Example
 Each code that goes into production should be checked by a peer
 
 - having a **second set of eyes** look over code before it gets checked in catches bugs.
-- **good kind of peer pressure** knowing that a coworker, whose opionon matters to you will result in neater, better documented, and better organized code.
+- **good kind of peer pressure** knowing that a coworker, whose opinion matters to you will result in neater, better documented, and better organized code.
 - **spreading knowledge** in larger groups each person is responsible for a core component. With code review at least two people are familiar with the code
 
 Keep in mind
@@ -126,18 +126,18 @@ Keep in mind
 ## Communication ##
 
 - get people out of the office out into the open
-- flat hierachy
+- flat hierarchy
 - behave like an open source project
-- optimze for happiness (everything follows from that)
-- meetings are waste (calcualate time/money wasted)
-- async communication (important if remote (locality/time)) via email, pull requests, messages, ...
+- optimize for happiness (everything follows from that)
+- meetings are waste (calculate time/money wasted)
+- async communication (important if remote (locality, time)) via email, pull requests, messages, ...
 - no set work hours (I work when I'm inspired - software development is creative process)
 
 ## Office ##
 
 ### Desks ###
 
-- each to his own but provide room, stationary and helpers (like cord organizers) for keeping the workplace cleam
+- each to his own but provide room, stationary and helpers (like cord organizers) for keeping the workplace clean
 - have power easy accessible
 - have easy accessible ethernet ports available on or near the desk
 
@@ -160,7 +160,7 @@ Only use open source software. Exceptions are allowed when it comes to OS (OS X)
 - everything should be in version control
 - documents aren't code and should live in their own source code repository 
 - if they should be a direct dependency create a super project and add project as submodules
-- continuos integration
+- continuous integration
 - make status visible (e.g.. status monitoring, whiteboard). make it a game.
 - automate everything
 - configuration should be under version control
@@ -172,7 +172,7 @@ Use [Semantic Versioning](http://semver.org/)
 
 ## People ##
 
-- everybody gets their own laptop, mouse, keyboard, monitor, os (only unix based though)
+- everybody gets their own laptop, mouse, keyboard, monitor, OS (only unix based though)
 - create open space
 - offer books, place to read
 - release parties
@@ -200,8 +200,8 @@ Use [Semantic Versioning](http://semver.org/)
 ### Customer ###
 
 - send customer emails based on certain rules
-	- "Automatically email users after 7 days if they haven’t added a teammate or created a project"
-	- "On day 15 tell all iPhone users about the iPhone app, if they haven’t already installed it"
+	- "Automatically email users after 7 days if they haven't added a teammate or created a project"
+	- "On day 15 tell all iPhone users about the iPhone app, if they haven't already installed it"
 - send emails based on time (after 1d, 1w, 1m)
 - send emails based on activity
 
