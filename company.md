@@ -7,6 +7,7 @@ Code is king.
 - everybody and not only developers have access to source repositories
 - everybody can see the code from other developers and projects
 - everybody can fork the source code and file pull requests
+- code is user driven not project driven (source control system should support that (see [github](http://github.com/) )
 
 ### Style ###
 
@@ -60,6 +61,8 @@ or example, a comment explaining that the variable `x` represents the principal 
 [#Ottinger:2009]
 
 ### Version Control ###
+
+#### Commits ####
 
 Git centric approach:
 
