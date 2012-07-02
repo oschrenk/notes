@@ -48,6 +48,8 @@ To use an RVM installed Ruby as default, instead of the system ruby:
 
 And reopen your terminal windows.
 
+A nice introduction on Ruby, RVM and Rails on OSX can be found [here](http://www.asconix.com/howtos/mac-os-x/ruby-rails-rvm-mac-os-x-howto).
+
 ## FAQ/ Problems ##
 
 ### Invalid gemspec in [<path>]: invalid date format in specification ###
