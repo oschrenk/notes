@@ -4,7 +4,9 @@
 
 - [Marketplace](http://www.eclipse.org/mpc/). Search for Marketplace. Or add Indigo [Update Site](http://download.eclipse.org/mpc/indigo/) to your repos
 - [M2Eclipse](http://eclipse.org/m2e/). [Update Site](http://download.eclipse.org/technology/m2e/releases)
-- Mantis Plugin
+- [Ecl Emma](http://www.eclemma.org/). Code coverage. [Update Site](http://update.eclemma.org/).
+- [PMD](http://pmd.sourceforge.net/integrations.html#eclipse). Static analysis. [Update Site](http://pmd.sf.net/eclipse).
+- [Mylyn-Mantis Plugin](http://sourceforge.net/apps/mediawiki/mylyn-mantis/index.php?title=Main_Page). Plugins for [Mantis](http://www.mantisbt.org/) bugtracking system. Use the [Mylyn Connector discovery](http://tasktop.com/blog/mylyn/mylyn-connector-discovery-screencast) (recommended) or the [Update Site](http://mylyn-mantis.sourceforge.net/eclipse/update/).
 - [Git](http://www.eclipse.org/egit/) [Update Site](http://download.eclipse.org/egit/updates).
 - [JAutoDoc](http://jautodoc.sourceforge.net/). [Update Site](http://jautodoc.sourceforge.net/update/)
 - [Xtend](http://www.eclipse.org/xtend/). Integrated as default.
