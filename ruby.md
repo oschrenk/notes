@@ -10,17 +10,9 @@ On OS X you can just run
 
 ## RubyGems ##
 
-### Install a gem ###
-
-	gem install name-of-gem
-
-### Updating your gems ###
-
-	sudo gem update
-
-### Update RubyGems ###
-
-	sudo gem update --system
+- Install a gem	`gem install name-of-gem`
+- Updating your gems `sudo gem update`
+- Update RubyGems `sudo gem update --system`
 
 ## FAQ/ Problems ##
 
