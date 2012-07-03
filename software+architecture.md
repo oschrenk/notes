@@ -1,7 +1,5 @@
 # Software Architecture #
 
-# Computer Science #
-
 ## Messaging ##
 
 ### Message Queue ###
@@ -30,6 +28,6 @@ An example of publish-subscribe messaging would be a news feed. As news articles
 
 A bus is a system that forwards data to other parts. An Enterprise Service Bus (ESB) is an architectural concept for distributed systems following SOA.
 
-# Resources #
+## Resources ##
 
 [#jboss.messaging]: [Messaging concepts](http://docs.jboss.org/jbossmessaging/docs/usermanual-2.0.0.beta1/html/messaging-concepts.html) 
