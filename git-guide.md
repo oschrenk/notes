@@ -5,6 +5,8 @@ Copyright: This document is provided under the terms of the Creative Commons Att
 
 # Git #
 
+- [Try out Git in your browser](http://try.github.com/)
+
 ## What is Git ##
 
 TODO
