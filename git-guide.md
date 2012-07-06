@@ -9,7 +9,19 @@ Copyright: This document is provided under the terms of the Creative Commons Att
 
 ## What is Git ##
 
-TODO
+> Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
+Git is easy to learn and has a tiny footprint with lightning fast performance. It outclasses SCM tools like Subversion, CVS, Perforce, and ClearCase with features like cheap local branching, convenient staging areas, and multiple workflows.
+
+- [git-scm.com](http://git-scm.com/)
+
+Let's break it down:
+
+- **Free and Open Source**. Git is released under the [GPLv2 open source license](http://www.opensource.org/docs/osd). 
+- **Distributed Version Control System**. Instead of having a centralized repository of the source code, everyone has its own copy. Instead of doing a "checkout" of the current tip of the source code, you do a "clone" of the entire repository.
+- **Tiny Footprint**. With Git, nearly all operations are performed locally, giving it a huge speed advantage on centralized systems that constantly have to communicate with a server somewhere. In many of the common version control operations, Git is one or two orders of magnitude faster than SVN, even under ideal conditions for SVN. One place where Git is slower is in the initial clone operation. This is because Git is downloading the entire history rather than only the latest version and its normally at the one time you may be able to wait. Git is also very efficient at compressing and storing data on the client side.
+- **Cheap Local Branching**. Git allows and encourages you to have multiple local branches that can be entirely independent of each other. The creation, merging, and deletion of those lines of development takes seconds.
+- **Staging Area**. It is an intermediate area where commits can be formatted and reviewed before completing the commit. It allows you to stage only portions of a modified file.
+- **Multiple Workflows**. Being distributed it allows you to use a centralized workflow (like SVN), a worklfow using an integration manager — a single person who commits to the 'blessed' repository, or other more hierarchical approache. The choice is yours.
 
 ## Why Git ##
 
