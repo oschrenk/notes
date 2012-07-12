@@ -123,7 +123,7 @@ Keep in mind
 
 [#MarkCC:2011]
 
-## Communication ##
+## Culture ##
 
 - get people out of the office out into the open
 - flat hierarchy
