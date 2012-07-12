@@ -152,7 +152,9 @@ Keep in mind
 
 Only use open source software. Exceptions are allowed when it comes to OS (OS X) and specialized software (Photoshop et al). 
 
-- Project Management: [Redmine](http://www.redmine.org/)
+- Project Management: 
+	- [Redmine](http://www.redmine.org/)
+	- [Sprintly](https://sprint.ly/)
 - Sourcecode: [Git](http://git-scm.com/), [Gitolite](https://github.com/sitaramc/gitolite)
 - Messaging: Email, MicroMessaging: [status.net](http://status.net/)
 
@@ -170,6 +172,15 @@ Only use open source software. Exceptions are allowed when it comes to OS (OS X)
 ### Versioning ###
 
 Use [Semantic Versioning](http://semver.org/)
+
+### Managment ###
+
+- Project Managment software and version control system should be tightly integrated. 
+	- `Refs #54` Add commit message as comment to the issue (with commit id)
+	- `Fixes #2752` Add commit message as comment to the issue (with commit id) and set status to `fixed`
+	- `Closes #42` Add commit message as comment to the issue (with commit id) and set status to `closed`
+	- can be realized via hooks
+- Projects are driven by people. Use people centric software e.g. Github which uses people and not projects as first class citizen in their urls.
 
 ## People ##
 
