@@ -132,6 +132,7 @@ Keep in mind
 - meetings are waste (calculate time/money wasted)
 - async communication (important if remote (locality, time)) via email, pull requests, messages, ...
 - no set work hours (I work when I'm inspired - software development is creative process)
+- **the best motivating factor is trust**. Team unity is of ultimate importance in accomplishing your goals. **Rule cultures are bred of distrust**, and sticks and prods to enforce rules will only further erode trust from your team.
 
 ## Office ##
 
