@@ -153,9 +153,35 @@ To find out how many users are logged on, type
 
 	$ who | wc -l
 
-## Files ##
+## Filesystem ##
 
-### Chmod
+The [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/pub/fhs-2.3.html) proposes
+
+The following directories, or symbolic links to directories, are required in `/`.
+
+	/bin	Essential command binaries
+	/boot	Static files of the boot loader
+	/dev	Device files
+	/etc	Host-specific system configuration
+	/lib	Essential shared libraries and kernel modules
+	/media	Mount point for removeable media
+	/mnt	Mount point for mounting a filesystem temporarily
+	/opt	Add-on application software packages
+	/sbin	Essential system binaries
+	/srv	Data for services provided by this system
+	/tmp	Temporary files
+	/usr	Secondary hierarchy
+	/var	Variable data
+
+with optional
+
+	/home	User home directories (optional)
+	/lib<qual>	Alternate format essential shared libraries (optional)
+	/root	Home directory for the root user (optional)
+
+### Files# ##
+
+#### Chmod
 
     read write execute = 111 = 1 + 2 + 4 = 7
     read write no execute = 110 = 4 + 2 = 6
@@ -166,7 +192,7 @@ To find out how many users are logged on, type
     no read no write execute = 001 = 1
     no read no write no execute = 000 = 0
 
-### ls -l “weirdness” +/@ symbol in `ls -l`
+#### ls -l “weirdness” +/@ symbol in `ls -l`
 
 Sometimes when using `ls -l` there is a `+` or a `@` symbol
 
@@ -178,7 +204,7 @@ The `+` indicates the use of ACL (Access Control Lists). Consult [ACL][2] for mo
 
 The `@` indicates further file attributes. Consult [Apple File Attributes][3] for more infos.
 
-### Access Control lists {#acl}
+#### Access Control lists {#acl}
 
 To view them just use `ls -le`.
 
@@ -191,7 +217,7 @@ To delete an acl entry you have to run `chmod -a` with the exact defintion of th
     	0: group:everyone deny delete
     	$ chmod -a "group:everyone deny delete" file.ext
 
-### Apple File Attributes {#apple-file-attributes}
+#### Apple File Attributes {#apple-file-attributes}
 
 Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using `ls -ls` indicated by the `@` symbol. By calling `ls -@` or `xattr`you can see that an attribute `com.apple.quarantine` has been added. To remove that call `sudo xattr -d com.apple.quarantine path` or `xattr -d com.apple.quarantine path`
 
