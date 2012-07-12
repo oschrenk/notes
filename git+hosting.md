@@ -6,11 +6,11 @@
 
 ## Hosting solutions ##
 
-- [Gitorious](http://gitorious.org/) Rails
+- [Gitorious](http://gitorious.org/) Rails. Project centric.
 - [cgit](http://hjemli.net/git/cgit/)
 - [Gitalist](http://www.gitalist.com/)
 - [Gitblit](https://github.com/gitblit) Java
-- [Gitlab](http://gitlabhq.com/) Rails. Project driven.
+- [Gitlab](http://gitlabhq.com/) Rails. Project centric.
 - [Girocco](http://repo.or.cz/w/girocco.git)
 
 ## GitWeb ##
