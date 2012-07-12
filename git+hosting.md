@@ -9,7 +9,7 @@
 - [Gitorious](http://gitorious.org/) Rails. Project centric.
 - [cgit](http://hjemli.net/git/cgit/)
 - [Gitalist](http://www.gitalist.com/)
-- [Gitblit](https://github.com/gitblit) Java
+- [Gitblit](https://github.com/gitblit) Java. Project centric.
 - [Gitlab](http://gitlabhq.com/) Rails. Project centric.
 - [Girocco](http://repo.or.cz/w/girocco.git)
 
