@@ -179,9 +179,33 @@ with optional
 	/lib<qual>	Alternate format essential shared libraries (optional)
 	/root	Home directory for the root user (optional)
 
-### Files# ##
+### Files ###
 
-#### Chmod
+#### Unix File Permissions
+
+The most common notation is symbolic notation. For example
+
+	$ ls -la
+	drwxr-xr-x 1 testuser Admin     25600 Jul 12 02:04 file.ext
+	-rwx------ 1 testuser Admin     25600 Jul 12 02:04 file.ext
+
+The first character indicates the file type:
+
+- `-` denotes a regular file
+- `d` denotes a directory
+- `b` denotes a block special file
+- `c` denotes a character special file
+- `l` denotes a symbolic link
+- `p` denotes a named pipe
+- `s` denotes a domain socket
+
+It is followed by three permission classes (or triad) with three characters each. Each of the three characters represent the read, write, and execute permissions respectively:
+
+- `r` if the read bit is set, `-` if it is not.
+- `w` if the write bit is set, `-` if it is not.
+- `x` if the execute bit is set, `-` if it is not.
+
+The binary (or decimal) notation for a triad is as follows
 
     read write execute = 111 = 1 + 2 + 4 = 7
     read write no execute = 110 = 4 + 2 = 6
@@ -192,21 +216,19 @@ with optional
     no read no write execute = 001 = 1
     no read no write no execute = 000 = 0
 
-#### ls -l “weirdness” +/@ symbol in `ls -l`
+#### Access Control lists
 
-Sometimes when using `ls -l` there is a `+` or a `@` symbol
+Access Control lists is alist of file permissions attached to an object. They offer a far more complex system than basic unix file permissions.
 
-    	$ ls -la
+To see if a file has an ACL attached to it, you can use `ls -le`. 
+
+    	$ ls -le
     	-rwx------+ 1 testuser Admin     25600 Jul 12 02:04 file.ext
     	-rwx------@ 1 testuser Admin     25600 Jul 12 02:04 file.ext
 
 The `+` indicates the use of ACL (Access Control Lists). Consult [ACL][2] for more infos.
 
 The `@` indicates further file attributes. Consult [Apple File Attributes][3] for more infos.
-
-#### Access Control lists {#acl}
-
-To view them just use `ls -le`.
 
 This is a rather huge topic. Run `man chmod` and search for acl for a complete description.
 
@@ -217,8 +239,7 @@ To delete an acl entry you have to run `chmod -a` with the exact defintion of th
     	0: group:everyone deny delete
     	$ chmod -a "group:everyone deny delete" file.ext
 
-#### Apple File Attributes {#apple-file-attributes}
-
+#### Apple File Attributes ####
 Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using `ls -ls` indicated by the `@` symbol. By calling `ls -@` or `xattr`you can see that an attribute `com.apple.quarantine` has been added. To remove that call `sudo xattr -d com.apple.quarantine path` or `xattr -d com.apple.quarantine path`
 
 ## FreeBSD Interrupt Signals ##
