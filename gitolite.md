@@ -2,6 +2,8 @@
 
 ## Installation ##
 
+Installation notes for Gitolite 2.x
+
 	ssh server
 	sudo adduser --home /home/gitolite --shell /bin/bash gitolite
 	sudo visudo
