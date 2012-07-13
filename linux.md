@@ -52,7 +52,7 @@ It will ask for root's password regardless of the logged in user. Disable it to 
 
 ## Security ##
 
-- keeps your system up to date
+- keep your system up to date
 - user strong password
 
 ### Lock down SSH ###
