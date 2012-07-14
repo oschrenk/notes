@@ -2,15 +2,15 @@
 
 ## Plugins ##
 
-- [Marketplace](http://www.eclipse.org/mpc/). Search for Marketplace. Or add Indigo [Update Site](http://download.eclipse.org/mpc/indigo/) to your repos
-- [M2Eclipse](http://eclipse.org/m2e/). [Update Site](http://download.eclipse.org/technology/m2e/releases)
-- [Ecl Emma](http://www.eclemma.org/). Code coverage. [Update Site](http://update.eclemma.org/).
-- [PMD](http://pmd.sourceforge.net/integrations.html#eclipse). Static analysis. [Update Site](http://pmd.sf.net/eclipse).
-- [Mylyn-Mantis Plugin](http://sourceforge.net/apps/mediawiki/mylyn-mantis/index.php?title=Main_Page). Plugins for [Mantis](http://www.mantisbt.org/) bugtracking system. Use the [Mylyn Connector discovery](http://tasktop.com/blog/mylyn/mylyn-connector-discovery-screencast) (recommended) or the [Update Site](http://mylyn-mantis.sourceforge.net/eclipse/update/).
-- [Git](http://www.eclipse.org/egit/) [Update Site](http://download.eclipse.org/egit/updates).
-- [JAutoDoc](http://jautodoc.sourceforge.net/). [Update Site](http://jautodoc.sourceforge.net/update/)
-- [Xtend](http://www.eclipse.org/xtend/). Integrated as default.
-- [Workspace Mechanic](http://code.google.com/a/eclipselabs.org/p/workspacemechanic/). [Update Site](http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic/). [Beta Update Site](http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic-testing/)
+| Name | Description | Update Site |
+| :---- | :---- | :---- |
+| [Ecl Emma](http://www.eclemma.org/) | Code coverage | [Update Site](http://update.eclemma.org/) |
+| [EGit](http://www.eclipse.org/egit/) | Git Team Provider | [Update Site](http://download.eclipse.org/egit/updates) |
+| [JAutoDoc](http://jautodoc.sourceforge.net/) | Automatically add Javadoc  | [Update Site](http://jautodoc.sourceforge.net/update/) |
+| [m2eclipse](http://eclipse.org/m2e/) | Apache Maven support in the Eclipse IDE | [Update Site](http://download.eclipse.org/technology/m2e/releases) |
+| [PMD](http://pmd.sourceforge.net/integrations.html#eclipse) | Static Code analysis | [Update Site](http://pmd.sf.net/eclipse) |
+| [Workspace Mechanic](http://code.google.com/a/eclipselabs.org/p/workspacemechanic/) | Workspace Mechanic automates maintenance and migration of your Eclipse environment in your company | [Update Site](http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic/). [Beta Update Site](http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic-testing/) |
+| [Xtend](http://www.eclipse.org/xtend/) | Xtend is a little language that compiles into idiomatic Java source code | Integrated as of 4.2 |
 
 ## Configuration ##
 
