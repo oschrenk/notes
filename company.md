@@ -85,9 +85,11 @@ Git format preferred
 - then empty line
 - then multiple paragraphs explaining the patch in detail (if needed)
 - don't describe the code, describe the intent and the approach
+- write in imperative, as if you were commanding (eg. write fix instead of fixed)
 - keep the log in a present tense (to be consistent with generated messages from commands like `git merge`)
 
-[source](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
+- [On Commit Messages](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
+- [Writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
 
 Example
 
@@ -104,6 +106,12 @@ Example
 
 	Reported-by: whoever-reported-it
 	Signed-off-by: Your Name <youremail@yourhost.com>
+
+Why write a good commit message? What are the benefits?
+
+- speed up the reviewing process
+- help us write good release notes
+- help future maintainers explain your intentions about code changes
 
 ### Code Review ###
 
