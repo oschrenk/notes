@@ -1,5 +1,13 @@
 # Multimarkdown #
 
+## Mathematics ##
+
+Example within a paragraph \\({e}^{i\pi }+1=0\\).
+
+And as an equation on it's own:
+	
+\\[ {x}_{1,2}=\frac{-b\pm \sqrt{{b}^{2}-4ac}}{2a} \\]
+
 ## Bibliography Support ##
 
 Write following into the text
