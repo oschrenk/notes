@@ -140,6 +140,14 @@ Press `⌘⇧.` and the the dialog box now will display any hidden files or fold
 - https://discussions.apple.com/thread/1086078?start=15&tstart=0
 - http://reviews.cnet.com/8301-13727_7-10329060-263.html
 
+### Kill another user logged in under Fast User Switching ###
+
+    $ ps -Ajc | grep loginwindow | grep -i <username>
+
+Second column is process id
+
+    $ sudo kill -15 <pid>
+
 ### Report problems ###
 
 Apple offers a [bug reporting tool](https://bugreport.apple.com/) whre you can submit your bugs.
