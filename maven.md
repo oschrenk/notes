@@ -208,10 +208,11 @@ Change the `source` and `target` tags according to your needs
 I always forget.
 	
 	private static final String PATH="/path/to/file.csv";
+	private static final String PATH2="/file.csv";
 	[...]
 	final File file=new File(this.getClass().getResource(PATH).getFile());
 
-This way the classloader finds the proper resource
+This way the classloader finds the proper resource. You need a leading slash.
 
 ### Create a sources jar on execution of 'package' goal
 
