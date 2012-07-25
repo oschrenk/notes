@@ -144,17 +144,17 @@ Keep in mind
 
 ## Office ##
 
+### Hardware ###
+
+- fileserver
+- map/reduce cluster
+- easy way to spin up virtual machines 
+
 ### Desks ###
 
 - each to his own but provide room, stationary and helpers (like cord organizers) for keeping the workplace clean
 - have power easy accessible
 - have easy accessible ethernet ports available on or near the desk
-
-### Technology ###
-
-- fileserver
-- map/reduce cluster
-- easy way to spin up virtual machines 
 
 ## Organization ##
 
