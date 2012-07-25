@@ -192,7 +192,13 @@ Use [Semantic Versioning](http://semver.org/)
 
 ## People ##
 
-- everybody gets their own laptop, mouse, keyboard, monitor, OS (only unix based though)
+### Individuality ###
+
+- software developer tend to be introverts
+
+### Happiness ###
+
+- everybody gets their choice of laptop, mouse, keyboard, monitor, OS (with strong bias towards Unix based OS though)
 - create open space
 - offer books, place to read
 - release parties
