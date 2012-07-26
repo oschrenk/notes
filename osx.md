@@ -4,6 +4,10 @@
 
 * **Window management**. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
 * **Consistency**. `cmd+,` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application. 
+
+## 10.8. Mountain Lion ##
+
+- [breaks git-svn](http://victorquinn.com/blog/2012/02/19/fix-git-svn-in-mountain-lion/)
   
 ## Defaults 
 
