@@ -63,7 +63,7 @@ Select files and directories and press `Alt + Cmd + I`
 
 ### List known WLAN ###
 
-	defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences KnownNetworks | egrep -o '(SSID_STR|_timeStamp).+' | sed 's/^.*= \(.*\);$/\1/' | sed 's/^"\(.*\)"$/\1/' | sed 's/\([0-9]\{4\}-..-..\).*/\1/' | sed 'N;s/\n/: /'
+	defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences RememberedNetworks | egrep -o '(SSID_STR|_timeStamp).+' | sed 's/^.*= \(.*\);$/\1/' | sed 's/^"\(.*\)"$/\1/' | sed 's/\([0-9]\{4\}-..-..\).*/\1/' | sed 'N;s/\n/: /'
 
 ### Save Password when using Cisco VPN
 
