@@ -142,13 +142,34 @@ Keep in mind
 - no set work hours (I work when I'm inspired - software development is creative process)
 - **the best motivating factor is trust**. Team unity is of ultimate importance in accomplishing your goals. **Rule cultures are bred of distrust**, and sticks and prods to enforce rules will only further erode trust from your team.
 
-## Office ##
+## Policies ##
 
-### Hardware ###
+### Bring Your Own Device ###
+
+[Bring Your Own Device](http://en.wikipedia.org/wiki/Bring_your_own_device) (BYOD) describes the recent trend of employees bringing personally-owned mobile devices to their place of work, and using those devices to access privileged company resources such as email, file servers and databases as well as their personal application and data.
+
+#### Advantages ####
+
+- company saves might on devices
+- employees might take better care of their own devices
+- employees are able to decide which technologies to use
+
+#### Disadvantages ####
+
+- company data might not be secure
+- employee is responsible for repairs
+
+### Mobile Device Management ###
+
+[Mobile Device Management](http://en.wikipedia.org/wiki/Mobile_Device_Management) (MDM) software secures, monitors, manages and supports mobile devices deployed across mobile operators, service providers and enterprises. MDM functionality typically includes over-the-air distribution of applications, data and configuration settings for all types of mobile devices.
+
+## Infrastructure ##
 
 - fileserver
 - map/reduce cluster
 - easy way to spin up virtual machines 
+
+## Office ##
 
 ### Desks ###
 
