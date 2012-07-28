@@ -105,7 +105,7 @@ The last command did output some warnings but it produced the correct file anywa
 Mail needs to be configured which folders it needs to use for trash, drafts and spam, otherwise it will use its own folders leaving the other folder untouched and also annoyingly visible in the side bar.
 
 Select the folder that matches the function and choose `Mailbox → Use This Mailbox For → [function name] (e.g. “Sent” again)`
-:
+
 ### VLC
 
 After upgrading to VLC 1.0.5 VLC didn't start anymore. The console showed
@@ -116,7 +116,7 @@ Resetting the configuration worked for me
 
     /Applications/VLC.app/Contents/MacOS/VLC --reset-config
 
-## Using multiple accounts
+## Multi-User accounts
 
 ### Share any files between users on the same Mac
 
