@@ -10,6 +10,7 @@
 ### Problems ###
 
 - [breaks git-svn](http://victorquinn.com/blog/2012/02/19/fix-git-svn-in-mountain-lion/)
+- X has been removed. Install [XQuartz](http://xquartz.macosforge.org/landing/) if you need it.
   
 ### Tools ###
 
