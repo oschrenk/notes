@@ -540,3 +540,19 @@ Now you can:
 or shorter
 
 	git co -t origin/1.0
+
+### Can't locate SVN/Core.pm in @IN ###
+
+    $ git svn rebase
+    Can't locate SVN/Core.pm in @INC (@INC contains: /usr/local/Cellar/git/1.7.9.1/lib /Library/Perl/5.12/darwin-thread-multi-2level /Library/Perl/5.12 /Network/Library
+    /Perl/5.12/darwin-thread-multi-2level /Network/Library/Perl/5.12 /Library/Perl/Updates/5.12.4 /System/Library/Perl/5.12/darwin-thread-multi-2level /System/Library/P
+    erl/5.12 /System/Library/Perl/Extras/5.12/darwin-thread-multi-2level /System/Library/Perl/Extras/5.12 .) at /usr/local/Cellar/git/1.7.9.1/libexec/git-core/git-svn l
+    ine 41.
+
+ The problem is that `git svn` command requires Perl libraries that aren’t linked in Mountain Lion.
+
+ Install XCode 4.4, Command Line Tools
+
+    sudo ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.12/darwin-thread-multi-2level/SVN /System/Library/Perl/Extras/5.12/SVN
+    sudo ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.12/darwin-thread-multi-2level/auto/SVN/ /System/Library/Perl/Extras/5.12/auto/SVN
+
