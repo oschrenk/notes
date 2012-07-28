@@ -7,8 +7,24 @@
 
 ## 10.8. Mountain Lion ##
 
+### Problems ###
+
 - [breaks git-svn](http://victorquinn.com/blog/2012/02/19/fix-git-svn-in-mountain-lion/)
   
+### Tools ###
+
+[Interesting new UNIX commands/binaries in OS X Mountain Lion](http://apple.blogoverflow.com/2012/07/interesting-new-unix-commandsbinaries-in-os-x-mountain-lion/)
+
+**caffeinate** (`/usr/bin/caffeinate`) – prevent the system from sleeping on behalf of a utility
+
+Prevent your Mac from falling asleep for a specific period of time (e.g. an hour):
+
+    caffeinate -u -t 3600
+
+Allow a command to run for a prolonged period without the automatic (and, since 10.8, rather aggressive) sleep function kicking in
+
+    caffeinate -s any-long-running-command -with arguments
+
 ## Defaults 
 
 OS X stores the preferences and application settings in `.plist` files. These are (binary enocded) XML files. OSX offers the command line tool `defaults` to read from and write to them.
