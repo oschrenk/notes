@@ -7,12 +7,9 @@
 
 ## 10.8. Mountain Lion ##
 
-### Problems ###
+### Noteworthy ###
 
-- [breaks git-svn](http://victorquinn.com/blog/2012/02/19/fix-git-svn-in-mountain-lion/)
-- X has been removed. Install [XQuartz](http://xquartz.macosforge.org/landing/) if you need it.
-  
-### Tools ###
+- when copying or oving files Finder displays a small progress bar
 
 [Interesting new UNIX commands/binaries in OS X Mountain Lion](http://apple.blogoverflow.com/2012/07/interesting-new-unix-commandsbinaries-in-os-x-mountain-lion/)
 
@@ -25,6 +22,13 @@ Prevent your Mac from falling asleep for a specific period of time (e.g. an hour
 Allow a command to run for a prolonged period without the automatic (and, since 10.8, rather aggressive) sleep function kicking in
 
     caffeinate -s any-long-running-command -with arguments
+
+### Problems ###
+
+- [breaks git-svn](http://victorquinn.com/blog/2012/02/19/fix-git-svn-in-mountain-lion/)
+- X has been removed. Install [XQuartz](http://xquartz.macosforge.org/landing/) if you need it.
+
+
 
 ## Defaults 
 
