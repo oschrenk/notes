@@ -64,8 +64,6 @@ or example, a comment explaining that the variable `x` represents the principal 
 
 #### Pre-Commit ####
 
-[Ben Summers, 2012, Pre-Commit Checklist](http://bens.me.uk/2012/pre-commit-checklist)
-
 - **Tests**
 	- How is this tested?
 	- Can I simplify the tests, and by doing so, simplify the code?
@@ -95,6 +93,8 @@ or example, a comment explaining that the variable `x` represents the principal 
 	- Is it hard to use this code in a way which is insecure?
 	- Is it possible to abuse this code in any way?
 	- Could this code be open sourced?
+
+[#Summers:2012]
 
 #### Commits ####
 
@@ -311,12 +311,14 @@ Use [Semantic Versioning](http://semver.org/)
 
 ## Bibliography ##
 
-[#Geissendörfer:2011]: Felix Geissendörfer [Node.js Style Guide](http://nodeguide.com/style.html#line-length) 2011
-
 [#Batchelder:2003]: Ned Batchelder. [Logging Style Guide](http://nedbatchelder.com/text/log-style-guide.html) 2006
 
-[#Tower:2011]: [Tower](http://www.git-tower.de). [Git Cheat Sheet](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf) from the guys who made [tower](http://www.git-tower.de) 2011
+[#Geissendörfer:2011]: Felix Geissendörfer [Node.js Style Guide](http://nodeguide.com/style.html#line-length) 2011
 
-[#MarkCC:2011]: MarkCC [Things Everyone Should Do: Code Review](http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/) from [scientopia.org/](http://scientopia.org/) 2011
+[#MarkCC:2011]: MarkCC [Things Everyone Should Do: Code Review](http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/) from [scientopia.org](http://scientopia.org/) 2011
 
 [#Ottinger:2009]: Tim Ottinger, [Rules for Commenting](http://agileinaflash.blogspot.com/2009/04/rules-for-commenting.html) 2009
+
+[#Summers:2012]: Ben Summers, [Pre-Commit Checklist](http://bens.me.uk/2012/pre-commit-checklist), 2012
+
+[#Tower:2011]: [Tower](http://www.git-tower.de). [Git Cheat Sheet](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf) from the guys who made [tower](http://www.git-tower.de) 2011
