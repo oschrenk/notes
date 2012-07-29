@@ -147,6 +147,29 @@ Why write a good commit message? What are the benefits?
 - help us write good release notes
 - help future maintainers explain your intentions about code changes
 
+##### On Past/Present tense / imperative mood of commit messages #####
+
+There are many threads on stackexchange. A very good answer discussing the why and when can be found [here](http://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages#8059167)
+
+In summary: Your project should almost always use the past tense.
+
+**Arguments against present tense**
+
+- Most version control scenarios are centralized. Commits are a journal of work being done/finished.
+- For non-distributed projects, 99.99% of the time a person will be reading a commit message is for reading history - history is read in the past tense
+
+**Arguments for present tense** / imperative mood
+
+- writing in the present tense tells someone what applying the commit will do, rather than what you did.
+- Consistency. That's how it is in many projects (including git itself). Also git tools that generate commits (like git merge or git revert) do it.
+- It's usually shorter
+- You can name commits more consistently with titles of tickets in your issue/feature tracker (which don't use past tense, although sometimes future)
+
+**My conclusion**
+
+- Use the style of the project if working on OpenSource
+- Use **present tense**. I like the idea of describing the intended change of a commit. It fits my way of thinking since I started working with Git. I also think that using DVCS is the way to go.
+
 ### Code Review ###
 
 Each code that goes into production should be checked by a peer
