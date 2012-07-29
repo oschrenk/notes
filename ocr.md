@@ -1,13 +1,16 @@
 # OCR #
 
+## Solutions ##
+
+### Open Source ###
+
 - [GOCR](http://jocr.sourceforge.net/) `brew install gocr`
 - [tesseract](http://code.google.com/p/tesseract-ocr/) `brew install tesseract`
 - [orcad](http://www.gnu.org/software/ocrad/) `brew install ocrad`
 
-## Sources ##
+### Closed Source ###
 
-[Professionally scan with Open Source tools](http://aldeby.org/blog/index.php/how-to-professionally-scan-and-ocr-with-open-source-tools.html)
-[OCR on Linux & Mac](http://gl.ib.ly/archives/35-Doing-OCR-on-linuxMac.html:http://gl.ib.ly/archives/35-Doing-OCR-on-linuxMac.html)
+[OmniPage Capture Software Development Kit (SDK)](http://www.nuance.com/for-business/by-product/omnipage/csdk/index.htm)
 
 ## Notes ##
 
@@ -35,4 +38,9 @@ If you get a message like
 
 Ghostscript isn't (properly) installed. You can to so by
 
-    $ sudo port install ghostscript
+    $ brew install ghostscript
+
+## Sources ##
+
+- [Professionally scan with Open Source tools](http://aldeby.org/blog/index.php/how-to-professionally-scan-and-ocr-with-open-source-tools.html)
+- [OCR on Linux & Mac](http://gl.ib.ly/archives/35-Doing-OCR-on-linuxMac.html:http://gl.ib.ly/archives/35-Doing-OCR-on-linuxMac.html)
