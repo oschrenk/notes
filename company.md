@@ -62,6 +62,40 @@ or example, a comment explaining that the variable `x` represents the principal 
 
 ### Version Control ###
 
+#### Pre-Commit ####
+
+[Ben Summers, 2012, Pre-Commit Checklist](http://bens.me.uk/2012/pre-commit-checklist)
+
+- **Tests**
+	- How is this tested?
+	- Can I simplify the tests, and by doing so, simplify the code?
+	- Is the code in the test clean and easy to read, suggesting that the new code - has a sensible and unambiguous API?
+	- Are all the edge cases tested?
+- **Correctness**
+	- Have I verified that the code meets the requirements?
+	- What edge cases have I forgotten?
+	- Have I included only the necessary files and removed redundant files? Are the ignore files up-to-date?
+	- Are the comments around the code still accurate?
+	- Have I removed all the debugging code?
+	- Are there any glaring performance issues?
+- **Neatness**
+	- Have I followed the applicable style guide?
+	- Is everything an actual change to logic, with no “whitespace only” changes?
+	- Is the diff clear about what’s changed?
+	- Does the code read nicely, explaining the intent in the way it’s written?
+	- Could I remove any comments, either because they’re unnecessary or by - 	writing the code in a more literate style?
+	- Does the commit cover too many changes in one go, and could it be split up?
+	- Does the proposed commit message explain what was changed, and why?
+- **Complexity**
+	- Is there a simpler way to write this code?
+	- Is interdependent functionality contained within one logical module, with a clear boundary?
+- **Security**
+	- Is any untrusted information used without sanitising or checking for - validity?
+	- If information is disclosed or actions are taken, are there checks that the - user is authorised?
+	- Is it hard to use this code in a way which is insecure?
+	- Is it possible to abuse this code in any way?
+	- Could this code be open sourced?
+
 #### Commits ####
 
 Git centric approach:
