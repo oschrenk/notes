@@ -46,7 +46,7 @@ Code is king.
  
 The code must be readable. It must clearly express its the developers intents. A good example is a comment to the paper that introduced a specific but complex algorithm.
 
-2. Single Truth Rule
+2. Redundancy Rule
 
 > Comments which restate code must be deleted.
 
