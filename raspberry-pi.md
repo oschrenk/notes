@@ -18,10 +18,6 @@
 - [New Trent iCruiser 11000mAh External Battery Pack](http://www.amazon.com/dp/B003ZBZ64Q?tag=lavivastore-20)
 - [Microsoft Lifecam Cinema](http://www.microsoft.com/hardware/en-us/p/lifecam-cinema)
 
-## Configuration ##
-
-	sudo apt-get install git subversion
-
 ## Software ##
 
 - [node_pi](https://github.com/gflarity/node_pi) Running node.js
