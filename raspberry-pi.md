@@ -1,5 +1,9 @@
 # Raspberry Pi #
 
+## Hardware ##
+
+### My Setup ###
+
 	Raspberry Pi Model B 	45 €
 	4GB SD Card			 	 4 €
 	Micro USB Power Supply   4 €
@@ -7,6 +11,12 @@
 	Edimax EW-7811Un		11 €
 						   =====
 						    66 €
+
+### Other people used this ###
+
+- [ASUS USB-N10 Wireless Lan USB Adapter](http://www.asus.de/Networks/Wireless_Adapters/USBN10/)
+- [New Trent iCruiser 11000mAh External Battery Pack](http://www.amazon.com/dp/B003ZBZ64Q?tag=lavivastore-20)
+- [Microsoft Lifecam Cinema](http://www.microsoft.com/hardware/en-us/p/lifecam-cinema)
 
 ## Configuration ##
 
