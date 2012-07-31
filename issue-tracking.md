@@ -6,3 +6,11 @@
 - [Jira](http://www.atlassian.com/software/jira)
 - [MantisBT](http://www.mantisbt.org/)
 - [Redmine](http://www.redmine.org/)
+
+## Must-Haves ##
+
+- Cross-Referencing of Tickets via `#<ticket-id>`
+
+## Optional ##
+
+- Commit Referencing via `<hash>` or `r<revision>` or equivalent
