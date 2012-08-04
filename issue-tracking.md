@@ -7,10 +7,12 @@
 - [MantisBT](http://www.mantisbt.org/)
 - [Redmine](http://www.redmine.org/)
 
-## Must-Haves ##
+## Requirements ##
+
+### Must-Haves ###
 
 - Cross-Referencing of Tickets via `#<ticket-id>`
 
-## Optional ##
+### Optional ###
 
 - Commit Referencing via `<hash>` or `r<revision>` or equivalent
