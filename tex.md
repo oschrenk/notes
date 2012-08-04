@@ -92,3 +92,9 @@ To edit these properties later use
 ### Git ### 
 
 Just write the patterns to `.gitignore` and commit the file.
+
+## FontAwesome ##
+
+FontAwesome (http://fortawesome.github.com/Font-Awesome/) bindings for (Xe)LaTeX. Author: Honza Ustohal
+
+[gist 3101743](https://gist.github.com/3101743)
