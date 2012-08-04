@@ -37,21 +37,13 @@ I ran into problems under Snow Leopard. The error was something like "...256..."
 - Inserted the `\usepackage{pdfsync}` in my document. (not needed with xetex)
 - Forward search with "shift-command-click" and backward search with "Show in Viewer (pdfsync)".
 
-### Setting up `TM_LATEX_MASTER` ###
-
-`TM_LATEX_MASTER` defines the master latex which is called when building the tex from an included file.
-
-Open project window, press that little "i" button in the drawer. Set up variable
-
-    TM_LATEX_MASTER main.tex
-
 ## Skim ##
 
 Once you have Skim installed, activate `Skim > Preferences > Sync > Check for file changes`. TextMate should already be entered as the default editor.
 
 ## Under version control ##
 
-Tex creates a lot of temporary files that would only clutter the version control. Create a file called "ignore-these" with the (patterns of) files you want to ignore.
+Tex creates a lot of temporary files that would only clutter the version control. 
 
 	*.aux
 	*.bbl
@@ -78,10 +70,14 @@ Tex creates a lot of temporary files that would only clutter the version control
 
 ### SVN ###
 
-Then run
+Create a file called "ignore-these" with the (patterns of) files you want to ignore. Then run
 
     svn -R propset svn:ignore . -F ignore-these
 
 To edit these properties later use  
 	
 	svn propedit svn:ignore .
+
+### Git ### 
+
+Just write the patterns to `.gitignore` and commit the file.
