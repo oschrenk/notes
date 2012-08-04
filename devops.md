@@ -37,11 +37,11 @@ Email is king. Provide IMAP/SMTP so that everyone can choose client of choice.
 - [MantisBT](http://www.mantisbt.org/)
 - **[Redmine](http://www.redmine.org/)**
 
-## Project Managment ##
+## Infrastrcuture as Code ##
 
-### Time tracking ###
-
-Is often integrated into issue tracking software
+- [Puppet](http://puppetlabs.com/)
+- [Chef](http://www.opscode.com/chef/)
+- [VirtualBox](https://www.virtualbox.org/)
 
 ## Automatization ##
 
