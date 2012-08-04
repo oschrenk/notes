@@ -45,28 +45,39 @@ Once you have Skim installed, activate `Skim > Preferences > Sync > Check for fi
 
 Tex creates a lot of temporary files that would only clutter the version control. 
 
+A pretty complete list can be found [here](https://github.com/github/gitignore/blob/master/LaTeX.gitignore)
+
+	*.acn
+	*.acr
+	*.alg
 	*.aux
 	*.bbl
 	*.blg
-	*.bst
 	*.dvi
+	*.fdb_latexmk
+	*.glg
 	*.glo
+	*.gls
 	*.idx
 	*.ilg
 	*.ind
+	*.ist
 	*.lof
 	*.log
 	*.lot
+	*.maf
+	*.mtc
+	*.mtc0
 	*.nav
 	*.nlo
-	*.nls
 	*.out
-	*.pdf
-	!*/*.pdf
 	*.pdfsync
+	*.ps
 	*.snm
 	*.synctex.gz
 	*.toc
+	*.vrb
+	*.xdy
 
 ### SVN ###
 
