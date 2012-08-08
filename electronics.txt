@@ -1,1127 +1,2260 @@
 
+
 -------------------------------------------------------------------------------------
+
                  Elektronik ab + und -                                 13.8.2003  
+
 -------------------------------------------------------------------------------------
+
+
 
                       Gerhard Paulus
+
                       gp@gnomsoft.de
 
+
+
                     Copyright (c) 2002 
+
                     GNOM SOFT GmbH, Dresden
 
 
 
+
+
+
+
 Dieser Text ist interessant für Leute, die Mikrocontroller programmieren wollen  
+
 und in Sachen Elektronik ziemlich von vorne anfangen.
 
+
+
 OK, fangen wir ganz von vorne an: Big Bang. Wissenschaftler haben ein Modell entwickelt, 
+
 nach der dieses unser Universum vor ca. 13 Milliarden Jahren in einem winzigen Raum 
+
 mit einem virtuellen "großen Knall" entstanden ist. Und die sagen uns, daß nach einem sehr 
+
 sehr kleinen Teil einer Sekunde nach Big Bang (genauer gesagt: 10 hoch -43 Sekunden) 
+
 Elektronen entstanden sind.
 
+
+
 Angeblich war es zu diesem Zeitpunkt echt kuschelig warm, so um die 10 hoch 32 Grad Celsius. 
+
 Kurze Zeit später entstanden aus noch kleineren Elementarteilchen (Quarks) Protonen und 
+
 Neutronen, das war so nach 10 hoch -6 Sekunden, also nach einer Millionstel Sekunde. Und 
+
 als es ca. 100 Sekunden nach Big Bang für damalige Verhältnisse schon bitter kalt war 
+
 (nur noch eine Milliarde Grad Celsius) hatten sich diese Teilchen soweit beruhigt, daß sich 
+
 je ein Proton und ein Elektron zu Wasserstoffatomen zusammentun konnten.
 
+
+
 Ob das jetzt wirklich so war, sei dahingestellt, vielleicht kommt irgendwann mal ein Herr 
+
 Quadratstein und beweist was ganz anderes. Aber mit Elektronen und Protonen sind wir jetzt 
+
 mitten im Elektronik-Geschäft, zumindest lassen sich viele elektro-magnetische Phänomene 
+
 unsererer Umwelt mit diesen Teilchen erklären.  
+
+
+
 
 
 1. Elektrische Felder: Elektronen mögen sich nicht ...
 
+
+
 Elektronen und Protonen sind Träger elektrischer Ladungen, und zwar sind Elektronen 
+
 elektrisch negativ geladen und Protonen positiv geladen. Diese Ladung ist bei Elektron 
+
 und Proton gleich und beträgt jeweils 1,602 mal 10 hoch -19 Coulomb. Was 1 Coulomb ist, 
+
 das bleibt jetzt mal offen. Aber klar ist, daß die Ladung des Elektrons sehr klein ist.   
+
 Es ist die kleinste elektrische Ladung, die bis jetzt empirisch festgestellt werden konnte.
 
+
+
 Elektrische Ladungen üben gegenseitig aufeinander Kräfte aus. Und zwar stoßen negative 
+
 Ladungen  andere negative Ladungen ab und ziehen positive Ladungen an. Und positive 
+
 Ladungen stoßen positive Ladungen ab und ziehen negative Ladungen an. Das bedeutet 
+
 konkret, daß Elektronen andere Elektronen abstoßen und Protonen anziehen.
 
+
+
 Sogesehen müßten Proton und Elektron des Wasserstoffatoms zusammenkommen weil 
+
 sie sich gegenseitig anziehen. Das ist allerdings nicht der Fall, sondern zwischen 
+
 Elektron und Proton bleibt ein vergleichsweise großer Abstand. Grund dafür ist die recht 
+
 hohe kinetische Energie des Elektrons, das sich schnell vorwärts bewegt. Bei 20 Grad 
+
 Celsius sind das immerhin ca. 100 Kilometer pro Sekunde. 
 
+
+
 Auf der einen Seite würde das Elektron also aufgrund seiner Geschwindigkeit gerne irgendwo 
+
 ins Universum abhauen, auf der anderen Seite wird es aber vom entgegengesetzt elektrisch 
+
 geladenen Proton angezogen. Aus diesen Kräften resultiert dann ein Wasserstoffatom, bei 
+
 dem sich das Elektron auf Kreis- bzw. Ellipsen-förmigen Bahnen um das Proton bewegt. Der 
+
 Zentrifugalkraft aufgrund der Kreisbewegungen steht dann die elektrische Anziehungskraft
+
 des Protons gegenüber.
 
+
+
 Ähnlich ist es auch bei den Atomen der anderen Elemente: der Kern besteht aus einer 
+
 bestimmten Zahl von Protonen, die von einer gleich großen Anzahl von Elektronen umkreist 
+
 werden. Bei den anderen Elementen kommen im Atomkern noch eine gewisse Zahl von Neutronen dazu 
+
 (Wasserstoff hat keins davon). Diese sind aber elektrisch neutral (daher auch der Name) 
+
 und interessierem im folgenden weniger.
+
+
+
 
 
 2. Elektrische Spannung:   teile und herrsche ...
 
+
+
 Die Protonen und Elektronen eines Atoms sind in elektrischer Hinsicht normalweise voll 
+
 mit sich selbst beschäftigt. Nach außen hin, gegenüber Atomen in der (weiteren) 
+
 Nachbarschaft üben die Elektronen und Protonen eines Atoms keine bzw. minimalste 
+
 elektrische Feldkräfte aus. 
 
+
+
 Dieses idyllische Miteinander ändert sich, sobald Atome aus irgendwelchen Gründen 
+
 Elektronen verlieren, denn dann haben sie mehr Protonen als Elektronen und wirken 
+
 insgesamt positiv geladen. Und wenn Atome aus irgendwelchen Gründen Elektronen aus der 
+
 Umgebung aufnehmen, dann haben sie mehr Elektronen als Protonen und wirken insgesamt 
+
 negativ geladen. 
 
+
+
 Und dann wird es interessant, denn dadurch entsteht eine elektrische Spannung. 
+
 Diese Atome, die ein Ungleichgewicht zwischen Elektronen und Protonen aufweisen, 
+
 üben auf ihre Umwelt elektrische Kräfte aus mit dem Ziel, zwischen überwiegend positiven 
+
 und überwiegend negativen Ladungen wieder ein Gleichgewicht herzustellen.
+
+
+
 
 
 3. Elektrischer Strom:  vagabundierende Elektronen ...
 
+
+
 Die zwischen elektrischen Ladungen ausgeübte Kraft ist auch noch von der Entfernung 
+
 zwischen den Ladungen abhängig: je weiter der Abstand, desto weniger Kraft wird 
+
 ausgeübt. Das ist insofern relevant, weil die Entfernung der Elektronen von den 
+
 Protonen des Atomkerns unterschiedlich groß ist. Und zwar sieht das momentan 
+
 in Mode stehende Atom-Modell so aus, daß sich die Elektronen eines Atoms 
+
 entfernungsmäßig in konzentrischen Schalen um den Atomkern bewegen. Dabei ist die 
+
 Zahl der Elektronen begrenzt, die sich in den einzelnen Schalen maximal aufhalten. 
 
+
+
 In elektronischer Hinsicht sind die Elektronen der äußersten Schale am interessantesten,  
+
 die auch als Valenz-Elektronen bezeichnet werden. Während die Elektronen der inneren 
+
 Schalen dem jeweiligen Atom normalerweise fest verbunden bleiben, kommt es in der 
+
 äußersten Schale schon eher vor, daß dort Elektronen mal fremd gehen. Oder es siedeln 
+
 sich dort Elektronen an, die eigentlich in dem jeweiligen Atom nichts zu suchen haben. 
+
 Offensichtlich hängt dies mit der Tatsache zusammen, daß Kräfte zwischen Elektronen 
+
 und Protonen des Kerns aufgrund der relativ großen Entfernung an Stärke und 
+
 Zwang nachlassen.
+
+
+
 
 
 Kupfer.jpg
 
+
+
 Interessant sind in diesem Zusammenhang vor allem Metalle. Ein Kupfer-Atom zB. hat 
+
 4 Schalen mit Elektronen, aber in der äußersten, vierten Schale saust nur ein Elektron 
+
 um den Kern herum. Dieses eine Valenz-Elektron verläßt gerne mal die Elektronenhülle des 
+
 Kupfer-Atoms und schaut mal bei einem anderen Kupfer-Atom rein, bei dem das Valenz-Elektron 
+
 gerade auch auf Trebe ist. Diese vagabundierenden Elektronen bezeichnet man auch als 
+
 "freie" Elektronen.  
 
+
+
 Obwohl so in dem Kristallgitter des Kupfers ein reger Austausch von freien Elektronen 
+
 stattfindet, wirkt das Stück Kupfer nach außen hin elektrisch neutral. Denn zu jedem 
+
 Zeitpunkt haben die meisten Kupfer-Atome in der Elektronenhülle soviele Elektronen wie 
+
 Protonen im Kern, also jeweils 29 Stück. 
 
+
+
 Die freien Elektronen sind die Arbeitspferdchen der Elektronik. Denn wenn 2 Regionen, 
+
 zwischen denen elektrische Spannung herrscht, mit zB. einem Kupferdraht verbunden werden, 
+
 dann reagieren die freie Elektronen in diesem Kupferdraht extrem schnell. Von der negativ 
+
 geladenen Region werden die freien Elektronen weggedrückt und sie wandern daher in 
+
 Richtung positiv geladener Region, von der freie Elektronen angezogen werden. Auf diese 
+
 Weise wird der Spannungsunterschied zwischen der positiv und der negativ geladenen 
+
 Region ausgeglichen und es fließt elektrischer Strom. 
 
+
+
 Es kommt also zu einem Ausgleich der beiden elektrischen Potentiale. Die Region mit den 
+
 positiv geladenen Atomen zieht die sowieso gern vagabundierenden freien Elektronen des 
+
 Leiters an. Gleichzeitig wird es den Elektronen in der Region mit den negativ geladenen 
+
 Atomen zu eng, schließlich stoßen sich Elektronen ja gegenseitig ab. Auf dieser Seite 
+
 werden also freie Elektronen des Leiters "weggedrückt". Über den Leiter kommt es dann 
+
 irgendwann zum Ausgleich der Spannung. Am Schluß ist an beiden Enden dann das 
+
 Gleichgewicht zwischen positiven Protonen und negativen Elektronen wieder hergestellt.
 
+
+
 Dabei werden kolossale Mengen an Elektronen bewegt: wenn ein Strom mit  
+
 1 Ampere Stärke 1 Sekunde lang fließt dann bewegen sich 6,25 mal 10 hoch 18 Elektronen 
+
 (also 6,25 Milliarden Milliarden Elektronen). Das ist zB. der Fall wenn bei 
+
 220 Volt Spannung 2 Glühlampen mit jeweils 110 Watt 1 Sekunde lang eingeschaltet sind.
+
 Bei einem Gewitterblitz sind noch einige Elektronen mehr unterwegs; dort rechnet man 
+
 mit ca. 100 000 Ampere Stromstärke.
 
+
+
 Anzumerken ist, daß sich die freien Elektronen einzeln betrachtet in einem Leiter 
+
 relativ langsam bewegen (wenige Zentimeter pro Sekunde). Aber der Sog-Effekt bzw. 
+
 Druck-Effekt ist an den Enden des Leiters quasi sofort wirksam (man unterstellt ein 
+
 Zehntel der Lichtgeschwindigkeit, das wären also immerhin  30 000 Kilometer pro Sekunde). 
+
+
 
 kugeln.jpg
 
+
+
 Das ganze dürfte so ähnlich funktionieren wie das Experiment mit den direkt nebeneinander 
+
 aufgehängten Kugeln, bei denen die linke Kugel nach rechts angestoßen wird. Jede Kugel 
+
 bewegt sich minimal nach rechts. Aber der Stoß-Effekt kommt bei der rechten Kugel fast 
+
 sofort an und sie wird nach rechts weggedrückt.
 
+
+
 Je mehr freie Elektronen ein Stück Materie aufweist und je ungestörter sich diese freien 
+
 Elektronen zwischen den einzelnen Atomen bewegen können, desto besser ist die elektrische 
+
 Leitfähigkeit dieses Stoffes. Metalle haben dabei die meisten freien Elektronen pro 
+
 Kubikmeter und sind generell gute Leiter. Silber leitet am besten, ist aber teuer. 
+
 Kupfer leitet fast genau so gut, ist preiswerter und deswegen bestehen elektrische Kabel 
+
 meist aus Kupfer. 
 
+
+
 Materialien wie Plastik oder Glas haben wesentlich weniger freie Elektronen (Glas hat zB. 
+
 pro Kubikmeter ca. 8,5 mal 10 hoch 10 freie Elektronen). Wenn Plus und Minus einer 
+
 Spannungsquelle mit einem solchen Material verbunden werden, dann werden relativ wenige 
+
 freie Elektronen bewegt, sodaß fast kein Spannungsausgleich erfolgt. Diese Materialien 
+
 bezeichnet man dann als Isolatoren, dem freien Elektronenfluß setzen sie einen 
+
 hohen Widerstand entgegen. Isolatoren haben zwar auch freie Elektronen, aber elektrische 
+
 Leiter haben halt wesentlich mehr freie Elektronen. Silber zB. hat pro Kubikmeter 
+
 ca. 10 hoch 29 freie Elektronen, also ungefähr 10 hoch 18 (eine Milliarde Milliarde) mal 
+
 so viel wie Glas.   
 
+
+
 Auch die Temperatur eines Werkstoffes hat Auswirkung auf die Leitfähigkeit. Je wärmer 
+
 der Stoff ist, desto mehr schwingen die Atome dieses Stoffes hin und her. Das macht es 
+
 den freien Elektronen schwerer, sich zwischen den Atomen zu bewegen, da sie öfter mit 
+
 Atomen zusammenstoßen und dort in der Elektronenhülle hängenbleiben. Dadurch sinkt 
+
 die Leitfähigkeit.  
 
+
+
 Wenn elektrische Leiter (insbesondere Metalle) auf den absoluten Nullpunkt abgekühlt werden 
+
 (0 Grad Kelvin entspricht etwa -273 Grad Celsius) dann verhalten sich die Atome 
+
 mucksmäuschenstill und wackeln nicht mehr. Wenn an solch einen Leiter elektrische Spannung 
+
 angelegt wird, so können sich freie Elektronen tatsächlich vollkommen frei bewegen, der 
+
 Stromfluß wird durch keinen Widerstand gebremst und das ganze wird dann als Supraleiter 
+
 bezeichnet. Bei Raumtemperatur setzen auch gute Leiter wie zB. Kupfer dem Stromfluß einen 
+
 wenn auch kleinen, so doch meßbaren Widerstand entgegen. 
+
+
+
 
 
 4. Magnetische Felder: die spinnen, die Elektronen ...
 
+
+
 Bei magnetischen Feldern ziehen sich ungleichnamige Pole gegenseitig an, 
+
 gleichnamige Pole stoßen sich ab. Insofern läuft das ähnlich wie bei elektrischen Feldern, 
+
 nur heißen die Pole nicht Plus und Minus sondern Nordpol und Südpol. Im Gegensatz zu 
+
 elektrischen Feldern gibt es auch kein Ding, daß nur "nordpolige" oder nur "südpolige" 
+
 Kräfte ausübt. Wenn von einem Stück Materie magnetische Feldkräfte ausgehen, dann 
+
 läßt sich an diesem Stück Materie immer sowohl ein Nordpol als auch ein Südpol feststellen.   
 
+
+
 Wissenschaftler behaupten, daß Magnetismus letztendlich auf Elektronen zurückzuführen 
+
 ist. Danach bewegen sich Elektronen nicht nur vorwärts, sondern drehen sich dabei auch 
+
 noch um die eigene Achse (Eigendrehung = spin). Und dadurch wird jedes Elektron 
+
 quasi zu einem Mini-Magneten wird mit eigenem Nordpol und Südpol.
 
+
+
 Daran scheint etwas wahres zu sein, denn wenn durch einen Metalldraht ein elektrischer 
+
 Strom fließt, dann wird um diesen Draht herum ein meßbares Magnetfeld aufgebaut. Und 
+
 wenn der Strom nicht mehr fließt, dann ist die magnetische Wirkung wieder weg.  
 
+
+
 Jetzt gibt es natürlich auch Magneten, die magnetische Kräfte auch dann ausüben, wenn 
+
 kein elektrischer Strom durch sie fließt. Offensichtlich "spinnen" dort eine größere 
+
 Zahl von Elektronen immer in der gleichen Richtung, sodaß sich die magnetische 
+
 Wirkung aggregiert und ein dauerhaftes Magnetfeld entsteht. Den Trick, wie das 
+
 funktioniert, haben aber nur wenige Elemente herausgefunden (Eisen, Nickel und Kobalt, 
+
 die sogenannten ferromagnetische Stoffe) und einige Metall-Legierungen. Bei höheren 
+
 Temperaturen vergessen sie den Trick allerdings wieder; Eisen verliert bei 770 Grad 
+
 Celsius seine dauermagnetische Eigenschaft. 
+
+
+
 
 
 5. Gravitation:
 
+
+
 Neben den Kräften in elektrischen und magnetischen Feldern ist die Schwerkraft 
+
 (Gravitations-Feld) die dritte Kraft, die das Universum zusammenhält. 
 
+
+
 Und was hat Schwerkraft mit Elektronen zu tun ? Keine Ahnung, aber das gemeine Elektron 
+
 weist in der Tat eine Masse auf, genauer gesagt 0,9108 mal 10 hoch -27 Gramm. Das ist zwar 
+
 pro Elektron nicht viel, aber Kleinvieh macht auch Mist und Elektronen gibt es eine Menge. 
 
+
+
 Das positiv geladene Proton kommt übrigens auf eine Masse von 1,6724 mal 10 hoch -24 Gramm, 
+
 wiegt also mehr als 1000 mal soviel wie ein Elektron. Dem Proton wird auch eine räumliche 
+
 Ausdehnung zugemessen (0,8 mal 10 hoch -13 cm). Beim Elektron wird unterstellt, daß es 
+
 überhaupt keine räumliche Ausdehnung hat (infinitesimaler Punkt ?). 
+
+
+
 
 
 6. Elektron:  
 
+
+
 So, was sind jetzt diese Elektronen eigentlich ? Normalerweise werden sie ja als kleine 
+
 Kügelchen dargestellt, am besten noch mit einem schicken schwarzen Minus-Zeichen draufgemalt. 
+
+
 
 emil.jpg
 
+
+
 Wohl wahrscheinlicher ist, daß Elektronen wie auch die anderen Elementarteilchen und damit 
+
 die gesamte Materie dieses Universums verdichtete elektro-magnetische Felder darstellen, 
+
 also Räume konzentrierter Energie. 
 
+
+
 So richtig konkret ist von Elektronen also nur bekannt, daß sie eine negative Ladung haben, 
+
 wie groß diese Ladung ist, daß Elektronen etwas wiegen und daß sie sich permant schnell 
+
 auf konzentrischen Schalen um Atomkerne bewegen und sich dabei auch noch um die eigene 
+
 Achse drehen. 
+
+
+
 
 
 7. Spannungsquelle:  
 
+
+
 Um mit diesen Elektronen etwas praktisches zu machen, braucht man zuerst mal eine 
+
 Spannungsquelle mit Plus und Minus. Um eine solche elektrische Energie zu erzeugen, 
+
 muß bei Atomen das natürliche Gleichgewicht zwischen Elektronen und Protonen zerstört 
+
 werden, um ihnen Elektronen wegzunehmen. Dazu ist generell Energie zu investieren. 
 
+
+
 Einige wenige Elektronen erhält man durch ordinäres Rubbeln, indem ein Stück Tuch 
+
 lange genug mit einen Gegenstand zB. aus Plastik reibt. Dann reißt das Plastikmaterial 
+
 Elektronen aus dem Tuchgewebe und wird elektrisch negativ geladen. Mit diesem 
+
 aufgeladenen Stück Plastik lassen sich dann leichte Stoffe wie Federn oder Watte 
+
 anziehen. Influenz heißt dieses Phänomen, bei dem die Elektronen des Plastiks die Elektronen 
+
 der Watte wegdrücken, in der Watte Bereiche überwiegend positiver Ladung entstehen, die dann 
+
 von dem überwiegend negativ geladenen Plastik angezogen werden. Es ist überliefert, daß 
+
 die alten Griechen diesen Effekt schon kannten, wenn sie auch keine Erklärung dafür hatten. 
+
 Allerdings benutzten sie zum Rubbeln kein Plastik, sondern Bernstein. "Elektron" ist 
+
 übrigens das griechische Wort für "Bernstein".
 
+
+
 Batterien oder Akkus lassen sich als Spannungsquelle schon besser benutzen. Dort wird 
+
 chemische Energie in elektrische Energie umgesetzt. 
 
+
+
 Ansonsten hat es lange gedauert, bis man einen Weg fand, Elektrizität im größeren 
+
 Umfang zu generieren. Als Königsweg stellt sich der Zusammenhang zwischen freien 
+
 Elektronen und Magnetismus heraus. Ein Herr namens Oersted konnte 1819 nachweisen, daß ein 
+
 stromdurchflossener Leiter ein Magnetfeld um sich herum aufbaut. An der Umkehrung dieses 
+
 Prinzips wurde dann lange gebastelt, um also einen Leiter in das Magnetfeld eines 
+
 Dauermagneten zu bringen und den freien Elektronen des Leiters Beine zu machen und 
+
 dadurch elektrischen Strom zu erzeugen.
 
+
+
 Ein Herr namens Faraday konnte 1831 den notwendigen Trick zeigen: daß Strom nur 
+
 erzeugt wird, wenn der Leiter im Magnetfeld bewegt wird, und das auch nur, wenn er in 
+
 der richtigen Richtung bewegt wird. Dieses Prinzip dann im industriellen Maßstab 
+
 umzusetzen dauerte auch eine Weile. Der Duchbruch kam wohl mit der Erfindung der 
+
 Dynamomaschine, das war 1866 und der Erfinder war ein Herr Namens Werner von Siemens. 
+
 Dabei wird ein aufgewickelter Leiter (Spule) in einem Dauermagneten gedreht und 
+
 Wechselspannung erzeugt. Dieses Prinzip wird beim Fahrrad-Dynamo genauso genutzt wie 
+
 im Turbinen-getriebenen Generator eines Kraftwerks. Durch Gleichrichten der 
+
 Wechselspannung erhält man dann eine Spannungsquelle mit gleichbleibendem 
+
 Plus-Pol und Minus-Pol.
+
+
+
 
 
 8. Elektronenröhre:  Elektronen bei 700 Grad Celsius 
 
 
+
+
+
 Im Laufe der Zeit haben einige begnadete Tüftler mit Elektrizität die tollsten Sachen 
+
 ausprobiert. Edison kam auf die Idee mit der Glühlampe, also ein Glaskolben mit 
+
 eingeschmolzenem, elektrisch beheiztem Glühfaden, der zwar überwiegend Wärme aber 
+
 auch Licht abstrahlt. Er probierte mal aus, in diese Glühlampe auch oben noch einen 
+
 metallischen Anschluß einzuschmelzen. 
 
+
+
    
+
     |
+
    ---   + Anode
+
     .
+
     .
+
     .
+
    ... 
+
    ... 
+
    ---   - Katode   (Glühfaden)
+
     |
+
+
+
 
 
 edison.jpg
 
+
+
 Als der Glühfaden der Glühlampe dann aufgeheizt war und er an die obere Elektrode 
+
 eine positive Spannung anlegte, konnte er dort einen elektrischen Stromfluß messen.
+
 Wenn er dort aber eine negative Spannung anlegte, dann floß kein Strom. Erst andere 
+
 fanden heraus, daß dieser "Edison-Effekt" zum Gleichrichten von Wechselstrom 
+
 genutzt werden konnte. Es war das Prinzip der Diode.
 
+
+
 Dabei kommt letztendlich der Effekt zum Tragen, daß Atome bei steigender Temperatur 
+
 zusehends kinetische Energie gewinnen. Die Atome wackeln immer schneller bis es einigen 
+
 Elektronen der äußersten Schale zu doof wird und sie aus der Elktronenhülle des Atoms 
+
 abhauen. Wenn sie dann in ein elektrisches Feld geraten, wo sie von positiven 
+
 elektrischen Kräften angezogen werden, dann bewegen sie sich dort hin und es fließt Strom. 
+
 Wenn die obere Elektrode aber negativ geladen ist, dann werden die rausgeschleuderten 
+
 Elektronen von dort abgestoßen und bleiben als Elektronenwolke in der Nähe des Glühfadens. 
 
+
+
 Das ist das Prinzip der Elektronenröhre, die in stark modifizierte Form zB. 
+
 als Bildschirmröhre nach wie vor im Einsatz ist. Aber noch interessanter als die Diode 
+
 wurde die Elektronenröhre, als die Tüftler mitten zwischen oberer und unterer 
+
 Elektrode auch noch ein Metallgitter einschmolzen. Damit war die Triode erfunden.     
 
 
 
+
+
+
+
     |
+
    ---   + Anode
+
     .
+
     .
+
    ---     Gitter
+
     .
+
     .
+
    ... 
+
    ---   - Katode   
+
     |
+
+
 
 Triode.jpg
 
 
+
+
+
 Mit der am Gitter angelegten Spannung ließ sich der Strom zwischen Anode und Katode 
+
 auch steuern. Dabei reichten auch kleine Ströme am Gitter aus, um vergleichsweise große 
+
 Ströme zwischen Katode und Anode fließen zu lassen: der Verstärker war entdeckt.  
+
+
+
 
 
 9. Halbleiter:  gestörte Kristalle ...
 
+
+
 Aber wie es so kommt, das Bessere ist der Feind des Guten. Und das Bessere waren in 
+
 diesem Fall Halbleiter-Bauelemente. 
 
+
+
 Halbleiter wie Silizium und Germanium leiten bei 20 Grad Celsius sehr schlecht. 
+
 Beide haben 4 Elektronen auf der äußersten Elektronenschale und die 
+
 sind fest in die Elektronenhülle eingebunden. Dies ist insbesondere dann der 
+
 Fall, wenn die Atome in einem Kristallgitter angeordnet sind und sich benachbarte 
+
 Atome Elektronen auf der äußersten Schale teilen. Die äußerste Elektronenschale ist dann 
+
 voll mit Elektronen besetzt und es gibt in dem Kristall dann so wenige freie Elektronen, 
+
 daß das Halbleiterkristall als Isolator wirkt.  
+
  
+
 Jetzt fanden einige Tüftler aber heraus, daß sich das grundlegend ändert, wenn zB. dem  
+
 Silizium-Kristall einige Fremdatome hinzugefügt werden, die dann auch in das 
+
 Kristallgitter eingebunden sind. Wenn Atome mit 5 Valenz-Elektronen hinzugefügt werden 
+
 (zB. Antimon), dann ist jeweils ein Elektron mehr im Gitter, als für ein stabiles 
+
 Kristall gebraucht werden. Dieses überschüssige Elektron wirkt wie ein freies Elektron. 
+
 Die elektrische Leitfähigkeit des Halbleiters wird dadurch stark erhöht, das Kristall 
+
 wird sozusagen zum "Ganzleiter". Wenn andererseits Atome mit nur 3 Valenz-Elektronen 
+
 dem Silizium-Kristall hinzugefügt werden (zB. Indium), dann fehlt dem Kristallgitter 
+
 pro Fremdatom jeweils ein Elektron (Defekt-Elektron), um stabil zu sein. Das 
+
 normalerweise recht träge Silizium-Kristall bekommt dann Appetit auf zusätzliche Elektronen.
+
+
+
 
 
 halbleiter.jpg
 
 
+
+
+
    + + + +   ..    - - - - 
+
       
+
       p      pn       n  
 
 
+
+
+
 Dieses Hinzufügen (Dotieren) vom Fremdatomen läßt sich auch so durchführen, daß ein Teil 
+
 des Kristalls viele freie Elektronen hat (Negativ-Schicht bzw. n-Schicht) und in einem 
+
 anderen Teil des Kristalls viele Elektronen fehlen (Positiv-Schicht bzw. p-Schicht). An 
+
 der Übergangsstelle zwischen p und n kommt es dann zu einem Ausgleich zwischen zu viel 
+
 und zu wenig Elektronen. In dieser Übergangsstelle gleichen sich die elektrischen 
+
 Anziehungskräfte dann aus, die Übergangsstelle wird elektrisch stabil und wirkt wie 
+
 ein Isolator. In der n-Schicht sind dann zwar immer noch zu viele Elektronen und in der 
+
 p-Schicht immer noch zu wenige Elektronen. Aber die von ihnen verursachten 
+
 elektrischen Feldkräfte schaffen es nicht, über die isolierende Übergangsstelle hinweg 
+
 zu wirken.
 
+
+
 Das ändert sich erst, wenn bei einem solcherart präparierten Silizium-Kristall an die 
+
 n-Schicht eine negative Spannung angelegt wird und an die p-Schicht eine positive Spannung 
+
 angelegt wird. Dann "drücken" nicht nur die freien Elektronen der n-Schicht, sondern es 
+
 kommen auch noch die freien Elektronen von der Spannungsquelle dazu. Die isolierende 
+
 Übergangsschicht wird dadurch kleiner und ab einer bestimmten Spannung (ca. 0,7 Volt) gibt 
+
 es gar keine isolierende Zwischenschicht mehr. Dann leitet das Siliziumkristall wie ein 
+
 ganz normaler Leiter. Es ist dann in Durchlaßrichtung geschaltet.  
 
+
+
 Der umgekehrte Fall tritt ein, wenn p- und n-Schicht umgekehrt gepolt werden, also Plus der 
+
 Spannungsquelle an n-Schicht und Minus der Spannungsquelle an p-Schicht. Dann werden von 
+
 der n-Schicht erst mal freie Elektronen abgesaugt, die freien Elektronen in der n-Schicht 
+
 nehmen ab. Die p-Schicht bekommt von Minus frische Elektronen und kann damit Defekt-Elektronen 
+
 ausgleichen. Sowohl n-Schicht und p-Schicht werden also zusehends elektrisch stabiler und 
+
 letztendlich wird der isolierende Übergang nicht kleiner sondern wesentlich größer. Bei 
+
 dieser Schaltung sperrt das Silizium-Kristall. Abgesehen von kurzfristigen, minimalen 
+
 Strömen zu Beginn erfolgt also kein Stromfluß.    
 
+
+
 Ein solcherart präparierter  Halbleiter ist eine Diode, die gegenüber der 
+
 Elektronenröhre-Diode große Vorteile hat (man muß zB. die Katode nicht auf 
+
 ca. 700 Grad Celsius aufheizen) und relativ wenig Nachteile (die Elektronenröhre schaltet 
+
 schneller, was aber nur bei Anwendungen im Giga-Hertz-Bereich relevant ist). 
 
+
+
 Bei so vielen Vorteilen mußte natürlich aussprobiert werden, ob auch die Triode zum 
+
 Verstärken von Strömen mit Halbleiterkristallen realisiert werden kann. Und das 
+
 kann der Transistor. 
 
+
+
 Bei Einsatz von Silizium werden dabei 3 Schichten aufgebaut, die jweiles eigene Namen 
+
 bekamen: Collector, Basis und Emitter (zu Deutsch wohl: Sammler, Basis und Aussender).   
+
+
+
 
 
 transistor.jpg
 
+
+
   - - - -   .   + + +   .    - - - - 
+
       
+
     n       np    p      pn       n  
 
+
+
     C             B               E
+
  Collector      Basis          Emitter   
+
  
 
+
+
 Dadurch entstehen 2 pn-Übergänge. Wenn die Basis nicht geschaltet ist (an B ist dann 
+
 überhaupt keine Spannung), an Collector eine positive Spannung angelegt wird und an 
+
 Emitter eine negative Spannung, dann fließt durch den Transistor kein Strom. Der 
+
 pn-Übergang zwischen Collector und Basis wirkt als Isolator und sperrt. Der 
+
 Bereich zwischen Collector und Basis wirkt letztendlich wie eine Halbleiter-Diode, die 
+
 so geschaltet ist, daß sie den Stromfluß sperrt.
 
+
+
 Wenn jetzt an Basis eine positive Spannung angelegt wird, dann wird der pn-Übergang 
+
 zwischen Basis und Emitter überwunden. Das funktioniert so, als wenn auch der Abschnitt 
+
 Basis - Emitter eine Halbleiter-Diode sei. Es strömen vom Emitter her viele freie 
+
 Elektronen in Richtung Basis. Die Basis ist recht klein dimensioniert und wird von 
+
 freien Elektronen so sehr überschwemmt, daß die freien Elektronen in den Einflußbereich 
+
 der positiven Spannung am Collector kommen. Und dann gibt es kein Halten mehr, dann 
+
 wird auch der np-Übergang zwischen Collector und Basis überwunden mit dem Ergebnis, daß 
+
 durch den Transistor Strom fließt. 
 
+
+
 Und genau wie bei der Elektronenröhren-Triode reicht ein relativ kleiner Stromfluß 
+
 zwischen Basis und Emitter, um einen wesentlich größeren Strom zwischen Collector und 
+
 Emitter fließen zu lassen. Der Transistor kann also als Verstärker genutzt werden.
 
+
+
 Der Vollständigkeit halber sei noch erwähnt, daß Halbleiter von sich aus (ohne Dotierung 
+
 mit Fremdatomen) auch etwas Strom leiten können. Und zwar sinkt der Widerstand, wenn sie 
+
 erwärmt werden (damit verhalten sich Halbleiter genau umgekehrt wie Metalle). Je mehr 
+
 die Atome zB. eines Siliziumkristalls erwärmt werden, desto mehr schwingen diese Atome. 
+
 Reines Silizium hat keine bzw. relativ wenige freie Elektronen, die durch das heftigere 
+
 Wackeln der Atome in ihrer Bewegungsfreiheit gestört werden. Dafür wird aber bei der 
+
 heftigeren Bewegung der Atome der Zusammenhalt zwischen Protonen des Kerns und 
+
 Valenz-Elektronen gelockert, einige Valenz-Elektronen wirken wie freie Elektronen und 
+
 es fließt ein schwacher elektrischer Strom. 
+
+
+
 
 
 10. Quanten-Effekt:  die springen, die Elektronen ...
 
+
+
 Was Elektronen angeht, gibt es noch den Quanten-Effekt, der sich insbesondere 
+
 auf den Aufenthalt von Elektronen auf den Schalen bezieht. Gemäß diesem Modell sind 
+
 Elektronen in der Lage, ihre momentane Schale zu verlassen und sich in einer höheren 
+
 bzw. äußeren Schale zu bewegen, wenn ihnen von außen Energie zugeführt wird 
+
 (zB. Wärmeenergie oder Lichtenergie). 
 
+
+
 Dies wird zB. genutzt, um Elektrizität aus Lichtenergie (Sonnenenergie) zu genenerieren. 
+
 Wenn Elektronen auf äußere Schalen springen, dann läßt die Bindung zum Atomkern nach 
+
 und das Elektron neigt eher zu Vagabundieren. Solarzellen nutzen diesen sogenannten  
+
 foto-elektrischen Effekt.
 
+
+
 Die zuvor durch Energiezuführung angeregten Elektronen haben allerdings das Bestreben, auf 
+
 ihre alte Schale wieder zurückzukehren und die vorher aufgenommene Energie dabei abzugeben 
+
 (zB. Lichtenergie). Dieser Effekt wird in LED's genutzt (light emitting diode). Die 
+
 Wellenlänge des abgestrahlten Lichts bestimmt dann seine Farbe; eine Wellenlänge von 660 
+
 NanoMetern (660 Milliardstel Metern ) ergibt zB. rotes Licht.
+
+
+
 
 
 11. Kondensator:   speichert Elektronen ...
 
+
+
 Ein oft genutzter elektronischer Baustein ist der Kondensator. Im einfachsten Fall 
+
 besteht so ein Teil aus zwei Platten aus leitfähigem Material (Platte 1 und Platte 2), 
+
 die durch einen schmalen Luftspalt getrennt sind. Zwischen den Platten ist der 
+
 Stromkreis also unterbrochen.
+
+
 
 	kondensator.jpg
 
+
+
           |  |
+
           |  |
+
        ---|  |---
+
           |  |
+
           |  |
+
+
 
           1  2
 
 
+
+
+
 Solange der Kondensator nicht mit einer Spannungsquelle verbunden ist, sind auf 
+
 Platte 1 und Platte 2 des Kondensators die Atome hinsichtlich der elektrischen 
+
 Kräfte insgesamt ausgeglichen. Die Zahl der Elektronen und Protonen sind gleich, 
+
 nach außen wirken keine elektrischen Kräfte. 
+
+
 
 Das ändert sich, wenn die beiden Platten mit einer Spannungsquelle verbunden werden. 
 
+
+
           a     
+
          ---       C
+
    (+) --   ------| |-- ---- (-) 
+
                   1 2
+
+
 
 In obiger Schaltung steht a für einen Schalter, der zuerst offen ist und C ist der 
+
 Kondensator, der zwischen Plus und Minus der Spannungsquelle geschaltet ist.  Was 
+
 passiert nun, wenn Schalter a geschlossen wird ? 
 
+
+
           a     
+
                    C
+
    (+) -----------| |-- ---- (-) 
+
                   1 2
+
+
+
 
 
 Am Plus-Pol der Spannungsquelle fehlen Elektronen und dort werden freie Elektronen 
+
 "angesaugt". Diese Kraft ist größer als die Kraft der Kondensator-Atome, ihre 
+
 Elektronen alle zu behalten. Deshalb wandern Elektronen des Kondensators von der 
+
 Platte 1 in Richtung Plus-Pol und es fließt ein elektrischer Strom. 
 
+
+
 Je mehr Elektronen zum Plus-Pol fließen, desto mehr Protonen sind auf 
+
 Kondensatorplatte 1 zu viel und desto stärker werden die aggregierten Anziehungskräfte  
+
 dieser Teile. Irgendwann gibt Kondensatorplatte 1 keine Elektronen mehr her, weil die 
+
 Anziehungskräfte der Protonen genauso groß sind wie die Saugkräfte des Pluspols. 
+
 Dann fließt kein elektrischer Strom mehr zwischen Plus-Pol und Kondensatorplatte 1. 
 
+
+
 Ergebnis dieser Bemühung ist also ein mehr oder weniger kurzfristiger Stromfluß. 
+
 Und danach ist die mit dem Plus-Pol verbundene Kondensatorplatte 1 selbst positiv geladen. 
+
 Denn sie hat ja Elektronen an den Plus-Pol abgegeben und die Atome der Kondensatorplatte 1
+
 haben deshalb mehr Protonen als Elektronen. 
 
+
+
 Da die Kondensatorplatten einander eng gegenüberstehen, üben die mehrheitlich positiven 
+
 Ladungen der Platte 1 elektrische Kräfte auf die Platte 2 aus. Und zwar werden 
+
 dort negative Ladungen angezogen. Diese Kräfte stören das ursprüngliche Gleichgewicht der 
+
 Kondensatorplatte 2 und die Atome der Platte 2 sind eher bereit, Elektronen aufzunehmen. 
+
 Darüber freuen sich die Elektronen am Minus-Pol der Spannungsquelle, die sich dort 
+
 eh auf die Füße treten. Ein Teil dieser Elektronen wandert also in Richtung 
+
 Kondensatorplatte 2, die sich dadurch negativ auflädt.
 
+
+
 Der Kondensator ist damit in der Lage, elektrische Ladungen (und damit elektrische Energie) 
+
 zu speichern. Die Spannung zwischen den Kondensatorplatten ist nach erfolgtem Aufladen genau 
+
 so groß wie die Spannung der Spannungsquelle zwischen Plus und Minus.
 
+
+
 Diese Energie kann dann genutzt werden, indem zB. die Platten des 
+
 Kondensators direkt miteinander über einen elektrischen Leiter verbunden werden. 
+
 Dann sorgen die freien Elektronen des Leiters dafür, daß die überschüssigen 
+
 Elektronen der Kondensatorplatte 2 abgegeben werden und die Kondensatorplatte 1 wieder 
+
 soviel Elektronen erhält, daß auch ihre Atome wieder im elektrischen Gleichgewicht sind.
+
 Es fließt also wieder kurzfristig Strom.
+
+
+
+
 
 
 
 12. Spule:  viel Leiter auf engem Raum ...
 
+
+
 Auch mit Spulen haben sich die Tüftler intensivst beschäftigt. Dabei wird der 
+
 Effekt genutzt, daß um einen stromdurchflossenen Leiter ein Magnetfeld aufgebaut wird. 
+
 Dieser Effekt wird durch eine zB. spiralförmige Aufwicklung des Leiters verstärkt. 
+
 Und wenn in eine solche Spule auch noch ein Stück ferromagnetisches Material 
+
 gesteckt wird (zB. ein Eisenkern), dann wird der magnetische Effekt um ein Vielfaches 
+
 erhöht. Wenn dieser Elektromagnet dann geschickt mit den Magnetfeldern von 
+
 Permanentmagneten kombiniert wird oder auch von anderer Elektromagneten, dann dreht sich 
+
 etwas und kann andere Sachen antreiben (Elektromotoren). Oder es bewegt sich etwas 
+
 hin und her und läßt zB. einen Membrane vibrieren und erzeugt Tonwellen (Lautsprecher).
+
 Oder es wird ein mechanischer Schalter bewegt, der zu einem anderen Stromkreis gehört, 
+
 in dem wesentlich höhere Spannungen und Ströme herrschen (Relais).
 
+
+
 Mit hochfrequenter Wechselspannung und Spulen lassen sich auch elektro-magnetische Wellen 
+
 erzeugen und damit analoge und digitale Informationen drahtlos übertragen. Aber das 
+
 ist eine andere Baustelle, der folgende Text bezieht sich ausschließlich auf 
+
 Gleichspannungsquellen.
+
+
+
 
 
 13. physikalische Größen und Gesetze:  Ladung, Stromstärke, Spannung, Widerstand
 
+
+
 OK, jetzt kennen wir die Geschichte mit den freien Elektronen und das war ja 
+
 auch ganz interessant. Aber das nützt relativ wenig, um mit einem Mikrocontroller 
+
 zB. den aktuellen Wert eines Temperatursensors zu verarbeiten. Deshalb jetzt erst mal 
+
 einiges zu physikalischen Größen und Gesetzen. 
 
+
+
 Nachdem sich viele schlaue Leute seit mehr als 200 Jahren mit dem Phänomen "Elektronik" 
+
 beschäftigt haben, ist klar, daß sie daraus eine Wissenschaft gemacht haben.
+
 Zum Glück ist es so, daß sich Elektronen nicht nach Menschen richten, sondern ihre eigenen 
+
 Spielregeln haben. Diese Gesetze können nur entdeckt werden aber nicht erweitert werden  
+
 (sonst hätten wird bald das Äquivalent zu Steuergesetzen und -bestimmungen, also 
+
 administrative Krebsgeschwüre).
+
+
 
 13.1  physikalische Größen:
 
+
+
 An physikalischen Größen interessiert zuerst einmal Ladung, Stromstärke, Spannung,  
+
 Widerstand und Energie. Diesen Größen ist jeweils ein Zeichen zugeordnet, mit dem sie in 
+
 Formeln angesprochen werden. Und sie werden gemessen in Maßeinheiten, deren Namen 
+
 üblicherweise dem Namen eines Herrn entsprechen, der sich mit dieser Größe 
+
 intensiv beschäftigt hat und interessantes herausgefunden hat. 
 
+
+
 Die physikalische Größe "elektrische Ladung" wird in Formeln mit "Q" bezeichnet und wird 
+
 gemessen in Coulomb (abgekürzt: C). 1 C entspricht der Ladung von  6,25 mal 10 hoch 18 
+
 Elektronen (also 6,25 Milliarden Milliarden Elektronen). 
 
+
+
 Die physikalische Größe "Stromstärke" wird in Formeln mit "I" bezeichnet und wird gemessen 
+
 in Ampere (abgekürzt: A). Das ganze ist im Endeffekt so dimensioniert, daß 
+
 6,25 Milliarden Milliarden Elektronen bewegt werden, wenn ein Strom mit der Stärke 1 A eine 
+
 Sekunde lang fließt. Und da dies der Definition des Coulomb entspricht, gilt ex 
+
 definitione, daß ein Coulomb einer Ampere-Sekunde entspricht.
+
+
 
   1 C = 1 A * 1 s
 
+
+
 Die physikalische Größe "elektrische Spannung" wird in Formeln mit "U" bezeichnet und 
+
 wird gemessen in Volt (abgekürzt: V). 
 
+
+
 Wie groß die Spannung ist, hängt davon ab, wieviel Ladungsträger in der Spannungsquelle 
+
 voneinander getrennt wurden und wieviel Arbeit bzw. Energie zur Ladungstrennung 
+
 nötig war.  
 
+
+
 1 V = 1 J  / 1 C 
+
     = 1 Nm / 1 C
+
+
 
 Bei obigen Formeln steht J für Joule und N für Newton und m für Meter.
 
 
+
+
+
 Die physikalische Größe "elektrischer Widerstand" wird in Formeln mit "R" bezeichnet 
+
 und wird gemessen in Ohm (abgekürzt: _O_ (Omega soll das sein)). 
 
+
+
 1 Ohm bedeutet, daß an diesen Widerstand eine Spannung von 1 Volt angelegt werden muß, 
+
 damit ein Strom vom 1 A fließen kann. 
 
+
+
 Die physikalische Größe "Arbeit bzw. Energie" wird in Formeln mit "W" bezeichnet 
+
 und wird gemessen in Joule (abgekürzt: J), gleichbedeutend mit Wattsekunde (Ws). 
 
+
+
 Übrigens, ein Mensch verbraucht am Tag Nahrungsmittel mit dem Energiegehalt von 
+
 ca. 2000 Kilokalorien und verbraucht damit soviel Energie wie eine ordinäre 
+
 100 Watt-Birne in 24 Stunden. 1 Kalorie entspricht 4,18 Joule, damit sind 2000 Kilokalorien 
+
 äquivalent zu ungefähr 2,4 Kilowattstunden.  
 
+
+
 Die physikalische Größe "Leistung" wird in Formeln mit "P" bezeichnet 
+
 und wird gemessen in Watt (abgekürzt: W). 
 
+
+
 Dabei ist Leistung Arbeit pro Zeit:  P = W / t
+
 Und elektrische Leistung ist Stromstärke mal Spannung:  P = U * I
 
+
+
 Die Leistung 1 W wird also erbracht, wenn bei einer Spannung von 1 V ein 
+
 Strom von 1 A fließt.
 
+
+
 Die Größen Stromstärke, Spannung und Widerstand lassen sich direkt mit Hilfe eines 
+
 Multimeters messen (siehe Anhang). 
+
+
+
 
 
 13.2  physikalische Gesetze:
 
+
+
 Ein fundamentales Gesetz ist in diesem Zusammenhang das Ohmsche Gesetz:
+
+
 
      U = R * I
 
+
+
 Dabei bezeichnet U die Spannung, die an einem stromdurchflossenen Leiter abfällt, 
+
 R der elektrische Widerstand dieses Leiters und I die Stärke des elektrischen Stroms. 
 
+
+
 Bei folgender Schaltung ist ein einziger Widerstand R zwischen Plus und Minus der 
+
 Spannungsquelle geschaltet.
 
+
+
          +--------+     
+
 (+) -----|   R    |----- (-)
+
          +--------+     
+
+
 
 Wenn also zwischen (+) und (-) eine Spannung von +5 Volt herrscht und ein 
+
 Strom von 0,050 Ampere fließt, so ist der Widerstand des Leiters 
 
+
+
      R = U / I 
+
        = 5 / 0,050 
+
        = 5 / 5 * 100 
+
        = 100 Ohm  
 
+
+
 Daraus kann man folgern, daß der Strom eine Stärke von 0,1 Ampere hätte, wenn der 
+
 Widerstand nur 50 Ohm groß wäre. 
 
+
+
      I = U / R
+
        = 5 / 50
+
        = 0,1 Ampere
 
+
+
 Wenn zwei der drei Größen bekannt oder vorgegeben sind, läßt sich also die dritte 
+
 Größe errechnen. Das ganze ist echt praktisch und ich kann mir gut vorstellen, wie sich 
+
 der alte Ohm gefreut hat, als er 1826 diese Entdeckung machte.  
 
 
+
+
+
 Jetzt lassen sich auch Schaltungen konstruieren, bei denen 2 Widerstände (bzw. 
+
 Verbraucher) in den Stromkreis geschaltet werden. Denkbar ist eine Parallelschaltung 
+
 oder eine Serienschaltung.
+
+
 
 Für jeden Widerstand x kann man das Ohmsche Gesetz einzeln anwenden Ux = Rx * Ix
 
+
+
 Dazu kommen aber noch 2 weitere Gesetze, die Herr Kirchhoff entdeckt hat:
 
+
+
 1) Parallelschaltung:  der Gesamtstrom Iges ist so groß wie die Summe der Teilströme.
+
 2) Serienschaltung:    die Gesamtspannung Uges ist so groß wie die Summe der Teilspannungen.
+
+
+
 
 
 Parallelschaltung:
 
+
+
          +--------+     
+
       +--|   R1   |--+
+
       +  +--------+  +   
+
 (+) --+              +--- (-)
+
       +  +--------+  +   
+
       +--|   R2   |--+
+
          +--------+     
+
+
+
 
 
    Iges   =  I1  + I2    (1. Kirchhoffsches Gesetz)
+
    Uges   =  U1 = U2		
+
    1/Rges =  1/R1 + 1/R2
+
   
 
+
+
 Es gibt eine nette Erleichterung für die parallele Schaltung, wenn exakt 2 
+
 Widerstände involviert sind. Der Gesamt-Widerstand läßt sich dann auch berechnen nach der 
+
 Formel:
+
+
 
     Rges = (R1 * R2) / (R1 + R2) 
 
 
 
+
+
+
+
 Serienschaltung:
 
-         +--------+        +--------+
-(+) -----|  R1    |--------|  R2    |---- (-)
+
+
          +--------+        +--------+
 
+(+) -----|  R1    |--------|  R2    |---- (-)
+
+         +--------+        +--------+
+
+
+
    Uges   =  U1 + U2    (2. Kirchhoffsches Gesetz)
+
    Rges   =  R1 + R2
+
    Iges   =  I1 = I2
 
 
+
+
+
 Werden mehr als 2 Verbraucher in einen Stromkreis geschaltet, so läßt sich dieser 
+
 sukzessive in kleine Happen zerlegen und berechnen.
 
 
+
+
+
          +--------+  +---------+   
+
       +--|   R1   |--|   R3    |--+      
+
       +  +--------+  +---------+  + 
+
 (+) --+                           +--- (-)
+
       +  +--------+               +   
+
       +--|   R2   |---------------+
+
          +--------+     
+
+
+
 
 
    U1.3   =  U1 + U3
+
    R1.3   =  R1 + R3
+
    I1.3   =  I1 = I3
 
+
+
 Es werden also zuerst die in Serie geschalteten Widerstände R1 und R3 kalkuliert. 
+
 Das Ergebnis ist ein fiktiver Widerstand R1.3, der zusammen mit R2 eine 
+
 Parallelschaltung ergibt.
 
+
+
          +--------+     
+
       +--|   R1.3 |--+
+
       +  +--------+  +   
+
 (+) --+              +--- (-)
+
       +  +--------+  +   
+
       +--|   R2   |--+
+
          +--------+     
+
+
+
 
 
    Iges   =  I1.3  + I2 
+
    Uges   =  U1.3 = U2		
+
    1/Rges =  1/R1.3 + 1/R2
 
 
+
+
+
 So kann man sukzessive auch komplexe Schaltungen durchrechnen. Ist möglicherweise etwas 
+
 mühsam, aber es geht.
 
+
+
 Und wozu braucht man diese Formeln jetzt konkret ? 
+
 Antwort: damit läßt sich zB. ein Vorwiderstand und ein Spannungsteiler berechnen. 
+
+
 
 Ein Vorwiderstand ist zB. in folgendem Fall nötig:  
 
+
+
   5V   (+) ------ R ----  LED ------ (-) 0V
+
    
 
+
+
 Eine rote LED (Light Emitting Diode) soll an an eine 5 Volt Spannungsquelle angeschlossen 
+
 werden. Von der LED ist bekannt, daß sie für 1,6 Volt ausgelegt ist und einen Strom in 
+
 der Stärke von 0,02 A durchläßt. Die darüber hinausgehenden 3,4 Volt müssen in einem 
+
 Vorwiderstand verbraucht werden, damit die LED nicht durchbrennt. 
+
+
 
 Dieser Vorwiderstand berechnet sich nach Ohmschen Gesetz mit 
 
+
+
    U = R * I
+
    R = U / I
+
 	   = 3,4 / 0,02
+
 	   = 3,4 * 100 / 2
+
 	   = 170 Ohm
 
+
+
 Wenn also ein Widerstand von 170 Ohm vor (bzw. nach) die LED geschaltet wird, dann 
+
 leuchtet die LED schön rot und sie brennt nicht durch.
 
+
+
 Ein Spannungsteiler ist üblicherwiese bei Sensoren nötig, deren Widerstand sich 
+
 abhängig von der zu messenden Größe ändert. Analog-Digital-Konverter werden normalerweise 
+
 nicht mit Widerstandswerten gefüttert, sondern mit Spannungswerten. Damit ist die 
+
 folgende Schaltung des Sensors recht nutzlos, wenn die am Sensor abgefallene Sapnnung 
+
 an den Punkten 1 und 2 abgegriffen bzw. gemessen wird. 
 
 
+
+
+
         1        2
+
   (+) --.-- S  --.-- (-)
 
 
+
+
+
 Es wird immer die volle Spannung gemessen, die zwischen (+) und (-) anliegt. 
+
 Dumm gelaufen. 
+
+
 
 Mit einem Spannungsteiler funktioniert das schon besser und das sieht dann so aus:
 
 
+
+
+
                  1        2
+
   (+) --- R -----.-- S  --.-- (-)
 
 
+
+
+
 Letztendlich wird wieder ein Vorwiderstand dazugeschaltet. Aber wenn jetzt der Widerstand 
+
 des Sensors sehr klein ist (weil der zu messende Wert sehr klein ist), dann fällt am 
+
 Sensor an den Meßpunkten 1 und 2 auch eine sehr kleine Spannung ab. Der größte Teil 
+
 der Versorgungsspannung fällt dann an dem Vorwiderstand ab. 
 
+
+
 Und wenn der Widerstand des Sensors groß ist (und damit der zu messende Wert), dann 
+
 fällt am Sensor an den Meßpunkten 1 und 2 auch eine große Spannung ab. Wenn der 
+
 Maximalwert des Sensor-Widerstands so groß ist wie der Vorwiderstand, dann ist die 
+
 zwischen 1 und 2 gemessene Spannung maximal die Hälfte der Versorgungsspannung.
 
+
+
 Dieserart läßt sich der am Sensor angefallene Meßwert indirekt über die an 1 und 2 
+
 abgegriffene Spannung messen. 
+
+
+
+
 
 
 
 14. elektronische Bauteile :
 
+
+
 An elektronischen Bauteilen zum Konstruieren von Schaltungen werden hier kurz 
+
 dargestellt Widerstand, Kondensator und Spule.
+
+
+
 
 
 14.1  Widerstände:
 
+
+
 Widerstände sind insbesondere durch folgende Eigenschaften gekennzeichnet:
 
+
+
   Nennwiderstand  (meist von 1 Ohm bis 1 Mega)
+
   Toleranz        (meist von +- 1 & bis +- 20%)
+
   Belastbarkeit   (meist 0,1 Watt oder 0,25 Watt oder 0,5 Watt oder 1 Watt)
+
   Belastbarkeit   (meist 0,25 Watt, möglich sind 0,05|0,1|0,25|0,5|1|2|3|6|10|20 Watt)
+
                                        
+
 Der elektrische Widerstand der meisten Widerstands-Bauteile wird durch einen 
+
 Farbcode angegeben, bei dem 4 Farbringe auf das Bauteil gemalt sind :
 
+
+
     1 2 3 4
+
   +-------------+
+
   | | | | |     |
+
   +-------------+ 
 
+
+
 Ring 1 und 2 geben die beisten ersten Ziffern des Widerstandswertes an.
+
 Ring 3 bezeichnet den Multiplikator, bezogen auf 1 Ohm.
+
 Ring 4 gibt die Toleranz an
+
 Als erster Ring gilt derjenige, der dem Ende des Widerstandskörpers am nächsten liegt.
+
+
 
 Farbe:       1.      2.            3.              4.
 
+
+
 keine        -       -             -           +- 20 % 
+
 silber       -       -             0,01        +- 10 %
+
 gold         -       -             0,1         +-  5 %
+
 schwarz      0       0             1           
 
+
+
 braun        1       1            10           +-  1 %
+
 rot          2       2           100           +-  2 % 
+
 orange       3       3          1000
 
+
+
 gelb         4       4        10.000 
+
 grün         5       5       100.000
+
 blau         6       6      1000.000
 
+
+
 violett      7       7    10.000.000 
+
 grau         8       8   100.000.000
+
 weiß         9       9  1000.000.000
 
 
+
+
+
 Beispiel:  Farbringe seien braun-schwarz-orange-silber 
+
 Nennwert ist 10 * 1000 Ohm, also 10 Kiloohm.
+
 Toleranz ist 10 %.
+
 Damit liegt der faktische Wert des Widerstands irgendwo zwischen 9 Kiloohm und 11 Kiloohm.
+
+
+
 
 
 14.2  Kondensator: 
 
+
+
 Charakteristisch für einen Kondensator ist seine Fähigkeit, elektrische Ladungen 
+
 zu speichern. Dies wird als "Kapazität" des Kondensators bezeichnet und gemessen in 
+
 Farad (was eigentlich eine Kurzform für "Faraday" ist).
 
+
+
 Kennwerte sind insbesondere
+
   Nennkapazität
+
   Toleranz
+
   Verlustfaktor
 
+
+
 Nennkapazität und Toleranz sind entweder auf dem Bauteil als Zahlen aufgedruckt 
+
 oder mit Farbringen angegeben. 
 
+
+
     1 2 3 4 5
+
   +--------------+
+
   | | | | | |    |
+
   +--------------+ 
 
+
+
 Ring 1 und 2 geben die beisten ersten Ziffern des Widerstandswertes an.
+
 Ring 3 bezeichnet den Multiplikator, bezogen auf 1 picoFarad.
+
 Ring 4 gibt die Toleranz an
+
 Ring 5 gibt die Nennspannung an.
+
 Als erster Ring gilt derjenige, der dem Ende des Kondensatorkörpers am nächsten liegt.
+
+
 
 Farbe:       1.      2.            3.              4.          5.
 
+
+
 keine        -       -             -           +- 20 %      5000 V
+
 silber       -       -             0,01        +- 10 %      2000 V
+
 gold         -       -             0,1         +-  5 %      1000 V
+
 schwarz      0       0             1           
 
+
+
 braun        1       1            10           +-  1 %       100 V
+
 rot          2       2           100           +-  2 %       200 V
+
 orange       3       3          1000                         300 V
 
+
+
 gelb         4       4        10.000                         400 V 
+
 grün         5       5       100.000                         500 V
+
 blau         6       6      1000.000                         600 V
 
+
+
 violett      7       7    10.000.000                         700 V
+
 grau         8       8   100.000.000                         800 V
+
 weiß         9       9  1000.000.000                         900 V 
 
 
+
+
+
 Beispiel:  Farbringe seien braun-schwarz-orange-silber-braun 
+
 Nennwert ist 10 * 1000 pF, also 10 nF (nanoFarad)
+
 Toleranz ist 10 %.
+
 Damit liegt der faktische Wert des Kondensators irgendwo zwischen 9 nF und 11 nF.
+
 Nennspannung ist maximal 100 Volt.
+
+
+
+
 
 
 
 Auch Kondensatoren lassen sich parallel und in Serie schalten. 
 
+
+
 Parallelschaltung:
 
+
+
       +--|C1|--+
+
 (+) --+        +--- (-)
+
       +--|C2|--+
+
+
 
    Cges   =  C1 + C2
 
 
+
+
+
 Serienschaltung:
 
+
+
 (+) ----|C1|-----|C2|---- (-)
+
+
+
 
 
    1/Cges =  1/C1 + 1/C2    bzw. für nur 2 Kondensatoren:    Cges = (C1 * C2) / (C1 + C2) 
 
 
+
+
+
 Wird der Kondensator mit einer Gleichspannungsquelle verbunden, so lädt er sich in 
+
 meist kurzer Zeit auf und hat dann an den Platten die gleiche Spannung wie die der 
+
 Spannungsquelle. Bei gleichbleibender Spannungsversorgung ändert sich bei dem Kondensator 
+
 danach nichts mehr. Wenn es allerdings bei der Versorgungsspannung zu kleinen Schwankungen 
+
 kommt, dann werden die auf dem Kondensator gespeicherten Ladungen aktiv. Wenn zB. die 
+
 Versorgungsspannung kurzfristig schwächelt und weniger Elektronen in den Stromkreis 
+
 drückt, dann wird der Kondensator Elektronen in den Stromkreis abgeben und dadurch 
+
 kurzfristig den Spannungsabfall ausgleichen. 
 
+
+
 In folgender Schaltung ist also an Punkt A immer + 5 V, auch wenn es an (+) manchmal 
+
 zu kleinen und kurzfristigen Schwankungen nach oben und unten kommt. Das setzt natürlich 
+
 voraus, daß der Kondensator C richtig dimensioniert ist. 
 
 
+
+
+
    (+) -----+------ A 
+
            --- 
+
            --- 
+
    (-) -----+------ B 
 
 
+
+
+
  
+
 	+5 V         0 V
+
    (+)         (-)
+
     :           :
+
     :           :
+
     :---| C |---:  
+
     :           :
+
     :           :
+
     A           B
+
+
+
+
+
 
 
 
 
 14.3  Spule: 
 
+
+
 Charakteristisch für eine Spule ist ihre Induktivität. Diese wird in Formeln 
+
 bezeichnet mit L und gemessen in Henry (abgekürzt: H).
+
+
 
 Auch Spulen lassen sich parallel und in Serie schalten:
 
+
+
 Parallelschaltung:
 
+
+
       +--|L1|--+
+
 (+) --+        +--- (-)
+
       +--|L2|--+
 
 
+
+
+
    1/Lges =  1/L1 + 1/L2    bzw. für nur 2 Spulen:    Lges = (L1 * L2) / (L1 + L2) 
+
   
+
+
 
 Serienschaltung:
 
+
+
 (+) ---|L1|--|L2|---- (-)
+
+
 
    Lg   =  L1 + L2
 
 
 
+
+
+
+
 14.4 Spannungsquellen:
+
+
 
 Auch Spannungsquellen lassen sich in Serie und parallel schalten.
 
+
+
 Serie:
 
+
+
          U1           U2           U3
+
          I1           I2           I3  
+
    A--(+) (-)------(+) (-)------(+) (-)--B 
 
+
+
 Damit läßt sich die zur Verfügung stehende Spannung vergrößern. Zwischen den Punkten 
+
 A und B liegt dann die Summe aller Einzelspannungen an, der Stromfluß ist bei allen 
+
 Spannungsquellen gleich:
+
 	
+
   Uges = U1 + U2 + U3
+
   Iges = I1 = I2 = I3
+
+
+
+
+
 
 
 
 
 Parallel:
 
+
+
          U1
+
          I1
+
    A--(+)  (-) 
+
        |    |
+
        | U2 |
+
        | I2 |
+
       (+)  (-) 
+
        |    |
+
        | U3 |
+
        | I3 |
+
       (+)  (-)--B 
 
+
+
 Hier sind ist die an A und B anliegende Spannung gleich den Teilspannungen. Falls die 
+
 Teilspannungen U1, U2 und U3 anfangs unterschiedlich sind, dann gleichen sie sich sofort aus. 
+
 Durch diese Schaltungsart wird die mögliche Stromstärke größer:
 
+
+
   Uges = U1 = U2 = U3
+
   Iges = I1 + I2 +I3
+
+
+
+
 
 
 
 15. Hier noch eine Umrechnungstabelle für Maßeinheiten: 
 
+
+
 1 pico    = 1 p  = 1 / 1000000000000  = 10 hoch -12
+
 1 nano    = 1 n  = 1 / 1000000000     = 10 hoch -9
+
 1 mikro   = 1 µ  = 1 / 1000000        = 10 hoch -6
+
 1 milli   = 1 m  = 1 / 1000           = 10 hoch -3
+
 1 kilo    = 1 K  = 1 * 1000           = 10 hoch  3
+
 1 mega    = 1 M  = 1 * 1000000        = 10 hoch  6
+
+
+
 
 
 16. Wie messen ?
 
+
+
 Spannung wird jeweils an 2 Punkten eines Stromkreises gemessen mit einem Voltmeter 
+
 (bzw. Multimeter in Volt-Stellung).
 
 
+
+
+
          +---(V)---+
+
          1         2
+
   (+)----.--  R  --.----(-)
 
 
 
+
+
+
+
 Stromstärke wird jeweils an einem Punkt eines Stromkreises gemessen mit einem Amperemeter 
+
 (bzw. Multimeter in Ampere-Stellung). Der usprüngliche Stromkreis muß aufgetrennt werden. 
+
+
+
 
 
   (+)----(A)--  R  ------(-)
 
 
+
+
+
 Der Widerstand eines Bauteils wird gemessen mit einem Ohmmeter (bzw. Multimeter in 
+
 Ohmstellung). Dabei darf das Bauteil nicht mit einer Spannungsquelle verbunden sein.
 
+
+
          +---(O)---+
+
          1         2
+
          .--  R  --.       
+
          
+
          
+
+
 
 17. Richtung des Stromflusses:  Macht der Gewohnheit ...
 
+
+
 Am Negativ-Pol einer Gleichspannungsquelle ist ein Überschuß an Elektronen und der 
+
 Plus-Pol ist durch einen Elektronenmangel gekennzeichnet. Werden Plus-Pol und Negativ-Pol 
+
 durch einen Leiter verbunden, fließen die überschüssigen Elektronen vom Negativ-Pol in 
+
 Richtung Plus-Pol.
 
+
+
         <-- physikalische Stromrichtung
+
   (+)---------------------- R -----------------------(-) 
+
+
+
 
 
 Als die Sache mit den Elektronen allerdings noch unbekannt war, gingen Wissenschaftler 
+
 und Techniker davon aus, daß der elektrische Strom von Plus-Pol zu Minus-Pol fließt. Und 
+
 diese Denkweise haben auch die Elektroniker der heutigen Tage übernommen. Wird in 
+
 Schaltplänen etc. die Stromrichtung angedeutet, dann wird die technische Stromrichtung 
+
 unterstellt:
 
 
+
+
+
             technische Stromrichtung -->
+
   (+)---------------------- R -----------------------(-) 
+
+
+
+
+
+
+
+
+
+
 
 
 
