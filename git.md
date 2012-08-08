@@ -255,6 +255,31 @@ Delete tag on remote (this hurts other developers and has therefore a ugly synta
 	
 	git push origin :refs/tags/old_tag 
 
+### Logs ###
+
+You can use the `--pretty=format` option to create your own log formats. Example
+
+	git log --pretty=format:"%h - %an, %ar : %s"
+
+
+| Option  Description of Output
+| ----- | ---------------------------------------------:-	|
+| `%H` | Commit hash 						|
+| `%h` | Abbreviated commit hash 				|
+| `%T` | Tree hash 						|
+| `%t` | Abbreviated tree hash 					|
+| `%P` | Parent hashes 						|
+| `%p` | Abbreviated parent hashes 				|
+| `%an` | Author name						|
+| `%ae` | Author e-mail						|
+| `%ad` | Author date (format respects the –date= option)	|
+| `%ar` | Author date, relative					|
+| `%cn` | Committer name					|
+| `%ce` | Committer email					|
+| `%cd` | Committer date					|
+| `%cr` | Committer date, relative				|
+| `%s` | Subject						|
+
 ## Advanced Git ##
 
 ### Track/ignore changes ###
