@@ -4,11 +4,35 @@
 - [Descriptor reference](http://maven.apache.org/ref/3.0.3/maven-model/maven.html)
 - [Subscribe to Announcements](mailto:announce-subscribe@maven.apache.org) Updates to core and plugins
 
-- create base directories `mkdir -p src/{main,test}/{java,resources}`
 
-## Installation ##
+## Basics ##
 
-		$ brew install maven
+- *Create base directories* `mkdir -p src/{main,test}/{java,resources}`
+
+### Installation 
+
+On OSX
+	
+	$ brew install maven
+
+### Standard Directory Layout ###
+
+| Directory 		| Description 			|
+| :-------------------- | :---------------------------- |
+| `src/main/java` 	| Application/Library sources	|
+| `src/main/resources` 	| Application/Library resources	|
+| `src/main/filters` 	| Resource filter files		|
+| `src/main/assembly` 	| Assembly descriptors		|
+| `src/main/config` 	| Configuration files		|
+| `src/main/scripts` 	| Application/Library scripts	|
+| `src/main/webapp` 	| Web application sources	|
+| `src/test/java` 	| Test sources			|
+| `src/test/resources` 	| Test resources		|
+| `src/test/filters` 	| Test resource filter files	|
+| `src/site` 		| Site				|
+| `LICENSE.{md,txt}` 	| Project's license		|
+| `NOTICE.{md,txt}` 	| Notices and attributions required by libraries that the project depends on|
+| `README.{md,txt}` 	| Project's readme		|
 
 ## Configuration ##
 
