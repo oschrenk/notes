@@ -2,13 +2,9 @@
 
 ## Communication ##
 
-### E-Mail ###
-
-Email is king. Provide IMAP/SMTP so that everyone can choose client of choice.
-
-### Instant Messaging ###
-
-- **[OpenFire](http://www.igniterealtime.org/projects/openfire/)**
+- *Email is king*. Provide IMAP/SMTP access so that everyone can use client of choice.
+- [OpenFire](http://www.igniterealtime.org/projects/openfire/) Jabber for instant messaging
+- [Hubot](http://hubot.github.com/) for services integration
 
 ## Code ##
 
@@ -37,13 +33,11 @@ Email is king. Provide IMAP/SMTP so that everyone can choose client of choice.
 - [MantisBT](http://www.mantisbt.org/)
 - **[Redmine](http://www.redmine.org/)**
 
+
+
 ## Infrastructure as Code ##
 
 - [Puppet](http://puppetlabs.com/)
 - [Chef](http://www.opscode.com/chef/)
 - [VirtualBox](https://www.virtualbox.org/)
-
-## Automatization ##
-
-- [Hubot](http://hubot.github.com/)
 
