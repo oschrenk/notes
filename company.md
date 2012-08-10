@@ -2,7 +2,7 @@
 
 ## Code ##
 
-Code is king. 
+Code is king.
 
 - everybody and not only developers have access to source repositories
 - everybody can see the code from other developers and projects
@@ -17,7 +17,7 @@ Code is king.
 	- with shared IDE/editor preferences
 	- with tools like [FindBugs](http://findbugs.sourceforge.net/), [PMD](http://pmd.sourceforge.net/), [JSLint](http://www.jslint.com/), [JSHint](http://www.jshint.com/) and the likes
 	- pre-commit hooks
-- Limit lines to 80 characters. 
+- Limit lines to 80 characters.
 	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
 	[#Geissendörfer:2011]
 - api > framework
@@ -30,7 +30,7 @@ Code is king.
 
 - *Be professional*. Write in professional English.
 - *Be concise*.
-- *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future. 
+- *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future.
 
 [#Batchelder:2003]
 
@@ -43,7 +43,7 @@ Code is king.
 1. Primary Rule
 
 > Comments are for things that **cannot** be expressed in code.
- 
+
 The code must be readable. It must clearly express its the developers intents. A good example is a comment to the paper that introduced a specific but complex algorithm.
 
 2. Redundancy Rule
@@ -107,7 +107,7 @@ Git centric approach:
 - **test code before you commit** Resist the temptation to commit some- thing that you _think_ is completed. Test it thoroughly to make sure it really is completed and has no side effects (as far as one can tell). While committing half- baked things in your local repository only requires you to forgive yourself, having your code tested is even more important when it comes to pushing/sharing your code with others.
 - **version control is not a backup system** When doing version control, you should pay attention to committing semantically
 - **use branches** Branches are the perfect tool to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, ideas.
-- **agree on a workflow** Git lets you pick from a lot of different workflows: long-running branches, topic branches, merge or rebase, git-flow... Which one you choose depends on a couple of factors: your project, your overall development and deployment workflows and (maybe most importantly) on your and your teammates' personal preferences. However you choose to work, just make sure to agree on a common workflow that everyone follows. 
+- **agree on a workflow** Git lets you pick from a lot of different workflows: long-running branches, topic branches, merge or rebase, git-flow... Which one you choose depends on a couple of factors: your project, your overall development and deployment workflows and (maybe most importantly) on your and your teammates' personal preferences. However you choose to work, just make sure to agree on a common workflow that everyone follows.
 
 [#Tower:2011]
 
@@ -193,11 +193,13 @@ Keep in mind
 - get people out of the office out into the open
 - flat hierarchy
 - behave like an open source project
-- optimize for happiness (everything follows from that)
+- *optimize for happiness* (everything follows from that)
 - meetings are waste (calculate time/money wasted)
 - async communication (important if remote (locality, time)) via email, pull requests, messages, ...
 - no set work hours (I work when I'm inspired - software development is creative process)
 - **the best motivating factor is trust**. Team unity is of ultimate importance in accomplishing your goals. **Rule cultures are bred of distrust**, and sticks and prods to enforce rules will only further erode trust from your team.
+- *[people over process over tools](http://dev2ops.org/blog/2010/2/23/people-over-process-over-tools.html)*
+
 
 ## Policies ##
 
@@ -224,7 +226,7 @@ Keep in mind
 
 - fileserver
 - map/reduce cluster
-- easy way to spin up virtual machines 
+- easy way to spin up virtual machines
 
 ## Office ##
 
@@ -236,9 +238,9 @@ Keep in mind
 
 ## Organization ##
 
-Only use open source software. Exceptions are allowed when it comes to OS (OS X) and specialized software (Photoshop et al). 
+Only use open source software. Exceptions are allowed when it comes to OS (OS X) and specialized software (Photoshop et al).
 
-- Project Management: 
+- Project Management:
 	- [Redmine](http://www.redmine.org/)
 	- [Sprintly](https://sprint.ly/)
 - Sourcecode: [Git](http://git-scm.com/), [Gitolite](https://github.com/sitaramc/gitolite)
@@ -247,7 +249,7 @@ Only use open source software. Exceptions are allowed when it comes to OS (OS X)
 ## Projects ##
 
 - everything should be in version control
-- documents aren't code and should live in their own source code repository 
+- documents aren't code and should live in their own source code repository
 - if they should be a direct dependency create a super project and add project as submodules
 - continuous integration
 - make status visible (e.g.. status monitoring, whiteboard). make it a game.
@@ -261,7 +263,7 @@ Use [Semantic Versioning](http://semver.org/)
 
 ### Managment ###
 
-- Project Managment software and version control system should be tightly integrated. 
+- Project Managment software and version control system should be tightly integrated.
 	- `Refs #54` Add commit message as comment to the issue (with commit id)
 	- `Fixes #2752` Add commit message as comment to the issue (with commit id) and set status to `fixed`
 	- `Closes #42` Add commit message as comment to the issue (with commit id) and set status to `closed`
@@ -284,8 +286,8 @@ Use [Semantic Versioning](http://semver.org/)
 
 ### New Hires ###
 
-- check what hardware he wants/needs before he starts 
-- assign a mentor for the first day 
+- check what hardware he wants/needs before he starts
+- assign a mentor for the first day
 - mentor should be project lead/member of the project the new hire should work in
 - email/scm/... should be setup when he sits down
 - give him something to do that can go live today
@@ -322,3 +324,4 @@ Use [Semantic Versioning](http://semver.org/)
 [#Summers:2012]: Ben Summers, [Pre-Commit Checklist](http://bens.me.uk/2012/pre-commit-checklist), 2012
 
 [#Tower:2011]: [Tower](http://www.git-tower.de). [Git Cheat Sheet](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf) from the guys who made [tower](http://www.git-tower.de) 2011
+
