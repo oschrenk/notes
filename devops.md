@@ -37,7 +37,7 @@ Email is king. Provide IMAP/SMTP so that everyone can choose client of choice.
 - [MantisBT](http://www.mantisbt.org/)
 - **[Redmine](http://www.redmine.org/)**
 
-## Infrastrcuture as Code ##
+## Infrastructure as Code ##
 
 - [Puppet](http://puppetlabs.com/)
 - [Chef](http://www.opscode.com/chef/)
