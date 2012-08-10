@@ -9,10 +9,10 @@
 
 - *Create base directories* `mkdir -p src/{main,test}/{java,resources}`
 
-### Installation 
+### Installation
 
 On OSX
-	
+
 	$ brew install maven
 
 ### Standard Directory Layout ###
@@ -52,7 +52,7 @@ I found a [blog entry](http://davidmarquis.posterous.com/maven-custom-properties
 		<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-													http://maven.apache.org/xsd/settings-1.0.0.xsd"> 
+													http://maven.apache.org/xsd/settings-1.0.0.xsd">
 			...
 			<proxies>
 			 <proxy>
@@ -168,7 +168,7 @@ The [Mavenize](#mavenize) way is the better (more complete/correct) choice but s
 Maven uses the platform encoding when building by default. It will produces warnings like that
 
 	WARNING Using platform encoding
-	(MacRoman actually) to copy↩  
+	(MacRoman actually) to copy↩
 	filtered resources, i.e. build is platform dependent!
 
 Add a `project.build.sourceEncoding` element and a `project.reporting.outputEncoding` to your `pom.xml`.
@@ -230,7 +230,7 @@ Change the `source` and `target` tags according to your needs
 ### Maven, Junit tests and resource loading ###
 
 I always forget.
-	
+
 	private static final String PATH="/path/to/file.csv";
 	private static final String PATH2="/file.csv";
 	[...]
@@ -255,3 +255,4 @@ This way the classloader finds the proper resource. You need a leading slash.
 			</execution>
 		</executions>
 	</plugin>
+
