@@ -33,11 +33,15 @@
 - [MantisBT](http://www.mantisbt.org/)
 - **[Redmine](http://www.redmine.org/)**
 
-
-
 ## Infrastructure as Code ##
 
 - [Puppet](http://puppetlabs.com/)
 - [Chef](http://www.opscode.com/chef/)
 - [VirtualBox](https://www.virtualbox.org/)
+
+## Files ##
+
+- [SparkleShare](http://sparkleshare.org/) File collaboration tool. Relies on Git.
+- [owncloud](http://owncloud.org)
+- [syncany](http://www.syncany.org/)
 
