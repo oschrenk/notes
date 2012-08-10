@@ -1,6 +1,6 @@
 # gedit #
 
-## gmate ##
+Install gmate. It offers many useful plugins and themes
 
     $ git clone git://github.com/gmate/gmate.git
     $ cd gmate
