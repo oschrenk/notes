@@ -1,6 +1,6 @@
 # Bash #
 
-## Startup ##
+## Initialisation ##
 
 When bash starts it reads the following files every time you login. For the purposes of OS X, this means every time you open a new Terminal window.
 
@@ -15,7 +15,9 @@ Finally, OS X also uses `~/.MacOSX/environment.plist` to set more environment va
 
 [#Folly:2009]
 
-### about .bashrc, .bash_profile, .profile, /etc/profile, etc/bash.bashrc and others ##
+### A more detailed look at .bashrc, .bash_profile, .profile, /etc/profile, etc/bash.bashrc and others ##
+
+A good graphic graphic can be found [here](http://www.solipsys.co.uk/new/BashInitialisationFiles.html)
 
 > When bash is invoked as an interactive *login shell*, or as a non-interactive shell with the `--login` option, it first reads and executes commands from the file `/etc/profile`, if that file exists. After reading that file, it looks for `~/.bash_profile`, `~/.bash_login`, and `~/.profile`, in that order, and reads and executes commands from the first one that exists and is readable. The `--noprofile` option may be used when the shell is started to inhibit this behavior.
 ...
@@ -91,7 +93,7 @@ Similar for *StdErr*, but use `2` prefix like so `2>` or respectively. `2>>`.
 	# Restart terminal.app (new window works too)
 	# Check for Bash 4 and /usr/local/bin/bash...
 	echo $BASH && echo $BASH_VERSION
-	
+
 ## Examples ##
 
 ### Using the history ###
@@ -172,3 +174,4 @@ Adding something like `export PATH=/usr/bin:$PATH` doesn’t update the `$PATH` 
 
 [#Folly:2009]: Steve Folly. [Where does $PATH get set in OS X 10.6 Snow Leopard?](http://superuser.com/questions/69130/where-does-path-get-set-in-os-x-10-6-snow-leopard#69190) Stackoverflow, 2009
 [#Lippens:2005]: Stefan Lippens. [about .bashrc, .bash_profile, .profile, /etc/profile, etc/bash.bashrc and others](http://stefaanlippens.net/bashrc_and_others). Personal Blog, 2005.
+
