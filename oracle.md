@@ -29,6 +29,16 @@ Create the view
 
 - `refresh on demand` means that re-creation/refreshing is done manually
 
+## Managment Console ##
+
+### To kill a long running process ###
+
+1. point your browser `https://<IP>:5501/em` (IP being the IP adress of the machone Oracle runs on, `5501` the default port of Oracle Enterprise Managment).2
+2. login (ask your adminstrator for the password) with role sysdba
+3. Change to `Performance` tab
+4. Under `zusätzliche Überwachungs-Links`, click on `SQL-Überwachung`
+5. Click on the particular statement, open the context menu and `close session`
+
 ## Helpful SQL Statements ##
 
 ### Show trigger on table ###
