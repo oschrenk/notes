@@ -24,6 +24,11 @@
 - [Phabricator](http://phabricator.org/). Open Source. Free.
 - [Rietveld](http://code.google.com/p/rietveld/). Open Source. Free.
 
+### Continuous integration ###
+
+- [Jenkins](http://jenkins-ci.org/)
+- [Travis CI](http://travis-ci.org/)
+
 ## Issue Tracking ##
 
 [Wikipedia, Comparison of issue-tracking systems](http://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems)
