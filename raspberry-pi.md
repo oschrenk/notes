@@ -127,14 +127,15 @@ Set EXPORT vars to be used during compilation:
 	$ export CXXFLAGS='-march=armv6 -mfpu=vfp -mfloat-abi=hard -DUSE_EABI_HARDFLOAT'
 	$ export CCFLAGS='-march=armv6 -mfpu=vfp -mfloat-abi=hard -DUSE_EABI_HARDFLOAT'
 
-Configure and make (disable snapshot):
+Configure and make (disable snapshot). This will take 3+ hours!
 
-	$ ./configure --shared-openssl --without-snapshot
+	$ ./configure --shared-openssl --without-snapshot --prefix=/opt/node
 	$ make
+	$ sudo make install
 
 ### shairport ###
 
-Stream music from you iOS devices to the Raspberry Pi. 
+Stream music from iTunes to the Raspberry Pi. 
 
 Install dependencies
 
