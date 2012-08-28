@@ -1,18 +1,14 @@
 # Git #
 
-## Setup ##
-
-### Installation ###
-
     $ brew install git
 
-### Configuring Git ###
+## Configuring Git ##
 
-    $ git config --global color.ui "auto"
     $ git config --global user.name "FirstName LastName"	
     $ git config --global user.email "your@email.address"
+    $ git config --global color.ui "auto"
 
-#### gitignore ####
+### gitignore ###
 
 As mentioned in [gitignore](http://schacon.github.com/git/gitignore.html), git has [3 ignore files](http://tech.puredanger.com/2008/05/17/git-ignore-files/):
 
@@ -32,7 +28,7 @@ Now you can add global ignores by calling
 
     $ echo .DS_Store >> ~/.gitignore
 
-#### Configuring for use with git svn ####
+### Configuring for use with git svn ###
 
 If you still have to work with some svn repositories you might consider setting up a global file for the svn users so that you don't have to do that for each project.
 
@@ -40,34 +36,27 @@ See [Migrate SVN](#migrate-svn) for some more information, but run add `--global
 
     $ git config --global svn.authorsfile ~/Desktop/users.txt
 
-## Basic Git ##
+## Basics ##
 
-All Git commands begin with `git` and is followed by a sub-command (and then their respective parameter), e.g.
+All Git commands begin with `git` and is followed by a sub-command (and then their respective parameter), e.g. `git add`
 
-	$ git add
-
-### Creating a repo ###
+### Create a repo ###
 
 Create a repo
 
-     $ mkdir notes && cd notes
+     $ mkdir repo && cd repo
      $ git init
 
-Make changes and commit
-
-     $ touch README
-     $ git add README
-     $ git commit -m 'first commit'
-
-Or just clone it
+### Clone a repo ###
 
     $ git clone git@github.com:username/project.git
 
 ### Changes ###
 
-To add a file to stage
+To add a file to the stage
 
-	$ git add <path>
+    $ touch README
+	$ git add README
 
 Other commands
 
@@ -80,7 +69,7 @@ Other commands
 
 To cleanup unwanted (untracked) files and directories in you working dir
 
-	$ git clean <path>
+    $ git clean <path>
 
 Offering you the following options
 
@@ -95,32 +84,6 @@ To commit
 	$ git commit /path/file
 	$ git commit -m 'message' /path/file
 	$ git commit -a /path/auto-added.file
-
-#### Partial commits ####
-
-	$ git add -p /path/file
-	... # changes
-	Stage this hunk [y,n,q,a,d,/,s,e,?]?
-	
-You will see a selection of *hunks* and Git asks you what to do with these hunks. `?` explains each of the possible choices.
-
-	Stage this hunk [y,n,q,a,d,/,s,e,?]? ?
-	y - stage this hunk
-	n - do not stage this hunk
-	q - quit; do not stage this hunk nor any of the remaining ones
-	a - stage this hunk and all later hunks in the file
-	d - do not stage this hunk nor any of the later hunks in the file
-	g - select a hunk to go to
-	/ - search for a hunk matching the given regex
-	j - leave this hunk undecided, see next undecided hunk
-	J - leave this hunk undecided, see next hunk
-	k - leave this hunk undecided, see previous undecided hunk
-	K - leave this hunk undecided, see previous hunk
-	s - split the current hunk into smaller hunks
-	e - manually edit the current hunk
-	? - print help
-
-So to commit a hunk, press `y`, then `q` and commit the change via `git commit`
 
 #### Undo a local commit
 
@@ -150,7 +113,6 @@ Your changes will now be reverted and ready for you to commit:
         commit 102: restoring the file I removed on accident
         commit 101: removing a file we dont need
         commit 100: adding a file that we need
-
 
 ### Branching ###
 
@@ -241,7 +203,7 @@ To push your tags to a remote repository, use the following command to push all 
 
 Don't do it. Admit you screwed up. Create a tag with the correct name pointing to the same commit an move on. This keeps your team sane.
 
-If you're a lone ranger you don't have a team to keep sane so go ahead.
+If you're a lone ranger you don't have a team to keep sane, so go ahead.
 
 Create a tag based on old tag
 
@@ -255,7 +217,7 @@ Delete tag on remote (this hurts other developers and has therefore a ugly synta
 	
 	git push origin :refs/tags/old_tag 
 
-### Logs ###
+## Logs ##
 
 You can use the `--pretty=format` option to create your own log formats. Example
 
@@ -281,6 +243,32 @@ You can use the `--pretty=format` option to create your own log formats. Example
 | `%s` | Subject						|
 
 ## Advanced Git ##
+
+### Partial commits ###
+
+    $ git add -p /path/file
+    ... # changes
+    Stage this hunk [y,n,q,a,d,/,s,e,?]?
+    
+You will see a selection of *hunks* and Git asks you what to do with these hunks. `?` explains each of the possible choices.
+
+    Stage this hunk [y,n,q,a,d,/,s,e,?]? ?
+    y - stage this hunk
+    n - do not stage this hunk
+    q - quit; do not stage this hunk nor any of the remaining ones
+    a - stage this hunk and all later hunks in the file
+    d - do not stage this hunk nor any of the later hunks in the file
+    g - select a hunk to go to
+    / - search for a hunk matching the given regex
+    j - leave this hunk undecided, see next undecided hunk
+    J - leave this hunk undecided, see next hunk
+    k - leave this hunk undecided, see previous undecided hunk
+    K - leave this hunk undecided, see previous hunk
+    s - split the current hunk into smaller hunks
+    e - manually edit the current hunk
+    ? - print help
+
+So to commit a hunk, press `y`, then `q` and commit the change via `git commit`
 
 ### Track/ignore changes ###
 
@@ -384,7 +372,6 @@ you would call
     	fi' HEAD
 
 ### Move file from repo to repo preserving history ###
-
 
     mkdir /tmp/mergepatchs
     cd ~/repo/org
@@ -580,4 +567,3 @@ or shorter
 
     sudo ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.12/darwin-thread-multi-2level/SVN /System/Library/Perl/Extras/5.12/SVN
     sudo ln -s /Applications/Xcode.app/Contents/Developer/Library/Perl/5.12/darwin-thread-multi-2level/auto/SVN/ /System/Library/Perl/Extras/5.12/auto/SVN
-
