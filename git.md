@@ -28,14 +28,6 @@ Now you can add global ignores by calling
 
     $ echo .DS_Store >> ~/.gitignore
 
-### Configuring for use with git svn ###
-
-If you still have to work with some svn repositories you might consider setting up a global file for the svn users so that you don't have to do that for each project.
-
-See [Migrate SVN](#migrate-svn) for some more information, but run add `--global` to add it to the global `.gitconfig` like so:
-
-    $ git config --global svn.authorsfile ~/Desktop/users.txt
-
 ## Basics ##
 
 All Git commands begin with `git` and is followed by a sub-command (and then their respective parameter), e.g. `git add`

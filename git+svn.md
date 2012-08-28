@@ -1,5 +1,13 @@
 # Git + SVN #
 
+## Configuring for use with git svn ##
+
+If you still have to work with some svn repositories you might consider setting up a global file for the svn users so that you don't have to do that for each project.
+
+See [Migrate SVN](#migrate-svn) for some more information, but run add `--global` to add it to the global `.gitconfig` like so:
+
+    $ git config --global svn.authorsfile ~/Desktop/users.txt
+    
 ## Basics ##
 
 	git svn init http://code.yoursite.net/project/trunk/ localpath
