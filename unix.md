@@ -1,6 +1,14 @@
 # Unix #
 
-## Terminal ##
+## Shell ##
+
+[What is the difference between shell, terminal and console?](http://superuser.com/questions/144666/what-is-the-difference-between-shell-console-and-terminal)
+
+The **shell** is the program which processes command and returns output. Most shells also manage foreground  and background processes, command history and command line editing, with [Bash](http://www.gnu.org/software/bash/) being the most common shell in modern linux systems.
+
+A **terminal** refers to a wrapper program which runs a shell. Decades ago, this was a physical device consisting of little more than a monitor and keyboard. As Unix/linux systems added better multiprocessing and windowing systems, this terminal concept was abstracted into software. Now you have programs such as Gnome Terminal which launches a window in a Gnome windowing environment which will run a shell into which you can enter commands.
+
+The **console** is a special sort of terminal. Historically, the console was a single keyboard and monitor plugged into a dedicated serial console port on a computer used for direct communication at a low level with the operating system. Modern linux systems provide for virtual consoles. These are accessed through key combinations (e.g. `Alt+F1`) which are handled at low levels of the linux operating system -- this means that there is no special service which needs to be installed and configured to run. Interacting with the console is also done using a shell program.
 
 ### Bash ###
 
