@@ -2,16 +2,15 @@
 
 - [Available Plugins](http://maven.apache.org/plugins/index.html)
 - [Descriptor reference](http://maven.apache.org/ref/3.0.3/maven-model/maven.html)
+- [Maven Central Search](http://search.maven.org/)
 - [Subscribe to Announcements](mailto:announce-subscribe@maven.apache.org) Updates to core and plugins
-
-
 
 - **Installation OSX**. `brew install maven`
 - **Create base directories** `mkdir -p src/{main,test}/{java,resources}`
 -  **Read Maven project version** `mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate 
     -Dexpression=project.version`
-## Basics ##
 
+## Basics ##
 
 ### Standard Directory Layout ###
 
