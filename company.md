@@ -9,6 +9,13 @@ Code is king.
 - everybody can fork the source code and file pull requests
 - code is user driven not project driven (source control system should support that (see [github](http://github.com/) )
 
+### Writing ###
+
+1. write commit message before coding
+2. write what the software should be supposed to do, not what you did
+
+The second rule lines up with writing commit message 
+
 ### Style ###
 
 - utf8, unix line encoding
@@ -199,7 +206,6 @@ Keep in mind
 - no set work hours (I work when I'm inspired - software development is creative process)
 - **the best motivating factor is trust**. Team unity is of ultimate importance in accomplishing your goals. **Rule cultures are bred of distrust**, and sticks and prods to enforce rules will only further erode trust from your team.
 - *[people over process over tools](http://dev2ops.org/blog/2010/2/23/people-over-process-over-tools.html)*
-
 
 ## Policies ##
 
