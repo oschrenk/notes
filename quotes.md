@@ -105,10 +105,6 @@ Unknown
 
 Wash (as Stegosaurus; Character from Serenity)
 
-> Those who know, do not speak. Those who speak, do not know.
-
-Lao Tzu
-
 > Um einen Schmetterling lieben zu können, müssen wir auch ein paar Raupen mögen.
 
 Antoine de Saint-Exupéry
@@ -120,3 +116,7 @@ Jimmy Carr
 > A story's job is beyond morality, it's beyond truth. It's job is to tell you that the world could be a way we know inherently what it couldn't be.
 
 Jad Abumrad
+
+> My greatest weakness is that I tend analyze things too much... or maybe not enough?
+
+Bill Bailey
