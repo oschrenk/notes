@@ -17,6 +17,7 @@ Network & Distributd Computing
 Data
 
 - [libphonenumber](http://code.google.com/p/libphonenumber/) Google's common Java library for parsing, formatting, storing and validating international phone numbers. Optimized for running on smartphones. A direct port to Javascript is also available.
+- [grep4j](http://code.google.com/p/grep4j/) Grep4j is a simple API made to centralise and facilitate the search of expressions within all the configured files, remote or local, in Unix environments.
 
 Natural Language
 
