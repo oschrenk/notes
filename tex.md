@@ -62,6 +62,7 @@ A pretty complete list can be found [here](https://github.com/github/gitignore/b
 	*.ilg
 	*.ind
 	*.ist
+	*.loa
 	*.lof
 	*.log
 	*.lot
