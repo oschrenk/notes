@@ -105,6 +105,8 @@ The content should be something like
 
 ## Software ##
 
+- [Cross-compiling with distcc](http://midnightyell.wordpress.com/2012/10/14/a-good-compromise-cross-compiling-with-distcc/)
+
 ### node.js ###
 
 To run node.js 0.8.x see these [notes](https://github.com/nneves/R2C2_WebInterface/blob/master/specs/Compile_RaspberryPi_NodeV0.8.x.md)
