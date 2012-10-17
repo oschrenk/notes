@@ -1,5 +1,7 @@
 # iPhone #
 
+[Dimensional Drawings of all mobile devices](https://developer.apple.com/resources/cases/)
+
 ## Measurements ##
 
 The hit-region of a user interface element is recommended to be 44×44 pixels
@@ -31,17 +33,6 @@ Tab bar icon
 :	30×30 px
 
 ### Real size ###
-
-On [developer.apple.com/ipod/cases.html](http://developer.apple.com/ipod/cases.html) Apple has released dimensional drawings of all mobile devices.
-
-iPhone 3G case
-
-width
-:	62.1 mm
-length
-:	115.5 mm
-height
-:	12.3 mm
 
 iPhone 3G screen size
 
