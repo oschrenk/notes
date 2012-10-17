@@ -10,7 +10,6 @@ From [here](http://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-o
 
 Your cron job looks as follows for user jobs:
 
- 
 	1 2 3 4 5 /path/to/command arg1 arg2
  
 OR

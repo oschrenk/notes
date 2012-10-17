@@ -1,10 +1,10 @@
-# Adobe Illusrtrator #
+# Adobe Illustrator #
 
 First off: I hate the interface. Most of the things are so counterintuitive.
 
 ## Single Window Interface
  
- Is a workspace setting. Select `Window > Application Frame` to toggle.
+Is a workspace setting. Select `Window > Application Frame` to toggle.
 
 ## Close Path ##
 

@@ -4,23 +4,15 @@
 
 -------------------------------------------------------------------------------------
 
-
-
                         Gerhard Paulus 
 
                         gp@gnomsoft.de
-
-
 
                
 
                     Copyright (c) 2002 
 
                     GNOM SOFT GmbH, Dresden
-
-
-
-
 
 Dieser Text könnte Leuten nützlich sein, die sich für Mikrocontroller und 
 
@@ -32,29 +24,21 @@ Ansonsten wird als Assembler-Programm avrasm.exe von Atmel verwendet, das Teil d
 
 AVR-Studio-Software ist, die man sich bei http://www.atmel.com gratis besorgen kann. 
 
-
-
 Für Beispiel-Schaltungen und weiterführende Texte und Beispiele wird das Tutorial auf 
 
 http://www.mikrocontroller.net und das Tutorial auf http://www.avr-asm-tutorial.net 
 
 empfohlen.
 
-
-
 1. Zahlen:
 
 ----------
-
-
 
 Im Mikrocontroller (MC fürderhin) gibt es Bereiche, die Zahlen speichern. Diese 
 
 sogenannten Register sind direkt mit der Recheneinheit des MC verbunden, die diese Zahlen 
 
 addieren, subtrahieren, vergleichen etc. kann.
-
-
 
 Ein Register kann beim AVR 1 Byte fassen, also 8 Bit an Information. Ein Bit kann als 
 
@@ -64,15 +48,11 @@ durchaus überschaubare Informationsfülle. Bit ist übrigens ein Kunstwort, das si
 
 "binary digit" ableitet. 
 
-
-
 Die Bits eines Bytes werden von hinten nach vorn gezählt: das letzte Bit (LSB, Least 
 
 Significant Bit) ist Bit Nummer 0, das erste Bit (MSB, Most Significant Bit) ist Bit 
 
 Nummer 7.    
-
-
 
             ---------------------------------------------------------
 
@@ -84,11 +64,9 @@ Nummer 7.
 
             (MSB)                                             (LSB)
 
-
-
 In englischen Texten ist ein Bit "set" (gesetzt), wenn es 1 darstellt. 
 
-Und ein Bit ist "cleared" (zurückgesetzt bzw. gelöscht), wenn es 0 darstellt.  
+Und ein Bit ist "cleared" (zurückgesetzt bzw. gelöscht), wenn es 0 darstellt.
 
 	
 
@@ -106,39 +84,23 @@ diese Input/Output-Register (bzw. I/O-Register) werden auch als "ports" bezeichn
 
 d.h. manche Register können mehr als andere. 	
 
-
-
 Jetzt wollen wir doch mal schauen, was man mit den Bits in den Registern so alles machen 
 
 kann. 
 
-
-
 Wenn alle Bits auf 0 gesetzt sind dann sieht das so aus 
-
-
 
 	0 0 0 0  0 0 0 0
 
-
-
 und damit wird die Zahl 0 dargestellt, klingt irgendwie logisch. 
-
-
 
 Wenn alle Bits auf 1 gesetzt sind dann sieht das so aus 
 
-
-
 	1 1 1 1  1 1 1 1 
-
-
 
 und damit wird entweder die Zahl 255 oder die (negative) Zahl -1 dargestellt. Schauen wir 
 
 uns mal die Zahl 255 näher an, die Sache mit den negativen Zahlen kommt später.
-
-
 
 Das übliche dezimale Zahlensystem kennt 10 Ziffern (0,1,2,3,4,5,6,7,8,9) und hat als Basis 
 
@@ -158,15 +120,11 @@ die Zahl 10. Die Dezimal-Zahl 255 kann man damit folgendermaßen auseinandernehme
 
                                     255
 
-
-
 OK, das wußten wir schon, aber wie ist das mit dem Byte und den lauter Einsen ?
 
 Antwort: Das ist genauso, aber halt binär, das heißt als Zahlensystem mit Basis 2 und mit 
 
 nur 2 Ziffern: 0 und 1.
-
-
 
    1 1 1 1 1 1 1 1 
 
@@ -192,8 +150,6 @@ nur 2 Ziffern: 0 und 1.
 
                                               
 
-
-
 Jetzt könnte man natürlich fragen: Und wieso ist das nicht gleich 2 hoch 8, also 256 ? 
 
 Antwort: mit den 8 Bits eines Bytes kann man tatsächlich 256 Zahlen darstellen, aber 0 ist 
@@ -201,8 +157,6 @@ Antwort: mit den 8 Bits eines Bytes kann man tatsächlich 256 Zahlen darstellen, 
 ja bereits eine Zahl. Daher ist die höchste mit 8 Bit darstellbare Zahl 256 - 1, also 
 
 255. Um die Zahl 256 binär zu speichern sind mindestens 9 Bit erforderlich.
-
-
 
 Jetzt sind diese binären Zahlen beim Ausdrucken etwas unübersichtlich. Es hat sich in 
 
@@ -212,19 +166,11 @@ ausgegeben werden. Also noch ein Zahlensystem, diesmal zur Basis 16. Im hexadezi
 
 gibt es folgende Ziffern : 
 
-
-
 	1, 2, 3, 4, 5, 6, 7, 8, 9,  A ,  B ,  C ,  D ,  E ,  F
 
 	                          (10) (11) (12) (13) (14) (15) 
 
-
-
-
-
 Die dezimale Zahl 255 wird hexadezimal als FF dargestellt: 
-
-
 
   F F 
 
@@ -236,15 +182,9 @@ Die dezimale Zahl 255 wird hexadezimal als FF dargestellt:
 
                                     255
 
-
-
-
-
 Unbedingt klarer ist die Schreibweise damit nicht, aber mit 2 Druckzeichen pro Byte 
 
 sehr kompakt. 
-
-
 
 	dezimal: 14 
 
@@ -252,15 +192,11 @@ sehr kompakt.
 
 	hex:     0E
 
-
-
 Da diese hexadezimale Schreibweise in Assemblerprogrammen sehr oft verwendet wird, gibt 
 
 es durchaus Sinn, sich die entsprechenden Bitfolgen einzuprägen. Dann ist die 
 
 hexadezimale Schreibweise quasi Steno für die binäre Schreibweise.
-
-
 
 	binär hex
 
@@ -304,8 +240,6 @@ die dezimale Zahl 14 in Register R16 zu speichern, sind die folgenden Anweisunge
 
 gleichwertig:
 
-
-
 ldi R16, 14         ; dezimale Schreibweise ist Standard
 
 ldi R16, 0b00001110 ; binäre Zahlen fangen mit 0b an
@@ -314,17 +248,9 @@ ldi R16, 0x0E       ; Hex-Zahlen fangen mit 0x an
 
 ldi R16, $0E        ; alternative Schreibweise für Hex-Zahlen 
 
-
-
-
-
 Und wie funktioniert Addieren von binären Zahlen ?
 
-
-
 	dezimal:                       binär:      
-
-
 
       1                         0000 0001
 
@@ -334,8 +260,6 @@ Und wie funktioniert Addieren von binären Zahlen ?
 
       2                         0000 0010
 
-
-
       9                         0000 1001
 
       5 +                       0000 0101 +
@@ -344,8 +268,6 @@ Und wie funktioniert Addieren von binären Zahlen ?
 
      14                         0000 1110
 
-
-
 Im Prinzip wie bei dezimalen Zahlen. Man geht also von rechts nach links, zählt jeweils 2 
 
 Ziffern zusammen und wenn die Summe größer ist als die größtmögliche Ziffer wird eine 
@@ -353,8 +275,6 @@ Ziffern zusammen und wenn die Summe größer ist als die größtmögliche Ziffer wird
 1 nach links übertragen. Bei binären Zahlen erfolgt dieses Übertragen immer wenn beide zu 
 
 addierenden Ziffern 1 sind.
-
-
 
 Als Regel für binäres Addieren:  
 
@@ -372,11 +292,7 @@ Als Regel für binäres Addieren:
 
 Und wie funktioniert Subtrahieren von binären Zahlen ?
 
-
-
 	dezimal:                       binär:      
-
-
 
       1                         0000 0001
 
@@ -386,8 +302,6 @@ Und wie funktioniert Subtrahieren von binären Zahlen ?
 
       0                         0000 0000
 
-
-
       9                         0000 1001
 
       5 -                       0000 0101 -
@@ -395,8 +309,6 @@ Und wie funktioniert Subtrahieren von binären Zahlen ?
     -----                       -----------
 
       4                         0000 0100
-
-
 
 Falls von 0 die 1 abgezogen wird, dann wird 1 vom links benachbarten Bit abgezogen 
 
@@ -416,11 +328,7 @@ Als Regel für binäres Subtrahieren:
 
     	
 
-
-
 Obige Rechenoperationen würden mit Registern zB. folgendermaßen ablaufen:
-
-
 
 ; Addition:
 
@@ -430,8 +338,6 @@ ldi r17, 5   ; lade 5 in Register r17
 
 add r16, r17 ; danach ist das Ergebnis (also 14) in Register 16
 
-
-
 ; Subtraktion:
 
 ldi r16, 9   ; lade 9 in Register r16
@@ -440,29 +346,21 @@ ldi r17, 5   ; lade 5 in Register r17
 
 sub r16, r17 ; danach ist das Ergebnis (also 4) in Register 16
 
-
-
 Wenn in einem Byte maximal die Zahl 255 dargestellt werden kann und eine Zahl dazu 
 
 addiert wird, dann kann es natürlich vorkommen, das das Ergebnis zu groß wird und in 
 
 das Byte nicht mehr reinpaßt. Was passiert dann ?
 
-
-
 Im folgenden fängt das Register mit 0 an und dann wird immer wieder 1 addiert (das 
 
 nennt man Inkrementieren und ist trotzdem eine anständige Sache). 
-
-
 
 	Register:
 
 	---------
 
 	0000 0000				am Anfang ist alles Null
-
-
 
                      + 0000 0001
 
@@ -479,8 +377,6 @@ nennt man Inkrementieren und ist trotzdem eine anständige Sache).
                      + 0000 0001
 
 	... etc. ...
-
-
 
 	1111 1110									
 
@@ -502,13 +398,9 @@ Wenn alle Bits gesetzt sind und es wird immer noch dazuaddiert dann bleibt dem M
 
 anderes übrig, als wieder bei Null (alle Bits auf 0) weiterzumachen. 
 
-
-
 Im folgenden fängt das Register mit 2 an und dann wird immer wieder 1 subtrahiert (das 
 
 nennt man Dekrementieren und ist immer noch eine anständige Sache). 
-
-
 
 	Register:
 
@@ -532,17 +424,11 @@ nennt man Dekrementieren und ist immer noch eine anständige Sache).
 
 	1111 1110
 
-
-
-
-
 Wenn beim Subtrahieren die niedrigste Zahl erreicht ist (also 0) und immer noch weiter 
 
 abgezogen ist, dann springt der MC zur höchsten Zahl (alle Bits auf 1) und macht dort 
 
 weiter.
-
-
 
 Wenn beim Addieren bzw. Subtrahieren zwischen 0 und 255 umgesprungen wird (also von 
 
@@ -555,8 +441,6 @@ Mit anderen Worten: der Carry-Flag wird gesetzt (Übertrags-Fähnchen klingt etwas
 wäre aber die Übersetzung ins Deutsche). In dem Statusregister gibt es noch weitere 
 
 Bits, die wichtige Informationen beinhalten. Hier die komplette Flaggen-Parade:
-
-
 
 Status-Register: Bit 7   I  Interrupt Enabled flag
 
@@ -574,8 +458,6 @@ Status-Register: Bit 7   I  Interrupt Enabled flag
 
                  Bit 0   C  Carry flag
 
-
-
 Im folgenden sind nur die beiden unterwertigsten Flags interessant. Der Carry-flag wird 
 
 gesetzt, wenn der Wert eines Registers bei Addition durch's Dach geht bzw. bei Subtraktion 
@@ -586,25 +468,17 @@ Rechenoperation gesetzt (Bit hat Wert 1) wenn das Ergebnis der Berechnung eine N
 
 andernfalls wird der Zero-Flag rückgesetzt (Bit hat Wert 0).
 
-
-
 Die meisten der anderen Flags sind relevant für Rechenoperationen für Zahlen mit Vorzeichen, 
 
 die später behandelt werden. Bis jetzt wurden nur Rechenoperationen für Zahlen 
 
 ohne Vorzeichen behandelt, wo negative Zahlen nicht vorkommen können.
 
-
-
 Soweit mal zum Thema Zahlen, jetzt schauen wir uns doch mal die Sache mit dem Speicher an.
-
-
 
 2. Speicher :
 
 -------------
-
-
 
 Der MC hat einen Hauptspeicher, der Daten (also Zahlen) speichern kann. Der Hauptspeicher 
 
@@ -616,11 +490,7 @@ kann durch seine Adresse angesprochen werden. Diese Adressen werden üblicherweis
 
 hexadezimaler Schreibweise angegeben. 
 
-
-
 Beim AT90S4433 sieht das so aus (niedrigste Addresse oben, jedes Register belegt ein Byte): 
-
-
 
 Adresse  
 
@@ -640,8 +510,6 @@ dez:  hex:
 
  31    1F     Register 31   (R31) +
 
-
-
  32    20     ???                 +  
 
                                   |
@@ -651,8 +519,6 @@ dez:  hex:
                                   |
 
  95    5F     SREG                +  
-
-
 
  96    60     erstes Byte 	      +
 
@@ -664,8 +530,6 @@ dez:  hex:
 
 223    DF     letztes Byte        +
 
-
-
 Wird ein Byte in diesem Datenspeicher gespeichert, dann "wohnt" es sozusagen in einem 
 
 Lagerregal. Man kann die Rechenheit via Programm anweisen, an einer bestimmten Addresse 
@@ -674,15 +538,11 @@ ein Byte zu holen, zu ändern und wieder an dieser Addresse zu speichern. Dazu gi
 
 bei avrasm die "ld", "ldd" bzw. "lds" Befehle.
 
-
-
 ldi r16, 13   ; lade Wert dez 13 in Register 0
 
 sts 0x60, r16 ; speichere den Wert von Register 16 an der untersten Adresse des SRAM
 
 lds r0, 0x60  ; lese das Byte an der untersten Adresse des SRAM in das Register 0
-
-
 
 In Assemblerprogrammen explizit mit Speicheraddressen zu arbeiten, wäre zu umständlich.
 
@@ -698,8 +558,6 @@ Das Status-Register (mit den diversen Flags) hat zum Beispiel im Hauptspeicher d
 
 Speicheradresse hex 5F, die im Programm mit dem Namen SREG spezifiziert werden kann. 
 
-
-
 Ein eigenständiger Speicher ist der Programmspeicher, in dem der Programmcode gespeichert 
 
 wird, den der AVR zur Laufzeit der Anwendung abarbeitet. Dieser Flash-Speicher ist beim 
@@ -710,8 +568,6 @@ wobei jeder Programmbefehl in 2 Bytes  gepackt wird (also insgesamt 16 Bit, auch
 
 genannt). 
 
-
-
 Auch der EEPROM-Speicher ist ein eigenständige Speicher, dessen Adressbereich bei 0 
 
 anfängt. Es gibt keine expliziten Befehle, um in den EEPROM zu direkt schreiben bzw. von 
@@ -719,8 +575,6 @@ anfängt. Es gibt keine expliziten Befehle, um in den EEPROM zu direkt schreiben 
 dort zu lesen. Für diese Operationen sind bestimmte IO-Register einzusetzen. In 
 
 vereinfachter Form sieht das dann so aus: 
-
-
 
 	ldi r16, 13   ; irgeneine Adresse kleiner 256
 
@@ -730,15 +584,9 @@ vereinfachter Form sieht das dann so aus:
 
 	out EEDR, r17 ; Wert in EEPROM schreiben über "EE Data Register"
 
-
-
-
-
 3. Programm :
 
 --------------
-
-
 
 Jetzt schauen wir uns doch mal an, wie die Assembler-Programme vom MC abgearbeitet werden. 
 
@@ -756,11 +604,7 @@ ausgeführten Befehls im Register PC (program counter). Standardmäßig wird bei je
 
 nächsten Befehl der Inhalt des Registers PC um 1 erhöht. 
 
-
-
 Folgendes aufregende Programm 
-
-
 
   NOP ; erster Befehl:  no operation = tu nichts
 
@@ -768,21 +612,15 @@ Folgendes aufregende Programm
 
   NOP ; dritter Befehl: no operation = tu nichts
 
-
-
 würde im Programmspeicher folgendermaßen aussehen (in hexadezimaler Schreibweise  
 
 mit Zeilenumbruch nach jeweils 2 Bytes):
 
-
-
 0000
 
 0000
 
 0000
-
-
 
 Obwohl es nicht so aussieht: obiges "Programm" tut tatsächlich etwas. Es beschäftigt 
 
@@ -792,23 +630,17 @@ der MC in einem bestimmten Zusammenhang zu schnell ist und bei bestimmten Eingab
 
 Zeit gewonnen werden muß.
 
-
-
 Die oben beschriebene strikt sukzessive Programm-Abarbeitung ist aber die Ausnahme. 
 
 Normalerweise wird im Programm auch gesprungen, damit nicht der nächstfolgende Befehl 
 
 ausgeführt wird sondern ein anderer, der im Programm entweder weiter unten oder oben steht.  
 
-
-
 In folgendem Programm sind 2 Sprünge eingebaut. Das Programm läßt LED's an Port B leuchten, 
 
 wenn Taster an Port D gedrückt werden. Dazu muß Port B als "output" und Port D als "input" 
 
 definiert werden. 
-
-
 
 Vorher eine kurze Bemerkung: um eine Zahl in die Arbeitsregister r16 bis r31 zu schreiben 
 
@@ -822,21 +654,15 @@ eines Arbeitsregisters, in dem die Zahl gespeichert ist. Der Befehl "ldi" funkti
 
 I/O-Registern nicht. Das ganze sieht dann zB. so aus: 
 
-
-
 	ldi r16, 0xFF
 
 	out DDRB, r16 ; PortB als output
-
-
 
 Es wird also zuerst eine Zahl in ein Arbeitsregister geladen und von dort dann in des 
 
 Register DDRB (Data Direction Register for Port B). Wenn in diesem I/O-Register wie in 
 
 diesem Fall alle Bits auf 1 gesetzt sind, so gelten alle Pins dieses Ports als Ausgänge. 
-
-
 
 Mit dem Befehl "rjmp" (relative jump) kann der MC angewiesen werden, einen bestimmten Befehl 
 
@@ -858,11 +684,7 @@ Im Kapitel Maschinencode steht, wie diese Sprungadressen konkret vom Assembler v
 
 werden. Dann wird auch klar, warum obige Sprünge "relativ" sind.
 
-
-
 .include "4433def.inc"
-
-
 
 	rjmp weiter  ; überspringe die nop's
 
@@ -894,13 +716,9 @@ loop:
 
 	
 
-
-
 Mit diesen Sprüngen ist auch eine Art strukturierte Programmierung möglich. Im folgenden 
 
 wird eine if-Struktur programmiert, wie sie von Hochsprachen wie C oder Java bekannt sind:
-
-
 
 	if ( ) {
 
@@ -912,19 +730,11 @@ wird eine if-Struktur programmiert, wie sie von Hochsprachen wie C oder Java bek
 
 	}
 
-
-
-
-
 Konkret schaltet das Programm zwei LED's an PortB alternierend an und aus und legt dann 
 
 eine Kunstpause ein.
 
-
-
 .include "4433def.inc"
-
-
 
 	ldi r16, 50
 
@@ -932,11 +742,7 @@ eine Kunstpause ein.
 
 	out DDRB, r17 ; port B als Ausgabe (über LED's)
 
-
-
 loop1:
-
-
 
 	if1:
 
@@ -962,8 +768,6 @@ loop1:
 
 	endif1:
 
-
-
 	ldi r17, 255
 
 	while1:
@@ -980,19 +784,11 @@ loop1:
 
 	rjmp loop1
 
-
-
-
-
 Der Knackpunkt in obigem Programm sind diese beiden Anweisungen:
-
-
 
 		cpi r16, 100 ; compare immediate
 
 		brne else1   ; branch if not equal
-
-
 
 Es wird mit "cpi" der Inhalt von Register 16 verglichen mit der Zahl 100. Der MC 
 
@@ -1001,8 +797,6 @@ macht das so, als wenn er von Register 16 die Zahl 100 abzieht und alle Flags de
 Status-Registers setzt, aber den Inhalt von Register 16 ansonsten so beläßt, wie er vor 
 
 der Operation war. Es wird also nicht echt subtrahiert.
-
-
 
 Die Anweisung "brne" prüft danach den Zero-Flag. Wenn der Inhalt des Registers 16 genauso 
 
@@ -1014,31 +808,21 @@ Programmablauf geht direkt bei der nächsten Anweisung weiter. Am Ende dieses Zwe
 
 wird dann zur Marke endif1 gesprungen. 
 
-
-
 Wenn der Inhalt des Registers 16 nicht identisch ist mit der Zahl 100, dann steht nach 
 
 der simulierten Subtraktion der Zero-Flag auf 0. "brne" wird in diesem Fall direkt zur 
 
 Marke else1 springen und von dort aus automatisch irgendwann die Marke endif1 erreichen.
 
-
-
 Die folgende Anweisung funktioniert ähnlich, allerdings wird hier echt subtrahiert: 
-
-
 
 		subi r17, 1
 
 		breq endwhile1 ; wenn Zero-Flag gesetzt 
 
-
-
 Die Anweisung "breq" springt zur Anweisung "endwhile1" sobald das Ergebnis der Subtraktion 
 
 0 ist. Andernfalls arbeitet der MC den nächstfolgenden Befehl ab.  
-
-
 
 Da der MC recht schnell arebitet, ist obiges "Päuschen" so kurz, das das Auge den 
 
@@ -1047,8 +831,6 @@ Unterschied an den LEDs garnicht richtig mitbekommt. Um die LEDs auch sichtbar a
 blinken zu lassen, wäre eine ineinandergeschachtelte Schleifenkonstruktion erforderlich 
 
 so ähnlich wie:
-
-
 
 	ldi r17, 0
 
@@ -1070,21 +852,13 @@ so ähnlich wie:
 
 		brne delay
 
-
-
 Aus dieser Schleife kommt der MC erst wieder raus, wenn der Wert in Register 19 auf 0 
 
 dekrementiert wurde. Und das dauert eine Weile ...
 
-
-
-
-
 4. Bit-Operationen:
 
 --------------------
-
-
 
 Soweit zum Thema Programmieren. Jetzt manipulieren wir mal gezielt Bits in einem Register, 
 
@@ -1094,13 +868,9 @@ wenn eine Zahl in dem Register schon geladen ist. Es werden also gezielt Bits ge
 
 nützliche Effekte (vorausgesetzt es funktioniert so, wie man sich das vorstellt): 
 
-
-
 Erst mal die logische Operation AND. Dabei werden 2 Bytes Bit für Bit verglichen und das 
 
 jeweils resultierende Bit ergibt sich nach folgender Regel :
-
-
 
 AND     1    1   ->  1  
 
@@ -1110,27 +880,19 @@ AND     1    1   ->  1
 
         0    0   ->  0  
 
-
-
 Das Ergebnis des logischen Vergleichs ist also nur dann 1 (wahr), wenn beide Bits den 
 
 Wert 1 hatten. Die entsprechende Assembler-Anweisung lautet "andi" (AND immediate).
 
-
-
 ldi  r16, 0b00001110  ; im Register:    0000 1110 
 
 andi r16, 0b00000001  ; im Register:    0000 0000 
-
-
 
 Das Ergebnis dieser Aktivitäten ist also Zahl 0 im Register r16. Das unterste Bit bleibt 
 
 in diesem Fall so wie es war und alle anderen Bits werden zu 0 
 
 ("Isolieren" nennt man das ganze). 
-
-
 
 Bei der logischen Operation OR (inklusives OR) werden 2 Bytes Bit für Bit verglichen und 
 
@@ -1146,21 +908,15 @@ OR      1    1   ->  1
 
         0    0   ->  0  
 
-
-
 Das Ergebnis des logischen Vergleichs ist also dann 1 (wahr), wenn irgendeins der beiden 
 
 Bits den Wert 1 hatte. Die entsprechende Assembler-Anweisung lautet "ori" (OR immediate).
 
 Nur wenn beide Bits 0 sind dann ist das Ergebnis des Vergleichs auch 0.
 
-
-
 ldi  r16, 0b00001110  ; im Register:    0000 1110 
 
 ori  r16, 0b00000001  ; im Register:    0000 1111 
-
-
 
 Das Ergebnis dieser Aktivitäten ist also Zahl 15 im Register r16. In diesem Fall wird das 
 
@@ -1168,13 +924,9 @@ unterste Bit immer gesetzt (egal welchen Wert es vorher hatte), die restlichen B
 
 so wie vor der Bit-Operation.
 
-
-
 Bei der logischen Operation XOR ("exklusives oder") werden 2 Bytes Bit für Bit verglichen 
 
 und das jeweils resultierende Bit ergibt sich nach folgender Regel:
-
-
 
 XOR     1    1   ->  0  
 
@@ -1184,10 +936,6 @@ XOR     1    1   ->  0
 
         0    0   ->  0  
 
-
-
-
-
 Das Ergebnis des logischen Vergleichs ist also dann 1 (wahr), wenn nur eines der beiden 
 
 Bits den Wert 1 hatte. Wenn beide Bits den Wert 1 hatten, dann ist das Ergebnis 0. Die 
@@ -1196,37 +944,25 @@ entsprechende Assembler-Anweisung lautet "eor".
 
 				
 
-
-
 ldi  r16, 0b00001110  ; im Register:    0000 1110 
 
 ldi  r17, 0b00001000  ; im Register:    0000 1000 
 
 eor  r16, r17         ; im Register:    0000 0110 
 
-
-
 Das Ergebnis dieser Aktivitäten ist also Zahl 6 im Register. 
-
-
 
 Mit diesen logischen Operationen lassen sich gezielt bestimmte Bits in einem Byte 
 
 entweder setzen oder zurücksetzen. 
 
-
-
 Wie setze ich in einem Byte das Bit 3 auf 1 und lasse die restlichen Bits des 
 
 Byte so wie sie momentan sind ? 
 
-
-
 Dazu braucht man ein Byte, in dem die Bits folgendermaßen aufgebaut sind 
 
 (das nennt man Bit-Maske) :
-
-
 
   0000 1000       nur Bit 3 hat Wert 1, alle anderen Bits haben Wert 0
 
@@ -1235,8 +971,6 @@ Dazu braucht man ein Byte, in dem die Bits folgendermaßen aufgebaut sind
 Und dann muß das Register-Byte und das Masken-Byte logisch mit OR verknüpft werden. 
 
 Der passende Befehl lautet: 
-
-
 
 ldi r16, 0b11000011  ; im Register:    1100 0011
 
@@ -1248,17 +982,11 @@ Danach ist im Byte von Register r16 das Bit Nummer 3 auf jeden Fall auf 1 gesetz
 
 welchen Wert das Bit vorher hatte. Die restlichen Bits bleiben so, wie sie sind. 
 
-
-
 Wie bekomme ich eine 0 in die Bits 3 und 4 in einem Register-Byte und lasse die restlichen 
 
 Bits des Byte so wie sie momentan sind ? 
 
-
-
 Man nehme dazu ein Byte-Maske, in dem die Bits folgendermaßen aufgebaut sind 
-
-
 
   1110 0111       nur Bit 3 und 4 haben Wert 0, alle anderen Bits haben Wert 1
 
@@ -1267,8 +995,6 @@ Man nehme dazu ein Byte-Maske, in dem die Bits folgendermaßen aufgebaut sind
 Und dann muß das Register-Byte und das Masken-Byte logisch mit AND verknüpft werden. 
 
 Der passende Befehl lautet: 
-
-
 
 ldi  r16, 0b01010101  ; im Register:    0101 0101
 
@@ -1280,13 +1006,9 @@ Danach ist im Byte von Register r16 das Bit Nummer 3 und 4 auf jeden Fall auf 0 
 
 egal welche Werte die Bits vorher hatten. Die restlichen Bits bleiben so, wie sie sind. 
 
-
-
 Praktisch sind diese Bit-Masken, weil damit alle Bits eine Byte mit einem einzigen 
 
 Befehl gesetzt werden könen.
-
-
 
 Für die unteren 32 I/O-Register (ports) gibt es einen eigenen Befehl, um gezielt ein Bit 
 
@@ -1294,11 +1016,7 @@ auf 0 oder 1 zu setzen. Mit folgendem Befehl wird in einem UART Control-Register
 
 RXEN auf 1 gesetzt. 
 
-
-
 sbi UCSRB, RXEN ; set bit in IO-register 
-
-
 
 Damit wird ein Empfang von Daten über die serielle Schnittstelle ermöglicht.
 
@@ -1314,33 +1032,21 @@ wo auch der Quellcode des Programms steht).
 
 .equ	RXEN  = 4
 
-
-
 UCSRB steht also für Adresse Hex 0A und RXEN steht für Bit Nummer 4.
-
-
 
 Mit folgendem Befehl wird in einem UART Control-Register das Bit RXEN auf 0 
 
 zurückgesetzt und der MC liest keine Daten mehr von der Schnittstelle. 
 
-
-
 cbi UCSRB, RXEN ; clear bit IO-Register
-
-
 
 OK, und wie kann ich alle Bits eine Byte umdrehen, so daß alle 1 zu 0 werden und umgekehrt ?
 
 Antwort: mit dem Einser-Komplement.
 
-
-
 ldi r16, 0b11000011  ; im Register:    1100 0011
 
 com r16              ; im Register:    0011 1100
-
-
 
 So, und was kann man mit diesen Bits noch so alles machen ? Man kann die Bits eines 
 
@@ -1348,15 +1054,11 @@ Register-Byte auch nach links und rechts schieben. Die Befehle lauten
 
 lsl (logical shift left) und lsr (logical shift right).
 
-
-
 ldi r16, 0b00001010 ; im Register: 00001010                         dezimal: 10
 
 lsl r16             ; im Register: 00010100   <-- links geschoben;  dezimal: 20
 
 lsr r16             ; im Register: 00001010   --> rechts geschoben; dezimal: 10
-
-
 
 Wenn die Bits eine Stelle nach links geschoben werden, dann entspricht das einer 
 
@@ -1366,25 +1068,17 @@ Bit hat also nach dem Schieben immer den Wert 0. Das nach links rausgeschobene B
 
 im Carry-Flag des Status-Registers gespeichert.
 
-
-
 Wenn die Bits eine Stelle nach rechts geschoben werden, dann entspricht das einer 
 
 Division durch 2. Von links wird 0 reingeschoben, das nach rechts rausgeschobene Bit wird 
 
 zum Carry-Flag.
 
-
-
 Dann kann man die Bits noch im Kreis rotieren lassen. Die Befehle sind rol (rotate left 
 
 through carry) und ror (rotate right through carry). Dabei wird der Wert des Carry-Flags 
 
 jeweils reingeschoben und das rausgeschobene Bit wird im Carry-Flag gespeichert.
-
-
-
-
 
                        Carry-Flag  Register   Carry-Flag 
 
@@ -1398,25 +1092,13 @@ rol r16             ;      0       1111 1000     1
 
 rol r16             ;      1       1111 0001     1
 
-
-
-
-
-
-
-
-
 5. negative Zahlen:
 
 --------------------
 
-
-
 Jetzt zu den Zahlen mit Vorzeichen, also den negativen und positiven Zahlen 
 
 (signed numbers). 
-
-
 
 In diesem Fall muß irgendwo in den 8 Bits eine Information stehen, ob die betreffende Zahl 
 
@@ -1425,8 +1107,6 @@ positiv ist (Vorzeichen +) oder negativ ist (Vorzeichen -). Dafür hat man sich d
 höchstwertige Bit ausgesucht, das Bit ganz links sozusagen. Wenn dieses Bit 0 ist, dann 
 
 ist die Zahl positiv, wenn dieses Bit 1 ist, dann ist die Zahl negativ. 
-
-
 
 Jetzt gibt es aber ein kleines Problem: wie kann dann noch die Zahl 255 dargestellt werden, 
 
@@ -1438,15 +1118,11 @@ werden. Die obere Grenze bei 8 Bits und Vorzeichen ist +127, die untere Grenze l
 
 nicht mehr bei 0 sondern bei -128.
 
-
-
 Allerdings ist -1 nicht dargestellt mit 1000 0001, wie man ja durchaus vermuten könnte. 
 
 Sondern die negative Zahl wird durch ein sogenanntes Zweier-Komplement dargestellt. Das 
 
 ganze funktioniert dann so, als ob man von 0 die jeweilige (absolute) Zahl abzieht.
-
-
 
   0000 0011    +3
 
@@ -1462,8 +1138,6 @@ ganze funktioniert dann so, als ob man von 0 die jeweilige (absolute) Zahl abzie
 
   1111 1101    -3
 
-
-
 Dazu gilt eine einfache Regel, um eine positive Zahl in eine negative Zahl zu verwandeln :
 
 man drehe alle Bits um (von 0 nach 1 und von 1 nach 0) und addiere am Ende noch 0000 0001 
@@ -1472,31 +1146,19 @@ und schon hat man die richtige Bit-Folge für die negative Zahl. Nehmen wir als B
 
 Zahl +3, die wir in -3 wandeln:
 
-
-
    dezimal:          binär:    
 
      +3             0000 0011
-
-
 
                     1111 1100 + 1 
 
      -3           = 1111 1101
 
-
-
-
-
 Es gibt auch einen Befehl, um eine solche Negation zu erreichen (sinnigerweise NEG).
-
-
 
 ldi r16, 3  ;  dezimal +3   Register: 0000 0011
 
 neg r16     ;  dezimal -3   Register: 1111 1101
-
-
 
 Dumme Frage: wie kann der MC eigentlich feststellen, ob die Zahl in einem Register jetzt 
 
@@ -1508,8 +1170,6 @@ Antwort: der MC kann es überhaupt nicht feststellen. Der MC weiß nie, ob die Zah
 
 Register im Assembler-Programm jetzt als vorzeichenbehaftet interpretiert wird oder nicht. 
 
-
-
 Und da der MC nicht weiß was läuft, setzt er bei Rechenoperationen wie Addition und 
 
 Division immer auch alle Flags, die für vorzeichenbehaftete Zahlen notwendig 
@@ -1518,11 +1178,7 @@ sind. Im ungünstigsten Fall macht der MC etwas, was vom Programmierer in dem jew
 
 Zusammenhang nicht gebraucht wird.
 
-
-
 Für vorzeichenbehaftete Zahlen sind folgende Flags des Status-Registers relevant:
-
-
 
 Status-Register: Bit 7   
 
@@ -1540,19 +1196,11 @@ Status-Register: Bit 7
 
                  Bit 0   C  Carry flag
 
-
-
-
-
 Der Carry-Flag wird gesetzt, wenn die Bit-Folge von 0000 0000 auf 1111 1111 dreht 
 
 (bzw. umgekehrt). 
 
-
-
 Der Zero-Flag wird gesetzt, wenn das Ergebnis der Rechenoperation Null ist.
-
-
 
 Der Negativ-Flag wird gesetzt, wenn das Ergebnis der Rechenoperation eine negative 
 
@@ -1560,31 +1208,21 @@ Zahl sein *könnte*. Der Negativ-Flag ist 1 bei allen Operationen, bei denen das 
 
 zwischen folgenden Bit-Folgen liegen:
 
-
-
 	binär:       dezimal:
 
 	1111 1111      -1
 
 	1111 1110      -2
 
-
-
    ...
-
-
 
 	1000 0001      -127
 
 	1000 0000      -128
 
-
-
 Der Overflow-Flag wird gesetzt, wenn die Zahl im Register wechselt zwischen der höchsten 
 
 positiven Zahl und der negativsten Zahl (das heißt +127 und minus 128). 
-
-
 
 	binär:       dezimal:
 
@@ -1592,11 +1230,7 @@ positiven Zahl und der negativsten Zahl (das heißt +127 und minus 128).
 
 	1000 0000      -128     negativste Zahl
 
-
-
 Beim Inkrementieren sieht das dann so aus :
-
-
 
 dezimal:  Register:                Carry Negativ Overflow 
 
@@ -1616,10 +1250,6 @@ dezimal:  Register:                Carry Negativ Overflow
 
                      + 0000 0001
 
-
-
-
-
 6. "große" Zahlen:
 
 -------------------
@@ -1632,13 +1262,9 @@ wie kann ich dann die Zahl 444 speichern ?
 
 Antwort: man nimmt halt 2 Register. 
 
-
-
 ldi r16, 0b10111100  ;  dezimal: 188 = 444 - 256 
 
 ldi r17, 0b00000001  ;  dezimal:   1 
-
-
 
 Huch, und wo kommt jetzt die 256 her, die von 444 abgezogen wird ? 
 
@@ -1648,23 +1274,15 @@ unteren Byte (in r16) auf 0 stehen, dann entspricht das bei zusammengefaßter Sch
 
 dieser Bitfolge: 
 
-
-
 0000 0001 0000 0000
 
-
-
 | r17    | r16     | 
-
-
 
 Und damit wird die Dezimalzahl 256 dargestellt. Das heißt mit anderen Worten: von der 
 
 Zahl 444 ist anteilig 256 codiert in dem oberen Byte (in r17) und in dem unteren Byte 
 
 (in r16) braucht dann nur noch der restliche Anteil codiert zu werden, besagte 188.
-
-
 
 Wenn man jetzt beide Register r17:16 bei Rechenoperationen zusammen behandelt, dann stellen 
 
@@ -1674,29 +1292,19 @@ gar nicht mit. Daß die Register r16 und r17 logisch zusammengehören, das weiß nu
 
 Programmierer. 
 
-
-
 dezimal:   binär:
 
   444      0000 0001 1011 1100 
 
           |   R17   |   R16   |
 
-
-
-
-
 Das ganze sieht zwar aus wie von hinten durch die Brust ins Auge, aber damit können jetzt 
 
 fast beliebig große Zahlen dargestellt werden, solange wie die Register ausreichen.  
 
-
-
 Diese "Großzahlen" können auch addiert werden. Im folgenden Beispiel wird dezimal 444 
 
 addiert zu 444:
-
-
 
 ldi r16, 0b10111100  ;  dezimal: 188
 
@@ -1706,17 +1314,11 @@ ldi r18, 0b10111100  ;  dezimal: 188
 
 ldi r19, 0b00000001  ;  dezimal:   1
 
-
-
 add r16, r18
 
 adc r17, r19
 
-
-
 r16 und r17 haben jetzt (zusammen betrachtet) das Resultat der Addition.
-
-
 
 dezimal:   binär:
 
@@ -1724,31 +1326,19 @@ dezimal:   binär:
 
           |   R17   |   R16   |
 
-
-
 Die Addition erfolgt also hier 2-stufig :  
-
-
 
 1) mit ADD  werden erst die niederwertigen Bytes addiert. Dabei wird vom MC automatisch der 
 
 Carry-Flag gesetzt, wenn die Summe der beiden Bytes größer als 255 ist.
 
-
-
 2) mit ADC (add with carry) werden dann die höherwertigen Bytes addiert. Der Trick besteht 
 
 hier darin, den Übertrag von der ersten Addition auch noch dazuzuzählen, deswegen ADC.  
 
-
-
-
-
 Das funktioniert auch mit Subtraktion, nur lauten die Assembler-Befehle dann 
 
 "sub" für Subtraktion und "sbc" für Subtraktion über Carry.
-
-
 
 ldi r16, 0b10111100  ;  dezimal: 188
 
@@ -1758,25 +1348,15 @@ ldi r18, 0b10111100  ;  dezimal: 188
 
 ldi r19, 0b00000001  ;  dezimal:   1
 
-
-
 sub r16, r18
 
 sbc r17, r19
 
-
-
 Danach ist der Wert von Register r16 und r17 jeweils 0000 0000. 
-
-
-
-
 
 7. Direktiven und Ausdrücke:
 
 ----------------------------
-
-
 
 Wenn der Assembler Programmcode liest, dann interpretiert er den Programmtext und 
 
@@ -1784,43 +1364,25 @@ generiert ablauffähigen Maschinencode. Dabei kann er auch Ausdrücke sofort ausre
 
 zum Beispiel in 
 
-
-
 ldi r16, 1 + 2 + 3   ;  Addition
-
-
 
 Der Assembler interpretiert den Ausdruck "1 + 2 + 3" und kommt zum Ergebnis "6". 
 
 Er behandelt die Anweisung so, als wenn im Programm in dieser Zeile gestanden hätte:
 
-
-
 ldi r16, 6
-
-
 
 Der Assembler versteht dabei alle gängigen arithmetischen Ausdrücke, auch Bit-Operationen 
 
 kann er gleich umsetzen:
 
-
-
 ldi r16, (1<<7) + (1<<3)  ; Bits soundsoviel Stellen nach links schieben
-
-
 
 Obige Anweisung wird also vom Assembler so behandelt, as wenn im Programm gleich gestanden 
 
 hätte:
 
-
-
 ldi r16, 0b10001000
-
-
-
-
 
 Dann gibt es noch eine Reihe von Direktiven, mit denen die Generierung des Maschinencodes 
 
@@ -1832,27 +1394,15 @@ zuordnen und mit ".equ" lassen sich Ausdrücke benennen. Die entsprechenden Namen
 
 dann im weiteren Programm benutzt werden.
 
-
-
 .def temp = r16       ; eigener Name für Register 16 
 
 .equ quartz = 3686400 ; Standard-Taktfrequenz beim STK500 
 
-
-
 ldi temp, quartz / (9600*16) - 1  ; damit kann dann die Baud-Rate des UART eingestellt werden
-
-
-
-
-
-
 
 8. Stack und Interrupts:
 
 ------------------------
-
-
 
 Der Vollständigkeit sei erwähnt, daß sich "richtige" Assembler-Programme am Anfang 
 
@@ -1860,15 +1410,11 @@ gleich um Interrupts und den stack pointer (Stapelzeiger) kümmern sollten. Das k
 
 so ähnlich aussehen, wenn der MC Daten von der seriellen Schnittstelle (UART) lesen soll:
 
-
-
 .def temp = r16
 
 .equ quartz = 3686400 ; für STK500 
 
 ; .equ quartz = 4000000 ; für 4 MHz 
-
-
 
 rjmp main     ; Reset Handler : erste Stelle im Maschinencode, hier fängt der MC immer an
 
@@ -1898,8 +1444,6 @@ reti          ; EEPROM Ready Handler
 
 reti          ; Analog Comparator Handler
 
-
-
 main:                ; main program starts here
 
 	ldi temp, RAMEND   
@@ -1918,15 +1462,9 @@ main:                ; main program starts here
 
 	sei ; aktiviere interrupts
 
-
-
 loop:
 
 	rjmp loop ; main loop
-
-
-
-
 
 ;--------------------------------------------------
 
@@ -1941,10 +1479,6 @@ receive:
 	rcall transmit ; schicke es gleich wieder zurück
 
 reti ;  wie ret, schaltet aber sofort globalen Interrupt-Flag wieder ein
-
-
-
-
 
 ;--------------------------------------------------
 
@@ -1962,19 +1496,11 @@ transmit:
 
 ret ; Programm geht zurück zu "rcall" und macht beim nächstfolgenden Befehl weiter    
 
-
-
-
-
 Der "stack" (stapel bzw. Haufen) wird in dem obigen Programm gebraucht für den Aufruf des 
 
 Unterprogramms "transmit". 
 
-
-
 	rcall transmit ; schicke es gleich wieder zurück
-
-
 
 Und zwar hat der Befehl "rcall" die nette Eigenschaft, zu einem Unterprogramm zu 
 
@@ -1983,8 +1509,6 @@ verzweigen, dasselbe auszuführen und dann wieder im Programmablauf automatisch
 zurückzuspringen und den Befehl nach dem "rcall" auszuführen. OK, ganz so automatisch 
 
 ist es nicht, man muß in dem Unterprogramm mit dem Befehl "ret" (return) etwas nachhelfen. 
-
-
 
 Damit der MC an die richtige Stelle zurückspringt, merkt er sich diese Programm-Adresse, 
 
@@ -2008,29 +1532,17 @@ inkrementiert. Schematisch sieht das dann ungefähr so aus (RAMEND hat beim 4433 
 
 Wert $DF).
 
-
-
 										vor Aufruf des    vor Rücksprung zum                 nach Rücksprung zum                                          
 
                     Unterprogramms:   Hauptprogramm:                     Hauptprogramm: 
 
-
-
 SP:                  RAMEND            RAMEND - 2                         RAMEND  
-
-
-
-
 
 SRAM:   RAMEND - 2     ???             ???                                 ???
 
 SRAM:   RAMEND - 1     ???             high byte der Rücksprungadresse     ??? 
 
 SRAM:   RAMEND - 0     ???             low  byte der Rücksprungadresse     ???
-
-
-
-
 
 In obigem Programm ist ein Interrupt aktiviert. Und zwar wird der MC automatisch aktiv, 
 
@@ -2056,29 +1568,17 @@ Programm-Adresse gemerkt. Und auch in diesem Fall speichert er die 2 Bytes der
 
 Programm-Adresse auf dem stack und liest sie vor dem Rücksprung von dort wieder zurück.
 
-
-
 Wenn obiges Programm ausgeführt wird, dann fängt der MC bei der ersten Adresse im 
 
 Programm-Speicher an.  Dort steht der Befehl 
 
-
-
 	rjmp main     ; Reset Handler 
 
-
-
 und damit werden die Interrupt-Sprungadressen bei Einschalten des MC einfach übersprungen.
-
-
-
-
 
 9. Maschinencode :
 
 -------------------
-
-
 
 Zu guter letzt noch etwas für Neugierige, die es ganz genau wissen wollen. 
 
@@ -2086,11 +1586,7 @@ Wie sieht dieser Machinencode (auch opcode genannt) eigentlich aus, mit dem der 
 
 gefüttert wird ?
 
-
-
 .include "4433def.inc"
-
-
 
 	rjmp weiter  ; überspringe die nop's
 
@@ -2130,8 +1626,6 @@ hexadezimale Schreibweise benutzt mit Zeilenumbruch nach jeweils 2 Byte. Für jed
 
 Maschinenbefehl (opcode genannt) wird auch der Quellcode des Assemblerprogramms angegeben.
 
-
-
 opcode:     Quellcode:
 
 -------     -------------
@@ -2156,10 +1650,6 @@ bb08      	out PORTB, r16
 
 cffd      	rjmp loop 
 
-
-
-
-
 Der Assembler generiert also für jede Programmzeile einen Maschinencode, der in 2 Bytes 
 
 reinpaßt. Leerzeilen/Kommentarzeilen werden ignoriert, das leuchtet ein. Aber für die 
@@ -2178,25 +1668,15 @@ diese Addresse mühsam ausrechnen muß. Diese Arbeit übernimmt der Assembler beim 
 
 des Quellcodes.
 
-
-
 Schaun wir uns doch mal die erste Anweisung an: 
 
-
-
 	rjmp weiter
-
-
 
 Entsprechend dem Befehlssatz (instruction set) des AVR wird diese Anweisung übersetzt 
 
 in folgenden 16-bit opcode:
 
-
-
 	1100 kkkk kkkk kkkk
-
-
 
 1100 ist dabei fest vorgegeben und ist die "Kennung" für rjmp (relative jump). 
 
@@ -2210,29 +1690,17 @@ vor- bzw. zurückgesprungen werden soll. Mit k wird also keine absolute Adresse d
 
 sondern ein relativer Sprung spezifiziert. Die Syntax für diesen Befehl ist 
 
-
-
 	PC <-- PC + k + 1
-
-
 
 PC steht dabei für program counter und bezeichnet die Nummer des aktuell in Bearbeitung 
 
 stehenden Befehls. 
 
-
-
 Konkret ist der Maschinenbefehl, der also im Programmspeicher steht, in diesem Fall hexadezimal 
-
-
 
    c002
 
-
-
 Binär ausgedrückt ist das 
-
-
 
    1100 0000 0000 0010 
 
@@ -2244,8 +1712,6 @@ und damit ist die relative Sprung-Adresse binär
 
         0000 0000 0010 
 
-
-
 Damit ist dezimal die Zahl 2 codiert, die den Sprung vorgibt. Konkret bedeutet dies, 
 
 daß der MC vom aktuell bearbeiteten Befehl im Programmspeicher 2 Befehle weiterspringen soll 
@@ -2254,31 +1720,19 @@ und den darauffolgenden Befehl zu lesen und auszuführen hat. Und das ist die Pro
 
 ef0f, also ganz so wie geplant.
 
-
-
 Die letzte Anweisung in dem Programm ist auch eine relative Sprung-Anweisung, aber 
 
 diesmal wird im Programmablauf rückwärts gesprungen.
 
-
-
 	rjmp loop
-
-
 
 Hex cffd ist binär 
 
-
-
 	1100 1111 1111 1101 
-
-
 
 und damit ist die relative Sprung-Adresse binär 1111 1111 1101 bzw. dezimal -3 
 
 (um das zu verstehen, muß man die Sache mit den Zahlen und den Vorzeichen lesen). 
-
-
 
 Für den MC ist der Programmcode cffd eine Anweisung, vom aktuell bearbeiteten Befehl 
 
@@ -2288,29 +1742,19 @@ lesen und auszuführen. Und das ist die Programmanweisung b300, also auch wieder 
 
 vorgesehen.
 
-
-
-
-
 10. Befehlssatz 
 
 ---------------
 
-
-
 Und hier noch für die Leute, die ernsthaft zu Ergebnissen kommen wollen, der 
 
 komplette Befehlssatz des AT90S4433 in alphabetischer Reihenfolge zum Auswendiglernen.
-
-
 
 Bei Konstanten wird jeweils der größtmögliche Wert angegeben (255 bedeutet 0 bis 255).
 
 r0, r1 etc sind Arbeits-Register; r25:24 ist Registerpaar r25 (high byte) und r24 (low byte).
 
 io31, io63 etc. sind Input-Output-Register (IO-Register), SREG bedeutet Status-Register
-
-
 
 Wenn r16 als Parameter angegeben ist, dann gilt der Befehl nur für die oberen 16 Register.
 
@@ -2319,8 +1763,6 @@ Wenn io31 als Parameter angegeben ist, dann gilt der Befehl nur für die unteren 
 Mit "label" ist die mit Doppelpunkt abgeschlossene Marke im Assembler-Programm gemeint (zB loop:).
 
 X-Registerpaar ist r27:26, Y-Registerpaar ist r29:28, Z-Registerpaar ist r31:30 
-
-
 
 adc r1, r0		; add with carry	(r1 + r0 + C, Ergebnis in r1)
 
@@ -2570,10 +2012,6 @@ tst r0		; test for zero or minus (logisches r0 AND r0, r0 unverändert)
 
 wdr			; watch dog reset (Hund fängt wieder von vorne an)  
 
-
-
-
-
 Einige Regeln:
 
 "Immediate"-Befehle (andi, cpi, ldi, ori, subi) gelten nur für obere 16 Arbeitsregister (ab r16). 
@@ -2581,8 +2019,6 @@ Einige Regeln:
 Mit Ausnamhe von "in" und "out" gelten die IO-Register ansprechenden Befehle gelten nur für 
 
 die unteren 32 IO-Register. Konkret sind das :
-
-
 
 $1E  EEAR   EEPROM Address Register
 
@@ -2634,8 +2070,6 @@ $04  ADCL   ADC Data Register Low
 
 $03  UBRRHI UART Baud Rate Register High
 
-
-
 Wenn die Bits der oberen IO-Register geändert werden sollen etc. dann muß das IO-Register 
 
 zuerst mit "in" in ein Arbeitsregister gelesen werden, dort wird dann mit den Bits gewerkelt 
@@ -2645,8 +2079,6 @@ und danach wird mit "out" das Arbeitsregister zu dem IO-Register kopiert. Ausnah
 Status-Register, für das es separate Befehle zum Setzen und Zurücksetzen der einzelnen Bits 
 
 gibt. Die oberen IO-Register sind :
-
-
 
 $3F  SREG   Status REGister
 
@@ -2686,15 +2118,7 @@ $26  ICR1L  Timer/Counter 1 Input Capture Register Low Byte
 
 $21  WDTCR  Watchdog Timer Control Register
 
-
-
-
-
-
-
 Und hier noch einige kleine Sachen zur Erläuterung:
-
-
 
 ; isoliere Bit 0 in Register 1 (stelle Bits 1 bis 7 auf 0, aber ändere unterstes Bit nicht)
 
@@ -2702,19 +2126,13 @@ ldi r0, 0b00000001   ;  bzw. ldi r0, 1
 
 and r1, r0  ; funktioniert bei allen Arbeitsregistern (0 - 31)
 
-
-
 ; setze Bits 0 und 1 in Register 16 auf 1, aber ändere die anderen Bits nicht :
 
 sbr r16, 0b00000011   ;  bzw. sbr r16, 3   funktioniert nur bei oberen 16 Arbeitsregistern
 
-
-
 ; schreibe jeweils 0 in die untersten 2 Bits von Register 16, aber ändere die anderen Bits nicht)
 
 cbr r16, 0b00000011   ;  bzw. cbr r16, 3   funktioniert nur bei oberen 16 Arbeitsregistern
-
-
 
 ; kopiere Bit 3 von Register 1 zu Bit 4 in Register 2 :
 
@@ -2722,13 +2140,9 @@ bst r1, 3  ; Bit zwischenspeichern im T flag
 
 bld r2, 4  ; T flag lesen
 
-
-
 ; schiebe ein Register 4 mal nach links mit einem einzigen Befehl:
 
 swap r0
-
-
 
 ; lade das Byte von Adresse 105 in Register 0 und schreibe es wieder zurück:
 
@@ -2741,8 +2155,4 @@ ld   r0, X     ; im Register ist jetzt das Byte von SRAM Adresse 105
 add  r0, 11    ; mach etwas mit dem Byte
 
 st   X, r0     ; schreibe das Byte wieder zurück zum SRAM zu Adresse 105
-
-
-
-
 

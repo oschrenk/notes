@@ -1,6 +1,6 @@
 # Scotland #
 
-Plan your trip even if you are off season. Many hostels bb might be closed or not reachable
+Plan your trip even if you are off season. Many hostels be might be closed or not reachable
 
 ## Arrival/Departure ##
 
