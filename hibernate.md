@@ -2,13 +2,13 @@
 
 ## Using native queries ##
 
-Issuing native sqlQueries
+Issuing native sql queries
 
 	sess.createSQLQuery("SELECT * FROM CATS").list();
 	
-will return a List of Object arrays (Object[]) with scalar values for each column. 
+will return a List of Object arrays (`Object[]`) with scalar values for each column. 
 
-Hibernate will use ResultSetMetadata to deduce the actual order and types of the returned scalar values. To avoid that or to simply be more explicit in what is returned:
+Hibernate will use `ResultSetMetadata` to deduce the actual order and types of the returned scalar values. To avoid that or to simply be more explicit in what is returned:
 
 	sess.createSQLQuery("SELECT * FROM CATS")
 	 .addScalar("ID", Hibernate.LONG)
@@ -16,4 +16,4 @@ Hibernate will use ResultSetMetadata to deduce the actual order and types of the
 	 .addScalar("BIRTHDATE", Hibernate.DATE)
 	This query specified:
 
-This will return Object arrays, but now it will not use ResultSetMetadata but will instead explicitly get the ID, NAME and BIRTHDATE column as respectively a Long, String and a Short from the underlying resultset. This also means that only these three columns will be returned, even though the query is using `*` and could return more than the three listed columns.
+This will return `Object` arrays, but now it will not use `ResultSetMetadata` but will instead explicitly get the `ID`, `NAME` and `BIRTHDATE` column as respectively a `Long`, `String` and a `Short` from the underlying resultset. This also means that only these three columns will be returned, even though the query is using `*` and could return more than the three listed columns.
