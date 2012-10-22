@@ -54,7 +54,7 @@ I was trying to sync data to a Solaris machine but ran into this error:
 	rsync: connection unexpectedly closed (0 bytes received so far) [sender]
 	rsync error: remote command not found (code 127) at io.c(454) [sender=2.6.9]
 	
-Rsync was installed on both machines but somehow the solaris machine wasn't able find rsync in the given path. I guess this is its trying to sync over ssh, and when by doing so doesn't include the `/usr/local/bin` directory.
+Rsync was installed on both machines but somehow the solaris machine wasn't able find rsync in the given path. I guess this is its trying to sync over ssh, and in doing doesn't include the `/usr/local/bin` directory in the `$PATH.
 
 Luckily you can pass the path of rsync as a parameter
 
