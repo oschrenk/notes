@@ -37,7 +37,7 @@ rsync even has an built in option to exclude `cvs` or `svn` files, just add
 
 Copy files from `path` to `backup` deleting files that don't exist on the sending side, ignoring `.git`
 
-	rsync -arvz --delete --exclude=.git /path /backup
+	rsync -arvz --delete --cvs-exclude --exclude=.git --exclude=.DS_Store /path /backup
 	
 Sync `.git` directory of the `~/Library/Scripts directory`
 
