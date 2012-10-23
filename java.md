@@ -4,14 +4,14 @@
 
 ### Java Class Loader ###
 
-The Java Class Loader is a part of the JRE that dynmacilly loads Java Classes into the Java Virtual Machine. Usually classes are loaded on demand (lazy initialization). The Java Run Time does not need to know about files and filesystems because of class loaders. They are an abstraction (or indirection) between a resource name and its actual location.
+The Java Class Loader is a part of the JRE that dynamically loads Java Classes into the Java Virtual Machine. Usually classes are loaded on demand (lazy initialization). The Java Run Time does not need to know about files and file systems because of class loaders. They are an abstraction (or indirection) between a resource name and its actual location.
 
-In Java a library, a collection of object code, is typically packaged in Jar files. Tge class loader is reponsible for locating libraries, reading their contents and loading the classes. 
+In Java a library, a collection of object code, is typically packaged in Jar files. The class loader is responsible for locating libraries, reading their contents and loading the classes. 
 
-When the JVM is started´, three class loaders are used.
+When the JVM is started, three class loaders are used.
 
 1. Bootstrap class loader. Loads core Java Libraries (in `$JAVA_HOME/lib`). Written in native code.
-2. Extensions class loader. Loads extensions code (in `$JAVA_HOME/lib/ext` or other dirs specified in `java.ext.dirs` system property). Implemented by the `sun.misc.Launcher$ExtClassLoader` class.
+2. Extensions class loader. Loads extensions code (in `$JAVA_HOME/lib/ext` or other directories specified in `java.ext.dirs` system property). Implemented by the `sun.misc.Launcher$ExtClassLoader` class.
 3. System class loader. Loads code found on `java.class.path`, which maps to the system `CLASSPATH` variable. Implemented by the `sun.misc.Launcher$AppClassLoader` class.
 
 All class loaders are of type `java.lang.ClassLoader`
@@ -88,9 +88,9 @@ A nested top-level class is a member classes with a `static` modifier. A nested 
 
 If your main class has a few smaller helper classes that can be used outside the class and make sense only with your main class, it's a good idea to make them nested top-level classes. To use the nested top-level class, write: `TopLevelClass.NestedClass`. 
 
-If you define a member class, that doesn't reference the surrounding top-level class, **do not** forget to declare it as `static` as otherwise each instance of this class has a reference to the surrounding class[p. 101][#Bloch:2002].
+If you define a member class, that doesn't reference the surrounding top-level class, **do not** forget to declare it as `static` as otherwise each instance of this class has a reference to the surrounding class [p. 101][#Bloch:2002].
 
-Nested top level classes are often usd to capsule objects representing components of the surrounding class (eg `Map.Entry`).
+Nested top level classes are often used to capsule objects representing components of the surrounding class (eg. `Map.Entry`).
 
 One **important note**: The `static` keyword does **not** do to a class declaration what it does to a variable or a method declaration. 
 	 
@@ -127,7 +127,7 @@ Every thrown `Exception` stops the `finalize()` method, but doesn’t stop the G
 
 ### JavaBeans ###
 
-Java and the programminjg world itself thrive on conventions. A _JavaBean_ has to conform to three properties
+Java and the programming world itself thrive on conventions. A _JavaBean_ has to conform to three properties
 
 - parameter less constructor  
 - class has (private ) member variables  
