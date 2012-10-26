@@ -1,16 +1,14 @@
-# Git Workflow #
-
-## Collaborative Development Models ##
+# Git Workflows #
 
 There are two popular models of collaborative development on GitHub:
 
-1. The Fork + Pull Model lets anyone fork an existing repository and push changes to their personal fork without requiring access be granted to the source repository. The changes must then be pulled into the source repository by the project maintainer. This model reduces the amount of friction for new contributors and is popular with open source projects because it allows people to work independently without upfront coordination.
+1. The **Fork + Pull Model** lets anyone fork an existing repository and push changes to their personal fork without requiring access be granted to the source repository. The changes must then be pulled into the source repository by the project maintainer. This model reduces the amount of friction for new contributors and is popular with open source projects because it allows people to work independently without upfront coordination.
 
-2. The Shared Repository Model is more prevalent with small teams and organizations collaborating on private projects. Everyone is granted push access to a single shared repository and topic branches are used to isolate changes.
+2. The **Shared Repository Model** is more prevalent with small teams and organizations collaborating on private projects. Everyone is granted push access to a single shared repository and topic branches are used to isolate changes.
 
 Pull requests are especially useful in the Fork + Pull Model because they provide a way to notify project maintainers about changes in your fork. However, they’re also useful in the Shared Repository Model where they’re used to initiate code review and general discussion about a set of changes before being merged into a mainline branch.
 
-### Fork + Pull ###
+## Fork + Pull ##
 
 If you work on open source code, try to follow these rules.
 
@@ -33,9 +31,9 @@ If you work on open source code, try to follow these rules.
 
 [#Kramer:2011]
 
-### Rebase Your Development Branch on the Latest Upstream ###
+## Rebase Your Development Branch on the Latest Upstream ##
 
-To keep your development branch up to date, rebase your changes on top of the current state of the upstream master. Check out [What's git-rebase?](#gitrebase1)* below to learn more about rebasing.
+To keep your development branch up to date, rebase your changes on top of the current state of the upstream master. Check out [What's git-rebase?](#gitrebase1) to learn more about rebasing.
 
 If you've set up an upstream branch as detailed above, and a development branch called 100-retweet-bugfix, you'd update upstream, update your local master, and rebase your branch from it like so:
 
