@@ -7,8 +7,7 @@
 
 - **Installation OSX**. `brew install maven`
 - **Create base directories** `mkdir -p src/{main,test}/{java,resources}`
--  **Read Maven project version** `mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate 
-    -Dexpression=project.version`
+-  **Read Maven project version** `mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version`
 
 ## Basics ##
 
