@@ -11,6 +11,7 @@
 | [Maven Inspector](http://prapicault.github.com/MavenInspector/) | Provides an eclipse view called "Maven Execution" that presents for a given pom the phases and associated MOJOs | [Update Site](http://prapicault.github.com/MavenInspector/repository)
 | [PMD](http://pmd.sourceforge.net/integrations.html#eclipse) | Static Code analysis | [Update Site](http://pmd.sf.net/eclipse) |
 | [Workspace Mechanic](http://code.google.com/a/eclipselabs.org/p/workspacemechanic/) | Workspace Mechanic automates maintenance and migration of your Eclipse environment in your company | [Update Site](http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic/). [Beta Update Site](http://workspacemechanic.eclipselabs.org.codespot.com/git.update/mechanic-testing/) |
+|[startexplorer](https://github.com/basti1302/startexplorer)| File Manager and Shell integration | [Update Site](http://basti1302.github.com/startexplorer/update/) |
 
 ## Configuration ##
 
