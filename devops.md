@@ -50,3 +50,6 @@
 - [owncloud](http://owncloud.org)
 - [syncany](http://www.syncany.org/)
 
+### Backup ###
+
+- [Amazon Glacier](http://aws.amazon.com/de/glacier/pricing/) Online storage for data archiving and backup optimized for data that is infrequently accessed and for which retrieval times of several hours are suitable.
