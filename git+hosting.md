@@ -12,6 +12,7 @@
 - [Gitblit](https://github.com/gitblit) Java. Project centric.
 - [Gitlab](http://gitlabhq.com/) Rails. Project centric.
 - [Girocco](http://repo.or.cz/w/girocco.git)
+- [SCM-Manager](http://www.scm-manager.org/) share and manage your Git, Mercurial and Subversion repositories over http.
 
 ## GitWeb ##
 
