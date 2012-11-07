@@ -56,7 +56,11 @@
 
 [d3](http://mbostock.github.com/d3/)
 
-> D3.js is a small, free JavaScript library for manipulating documents based on data.
+> D3.js is a small, free JavaScript library for manipulating documents based on data. Offering box plots, graphs, diagrams, ...
+
+[colony](https://github.com/hughsk/colony) Might be reusable for other graphs
+
+> network graphs representing the links between your Node.js code and its dependencies.
 
 ## Graphics ##
 
