@@ -6,20 +6,12 @@
 
 Read the following info
 
-	If this is your first install, automatically load on login with:
-    mkdir -p ~/Library/LaunchAgents
-    cp /usr/local/Cellar/mongodb/2.2.0-x86_64/homebrew.mxcl.mongodb.plist ~/Library/LaunchAgents/
-    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
-	
-	If this is an upgrade and you already have the homebrew.mxcl.mongodb.plist loaded:
-    launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
-    cp /usr/local/Cellar/mongodb/2.2.0-x86_64/homebrew.mxcl.mongodb.plist ~/Library/LaunchAgents/
-    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
-	
-	Or start it manually:
-    mongod run --config /usr/local/etc/mongod.conf
-	
-	The launchctl plist above expects the config file to be at /usr/local/etc/mongod.conf.
+	To have launchd start mongodb at login:
+	    ln -s /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents/
+	Then to load mongodb now:
+	    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+	Or, if you don't want/need launchctl, you can just run:
+	    mongod
 
 ## Usage ##
 
