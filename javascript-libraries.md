@@ -68,6 +68,10 @@
 
 > JavaScript library for working with the html5 canvas element. The Easel Javascript library provides a retained graphics mode for canvas including a full, hierarchical display list, a core interaction model, and helper classes to make working with Canvas much easier. Released under the MIT license
 
+[bonsai](http://bonsaijs.org/)
+
+> A lightweight graphics library with an intuitive graphics API and an SVG renderer.
+
 ## Game Engines #
 
 - [Crafty](https://github.com/louisstow/Crafty) 
