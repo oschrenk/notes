@@ -44,6 +44,11 @@
 - [Chef](http://www.opscode.com/chef/)
 - [VirtualBox](https://www.virtualbox.org/)
 
+## Log Managment ##
+
+- [logstash](http://logstash.net/). A tool for managing events and logs. You can use it to collect logs, parse them, and store them for later use (like, for searching).
+- [graylog2](http://graylog2.org). An open source log management solution that stores your logs in ElasticSearch. It consists of a server written in Java that accepts your syslog messages via TCP, UDP or AMQP and stores it in the database. The second part is a web interface that allows you to manage the log messages from your web browser.
+
 ## Files ##
 
 - [SparkleShare](http://sparkleshare.org/) File collaboration tool. Relies on Git.
