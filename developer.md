@@ -6,6 +6,7 @@ Subscribe to the announcement lists of your favourite tools, frameworks, and lib
 
 - [ZeroMQ](http://www.zeromq.org/). [Announcement](http://lists.zeromq.org/mailman/listinfo/zeromq-announce). 
 - [Guava](http://code.google.com/p/guava-libraries/). [Announcement](http://groups.google.com/group/guava-announce). [Discussion](http://groups.google.com/group/guava-discuss).
+- [Maven](http://maven.apache.org/). [Announcement](announce-subscribe@maven.apache.org). [Discussion](users-subscribe@maven.apache.org)
 
 Blogs
 
