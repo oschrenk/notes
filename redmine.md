@@ -7,7 +7,7 @@
 - [Redmine](http://www.turnkeylinux.org/redmine) on [TurnkeyLinux](http://www.turnkeylinux.org/) 
 
 Redmine configurations
-- Installed from upstream source code to /var/www/redmine
+- Installed from upstream source code to `/var/www/redmine`
 - Supports Git, Bazaar, Mercurial and Subversion.
 - Includes exemplary helloworld repositories.
 - Loaded default roles, trackers, statuses, workflows and enumerations.
