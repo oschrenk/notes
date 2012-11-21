@@ -62,6 +62,8 @@
 
 > network graphs representing the links between your Node.js code and its dependencies.
 
+[nvd3.js](http://nvd3.org/) A reusable chart library for d3.JS.
+
 ## Graphics ##
 
 [raphaël.js](https://github.com/DmitryBaranovskiy/raphael/)
