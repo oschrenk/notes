@@ -37,6 +37,7 @@
 
 - [Junit](https://github.com/KentBeck/junit) Open Source. Free. A programmer-oriented testing framework for Java.
 - [DbUnit](http://www.dbunit.org/). Open Source. Free. A JUnit extension targeted at database-driven projects that, among other things, puts your database into a known state between test runs
+- [XmlUnit](http://xmlunit.sourceforge.net/) Open Source. Free. A Junit extensions that allows assertions about differences between two pieces of XML.
 
 #### General ####
 
