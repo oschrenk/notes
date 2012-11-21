@@ -1,5 +1,9 @@
 # Vagrant #
 
+Installation
+
+	gem install vagrant
+
 Official Ubuntu boxes
 
 - [Ubuntu Lucid 32 Bit](http://files.vagrantup.com/lucid32.box)
