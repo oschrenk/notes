@@ -5,7 +5,7 @@
 - *Email is king*. Provide IMAP/SMTP access so that everyone can use client of choice.
 - [OpenFire](http://www.igniterealtime.org/projects/openfire/). Java. Jabber Server.
 - [Prosody](http://prosody.im/). Lua. Jabber Server.
-- [ejabberd](http://www.ejabberd.im/). Erlanf. Jabber Server.	
+- [ejabberd](http://www.ejabberd.im/). Erlang. Jabber Server.	
 - [Hubot](http://hubot.github.com/) for services integration
 
 ## Code ##
