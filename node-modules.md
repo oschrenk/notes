@@ -34,6 +34,10 @@
 - [log.io](http://logio.org/) Real-time log monitoring in your browser
 - [PDFKit](http://devongovett.github.com/pdfkit/) PDF document generation library
 
+## Testing ##
+
+- [Mocha](http://visionmedia.github.com/mocha/) Test framework running on node
+
 ## Fun with node.js ##
 
 - [node-serialport](https://github.com/voodootikigod/node-serialport) talk to serial devices
