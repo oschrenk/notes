@@ -4,15 +4,15 @@
 
 [What is the difference between shell, terminal and console?](http://superuser.com/questions/144666/what-is-the-difference-between-shell-console-and-terminal)
 
-The **shell** is the program which processes command and returns output. Most shells also manage foreground  and background processes, command history and command line editing, with [Bash](http://www.gnu.org/software/bash/) being the most common shell in modern linux systems.
+The **shell** is the program which processes command and returns output. Most shells also manage foreground  and background processes, command history and command line editing, with [Bash](http://www.gnu.org/software/bash/) being the most common shell in modern Linux systems.
 
-A **terminal** refers to a wrapper program which runs a shell. Decades ago, this was a physical device consisting of little more than a monitor and keyboard. As Unix/linux systems added better multiprocessing and windowing systems, this terminal concept was abstracted into software. Now you have programs such as Gnome Terminal which launches a window in a Gnome windowing environment which will run a shell into which you can enter commands.
+A **terminal** refers to a wrapper program which runs a shell. Decades ago, this was a physical device consisting of little more than a monitor and keyboard. As Unix/Linux systems added better multiprocessing and windowing systems, this terminal concept was abstracted into software. Now you have programs such as Gnome Terminal which launches a window in a Gnome windowing environment which will run a shell into which you can enter commands.
 
-The **console** is a special sort of terminal. Historically, the console was a single keyboard and monitor plugged into a dedicated serial console port on a computer used for direct communication at a low level with the operating system. Modern linux systems provide for virtual consoles. These are accessed through key combinations (e.g. `Alt+F1`) which are handled at low levels of the linux operating system -- this means that there is no special service which needs to be installed and configured to run. Interacting with the console is also done using a shell program.
+The **console** is a special sort of terminal. Historically, the console was a single keyboard and monitor plugged into a dedicated serial console port on a computer used for direct communication at a low level with the operating system. Modern Linux systems provide for virtual consoles. These are accessed through key combinations (e.g. `Alt+F1`) which are handled at low levels of the Linux operating system -- this means that there is no special service which needs to be installed and configured to run. Interacting with the console is also done using a shell program.
 
 ### Bash ###
 
-Wildcards in bash are referred to as pathname expansion. Pathname expansion is also sometimes referred to as **globbing**
+Wildcards in bash are referred to as pathname expansion. Pathname expansion is also sometimes referred to as **globbing**.
 
 Pathname expansion that is done by the shell (in this case bash) and not by the operating system or by the program that is being run.
 
@@ -50,14 +50,10 @@ You can combine these to get even more powerful filters, for example a filter th
 `grep [options] PATTERN [FILE...]` is useful here
 
 - `grep -R somevar` This searches the current directory tree recursively for anything matching `someVar`
-
 - `grep -iR`  By default grep works with fixed case. Change the behaviour by setting the insensitivity flag.
-
 - `grep -l` Prints a list of files that match without printing the matches themselves with. This is very useful for building a list of files to edit in your chosen text editor.
-
 - `grep -v` Exclude matches from result.
-
-- `grep -F` Matches for a fixed string-
+- `grep -F` Matches for a fixed string.
 
 ### Streams & Pipes ###
 
@@ -163,7 +159,7 @@ To find out how many users are logged on, type
 
 ## Filesystem ##
 
-The [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/pub/fhs-2.3.html) proposes
+The [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/pub/fhs-2.3.html) describes a set of requirements and guidelines for file and directory placement under UNIX-like operating systems. 
 
 The following directories, or symbolic links to directories, are required in `/`.
 
@@ -226,7 +222,7 @@ The binary (or decimal) notation for a triad is as follows
 
 #### Access Control lists
 
-Access Control lists is alist of file permissions attached to an object. They offer a far more complex system than basic unix file permissions.
+Access Control lists are lists of file permissions attached to an object. They offer a far more complex system than basic Unix file permissions.
 
 To see if a file has an ACL attached to it, you can use `ls -le`. 
 
@@ -240,14 +236,15 @@ The `@` indicates further file attributes. Consult [Apple File Attributes][3] fo
 
 This is a rather huge topic. Run `man chmod` and search for acl for a complete description.
 
-To delete an acl entry you have to run `chmod -a` with the exact defintion of the acl. For example:
+To delete an acl entry you have to run `chmod -a` with the exact definition of the acl. For example:
 	
     	$ ls -le
-    	-rw-rw----+ 1 Joe  staff      14336  1 Dez 12:23 file.ext
+    	-rw-rw----+ 1 Joe  staff      14336  1 Dec 12:23 file.ext
     	0: group:everyone deny delete
     	$ chmod -a "group:everyone deny delete" file.ext
 
 #### Apple File Attributes ####
+
 Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using `ls -ls` indicated by the `@` symbol. By calling `ls -@` or `xattr`you can see that an attribute `com.apple.quarantine` has been added. To remove that call `sudo xattr -d com.apple.quarantine path` or `xattr -d com.apple.quarantine path`
 
 ## FreeBSD Interrupt Signals ##
