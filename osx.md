@@ -77,13 +77,13 @@ If you have set up your keyboard to don't use dead keys, you can use OS C 10.7 f
 
 ### Save Password when using Cisco VPN
 
-Mac OS X asks you to manually enter the password every time you connect. TO change this behavior open the Keychain Access Application, select the System keychain and find your saved XAuth password entry in the list. Its Kind field will say IPSec XAuth Password.
+Mac OS X asks you to manually enter the password every time you connect. To change this behavior open the Keychain Access Application, select the System keychain and find your saved XAuth password entry in the list. Its Kind field will say IPSec XAuth Password.
 
 Open it, then on the Access Control tab click the Plus button to add another application. The file we need to select, `/usr/libexec/configd`, resides in a hidden folder. To navigate there, press `Command-Shift-G`, enter `/usr/libexec`, then pick `configd` in the dialog. Save your changes and that's it --- your saved password should now work.
 
 Depending on the security policy of the VPN Server this hint may not work.
 
-### Problems decrunching zip archives formed `*.z00?`
+### Problems uncompressing zip archives formed `*.z00?`
 
 1.  Change all the `.z01`, `.z02`, etc. file extensions to `.001`, `.002`, etc.
 2.  Change the file extension of the `.zip` file to `.00X` (`X`= the last numeric file extension from the `.001`, `.002`, etc. files + 1)
