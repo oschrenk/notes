@@ -57,7 +57,7 @@ Create the view
 
 ### Shutdown/restart server ###
 
-	sqlplus '/ as sysdba
+	sqlplus '/ as sysdba'
 	SQL> shutdown immediate
 	SQL> shutdown startup
 
