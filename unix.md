@@ -220,6 +220,14 @@ The binary (or decimal) notation for a triad is as follows
     no read no write execute = 001 = 1
     no read no write no execute = 000 = 0
 
+#### umask ####
+
+> `umask` (user mask) is a command and a function in POSIX environments that sets the file mode creation mask of the current process which limits the permission modes for files and directories created by the process. A process may change the file mode creation mask with umask and the new value is inherited by child processes.
+
+From [Umask](http://en.wikipedia.org/wiki/Umask) on Wikipedia.
+
+`umask` defines the default permissions of *newly created* files and directories.
+
 #### Access Control lists
 
 Access Control lists are lists of file permissions attached to an object. They offer a far more complex system than basic Unix file permissions.
