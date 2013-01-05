@@ -1,6 +1,6 @@
 # Design #
 
-## Digitial ##
+## Digital ##
 
 ### Icons ###
 
