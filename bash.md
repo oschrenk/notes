@@ -81,6 +81,18 @@ Other useful settings are
     # minor errors in the spelling of a directory component in a cd command will be corrected
     shopt -qs cdspell
 
+### Command Prompt Appearance ###
+
+There are several variables that can be set to control the appearance of the bash command prompt: `PS1`, `PS2`, `PS3`, `PS4` and `PROMPT_COMMAND`
+
+- `PS1` Default interactive prompt (this is the variable most often customized)
+- `PS2` Continuation interactive prompt (when a long command is broken up with `\` at the end of the line) default = `>`
+- `PS3` Prompt used by “select” loop inside a shell script
+- `PS4` Prompt used when a shell script is executed in debug mode (`set -x` will turn this on) default = `++`
+- `PROMPT_COMMAND` If this variable is set and has a non-null value, then it will be executed just before the `PS1` variable.
+
+
+
 ## Usage ##
 
 ### Tab completion ###
