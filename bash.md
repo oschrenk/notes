@@ -126,6 +126,16 @@ Special characters which can appear in prompt variables:
  - `\[` Begin a sequence of non-printing characters. (like color escape sequences). This allows bash to calculate word wrapping correctly.
  - `\]` End a sequence of non-printing characters.
 
+Examples
+
+Set a prompt like: `[username@hostname:~/CurrentWorkingDirectory]$`
+
+	PS1="[\u@\h:\w]\$ "
+
+Restore the default OS X Prompt `(Hostname:CurrentWorkingDirectory Username$)`
+
+	PS1="\h:\W \u\$"
+
 ## Usage ##
 
 ### Tab completion ###
