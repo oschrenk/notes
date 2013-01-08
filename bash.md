@@ -1,6 +1,8 @@
 # Bash #
 
-## Initialisation ##
+Bash is a Unix shell written by Brian Fox for the GNU Project.
+
+## Configuration ##
 
 When bash starts it reads the following files every time you login. For the purposes of OS X, this means every time you open a new Terminal window.
 
@@ -9,7 +11,7 @@ When bash starts it reads the following files every time you login. For the purp
 	~/.bash_login   (if .bash_profile does not exist)
 	~/.profile      (if .bash_login does not exist)
 
-When you start a new shell by typing bash on the command line, it reads `.bashrc`
+When you start a new shell by typing bash on the command line, it reads `.bashrc`.
 
 Finally, OS X also uses `~/.MacOSX/environment.plist` to set more environment variables, including paths if necessary.
 
@@ -28,49 +30,20 @@ When an interactive shell that is *not a login shell* is started, bash reads and
 
 So
 
-- `.profile` is for things that are not specifically related to Bash, like environment variables, `PATH` and friends, and should be available anytime. For example, `.profile` should also be loaded when starting a graphical desktop session.
-- `.bashrc` is for the configuring the interactive Bash usage, like Bash aliases, setting your favorite editor, setting the Bash prompt, etc.
-- `.bash_profile` is for making sure that both the things in `.profile` and `.bashrc` are loaded for login shells. For example, `.bash_profile` could be something simple like
+`.profile` is for things that are not specifically related to Bash, like environment variables, `PATH` and friends, and should be available anytime. For example, `.profile` should also be loaded when starting a graphical desktop session.
 
-  . ~/.profile
-  . ~/.bashrc
+`.bashrc` is for the configuring the interactive Bash usage, like Bash aliases, setting your favorite editor, setting the Bash prompt, etc.
+
+`.bash_profile` is for making sure that both the things in `.profile` and `.bashrc` are loaded for login shells. For example, `.bash_profile` could be something simple like
+
+	. ~/.profile
+	. ~/.bashrc
 
 As stated in the man page excerpt above, if you would omit `.bash_profile`, only `.profile` would be loaded.
 
 [#Lippens:2005]
 
-## Shortcuts ##
-
-* `ctrl + a` Jump to beginning of line
-* `ctrl + e` Jump to end of line
-* `ctrl + r` Start search (just start typing), pressing multiple times toggles through occurrences in history
-* `ctrl + l` Clear terminal
-* `ctrl + x, ctrl +e` Fires up `$EDITOR` to finish a long command in your favorite editor
-
-## Globbing ##
-
-Wildcards in bash are referred to as pathname expansion. Pathname expansion is also sometimes referred to as **globbing**
-
-Pathname expansion that is done by the shell (in this case bash) and not by the operating system or by the program that is being run.2
-
-Pathname expansion "expands" the `*`, `?`, and `[...]` syntaxes when you type them as part of a command, for example:
-
-	$ ls *.jpg         # List all JPEG files
-	$ ls ?.jpg         # List JPEG files with 1 char names (eg a.jpg, 1.jpg)
-	$ rm [A-Z]*.jpg    # Remove JPEG files that start with a capital letter
-
-## Bash Completion ##
-
-With Bash completion enabled, the default is to complete the current path to the longest unique string it can on the first press of the Tab key, and then show a list of all the possible completions if the Tab key is then pressed a second time.
-
-## Output Streams ##
-
-* `>` redirects *StdOut*, for example to a file `command > path` or to `/dev/null` (discards all data)
-* `>>` appends the output to the path `command >> path`
-
-Similar for *StdErr*, but use `2` prefix like so `2>` or respectively. `2>>`.
-
-## Options ##
+### Options ###
 
 - `shopt -s autocd` Since 4.0-alpha. If set, a command name that is the name of a directory is executed as if it were the argument to the cd command.
 - `shopt -s cdspell ` Correct minor errors in the spelling of a directory component in a cd command
@@ -80,23 +53,7 @@ Similar for *StdErr*, but use `2` prefix like so `2>` or respectively. `2>>`.
 - `shopt -s histappend` If set, the history list is appended to the file named by the value of the `HISTFILE` variable when the shell exits, rather than overwriting the file
 - `shopt -s nocaseglob` When typing part of a filename and press Tab to autocomplete, Bash does a case-insensitive search.
 
-## OSX ##
-
-### Upgrade to Bash 4 ###
-
-	# Install Bash 4 using homebrew
-	brew install bash
-	# Add the new shell to the list of legit shells
-	sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
-	# Change the shell for the user
-	chsh -s /usr/local/bin/bash
-	# Restart terminal.app (new window works too)
-	# Check for Bash 4 and /usr/local/bin/bash...
-	echo $BASH && echo $BASH_VERSION
-
-## Examples ##
-
-### Using the history ###
+### History ###
 
 Why use your brain to remember all the commands you have to use again and again. Just rely on your terminal and the history file it keeps.
 
@@ -124,43 +81,77 @@ Other useful settings are
     # minor errors in the spelling of a directory component in a cd command will be corrected
     shopt -qs cdspell
 
-## .inputrc ##
+## Usage ##
 
-Next to `.profile` there is also `.inputrc`. This is the configuration file for `GNU` Readline (a library that allows to edit commands as they are typed in)
+### Tab completion ###
 
-**An exemplary scenario** is when you have to login to multiple servers using `ssh ...` commands. Instead of toggling through all the occurrences in the history you can just start typing away @ssh @.
+With Bash completion enabled, the default is to complete the current path to the longest unique string it can on the first press of the Tab key, and then show a list of all the possible completions if the Tab key is then pressed a second time.
 
-With the following snippet in the `.inputrc` file you can then just use your arrow keys to scroll through all the occurrences starting with the prefix you have typed in so far. This is especially useful when multiple logins share the same user but have different hosts.
+### Keyboard shortcuts ###
 
-	# By default up/down are bound to previous-history
-	# and next-history respectively. The following does the
-	# same but gives the extra functionality where if you
-	# type any text (or more accurately, if there is any text
-	# between the start of the line and the cursor),
-	# the subset of the history starting with that text
-	# is searched (like 4dos for e.g.).
-	# Note to get rid of a line just Ctrl-C
-	"\e[A": history-search-backward
-	"\e[B": history-search-forward
+The following shortcuts work when using default (Emacs) key bindings. Vi-bindings can be enabled by running `set -o vi`.
 
-It doesn’t stop there. If you like to move around in your command more quickly you might find use in the following snippet, which allows to jump over words in your command using `Strg` and the left or right arrow key.
+- `Tab` Autocompletes from the cursor position.
+- **`Ctrl + a`** Moves the cursor to the line start
+- `Ctrl + b` Moves the cursor back one character (equivalent to the key `←`).
+- **`Ctrl + c`** Sends the signal SIGINT to the current task, which aborts and closes it.
+- `Ctrl + d` Sends an EOF marker, which (unless disabled by an option) closes the current shell (equivalent to the command exit). (Only if there is no text on the current line). If there is text on the current line, deletes the current character (then equivalent to the key `Delete`).
+- **`Ctrl + e`** Moves the cursor to the line end (equivalent to the key End).
+- `Ctrl + f` : Moves the cursor forward one character (equivalent to the key `→`).
+- **`Ctrl + r`** Start search (just start typing), pressing multiple times toggles through occurrences in history
+- **`Ctrl + l`** Clears the screen content
 
-	# move around word for word with Strg + arrow keys
-	"\e[5C": forward-word
-	"\e[5D": backward-word
-	"\e\e[C": forward-word
-	"\e\e[D": backward-word
-
-This one is very helpful when you just type away and realize later that the first character of is upper case instead of lower case (the default directories in the home directory of `OSX` all start with upper case letters).
-
-	# case insensitivity for tab-completion
-	set completion-ignore-case On
+- `Ctrl + g` Abort the research and restore the original line.
+- `Ctrl + h` Deletes the previous character (same as backspace).
+- `Ctrl + i` Equivalent to the tab key.
+- `Ctrl + j` Equivalent to the enter key.
+- `Ctrl + k` Clears the line content after the cursor and copies it into the clipboard.
+- `Ctrl + l` Clears the screen content (equivalent to the command clear).
+- `Ctrl + n` (next) recalls the next command (equivalent to the key ↓).
+- `Ctrl + o` Executes the found command from history, and fetch the next line relative to the current line from the history for editing.
+- `Ctrl + p` (previous) recalls the prior command (equivalent to the key ↑).
+- `Ctrl + r` (research) recalls the last command including the specified character(s). A second `Ctrl + r` recalls the next anterior command which corresponds to the research
+- `Ctrl + s` Go back to the next more recent command of the research (beware to not execute it from a terminal because this command also launches its XOFF). If you changed that XOFF setting, use `Ctrl + q` to return.
+- `Ctrl + t` Transpose the previous two characters.
+- `Ctrl + u` Clears the line content before the cursor and copies it into the clipboard.
+- `Ctrl + v` If the next input is also a control sequence, type it literally (e. g. `Ctrl + v, Ctrl+h` types `^H`, a literal backspace.)
+- `Ctrl + w` Clears the word before the cursor and copies it into the clipboard.
+- `Ctrl + x, Ctrl + e` Edits the current line in the `$EDITOR` program, or vi if undefined.
+- `Ctrl + x, Ctrl + r` Read in the contents of the inputrc file, and incorporate any bindings or variable assignments found there.
+- `Ctrl + x, Ctrl + u` Incremental undo, separately remembered for each line.
+- `Ctrl + x, Ctrl + v` Display version information about the current instance of bash.
+- `Ctrl + x, Ctrl + x` Alternates the cursor with its old position. (`C-x`, because `x` has a crossing shape).
+- `Ctrl + y` (yank) adds the clipboard content from the cursor position.
+- `Ctrl + z` Sends the signal `SIGTSTP` to the current task, which suspends it. To execute it in background one can enter bg. To bring it back from background or suspension fg ['process name or job id'] (foreground) can be issued.
+- `Ctrl + _` Incremental undo, separately remembered for each line.
+- `Alt + b` (backward) moves the cursor backward one word.
+- `Alt + c` Capitalizes the character under the cursor and moves to the end of the word.
+- `Alt + d` Cuts the word after the cursor.
+- `Alt + f` (forward) moves the cursor forward one word.
+- `Alt + l` Lowers the case of every character from the cursor's position to the end of the current word.
+- `Alt + r` Cancels the changes and puts back the line as it was in the history.
+- `Alt + u` Capitalizes every character from the cursor's position to the end of the current word.
+- `Alt + .` Insert the last argument to the previous command (the last word of the previous history entry).
 
 ## FAQ/Problems
 
-### Bash doesn’t update the PATH; changes to .profile aren’t registered
+### OSX, Upgrade to Bash 4 ###
 
-Adding something like `export PATH=/usr/bin:$PATH` doesn’t update the `$PATH` environment variable. The reason is that Bash tries to find local profile files in the following order:
+	# Install Bash 4 using homebrew
+	brew install bash
+	# Add the new shell to the list of legit shells
+	sudo bash -c "echo /usr/local/bin/bash >> /private/etc/shells"
+	# Change the shell for the user
+	chsh -s /usr/local/bin/bash
+	# Restart terminal.app (new window works too)
+	# Check for Bash 4 and /usr/local/bin/bash...
+	echo $BASH && echo $BASH_VERSION
+
+### Bash doesn’t update the PATH; changes to .profile aren’t registered ###
+
+Situation: Adding something like `export PATH=/usr/bin:$PATH` doesn’t update the `$PATH` environment variable.
+
+The reason is that Bash tries to find local profile files in the following order:
 
     # ~/.bash_profile
     # ~/.bash_login
@@ -168,10 +159,8 @@ Adding something like `export PATH=/usr/bin:$PATH` doesn’t update the `$PATH` 
 
 `~/.profile` is the last file in the list. So if OS X finds a file it stops processing. If an installer puts a `.bash_login` in your home directory your `.profile` wouldn’t be read.
 
-### Reload .profile
-
-    $ . ~/.profile
+## Bibliography ##
 
 [#Folly:2009]: Steve Folly. [Where does $PATH get set in OS X 10.6 Snow Leopard?](http://superuser.com/questions/69130/where-does-path-get-set-in-os-x-10-6-snow-leopard#69190) Stackoverflow, 2009
-[#Lippens:2005]: Stefan Lippens. [about .bashrc, .bash_profile, .profile, /etc/profile, etc/bash.bashrc and others](http://stefaanlippens.net/bashrc_and_others). Personal Blog, 2005.
 
+[#Lippens:2005]: Stefan Lippens. [about .bashrc, .bash_profile, .profile, /etc/profile, etc/bash.bashrc and others](http://stefaanlippens.net/bashrc_and_others). Personal Blog, 2005.
