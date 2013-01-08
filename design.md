@@ -1,29 +1,19 @@
 # Design #
 
-## Digital ##
-
-### Icons ###
-
-- [The Noun Project](http://thenounproject.com/)
-- [Game Icons](http://game-icons.net/) CC BY 3.0
-- [Batch](http://adamwhitcroft.com/batch/)
-
-## Objects ##
-
-### Lamps / Lighting ###
+## Lamps / Lighting ##
 
 - [Benjamin Hubert](http://www.benjaminhubert.co.uk/) Designer that creates beautiful lamps
 - [Plumen](http://eushop.plumen.com/) Designer bulb
 - [nud](http://www.nudcollection.com) Textile cable with porcelain holder
 
-### Inspiration ###
+## Inspiration ##
 
 - [bananaandegg.tumblr.com](http://bananaandegg.tumblr.com/)
 
-### Shops ###
+## Shops ##
 
 - [Mjölk](http://mjolk.ca/), Mjölk reflects the pure aesthetic of the North. Toronto, Canada
 
-#### Cases / Bags / Wallets / Sleeves ####
+### Cases / Bags / Wallets / Sleeves ###
 
 - [hardgraft](http://www.hardgraft.com/collections/fullrange)
