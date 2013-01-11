@@ -1,3 +1,3 @@
 # Wien #
 
-- [Naturkundemuseum](http://www.nhm-wien.ac.at/)
+- [Naturhistorisches Museum Wien](http://www.nhm-wien.ac.at/)
