@@ -14,11 +14,18 @@ Code is king.
 1. write commit message before coding
 2. write what the software should be supposed to do, not what you did
 
-The second rule lines up with writing commit message 
+The second rule lines up with writing commit message
+
+### Architecture ###
+
+- api > framework
+- dependency injection > dependency injection container
 
 ### Style ###
 
-- utf8, unix line encoding
+- utf8
+- unix line ending
+- delete trailing whitespace
 - agree on company style
 - enforce style
 	- with shared IDE/editor preferences
@@ -27,8 +34,6 @@ The second rule lines up with writing commit message
 - Limit lines to 80 characters.
 	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
 	[#Geissendörfer:2011]
-- api > framework
-- dependency injection > dependency injection container
 
 ### Logging ###
 
