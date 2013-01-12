@@ -21,4 +21,4 @@ to use the citation also add a description of your reference
 **Caveats**
 
 - Don't forget the colon `:`!
-- If you have multiple sources, they have to be seperated with an empty line to work.
+- If you have multiple sources, they have to be separated with an empty line to work.
