@@ -21,7 +21,7 @@ Don't know the prices but they have an [astonishing aquarium](http://www.flickr.
 	Direktorenhaus
 	Am Krögel 2
 	D 10170 Berlin
-	
+
 Modern Design.
 
 ## Shops ##
@@ -32,7 +32,7 @@ Modern Design.
 
 [Modulor GmbH](http://www.modulor.de/shop/)
 
-	Prinzenstraße 85	
+	Prinzenstraße 85
 	10969 Berlin
 	Tel. +49 (0)30 690 36-0
 	Fax +49 (0)30 690 36-445
@@ -47,7 +47,7 @@ Everything a hobbyist and tinkerer might need
 	Prinzenstrasse 35 – 38
 	10969 Berlin
 	Metro Station: Moritzplatz
-	
+
 Urban gardening with a nice Cafe
 
 ### Books ###
@@ -75,10 +75,10 @@ Nice little shop. One backroom full of english books. More popular ones are rare
 [betahaus](http://betahaus.de/)
 
 	betahaus berlin
-	Prinzessinnenstraße 19-20 
-	10969 Berlin 
+	Prinzessinnenstraße 19-20
+	10969 Berlin
 	kontakt@betahaus.de
-	
+
 ## Food & Drinks ##
 
 [Zimt & Mehl](http://www.zimtundmehl.de/)

@@ -18,12 +18,12 @@ Read the following info
 Start the database. If you used the `homebrew` installation and didn't create launch agents you have to start _mongoDB_ manually. Open a terminal and run
 
 	mongod run --config /usr/local/etc/mongod.conf
-	
+
 For just trying out some stuff you can use the mongo shell
 
-	mongo 
+	mongo
 	>
-	
+
 You can directly connect to a database by issuing
 
 	mongo foo
@@ -51,12 +51,12 @@ You can directly connect to a database by issuing
 **Insert data**
 
 	db.foo.save({ name : "sara"});
- 
+
 **Modify data**
 
 	person = db.people.findOne( { name : "sara" } );
 	person.city = "New York";
-	db.people.save( person ); 
+	db.people.save( person );
 
 **Delete data**
 

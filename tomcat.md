@@ -6,7 +6,7 @@
 	apt-get upgrade --show-upgraded
 	apt-get install tomcat6
 	apt-get install tomcat6-docs tomcat6-examples tomcat6-admin
-	
+
 	/etc/init.d/tomcat6 start
 	/etc/init.d/tomcat6 stop
 	/etc/init.d/tomcat6 restart

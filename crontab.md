@@ -3,7 +3,7 @@
 From [here](http://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/)
 
 	crontab -e	## edit crontab
-	crontab -l	## view crontab	
+	crontab -l	## view crontab
 	crontab -r	## remove crontab file
 
 ## Syntax ##
@@ -11,11 +11,11 @@ From [here](http://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-o
 Your cron job looks as follows for user jobs:
 
 	1 2 3 4 5 /path/to/command arg1 arg2
- 
+
 OR
 
 	1 2 3 4 5 /root/backup.sh
- 
+
 Where,
 
 	1: Minute (0-59)
@@ -44,7 +44,7 @@ Taken from [here](http://www.thegeekstuff.com/2009/06/15-practical-crontab-examp
 
 
 	00 11,16 * * * /home/ramesh/bin/incremental-backup
-	
+
 This example executes the specified incremental backup shell script (incremental-backup) at 11:00 and 16:00 on every day. The comma separated value in a field specifies that the command needs to be executed in all the mentioned time.
 
 * `00` – 0th Minute (Top of the hour)

@@ -5,16 +5,16 @@
 ## Install ##
 
 	brew install hub
-	
+
 ## Configuration ##
 
 You must ste github user and token in your `.gitconfig`
 
 	git config --global github.user tekkub
 	git config --global github.token 0123456789abcdef0123456789abcdef
-	
+
 You can find your token on the [account page](https://github.com/account)
-	
+
 ### Usage ###
 
 	hub init

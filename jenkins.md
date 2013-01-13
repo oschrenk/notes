@@ -2,7 +2,7 @@
 
 	brew install jenkins
 
-Installation notes 
+Installation notes
 
 	If this is your first install, automatically load on login with:
 	  mkdir -p ~/Library/LaunchAgents
@@ -14,4 +14,4 @@ Installation notes
 	  launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.jenkins.plist
 
 	Or start it manually:
-	  java -jar /usr/local/Cellar/jenkins/1.490/libexec/jenkins.war	
+	  java -jar /usr/local/Cellar/jenkins/1.490/libexec/jenkins.war

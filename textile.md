@@ -7,7 +7,7 @@
 Set your anchor links in your header tags by adding `(#yourAnchorId)`
 like so:
 
-    h1(#yourAnchorId). 
+    h1(#yourAnchorId).
 
 Link to it by using the the normal link `"Text":#yourAnchorId`
 

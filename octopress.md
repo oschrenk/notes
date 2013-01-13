@@ -7,7 +7,7 @@ The documentation states that Octopress requires Ruby 1.9.2
 	ruby --version # should be 1.9.2
 
 Dependencies
-	
+
 	gem install bundler
 	bundle install
 

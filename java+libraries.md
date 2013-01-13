@@ -23,7 +23,7 @@
 **Natural Language**
 
 - [JChronic](https://github.com/samtingleff/jchronic) Natural language date parsing in Java, ported directly from Ruby's chronic
-- [Natty](https://github.com/joestelmach/natty) Java natural language date parser 
+- [Natty](https://github.com/joestelmach/natty) Java natural language date parser
 
 **Web Services**
 

@@ -1,6 +1,6 @@
 # Logging #
 
-- usually stored as files 
+- usually stored as files
 - although they are best represented as streams
 
 - first class citizen

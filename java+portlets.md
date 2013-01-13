@@ -10,7 +10,7 @@ Portlets are used in the context of a portal website. A portal website can serve
  - uniformed view, user experience
  - single sign on
 - personalized experience
- - depends on the portal 
+ - depends on the portal
 - content management systems
  - some portals integrate simple CMS
 - search
@@ -65,7 +65,7 @@ A portlet only has to support the View Mode, any other mode is optional. Which m
 
 ## Portlet Lifecycle
 
-The lifecycle of a portlet is a little more complex than that of a servlet. 
+The lifecycle of a portlet is a little more complex than that of a servlet.
 
 	Servlet
 		init(ServletConfig config) throws ServletException<br />
@@ -74,14 +74,14 @@ The lifecycle of a portlet is a little more complex than that of a servlet.
 
 This is because on page (which can be rendered through one servlet) can consist of multiple portlets. When clicking/interacting with one portlet, the triggered action has to be processed only by the one portlet.
 
-Therefore the portlet standard defines two phases, the **Render-Phase** and the **Action-Phase**.  
+Therefore the portlet standard defines two phases, the **Render-Phase** and the **Action-Phase**.
 
-	Portlet  
+	Portlet
 		init (PortletConfig)
 		processAction(ActionRequest, ActionResponse)
 		render(RenderRequest, RenderResponse)
 		destroy()
-		
+
 Similar to the servlet architecture each Portlet runs `init()` first. At the end of the lifecycle the `destroy()` method is called.
 
 During the lifecycle render and action phase alternate. On the first run only the render action is called, displaying the initial markup.
@@ -141,7 +141,7 @@ Maven
 Liferay
 
 Deployment
- 
+
 Portlet Tag Library
 
 <portlet:defineObjects/>: This tag must appear to define the following variables in the JSP page: renderRequest, renderResponse, and portletConfig. A JSP using the defineObjects tag may use these variables from scriptlets throughout the page.

@@ -8,7 +8,7 @@ One central repo with two main branches with _infinite_ lifetime:
 - `orgin/master`, where the `HEAD`  always reflects _production-ready_ state.
 - `origin/develop`, where the `HEAD` always reflects the latest development state.
 
-Therefore a merge from `develop` to `master` is a release. 
+Therefore a merge from `develop` to `master` is a release.
 
 Support branches with _finite_ lifetime:
 - feature
@@ -26,7 +26,7 @@ Used to develop new features in an upcoming release. They exist as long as the f
 To start a feature
 
 	git checkout -b myfeature develop
-	
+
 To finish a feature
 
 	git checkout develop
@@ -72,7 +72,7 @@ To start a hotfix
 	git commit -a -m "Bumped version number to 1.2.1"
 	# Fix the bug
 	git commit -m "Fixed severe production problem"
-	
+
 To finish a hotfix
 
 	git checkout master
@@ -82,7 +82,7 @@ To finish a hotfix
 	git checkout develop
 	git merge --no-ff hotfix-1.2.1
 	git branch -d hotfix-1.2.1
-	
+
 Exception to the rule here is that, when a release branch currently exists, the hotfix changes need to be merged into that release branch, instead of develop
 
 ## Commandline ##
@@ -92,13 +92,13 @@ Vincent also developed a [git extension](https://github.com/nvie/gitflow) to hel
 Initialize git repo
 
 	git flow init
-	
+
 Start/Finish feature
 
 	git flow feature start <name>
 	# hack hack hack
 	git flow feature finish <name>
-	
+
 Start/Finish release
 
 	git flow release start <name>

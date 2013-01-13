@@ -37,7 +37,7 @@ That means
 
 ### Mental Model ###
 
-In the field of Human–Computer Interaction (HCI)7, the term _mental models_ refers to "many different aspects of users’ knowledge about the systems they use" [Payne08][#Payne:2008]. 
+In the field of Human–Computer Interaction (HCI)7, the term _mental models_ refers to "many different aspects of users’ knowledge about the systems they use" [Payne08][#Payne:2008].
 
 Mental models are powerful for immersive apps, which often heavily rely on (beautiful) graphics. IPad's strength is its amazing display and offers such possibilities.
 
@@ -68,7 +68,7 @@ Conclusion
 ## Touch Screen ##
 
 - Implement two gestures for turning pages: Tapping Side of the screen and Swiping
-- clear action oriented tappable areas 
+- clear action oriented tappable areas
 - plan for accidental taps (how do I get back?)
 - A target area must look as if it can be tapped.
 - The context of a target influences the affordance of that target. (Text by itself may seem more tappable than text surrounded by widgets.)

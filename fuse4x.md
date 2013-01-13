@@ -1,6 +1,6 @@
 # Fuse4X #
 
-To install 
+To install
 
 	brew install fuse4x
 

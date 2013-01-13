@@ -7,7 +7,7 @@
 
 ## Subversive
 
-Subversive ist das offizielle Projekt der Eclipse Foundation, dass die Eclipse Plattform um einen Subversion Team Provider erweitert. Es ist nicht Teil der Standarddistribution, so dass es nachinstalliert werden muss. 
+Subversive ist das offizielle Projekt der Eclipse Foundation, dass die Eclipse Plattform um einen Subversion Team Provider erweitert. Es ist nicht Teil der Standarddistribution, so dass es nachinstalliert werden muss.
 
 Leider ist die Installation ein wenig anstrengender als sie sein sollte, da Subversive in 2 Teile aufgesplittert ist, dem Plug-In und dem Connector. Während das Plug-In auf der Seite des Eclipse Projektes gehostet wird, ist der Connector auf der Seite von Polarion[1].
 
@@ -30,9 +30,9 @@ Folgende Pakete müssen installiert werden:
 	> Subversive SVN Connectors
 		> Subversive SVN Connectors
 		> SVNKit 1.2.0 Implementation (Optional)
-		
+
 oder
-		
+
 		> Native JavaHL 1.5 Implementation (Optional)
 
 		Subversive Update Site
@@ -41,7 +41,7 @@ oder
 
 
 Problem mit Subversive. Native JAVA Libraries sollen nicht da sein, trotz
-	
+
 	sudo port install subversion-javahlbindings
 
 Probeweise
@@ -138,13 +138,13 @@ Bei Eclipse
 
 ##### Modify Apache’s httpd.confOn OS X #
 
-The Apache configuration file httpd.conf is located in `/etc/apache2/httpd.conf `. This file is only writeable for the root user. Therefore you have to edit it using 
+The Apache configuration file httpd.conf is located in `/etc/apache2/httpd.conf `. This file is only writeable for the root user. Therefore you have to edit it using
 
-	sudo vi /etc/apache2/httpd.conf 
-	
+	sudo vi /etc/apache2/httpd.conf
+
 Add the following line in the section containing the `LoadModule` directives
 
-	LoadModule dav_svn_module libexec/apache2/mod_dav_svn.so 
+	LoadModule dav_svn_module libexec/apache2/mod_dav_svn.so
 
 Following the conventions of the OS X Apache installation you should add the following lines close to the end of the `httpd.conf` file:
 
@@ -153,13 +153,13 @@ Following the conventions of the OS X Apache installation you should add the fol
 That tells Apache to read the subversion configuration from the file located at `/private/etc/apache2/extra/httpd-svn.conf`
 
 Save the modified file and exit vi. Create `httpd-svn.conf`. Fire up vi creating a new file with
-	
-	sudo vi /etc/apache2/extra/httpd-svn.conf 
+
+	sudo vi /etc/apache2/extra/httpd-svn.conf
 
 and add the following lines
 
 	<Location /repo> DAV svn SVNPath <PATH_TO_REPO></Location>
- 
+
 Now you can access the repository using the URL `http://localhost/repo`
 
 ##  Appendix
@@ -186,12 +186,12 @@ Q: Why does subversion need an external editor?
 A: It is customary and good practice to include a comment with each commit. This can be done on the command line with the -m message option or using an editor of your choice. To use and external editor you have to:
 
     * set the SVN_EDITOR shell variable (e.g., on bash export SVN_EDITOR=xemacs or on [t]csh setevn SVN_EDITOR xemacs)
-    * set the VISUAL or EDITOR shell variable 
+    * set the VISUAL or EDITOR shell variable
 
 	It is not advised to set disable comments in the client configuration.
 	 svn: None of the environment variables SVN_EDITOR, VISUAL or EDITOR is set
 	« on: February 11, 2008, 05:34:44 AM »
-	
+
 This error can be fixed by using below commands
 
 	$EDITOR=vi

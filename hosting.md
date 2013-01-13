@@ -16,7 +16,7 @@
 | prgmr.com | $36		| $194.4	| $345.6	| 2048MiB	| 48GiB		| 320GiB	|
 | slicehost | $20		| $120		| $240		| 256MB		| 10GB		| 150GB		|
 | slicehost | $25		| $150		| $300		| 384MB		| 15GB		| 225GB		|
-| slicehost | $38		| $228		| $456		| 512MB		| 20GB		| 300GB		|	
+| slicehost | $38		| $228		| $456		| 512MB		| 20GB		| 300GB		|
 | slicehost | $49		| $294		| $588		| 768MB		| 30GB		| 450GB		|
 | slicehost | $70		| $420		| $840		| 1024MB	| 40GB		| 600GB		|
 | linode 	| $19.95	| $119.7	| 239.4		| 512MB		| 20GB		| 200GB		|

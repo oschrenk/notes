@@ -7,7 +7,7 @@
 Find out which products which you have installed
 
 	vmware-installer --list-products
-	
+
 You should get a table of product names and versions. To uninstall a product
 
 	sudo vmware-installer --uninstall-product <PRODUCT>

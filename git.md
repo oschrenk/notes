@@ -8,7 +8,6 @@
     $ git config --global user.email "your@email.address"
 	$ git config --global color.ui "auto"
 
-
 ### Dealing with EOLs ###
 
 Based on Tim Clem's blog entry [Mind the end of your line](http://timclem.wordpress.com/2012/03/01/mind-the-end-of-your-line/).
@@ -38,7 +37,7 @@ Git has some internal heuristics to determine if a file is binary or not. A file
 
 Git has a configuration setting called `core.autocrlf` which is specifically designed to make sure that when a text file is written to the repository’s object database that all line endings in that text file are normalized to `LF`.
 
-- `core.autocrlf = false` Default. Most people are encouraged to change this immediately though. Git doesn’t ever mess with line endings on your file. You can check in files with `LF` or `CRLF` or `CR` and Git does not care. This can make diffs harder to read and merges more difficult. 
+- `core.autocrlf = false` Default. Most people are encouraged to change this immediately though. Git doesn’t ever mess with line endings on your file. You can check in files with `LF` or `CRLF` or `CR` and Git does not care. This can make diffs harder to read and merges more difficult.
 - `core.autocrlf = true` Git will process all text files and make sure that `CRLF` is replaced with `LF` when writing that file to the object database and turn all `LF` back into `CRLF` when writing out into the working directory. This is the _recommended setting on Windows_ because it ensures that your repository can be used on other platforms while retaining CRLF in your working directory.
 - `core.autocrlf = input` Git will process all text files and make sure that `CRLF` is replaced with `LF` when writing that file to the object database. It will **not**, however, do the reverse. When you read files back out of the object database and write them into the working directory they will still have `LF`s to denote the end of line. This setting is _generally used on Unix/Linux/OS X_ to prevent CRLFs from getting written into the repository. The idea being that if you pasted code from a web browser and accidentally got `CRLF`s into one of your files, Git would make sure they were replaced with LFs when you wrote to the object database.
 
@@ -63,7 +62,7 @@ Or you could do this to tell Git to only replace `CRLF` with LF when writing, bu
 
 The new system moves to defining all of this in the `.gitattributes` file that you keep with your repository and is available in Git 1.7.2 and above.
 
-You are in charge of telling git which files you would like `CRLF` to `LF` replacement to be done on. This is done with a text attribute in your repository’s  `.gitattributes` file. 
+You are in charge of telling git which files you would like `CRLF` to `LF` replacement to be done on. This is done with a text attribute in your repository’s  `.gitattributes` file.
 
 - `*.txt text` Set all files matching the filter `*.txt` to be text. Git will run `CRLF` to `LF` replacement on these files every time they are written to the object database and the reverse replacement will be run when writing out to the working directory.
 - `*.txt -text` Unset all files matching the filter. These files will never run through the `CRLF` to `LF` replacement.
@@ -174,7 +173,7 @@ Your changes will now be reverted and ready for you to commit:
 
 ### Branching ###
 
-There are two types of branches: *local* and *remote-tracking*. 
+There are two types of branches: *local* and *remote-tracking*.
 
 Local branches are just in another path in the Git graph that you can commit to.
 
@@ -187,7 +186,7 @@ Remote tracking branches have a few different purposes:
 
 To show the available branches (an asterisk `*` represents the active branch) just type
 
-    $ git branch 
+    $ git branch
 
 To create a new branch called `experiment`
 
@@ -198,7 +197,7 @@ To switch to a branch called `experiment` (Git will warn you if you have uncommi
     $ git checkout experiment
 
 To work with branches you can add the following parameters
- 
+
 * `-r` show the remote branches
 * `-a` show all branches
 * `-d <branchname>` Delete a branch. The branch must be fully merged in HEAD
@@ -219,7 +218,7 @@ Other commands
 
 Just change into the branch you want to merged to and type
 
-    $ git merge <branch_you_want_to_merge_from> 
+    $ git merge <branch_you_want_to_merge_from>
 
 To merge only selective files
 
@@ -266,14 +265,14 @@ If you're a lone ranger you don't have a team to keep sane, so go ahead.
 Create a tag based on old tag
 
 	git tag new_tag old_tag
-	
+
 Delete tag locally
 
 	git tag -d old_tag
 
-Delete tag on remote (this hurts other developers and has therefore a ugly syntax)	
-	
-	git push origin :refs/tags/old_tag 
+Delete tag on remote (this hurts other developers and has therefore a ugly syntax)
+
+	git push origin :refs/tags/old_tag
 
 ## Logs ##
 
@@ -307,7 +306,7 @@ You can use the `--pretty=format` option to create your own log formats. Example
     $ git add -p /path/file
     ... # changes
     Stage this hunk [y,n,q,a,d,/,s,e,?]?
-    
+
 You will see a selection of *hunks* and Git asks you what to do with these hunks. `?` explains each of the possible choices.
 
     Stage this hunk [y,n,q,a,d,/,s,e,?]? ?
@@ -386,7 +385,7 @@ First of we clone the project
 
 or make a [local copy](#backup-repository). Finally re-write the history to just contain the files that are in `subdirectory`:
 
-	$ cd project  
+	$ cd project
 	$ git filter-branch --prune-empty --subdirectory-filter name\of\subdirectory master
 
 Then change the remote repository and push the changes.
@@ -451,7 +450,7 @@ It is also a requirement for a given hook to be executable. However - in a fresh
 Most of the hooks fall into one of two categories
 
 1. `pre` hooks will be executed before an action (e.g.. a commit). It can therefore be used to deny or accept an action. Return values unequal to zero deny an action.
-2. `post`hooks will be executed after an action. It can be used for triggering the dispatch of emails or other notifications. The exit codes are ignored.	
+2. `post`hooks will be executed after an action. It can be used for triggering the dispatch of emails or other notifications. The exit codes are ignored.
 
 | Hook					| Description 	|
 | --------------------- | -----------:-	|
@@ -496,11 +495,11 @@ Create a script called `gitproxy` somewhere in your path
     #   git config --global core.gitproxy gitproxy
     #
     # More details at http://tinyurl.com/8xvpny
-     
+
     `# Configuration. Common proxy ports are 3128, 8123, 8000.
     _proxy=proxy.yourcompany.com
     _proxyport=3128`
-     
+
     `exec socat STDIO PROXY:$_proxy:$1:$2,proxyport=$_proxyport`
 
 Configure git to use it:
@@ -534,7 +533,7 @@ case I can safely delete the remote branch
 
     $ git remote rm origin
 
-Another case might be:  
+Another case might be:
 
 When I did a `git push github master` Git reported that `Everything up-to-date`, which I found weird. Of course the problem was easy to solve and easy to spot. I forgot to remove `origin` as remote source when I added `github` as my default remote. Also both pointed to the same repository origin/master was reporting the "problem" . Git obviously stores infos about the stat of remotes.
 
@@ -560,7 +559,7 @@ Very confusing error message. All it means (at least in my case) that you have t
 
     $ git pull github master
     From github.com:username/project
-     * branch            master     -> FETCH	
+     * branch            master     -> FETCH
     Merge made by recursive.
      file.textile |   14 ++++++++++++++
      1 files changed, 14 insertions(+), 0 deletions(-)
@@ -602,11 +601,11 @@ This occurs when you are trying to checkout a remote branch that your local git 
 If the remote branch you want to checkout is under "New remote branches" and not "Tracked remote branches" then you need to fetch them first:
 
 	git fetch
-	
+
 Now you can:
 
 	git checkout --track -b 1.0 origin/1.0
-	
+
 or shorter
 
 	git co -t origin/1.0

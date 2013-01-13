@@ -1,5 +1,5 @@
 # R #
-	
+
 ## Installation ##
 
 	$ brew info gfortran
@@ -30,9 +30,9 @@ The easiest way to interact with `r` is via the REPL. Just open a terminal and r
 - `> q()` quits r REPL
 
 You can use packages by calling
-	
+
 	> library(<package-name>)
-	
+
 ## Package Managment ##
 
 Open a REPL.
@@ -70,11 +70,11 @@ with
 
 ### Computing Along Track Distance using geosphere package ###
 
-The "along track distance" is the distance from the start point (`p1`) to the closest point on the path to a third point (`p3`), following a great circle path defined by points `p1` and `p2`. 
+The "along track distance" is the distance from the start point (`p1`) to the closest point on the path to a third point (`p3`), following a great circle path defined by points `p1` and `p2`.
 
     > alongTrackDistance(p1, p2, p3, r=6378137)
 
-with 
+with
 
 - `p1`, `p2`, `p3` longitude/latitude of point
 - `r` radius of the earth; default = `6378137m`

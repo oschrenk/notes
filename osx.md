@@ -4,7 +4,7 @@
 
 * **Window management**. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
 
-* **Consistency**. `cmd+,` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application. 
+* **Consistency**. `cmd+,` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application.
 
 ## 10.8. Mountain Lion ##
 
@@ -27,7 +27,7 @@ Allow a command to run for a prolonged period without the automatic (and, since 
 - [breaks git-svn](http://victorquinn.com/blog/2012/02/19/fix-git-svn-in-mountain-lion/)
 - X has been removed. Install [XQuartz](http://xquartz.macosforge.org/landing/) if you need it.
 
-## Defaults 
+## Defaults
 
 OS X stores the preferences and application settings in `.plist` files. These are (binary enocded) XML files. OSX offers the command line tool `defaults` to read from and write to them.
 
@@ -94,7 +94,7 @@ The last command did output some warnings but it produced the correct file anywa
 
 ## Software
 
-### OSX Mail - Setting  mail folders 
+### OSX Mail - Setting  mail folders
 
 Mail needs to be configured which folders it needs to use for trash, drafts and spam, otherwise it will use its own folders leaving the other folder untouched and also annoyingly visible in the side bar.
 
@@ -124,7 +124,7 @@ Open Terminal:
 
 Change the default permissions, if you wish: `sudo chmod 770 Local` (this is optional if you're happy with the default permissions).
 
-Create the ACL entry for the new folder:  
+Create the ACL entry for the new folder:
 
     $ sudo chmod +a "group:Local allow delete,readattr,writeattr,readextattr,writeextattr,list,search,add_file,add_subdirectory,delete_child,file_inherit,directory_inherit" Local
 

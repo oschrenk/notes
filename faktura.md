@@ -1,6 +1,6 @@
 # Faktura #
 
-Das ist ausnahmsweise mal ein deutsches Dokument, da sich Rechnungen von ihrer Natur her einfach an die nationalen Steuergesetze halten müssen, was die Auswahl der Software und Services dann doch auf den deutschsprachigen Raum eingrenzt. 
+Das ist ausnahmsweise mal ein deutsches Dokument, da sich Rechnungen von ihrer Natur her einfach an die nationalen Steuergesetze halten müssen, was die Auswahl der Software und Services dann doch auf den deutschsprachigen Raum eingrenzt.
 
 ## Zeiterfassung ##
 
@@ -21,7 +21,7 @@ Das ist ausnahmsweise mal ein deutsches Dokument, da sich Rechnungen von ihrer N
 - Amerikanische Entwicklung
 - Grundpaket richtet sich nach Anzahl der Clients (20$ für bis zu 25 Clients, 30$ für unbegrenzt, 40$ für unbegrenzt)
 - man benötigt das 40$ Paket um zusätzliche Mitarbeiter einrichten zu können, die dann jeweils 10$ kosten.
-- ermöglicht auch Rechnungserstellung 
+- ermöglicht auch Rechnungserstellung
 
 ## Rechnungen ##
 
@@ -39,7 +39,7 @@ Das ist ausnahmsweise mal ein deutsches Dokument, da sich Rechnungen von ihrer N
 
 [Billomat](http://www.billomat.com/)
 
-- Webservice 
+- Webservice
 - Deutsche Entwicklung
 - API
 - keine Zeiterfassung, Integration von mite möglich
@@ -50,7 +50,7 @@ Das ist ausnahmsweise mal ein deutsches Dokument, da sich Rechnungen von ihrer N
 
 [Fastbill](www.fastbill.com)
 
-- Webservice 
+- Webservice
 - Deutsche Entwicklung
 - mit Zeiterfassung
 - alles unbegrenzt, pro Mitarbeiter 5,95€
@@ -59,7 +59,7 @@ Das ist ausnahmsweise mal ein deutsches Dokument, da sich Rechnungen von ihrer N
 
 [Easybill](http://www.easybill.de/)
 
-- Webservice 
+- Webservice
 - Deutsche Entwicklung
 - API
 - Preise erlauben mehr Features und eigenes Branding, sowie günstigeren Versand von Briefen

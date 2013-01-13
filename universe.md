@@ -10,7 +10,7 @@ No. The Big Bang wasm't an explosion in space. It was a process that involved al
 
 The Big Bang is mistakingly identified as an explosion that took place at some location, hurtling matter outward.
 
-In reality, all of space was filled with energy right from the beginning. 
+In reality, all of space was filled with energy right from the beginning.
 
 ## Resources ##
 

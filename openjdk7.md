@@ -22,14 +22,14 @@
     $ unset CLASSPATH
     $ unset JAVA_HOME
 
-    // get soylatte 
+    // get soylatte
     // get password from: http://landonf.bikemonkey.org/static/soylatte/
     // remember to precede a whitespace in the password with a backslash "\"
     $ wget http://jrl:<password>@hg.bikemonkey.org/archive/javasrc_1_6_jrl_darwin/soylatte16-i386-1.0.3.tar.bz2
-    tar -xvjf soylatte16-i386-1.0.3.tar.bz2 
+    tar -xvjf soylatte16-i386-1.0.3.tar.bz2
 
     // get jibx, info: http://jibx.sourceforge.net/
-    // (1.2.1 didj't work for me), 
+    // (1.2.1 didj't work for me),
     wget http://downloads.sourceforge.net/project/jibx/jibx/jibx-1.1.6a/jibx_1_1_6a.zip
     unzip jibx_1_1_6a.zip
 
@@ -64,7 +64,7 @@
     +  printf("MH %s "INTPTR_FORMAT" "INTPTR_FORMAT" "INTX_FORMAT"\n", adaptername, (intptr_t)mh, (intptr_t)entry_sp, (intptr_t)(entry_sp - saved_sp));
      }
      #endif //PRODUCT
-     
+
     diff --git a/src/share/vm/classfile/javaClasses.cpp b/src/share/vm/classfile/javaClasses.cpp
     --- a/src/share/vm/classfile/javaClasses.cpp
     +++ b/src/share/vm/classfile/javaClasses.cpp
@@ -76,7 +76,7 @@
     +      sprintf(buf + (int)strlen(buf), "(nmethod " INTPTR_FORMAT ")", (intptr_t)nm);
          }
        }
-     
+
     diff --git a/src/share/vm/utilities/globalDefinitions.hpp b/src/share/vm/utilities/globalDefinitions.hpp
     --- a/src/share/vm/utilities/globalDefinitions.hpp
     +++ b/src/share/vm/utilities/globalDefinitions.hpp
@@ -97,7 +97,7 @@
     +#define SIZE_FORMAT_W(width)    UINTL32_FORMAT_W(width)
     +#endif  //FORMATL32_MODIFIER
      #endif // _LP64
-     
+
      // Format pointers and size_t (or size_t-like integer types) which change size
     @@ -1146,11 +1155,23 @@
      #define SIZE_FORMAT   UINT64_FORMAT
@@ -121,7 +121,7 @@
     +#define SSIZE_FORMAT  INTL32_FORMAT
     +#endif  //FORMATL32_MODIFIER
      #endif  // _LP64
-     
+
      #define INTPTR_FORMAT PTR_FORMAT
     diff --git a/src/share/vm/utilities/globalDefinitions_gcc.hpp b/src/share/vm/utilities/globalDefinitions_gcc.hpp
     --- a/src/share/vm/utilities/globalDefinitions_gcc.hpp
@@ -129,7 +129,7 @@
     @@ -280,6 +280,12 @@
      #define FORMAT64_MODIFIER "ll"
      #endif // _LP64
-     
+
     +#if (__GNUC__ == 4) && (__GNUC_MINOR__ >= 2)
     +// GCC 4.2 complains about printf("%d", (intptr_t)10).
     +// This occurs with intptr_t and intx types, which are typedefs of "long int".

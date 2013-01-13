@@ -4,7 +4,7 @@
 
 ## Virtual Machine ##
 
-- [Redmine](http://www.turnkeylinux.org/redmine) on [TurnkeyLinux](http://www.turnkeylinux.org/) 
+- [Redmine](http://www.turnkeylinux.org/redmine) on [TurnkeyLinux](http://www.turnkeylinux.org/)
 
 Redmine configurations
 - Installed from upstream source code to `/var/www/redmine`

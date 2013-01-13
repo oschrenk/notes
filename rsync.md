@@ -38,11 +38,11 @@ rsync even has an built in option to exclude `cvs` or `svn` files, just add
 Copy files from `path` to `backup` deleting files that don't exist on the sending side, ignoring `.git`
 
 	rsync -arvz --delete --cvs-exclude --exclude=.git --exclude=.DS_Store /path /backup
-	
+
 Sync `.git` directory of the `~/Library/Scripts directory`
 
-	rsync -arvz --cvs-exclude --exclude=.git --exclude=sync --exclude=.DS_Store . ~/Library/Scripts/	
-	
+	rsync -arvz --cvs-exclude --exclude=.git --exclude=sync --exclude=.DS_Store . ~/Library/Scripts/
+
 ## FAQ/Problems ## ##
 
 ### rsync: command not found ###
@@ -53,11 +53,11 @@ I was trying to sync data to a Solaris machine but ran into this error:
 	bash: rsync: command not found
 	rsync: connection unexpectedly closed (0 bytes received so far) [sender]
 	rsync error: remote command not found (code 127) at io.c(454) [sender=2.6.9]
-	
+
 Rsync was installed on both machines but somehow the solaris machine wasn't able find rsync in the given path. I guess this is its trying to sync over ssh, and in doing doesn't include the `/usr/local/bin` directory in the `$PATH.
 
 Luckily you can pass the path of rsync as a parameter
 
-	rsync -arvz --stats --rsync-path=/usr/local/bin/rsync someuser@remote-solaris-machine:path/to/project/ /path/to/remote/project 
-	
+	rsync -arvz --stats --rsync-path=/usr/local/bin/rsync someuser@remote-solaris-machine:path/to/project/ /path/to/remote/project
+
 Taken from [Siddesh BG](http://siddesh-bg.blogspot.com/2009/02/rsync-command-not-found-error-even.html)

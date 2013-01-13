@@ -1,7 +1,7 @@
 # Authentication #
 
 - **Authentication** is any process by which you verify that someone is who they claim they are. It is about identifying the identity of the user. Is the user who say they are?
-- **Authorization** is finding out if the person, once identified, is permitted to have the resource, it is requesting. 
+- **Authorization** is finding out if the person, once identified, is permitted to have the resource, it is requesting.
 - **Access Control** is about controlling entrance by some arbitrary condition which may or may not have anything to do with the attributes of the particular visitor.
 
 ## Http BasicAuth ##
@@ -11,7 +11,7 @@ HTTP BasicAuth was defined in [RFC 1945](http://tools.ietf.org/html/rfc1945) and
 It provides access to web resources by providing a username and password when making a request. It does so by concatenating the username, a colon and the password, encoding it with BASE64 (not for security reasons but just as a means of escaping no HTTP-compatible characters).
 
 1. Client asks for a web resource
-2. Server responds with `HTTP/1.1 401 Authorization Required` and provides the authentication realm. 
+2. Server responds with `HTTP/1.1 401 Authorization Required` and provides the authentication realm.
 3. User decides to let client repeat the request by supplying username and password as `Authorization` header
 4. Server responds with `HTTP/1.1 200 OK` if authentication was accepted, 401 otherwise.
 
@@ -26,7 +26,7 @@ It provides access to web resources by providing a username and password when ma
 
 Open ID gives you one login for multiple sites. Each time you need to log into a site using Open ID you will be redirected to your Open ID site where you login, and then back to the site you wanted originally to log into.
 
-With Open ID, there is no suggestion of two web apps sharing your data. Except in the very limited sense that the Open ID provider may hold some general information about you, e.g. some photos, addresses, phone numbers, etc., and with your consent, send it back to the consumer so you don’t have to re-enter all the boring profile details again. However, this is data of a generic, non-application-specific, nature. (And even this limited form of sharing is an extension to the core Open ID spec.) 
+With Open ID, there is no suggestion of two web apps sharing your data. Except in the very limited sense that the Open ID provider may hold some general information about you, e.g. some photos, addresses, phone numbers, etc., and with your consent, send it back to the consumer so you don’t have to re-enter all the boring profile details again. However, this is data of a generic, non-application-specific, nature. (And even this limited form of sharing is an extension to the core Open ID spec.)
 
 ## OAuth ##
 
@@ -63,7 +63,7 @@ With OAuth, any information you hold on any website can be shared with another w
 
 OAuth has different flavors:
 
-1. individual own the resource, decides whether to grant access 
+1. individual own the resource, decides whether to grant access
 2. company own the resource, access is granted by IT guardians
 
 #### Individual own the resource, decides whether to grant access ####

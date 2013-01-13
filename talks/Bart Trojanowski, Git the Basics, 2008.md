@@ -25,9 +25,9 @@ Bart Trojanowski <bart@jukie.net>, July 9th 2008, [repo](git://git.jukie.net/int
 	- commits (group of changes, metadata)
 	- ancestry (parent pointer, not available in SVN)
 - directed acyclic graph
-- references 
+- references
 	- tags. normally assigned to a commit)
-	- branches. 
+	- branches.
 	- HEAD. Points to last commit (sometimes detached)
 - index or staging area. what is to be commited.
 
@@ -58,7 +58,7 @@ In a centralized SCM all operations require the server (single point of failure,
 
 Allows for multiple workflows (including centralized)
 
-It is good because of 
+It is good because of
 
 - (non-intrusive) micro commits
 - detached operation
@@ -81,7 +81,7 @@ It is good because of
 	│   └── ...			hooking scripts
 	├── index			changes to commit
 	├── info
-	│	├── exclude		repo private 
+	│	├── exclude		repo private
 	│   └── refs		refs
 	├── logs
 	│   └── ...			reflog data
@@ -89,7 +89,7 @@ It is good because of
 	│	├── 00			loose objects
 	│	├── ..			loose objects
 	│	├── ff			loose objects
-	│	├── info		
+	│	├── info
 	│	│	└── packs	infos about packs
 	│   └── pack
 	│		└── ...		packs and indexes
@@ -104,7 +104,7 @@ It is good because of
 	type | size | data
 
 - content adressable. SHA-1 acts as unique indentifier of object point to object
-- 4 types. 
+- 4 types.
 	- blob. file.
 	- tree. directory entry. points to blobs
 	- commits. points to trees. who is author/commiter?. points to parent commit
@@ -147,7 +147,7 @@ accesible via `--global` flag. Git needs
 ### Committing ###
 
 Create a commit of all or only staged items
-	
+
 	$ git commit -a -m "some comment"
 
 ### Inspecting ###
@@ -155,7 +155,7 @@ Create a commit of all or only staged items
 	$ git status
 
 Shows
-	
+
 	- staged
 	- unstaged
 	- untracked
@@ -265,7 +265,7 @@ See commit history. `git log` is awesome!
 	$ git checkout -b name [commit]
 
 **Switching with changes**
-	
+
 	$ git checkout name
 	error: You have local changes to 'filename';
 	cannnot switch branches.

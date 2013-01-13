@@ -53,7 +53,7 @@ As the noise level gets worse, this trend gets stronger:
 - Lack of committed subject-matter experts.
 - Lack of buy-in by users/management.
 - Failure to assess previous project scopes
-- Failure to assess current rate of production vs. budgeted time. 
+- Failure to assess current rate of production vs. budgeted time.
 - Poor discovery work.
 - Poor understanding of the project's complexity.
 - Unforeseen and unpredictable bugs.

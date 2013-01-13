@@ -2,9 +2,9 @@
 
 - eine *menschliche Funktion* ist einfach einer, auf psychologischer Ebene, beschreib- und verstehbarer Prozess
 - es gibt zwei zentrale Systeme, die Verhalten steuern:
-	1. Realitätssystem. Mit Realität beschäftigt. Verständnis und Beeinflussung der Realität. 
+	1. Realitätssystem. Mit Realität beschäftigt. Verständnis und Beeinflussung der Realität.
 	2. Motivationssystem. Für das persönliche Wohlergehen zuständig.
-- Erfüllung von >Bedürfnissen bringt Zufriedenheit. 
+- Erfüllung von >Bedürfnissen bringt Zufriedenheit.
 
 - Grundlegende Motive (implizit).  Bedürfnisse sehr unterschiedlich, schwer fassbar
 - Bewusste Ziele (explizit). Ziele entstehen oft durch Biografie

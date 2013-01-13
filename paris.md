@@ -36,7 +36,7 @@ Centre Georges Pompidou (French pronunciation: [sɑ̃tʁ ʒɔʁʒ pɔ̃pidu]; al
 	France
 
 nice cafe creme
-	
+
 *Caves du Chalet*
 
 	22 Rue des Dames
@@ -44,7 +44,7 @@ nice cafe creme
 	France
 
 Cheap bread, cheese plates
-	
+
 *Le Café Charbon*
 
 	109, Rue Oberkampf

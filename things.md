@@ -1,6 +1,6 @@
 # Things #
 
-tags: things | open hardware | materials 
+tags: things | open hardware | materials
 
 ## Materials ##
 

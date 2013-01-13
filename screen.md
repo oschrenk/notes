@@ -33,7 +33,7 @@ Add these lines at the top of ~/.bashrc on the target host:
 	# [end of auto-screen snippet]
 
 Create `~/.screenrc` on the target host, containing:
-	
+
 	# see http://www4.informatik.uni-erlangen.de/~jnweiger/screen-faq.html
 	# support color X terminals
 	termcap  xterm 'XT:AF=\E[3%dm:AB=\E[4%dm:AX'

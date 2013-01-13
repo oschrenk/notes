@@ -7,4 +7,4 @@
 	Enter IPSec ID for example.com: examplegroup
 	Enter IPSec secret for examplegroup@example.com:
 	Enter username for example.com: foobar
-	Enter password for foobar@example.com: 
+	Enter password for foobar@example.com:

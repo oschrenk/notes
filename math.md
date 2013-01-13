@@ -14,7 +14,7 @@ Or concentrating on linear interpolation problems in which \\(g(x)\\) is only li
 
 The most basic and one of the most used approach developed by Isaac Newton is the linear interpolation which, interpreted geometrically, draws a straight line between two data points \\((x_0, f(x_0)), ((x_1, f(x_1))\\).
 
-\\[g(x) = f(x_i) + (x-x_0)\frac{f(x_{i+1})-f(x_{i})}{x_{i+1}-x_{i}}\\] 
+\\[g(x) = f(x_i) + (x-x_0)\frac{f(x_{i+1})-f(x_{i})}{x_{i+1}-x_{i}}\\]
 
 ### Polynomial interpolation ###
 
@@ -30,7 +30,7 @@ Because polynoms of higher degrees tend to oscillate between equidistant points 
 
 #### Spline Interpolation ####
 
-Piecewise Interpolation of the second or third degree is normally called Spline Interpolation, named so after the splines used for ship or airplane construction by Schoenberg. 
+Piecewise Interpolation of the second or third degree is normally called Spline Interpolation, named so after the splines used for ship or airplane construction by Schoenberg.
 
 \\[g_i(x) = a_j + b_j \cdot (x - x_i) + c_i \cdot (x-x_i)^2 + d_i \cdot (x-x_i)^3\\]
 
@@ -69,7 +69,7 @@ And you probably know it better as
 
 \\[e = 2.7 1828 1828 45 90 45 ...\\]
 
-But 
+But
 
 \\[sin x = x^1/!1 - x^3/!3 + x^5/!5 - x^7/!7 +  ... \\]
 \\[cos x = x^0/!0 - x^2/!2 + x^4/!4 - x^6/!6 +  ... \\]

@@ -6,7 +6,7 @@
 
 The Java Class Loader is a part of the JRE that dynamically loads Java Classes into the Java Virtual Machine. Usually classes are loaded on demand (lazy initialization). The Java Run Time does not need to know about files and file systems because of class loaders. They are an abstraction (or indirection) between a resource name and its actual location.
 
-In Java a library, a collection of object code, is typically packaged in Jar files. The class loader is responsible for locating libraries, reading their contents and loading the classes. 
+In Java a library, a collection of object code, is typically packaged in Jar files. The class loader is responsible for locating libraries, reading their contents and loading the classes.
 
 When the JVM is started, three class loaders are used.
 
@@ -38,7 +38,7 @@ Additionally, if the code is in a class within a `some.pkg` Java package, then t
 
 | Method | Parameter format | Lookup failure behavior | Usage example |
 | :---- | :---- | :---- | :---- |
-| `ClassLoader. getResourceAsStream()` | `/`-separated; no leading `/` (all names are absolute) | Silent (returns `null`) | `this.getClass(). getClassLoader(). getResourceAsStream ("some/pkg/resource.properties")` | 
+| `ClassLoader. getResourceAsStream()` | `/`-separated; no leading `/` (all names are absolute) | Silent (returns `null`) | `this.getClass(). getClassLoader(). getResourceAsStream ("some/pkg/resource.properties")` |
 | `Class. getResourceAsStream()` | `/`-separated; leading `/` indicates absolute names; others are relative to the class's package | Silent (returns `null`) | `this.getClass(). getResourceAsStream ("resource.properties")` |
 | `ResourceBundle. getBundle()` | `.`-separated names; all names are absolute; `.properties` suffix implied | Throws unchecked `java.util.MissingResourceException` | `ResourceBundle. getBundle ("some.pkg.resource") `|
 
@@ -58,9 +58,9 @@ Anonymous classes are declared and instantiated within the same statement. They 
 		}
 	});
 
-You will often find them in GUI related classes. As an anonymous class doesn't have a class declaration, it can't use the `static` keyword.	
+You will often find them in GUI related classes. As an anonymous class doesn't have a class declaration, it can't use the `static` keyword.
 
-2. **Local** Local classes are the same as local variables, in the sense that they're created and used inside a block. Once you declare a class within a block, it can be instantiated as many times as you wish within that block. Like local variables, local classes aren't allowed to be declared `public`, `protected`, `private`, or `static`. 
+2. **Local** Local classes are the same as local variables, in the sense that they're created and used inside a block. Once you declare a class within a block, it can be instantiated as many times as you wish within that block. Like local variables, local classes aren't allowed to be declared `public`, `protected`, `private`, or `static`.
 
 	//some code block ... {
 		class ListListener implements ItemListener {
@@ -81,19 +81,19 @@ Member classes are defined within the body of a class. You can use member classe
 
 The member class is the only class that you can declare `static`. When you declare a member class, you can instantiate that member class only within the context of an object of the outer class in which this member class is declared. If you want to remove this restriction, you declare the member class a `static` class.
 
-When you declare a member class with a `static` modifier, it becomes a nested top-level class and can be used as a normal top-level class as explained above. 
+When you declare a member class with a `static` modifier, it becomes a nested top-level class and can be used as a normal top-level class as explained above.
 
 4. **Nested Top-Level**
-A nested top-level class is a member classes with a `static` modifier. A nested top-level class is just like any other top-level class except that it is declared within another class or interface. Nested top-level classes are typically used as a convenient way to group related classes without creating a new package. 
+A nested top-level class is a member classes with a `static` modifier. A nested top-level class is just like any other top-level class except that it is declared within another class or interface. Nested top-level classes are typically used as a convenient way to group related classes without creating a new package.
 
-If your main class has a few smaller helper classes that can be used outside the class and make sense only with your main class, it's a good idea to make them nested top-level classes. To use the nested top-level class, write: `TopLevelClass.NestedClass`. 
+If your main class has a few smaller helper classes that can be used outside the class and make sense only with your main class, it's a good idea to make them nested top-level classes. To use the nested top-level class, write: `TopLevelClass.NestedClass`.
 
 If you define a member class, that doesn't reference the surrounding top-level class, **do not** forget to declare it as `static` as otherwise each instance of this class has a reference to the surrounding class [p. 101][#Bloch:2002].
 
 Nested top level classes are often used to capsule objects representing components of the surrounding class (eg. `Map.Entry`).
 
-One **important note**: The `static` keyword does **not** do to a class declaration what it does to a variable or a method declaration. 
-	 
+One **important note**: The `static` keyword does **not** do to a class declaration what it does to a variable or a method declaration.
+
 ### Garbage Collection ###
 
 Java makes uses of Garbage Collection to remove objects from memory that are no longer being used. "_Being used_" normally meaning being _referenced_ by other objects. So this makes life for the developer easier, but it doesn’t mean that he doesn’t have to think about the lifecycle of an object. The developer could forget to de-reference an object no longer in use (caches and hash maps are a good candidate for such a mistake).
@@ -129,8 +129,8 @@ Every thrown `Exception` stops the `finalize()` method, but doesn’t stop the G
 
 Java and the programming world itself thrive on conventions. A _JavaBean_ has to conform to three properties
 
-- parameter less constructor  
-- class has (private ) member variables  
+- parameter less constructor
+- class has (private ) member variables
 - public setter/getter method to access the values
 
 Sometimes these objects are also called _POJOs_ (Plain Old Java Object), describing the fact that the don’t implement an interface, or extend another class, they are just a normal object.
@@ -158,7 +158,7 @@ The servlet lifecycle consists of the following steps:
 
 1.  The servlet class is loaded by the container during start-up.
 2.  The container calls the `init()` method. This method initializes the servlet and must be called before the servlet can service any requests. In the entire life of a servlet, the init() method is called only once.
-3.  After initialization, the servlet can service client requests. Each request is serviced in its own separate thread. The container calls the `service()` method of the servlet for every request. The `service()` method determines the kind of request being made and dispatches it to an appropriate method to handle the request. The developer of the servlet must provide an implementation for these methods. If a request for a method that is not implemented by the servlet is made, the method of the parent class is called, typically resulting in an error being returned to the requester.  
+3.  After initialization, the servlet can service client requests. Each request is serviced in its own separate thread. The container calls the `service()` method of the servlet for every request. The `service()` method determines the kind of request being made and dispatches it to an appropriate method to handle the request. The developer of the servlet must provide an implementation for these methods. If a request for a method that is not implemented by the servlet is made, the method of the parent class is called, typically resulting in an error being returned to the requester.
 Finally, the container calls the `destroy()` method that takes the servlet out of service. The destroy() method, like init(), is called only once in the lifecycle of a servlet.
 
 ## FAQ/Problems ###
@@ -193,20 +193,20 @@ Just add the following VM parameter
 
 For example `-Xms512m -Xmx768m` whereas the m would stand for megabyte.
 
-JVM starts with `-Xms` amount of memory for the heap (storing objects etc.) and can grow to a maximum of `-Xmx` amount of memory. 
+JVM starts with `-Xms` amount of memory for the heap (storing objects etc.) and can grow to a maximum of `-Xmx` amount of memory.
 
 ### JavaDoc ###
 
-[Java SE 1.3](http://download.oracle.com/javase/1.3/docs/api/)  
-[Java SE 1.4](http://download.oracle.com/javase/1.4.2/docs/api/)  
-[Java SE 1.5](http://download.oracle.com/javase/1.5.0/docs/api/)  
+[Java SE 1.3](http://download.oracle.com/javase/1.3/docs/api/)
+[Java SE 1.4](http://download.oracle.com/javase/1.4.2/docs/api/)
+[Java SE 1.5](http://download.oracle.com/javase/1.5.0/docs/api/)
 [Java SE 6](http://download.oracle.com/javase/6/docs/api/)
 [Java SE 7](http://download.oracle.com/javase/7/docs/api/)
 
-[Java EE 1.2](http://download.oracle.com/javaee/1.2.1/api/)  
-[Java EE 1.3](http://download.oracle.com/javaee/1.3/api/)  
-[Java EE 1.4](http://download.oracle.com/javaee/1.4/api/)  
-[Java EE 5](http://download.oracle.com/javaee/5/api/)  
+[Java EE 1.2](http://download.oracle.com/javaee/1.2.1/api/)
+[Java EE 1.3](http://download.oracle.com/javaee/1.3/api/)
+[Java EE 1.4](http://download.oracle.com/javaee/1.4/api/)
+[Java EE 5](http://download.oracle.com/javaee/5/api/)
 [Java EE 6](http://download.oracle.com/javaee/6/api/)
 
 [#Bloch:2002]: Joshua Bloch. *Effektiv Java Programmieren*.  Addison-Wesley, 2002.

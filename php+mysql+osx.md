@@ -4,7 +4,7 @@
 
 	sudo port install apache2
 	sudo apachectl start
-	
+
 Try if it work `http://localhost/`
 
 ## PHP ##
@@ -16,25 +16,25 @@ Try if it work `http://localhost/`
 	sudo /opt/local/apache2/bin/apxs -a -e -n "php5" libphp5.so
 	sudo port install php5-mysql
 	sudo cp /opt/local/etc/php5/php.ini-development /opt/local/etc/php5/php.ini
-	
+
 You need to to configure your timezone in `/opt/local/etc/php5/php.ini`
 
 	[Date]
 	; Defines the default timezone used by the date functions
 	; http://php.net/date.timezone
 	;date.timezone =
-	
+
 Add index.php to the `dir_module `directive in `httpd.conf`
 
 	<IfModule dir_module>
 	    DirectoryIndex index.html index.php
 	</IfModule>
-	
+
 Add a new MIME type so that Apache will direct files ending in .php to the PHP module for processing. Add the following within the <IfModule mime_module> block. Without this, all you'll see is the text of your PHP scripts
 
 	AddType application/x-httpd-php .php
 	AddType application/x-httpd-php-source .phps
-	
+
 If you've installed MySQL, tell PHP where it can find the MySQL socket. Set the following in the `php.ini` file:
 
 	mysql.default_socket = /tmp/mysql.sock
@@ -42,7 +42,7 @@ If you've installed MySQL, tell PHP where it can find the MySQL socket. Set the 
 Restart the server
 
 	sudo /opt/local/apache2/bin/apachectl graceful
-	
+
 ### With homebrew ###
 
 I you need to install your own php via homebrew you might want to try this
@@ -50,17 +50,17 @@ I you need to install your own php via homebrew you might want to try this
 	curl -O http://github.com/ampt/homebrew/raw/php/Library/Formula/php.rb
 	mv php.rb `brew --prefix`/Library/Formula
 	brew install php --with-apache --with-mysql
-	
+
 I ran into compilation problems and used OSX php installation instead
 
 ### mb string extension ###
 
 	sudo port install php5-mbstring
 	sudo /opt/local/apache2/bin/apachectl graceful
-	
+
 ### PEAR ###
 
-Libraries are installed to 
+Libraries are installed to
 
 	/opt/local/lib/php
 

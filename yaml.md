@@ -31,7 +31,7 @@
 Two additional sigil characters are reserved in YAML for possible future standardisation: the at sign `@` and accent grave `.
 
 ## Example ##
-	
+
 	--- !clarkevans.com/^invoice
 	invoice: 34843
 	date   : 2001-01-23

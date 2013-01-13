@@ -69,7 +69,7 @@ After (!) you pushed all submodules you have changed (do not do a `git submodule
 
     $ pwd
     /tmp/git/super
-    $ git add subproject # DON'T USE THE FORWARD SLASH AT THE END	
+    $ git add subproject # DON'T USE THE FORWARD SLASH AT THE END
     $ git commit -m "Updated submodule" subproject
     $ git push
 
@@ -93,13 +93,13 @@ There should be an entry like:
 
 	[submodule "billboard"]
 	url = git@mygithost:billboard
-	
+
 3. Remove the path created for the submodule
 
 Simply run
 
 	git rm --cached [plugin path] # without trailing slash
-	
+
 Do **not** put a trailing slash as the command will fail.
 
 ## FAQ/Problems ##

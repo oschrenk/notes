@@ -20,10 +20,10 @@ Dependency Injection is a form IoC (Inversion of COntrol) that removes explicit 
 - Singleton. There is one shared instance of the object, which will be retrieved on lookup. It is often used for stateless service objects.
 - Prototype. Each retrieval will result in creation of an independent object.
 
-The `org.springframeworek.beans.factory.BeanFactory` is a simple interface. The most common use `BeanFactory` implementation is probably	
+The `org.springframeworek.beans.factory.BeanFactory` is a simple interface. The most common use `BeanFactory` implementation is probably
 
 		BeanFactory factory = new XMLBeanFactory(new FileInputSteam("mybean.xml"));
 
 All beans defined in XML are lazily loaded that means that they will only be instantiated when they are needed.
 
-Each bean definition can be a POJO or a `FactoryBean`	
+Each bean definition can be a POJO or a `FactoryBean`

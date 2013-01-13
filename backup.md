@@ -93,12 +93,12 @@ GMX hat 5GB (4GB frei) als WebDav Folder
 
 #### Fruux ####
 
-Fruux syncs Ical, Adressbuch  
+Fruux syncs Ical, Adressbuch
 ziemlich nutzlos da Plaxo das schon hat und zusätzlich ein Webinterface bietet
 
 #### Wuala ####
 
-Wuala hat 1GB aber zusätzliche Applikation (15€ für 10GB/Jahr)  
+Wuala hat 1GB aber zusätzliche Applikation (15€ für 10GB/Jahr)
 eigene Anwendung
 
 #### Plaxo ####
@@ -116,13 +116,13 @@ MobileMe bietet:
 
 #### Evernote ####
 
-Die Freie Version bietet 40MB monatlichen Upload (für Reine Texte langt das allemal)  
+Die Freie Version bietet 40MB monatlichen Upload (für Reine Texte langt das allemal)
 Ansonsten 5$ pro Monat bzw 45$ (32€) pro Jahr, für 500MB Upload pro Monat auch für andere Dateien außer Text und
 SSL
 
 #### Sugarsync ####
 
-SugarSync 25$ (18€) pro Jahr für 10GB Sync Lösung für IPod und Mac  
+SugarSync 25$ (18€) pro Jahr für 10GB Sync Lösung für IPod und Mac
 30GB 50$ (36€) pro Jahr
 
 #### Flickr ####

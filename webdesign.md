@@ -23,7 +23,7 @@
 - clients validate not only for users sake but also to reduce work on the ser ver
 
 ### User Commits & Rollbacks ###
-	 
+
 - avoid modal dialogs
 - always do what the user wants
 - offer them possibility to rollback

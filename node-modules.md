@@ -5,7 +5,7 @@
 - [Connect](http://senchalabs.github.com/connect/) Connect is a middleware framework for node, shipping with over 11 bundled middleware and a rich choice of 3rd-party middleware. Connect makes it easy to build fully features HTTP servers complete with logging, gzipping, smart caching, and all the other goodies that Connect provides out of the box.
 - [express](http://expressjs.com/) Insanely fast (and small) server-side JavaScript web development framework built on node and Connect.
 - [socket.io](http://socket.io/)  An abstraction over all the realtime transports (WebSocket, long polling, XHR multipart, etc) for the Node HTTP server
- 
+
 ## Persistence ##
 
 - [mongooose](http://mongoosejs.com/) Mongoose is a MongoDB object modeling tool designed to work in an asychronous environment.
@@ -14,7 +14,7 @@
 
 ## Messaging & Background tasks ##
 
-- [faye](https://github.com/jcoglan/faye) Dirt-simple publish/subscribe messaging over HTTP for Node.js and Rack 
+- [faye](https://github.com/jcoglan/faye) Dirt-simple publish/subscribe messaging over HTTP for Node.js and Rack
 - [coffee-resque](https://github.com/technoweenie/coffee-resque) Node.js port of Resque
 - [node-webworker](https://github.com/pgriess/node-webworker) A WebWorkers implementation for NodeJS
 

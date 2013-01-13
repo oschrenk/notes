@@ -1,6 +1,6 @@
 # NoSQL #
 
-- allows heterogeneous data structures 
+- allows heterogeneous data structures
 
 Offers BASE (Basically Available, Soft state, Eventual consistency) as a consistency model as opposed to the relational database concept of ACID (Atomicity, Consistency, Isolation, Durability), which means that given a sufficiently long period of time over which no updates are sent, we can expect that during this period, all updates will eventually propagate through the system and all the replicas will be consistent.
 
@@ -8,7 +8,7 @@ Offers BASE (Basically Available, Soft state, Eventual consistency) as a consist
 
 ### Columnar ###
 
-Content is stored in columns rather than rows.Instead of storing 
+Content is stored in columns rather than rows.Instead of storing
 
 	1,Smith,Joe,40000;
 	2,Jones,Mary,50000;
@@ -25,7 +25,7 @@ Column oriented databases when data needs to be aggregated
 
 - [Google Bigtable](http://labs.google.com/papers/bigtable.html) Bigtable is a distributed storage system for managing structured data that is designed to scale to a very large size
 - [HBase](http://hbase.apache.org/)  HBase is the Hadoop database
-- [Apache Cassandra](http://cassandra.apache.org/) Cassandra is an open source distributed database management system. 
+- [Apache Cassandra](http://cassandra.apache.org/) Cassandra is an open source distributed database management system.
 - [MonetDB](http://www.monetdb.nl/) is a database system for high-performance applications in data mining, OLAP, GIS, XML Query, text and multimedia retrieval.
 
 ### Key/Value ###
@@ -41,7 +41,7 @@ Column oriented databases when data needs to be aggregated
 ### Document Oriented ###
 
 - allows empty fields without needing storage
-- indexes can be created on the fields 
+- indexes can be created on the fields
 
 - [Apache CouchDB](http://couchdb.apache.org/) is a document-oriented database that can be queried and indexed in a MapReduce fashion using JavaScript.
 - [MongoDB](http://www.mongodb.org/) is a scalable, high-performance, open source, document-oriented database
@@ -49,7 +49,7 @@ Column oriented databases when data needs to be aggregated
 
 ### Graph Oriented ###
 
-- [Neo4j](http://neo4j.org/) is a graph database implemented in Java. 
+- [Neo4j](http://neo4j.org/) is a graph database implemented in Java.
 
 ## Notes ##
 

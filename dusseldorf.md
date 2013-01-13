@@ -16,7 +16,7 @@
 
 ### Twitter ###
 
-- [@flingern](http://twitter.com/#!/flingern) Blog für Flingern 
+- [@flingern](http://twitter.com/#!/flingern) Blog für Flingern
 - [@garagebilk](http://twitter.com/#!/garagebilk) Coworking Space in Düsseldorf
 
 ## Trödelmärkte ##
@@ -60,20 +60,20 @@ Termine 2011
 
 ### Oxfam ###
 
-In both shops you can find a (very) small collection of english bookss	
+In both shops you can find a (very) small collection of english bookss
 
-	Nordstr. 9, Düsseldorf 
+	Nordstr. 9, Düsseldorf
 	0211 1577793
 
 	Friedrichstr. 25
-	40217 Düsseldorf	
+	40217 Düsseldorf
 
 ### Lieblingsstücke ###
 
 	Susanne Weipert
 	Bruchstraße 1 | Ecke Lindenstraße
-	40235 Düsseldorf 
-	0211. 6 99 93 67 
+	40235 Düsseldorf
+	0211. 6 99 93 67
 	weipert@lieblings-stuecke.de
 	www.lieblings-stuecke.de
 
@@ -105,7 +105,7 @@ Sa 10-16 Uhr
 	Birkenstrasse 122
 	40233 Düsseldorf
 	0211 21095612
-	
+
 ### Mae's ###
 
 	MAE ’S second hand deluxe
@@ -119,10 +119,10 @@ Sa 10-16 Uhr
 	Talsttr. 19
 	40217 Düsseldorf/Friedrichstadt
 	Tel: 0211 / 383 897
-	
+
 ### Herren Second Hand ###
 
-	Thomas Ernsing 
+	Thomas Ernsing
 	Oststr. 89
 	40210 Düsseldorf
 	Telefon: 0211.13653360
@@ -140,9 +140,9 @@ Völklinger Straße 24-36
 Tel:0211 1602 23 40
 Fax: 0211 1602 23 10
 
-	Mo. - Do.:   08.00 Uhr - 16.00 Uhr 
+	Mo. - Do.:   08.00 Uhr - 16.00 Uhr
 	Fr:          08.00 Uhr - 12.00 Uhr
-	
+
 ## Food ##
 
 ### Markets ###
@@ -163,7 +163,7 @@ Freitags von 10.00-18.00 Uhr
 Mittwoch: 07.00 Uhr - 13.00 Uhr
 Samstag: 07.00 Uhr - 13.00 Uhr
 
-### Organic Vegetable Box 
+### Organic Vegetable Box
 
 - [Lammertzhof](http://www.lammertzhof.info/)
 - [Hof zur Hellen](http://www.hofzurhellen.de/abo.php)

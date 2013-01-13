@@ -15,7 +15,7 @@ I [created a mirror](http://www.fnokd.com/2008/08/20/mirroring-svn-repository-to
 	# create copy of master
 	git checkout -b vendor
 	git push origin vendor
-	
+
 Preparing it for git flow
 
 	git checkout -b develop
@@ -26,7 +26,7 @@ Preparing it for git flow
 Prepare feature
 
 	git flow feature start ignore
-	
+
 Building for the first time (takes some time). It requires Java 1.6
 
 	ant publish
@@ -88,16 +88,16 @@ Add the generated stuff to `.gitignore`
 
 	git add .gitignore
 	git c
-	
+
 Finish the feature
 
 	git flow feature finish ignore
 	git push origin develop
-	
+
 The release can be found under
 
 	package
-	
+
 It can be used by calling
 
 	package/bin/osmosis

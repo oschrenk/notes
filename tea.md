@@ -49,7 +49,7 @@ Taken from [essen & trinken](http://www.essen-und-trinken.de/rezept/119704/marok
 
 #### Cooking ####
 
-- First infusion of the green tea. Brew for 1-2 minutes, drink or pour away, keep leaves in teapot, as they are needed for the second infusion.  
+- First infusion of the green tea. Brew for 1-2 minutes, drink or pour away, keep leaves in teapot, as they are needed for the second infusion.
 - Clean mint leaves. Add directly into teapot. Add saffron, anise and sugar. Brew with 70-80°C hot water.
 - Brew for 5-8 minutes. Swing the teapot from time to time.
 

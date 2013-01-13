@@ -1,4 +1,4 @@
-# Gitlab 
+# Gitlab
 
 [Installation](https://github.com/gitlabhq/gitlabhq/blob/master/doc/install/installation.md)
 

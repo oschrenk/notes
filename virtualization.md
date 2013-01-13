@@ -1,6 +1,6 @@
 # Virtualization #
 
-- [vagrant](http://vagrantup.com/) 
+- [vagrant](http://vagrantup.com/)
 - [wanton](https://github.com/maestrodev/wanton)
 - [sahara](https://github.com/jedi4ever/sahara)
 - [chef](http://www.opscode.com/chef/)

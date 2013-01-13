@@ -136,19 +136,19 @@ A sample manifest file:
     # If you change the version number in this comment,
     # the cache manifest is no longer byte-for-byte
     # identical.
-     
+
     `demoimages/clownfish.jpg`
-     
+
     `NETWORK:
     # All URLs that start with the following lines
     # are whitelisted.
     http://example.com/examplepath/
     http://www.example.org/otherexamplepath/`
-     
+
     `CACHE:
     # Additional items to cache after NETWORK.
     demoimages/stonessmall.jpg`
-     
+
     `FALLBACK:
     # if the first URI doesn't work, use the second one
     demoimages/ images/`

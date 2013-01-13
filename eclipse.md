@@ -54,7 +54,7 @@ A new lightweight refresh mechanism was introduced. Files discovered to be out-o
 
 ### Notable Changes in 3.8 ###
 
-- Quick Assist to convert enhanced `for` loop. 
+- Quick Assist to convert enhanced `for` loop.
 	- Convert to indexed `for` loop is available for expressions of `array`- and `List`-based types.
 	- Convert to Iterator-based `for` loop is available for expressions of type `Iterable`
 - Resource Leak Detection. The compiler can now detect leakage of resources i.e. local variables of type `java.lang.AutoCloseable` (compliance >= 1.7) and `java.io.Closeable` (compliance <= 1.6).

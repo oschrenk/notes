@@ -10,12 +10,12 @@ Plan your trip even if you are off season. Many hostels be might be closed or no
 
 ### Stirling ###
 
-- [Stirling Castle](http://en.wikipedia.org/wiki/Stirling_Castle) I don't know exactly why. But I loved it. The view across Stirling. [Wallace Monument](http://en.wikipedia.org/wiki/Wallace_Monument) barely visible because of the fog. The history, the battles, ... 
+- [Stirling Castle](http://en.wikipedia.org/wiki/Stirling_Castle) I don't know exactly why. But I loved it. The view across Stirling. [Wallace Monument](http://en.wikipedia.org/wiki/Wallace_Monument) barely visible because of the fog. The history, the battles, ...
 - There is a lovely cafe in town, I think it's on Friars Street. It looks like nothing special from the outside. Once inside you have to go the the first floor, where the have a large room, full of used stuff of all sorts.
 
 ### Loch Lomond ###
 
-[SHYA](http://www.syha.org.uk/), [Loch Lomond](http://www.syha.org.uk/hostels/central/loch_lomond.aspx) Impressive looking house, equally impressive view of the lake. Was closed when I was there :(. 
+[SHYA](http://www.syha.org.uk/), [Loch Lomond](http://www.syha.org.uk/hostels/central/loch_lomond.aspx) Impressive looking house, equally impressive view of the lake. Was closed when I was there :(.
 
 ### Glen Coe ###
 

@@ -12,7 +12,7 @@ Check your `DISPLAY` settings.
 I had to manually reset it. Don't set a hostname
 
 	export DISPLAY=:0.0
-	
+
 ## X11 over SSH ##
 
 	ssh -X user@remote

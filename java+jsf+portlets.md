@@ -23,7 +23,7 @@ The bridge is the connection between Portlet and JSF environment and works in a 
 
 For the application is is transparent from where the request came.
 
-## Bridge Interface 
+## Bridge Interface
 
 	init (PortletConfig)
 	destroy()
@@ -50,11 +50,11 @@ In addition to these parameters you can also set attributes in the portlet conte
 
 Two methods
 
-	public void doFacesRequest(ActionRequest request, ActionResponse response) 
-		throws BridgeDefaultViewNotSpecifiedException, BridgeUninitializedException, BridgeException; 
-		public void doFacesRequest(RenderRequest request, RenderResponse response) 
+	public void doFacesRequest(ActionRequest request, ActionResponse response)
+		throws BridgeDefaultViewNotSpecifiedException, BridgeUninitializedException, BridgeException;
+		public void doFacesRequest(RenderRequest request, RenderResponse response)
 			throws BridgeDefaultViewNotSpecifiedException, BridgeUninitializedException, BridgeException;
-			
+
 Similar to the lifecycle of a portlet.
 
 ### Destroy
@@ -69,18 +69,18 @@ The most important task of the GenericFacesPortlet is the instantiation of the b
 
 ## Combination of Life cycles
 
-The main problem of bringing the technologies together is bringing the two different life cycles together. As we are searching for a solution that could life within the portlet container, the portlet life cycle will be the defining one. 
+The main problem of bringing the technologies together is bringing the two different life cycles together. As we are searching for a solution that could life within the portlet container, the portlet life cycle will be the defining one.
 
-JSF doesn't have an explicit phase for initializing and destroying within the context. 
+JSF doesn't have an explicit phase for initializing and destroying within the context.
 
 During the rendering phase of the portlet, the render phase of JSF is also called (after the Restore View phase of course)
 
-	Portlet Render Request > JSF Restore View > JSF Render Response > Portlet Render Response 
+	Portlet Render Request > JSF Restore View > JSF Render Response > Portlet Render Response
 
 During the action phase of the portlet JSF phases 1-5 are called
 
 	Portlet Action Request > Restore View > Apply Request Values > Process Validations > Update Model Values > Invoke Application > Portlet Action Response
-	
+
 The JSR Bridge is responsible for dividing to call the appropriate JSF phases when portlet render requests or action requests are coming in.
 
 ## Bridge Request Scope
@@ -99,10 +99,10 @@ The bridge buffers request attributes. Sometimes this behavior isn't needed or i
 
 - using `javax.portlet.faces.annotation.ExcludeFromManagedRequestScope` annotation
 - using `javax.portlet.faces.[portletname].excludedRequestAttributes` attribute
-- using `faces-config.xml` 
+- using `faces-config.xml`
 
 	<faces-config version="1.2" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:bridge="http://www.apache.org/myfaces/xml/ns/bridge/bridge-extension">
-	
+
 	<application>
 		<application-extension>
 			<bridge:excluded-attributes>
@@ -112,7 +112,7 @@ The bridge buffers request attributes. Sometimes this behavior isn't needed or i
 			</bridge:excluded-attributes>
 		</application-extension>
 	</application>
-	
+
 # Appendix
 
 ## Terminology

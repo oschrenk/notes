@@ -32,7 +32,7 @@ These will work as long as the last component of the path used to find the scrip
     SOURCE="${BASH_SOURCE[0]}"
     DIR="$( dirname "$SOURCE" )"
     while [ -h "$SOURCE" ]
-    do 
+    do
       SOURCE="$(readlink "$SOURCE")"
       [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
       DIR="$( cd -P "$( dirname "$SOURCE"  )" && pwd )"

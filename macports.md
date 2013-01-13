@@ -17,10 +17,10 @@ To update macports and its ports tree, run
 After the `selfupdate` run to update the ports
 
 	$ sudo port -vu upgrade outdated´
-	
+
 - `-R` := upgrading dependents (ports that depend on the port being upgraded)
 - `-u` := uninstall the old version after installing the new version
-- `-v` := verbose output 
+- `-v` := verbose output
 
 ## Usage
 
@@ -30,7 +30,7 @@ Ports can be found [here](http://www.macports.org/ports.php)
 
 ### Install a new port
 
-To install a port run 
+To install a port run
 
 	$ sudo port install <portname>
 
@@ -53,7 +53,7 @@ You can specify multiple ports to uninstall by just appending their names to the
 #### Uninstall all ports ####
 
 	$ sudo port -f uninstall installed
-	
+
 #### Remove macports rests ####
 
 	sudo rm -rf \
@@ -75,7 +75,7 @@ You can specify multiple ports to uninstall by just appending their names to the
 ### clean ###
 
 Deletes temporary and cached files. Normally you would only use it to save some space., but there are occurrences where cleaning resolves some build problems.
-To clean a specific port run 
+To clean a specific port run
 
 	$ sudo port clean <portname>
 
@@ -175,8 +175,8 @@ Since it succeeded, [file a ticket](http://trac.macports.org/newticket) to upgra
 	$ diff -u Portfile.orig Portfile | sudo tee <portname>.diff
 
 Then specify the `<portname>.diff` as a file to be attached to the new ticket.
-	
-If you edit the ticket please CC the maintainer, remove the version number put `haspatch` as keyword, put in the correct portname and maybe give it directly to the maintainer.	
+
+If you edit the ticket please CC the maintainer, remove the version number put `haspatch` as keyword, put in the correct portname and maybe give it directly to the maintainer.
 
 #### Step 7: Cleaning up ####
 

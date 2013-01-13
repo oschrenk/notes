@@ -51,7 +51,7 @@ einteilen:
 
 Theoretisch lösbar zu sein heißt, das ein Lösungsalgorithmus
 existiert (ob er praktisch ausführbar ist, ist dann ein anderes
-Problem)  
+Problem)
 Um zu zeigen, dass ein Problem theoretisch unlösbar ist, muss man
 einen Beweis führen. Nur weil kein Algorithmus bekannt ist, heißt
 nicht das das Problem nicht lösbar ist.
@@ -81,6 +81,6 @@ Dieses Problem ist nicht lösbar.
 ## Praktische Lösbarkeit ##
 
 Quelle:Grundkurs Algorithmen und Datenstrukturen in JAVA
-Andreas Solymosi und Ulrich Grude  
-Vieweg+Teubner Verlag  
+Andreas Solymosi und Ulrich Grude
+Vieweg+Teubner Verlag
 ISBN 978-3-8348-0350-4
