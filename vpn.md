@@ -1,5 +1,7 @@
 # VPN #
 
+- check for dns leaks
+
 ## Cisco VPN in Linux ##
 
 	$ sudo /usr/sbin/vpnc
