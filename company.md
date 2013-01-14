@@ -216,7 +216,7 @@ Keep in mind
 - Talk in person if there are too many "I didn't understand" or "Alternative
   solution:" comments. Post a follow-up comment summarizing offline discussion.
 
-#### Having your code reviewed ####
+#### Reviewee ####
 
 - Be grateful for the reviewer's suggestions. ("Good call. I'll make that
 - change.")
@@ -233,7 +233,7 @@ Keep in mind
 - Wait to merge the branch until another person signs off.
 - Wait to merge the branch until Continuous Integration (TDDium, TravisCI, etc.).
 
-#### Reviewing code ####
+#### Reviewer ####
 
 Understand why the code is necessary (bug, user experience, refactoring). Then:
 
