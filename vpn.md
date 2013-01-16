@@ -1,6 +1,6 @@
 # VPN #
 
-- check for dns leaks
+- check for dns leaks (eg. with [dnsleaktest.com](http://www.dnsleaktest.com/))
 
 ## Cisco VPN in Linux ##
 
