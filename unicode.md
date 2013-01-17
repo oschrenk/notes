@@ -4,6 +4,31 @@
 - [Graphemica](http://graphemica.com/) Search unicode characters
 - [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
 
+**Typography**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `§` - `&#x00A7;` - `&#167;` - Section Sign
+- `¶` - `&#x00B6;` - `&#182;` - Pilcrow Sign
+
+- `‒` - `&#x2012;` - `&#8210;` - Figure Dash
+- `–` - `&#x2013;` - `&#8211;` - En Dash
+- `—` - `&#x2014;` - `&#8212;` - Em Dash
+- `―` - `&#x2015;` - `&#8213;` - Citation Dash
+
+- `↩` - `&#x21A9;` - `&#8617;` - Leftwards Arrow With Hook
+- `␣` - `&#x2423;` - `&#9251;` - Space (`Open Box`)
+
+**Miscellaneous Symbols***
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `☀` - `&#x2600;` - `&#9728;` - Black Sund With Rays
+- `☁` - `&#x2601;` - `&#9729;` - Cloud
+- `☂` - `&#x2602;` - `&#9730;` - Umbrella
+- `☃` - `&#x2603;` - `&#9731;` - Snowman
+- `☄` - `&#x2604;` - `&#9732;` - Comet
+- `★` - `&#x2605;` - `&#9733;` - Black Star
+- `☆` - `&#x2606;` - `&#9734;` - White Star
+
 **Computer Keyboard Symbols**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
