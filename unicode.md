@@ -45,6 +45,12 @@
 - `⏏` - `&#x23CF;` - `&#9167;` - the Eject symbol
 - `␣` - `&#x2423;` - `&#9251;` - Space (`Open Box`)
 
+**Control Pictures Block**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `␊` - `&#x240A;` - `&#9226;` - Symbol For Line Feed
+- `␍` - `&#x240D;` - `&#9229;` - Symbol For Carriage Return
+
 **Arrow Symbols**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
