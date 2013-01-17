@@ -46,6 +46,8 @@ Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a p
 
 ## Appendix ##
 
+To get to "New and Noteworthy" section open the [Download Overview](http://download.eclipse.org/eclipse/downloads/index.html), click on the Milestone (under Stable Build), and click on the "New and Noteworthy" link (that looks like a header)
+
 ### Notable Changes in 3.7 ###
 
 A new lightweight refresh mechanism was introduced. Files discovered to be out-of-sync by the workspace, for example while accessing the file content by an editor, are automatically asynchronously refreshed. In Eclipse 3.7 and 3.8 you have to enable this yourself via Preferences > General > Workspace and select Refresh on access. In Eclipse SDK 4.2 the mechanism is enabled by default.
