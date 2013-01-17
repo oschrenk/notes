@@ -32,8 +32,6 @@ In OSX the  `eclipse.ini` can be found under `path/to/Eclipse.app/Contents/MacOS
 
 If you need some more flexibility e.g.. setting it depending on your workspace you might want to look into the usage of [JAutoDoc](http://jautodoc.sourceforge.net/) and changing the default template and setting a property.
 
-## Hints ##
-
 ### Show hidden (`.*`) files ###
 
 In the project explorer there is a small triangle or arrow facing down. Pressing it will open the _View Menu_. Choose `Customize View > Filters` and deselect `.*-resources`
