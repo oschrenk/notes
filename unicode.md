@@ -81,6 +81,14 @@
 - `ℝ` - `&#x211D;` - `&#8477;` - Real Numbers Symbol - Double-struck Capital R
 - `∅` - `&#x2205;` - `&#8709;` - Empty Set
 
+**Science Symbols**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `°` - `&#x00B0;` - `&#176;` - Degree Sign
+- `′` - `&#x2032;` - `&#8242;` - Prime
+- `″` - `&#x2033;` - `&#8243;` - Double Prime
+- `µ` - `&#x00B5;` - `&#181;` - Micro Sign
+
 **Currency Symbols**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
