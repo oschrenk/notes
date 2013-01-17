@@ -74,6 +74,9 @@
 - `±` - `&#x00B1;` - `&#177;` - Plus-minus Sign
 - `∈` - `&#x2208;` - `&#8712;` - Element Of
 - `∉` - `&#x2209;` - `&#8713;` - Not An Element Of
+- `∀` - `&#x2200;` - `&#8704;` - For All
+- `∃` - `&#x2203;` - `&#8707;` - THERE EXISTS , exist, Exists
+- `∄` - `&#x2204;` - `&#8708;` - THERE DOES NOT EXIST , nexist, NotExists
 - `ℕ` - `&#x2115;` - `&#8469;` - Natural Numbers Symbol - Double-struck Capital N
 - `ℝ` - `&#x211D;` - `&#8477;` - Real Numbers Symbol - Double-struck Capital R
 - `∅` - `&#x2205;` - `&#8709;` - Empty Set
