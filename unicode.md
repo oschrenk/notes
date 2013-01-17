@@ -1,7 +1,8 @@
 # Characters #
 
-- [UniSearcher](http://www.isthisthingon.org/unicode/index.php)
-- [Graphemica](http://graphemica.com/)
+- [UniSearcher](http://www.isthisthingon.org/unicode/index.php) Search unicode characters
+- [Graphemica](http://graphemica.com/) Search unicode characters
+- [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
 
 **Computer Keyboard Symbols**
 
