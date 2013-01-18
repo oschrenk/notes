@@ -68,7 +68,7 @@
 - [SparkleShare](http://sparkleshare.org/) File collaboration tool. Relies on Git.
 - [owncloud](http://owncloud.org)
 - [syncany](http://www.syncany.org/)
-- [Seafile](http://seafile.com/en/private/)
+- **[Seafile](http://seafile.com/en/private/)**
 
 ### Backup ###
 
