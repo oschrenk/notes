@@ -22,6 +22,12 @@ Some default settings are weird, especially the encoding and line delimiter sett
 *   Change encoding `General -> Workspace > Text File Encoding -> Other -> UTF-8`
 *   Line Delimiter to Unix `General -> Workspace -> New text file line delimiter -> Other -> Unix`
 
+### Commit from project explorer with keyboard shortcut ###
+
+[From Stackoverflow](http://stackoverflow.com/questions/8469313)
+
+Ensure `Git` is checked within the `Command Groups Availability` tab of the `Window > Customize Perspective menu`.
+
 ### Change the @author JavaDoc value ###
 
 The default is that Eclipse uses the currently logged in username. To change the default settings edit the `eclipse.ini` and add
