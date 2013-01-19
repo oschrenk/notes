@@ -1,6 +1,8 @@
 # Kaffee #
 
-## Latte macchiato ##
+## Zubereitungsmethoden ##
+
+### Latte macchiato ###
 
 Latte macchiatto (italienisch für gefleckte Milch) ist ein Warmgetränk aus Milch und Espresso. Es ähnelt dem Milchkaffee, enthält aber in der Regel mehr Milch und wird mit stärker gerösteten Bohnen zubereitet.
 
@@ -8,7 +10,7 @@ Er besteht aus drei Schichten: Heißer Milch, Espresso und dem Milchschaum. Weil
 
 Die Annahme dass fettarme Milch länger stabil bleibt ist falsch, sie wurde im Rahmen einer Doktorarbeit widerlegt.
 
-## Zubereitung eines Caramel Macchiato ##
+### Zubereitung eines Caramel Macchiato ###
 
 *   Milch
 *   Espresso
@@ -17,19 +19,19 @@ Die Annahme dass fettarme Milch länger stabil bleibt ist falsch, sie wurde im R
 
 In einer normalen Kaffeetasse Vanillesirup und geschäumte Milch hinzufügen. Milchschaum hinzufügen und abschließend frischen Espresso durch den Schaum eingiessen. Mit Karamellsirup beträufeln.
 
-## Cappuccino ##
+### Cappuccino ###
 
 Besteht etwa aus gleichen Teilen aus einem mit etwa doppelter Wassermenge gebrühten Espresso (espresso lungo), heißer Milch und heißem Milchschaum.
 
-## Milchkaffee ##
+### Milchkaffee ###
 
 (französisch: Café au lait, Kaffee mit Milch) Zur Hälfte aus Kaffee, zur Hälfte aus Milch. Wird in Frankreich in einer großen Schale serviert. In Paris wird er auch Café Crème genannt.
 
 (italienisch: Caffè Latte, korrekt: Caffè e latte). Doppelter Espresso mit Milch. Nur selten Milchschaum. Der _Latte macchiato_ ist eine Variante des Milchkaffees. Er wird jedoch schichtweise und nicht gemischt serviert.
 
-## Espresso ##
+### Espresso ###
 
-Ist eine Zubereitungsart, bei der Wasser mit hohen Druck durch feines Kaffeemehl gepresst wird. Dies ergibt einen konzentrierteren Kaffee. Es bildet sic eine haselnussbraune Schaumschicht -- die Crema. Durch die starke Röstung enthält eine Tasse Espresso weniger Koffein als eine normale Tasse Kaffee (25ml vs. 125ml).
+Wasser wir mit hohen Druck durch feines Kaffeemehl gepresst und ergibt einen konzentrierteren Kaffee. Es bildet sich eine haselnussbraune Schaumschicht -- die Crema. Durch die starke Röstung enthält eine Tasse Espresso weniger Koffein als eine normale Tasse Kaffee (25ml vs. 125ml).
 
 Für Espresso werden die gleichen Bohnen verwendet, sie werden aber dunkler geröstet.
 
