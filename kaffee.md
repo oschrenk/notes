@@ -35,6 +35,12 @@ Wasser wir mit hohen Druck durch feines Kaffeemehl gepresst und ergibt einen kon
 
 Für Espresso werden die gleichen Bohnen verwendet, sie werden aber dunkler geröstet.
 
+## Variationen ##
+
+- Crème double (Fettgehalt von 40+ %).
+- Schlagsahne (crème fouettée, Fettgehalt von 30+ %).
+- Crème fraîche (Fettgehalt von 30+). Sauerrahmerzeugnis, nicht geeignet.
+
 ## Begriffe ##
 
 ### Rösten ###
