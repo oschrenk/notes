@@ -215,9 +215,7 @@ with optional
 	/lib<qual>	Alternate format essential shared libraries (optional)
 	/root	Home directory for the root user (optional)
 
-### Files ###
-
-#### Unix File Permissions
+### Unix File Permissions ###
 
 The most common notation is symbolic notation. For example
 
@@ -252,7 +250,7 @@ The binary (or decimal) notation for a triad is as follows
     no read no write execute = 001 = 1
     no read no write no execute = 000 = 0
 
-#### umask ####
+### umask ###
 
 > `umask` (user mask) is a command and a function in POSIX environments that sets the file mode creation mask of the current process which limits the permission modes for files and directories created by the process. A process may change the file mode creation mask with umask and the new value is inherited by child processes.
 
@@ -260,7 +258,7 @@ From [Umask](http://en.wikipedia.org/wiki/Umask) on Wikipedia.
 
 `umask` defines the default permissions of *newly created* files and directories.
 
-#### Access Control lists
+### Access Control lists ###
 
 Access Control lists are lists of file permissions attached to an object. They offer a far more complex system than basic Unix file permissions.
 
@@ -283,11 +281,31 @@ To delete an acl entry you have to run `chmod -a` with the exact definition of t
     	0: group:everyone deny delete
     	$ chmod -a "group:everyone deny delete" file.ext
 
-#### Apple File Attributes ####
+### Apple File Attributes ###
 
 Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using `ls -ls` indicated by the `@` symbol. By calling `ls -@` or `xattr`you can see that an attribute `com.apple.quarantine` has been added. To remove that call `sudo xattr -d com.apple.quarantine path` or `xattr -d com.apple.quarantine path`
 
-## FreeBSD Interrupt Signals ##
+## FAQ/Problems ##
+
+### Missing Readline Support, Garbage ouput like `^[[A` ###
+
+Some REPLs have no support for Readline. That means that if you enter an Up arrow, you get garbage output like this:
+
+	$ sml
+	Standard ML of New Jersey v110.75 [built: Fri Jan 11 10:32:43 2013]
+	- ^[[A
+
+Simply install rlwrap via your operating system’s package manager (or manually), and then invoke the REPL via `rlwrap`:
+
+	$ rlwrap sml
+
+At this point, even if you do nothing else, the REPL is now at least able to handle Up and Down arrows to scroll through history, and you can use basic Readline commands like `Ctrl-a` and `Ctrl-e` to go to the start and end of the line respectively, `Ctrl-u` to delete back to the prompt (and save the deleted material), `Ctrl-y` to paste saved text back into the prompt and so on. One other nice thing is that `rlwrap` saves history per command across invocations.
+
+[arpinum.org, Learn Yourself a Better REPL for Great Good!](http://ithaca.arpinum.org/2013/01/20/rlwrap.html)
+
+## Appendix ##
+
+### FreeBSD Interrupt Signals ###
 
 | Signal Name | Signal Number | Signal Description |
 | :---- | :---- | :---- |
