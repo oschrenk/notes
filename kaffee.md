@@ -37,9 +37,11 @@ Für Espresso werden die gleichen Bohnen verwendet, sie werden aber dunkler ger�
 
 ## Variationen ##
 
+- Butter (80+ %)
 - Crème double (Fettgehalt von 40+ %).
 - Schlagsahne (crème fouettée, Fettgehalt von 30+ %).
-- Crème fraîche (Fettgehalt von 30+). Sauerrahmerzeugnis, nicht geeignet.
+- Crème fraîche (Fettgehalt von 30+ %). Sauerrahmerzeugnis, nicht geeignet.
+- Crème légère (Fettgehalt von 15+ %). Sauerrahmerzeugnis, nicht geeignet.
 
 ## Begriffe ##
 
