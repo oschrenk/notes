@@ -31,6 +31,10 @@
 - [Jenkins](http://jenkins-ci.org/)
 - [Travis CI](http://travis-ci.org/)
 
+### Bug analysis ###
+
+- [squash](http://squash.io/) Squash is an exception reporting and bug analysis tool from Square.
+
 ### Testing ###
 
 #### Java ####
