@@ -5,7 +5,7 @@
 ### Spanien ###
 
 * Rioja, Club Privado, Reserva 2005:
-sehr trocken, voll 
+sehr trocken, voll
 * Rioja, Beronia, Reserva 2005:
 trocken, etwas wässrig beim Anschmecken
 * Rioja, Beronia, Gran Reserva 2001:
@@ -21,6 +21,6 @@ fruchtig, säuerlich, wässrig
 ### Deutschland ###
 
 * Scheurebe Kabinett, 2009, Mainstockheimer Hofstück, www.winzerhof-burrlein.de
-süß, 
-* Grauer Burgunder, Oppenheimer Krötebrunnen, 2009 Auslese, Trocken 
+süß,
+* Grauer Burgunder, Oppenheimer Krötebrunnen, 2009 Auslese, Trocken
 leicht süß

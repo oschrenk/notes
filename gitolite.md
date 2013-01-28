@@ -13,11 +13,11 @@ Installation notes for Gitolite 2.x
 	touch .ssh/authorized_keys
 	exit
 	exit
-	
+
 	cat ~/.ssh/id_rsa.pub | ssh gitolite@server.com "cat - >> john.doe.pub"
-	
+
 	ssh gitolite@server
-	
+
 	git clone git://github.com/sitaramc/gitolite.git
 	cd gitolite
 	mkdir -p /usr/local/share/gitolite/conf /usr/local/share/gitolite/hooks
@@ -25,15 +25,15 @@ Installation notes for Gitolite 2.x
 	cd $HOME
 	gl-setup john.doe.pub
 	rm john.doe.pub
-	
+
 ## Administration ##
 
 Check out the administration repository
 
 	git clone gitolite@server:gitolite-admin
-	
+
 Checkout the installation configuration
-	
+
 	cd gitolite-admin
 	vi conf/gitolite.conf
 
@@ -64,17 +64,17 @@ By making use of gitolite's [admin defined commands](http://sitaramc.github.com/
 	@leads 		= @admins
 	@developers = @leads
 	@users		= @developers
-	
+
 	repo    projects/acme/.*
 		C	= @leads
 		RW+	= @leads
 		R	= @all
-	
+
 	repo    users/CREATOR/.*
 		C	= @users
 		RW+ = CREATOR
 		R	= @all
-		
+
 ## FAQ/Problems ##
 
 ### fatal: 'gitolite-admin' does not appear to be a git repository ###

@@ -7,7 +7,7 @@ If you still have to work with some svn repositories you might consider setting 
 See [Migrate SVN](#migrate-svn) for some more information, but run add `--global` to add it to the global `.gitconfig` like so:
 
     $ git config --global svn.authorsfile ~/Desktop/users.txt
-    
+
 ## Basics ##
 
 	git svn init http://code.yoursite.net/project/trunk/ localpath
@@ -71,7 +71,7 @@ I'm using a [Linode](http://www.linode.com/) slice to do the mirroring jobs via 
 
 ## Mirror SVN to GIT repositories ##
 
-I use Osmosis as an example. I only wanted the mirror the trunk from the [SVN Repository](http://svn.openstreetmap.org/applications/utils/osmosis/trunk/). 
+I use Osmosis as an example. I only wanted the mirror the trunk from the [SVN Repository](http://svn.openstreetmap.org/applications/utils/osmosis/trunk/).
 
 ### With git svn ###
 
@@ -85,14 +85,14 @@ I use Osmosis as an example. I only wanted the mirror the trunk from the [SVN Re
 	hub create
 	# repo needs a proper master
 	git push origin master
-	# create copy of master	
+	# create copy of master
 	git checkout -b vendor
 	git push origin vendor
 
 Preparing it for git flow
 
 	git checkout -b develop
-	git flow init -d	
+	git flow init -d
 	git push origin develop
 
 I then build the project, and added a `.gitignore` file to ignore the auto generated files.
@@ -155,7 +155,7 @@ You need
 	sudo apt-get install git-core git-svn ruby rubygems
 	sudo gem install svn2git --source http://gemcutter.org
 
-You may have problems running them `gem install` command if you just installed it. Reinitialize your profile. 
+You may have problems running them `gem install` command if you just installed it. Reinitialize your profile.
 
 I will use the Lejos project as an example
 
@@ -228,18 +228,18 @@ This is what you do
 	mkdir my-project
 	svn add my-project
 	svn commit
-	
+
 2. Clone a git repository from the subversion one you just imported
 
 	git svn clone http://some/svn/repo/my-project
-	
+
 3. Add your working git repository as a remote repository.
 
 	cd my-project
 	git remote add dev /path/to/working/git/repository
-	
-4. Do the magic	
-	
+
+4. Do the magic
+
 	git pull dev master
 	git svn rebase
 	git svn dcommit

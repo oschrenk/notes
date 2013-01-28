@@ -3,6 +3,8 @@
 - [Official Wiki](http://wiki.guildwars2.com/)
 - [Game Updates](http://wiki.guildwars2.com/wiki/Game_updates)
 - [Gw2 Skills](http://en.gw2skills.net/) A good overview of GW2 game mechanics
+- [gw2spidy](http://www.gw2spidy.com/) Provides you with graphs of the sale and buy listings of items on the Guild Wars 2 Trade Market.
+- [gw2-craft](http://www.gw2-craft.com/) crafting tracker
 
 [Guild Wars 2](https://www.guildwars2.com), a free to play MMO set in a fantasy world. It offers a single player game within the same world, instantiating levels if one chooses to enter and participate in single player events.
 

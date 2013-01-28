@@ -1,25 +1,6 @@
 # Kaffee #
 
-## Starbucks ##
-
-Grande Caffe Latte
-:	190 kcal
-Grande Caffe Mocha
-:	260 kcal
-Grande Caffe Mocha mit Sahne
-:	330 kcal
-Grande Karamell Macchiato
-:	240 kcal
-Grande White Chocolate Mocha
-:	400 kcal
-Grande White Chocolate Mocha mit Sahne
-:	470 kcal
-Grande Vanille Latte
-:	250 kcal
-Grande Chai Tee Latte
-:	240kcal
-
-## Arten ##
+## Zubereitungsmethoden ##
 
 ### Latte macchiato ###
 
@@ -29,7 +10,7 @@ Er besteht aus drei Schichten: Heißer Milch, Espresso und dem Milchschaum. Weil
 
 Die Annahme dass fettarme Milch länger stabil bleibt ist falsch, sie wurde im Rahmen einer Doktorarbeit widerlegt.
 
-#### Zubereitung eines Caramel Macchiato ####
+### Zubereitung eines Caramel Macchiato ###
 
 *   Milch
 *   Espresso
@@ -48,13 +29,19 @@ Besteht etwa aus gleichen Teilen aus einem mit etwa doppelter Wassermenge gebrü
 
 (italienisch: Caffè Latte, korrekt: Caffè e latte). Doppelter Espresso mit Milch. Nur selten Milchschaum. Der _Latte macchiato_ ist eine Variante des Milchkaffees. Er wird jedoch schichtweise und nicht gemischt serviert.
 
-## Zubereitungsmethoden ##
-
 ### Espresso ###
 
-Ist eine Zubereitungsart, bei der Wasser mit hohen Druck durch feines Kaffeemehl gepresst wird. Dies ergibt einen konzentrierteren Kaffee. Es bildet sic eine haselnussbraune Schaumschicht -- die Crema. Durch die starke Röstung enthält eine Tasse Espresso weniger Koffein als eine normale Tasse Kaffee (25ml vs. 125ml).
+Wasser wir mit hohen Druck durch feines Kaffeemehl gepresst und ergibt einen konzentrierteren Kaffee. Es bildet sich eine haselnussbraune Schaumschicht -- die Crema. Durch die starke Röstung enthält eine Tasse Espresso weniger Koffein als eine normale Tasse Kaffee (25ml vs. 125ml).
 
 Für Espresso werden die gleichen Bohnen verwendet, sie werden aber dunkler geröstet.
+
+## Variationen ##
+
+- Butter (80+ %)
+- Crème double (Fettgehalt von 40+ %).
+- Schlagsahne (crème fouettée, Fettgehalt von 30+ %).
+- Crème fraîche (Fettgehalt von 30+ %). Sauerrahmerzeugnis, nicht geeignet.
+- Crème légère (Fettgehalt von 15+ %). Sauerrahmerzeugnis, nicht geeignet.
 
 ## Begriffe ##
 
@@ -62,6 +49,6 @@ Für Espresso werden die gleichen Bohnen verwendet, sie werden aber dunkler ger�
 
 Trockene, fettlose Erhitzen von Lebensmitteln bei etwa 300 °C. Dabei bilden sich kräftige Aromen und Bitterstoffe, die den Appetit anregen.
 
-## Gesundheit ##
+### Gesundheit ###
 
 Bei einigen Menschen verursacht Kaffee Sodbrennen, Magen- sowie Darmbeschwerden. Verantwortlich dafür ist die Chlorogensäure. Sie regt die Magensäureproduktion an. Auch andere Stoffe, die beim Rösten entstehen, wie die so genannten Melanoidine, reizen den Magen.

@@ -154,10 +154,10 @@ The platform also offers the following vectors of the above application scalar t
 	cl_floatn
 	cl_doublen
 
-Where `n` can be `2`, `3`, `4`, `8` or `16` 
+Where `n` can be `2`, `3`, `4`, `8` or `16`
 
 The vector components can be adressed using the `<vector_name>.s[<index>]` notation. For example:
-	
+
 	foo.s[0] = 1.0f; // Sets the 1st vector component of foo
 
 ### Preparing the environment ###
@@ -165,8 +165,8 @@ The vector components can be adressed using the `<vector_name>.s[<index>]` notat
 **Get platforms**
 
 	cl_int	clGetPlatformIDs	(
-									cl_uint num_entries, 
-									cl_platform_id *platforms, 
+									cl_uint num_entries,
+									cl_platform_id *platforms,
 									cl_uint *num_platforms
 								)
 
@@ -184,10 +184,10 @@ Example code
 **Get the device**
 
 	clGetDeviceIDs	(
-						cl_platform_id platform, 
-						cl_device_type device_type, 
-						cl_uint num_entries, 
-						cl_device_id *devices, 
+						cl_platform_id platform,
+						cl_device_type device_type,
+						cl_uint num_entries,
+						cl_device_id *devices,
 						cl_uint *num_devices
 					)
 
@@ -208,14 +208,14 @@ Example code
 
 **Create a context**
 
-	cl_context clCreateContext	(	
-									const cl_context_properties *properties, 
-									cl_uint num_devices, 
-									const cl_device_id *devices, 
+	cl_context clCreateContext	(
+									const cl_context_properties *properties,
+									cl_uint num_devices,
+									const cl_device_id *devices,
 									void (CL_CALLBACK *pfn_notify)(
-										const char *errinfo, 
-										const void *private_info, 
-										size_t cb, void *user_data), 
+										const char *errinfo,
+										const void *private_info,
+										size_t cb, void *user_data),
 									void *user_data,
 									cl_int *errcode_ret
 								)
@@ -235,9 +235,9 @@ Sample
 **Create command queue(s)**
 
 	cl_command_queue	clCreateCommandQueue	(
-													cl_context context, 
+													cl_context context,
 													cl_device_id device,
-													cl_command_queue_properties properties, 
+													cl_command_queue_properties properties,
 													cl_int *errcode_ret
 												)
 
@@ -257,10 +257,10 @@ Sample
 To execute our kernels we first have to move our data from the host to the global memory of the device. You can create a buffer by using:
 
 	cl_mem	clCreateBuffer	(
-								cl_context context, 
-								cl_mem_flags flags, 
-								size_t size, 
-								void *host_ptr, 
+								cl_context context,
+								cl_mem_flags flags,
+								size_t size,
+								void *host_ptr,
 								cl_int *errcode_ret
 							)
 
@@ -316,10 +316,10 @@ There are two ways of creating a kernel either from source (`clCreateProgramWith
 Creating the program from source
 
 	cl_program 	clCreateProgramWithSource	(
-												cl_context context, 
-												cl_uint count, 
-												const char **strings, 
-												const size_t *lengths, 
+												cl_context context,
+												cl_uint count,
+												const char **strings,
+												const size_t *lengths,
 												cl_int *errcode_ret
 											)
 
@@ -341,12 +341,12 @@ In practice it seems that `clCreateProgramWithSource` will never return an error
 To compile and build the program you use
 
 	cl_int 	clBuildProgram 	(
-								cl_program program, 
-								cl_uint num_devices, 
-								const cl_device_id *device_list, 
-								const char *options, 
+								cl_program program,
+								cl_uint num_devices,
+								const cl_device_id *device_list,
+								const char *options,
 								void (CL_CALLBACK *pfn_notify)(
-										cl_program program, 
+										cl_program program,
 										void *user_data),
 								void *user_data
 							)
@@ -366,8 +366,8 @@ Sample
 Create a Kernel
 
 	cl_kernel	clCreateKernel	(
-									cl_program program, 
-									const char *kernel_name, 
+									cl_program program,
+									const char *kernel_name,
 									cl_int *errcode_ret
 								)
 
@@ -383,9 +383,9 @@ Sample
 Use `clSetKernelArg` to set the argument value for a specific argument of a kernel.
 
 	cl_int	clSetKernelArg	(
-								cl_kernel kernel, 
-								cl_uint arg_index, 
-								size_t arg_size, 
+								cl_kernel kernel,
+								cl_uint arg_index,
+								size_t arg_size,
 								const void *arg_value
 							)
 
@@ -398,13 +398,13 @@ Use `clSetKernelArg` to set the argument value for a specific argument of a kern
 
 	cl_int	clEnqueueNDRangeKernel	(
 										cl_command_queue command_queue,
-										cl_kernel kernel, 
-										cl_uint work_dim, 
-										const size_t *global_work_offset, 
-										const size_t *global_work_size, 
-										const size_t *local_work_size, 
-										cl_uint num_events_in_wait_list, 
-										const cl_event *event_wait_list, 
+										cl_kernel kernel,
+										cl_uint work_dim,
+										const size_t *global_work_offset,
+										const size_t *global_work_size,
+										const size_t *local_work_size,
+										cl_uint num_events_in_wait_list,
+										const cl_event *event_wait_list,
 										cl_event *event
 									)
 
@@ -493,7 +493,7 @@ On OSX you have to include `types.h`
 
 #### iOS ####
 
-Current devices do have a chip supporting OpenCL, but [currently](http://www.streamcomputing.eu/blog/2011-08-19/is-opencl-coming-to-apple-ios/) there is no way to access these capablities. 
+Current devices do have a chip supporting OpenCL, but [currently](http://www.streamcomputing.eu/blog/2011-08-19/is-opencl-coming-to-apple-ios/) there is no way to access these capablities.
 
 #### Android ####
 

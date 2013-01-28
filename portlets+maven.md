@@ -6,7 +6,7 @@
 	 -DarchetypeArtifactId=maven-archetype-portlet\
 	 -DgroupId=com.acme\
 	 -DartifactId=project
-	
+
 	cd project
 	git init
 	touch README.markdown
@@ -22,7 +22,7 @@
 	git add pom.xml
 	git add src/
 	git commit . -m "Initial release"
-	
+
 Import into Eclipse via _m2eclipse_ using `File > Import ... > Maven > Existing Maven Projects, Next, Browse ..., (browse to project), Finish`
 
 ## Creating JBOSS JSF+Portlet ##

@@ -2,7 +2,7 @@
 
 ## Web Services
 
-A Web service is a set of related application functions that can be  invoked over the Internet. 
+A Web service is a set of related application functions that can be  invoked over the Internet.
 
 - Web services are *self-contained*. On the client side, no additional software is required.  A programming language with XML and HTTP client support is enough to get you started.  On the server side, a Web server and servlet engine are required.  The client and server can be implemented in different environments.
 - Web services are *self-describing*. The client and server need to recognize only the format and content of request and response messages.  The definition of the message format travels with the message; no external metadata repositories or code generation tools are required.
@@ -14,7 +14,7 @@ Web services might be anything, for example, theatre review articles, weather re
 A network component in a Web Services architecture can play one or more fundamental roles: service provider, service broker, and service client.
 
 - Service providers create and deploy their Web services and can publish the availability of their WSDL-described services through a service registry.
-- Service brokers register and categorize published services and provide search services. 
+- Service brokers register and categorize published services and provide search services.
 - Service clients use broker services to discover a needed WSDL-described service and then bind to and call the service provider.
 
 ### Creating Web Services
@@ -36,11 +36,11 @@ When creating a Web service using a top-down approach, first you design the impl
 
 By creating the WSDL file first you will ultimately have more control over the Web service, and can eliminate interoperability issues that may arise when creating a Web service using the bottom-up method.
 
-## JAX-WS 
+## JAX-WS
 
 The Java API for XML Web Services helps building web services that communicate via XML.
 
-In JAX-WS, a RPC is represented by an XML based protocol such as SOAP. SOAP defines structure and rules for the RPCs. 
+In JAX-WS, a RPC is represented by an XML based protocol such as SOAP. SOAP defines structure and rules for the RPCs.
 
 JAX-WS hides the complexity of SOAP. On the server side the developer specifies the remote procedures by defining methods in a Java Interface (and writing at least one class implementing it).
 
@@ -71,8 +71,8 @@ You use the endpoint implementation and the `wsgen` tool to generate the web ser
 	  public String sayHello(String name) {
 		return message + name + ".";
 	  }
-	} 
+	}
 
-### Sources 
+### Sources
 
 [eclipse.ws.overview]:http://help.eclipse.org/help33/index.jsp?topic=/org.eclipse.jst.ws.doc.user/concepts/cws.html

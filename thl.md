@@ -58,22 +58,22 @@ LL
 
 
     SF	All // ANY List is in "Inbox", List is in "Projects"
-    	
+
     `RF	Today w/ context
-    		SF @home 
+    		SF @home
     		SF @office
     		SF @university
     		SF @errand`
 
     `// The Rule for each SF is rather complex:
-    		ALL 
+    		ALL
     			ANY
     				ANY
     					Due today
     					Due within the last 5 years
     				Start within the last 5 years
     			Tag is "@home"`
-    	
+
     `// May be the rule can be setup more easy but basically it lists
     	// all the tasks for a single context, that are due today, overdue
     	// or have been started. Reason is to omit clutter from tasks to be done
@@ -92,29 +92,29 @@ LL
 
     `RF	Projects
     		RF Private`
-    			
+
     `RF Personal
     				LL Correspondence // call x, mail y
     				LL Finances // get current rate of ..., write tax report
     				LL Health // make doctors appointment
     				LL Household // fix chair, ...
-    				LL Write // things like this text 
-    				LL Read // a list of books I want to read, 
+    				LL Write // things like this text
+    				LL Read // a list of books I want to read,
     				LL Watch // movies and series I want to watch
     				LL Listen // audiobooks, albums to listen too
     				LL Wishes // Things I want to buy, like books, tea kettle`
-    			
+
     `RF Open Source // not restricted to computer stuff
     				LL Ideas // brain farts for future projects
     				LL Project A // build a paper-mâché table
     				LL Project B // build twitter client
     				[...]`
-    				
-    `RF University 
+
+    `RF University
     			LL Class A // do home work
     			LL Class B
     			[...]`
-    			
+
     `RF Work
     			LL Client A // resolve bug 1234 ...
     			LL Client B
@@ -166,4 +166,4 @@ Basically what it says. Sometimes I'd like to view at the info of an archived ta
 
 ## Settings/Hints ##
 
-    defaults write com.potionfactory.TheHitList commandWClosesTab -bool YES 
+    defaults write com.potionfactory.TheHitList commandWClosesTab -bool YES

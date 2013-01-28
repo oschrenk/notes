@@ -3,7 +3,7 @@
 ## Package Manager ##
 
 ### Repository Managment ###
-	
+
 	sudo zypper refresh
 	sudo zypper addrepo [ar]
 

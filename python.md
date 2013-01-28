@@ -1,19 +1,23 @@
 # Python #
 
-	$ brew install python
+Homebrew's python is newer and comes with pip, so
 
-	A "distutils.cfg" has been written to:
-	  /usr/local/Cellar/python/2.7.3/lib/python2.7/distutils
-	specifing the install-scripts folder as:
+	brew install python
+
+	Distribute and Pip have been installed. To update them
+	  pip install --upgrade distribute
+	  pip install --upgrade pip
+
+	To symlink "Idle" and the "Python Launcher" to ~/Applications
+	  `brew linkapps`
+
+	You can install Python packages with (the outdated easy_install or)
+	  `pip install <your_favorite_package>`
+
+	They will install into the site-package directory
+	  /usr/local/lib/python2.7/site-packages
+	Executable python scripts will be put in:
 	  /usr/local/share/python
-
-	If you install Python packages via "python setup.py install", easy_install, pip,
-	any provided scripts will go into the install-scripts folder above, so you may
-	want to add it to your PATH.
-
-	Distribute has been installed, so easy_install is available.
-	To update distribute itself outside of Homebrew:
-	    /usr/local/share/python/easy_install pip
-	    /usr/local/share/python/pip install --upgrade distribute
+	so you may want to put "/usr/local/share/python" in your PATH, too.
 
 	See: https://github.com/mxcl/homebrew/wiki/Homebrew-and-Python

@@ -4,7 +4,7 @@
 
 * **Window management**. Hierarchical approach.`cmd+[shift]+tab` switches applications, `cmd+[shift]+>` switches the windows of an application
 
-* **Consistency**. `cmd+,` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application. 
+* **Consistency**. `cmd+,` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application.
 
 ## 10.8. Mountain Lion ##
 
@@ -27,7 +27,7 @@ Allow a command to run for a prolonged period without the automatic (and, since 
 - [breaks git-svn](http://victorquinn.com/blog/2012/02/19/fix-git-svn-in-mountain-lion/)
 - X has been removed. Install [XQuartz](http://xquartz.macosforge.org/landing/) if you need it.
 
-## Defaults 
+## Defaults
 
 OS X stores the preferences and application settings in `.plist` files. These are (binary enocded) XML files. OSX offers the command line tool `defaults` to read from and write to them.
 
@@ -73,17 +73,17 @@ If you have set up your keyboard to don't use dead keys, you can use OS C 10.7 f
 
 ### List known WLAN ###
 
-	defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences RememberedNetworks | egrep -o '(SSID_STR|_timeStamp).+' | sed 's/^.*= \(.*\);$/\1/' | sed 's/^"\(.*\)"$/\1/' | sed 's/\([0-9]\{4\}-..-..\).*/\1/' | sed 'N;s/\n/: /'
+	defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences RememberedNetworks | egrep -o '(SSID_STR|_timeStamp).+' | sed 's/^.*= \(.*\);$/\1/' | sed 's/^"\(.*\)"$/\1/' | sed 's/\([0-9]\{4\}-..-..\).*/\1/'
 
 ### Save Password when using Cisco VPN
 
-Mac OS X asks you to manually enter the password every time you connect. TO change this behavior open the Keychain Access Application, select the System keychain and find your saved XAuth password entry in the list. Its Kind field will say IPSec XAuth Password.
+Mac OS X asks you to manually enter the password every time you connect. To change this behavior open the Keychain Access Application, select the System keychain and find your saved XAuth password entry in the list. Its Kind field will say IPSec XAuth Password.
 
 Open it, then on the Access Control tab click the Plus button to add another application. The file we need to select, `/usr/libexec/configd`, resides in a hidden folder. To navigate there, press `Command-Shift-G`, enter `/usr/libexec`, then pick `configd` in the dialog. Save your changes and that's it --- your saved password should now work.
 
 Depending on the security policy of the VPN Server this hint may not work.
 
-### Problems decrunching zip archives formed `*.z00?`
+### Problems uncompressing zip archives formed `*.z00?`
 
 1.  Change all the `.z01`, `.z02`, etc. file extensions to `.001`, `.002`, etc.
 2.  Change the file extension of the `.zip` file to `.00X` (`X`= the last numeric file extension from the `.001`, `.002`, etc. files + 1)
@@ -94,7 +94,7 @@ The last command did output some warnings but it produced the correct file anywa
 
 ## Software
 
-### OSX Mail - Setting  mail folders 
+### OSX Mail - Setting  mail folders
 
 Mail needs to be configured which folders it needs to use for trash, drafts and spam, otherwise it will use its own folders leaving the other folder untouched and also annoyingly visible in the side bar.
 
@@ -112,21 +112,23 @@ Resetting the configuration worked for me
 
 ## Multi-User accounts
 
-Create a new group. The easiest way to do this is through the Accounts pane in System Preferences. Just click on the Plus sign to add a new account and then select Group from the New Account drop-down menu. Call this group anything you want; I called mine friday. Add all the users who you want to participate in the file sharing to your newly-created group.
+1. Create a new group called `Local` (or any wy you want)
+
+The easiest way to do this is through the Accounts pane in System Preferences. Just click on the Plus sign to add a new account and then select Group from the New Account drop-down menu. Add all the users who you want to participate in your newly-created group.
 
 Open Terminal:
 
     $ cd /Users/Shared
     $ mkdir Local
-    $ sudo chown admin:local Local
+    $ sudo chown admin:Local Local
 
 Change the default permissions, if you wish: `sudo chmod 770 Local` (this is optional if you're happy with the default permissions).
 
-Create the ACL entry for the new folder:  
+Create the ACL entry for the new folder:
 
-        `$ sudo chmod +a "group:local allow delete,readattr,writeattr,readextattr,writeextattr,list,search,add_file,add_subdirectory,delete_child,file_inherit,directory_inherit" Local`
+    $ sudo chmod +a "group:Local allow delete,readattr,writeattr,readextattr,writeextattr,list,search,add_file,add_subdirectory,delete_child,file_inherit,directory_inherit" Local
 
-You now have a folder where all members of the group friday can read, write and delete files, as well as read, write to and create new sub folders. The ACL rule takes precedence over standard UNIX file permissions and is automatically inherited. It's this automatic inheritance that is really important. Now you are ready to copy your iTunes, Aperture, iPhoto libraries, plus anything else you want to share, into the shared folder.
+You now have a folder where all members of the group `Local can read, write and delete files, as well as read, write to and create new sub folders. The ACL rule takes precedence over standard UNIX file permissions and is automatically inherited. It's this automatic inheritance that is really important. Now you are ready to copy your iTunes, Aperture, iPhoto libraries, plus anything else you want to share, into the shared folder.
 
 IMPORTANT: You must copy (hold down Option in Finder prior to dragging), and not merely move, items. Moving items doesn't inherit the correct ACL rules. Moving doesn't change POSIX file attributes, permissions, ...
 

@@ -44,12 +44,12 @@ If you've set up an upstream branch as detailed above, and a development branch 
 	[make sure all is committed as necessary in branch]
 	$ git rebase master
 
-You may need to resolve conflicts that occur when a file on the development trunk and one of your files have both been changed. Edit each file to resolve the differences, then commit the fixes to your development server repo and test. Each file will need to be "added" before running a "commit." 
+You may need to resolve conflicts that occur when a file on the development trunk and one of your files have both been changed. Edit each file to resolve the differences, then commit the fixes to your development server repo and test. Each file will need to be "added" before running a "commit."
 
-Conflicts are clearly marked in the code files. Make sure to take time in determining what version of the conflict you want to keep and what you want to discard. 
+Conflicts are clearly marked in the code files. Make sure to take time in determining what version of the conflict you want to keep and what you want to discard.
 
 	$ git add <filename>
-	$ git commit 
+	$ git commit
 
 To push the updates to your GitHub repo, replace 100-retweet-bugfix with your branch name and run:
 
@@ -87,7 +87,7 @@ It's as if you had just started your branch. One immediate advantage you get is 
 
 So when you're ready to send the new plugin upstream, you do one last rebase, test, and then merge (which is really no merge at all) and send out your pull request. Then in most cases, Gina has a simple fast forward on her end (or at worst a very small rebase or merge) and over time that adds up to a simpler tree.
 
-More info on the git man page here: 
+More info on the git man page here:
 [Git rebase: man page](http://schacon.github.com/git/git-rebase.html)
 
 [#Kramer:2011]: [Jakob Kramer](https://github.com/gandaro) [The Diaspora Git Workflow](https://github.com/diaspora/diaspora/wiki/Git-Workflow)

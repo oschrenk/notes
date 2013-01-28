@@ -6,18 +6,10 @@
 
 Installation notes
 
-	If this is your first install, automatically load on login with:
-    mkdir -p ~/Library/LaunchAgents
-    cp /usr/local/Cellar/redis/2.6.4/homebrew.mxcl.redis.plist ~/Library/LaunchAgents/
-    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
-
-	If this is an upgrade and you already have the homebrew.mxcl.redis.plist loaded:
-	    launchctl unload -w ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
-	    cp /usr/local/Cellar/redis/2.6.4/homebrew.mxcl.redis.plist ~/Library/LaunchAgents/
-	    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
-
-	  To start redis manually:
+	To have launchd start redis at login:
+    ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
+	Then to load redis now:
+	    launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
+	Or, if you don't want/need launchctl, you can just run:
 	    redis-server /usr/local/etc/redis.conf
-
-	  To access the server:
-	    redis-cli
+	/usr/local/Cellar/redis/2.6.7: 9 files, 744K, built in 4 seconds

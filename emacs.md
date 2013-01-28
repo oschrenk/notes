@@ -27,7 +27,7 @@ On Lion
 	http://git.savannah.gnu.org/cgit/emacs.git for the mirror's status. The Emacs
 	devs do not provide support for the git mirror, and they might reject bug
 	reports filed with git version information. Use it at your own risk.
-	
+
 
 	$ cp -r /usr/local/Cellar/emacs/HEAD/Emacs.app /Applications/
 

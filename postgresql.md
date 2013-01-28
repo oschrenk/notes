@@ -4,10 +4,10 @@
 
 	brew install postgresql
 	[...]
-	
+
 	==> Caveats
 	# Build Notes
-	
+
 	If builds of PostgreSQL 9 are failing and you have version 8.x installed,
 	you may need to remove the previous version first. See:
 	  https://github.com/mxcl/homebrew/issues/issue/2510
@@ -56,11 +56,11 @@
 List databases
 
 	\l
-	
+
 Drop database
 
 	DROP DATABASE name;
-	
+
 ## FAQ/Problems ## ##
 
-If you have an environment variable called `SCRIPTS` the compilation of postgresql and postgis will fail. Call `unset SCRIPTS` before installation. 
+If you have an environment variable called `SCRIPTS` the compilation of postgresql and postgis will fail. Call `unset SCRIPTS` before installation.

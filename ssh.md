@@ -30,7 +30,7 @@ Guard the private key as if it were your password. You should at least give only
 
 Call `ssh-add` for every private key.
 
-    	$ ssh-add -K ~/.ssh/id_rsa 
+    	$ ssh-add -K ~/.ssh/id_rsa
 
 ### Could not open a connection to your authentication agent ###
 
@@ -88,7 +88,7 @@ If this host is only accessible in your internal network, it might be safe to ju
 
 Some site publish the fingerprint in public. Make sure that you read that fingerprint over HTTPS and not HTTP (which can be corrupted). If the fingerprint matches the one you read on the terminal the risk of being under attack is massively reduced (attackers still might have broken into the web server and changed the information there).
 
-If you still feel unsure you have to ask the admin over telephone or in person, or even check the fingerprint yourself. 
+If you still feel unsure you have to ask the admin over telephone or in person, or even check the fingerprint yourself.
 
 To verify a fingerprint you have to login in locally and NOT via network (as you might be under attack). To do so you can use `ssh-keygen -l -f public-key-file.pub`, which hashes the key and displays it in hexadecimal (for better readability).
 
@@ -131,7 +131,7 @@ or in human readable form:
 
 	$ chmod -v -R a-rwx ~/.ssh
 	$ chmod -v -R u+rw ~/.ssh
-	
+
 ### SSH Agent (key) forwarding on Mac OS Lion doesn't work anymore ###
 
 The problem is, thht Lion's new feature to reopen all windows on restart somehow broke the ssh-agent. It won't start before Terminal.app
@@ -141,7 +141,7 @@ In OS X Lion if the login keychain is set to lock on sleep, the ssh-agent become
 [ssh-agent-locker](https://github.com/gdcbyers/ssh-agent-locker) helps with this. I installed it via
 
 	brew install https://raw.github.com/rsenk330/homebrew/ssh-agent-locker/Library/Formula/ssh-agent-locker.rb
-	
+
 	If this is your first install, automatically load on login with:
 	  mkdir -p ~/Library/LaunchAgents
 	  cp /usr/local/Cellar/ssh-agent-locker/0.1.0/com.seaandco.geoff.ssh-agent-locker.plist ~/Library/LaunchAgents/

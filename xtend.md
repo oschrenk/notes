@@ -2,7 +2,7 @@
 
 ## Maven, Eclipse Setup ##
 
-Mostly taken from [here](http://kthoms.wordpress.com/2011/12/08/xtext-2-2-finally-brings-maven-support-for-xtend/) but I had to change some of the dependencies.<> 
+Mostly taken from [here](http://kthoms.wordpress.com/2011/12/08/xtext-2-2-finally-brings-maven-support-for-xtend/) but I had to change some of the dependencies.<>
 
 Add the following repopsitories (I added them to `~/.m2/settings.xml`)
 
@@ -60,7 +60,7 @@ Create `xtend-gen` src directory
 			</execution>
 		</executions>
 	</plugin>
-	
+
 Clean the `xtend-gen` directory
 
 	<plugin>
@@ -110,12 +110,12 @@ To solve it open Plugin execution not covered by lifecycle configuration open `P
 ### Plugin execution not covered by lifecycle configuration: org.eclipse.xtend2:xtend-maven-plugin ###
 
 	Plugin execution not covered by lifecycle configuration: org.eclipse.xtend2:xtend-maven-plugin:2.2.0:compile (execution: default, phase: generate-sources)	pom.xml	/core	line 5	Maven Project Build Lifecycle Mapping Problem
-	
+
 This is a known bug. The [bug report](https://bugs.eclipse.org/bugs/show_bug.cgi?id=366118) has a workarround by adding
 
 	<pluginManagement>
 		<plugins>
-			<!--This plugin's configuration is used to store Eclipse m2e settings 
+			<!--This plugin's configuration is used to store Eclipse m2e settings
 				only. It has no influence on the Maven build itself. -->
 			<!-- https://bugs.eclipse.org/bugs/show_bug.cgi?id=366118 -->
 			<plugin>

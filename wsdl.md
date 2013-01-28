@@ -4,7 +4,7 @@ Web Services Description Language is an XML format used to describe (and locate)
 
 ## Syntax
 
-A WSDL document is just a simple XML document. 
+A WSDL document is just a simple XML document.
 
 	<definitions>
 		<types>
@@ -21,7 +21,7 @@ A WSDL document is just a simple XML document.
 		</biding>
 	</definitions>
 
-For example:	
+For example:
 
 	<message name="getTermRequest">
 		<part name="term" type="xs:string"/>

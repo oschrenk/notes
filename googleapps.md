@@ -6,7 +6,7 @@ The [signup page](https://www.google.com/a/cpanel/domain/new) offers you two opt
 
 ### Verifying your domain ###
 
-As I already own the domain i just enter the domain name during the setup and select the `Administrator: I own or control this domain` box. 
+As I already own the domain i just enter the domain name during the setup and select the `Administrator: I own or control this domain` box.
 
 You have to fill out some infos about you (forename, surname, email address, phone number ) and the organizsation you represent.
 
@@ -29,9 +29,9 @@ You can always access your account with the URLs below:
 * Docs: http://docs.google.com/a/your-domain.com
 * Sites: http://sites.google.com/a/your-domain.com
 
-In each case, replace "your-domain.com" with your actual domain name. 
+In each case, replace "your-domain.com" with your actual domain name.
 
-You can also create custom convenience urls which redirect to a service. 
+You can also create custom convenience urls which redirect to a service.
 
 For example you can redirect http://mail.domain.com redirects to https://mail.google.com/a/domain.com. To do that you have to control the DNS Settings of your domain.
 
@@ -45,7 +45,7 @@ Unfortunately each domain provider handles these things differently, so you have
 
 As I only use the main four services (for now) I just used:
 
-| Name 		| Type 	| Value 			| 
+| Name 		| Type 	| Value 			|
 ----------- | :---: | ----------------: |
 mail 		| CNAME	| ghs.google.com.	|
 calendar	| CNAME	| ghs.google.com.	|
@@ -94,7 +94,7 @@ https://www.google.com/a/cpanel/acme.com/CreateGroup
 
 Group name *
 : Descriptive Name, for example `Acme Inc.`
-Group email address * 
+Group email address *
 : Identifier, for example `internal` (@acme.com)
 
 Set the `Access Level` to `Team` (should be preselected) and check the box `Add all users within Acme Inc. to this group`
@@ -111,6 +111,6 @@ Click on the Advanced DNS settings and follow the instructiosn
 
 #### GoDaddy ####
 
- - Select the domain you want to change. 
+ - Select the domain you want to change.
  - Click Forward, and then select Forward Subdomain.
  - In the Add subdomain field, enter the subdomain.

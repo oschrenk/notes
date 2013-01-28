@@ -4,9 +4,9 @@
 
 The [official homepage](http://nodejs.org/) explains `node.js` as
 
-> Evented I/O for V8 JavaScript. 
+> Evented I/O for V8 JavaScript.
 
-[V8](http://code.google.com/p/v8/) is a JavaScript Engine by Google. It does a very good Job of increasing JavaScripts performance by compiling it into machine code. V8 itself is written in C++ and so are most parts of node.js. 
+[V8](http://code.google.com/p/v8/) is a JavaScript Engine by Google. It does a very good Job of increasing JavaScripts performance by compiling it into machine code. V8 itself is written in C++ and so are most parts of node.js.
 
 [Ryan Dahl](http://tinyclouds.org/) saw the value in using JavaScript as a server side scripting language. He is very opinionated on how I/O should be done and node.js is his answer to the problems developers are faced when dealing with I/O.
 
@@ -38,7 +38,7 @@ Don't underestimate the last point. [Github](https://github.com/), a source code
 The module system helps to structure your program into different files. For instance `main.js` could require the `hello` module
 
 	var hello = require('./hello');
-	hello.world(); 	
+	hello.world();
 
 `require('./hello');` imports contents from another JavaScript file. The initial '`./`' indicates that the file is located in the same directory 'main.js'. Also note that you don't have to provide the file extension, as '`.js`' is assumed by default.
 
@@ -46,7 +46,7 @@ The implementation of `hello.js` could look like this:
 
 	exports.world = function() {
 	  console.log('Hello World');
-	} 
+	}
 
 We are assigning a property called '`world`' to an object called '`exports`'. Such an '`exports`' object is available in every module, and it is returned whenever the require function is used to include the module.
 
@@ -129,7 +129,7 @@ Making outgoing requests. A simple HTTP client:
 	  });
 	});
 	req.end();
-	
+
 You can even make this code shorter by dropping the `method: 'GET'` property and removing the `req.end();` line because `node.js` implies the use of `GET`.
 
 `POST`ing data:
@@ -164,7 +164,7 @@ Many components in Node provide continuous output or can process continuous inpu
 
 The basic stream in the example simply reads data from a file in chunks. Every time a new chunk is made available it is exposed to a callback in the variable called data. In this example we simply log the data to the console.
 
-JavaScript can't natively deal with binary data. Node.js introduces `Buffers` to compensate for that. 
+JavaScript can't natively deal with binary data. Node.js introduces `Buffers` to compensate for that.
 
 	> new Buffer(10);
 	<Buffer e1 43 17 05 01 00 00 00 41 90>
@@ -181,7 +181,7 @@ You can specify other encoding, but that does mean that characters might get tru
 
 	> new Buffer('é', 'ascii');
 	<Buffer e9>
-	
+
 Although JavaScript supports strings as primitives, you would normally write them to a `Buffer` in nodes. You can partially write into a buffer.
 
 	> var b = new Buffer(1);
@@ -241,8 +241,8 @@ You can set breakpoints in your script by adding `debugger;` statements;
 		debugger;
 		return 1+2;
 	}
-	
-You can start debugger by running `node debug script.js` and you get a debugging prompt. Its like `gdb` - try: 
+
+You can start debugger by running `node debug script.js` and you get a debugging prompt. Its like `gdb` - try:
 
 	debug> backtrace
 	debug> list
@@ -270,7 +270,7 @@ When executing the following code
 	setTimeout(foo, 2000);
 	console.log("hello");
 
-an error will be thrown after 3 seconds. Normally you would have a big stacktrace which you can follow backwards in order to find your bug. Now, in node.js we have a rather small stack traces. 
+an error will be thrown after 3 seconds. Normally you would have a big stacktrace which you can follow backwards in order to find your bug. Now, in node.js we have a rather small stack traces.
 
 In the above example we will only get the stacktrace from `bar()`. Every time we return the event loop we will loose the current stack. That makes analyzing problems hard.
 
@@ -296,10 +296,10 @@ There are [plans/ways around it](nodejs.org/illuminati0.pdf).
 	brew install node
 	# Caveats
 	# Please add /usr/local/lib/node to your NODE_PATH environment variable to have node libraries picked up.
-	
+
 #### Open Suse ####
 
-	sudo zypper ar http://download.opensuse.org/repositories/home:/SannisDev/openSUSE_11.3/ SannisDevBuildService 
+	sudo zypper ar http://download.opensuse.org/repositories/home:/SannisDev/openSUSE_11.3/ SannisDevBuildService
 	sudo zypper in nodejs nodejs-devel
 
 #### Ubuntu ####
@@ -308,7 +308,7 @@ There are [plans/ways around it](nodejs.org/illuminati0.pdf).
 	sudo add-apt-repository ppa:jerome-etienne/neoip
 	sudo apt-get update
 	sudo apt-get install nodejs
-	
+
 ### Node Package Manager ###
 
 	curl http://npmjs.org/install.sh | sh
@@ -317,7 +317,7 @@ There are [plans/ways around it](nodejs.org/illuminati0.pdf).
 
 [Source]([1](http://howtonode.org/how-to-module)
 
-Follow good engineering standards: 
+Follow good engineering standards:
 
 - use a version control system. You should prefer `git` as most of the node community uses it.
 - write a proper `README` and documentation
@@ -378,7 +378,7 @@ Examples:
 
 ##### Standalone Server #####
 
-This would be what you would normally would program. You just want to use modules. 
+This would be what you would normally would program. You just want to use modules.
 
 - avoid re-inventing modules. [Search](http://search.npmjs.org/) for existing solutions and try to improve them
 
@@ -391,7 +391,7 @@ This would be what you would normally would program. You just want to use module
 ## Quotes ##
 
 > Windows is very important. Just like PHP.
--- Ryan Dahl  
+-- Ryan Dahl
 
 > Node [is] very bleeding edge. Looks kinda of snappy and cool here but wait until you get into production - right in the gut. -- Ryan Dahl
 

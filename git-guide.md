@@ -1,4 +1,4 @@
-Title: Git Guide 
+Title: Git Guide
 Author: Oliver Schrenk
 Email: Oliver Schrenk <oliver.schrenk@gmail.com>
 Copyright: This document is provided under the terms of the Creative Commons Attribution-Share Alike 3.0 United States License, which may be viewed at the following URL: <http://creativecommons.org/licenses/by-sa/3.0/us/>
@@ -16,7 +16,7 @@ Git is easy to learn and has a tiny footprint with lightning fast performance. I
 
 Let's break it down:
 
-- **Free and Open Source**. Git is released under the [GPLv2 open source license](http://www.opensource.org/docs/osd). 
+- **Free and Open Source**. Git is released under the [GPLv2 open source license](http://www.opensource.org/docs/osd).
 - **Distributed Version Control System**. Instead of having a centralized repository of the source code, everyone has its own copy. Instead of doing a "checkout" of the current tip of the source code, you do a "clone" of the entire repository.
 - **Tiny Footprint**. With Git, nearly all operations are performed locally, giving it a huge speed advantage on centralized systems that constantly have to communicate with a server somewhere. In many of the common version control operations, Git is one or two orders of magnitude faster than SVN, even under ideal conditions for SVN. One place where Git is slower is in the initial clone operation. This is because Git is downloading the entire history rather than only the latest version and its normally at the one time you may be able to wait. Git is also very efficient at compressing and storing data on the client side.
 - **Cheap Local Branching**. Git allows and encourages you to have multiple local branches that can be entirely independent of each other. The creation, merging, and deletion of those lines of development takes seconds.
@@ -39,7 +39,7 @@ The ability to pull down other people’s changesets for code review and collabo
 
 Even the web interface talking about code, it offers easy accessible version control URIs.
 
-### Changeset cleanliness ### 
+### Changeset cleanliness ###
 
 How many times have you tried to trace down a feature across many commits, or even worse, tease apart changesets that are clusters of unrelated features? Git offers multiple ways to keep changesets clean, from the index/staging area, to topic branches, to amending commits and completely rewriting your commit history. It’s amazing what clean changesets can do to save you time in code review and release management.
 
@@ -177,12 +177,12 @@ Euler reduced the problem to this:
 
 Think of graph theory as the study of **places to go, and ways to get there**. Only in graph theory the places are called **nodes** and the ways are called **edges**
 
-To do something with graphs we (developers) normally apply labels to the edges and nodes. Think of a public transit plan. Every station has a name and every line is a train, or an edge connecting these stations. 
+To do something with graphs we (developers) normally apply labels to the edges and nodes. Think of a public transit plan. Every station has a name and every line is a train, or an edge connecting these stations.
 
 By adding labels can not only attach informations like names but also semantic meaning like relationships or directions. Having directions or not is one of the key characteristics of a graph. They are either **directed** or **undirected**. Think of it like a street map, there are two-way streets and one way street.
 
-Having directions in a graph also means that sometimes you can't reach nodes from any node in your graphs. 
-		
+Having directions in a graph also means that sometimes you can't reach nodes from any node in your graphs.
+
 		 F-->G-->H
 		/
 	A-->B-->C-->D-->E
@@ -204,11 +204,11 @@ When you interact with git, you're working with commits in one or the other. A G
 
 ### References ###
 
-When visualizing a Git repository either through graphical tools like GitX or 
+When visualizing a Git repository either through graphical tools like GitX or
 
 	git log --pretty=oneline --abbrev-commit --branches=* --graph --decorate
-	
-you may notice some labels like `master`. 
+
+you may notice some labels like `master`.
 
 These are references. **References are pointers to commits**. There are three kind of references:
 - `local branch references` a local branch reference is a file in your projects `.git/refs/heads` directory containing a 40-byte identifier to the commit the reference points to. This is aprt of why branching is "cheap". Creating a branch means writing 40 byte to a file. Local branch references are specific to a single repository: your local one.
@@ -257,7 +257,7 @@ Git supports access to SVN repositories via the `git svn` subcommand.
 
 	`git svn clone svn://server.network/project/trunk project`
 
-If you further want to track branches and/or tags. 
+If you further want to track branches and/or tags.
 
 	`git svn clone svn://server.network/project project --trunk trunk --branches branches --tags tags`
 

@@ -1,7 +1,7 @@
 # Play #
-	
-## Setup ##	
-	
+
+## Setup ##
+
 ### Get Play Framework ###
 
 	git clone http://github.com/playframework/play.git
@@ -14,12 +14,12 @@
 	git pull origin master
 	cd framework
 	ant
-	
+
 ### Setup Play ###
 
 - make sure that Java is in your `PATH` (use `java -version`). Play will use the default Java or the one available at the `$JAVA_HOME` path if defined.
 - I also setup `$PLAY_HOME` in my `.profile`
-- make sure that play is in your `PATH`. For example via `export PATH=$PLAY_HOME:$PATH` 
+- make sure that play is in your `PATH`. For example via `export PATH=$PLAY_HOME:$PATH`
 
 I put the play framework in an `$SDKS` directory.
 
@@ -32,30 +32,30 @@ I put the play framework in an `$SDKS` directory.
 ## Create an app ##
 
 	play new acmeapp
-	
+
 ## Modules ##
 
 ### Installing modules ###
 
 	play install gae
 	play install siena
-	
+
 ### Setup modules ###
 
 	open acmeapp/conf/application.conf
-	
+
 	# Modules
 	module.siena=${play.path}/modules/siena-1.3
 	module.gae=${play.path}/modules/gae-1.4
 
 ## Usage ##
-	
+
 ### Maven support ###
 
 Install maven support via
 
 	play install maven
-	
+
 Enable module in conf
 
 	module.maven=${play.path}/modules/maven
@@ -63,7 +63,7 @@ Enable module in conf
 Commands:
 
 	play mvn:init
-	
+
 Installs play-parent project (a Maven pom project) into local Maven repository. Then creates the appropriate `pom.xml`. After this step, you can add your dependencies to `pom.xml`
 
 	play mvn:update // or play mvn:up
@@ -126,11 +126,11 @@ This setup is maybe more complicated than you are normally used to, but it is ve
 I'm using the Apache Server
 
 	sudo apt-get apache2
-	
-You have to enable various modules by symlinking them 
+
+You have to enable various modules by symlinking them
 
 	/etc/apache2/mods-enabled$ la
-	
+
 	proxy.conf -> ../mods-available/proxy.conf
 	proxy.load -> ../mods-available/proxy.load
 	proxy_balancer.load -> ../mods-available/proxy_balancer.load
@@ -158,29 +158,29 @@ You have to enable various modules by symlinking them
 	  ProxyPassReverse / http://localhost:9999/
 	  ProxyPassReverse / http://localhost:9998/
 	</VirtualHost>
-	
+
 The important part is balancer://mycluster. This declares a load balancer. The +H option means that the second Play application is on stand-by. But you can also instruct it to load-balance.
 
 Every time you want to upgrade mysuperwebapp, here is what you need to do:
-	
+
 	play stop mysuperwebapp1
-	
+
 The load-balancer then forwards everything to mysuperwebapp2. In the meantime update mysuperwebapp1. Once you are done:
 
 	play start mysuperwebapp1
-	
+
 You can now safely update mysuperwebapp2.
-	
+
 ## FAQ/Problems ##
 
 ### Generating war results in `[Errno 63] File name too long` ###
 
-You have to specify a path that is not inside you application when you 
-generate the war archive. Otherwise it ends with an infinite 
-recursion. 
+You have to specify a path that is not inside you application when you
+generate the war archive. Otherwise it ends with an infinite
+recursion.
 
 	play war -o ../project.war
-	
+
 ## Resources ##
 
 - [Offical Play Documentation](http://www.playframework.org/documentation/) It's one of the view open source documentation that is really, really useful. Use it.

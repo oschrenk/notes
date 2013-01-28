@@ -14,14 +14,14 @@ The solution is to make the `cache` directory writable. I made the `tmp` directo
 
 Edit `app/config/core.php` file and change the value of the string where it says:
 
-	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');  
-	
+	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
+
 I kept the length but put in something else.
 
 	Please change the value of 'Security.cipher'
 
 Again goto `app/config/core.php` file and change the value of the string where it says:
-	
+
 	Configure::write('Security.cipherSeed', '76859309657453542496749683645');
 
 My database wasn't properly configured

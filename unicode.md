@@ -1,7 +1,33 @@
 # Characters #
 
-- [UniSearcher](http://www.isthisthingon.org/unicode/index.php)
-- [Graphemica](http://graphemica.com/)
+- [UniSearcher](http://www.isthisthingon.org/unicode/index.php) Search unicode characters
+- [Graphemica](http://graphemica.com/) Search unicode characters
+- [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
+
+**Typography**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `§` - `&#x00A7;` - `&#167;` - Section Sign
+- `¶` - `&#x00B6;` - `&#182;` - Pilcrow Sign
+
+- `‒` - `&#x2012;` - `&#8210;` - Figure Dash
+- `–` - `&#x2013;` - `&#8211;` - En Dash
+- `—` - `&#x2014;` - `&#8212;` - Em Dash
+- `―` - `&#x2015;` - `&#8213;` - Citation Dash
+
+- `↩` - `&#x21A9;` - `&#8617;` - Leftwards Arrow With Hook
+- `␣` - `&#x2423;` - `&#9251;` - Space (`Open Box`)
+
+**Miscellaneous Symbols***
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `☀` - `&#x2600;` - `&#9728;` - Black Sund With Rays
+- `☁` - `&#x2601;` - `&#9729;` - Cloud
+- `☂` - `&#x2602;` - `&#9730;` - Umbrella
+- `☃` - `&#x2603;` - `&#9731;` - Snowman
+- `☄` - `&#x2604;` - `&#9732;` - Comet
+- `★` - `&#x2605;` - `&#9733;` - Black Star
+- `☆` - `&#x2606;` - `&#9734;` - White Star
 
 **Computer Keyboard Symbols**
 
@@ -18,6 +44,12 @@
 - `⌽` - `&#x233D;` - `&#9021;` - a possible substitute for the Power symbol
 - `⏏` - `&#x23CF;` - `&#9167;` - the Eject symbol
 - `␣` - `&#x2423;` - `&#9251;` - Space (`Open Box`)
+
+**Control Pictures Block**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `␊` - `&#x240A;` - `&#9226;` - Symbol For Line Feed
+- `␍` - `&#x240D;` - `&#9229;` - Symbol For Carriage Return
 
 **Arrow Symbols**
 
@@ -42,9 +74,20 @@
 - `±` - `&#x00B1;` - `&#177;` - Plus-minus Sign
 - `∈` - `&#x2208;` - `&#8712;` - Element Of
 - `∉` - `&#x2209;` - `&#8713;` - Not An Element Of
+- `∀` - `&#x2200;` - `&#8704;` - For All
+- `∃` - `&#x2203;` - `&#8707;` - THERE EXISTS , exist, Exists
+- `∄` - `&#x2204;` - `&#8708;` - THERE DOES NOT EXIST , nexist, NotExists
 - `ℕ` - `&#x2115;` - `&#8469;` - Natural Numbers Symbol - Double-struck Capital N
 - `ℝ` - `&#x211D;` - `&#8477;` - Real Numbers Symbol - Double-struck Capital R
 - `∅` - `&#x2205;` - `&#8709;` - Empty Set
+
+**Science Symbols**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `°` - `&#x00B0;` - `&#176;` - Degree Sign
+- `′` - `&#x2032;` - `&#8242;` - Prime
+- `″` - `&#x2033;` - `&#8243;` - Double Prime
+- `µ` - `&#x00B5;` - `&#181;` - Micro Sign
 
 **Currency Symbols**
 

@@ -4,15 +4,15 @@
 
 [What is the difference between shell, terminal and console?](http://superuser.com/questions/144666/what-is-the-difference-between-shell-console-and-terminal)
 
-The **shell** is the program which processes command and returns output. Most shells also manage foreground  and background processes, command history and command line editing, with [Bash](http://www.gnu.org/software/bash/) being the most common shell in modern linux systems.
+The **shell** is the program which processes command and returns output. Most shells also manage foreground  and background processes, command history and command line editing, with [Bash](http://www.gnu.org/software/bash/) being the most common shell in modern Linux systems.
 
-A **terminal** refers to a wrapper program which runs a shell. Decades ago, this was a physical device consisting of little more than a monitor and keyboard. As Unix/linux systems added better multiprocessing and windowing systems, this terminal concept was abstracted into software. Now you have programs such as Gnome Terminal which launches a window in a Gnome windowing environment which will run a shell into which you can enter commands.
+A **terminal** refers to a wrapper program which runs a shell. Decades ago, this was a physical device consisting of little more than a monitor and keyboard. As Unix/Linux systems added better multiprocessing and windowing systems, this terminal concept was abstracted into software. Now you have programs such as Gnome Terminal which launches a window in a Gnome windowing environment which will run a shell into which you can enter commands.
 
-The **console** is a special sort of terminal. Historically, the console was a single keyboard and monitor plugged into a dedicated serial console port on a computer used for direct communication at a low level with the operating system. Modern linux systems provide for virtual consoles. These are accessed through key combinations (e.g. `Alt+F1`) which are handled at low levels of the linux operating system -- this means that there is no special service which needs to be installed and configured to run. Interacting with the console is also done using a shell program.
+The **console** is a special sort of terminal. Historically, the console was a single keyboard and monitor plugged into a dedicated serial console port on a computer used for direct communication at a low level with the operating system. Modern Linux systems provide for virtual consoles. These are accessed through key combinations (e.g. `Alt+F1`) which are handled at low levels of the Linux operating system -- this means that there is no special service which needs to be installed and configured to run. Interacting with the console is also done using a shell program.
 
-### Bash ###
+### Globbing ###
 
-Wildcards in bash are referred to as pathname expansion. Pathname expansion is also sometimes referred to as **globbing**
+Wildcards in bash are referred to as pathname expansion. Pathname expansion is also sometimes referred to as **globbing**.
 
 Pathname expansion that is done by the shell (in this case bash) and not by the operating system or by the program that is being run.
 
@@ -22,9 +22,36 @@ Pathname expansion "expands" the `*`, `?`, and `[...]` syntaxes when you type th
 	$ ls ?.jpg         # List JPEG files with 1 char names (eg a.jpg, 1.jpg)
 	$ rm [A-Z]*.jpg    # Remove JPEG files that start with a capital letter
 
+## .inputrc ##
+
+`.inputrc` is the configuration file for `GNU` Readline (a library that allows to edit commands as they are typed in)
+
+**An exemplary scenario** is when you have to login to multiple servers using `ssh ...` commands. Instead of toggling through all the occurrences in the history you can just start typing away @ssh @.
+
+With the following snippet in the `.inputrc` file you can then just use your arrow keys to scroll through all the occurrences starting with the prefix you have typed in so far. This is especially useful when multiple logins share the same user but have different hosts.
+
+	# By default up/down are bound to previous-history
+	# and next-history respectively. The following does the
+	# same but gives the extra functionality where if you
+	# type any text (or more accurately, if there is any text
+	# between the start of the line and the cursor),
+	# the subset of the history starting with that text
+	# is searched (like 4dos for e.g.).
+	# Note to get rid of a line just Ctrl-C
+	"\e[A": history-search-backward
+	"\e[B": history-search-forward
+
+It doesn’t stop there. If you like to move around in your command more quickly you might find use in the following snippet, which allows to jump over words in your command using `Strg` and the left or right arrow key.
+
+	# move around word for word with Strg + arrow keys
+	"\e[5C": forward-word
+	"\e[5D": backward-word
+	"\e\e[C": forward-word
+	"\e\e[D": backward-word
+
 ## Working with directories and files ##
 
-`ls` 
+`ls`
 - `-t` List files in order of last modification date, newest first. This is useful for very large directories when you want to get a quick list of the most recent files change. Probably most useful combined with `-l`. If you want the oldest files, you can add `-r` to reverse the list.
 - `-X` Group files by extension; handy for polyglot code, to group header files and source files separately, or to separate source files from directories or build files.
 - `-v` Naturally sort version numbers in filenames.
@@ -50,14 +77,10 @@ You can combine these to get even more powerful filters, for example a filter th
 `grep [options] PATTERN [FILE...]` is useful here
 
 - `grep -R somevar` This searches the current directory tree recursively for anything matching `someVar`
-
 - `grep -iR`  By default grep works with fixed case. Change the behaviour by setting the insensitivity flag.
-
 - `grep -l` Prints a list of files that match without printing the matches themselves with. This is very useful for building a list of files to edit in your chosen text editor.
-
 - `grep -v` Exclude matches from result.
-
-- `grep -F` Matches for a fixed string-
+- `grep -F` Matches for a fixed string.
 
 ### Streams & Pipes ###
 
@@ -73,9 +96,14 @@ If you run the cat command without specifing a file to read, it reads the standa
 
 In UNIX, we can redirect both the input and the output of commands.
 
+- `>` redirects *StdOut*, for example to a file `command > path` or to `/dev/null` (discards all data)
+- `>>` appends the output to the path `command >> path`
+
+Similar for *StdErr*, but use `2` prefix like so `2>` or respectively. `2>>`.
+
 #### Redirecting the Output ####
 
-The `>` symbol redirects the output of a command. For example, to create a file called `list1` containing a list of fruit, type  
+The `>` symbol redirects the output of a command. For example, to create a file called `list1` containing a list of fruit, type
 
 	$ cat > list1
 
@@ -107,7 +135,7 @@ To read the contents of the file, type
 
 It contains six fruit.
 
-#### Redirecting the Input  
+#### Redirecting the Input
 
 The `<` symbol redirects the input of a command.
 
@@ -126,8 +154,8 @@ Then type in the names of some animals. Press [Return] after each one.
 The output will be
 
 	ape
-	bird 
-	cat 
+	bird
+	cat
 	dog
 
 Using `<` you can redirect the input to come from a file rather than the keyboard. For example, to sort the list of fruit, type
@@ -163,7 +191,7 @@ To find out how many users are logged on, type
 
 ## Filesystem ##
 
-The [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/pub/fhs-2.3.html) proposes
+The [Filesystem Hierarchy Standard](http://www.pathname.com/fhs/pub/fhs-2.3.html) describes a set of requirements and guidelines for file and directory placement under UNIX-like operating systems.
 
 The following directories, or symbolic links to directories, are required in `/`.
 
@@ -187,9 +215,7 @@ with optional
 	/lib<qual>	Alternate format essential shared libraries (optional)
 	/root	Home directory for the root user (optional)
 
-### Files ###
-
-#### Unix File Permissions
+### Unix File Permissions ###
 
 The most common notation is symbolic notation. For example
 
@@ -224,11 +250,19 @@ The binary (or decimal) notation for a triad is as follows
     no read no write execute = 001 = 1
     no read no write no execute = 000 = 0
 
-#### Access Control lists
+### umask ###
 
-Access Control lists is alist of file permissions attached to an object. They offer a far more complex system than basic unix file permissions.
+> `umask` (user mask) is a command and a function in POSIX environments that sets the file mode creation mask of the current process which limits the permission modes for files and directories created by the process. A process may change the file mode creation mask with umask and the new value is inherited by child processes.
 
-To see if a file has an ACL attached to it, you can use `ls -le`. 
+From [Umask](http://en.wikipedia.org/wiki/Umask) on Wikipedia.
+
+`umask` defines the default permissions of *newly created* files and directories.
+
+### Access Control lists ###
+
+Access Control lists are lists of file permissions attached to an object. They offer a far more complex system than basic Unix file permissions.
+
+To see if a file has an ACL attached to it, you can use `ls -le`.
 
     	$ ls -le
     	-rwx------+ 1 testuser Admin     25600 Jul 12 02:04 file.ext
@@ -240,19 +274,40 @@ The `@` indicates further file attributes. Consult [Apple File Attributes][3] fo
 
 This is a rather huge topic. Run `man chmod` and search for acl for a complete description.
 
-To delete an acl entry you have to run `chmod -a` with the exact defintion of the acl. For example:
-	
+To delete an acl entry you have to run `chmod -a` with the exact definition of the acl. For example:
+
     	$ ls -le
-    	-rw-rw----+ 1 Joe  staff      14336  1 Dez 12:23 file.ext
+    	-rw-rw----+ 1 Joe  staff      14336  1 Dec 12:23 file.ext
     	0: group:everyone deny delete
     	$ chmod -a "group:everyone deny delete" file.ext
 
-#### Apple File Attributes ####
+### Apple File Attributes ###
+
 Apple adds an extra file attribute when files have been downloaded from the internet. It can be seen when using `ls -ls` indicated by the `@` symbol. By calling `ls -@` or `xattr`you can see that an attribute `com.apple.quarantine` has been added. To remove that call `sudo xattr -d com.apple.quarantine path` or `xattr -d com.apple.quarantine path`
 
-## FreeBSD Interrupt Signals ##
+## FAQ/Problems ##
 
-| Signal Name | Signal Number | Signal Description | 
+### Missing Readline Support, Garbage ouput like `^[[A` ###
+
+Some REPLs have no support for Readline. That means that if you enter an Up arrow, you get garbage output like this:
+
+	$ sml
+	Standard ML of New Jersey v110.75 [built: Fri Jan 11 10:32:43 2013]
+	- ^[[A
+
+Simply install rlwrap via your operating system’s package manager (or manually), and then invoke the REPL via `rlwrap`:
+
+	$ rlwrap sml
+
+At this point, even if you do nothing else, the REPL is now at least able to handle Up and Down arrows to scroll through history, and you can use basic Readline commands like `Ctrl-a` and `Ctrl-e` to go to the start and end of the line respectively, `Ctrl-u` to delete back to the prompt (and save the deleted material), `Ctrl-y` to paste saved text back into the prompt and so on. One other nice thing is that `rlwrap` saves history per command across invocations.
+
+[arpinum.org, Learn Yourself a Better REPL for Great Good!](http://ithaca.arpinum.org/2013/01/20/rlwrap.html)
+
+## Appendix ##
+
+### FreeBSD Interrupt Signals ###
+
+| Signal Name | Signal Number | Signal Description |
 | :---- | :---- | :---- |
 | SIGHUP | 1 | Terminal line hangup
 | SIGINT | 2 | Interrupt program
@@ -299,11 +354,11 @@ without looking up the source code.
 
 The successful exit is always indicated by a status of `0`, or `EX_OK`.
 Error numbers begin at `EX__BASE` to reduce the possibility of clashing
-with other exit statuses that random programs may already return.	
+with other exit statuses that random programs may already return.
 
 The meaning of the codes is approximately as follows:
 
-| Name | Number | Description | 
+| Name | Number | Description |
 | :---- | :---- | :---- |
 | EX_USAGE | 64 | The command was used incorrectly, e.g., with the wrong number of arguments, a bad flag, a bad syntax in a parameter, or whatever. |
 | EX_DATAERR | 65 | The input data was incorrect in some way.  This should only be used for user's data and not system files. |

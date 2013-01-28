@@ -5,7 +5,7 @@ Today we are face with the challenge to implement functionality and business pro
 SOA (Service Oriented Architecture) is a new approach. There are three key concepts:
 
 1. A *service* capsules implementation details in a way that it exposes itself as functional, self-contained entity.
-2. The concept of *interoperability* ensure to connect two systems, but not through harmonization but with respect to the heterogeneity. 
+2. The concept of *interoperability* ensure to connect two systems, but not through harmonization but with respect to the heterogeneity.
 3. *Loose coupling* means to build systems without creating too big dependencies, so that changes or failures don't cripple the system landscape. There are different kinds: separation of data models, asynchronous communication via message queues and other.
 
 SOA isn't a recipe with strict rules. It's a collection of ingredients, you can and have to combine yourself to achieve your goals. SOA is a strategy and can be found in different stages.
@@ -58,7 +58,7 @@ Realize that you can't achieve perfection in bigger systems, but strive for it. 
 
 > Respect the social and power structure of the organization.
 
-Accept that, depending on the existing structures, SOA implementations will differ. 
+Accept that, depending on the existing structures, SOA implementations will differ.
 
 > Recognize that SOA ultimately demands change on many levels.
 
@@ -111,13 +111,13 @@ Important is the possibility to create an overview of all the services on differ
 - Toufic Boubez
 - Paul C. Brown
 - David Chappell
-- John deVadoss 
+- John deVadoss
 - Thomas Erl
 - Nicolai Josuttis
 - Dirk Krafzig
 - Mark Little
 - Brian Loesgen
-- Anne Thomas Manes 
+- Anne Thomas Manes
 - Joe McKendrick
 - Steve Ross-Talbot
 - Stefan Tilkov

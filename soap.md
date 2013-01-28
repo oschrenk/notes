@@ -4,7 +4,7 @@ Simple Object Access Protocol (SOAP) is a XML-based communication protocol for e
 
 It doesn't rely on a specific transport layer. In practice mainly HTTP is used.
 
-## Syntax 
+## Syntax
 
 	<?xml version="1.0"?>
 	<soap:Envelope
@@ -20,7 +20,7 @@ It doesn't rely on a specific transport layer. In practice mainly HTTP is used.
 	  </soap:Fault>
 	</soap:Body>
 	</soap:Envelope>
-	
+
 The `envelope` is the root element of the SOAP message. SOAP defines three attributes in the default namespace (`http://www.w3.org/2001/12/soap-envelope`). These attributes are: `mustUnderstand`, `actor`, and `encodingStyle`.
 
 The optional header element describes application specific information about the message, for instance authentication. If it is used, it must be the first element. Each (immediate) child element must be namespace qualified.
@@ -55,7 +55,7 @@ Sometimes these parts aren't intended to be read globally but only by some speci
 
 #### encodingStyle
 
-Is used to define the data types used in the document. 
+Is used to define the data types used in the document.
 
 	soap:encodingStyle="URI"
 
@@ -100,7 +100,7 @@ Example from [here](http://www.herongyang.com/Web-Services/SOAP-Fault-Message-St
 		  <env:Text xml:lang="fr-CA">Error</env:Text>
 		 </env:Reason>
 		 <env:Detail>
-		  <e:myFaultDetails 
+		  <e:myFaultDetails
 			xmlns:e="http://travelcompany.example.org/faults">
 			<e:message>Name does not match card number</e:message>
 			<e:errorcode>999</e:errorcode>
@@ -112,12 +112,12 @@ Example from [here](http://www.herongyang.com/Web-Services/SOAP-Fault-Message-St
 
 ### HTTP
 
-A SOAP request could be an HTTP POST or an HTTP GET request. 
+A SOAP request could be an HTTP POST or an HTTP GET request.
 
 	POST /item HTTP/1.1
 	Content-Type: application/soap+xml; charset=utf-8
 	Content-Length: 250
-	
+
 ## Testing
 
 [SoapUI][soapui] is a testing tool for SOA.

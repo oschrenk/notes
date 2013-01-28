@@ -5,13 +5,13 @@
 	sudo apt-get install mysql-server
 	# Choose root password ...
 	mysqladmin -u root -p create <database>
-	
+
 	mysql -u root -p
 
 ### On OS X
 
 		$ brew install mysql
-	
+
 	Set up databases to run AS YOUR USER ACCOUNT with:
     unset TMPDIR
     mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
@@ -50,7 +50,7 @@
 	    launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist
 
 	You may also need to edit the plist to use the correct "UserName".
-	
+
 Again we do as told
 
 	$ mysql.server start
@@ -62,7 +62,7 @@ Again we do as told
 	GRANT ALL PRIVILEGES ON database.* TO 'username'@'localhost' WITH GRANT OPTION;
 	CREATE USER 'username'@'%' IDENTIFIED BY 'password';
 	GRANT ALL PRIVILEGES ON database.* TO 'username'@'%' WITH GRANT OPTION;
-	
+
 	FLUSH PRIVILEGES;
 
 ## Backup ##
@@ -92,7 +92,7 @@ From [forums.mysql](http://forums.mysql.com/read.php?11,71860,72130#msg-72130)
     `/Library/Receipts` as well that you can remove.
 
 All locations need to be deleted as root, so you will need to use sudo
-to do it.  
+to do it.
 If you are not used to doing this, then post again after checking the
 above four locations to make sure that's where everything is
 installed. That way some one can give you the exact commands needed to

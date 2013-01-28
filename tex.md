@@ -43,7 +43,7 @@ Once you have Skim installed, activate `Skim > Preferences > Sync > Check for fi
 
 ## Under version control ##
 
-Tex creates a lot of temporary files that would only clutter the version control. 
+Tex creates a lot of temporary files that would only clutter the version control.
 
 A pretty complete list can be found [here](https://github.com/github/gitignore/blob/master/LaTeX.gitignore)
 
@@ -86,11 +86,11 @@ Create a file called "ignore-these" with the (patterns of) files you want to ign
 
     svn -R propset svn:ignore . -F ignore-these
 
-To edit these properties later use  
-	
+To edit these properties later use
+
 	svn propedit svn:ignore .
 
-### Git ### 
+### Git ###
 
 Just write the patterns to `.gitignore` and commit the file.
 

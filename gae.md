@@ -8,7 +8,7 @@
 	# GAE
 	export GAE_HOME=$SDKS/gae
 	export PATH=$GAE_HOME/bin:$PATH
-	
+
 ## Register your application with GAE
 
 ## Run once to create necessary stub files ##

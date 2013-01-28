@@ -40,7 +40,7 @@ Create your prototype files under `src/main/resources/archetype-resources`
 	touch src/main/resources/archetype-resources/pom.xml
 
 Install it
-	
+
 	mvn install
 
 Use it

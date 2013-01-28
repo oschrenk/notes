@@ -51,7 +51,7 @@ Start server in debug mode first` (-f` stands for foreground)
 To run it in background
 
 	$ synergys --config /etc/synergy.conf
-	
+
 To run the client
 
 	$ synergc synergy-server-hostnamapt-get

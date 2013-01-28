@@ -44,7 +44,7 @@ Source: [Wikipedia](http://en.wikipedia.org/wiki/Model-view-controller)
 	| Operation  |         |    View    |
 	+------------+ ......> +------------+
 
-[Propsoal](http://cirw.in/blog/time-to-move-on) by [Conrad Irwin](http://cirw.in/) 
+[Propsoal](http://cirw.in/blog/time-to-move-on) by [Conrad Irwin](http://cirw.in/)
 
 **MOVE**. **M**odels, **O**perations, **V**iews, and **E**vents.
 
@@ -95,7 +95,7 @@ The consumer consumes the message and acknowledges the message. Once acknowledge
 
 ### Publisher/Subscriber ###
 
-_Publish/subscribe_ (or _pub/sub_) is a messaging pattern in which the senders are sending their messages to an entity on the server, often called a topic or channel. 
+_Publish/subscribe_ (or _pub/sub_) is a messaging pattern in which the senders are sending their messages to an entity on the server, often called a topic or channel.
 
 A topic can be subscribed to by different consumers. Each subscriber receives a copy of each message sent to the topic. This is different from the message queue pattern where each message is only consumed by a single consumer.
 
@@ -109,4 +109,4 @@ A bus is a system that forwards data to other parts. An Enterprise Service Bus (
 
 ## Resources ##
 
-[#jboss.messaging]: [Messaging concepts](http://docs.jboss.org/jbossmessaging/docs/usermanual-2.0.0.beta1/html/messaging-concepts.html) 
+[#jboss.messaging]: [Messaging concepts](http://docs.jboss.org/jbossmessaging/docs/usermanual-2.0.0.beta1/html/messaging-concepts.html)

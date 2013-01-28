@@ -12,12 +12,12 @@ Taken from [JavaScript: The Good Parts](http://www.youtube.com/watch?v=hQVTIJBZo
 
 * Global Variables. No linker. Common global namespace where variables collide => Reliability, Security problems
 * `+` adds and concatenates. Same as in Java, but as Java is strinlgy typed you could predict what happens, not with JavaScript.
-* Semicolon Insertion. If compiler gets an error, it searches for a linefeed and inserts a semicolon, sometimes were its not intended 
+* Semicolon Insertion. If compiler gets an error, it searches for a linefeed and inserts a semicolon, sometimes were its not intended
 * typeof. Typeof array object -> not helpful, Typeof null is Object which is wrong
 * with and eval. Eval most misused. If you want to use it step away and think.
-* phony arrays. Normally linear arranged bucket. In JS arrays are like hashmaps. No dimensions. 
+* phony arrays. Normally linear arranged bucket. In JS arrays are like hashmaps. No dimensions.
 * `==` and `!=`
-* `false`, `null`, `undefined`, `NaN` 
+* `false`, `null`, `undefined`, `NaN`
 
 #### Transivity? ####
 
@@ -34,7 +34,7 @@ Type coercion on quality operator
 	false == null		// false
 	null == undefined	// true
 	" \t\r\n " == 0		// true
-	
+
 Always use triple equal operator, which does not use type coercion, and always used false in the cases above.
 
 #### For..in ####
@@ -50,7 +50,7 @@ Does deep drilling. User has to filter own object's own properties
 
 ### Stuff ###
 
-We have function scope not block scope 
+We have function scope not block scope
 
 ### Style ###
 
@@ -67,7 +67,7 @@ but it returns `undefined` because of semicolon inserion and its inherited c syn
 	{
 		ok: false;
 	}
-	
+
 with the block being ignored.
 
 ## Advanced ##
@@ -102,7 +102,7 @@ You can _prototype_ an object. The prototype is then used as a fallback: If an o
 
 ### Prototype Based Inheritance ###
 
-You can use prototyping to create an object hierarchy. 
+You can use prototyping to create an object hierarchy.
 
 	// Person is defined as above
 	function Employee(firstName, lastName, department) {
@@ -121,7 +121,7 @@ You can use prototyping to create an object hierarchy.
 
 As you may notice the constructor of `Person` is called and even without parameters. This makes little sense as we don't want to create an instance of `Person` at that point but rather establish the hierarchy. We can call the constructor without parameters as JavaScript will automatically set `undefined` for each unset variable.
 
-Better practice is to replace 
+Better practice is to replace
 
 	Employee.prototype = new Person();
 
@@ -137,7 +137,7 @@ This avoids calling the `Person` constructor.
 You can call the super class constructor from the subclass by invoking the `call`` method.
 
 	 Person.call(this, firstName, lastName);
-	
+
 The method is provided by the function object. With it you can define which object should be references when its calling `this` by injecting it as the first parameter.
 
 ### Object types ###

@@ -8,10 +8,10 @@ JSF is a request-driven MVC web framework
 
 Create a new project
 
-	File > New > Dynamic Web Project 
+	File > New > Dynamic Web Project
 
 - Set `Dynamic web module version` to `2.5`
-- Set `Configuration` to `JavaServer Faces 1.2 Project` 
+- Set `Configuration` to `JavaServer Faces 1.2 Project`
 
 Using the configuration creates the following `web.xml`
 
@@ -80,11 +80,11 @@ Here is a simple code fragment for showing the bean.
 		<title>Buch Portlets und JSF</title>
 		<link rel="stylesheet" type="text/css" href="/DemoJSF/default.css" />
 	</head>
-	<f:view>  
+	<f:view>
 	  	<h2>Beispiel Bean Management:</h2>
-	    <h:form> 
-			Guten Tag,  
-			<h:outputText value="#{PersonBean.firstname} " /> 
+	    <h:form>
+			Guten Tag,
+			<h:outputText value="#{PersonBean.firstname} " />
 					<h:outputText value="#{PersonBean.lastname}" />
 			<br><br>
 			Bitte geben Sie neue Werte ein:
@@ -146,7 +146,7 @@ Just use a bean!
 			if (false) {
 				return "no_way"
 			}
-			
+
 			return "yay";
 		}
 	}
@@ -169,7 +169,7 @@ To circumvent this problem you can add a redirection rule.
 		<from-outcome>chapter_3</from-outcome>
 		<to-view-id>/faces/navigation/chapter_3.jsp</to-view-id>
 		<redirect/>
-	</navigation-case> 
+	</navigation-case>
 
 This uses the POST-Redirect-GET Pattern
 
@@ -181,14 +181,14 @@ JSF solves that problem with its own concepts. If the data doesn't isn't correct
 
 ### Conversion
 
-If you use only digits as your input and the method expects an `int`, JSF will convert the number implicitly. Sometimes this isn't possible. 
+If you use only digits as your input and the method expects an `int`, JSF will convert the number implicitly. Sometimes this isn't possible.
 
 A good example when a conversion can't be decided automatically is when you are using a date or a time, you have to coerce it. An example
 
 	<h:outputText value="#{PersonBean.birthday}" >
 		<f:convertDateTime type="date" dateStyle="full"/>
 	</h:outputText>
-		
+
 	<h:inputText value="#{PersonBean.birthday}">
 		<f:convertDateTime type="date" dateStyle="short"/>
 	</h:inputText>
@@ -211,19 +211,19 @@ For validating more complex data you will have to write your own methods. I sugg
 		public void validateMail(FacesContext jsfContext, UIComponent component,
 				Object value) throws ValidatorException {
 			String input = value.toString();
-			boolean valid = input.indexOf("@") > 0;		
+			boolean valid = input.indexOf("@") > 0;
 			if (!valid) {
 				throw new ValidatorException(
 						new FacesMessage("Not a valid address"));
 			}
 		}
 	}
-	
+
 Just wire it up in your `faces-config.xml` (I set the scope to `application`) and use it like so:
 
 	<h:inputText value="#{PersonBean.email}" validator="#{PersonController.validateMail}" />
-	
-As you may have noticed the `ValidatorException` takes a `FacesMessage` as its argument. A FacesMessages can and should be constructed using this 
+
+As you may have noticed the `ValidatorException` takes a `FacesMessage` as its argument. A FacesMessages can and should be constructed using this
 
 	FacesMessage message = new FacesMessages("Short Message/Detail", "Long Message/Summary", FacesMessage.SEVERITY_WARN)
 
@@ -246,14 +246,14 @@ You can write `ActionListener` by implementing `javax.faces.event.ActionListener
 					+ " in phase" + phase);
 		}
 	}
-	
+
 Use it by registering it:
 
 	<h:commandButton action="#{CalculatorBean.calculate}"
 			value="Calculate the sum with Event">
 		<f:actionListener type="demo.jsf.DemoActionListener" />
 	</h:commandButton>
-	
+
 Of course you can register multiple ActionListener.
 
 Sometimes there is the question why there are ActionListener and Action methods. For me an action method results in a change of the navigation and therefore is visible for the user and an ActionListener adds functionality on the server side.
@@ -267,7 +267,7 @@ You can also monitor changes of values by adding a `ValueChangeListener` to a co
 				throws AbortProcessingException {
 			System.out.println(
 					"ValueChange: \n" +
-					"Old value:" + event.getOldValue() + "\n" + 
+					"Old value:" + event.getOldValue() + "\n" +
 					"New value:" + event.getNewValue());
 		}
 	}
@@ -314,7 +314,7 @@ JSF also stores a ComponentTree on the server side. TheComponentTree will be tra
 	 - Form
 	    - Input
 	    - Checkbox
-	    - Button 
+	    - Button
 
 The first element is always of type `UIViewRoot`. Mostly you don't have to care about the component tree. Sometimes you have to that - normally in an action method:
 
@@ -368,7 +368,7 @@ Purpose is for each component ti retrieve its current state. If value conversion
 
 ### Phase 3: Process validation
 
-At this stage, each component will have its values validated against the application's validation rules. If a value is invalid, an error message is added to `FacesContext` and the component is marked invalid. 
+At this stage, each component will have its values validated against the application's validation rules. If a value is invalid, an error message is added to `FacesContext` and the component is marked invalid.
 
 If a component is invalid JSF advances to render response phase, otherwise to update model values phase.
 
@@ -408,9 +408,9 @@ This page will result in an empty page without an error message:
 	<f:view>
 		<h:form>
 		Summand 1:
-		<h:inputText value="#{CalculatorBean.summand1}" />	
+		<h:inputText value="#{CalculatorBean.summand1}" />
 		Summand 2:
-		<h:inputText value="#{CalculatorBean.summand2}" />	
+		<h:inputText value="#{CalculatorBean.summand2}" />
 		Sum is: <h:outputText value="#{CalculatorBean.sum}" />
 		<h:commandButton action="#{CalculatorBean.calculate}"
 				value="Calculate the sum" />
@@ -418,5 +418,5 @@ This page will result in an empty page without an error message:
 	</f:view>
 	<h:messages />
 	</html>
-	
+
 The error was using `<h:messages />` out of the `<f:view>` scope.

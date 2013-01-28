@@ -28,4 +28,4 @@ DAOs abstract from these different data sources. A DAO manages the connection an
 
 	  public Customer[] findByCompany(int companyId)
 	   throws CustomerDAOException;
-	}	
+	}

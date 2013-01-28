@@ -1,8 +1,8 @@
 # Spatial datastructures and algorithms optimized for highly parallelized computing environments #
 
-Spatial data is data that lives in a certain spatial context. These characteristics can be points, lines, polygons, surfaces or volumes and exist in the context of an area (two dimensional data) or a volume (three or more dimensions). 
+Spatial data is data that lives in a certain spatial context. These characteristics can be points, lines, polygons, surfaces or volumes and exist in the context of an area (two dimensional data) or a volume (three or more dimensions).
 
-While storing the spatial attributes might be an easy task, working with it and is quite a different task. 
+While storing the spatial attributes might be an easy task, working with it and is quite a different task.
 
 ## Anwendungen und Probleme ##
 
@@ -30,7 +30,7 @@ Distanzberechnungen passieren auf Gleitkommazahlen. Um Distanzen zwischen zwei P
 - Euklid
 - Haversine
 - LawOfCosine
-- Loxodrome 
+- Loxodrome
 - Orthodrome
 
 ## Data Structures ##

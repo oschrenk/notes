@@ -16,9 +16,9 @@ To get the newest features
 
 	sudo apt-key advanced --keyserver pgp.net.nz --recv-keys F6E0FA5CF0307507BB23A512EAFCFEBF8FEB8EBF
 	echo "deb http://debian.mcmillan.net.nz/debian lenny awm " | sudo tee /etc/apt/sources.list.d/davical.list
-	sudo apt-get update 
+	sudo apt-get update
 	sudo apt-get install davical
-	
+
 ## Configuration ##
 
 ### Apache ###
@@ -26,13 +26,13 @@ To get the newest features
 Restart your Apache to make sure it can handle PHP files.
 
 	sudo /etc/init.d/apache2 restart
-	
+
 Verifiy your Apache and PHP configuration by
 
 	cd /var/www
 	sudo mv index.html index.php
 	vi index.php
-	
+
 I inserted somewhere
 
 	<?php
@@ -101,24 +101,24 @@ Create the DaviCal users (first becoming the the system root superuser, using su
 	sudo su
 	su postgres -c "createuser davical_app"
 	exit
-	
+
 You will get asked about superusers, roles and databases, but just say "No" to all questions. This functional ID needs only minimum rights. Repeat the process to create one more user, `davical_dba`:
 
 	sudo su
 	su postgres -c "createuser davical_dba"
 	exit
-	
+
 Edit the configuration file `pg_hba.conf`:
 
 	sudo nano /etc/postgresql/8.4/main/pg_hba.conf
-	
+
 Add the following 4 lines near (or at) the top;
 
 	local all all trust
 	local davical davical_dba trust
 	local davical davical_app trust
 	host davical davical_app 127.0.0.1/32 trust
-	
+
 (The last line is for accessing the database over TCP/IP, assuming the database and the apache2 server are on the same computer.)
 
 Restart the postgreSQL server:
@@ -167,7 +167,7 @@ Restart the database daemon:
 	davical=# \q
 	exit
 	exit
-	
+
 You should see a table with a list of access permissions to "davical_dba". (Typing "\q" exits pqsl.)
 
 ### DAViCal ###
@@ -182,14 +182,14 @@ You can merely include the following lines:
 	  $c->admin_email = 'admin@example.net';
 	  $c->system_name = "DAViCal CalDAV Server";
 	  $c->pg_connect[] = 'dbname=davical port=5432 user=davical_app';
-	
-## Startup ## 
-	
+
+## Startup ##
+
 ## FAQ/Problems ##
 
 ### DBI connect('dbname=davical','davical_dba',...) failed: FATAL:  Ident authentication failed ###
 
-During the creation of the initial davical database the database got created but the script somehow wasn't able to connect. I had to redo the steps and had to drop the database 
+During the creation of the initial davical database the database got created but the script somehow wasn't able to connect. I had to redo the steps and had to drop the database
 
 	sudo -u postgres psql postgres
 	DROP DATABASE davical;
@@ -199,5 +199,5 @@ The problem was that I added the lines in the `/etc/postgresql/8.4/main/pg_hba.c
 
 ### Starting/Stopping Server ###
 
-	sudo /etc/init.d/apache2 [start|restart|stop] 
+	sudo /etc/init.d/apache2 [start|restart|stop]
 	sudo /etc/init.d/postgresql-8.4 [restart|stop]

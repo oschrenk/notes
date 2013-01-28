@@ -23,7 +23,7 @@ You will a bluetooth dongle or  built-in support for bluetooth on your Mac, and 
 
 You will need a 32bit version of Java 1.5
 
-### LEJOS 
+### LEJOS
 
 You can find the latest [LEJOS][lejos] release (0.85) [here][lejos.download]. Extract it into a directory of your choosing, I extracted it to `~/Developent/sdk/lejos-nxj`
 
@@ -73,7 +73,7 @@ You get something like:
 	  1:  NXT  0016530E78B5
 	Select the device to update, or enter 0 to exit.
 	Device number to update:
-	
+
 For me it was option 1, after that the console reports
 
 	Attempting to reboot the device.
@@ -97,7 +97,7 @@ and the device makes some noise reporting that its changing its firmware. After 
 	touch HelloWorld.java
 
 ### Hello World
-	
+
 Use the following source as an example
 
 	import lejos.nxt.*;
@@ -108,11 +108,11 @@ Use the following source as an example
 			Button.waitForPress();
 		}
 	}
-	
+
 ### Compile
 
 	nxjc HelloWorld.java
-	
+
 ### Create the binary
 
 	nxjlink -v HelloWorld -o HelloWorld.nxj
@@ -149,11 +149,11 @@ When flashing the NXT you can get an error message like this:
 
 The problem is that the Fantom/Bluecove drivers are not working properly with 64-bit JVM. Setting the JVM in "Java Preferences" doesn't fix the problem. Instead you will have to force nxj to run in 32-bit mode. To do this open all the non binary files (the ones that don't end with .bin) in the `/lejos_nxj/bin/` directory in your favorite code editor and add `-d32` to all java calls. For example in nxjbrowse:
 
-	java -Dnxj.home="$NXJ_HOME" -DCOMMAND_NAME="$NXJ_COMMAND" -Djava.library.path="$NXJ_BIN" -classpath "$NXJ_CP_TOOL" lejos.pc.tools.NXJBrowser  "$@" 
+	java -Dnxj.home="$NXJ_HOME" -DCOMMAND_NAME="$NXJ_COMMAND" -Djava.library.path="$NXJ_BIN" -classpath "$NXJ_CP_TOOL" lejos.pc.tools.NXJBrowser  "$@"
 
 to
 
-	java -d32 -Dnxj.home="$NXJ_HOME" -DCOMMAND_NAME="$NXJ_COMMAND" -Djava.library.path="$NXJ_BIN" -classpath "$NXJ_CP_TOOL" lejos.pc.tools.NXJBrowser  "$@" 
+	java -d32 -Dnxj.home="$NXJ_HOME" -DCOMMAND_NAME="$NXJ_COMMAND" -Djava.library.path="$NXJ_BIN" -classpath "$NXJ_CP_TOOL" lejos.pc.tools.NXJBrowser  "$@"
 
 ## Bluetooth ##
 

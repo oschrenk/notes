@@ -5,10 +5,10 @@
 	<!DOCTYPE html>
 
 The *language* of the document is best set via HTTP Headers
-	
+
 	Content-Language: en
 
-or by setting it directly on the html tag via an attribute 
+or by setting it directly on the html tag via an attribute
 
 	<html lang="en">
 

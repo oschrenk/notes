@@ -38,7 +38,7 @@ To show more error messages use the white triangle on the top right corner in th
 When trying to compile the sources via Ant from the command line I got this output
 
 	[mxmlc] Error: Java heap space
-	[mxmlc] 
+	[mxmlc]
 	[mxmlc] java.lang.OutOfMemoryError: Java heap space
 	[mxmlc] 	at macromedia.asc.parser.NodeFactory.getExpression(NodeFactory.java:869)
 	[mxmlc] 	at macromedia.asc.parser.NodeFactory.getExpression(NodeFactory.java:864)

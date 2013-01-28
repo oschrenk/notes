@@ -6,7 +6,7 @@
 
 > Underscore is a utility-belt library for JavaScript that provides a lot of the functional programming support that you would expect in Prototype.js (or Ruby), but without extending any of the built-in JavaScript objects. It's the tie to go along with jQuery's tux.
 
-[zepto.js](https://github.com/madrobby/zepto) 
+[zepto.js](https://github.com/madrobby/zepto)
 
 > Zepto.js is a minimalist inlinable framework for mobile WebKit browsers, with a jQuery-like chaining syntax
 
@@ -80,6 +80,6 @@
 
 ## Game Engines #
 
-- [Crafty](https://github.com/louisstow/Crafty) 
+- [Crafty](https://github.com/louisstow/Crafty)
 - [Hydra](https://github.com/aduros/hydra)
 - [Propulsion](https://github.com/calebh/Propulsion)

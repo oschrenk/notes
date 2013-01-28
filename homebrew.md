@@ -53,7 +53,7 @@ The official repo doesn't accept all formulae for one reason or another. You can
 
 ### brew doctor ###
 
-I had some problems with the PHP installation and ran `brew doctor` to check for problems. 
+I had some problems with the PHP installation and ran `brew doctor` to check for problems.
 
 1. Added `/usr/local/sbin` and `/usr/local/bin` to path before system bin directory
 2. Uninstalled XQuarz to remove config scripts
@@ -67,7 +67,7 @@ I had some problems with the PHP installation and ran `brew doctor` to check for
 
 I had some troubles updating my homebrew via `brew update`. It always produced an error message about some untracked data.
 
-I fixed this by 
+I fixed this by
 
 	cd /usr/local
 	git reset --hard

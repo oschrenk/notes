@@ -39,7 +39,7 @@ Comes with the OS
 
 ### Local Web Development ###
 
-To enable access to your local websites via `http://project` you first have to include the 
+To enable access to your local websites via `http://project` you first have to include the
 
 Edit `/etc/apache2/httpd.conf` and uncomment
 
@@ -83,7 +83,7 @@ If you get an `Access Denied error` you have to enable access to that directory.
 Uncomment
 
 	#LoadModule php5_module        libexec/apache2/libphp5.so
-	
+
 in `/etc/apache2/httpd.conf` and restart
 
 ### `/usr/sbin/apachectl: line 82: ulimit: open files: cannot modify limit: Invalid argument` ###
@@ -93,7 +93,7 @@ The upgrade to OSX 10.6.5 broke `apachectl`
 Change line 64 of `/usr/sbin/apachectl` from
 
 	ULIMIT_MAX_FILES="ulimit -S -n `ulimit -H -n`"
-	
+
 to
 
 	ULIMIT_MAX_FILES=""

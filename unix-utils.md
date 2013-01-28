@@ -74,7 +74,7 @@ Just type `/` and then the word you search for.
 ### Various ###
 
 **Kill process via grep**
-	
+
 	ps -ef | grep <name> | grep -v grep | awk '{print $2}' | xargs kill -9
 
 **Resolve to canonical path**. Useful if you used symbolic links to switch into a directory
@@ -87,7 +87,7 @@ Just type `/` and then the word you search for.
 
 **Change to previous working directory**
 
-    cd -@ 
+    cd -@
 
 Run the **last command as root**
 
@@ -137,10 +137,10 @@ Runs **previous command but replacing all instances of foo with bar**
 
     ls -1 | while read a; do mv "$a" `echo $a | sed -e 's/\ /\./g'`; done
 
-**Recursive Search and Replace** with given String 
-	
+**Recursive Search and Replace** with given String
+
 	$ find . -type f -exec sed -ie "s/old/new/g" {} +;
-	
+
 `-l` means that only lines that match will be displayed
 
 **Batch rename files, replacing *foo* with *bar***
@@ -150,15 +150,15 @@ Runs **previous command but replacing all instances of foo with bar**
 **Create missing directory when moving files**
 
     mkdir -p ./some/path/; mv yourfile.txt $_
-	
-**Reverse output** 
+
+**Reverse output**
 
 	tac
-	
+
 eg. `svn log | tac` or if `tac` is not available
 
 	awk '{ x = $0 "\n" x } END { printf "%s", x }'
- 	
+
 **Download a file with “authorization” cookie**
 
     wget --server-response --continue --load-cookies cookies.txt http://host.com/file.ext

@@ -14,11 +14,18 @@ Code is king.
 1. write commit message before coding
 2. write what the software should be supposed to do, not what you did
 
-The second rule lines up with writing commit message 
+The second rule lines up with writing commit message
+
+### Architecture ###
+
+- api > framework
+- dependency injection > dependency injection container
 
 ### Style ###
 
-- utf8, unix line encoding
+- utf8
+- unix line ending
+- delete trailing whitespace
 - agree on company style
 - enforce style
 	- with shared IDE/editor preferences
@@ -27,8 +34,6 @@ The second rule lines up with writing commit message
 - Limit lines to 80 characters.
 	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
 	[#Geissendörfer:2011]
-- api > framework
-- dependency injection > dependency injection container
 
 ### Logging ###
 
@@ -195,6 +200,55 @@ Keep in mind
 
 [#MarkCC:2011]
 
+#### Everyone ####
+
+- Accept that many programming decisions are opinions. Discuss tradeoffs, which you prefer, and reach a resolution quickly.
+- Ask questions; don't make demands. ("What do you think about naming this `:user_id`?")
+- Ask for clarification. ("I didn't understand. Can you clarify?")
+- Avoid selective ownership of code. ("mine", "not mine", "yours")
+- Avoid using terms that could be seen as referring to personal traits. ("dumb",
+  "stupid") Assume everyone is attractive, intelligent, and well-meaning.
+- Be explicit. Remember people don't always understand your intentions online.
+- Be humble. ("I'm not sure - let's look it up.")
+- Don't use hyperbole. ("always", "never", "endlessly", "nothing")
+- Don't use sarcasm.
+- Keep it real. If emoji, animated gifs, or humor aren't you, don't force them. If they are, use them with aplomb.
+- Talk in person if there are too many "I didn't understand" or "Alternative
+  solution:" comments. Post a follow-up comment summarizing offline discussion.
+
+#### Reviewee ####
+
+- Be grateful for the reviewer's suggestions. ("Good call. I'll make that
+- change.")
+- Don't take it personally. The review is of the code, not you.
+- Explain why the code exists. ("It's like that because of these reasons. -ould it be more clear if I rename this class/file/method/variable?")
+- Extract some changes and refactorings into future tickets/stories.
+- Link to the code review from the ticket/story. ("Ready for review:
+- http://github.com/organization/project/pull/1")
+- Push commits based on earlier rounds of feedback as isolated commits to the
+  branch. Do not squash until the branch is ready to merge. Reviewers should be
+  able to read individual updates based on their earlier feedback.
+- Seek to understand the reviewer's perspective.
+- Try to respond to every comment.
+- Wait to merge the branch until another person signs off.
+- Wait to merge the branch until Continuous Integration (TDDium, TravisCI, etc.).
+
+#### Reviewer ####
+
+Understand why the code is necessary (bug, user experience, refactoring). Then:
+
+- Communicate which ideas you feel strongly about and those you don't.
+- Identify ways to simplify the code while still solving the problem.
+- If discussions turn too philosophical or academic, move the discussion - fline
+- to a regular Friday afternoon technique discussion. In the meantime, let the
+- author make the final decision on alternative implementations.
+- Offer alternative implementations, but assume the author already considered
+- them. ("What do you think about using a custom validator here?")
+- Seek to understand the author's perspective.
+- Sign off on the pull request with a :thumbsup: or "Ready to merge" comment.
+
+[#Thoughtbot:2012]
+
 ## Culture ##
 
 - get people out of the office out into the open
@@ -330,4 +384,6 @@ Use [Semantic Versioning](http://semver.org/)
 [#Summers:2012]: Ben Summers, [Pre-Commit Checklist](http://bens.me.uk/2012/pre-commit-checklist), 2012
 
 [#Tower:2011]: [Tower](http://www.git-tower.de). [Git Cheat Sheet](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf) from the guys who made [tower](http://www.git-tower.de) 2011
+
+[#Thoughtbot:2012]: [Thoughtbot, Guides, Code Review](https://github.com/thoughtbot/guides/blob/master/code-review/README.md)
 

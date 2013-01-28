@@ -7,7 +7,7 @@ You write code that generates business value. But what is business value?
 - A new feature
 - An improved old feature
 - Fixing a bug
-- Make it faster, prettier, easier 
+- Make it faster, prettier, easier
 - Add unit test before a bug
 
 We need to make better decision about our code.
@@ -54,7 +54,7 @@ Techniques:
 - **Reservoir sampling**. Keep a statistically representative sample of measurements as they happen. Vitter's algorithm R. It produces uniform samples.
 - **Forward decaying priority sampling**. It allows to maintain a statistically representation representative sample if the last 5 minutes
 
-If it could affect your business value, measure it. 
+If it could affect your business value, measure it.
 
 - Collect the data
 - Expose the data
@@ -87,5 +87,5 @@ Summary
 - Better model.
 
 - Metrics, [Javascript](https://github.com/mikejihbe/metrics)
-- Metrics, [Java](https://github.com/codahale/metrics) 
+- Metrics, [Java](https://github.com/codahale/metrics)
 - Metrics, [Ruby](https://github.com/johnewart/ruby-metrics)

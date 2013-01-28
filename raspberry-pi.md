@@ -14,7 +14,7 @@ My setup
 
 ### Wireless Adapter ###
 
-- [Edimax EW-7811Un wireless adapter](http://www.edimax.com/en/produce_detail.php?pd_id=347&pl1_id=1&pl2_id=44) 
+- [Edimax EW-7811Un wireless adapter](http://www.edimax.com/en/produce_detail.php?pd_id=347&pl1_id=1&pl2_id=44)
 - [ASUS USB-N10 Wireless Lan USB Adapter](http://www.asus.de/Networks/Wireless_Adapters/USBN10/)
 
 ### Other ###
@@ -33,7 +33,7 @@ Disconnect your SD Reader/Card
 	$ df -h
 
 Connect your SD Reader/Card
-	
+
 	$ df -h
 
 There should be one device that wasn't listed the last time (in my case	`/dev/disk2s1`). Unmount the volume
@@ -56,7 +56,7 @@ Insert the SD Card into your RaspPi, connect it to the local network and power i
 
 Luckily the distribution I chose supported my WiFi adapter. So I just needed to configure my networks.
 
-[Wireless Network Setup Tutorial](http://www.raspberrypi-tutorials.co.uk/set-raspberry-pi-wireless-network/) 
+[Wireless Network Setup Tutorial](http://www.raspberrypi-tutorials.co.uk/set-raspberry-pi-wireless-network/)
 
 	$ sudo touch /etc/wpa.config
 
@@ -137,7 +137,7 @@ Configure and make (disable snapshot). This will take 3+ hours!
 
 ### shairport ###
 
-Stream music from iTunes to the Raspberry Pi. 
+Stream music from iTunes to the Raspberry Pi.
 
 Install dependencies
 
@@ -149,6 +149,6 @@ Clone sources
 	cd shairport
 	make
 
-Test 
-	
+Test
+
 	$ perl shairport.pl

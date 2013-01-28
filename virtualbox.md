@@ -21,11 +21,11 @@ List virtual machines
 List available os types
 
 	VBoxManage list ostypes
-	
+
 List port forwardings
 
-	VBoxManage getextradata "<name>" enumerate | grep VBoxInternal 
-	
+	VBoxManage getextradata "<name>" enumerate | grep VBoxInternal
+
 Get ip adress from guest
 
 	VBoxManage guestproperty enumerate <name> | grep IP
@@ -39,7 +39,7 @@ To run a virtual machine headless
 To also disable VRDP (VirtualBox Remote Desktop Protocol) and access the machine via `ssh` only
 
 	VBoxHeadless --startvm <uuid|name> --vrde=off
-	
+
 ## SSH into a VirtualBox ##
 
 - install OpenSSH-Server on the guest system

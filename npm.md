@@ -49,6 +49,6 @@ For more infos what fields are available use `npm help json`. For instance if yo
 
 ## Publishing ##
 
-1. Create an account with `npm adduser` and supply a username, password and an email address. 
+1. Create an account with `npm adduser` and supply a username, password and an email address.
 2. Go to the your root directory of your package and run `npm publish`
-3. Profit!	
+3. Profit!

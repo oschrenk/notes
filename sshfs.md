@@ -1,11 +1,11 @@
 # SSHFS #
 
 	brew install sshfs
-	
+
 To mount
 
 	sshfs host: mountpoint
-	
+
 If the username is different
 
 	sshfs username@host: mountpoint

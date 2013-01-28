@@ -22,6 +22,12 @@ Some default settings are weird, especially the encoding and line delimiter sett
 *   Change encoding `General -> Workspace > Text File Encoding -> Other -> UTF-8`
 *   Line Delimiter to Unix `General -> Workspace -> New text file line delimiter -> Other -> Unix`
 
+### Commit from project explorer with keyboard shortcut ###
+
+[From Stackoverflow](http://stackoverflow.com/questions/8469313)
+
+Ensure `Git` is checked within the `Command Groups Availability` tab of the `Window > Customize Perspective menu`.
+
 ### Change the @author JavaDoc value ###
 
 The default is that Eclipse uses the currently logged in username. To change the default settings edit the `eclipse.ini` and add
@@ -31,8 +37,6 @@ The default is that Eclipse uses the currently logged in username. To change the
 In OSX the  `eclipse.ini` can be found under `path/to/Eclipse.app/Contents/MacOS/eclipse.ini`
 
 If you need some more flexibility e.g.. setting it depending on your workspace you might want to look into the usage of [JAutoDoc](http://jautodoc.sourceforge.net/) and changing the default template and setting a property.
-
-## Hints ##
 
 ### Show hidden (`.*`) files ###
 
@@ -48,13 +52,15 @@ Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a p
 
 ## Appendix ##
 
+To get to "New and Noteworthy" section open the [Download Overview](http://download.eclipse.org/eclipse/downloads/index.html), click on the Milestone (under Stable Build), and click on the "New and Noteworthy" link (that looks like a header)
+
 ### Notable Changes in 3.7 ###
 
 A new lightweight refresh mechanism was introduced. Files discovered to be out-of-sync by the workspace, for example while accessing the file content by an editor, are automatically asynchronously refreshed. In Eclipse 3.7 and 3.8 you have to enable this yourself via Preferences > General > Workspace and select Refresh on access. In Eclipse SDK 4.2 the mechanism is enabled by default.
 
 ### Notable Changes in 3.8 ###
 
-- Quick Assist to convert enhanced `for` loop. 
+- Quick Assist to convert enhanced `for` loop.
 	- Convert to indexed `for` loop is available for expressions of `array`- and `List`-based types.
 	- Convert to Iterator-based `for` loop is available for expressions of type `Iterable`
 - Resource Leak Detection. The compiler can now detect leakage of resources i.e. local variables of type `java.lang.AutoCloseable` (compliance >= 1.7) and `java.io.Closeable` (compliance <= 1.6).
@@ -64,6 +70,14 @@ A new lightweight refresh mechanism was introduced. Files discovered to be out-o
 - Improved bracket matching support in Java editor. Also, the `Navigate > Go To > Matching Bracket action (Ctrl+Shift+P)` now works everywhere in a file. If a bracket is not selected before invoking the action, the action navigates to the nearest enclosing end bracket.
 - Enhanced diagnostics for detection of incomplete switch statements
 - Toggle Full Screen command is now supported on MacOS X Lion
+
+### Notable Changes in 4.3 ###
+
+- The new Convert `if-else` to `switch` quick assist (`Ctrl+1`) allows you to convert an `if-else` statement to an equivalent `switch` statement.
+- The compiler can now detect unused type parameters. The Unused type parameter diagnostic is set to Ignore by default and can be enabled on the `Java > Compiler > Errors/Warnings preference page.
+- Performance enhancements (M4)
+- Quick assist to combine Strings
+- Option to inherit null annotations
 
 ### FAQ/Problems ###
 

@@ -33,7 +33,7 @@ Configure port forwarding for http
 	VBoxManage setextradata "gitorious" "VBoxInternal/Devices/e1000/0/LUN#0/Config/http/Protocol" TCP
 	VBoxManage setextradata "gitorious" "VBoxInternal/Devices/e1000/0/LUN#0/Config/http/GuestPort" 80
 	VBoxManage setextradata "gitorious" "VBoxInternal/Devices/e1000/0/LUN#0/Config/http/HostPort" 8880
-	
+
 Start the remote machine
 
 Install ssh
@@ -101,7 +101,7 @@ Installing the Sphinx Search Server
 	    cd sphinx-0.9.9 && \
 	    ./configure --prefix=/usr && \
 	    make all install
-	
+
 Getting Gitorious
 
 	git clone git://gitorious.org/gitorious/mainline.git /var/www/gitorious && \
@@ -126,7 +126,7 @@ Enabling background services
 		update-rc.d git-poller defaults && \
 		update-rc.d git-ultrasphinx defaults && \
 		update-rc.d stomp defaults
-	
+
 Create symlink as scripts point to `/opt/ruby-enterprise` for `RUBY_HOME`
 
 	ln -s /usr/ /opt/ruby-enterprise
@@ -179,7 +179,7 @@ Insert
 
 Creating the Gitorious SSL Apache2 site
 
-	touch /etc/apache2/sites-available/gitorious-ssl 
+	touch /etc/apache2/sites-available/gitorious-ssl
 
 Insert
 
@@ -212,7 +212,7 @@ Create MySQL User (select a password before issuing a command)
 	mysql> GRANT ALL PRIVILEGES ON *.* TO 'gitorious'@'localhost' IDENTIFIED BY '<insert password>' WITH GRANT OPTION;
 	mysql> FLUSH PRIVILEGES;
 	m<sql> EXIT;
-	
+
 ### Gitorious ###
 
 Create user under which Gitorious will run and serve the Git repositories
@@ -237,17 +237,17 @@ Create some directories and files
 Exit to `root` user
 
 	exit
-	
+
 Creating the Gitorious configuration
 
 	cp config/database.sample.yml config/database.yml && \
 	cp config/gitorious.sample.yml config/gitorious.yml && \
 	cp config/broker.yml.example config/broker.yml
-	
+
 Edit `config/database.yml` and set username and password (edit the right section (not test:, but production:))
 
 	vi config/database.yml
-	
+
 Edit `config/gitorious.yml` (edit the right section (not test:, but production:))
 
 	vi config/gitorious.yml
@@ -273,7 +273,7 @@ For our virtual environment ssl access makes problems
 Switch to git user
 
 	su - git
-	
+
 Change directory
 
 	cd /var/www/gitorious
@@ -294,21 +294,21 @@ Lets rake
 Create the Sphinx Cronjob
 
 	crontab -e
-	
+
 Add
-	
+
 	* * * * * cd /var/www/gitorious && /usr/bin/bundle exec rake ultrasphinx:index RAILS_ENV=production
 
 Create an admin user
 
 	env RAILS_ENV=production && \
 	ruby1.8 script/create_admin
-	
+
 Return to normal user
 
 	exit
 	exit
-	
+
 Reboot
 
 	sudo reboot
