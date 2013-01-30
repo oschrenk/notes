@@ -40,6 +40,36 @@ Use `man brew` to view the manpage.
 | `brew audit` 							| Audits all formulae for common code and style issues |
 | `brew cleanup foo` 					| For all installed or specific formulae, removes any older versions from the cellar [^4] |
 
+## Homebrew in a Multi-User Environment ##
+
+Create a new group called `Local` (name is irrelevant)
+
+The easiest way to do this is through the Accounts pane in System Preferences. Just click on the Plus sign to add a new account and then select Group from the New Account drop-down menu. Add all the users who you want to participate in your newly-created group.
+
+Homebrew uses two directories (per default)
+
+1. `/usr/local` as installation directory
+2. `/Library/Caches/Homebrew` as cache (`$ brew --cache`)
+
+Both directories should be made available to `Local`. While you don't want to mess with the current contents of `/usr/local`, we can safely delete the cache, so that there won't be any permission problems.
+
+Open the Terminal
+
+    $ sudo chown admin:Local /usr/local
+    $ sudo mkdir -p /Library/Caches/Homebrew
+    $ sudo rm -rf /Library/Caches/Homebrew/*
+
+Change the default permissions, if you wish: `sudo chmod 770 Local` (this is optional if you're happy with the default permissions).
+
+Change the ACL entry for the directories:
+
+    $ sudo chmod +a "group:Local allow delete,readattr,writeattr,readextattr,writeextattr,list,search,add_file,add_subdirectory,delete_child,file_inherit,directory_inherit" /usr/local
+    $ sudo chmod +a "group:Local allow delete,readattr,writeattr,readextattr,writeextattr,list,search,add_file,add_subdirectory,delete_child,file_inherit,directory_inherit" /Library/Caches/Homebrew
+
+Now all users in the local group should be able to brew.
+
+IMPORTANT: You must copy (hold down Option in Finder prior to dragging), and not merely move, items. Moving items doesn't inherit the correct ACL rules. Moving doesn't change POSIX file attributes, permissions, ...
+
 ## FAQ/Problems ##
 
 ### Alternative Formulae ###
