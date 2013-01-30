@@ -1,5 +1,8 @@
 # Homebrew #
 
+- `brew update` Fetch the newest version of Homebrew from GitHub using git.
+- `brew upgrade` Upgrade outdated brews.
+
 ## Usage ##
 
 Use `man brew` to view the manpage.
@@ -36,14 +39,6 @@ Use `man brew` to view the manpage.
 | `brew doctor` 						| Checks your installation for common issues |
 | `brew audit` 							| Audits all formulae for common code and style issues |
 | `brew cleanup foo` 					| For all installed or specific formulae, removes any older versions from the cellar [^4] |
-
-You can update outdated packages like so:
-
-	brew install `brew outdated`
-
-or
-
-	 brew outdated | xargs brew install
 
 ## FAQ/Problems ##
 
