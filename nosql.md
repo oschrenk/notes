@@ -1,6 +1,6 @@
 # NoSQL #
 
-- allows heterogeneous data structures
+Allows heterogeneous data structures
 
 Offers BASE (Basically Available, Soft state, Eventual consistency) as a consistency model as opposed to the relational database concept of ACID (Atomicity, Consistency, Isolation, Durability), which means that given a sufficiently long period of time over which no updates are sent, we can expect that during this period, all updates will eventually propagate through the system and all the replicas will be consistent.
 
@@ -45,6 +45,7 @@ Column oriented databases when data needs to be aggregated
 
 - [Apache CouchDB](http://couchdb.apache.org/) is a document-oriented database that can be queried and indexed in a MapReduce fashion using JavaScript.
 - [MongoDB](http://www.mongodb.org/) is a scalable, high-performance, open source, document-oriented database
+- [RethinkDB](http://www.rethinkdb.com/) open-source, distributed database
 - [Jackrabbit](http://jackrabbit.apache.org/) is a fully conforming implementation of the Content Repository for Java Technology API (JCR, specified in JSR 170 and 283)
 
 ### Graph Oriented ###
