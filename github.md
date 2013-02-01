@@ -61,9 +61,3 @@ Do some hacking and commit the changes. To push your changes to github call
     $ $ git push github master
 
 Replace `github` with the name you used.
-
-## Submodules ##
-
-### Adding private repository as submodule ###
-
-    git submodule add git@github.com:username/plugin.git plugins/plugin
