@@ -58,6 +58,6 @@ Above code can also be added by a command
 
 Do some hacking and commit the changes. To push your changes to github call
 
-    $ $ git push github master
+    $ git push github master
 
 Replace `github` with the name you used.
