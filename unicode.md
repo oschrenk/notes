@@ -117,3 +117,8 @@
 | U+256x |`╠`|`╡`|`╢`|`╣`|`╤`|`╥`|`╦`|`╧`|`╨`|`╩`|`╪`|`╫`|`╬`|`╭`|`╮`|`╯`|
 | U+257x |`╰`|`╱`|`╲`|`╳`|`╴`|`╵`|`╶`|`╷`|`╸`|`╹`|`╺`|`╻`|`╼`|`╽`|`╾`|`╿`|
 
+## Favorite characters ##
+
+This characters are not all displayed, as the installed fonts may not support all characters.
+
+- `ꘐ` - `&#x0A610;` - `&#42512;` - [Vai Syllable Ndole Fa](http://shapecatcher.com/unicode/info/42512)
