@@ -2,6 +2,7 @@
 
 - [UniSearcher](http://www.isthisthingon.org/unicode/index.php) Search unicode characters
 - [Graphemica](http://graphemica.com/) Search unicode characters
+- [Shapecatcher](http://shapecatcher.com/) Find unicode characters by drawing them
 - [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
 
 **Typography**
