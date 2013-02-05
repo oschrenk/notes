@@ -7,6 +7,10 @@
 A Bloom filter is a data structure designed to tell you, rapidly and memory-efficiently, whether an element is present in a set.
 
 The price paid for this efficiency is that a Bloom filter is a probabilistic data structure: it tells us that the element either definitely is not in the set or may be in the set.
+You ask the datastructure if an element exists:
+- False positives are possible. You may get `true` for elements that are not in the set.
+- False negatives are not possible. You never get `false` for elements that are in the set.
+
 
 Taken from [here](http://llimllib.github.com/bloomfilter-tutorial/)
 
