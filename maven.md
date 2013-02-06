@@ -7,7 +7,7 @@
 
 - **Installation OSX**. `brew install maven`
 - **Create base directories** `mkdir -p src/{main,test}/{java,resources}`
--  **Read Maven project version** `mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version`
+- **Read Maven project version** `mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version`
 
 ## Basics ##
 
@@ -141,7 +141,7 @@ Normally you will have more complex cases. Try to track down which libraries are
 
 The [Mavenize](#mavenize) way is the better (more complete/correct) choice but sometimes you can't be bothered with dependency hell. Just use the following command and change according to your needs:
 
-		$ mvn install:install-file -Dfile=library.jar -DgroupId=com.company -DartifactId=libraryname -Dversion=1.2.3 -Dpackaging=jar
+	$ mvn install:install-file -Dfile=library.jar -DgroupId=com.company -DartifactId=libraryname -Dversion=1.2.3 -Dpackaging=jar
 
 ### Deploy a 3rd party library ###
 
