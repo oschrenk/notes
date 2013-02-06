@@ -29,7 +29,10 @@
 **Web Services**
 
 - [Jersey](http://jersey.java.net/) Jersey is the open source, production quality, JAX-RS (JSR 311) Reference Implementation for building RESTful Web services.
+- [REST Assured](https://code.google.com/p/rest-assured/) Testing and validating REST services
+
 - [Play Framework](http://www.playframework.org/) Java web framework made by Web developers. Discover a clean alternative to bloated enterprise Java stacks. Play focuses on developer productivity and targets RESTful architectures.
+
 - [Quartz Scheduler](http://www.quartz-scheduler.org/) Quartz is a full-featured, open source job scheduling service.
 - [Solr](http://lucene.apache.org/) Enterprise search server, with XML/HTTP and JSON/Python/Ruby APIs, hit highlighting, faceted search, caching, replication, distributed search, database integration, web admin and search interfaces
 - [Lucene](http://lucene.apache.org/) Java-based indexing and search implementation, as well as spellchecking, hit highlighting and advanced analysis/tokenization capabilities.

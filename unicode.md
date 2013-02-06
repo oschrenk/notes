@@ -2,6 +2,7 @@
 
 - [UniSearcher](http://www.isthisthingon.org/unicode/index.php) Search unicode characters
 - [Graphemica](http://graphemica.com/) Search unicode characters
+- [Shapecatcher](http://shapecatcher.com/) Find unicode characters by drawing them
 - [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
 
 **Typography**
@@ -116,3 +117,8 @@
 | U+256x |`╠`|`╡`|`╢`|`╣`|`╤`|`╥`|`╦`|`╧`|`╨`|`╩`|`╪`|`╫`|`╬`|`╭`|`╮`|`╯`|
 | U+257x |`╰`|`╱`|`╲`|`╳`|`╴`|`╵`|`╶`|`╷`|`╸`|`╹`|`╺`|`╻`|`╼`|`╽`|`╾`|`╿`|
 
+## Favorite characters ##
+
+This characters are not all displayed, as the installed fonts may not support all characters.
+
+- `ꘐ` - `&#x0A610;` - `&#42512;` - [Vai Syllable Ndole Fa](http://shapecatcher.com/unicode/info/42512)

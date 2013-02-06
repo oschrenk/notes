@@ -78,6 +78,7 @@ A new lightweight refresh mechanism was introduced. Files discovered to be out-o
 - Performance enhancements (M4)
 - Quick assist to combine Strings
 - Option to inherit null annotations
+- Null annotations analysis for fields
 
 ### FAQ/Problems ###
 

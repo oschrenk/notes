@@ -56,8 +56,9 @@ Both directories should be made available to `Local`. While you don't want to me
 Open the Terminal
 
     $ sudo chown admin:Local /usr/local
+    $ sudo rm -rf /Library/Caches/Homebrew
     $ sudo mkdir -p /Library/Caches/Homebrew
-    $ sudo rm -rf /Library/Caches/Homebrew/*
+    $ sudo chown admin:Local /Library/Caches/Homebrew/
 
 Change the default permissions, if you wish: `sudo chmod 770 Local` (this is optional if you're happy with the default permissions).
 
