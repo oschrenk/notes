@@ -110,9 +110,9 @@ Resetting the configuration worked for me
 
     /Applications/VLC.app/Contents/MacOS/VLC --reset-config
 
-## Multi-User accounts
+## Multi-User accounts ##
 
-1. Create a new group called `Local` (or any wy you want)
+1. Create a new group called `Local` (or any way you want)
 
 The easiest way to do this is through the Accounts pane in System Preferences. Just click on the Plus sign to add a new account and then select Group from the New Account drop-down menu. Add all the users who you want to participate in your newly-created group.
 
@@ -132,7 +132,7 @@ You now have a folder where all members of the group `Local can read, write and 
 
 IMPORTANT: You must copy (hold down Option in Finder prior to dragging), and not merely move, items. Moving items doesn't inherit the correct ACL rules. Moving doesn't change POSIX file attributes, permissions, ...
 
-## FAQ/Problems
+## FAQ/Problems ##
 
 ### The operation cannot be completed because the item \[whatever\] is in use.
 
