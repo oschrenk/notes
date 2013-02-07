@@ -48,7 +48,7 @@ A good overview of the tags that are used by conventions can be found [here](htt
 
 Taking `bremen.osm` from Geofabrik as an example I extracted some metadata in order to understand the OpenStreetMaps tag conventions
 
-`highway`
+[highway](http://wiki.openstreetmap.org/wiki/Map_Features#Highway)
 
 	abandoned
 	bridleway
