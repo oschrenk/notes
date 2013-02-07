@@ -38,6 +38,10 @@ A [way](http://wiki.openstreetmap.org/wiki/Way) is an **ordered** list of nodes 
 
 A [Tag](http://wiki.openstreetmap.org/wiki/Tag) consists of `Key` and a `Value` and are used to describe elements (nodes, ways and relations) or changesets. Both the key and value are free format text fields, although in practice there are agreed conventions of how tags are used for most common purposes.
 
+### Precision ###
+
+OSM uses Fixed Precision Integer for the geographical location. Instead of persisting `53,0749415` as a floating point number in the database, it will be persisted as `530749415`. The precision of the floating point number is [defined](http://wiki.openstreetmap.org/wiki/Node#Structure) as `7` decimal places, so you have to multiply or divide with `10^7`.
+
 ## Map features##
 
 OpenStreetMap has free tagging system which allows the map to contain unlimited data about its elements.
