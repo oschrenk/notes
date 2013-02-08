@@ -40,6 +40,14 @@ Use `man brew` to view the manpage.
 | `brew audit` 							| Audits all formulae for common code and style issues |
 | `brew cleanup foo` 					| For all installed or specific formulae, removes any older versions from the cellar [^4] |
 
+[^1]: Homebrew will attempt to automatically derive the formula name and version, if it fails, you'll have to make your own template. I suggest copying wget's.
+
+[^2]: This is done automatically when you install formula. It is useful for DIY installation, or in cases where you want to swap out different versions of the same package that you have installed at the same time.
+
+[^3]: This is generally not needed. However, it can be useful if you are doing DIY installations.
+
+[^4]: To delete only a specific out of date version, just go to the folder in the Cellar and `rm -rf` it, or drag it to the trash in Finder.
+
 ## Homebrew in a Multi-User Environment ##
 
 Create a new group called `Local` (name is irrelevant)
@@ -73,9 +81,9 @@ IMPORTANT: You must copy (hold down Option in Finder prior to dragging), and not
 
 ## FAQ/Problems ##
 
-### Alternative Formulae ###
+### Alternative Formula ###
 
-The official repo doesn't accept all formulae for one reason or another. You can find some of these in (https://github.com/adamv/homebrew-alt
+The official repo doesn't accept all formulae for one reason or another. You can find some of these in [homebrew-alt](https://github.com/adamv/homebrew-alt)
 
 ### brew doctor ###
 
@@ -83,11 +91,6 @@ I had some problems with the PHP installation and ran `brew doctor` to check for
 
 1. Added `/usr/local/sbin` and `/usr/local/bin` to path before system bin directory
 2. Uninstalled XQuarz to remove config scripts
-
-[^1]: Homebrew will attempt to automatically derive the formula name and version, if it fails, you'll have to make your own template. I suggest copying wget's.
-[^2]: This is done automatically when you install formula. It is useful for DIY installation, or in cases where you want to swap out different versions of the same package that you have installed at the same time.
-[^3]: This is generally not needed. However, it can be useful if you are doing DIY installations.
-[^4]: To delete only a specific out of date version, just go to the folder in the Cellar and `rm -rf` it, or drag it to the trash in Finder.
 
 ### Can't update ###
 
