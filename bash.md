@@ -22,7 +22,7 @@ Finally, OS X also uses `~/.MacOSX/environment.plist` to set more environment va
 A good graphic graphic can be found [here](http://www.solipsys.co.uk/new/BashInitialisationFiles.html)
 
 > When bash is invoked as an interactive *login shell*, or as a non-interactive shell with the `--login` option, it first reads and executes commands from the file `/etc/profile`, if that file exists. After reading that file, it looks for `~/.bash_profile`, `~/.bash_login`, and `~/.profile`, in that order, and reads and executes commands from the first one that exists and is readable. The `--noprofile` option may be used when the shell is started to inhibit this behavior.
-...
+
 When an interactive shell that is *not a login shell* is started, bash reads and executes commands from `/etc/bash.bashrc` and `~/.bashrc`, if these files exist. This may be inhibited by using the `--norc` option. The `--rcfile` file option will force bash to read and execute commands from file instead of `/etc/bash.bashrc` and `~/.bashrc`.
 
 - a *login shell* means a session where you log in to the system and directly end up in Bash, like a remote ssh session or logging in through a non-graphical text terminal
@@ -215,6 +215,8 @@ The reason is that Bash tries to find local profile files in the following order
 `~/.profile` is the last file in the list. So if OS X finds a file it stops processing. If an installer puts a `.bash_login` in your home directory your `.profile` wouldn’t be read.
 
 ## Bibliography ##
+
+## Sources ##
 
 [#Folly:2009]: Steve Folly. [Where does $PATH get set in OS X 10.6 Snow Leopard?](http://superuser.com/questions/69130/where-does-path-get-set-in-os-x-10-6-snow-leopard#69190) Stackoverflow, 2009
 
