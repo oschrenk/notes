@@ -36,3 +36,11 @@
 - [Quartz Scheduler](http://www.quartz-scheduler.org/) Quartz is a full-featured, open source job scheduling service.
 - [Solr](http://lucene.apache.org/) Enterprise search server, with XML/HTTP and JSON/Python/Ruby APIs, hit highlighting, faceted search, caching, replication, distributed search, database integration, web admin and search interfaces
 - [Lucene](http://lucene.apache.org/) Java-based indexing and search implementation, as well as spellchecking, hit highlighting and advanced analysis/tokenization capabilities.
+
+**Daemons**
+
+Daemonize Java applications
+
+- [commons daemon](http://commons.apache.org/daemon/)
+- [YAJSW](http://yajsw.sourceforge.net/)
+- [Java Service Wrapper](http://wrapper.tanukisoftware.com/doc/german/download.jsp)
