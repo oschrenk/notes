@@ -44,6 +44,10 @@
 
 > Keymaster is a simple micro-library for defining and dispatching keyboard shortcuts.
 
+[Fine Uploader](http://fineuploader.com/)
+
+> User-friendly file-uploading experience over the web.
+
 ## Visualization ##
 
 [arbor.js]( http://arborjs.org)
