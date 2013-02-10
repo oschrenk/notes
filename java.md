@@ -177,8 +177,7 @@ kind providing a 1.4.2 version for Snow Leopard
 ### Running junit from ant causes `ClassNotFoundException` ###
 
 I ran into some problems when trying to calling JUnit tests from an
-ant script. Some people had the [same
-problem](http://blog.anthonychaves.net/java/2006/12/01/solution-for-classnotfoundexception-with-junit-and-ant/comment-page-1#comment-9478)
+ant script. Some people had the [same problem](http://blog.anthonychaves.net/java/2006/12/01/solution-for-classnotfoundexception-with-junit-and-ant/comment-page-1#comment-9478)
 
 > Apparently Ant expects all the classes to be in Jar files rather than in directories on the file system. A few tweaks to my build.xml file and it looked like this: build.xml Now I’m creating two jar files, one for the application and one for the unit tests. After the unit test jar is created I run them in the JUnit task after setting the classpath with the test jar file. I would have liked to put off creating the application jar file until I knew the JUnit tests passed but that is not an option at this point. I don’t feel strongly enough to make it an option either. I have a 2.4 GHz Pentium 4 computer, I can afford to make a few extra jar files.
 
