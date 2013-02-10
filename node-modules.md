@@ -33,6 +33,7 @@
 - [colors.js](https://github.com/Marak/colors.js) Get color and style in your node.js console
 - [log.io](http://logio.org/) Real-time log monitoring in your browser
 - [PDFKit](http://devongovett.github.com/pdfkit/) PDF document generation library
+- [node-plist-native](https://github.com/mgcrea/node-plist-native) Node.js native plist parser & builder
 
 ## Testing ##
 
