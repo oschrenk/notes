@@ -145,22 +145,6 @@ Sometimes these objects are also called _POJOs_ (Plain Old Java Object), describ
 
      %[argument_index$][flags][width][.precision]conversion
 
-## Interview Questions ##
-
-### Servlet Engine ###
-
-There is an form with a button Submit,
-a servlet and a relational database with the table Customers. The users enters a First and Last names of the customer, presses the button Submit, and you need to write the code that would return the detailed data about this customer. Explain _IN with the values encoded as key/value pairs, if the form uses `POST` the data is encoded in the request body.
-
-Details like translating the address via , opening a against the patterns defined in the `web.xml` to forward the request to the servlet responsible for answering it. The servlet engine spawns a new thread and therefore starts the lifecycle of a servlet.
-
-The servlet lifecycle consists of the following steps:
-
-1.  The servlet class is loaded by the container during start-up.
-2.  The container calls the `init()` method. This method initializes the servlet and must be called before the servlet can service any requests. In the entire life of a servlet, the init() method is called only once.
-3.  After initialization, the servlet can service client requests. Each request is serviced in its own separate thread. The container calls the `service()` method of the servlet for every request. The `service()` method determines the kind of request being made and dispatches it to an appropriate method to handle the request. The developer of the servlet must provide an implementation for these methods. If a request for a method that is not implemented by the servlet is made, the method of the parent class is called, typically resulting in an error being returned to the requester.
-Finally, the container calls the `destroy()` method that takes the servlet out of service. The destroy() method, like init(), is called only once in the lifecycle of a servlet.
-
 ## FAQ/Problems ###
 
 ### Missing Java 1.4 on OS X ###
