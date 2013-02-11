@@ -132,7 +132,7 @@ You now have a folder where all members of the group `Local can read, write and 
 
 IMPORTANT: You must copy (hold down Option in Finder prior to dragging), and not merely move, items. Moving items doesn't inherit the correct ACL rules. Moving doesn't change POSIX file attributes, permissions, ...
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### The operation cannot be completed because the item \[whatever\] is in use.
 

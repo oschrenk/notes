@@ -413,7 +413,7 @@ Most of the hooks fall into one of two categories
 | `prepare-commit-msg`	|  |
 | `update`				|  |
 
-## FAQ: Problems/Error Messages ##
+## Troubleshooting ##
 
 ### Git behind a proxy ###
 

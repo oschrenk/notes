@@ -475,7 +475,7 @@ Clean up behind yourself. Everything allocated with `clCreate...` must be destro
 	clReleaseMemObject(src_b_d);
 	clReleaseMemObject(res_d);
 
-## FAQ/Problems ###
+## Troubleshooting ###
 
 ###	`./../../../x86_64-suse-linux/bin/ld: cannot find -lGLU ` ###
 

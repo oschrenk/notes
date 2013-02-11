@@ -1,6 +1,6 @@
 # Backbone #
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### Empty collections ###
 

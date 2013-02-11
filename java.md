@@ -145,7 +145,7 @@ Sometimes these objects are also called _POJOs_ (Plain Old Java Object), describ
 
      %[argument_index$][flags][width][.precision]conversion
 
-## FAQ/Problems ###
+## Troubleshooting ###
 
 ### Missing Java 1.4 on OS X ###
 

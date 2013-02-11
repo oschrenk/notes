@@ -61,6 +61,6 @@ Drop database
 
 	DROP DATABASE name;
 
-## FAQ/Problems ## ##
+## Troubleshooting ## ##
 
 If you have an environment variable called `SCRIPTS` the compilation of postgresql and postgis will fail. Call `unset SCRIPTS` before installation.

@@ -188,7 +188,7 @@ The following shortcuts work when using default (Emacs) key bindings. Vi-binding
 - `Alt + u` Capitalizes every character from the cursor's position to the end of the current word.
 - `Alt + .` Insert the last argument to the previous command (the last word of the previous history entry).
 
-## FAQ/Problems
+## Troubleshooting
 
 ### OSX, Upgrade to Bash 4 ###
 

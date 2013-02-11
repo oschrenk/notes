@@ -14,7 +14,7 @@ Some handy key combo's are:
 - `H` - Decrease Subtitle Delay
 - `J` - Increase Subtitle Delay
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### Disable "This AVI is broken. Seeking will not work correctly" Repair ###
 

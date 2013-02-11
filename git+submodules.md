@@ -102,7 +102,7 @@ Simply run
 
 Do **not** put a trailing slash as the command will fail.
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 *   If you make changes within a submodule and then run `git submodule update` the changes you made will be silently overwritten.
 *   Always publish the submodule before you publish the change in the superproject. If you do others won't be able to clone your repository.

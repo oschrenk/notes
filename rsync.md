@@ -43,7 +43,7 @@ Sync `.git` directory of the `~/Library/Scripts directory`
 
 	rsync -arvz --cvs-exclude --exclude=.git --exclude=sync --exclude=.DS_Store . ~/Library/Scripts/
 
-## FAQ/Problems ## ##
+## Troubleshooting ## ##
 
 ### rsync: command not found ###
 

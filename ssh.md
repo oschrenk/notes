@@ -109,7 +109,7 @@ On OSX the public key is hiding in
 	HostName yourdomain.com
 	User yourusername
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### Permissions are too open ###
 

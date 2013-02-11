@@ -19,7 +19,7 @@ If you have the Flex Builder installed, the SDK should be found under `/Develope
 
 If you use `[Bindable]` on your class (or on the respective fields/methods) make sure that the instance of the class is also marked as `[Bindable]`.
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### Invalid Embed directive in stylesheet `can't resolve source Embed(/assets/path/file.png)` ###
 

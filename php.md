@@ -1,6 +1,6 @@
 # PHP #
 
-## FAQ/Problems
+## Troubleshooting
 
 ### Warning: require_once(file.php) [function.require-once]: failed to open stream: No such file or directory in /path/to/file2.php on line xx
 

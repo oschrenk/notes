@@ -9,6 +9,6 @@ The easiest way to use it is to convert the source to a Grayscale tiff:
 then run tesseract:
   `tesseract terre_input.tif output`
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 Tesseract only supports `.tif` files; rename `.tiff` to `.tif`

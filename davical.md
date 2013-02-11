@@ -185,7 +185,7 @@ You can merely include the following lines:
 
 ## Startup ##
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### DBI connect('dbname=davical','davical_dba',...) failed: FATAL:  Ident authentication failed ###
 

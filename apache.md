@@ -76,7 +76,7 @@ If you get an `Access Denied error` you have to enable access to that directory.
 
 	httpd -v
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### Enable PHP Support ###
 

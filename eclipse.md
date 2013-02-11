@@ -80,7 +80,7 @@ A new lightweight refresh mechanism was introduced. Files discovered to be out-o
 - Option to inherit null annotations
 - Null annotations analysis for fields
 
-### FAQ/Problems ###
+### Troubleshooting ###
 
 #### Delete obsolete workspaces under OS X ####
 

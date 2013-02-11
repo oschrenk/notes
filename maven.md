@@ -157,7 +157,7 @@ The [Mavenize](#mavenize) way is the better (more complete/correct) choice but s
 
 - [Fluido Skin](http://maven.apache.org/skins/maven-fluido-skin/)
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### MacRoman encoding creeping into build process ###
 

@@ -53,7 +53,7 @@ Create the view
 
 	select version from v$instance;
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### Shutdown/restart server ###
 
