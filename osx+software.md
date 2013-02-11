@@ -15,11 +15,15 @@
 
 - [Better Touch Tool](http://blog.boastr.net/) Make the most of your touchpad. Create your own actions.
 - [Quicksilver](http://qsapp.com/). Free. Control your mac with your keyboard.
-- [DropBox](https://www.dropbox.com/). Free - $49.99/month. Backup and sync your data.
+- [DropBox](https://www.dropbox.com/). Free - $9.99/month for 100 GB. Backup and sync your data.
 
 ## Media ##
 
-- [MPlayerX](http://mplayerx.org/) as main video player. I prefer the chromeless windows and the auto-playback feature.
+- [MPlayerX](http://mplayerx.org/) as main video player.
+	- Chromeless windows.
+	- Hide Letterbox.
+	- Auto-playback feature.
+	- Automatically resume videos.
 - [VLC](http://www.videolan.org/) as a fallback for streams and unfinished video downloads.
 - [Mediathek.app](http://appdrive.net/mediathek/) Easy access to public tv in Germany. Subscribe and download your favorite tv shows.
 
@@ -34,7 +38,7 @@
 ## Office ##
 
 - [OmniGraffle](http://www.omnigroup.com/products/omnigraffle/). USD $99.99. Create diagrams and visualizations.
-- [DataGraph](http://www.visualdatatools.com/DataGraph/). €73. A very powerful graphing program. A little confusing at first, but once you get the hang of it you won't  go back to gnuplot.
+- [DataGraph](http://www.visualdatatools.com/DataGraph/). €73. A very powerful graphing program. A little confusing at first, but once you get the hang of it you won't go back to gnuplot.
 - [Papers](http://www.mekentosj.com/papers/). USD $79.99. A very good research tool to manage your papers and citations.
 - [Evernote](http://evernote.com/). Free - €40/year. Store and sync notes.
 - [DayOne](http://dayoneapp.com/). USD $9.99. For writing a journal. The iOS client is one of the best designed applications I've ever used.
