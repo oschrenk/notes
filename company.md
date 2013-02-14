@@ -9,7 +9,7 @@ Code is king.
 - everybody can fork the source code and file pull requests
 - code is user driven not project driven (source control system should support that (see [github](http://github.com/) )
 
-### Writing ###
+### Commits ###
 
 1. write commit message before coding
 2. write what the software should be supposed to do, not what you did
@@ -296,9 +296,11 @@ Understand why the code is necessary (bug, user experience, refactoring). Then:
 - have power easy accessible
 - have easy accessible ethernet ports available on or near the desk
 
-## Organization ##
+### Hardware/Software ###
 
 Only use open source software. Exceptions are allowed when it comes to OS (OS X) and specialized software (Photoshop et al).
+
+## Communication ##
 
 - Project Management:
 	- [Redmine](http://www.redmine.org/)
