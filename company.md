@@ -9,70 +9,12 @@ Code is king.
 - everybody can fork the source code and file pull requests
 - code is user driven not project driven (source control system should support that (see [github](http://github.com/) )
 
-### Commits ###
+### Version Control ###
 
 1. write commit message before coding
 2. write what the software should be supposed to do, not what you did
 
 The second rule lines up with writing commit message
-
-### Architecture ###
-
-- api > framework
-- dependency injection > dependency injection container
-
-### Style ###
-
-- utf8
-- unix line ending
-- delete trailing whitespace
-- agree on company style
-- enforce style
-	- with shared IDE/editor preferences
-	- with tools like [FindBugs](http://findbugs.sourceforge.net/), [PMD](http://pmd.sourceforge.net/), [JSLint](http://www.jslint.com/), [JSHint](http://www.jshint.com/) and the likes
-	- pre-commit hooks
-- Limit lines to 80 characters.
-	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
-	[#Geissendörfer:2011]
-
-### Logging ###
-
-- first class citizen
-- always use [iso 8601](http://en.wikipedia.org/wiki/ISO_8601) for date formatting
-
-- *Be professional*. Write in professional English.
-- *Be concise*.
-- *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future.
-
-[#Batchelder:2003]
-
-- no debugging logs in production
-- do not log locally
-- monitor your logs
-
-### Comments ###
-
-1. Primary Rule
-
-> Comments are for things that **cannot** be expressed in code.
-
-The code must be readable. It must clearly express its the developers intents. A good example is a comment to the paper that introduced a specific but complex algorithm.
-
-2. Redundancy Rule
-
-> Comments which restate code must be deleted.
-
-Any restatement of the code is unlikely to be maintained over time. If the comment is maintained, it just adds to the cost, if not maintained they at best waste your time at worst cause confusion and introduce bugs.
-
-3. Single Truth Rule
-
-> If the comment says what the code could say, then the code must change to make the comment redundant.
-
-or example, a comment explaining that the variable `x` represents the principal amount of a loan violates the single truth rule. The variable ought to be named `loanPrincipal`.
-
-[#Ottinger:2009]
-
-### Version Control ###
 
 #### Pre-Commit ####
 
@@ -182,6 +124,62 @@ In summary: Your project should almost always use the past tense.
 - Use the style of the project if working on OpenSource
 - Use **present tense**. I like the idea of describing the intended change of a commit. It fits my way of thinking since I started working with Git. I also think that using DVCS is the way to go.
 
+### Architecture ###
+
+- api > framework
+- dependency injection > dependency injection container
+
+### Style ###
+
+- utf8
+- unix line ending
+- delete trailing whitespace
+- agree on company style
+- enforce style
+	- with shared IDE/editor preferences
+	- with tools like [FindBugs](http://findbugs.sourceforge.net/), [PMD](http://pmd.sourceforge.net/), [JSLint](http://www.jslint.com/), [JSHint](http://www.jshint.com/) and the likes
+	- pre-commit hooks
+- Limit lines to 80 characters.
+	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
+	[#Geissendörfer:2011]
+
+### Logging ###
+
+- first class citizen
+- always use [iso 8601](http://en.wikipedia.org/wiki/ISO_8601) for date formatting
+
+- *Be professional*. Write in professional English.
+- *Be concise*.
+- *Be consistent*. Think about the message. Think about it hard. The message should never be changed in the future. It helps if you want to search for it in the future.
+
+[#Batchelder:2003]
+
+- no debugging logs in production
+- do not log locally
+- monitor your logs
+
+### Comments ###
+
+1. Primary Rule
+
+> Comments are for things that **cannot** be expressed in code.
+
+The code must be readable. It must clearly express its the developers intents. A good example is a comment to the paper that introduced a specific but complex algorithm.
+
+2. Redundancy Rule
+
+> Comments which restate code must be deleted.
+
+Any restatement of the code is unlikely to be maintained over time. If the comment is maintained, it just adds to the cost, if not maintained they at best waste your time at worst cause confusion and introduce bugs.
+
+3. Single Truth Rule
+
+> If the comment says what the code could say, then the code must change to make the comment redundant.
+
+or example, a comment explaining that the variable `x` represents the principal amount of a loan violates the single truth rule. The variable ought to be named `loanPrincipal`.
+
+[#Ottinger:2009]
+
 ### Code Review ###
 
 Each code that goes into production should be checked by a peer
@@ -282,12 +280,6 @@ Understand why the code is necessary (bug, user experience, refactoring). Then:
 
 [Mobile Device Management](http://en.wikipedia.org/wiki/Mobile_Device_Management) (MDM) software secures, monitors, manages and supports mobile devices deployed across mobile operators, service providers and enterprises. MDM functionality typically includes over-the-air distribution of applications, data and configuration settings for all types of mobile devices.
 
-## Infrastructure ##
-
-- fileserver
-- map/reduce cluster
-- easy way to spin up virtual machines
-
 ## Office ##
 
 ### Desks ###
@@ -296,7 +288,11 @@ Understand why the code is necessary (bug, user experience, refactoring). Then:
 - have power easy accessible
 - have easy accessible ethernet ports available on or near the desk
 
-### Hardware/Software ###
+### Infrastructure ###
+
+- fileserver
+- map/reduce cluster
+- easy way to spin up virtual machines
 
 Only use open source software. Exceptions are allowed when it comes to OS (OS X) and specialized software (Photoshop et al).
 
@@ -314,7 +310,7 @@ Only use open source software. Exceptions are allowed when it comes to OS (OS X)
 - documents aren't code and should live in their own source code repository
 - if they should be a direct dependency create a super project and add project as submodules
 - continuous integration
-- make status visible (e.g.. status monitoring, whiteboard). make it a game.
+- make status visible (e.g. status monitoring, whiteboard). make it a game.
 - automate everything
 - configuration should be under version control
 - configuration files should be textual with ability to comment (comments communicate intend, which is not possible with GUI control)
