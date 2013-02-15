@@ -10,6 +10,11 @@ See [Migrate SVN](#migrate-svn) for some more information, but run add `--global
 
 ## Usecases ##
 
+### Keeping repos in sync ###
+
+	git svn fetch
+	git rebase trunk
+
 ### Import SVN to local Git ###
 
 Create an empty directory and prepare the repository
@@ -66,28 +71,26 @@ I'm using a [Linode](http://www.linode.com/) slice to do the mirroring jobs via 
 
 ## Push existing Git repository to SVN ##
 
-You have an existing Girt repository on your machine and want to push the reposirory with its history to a SVN repository.
+	1. cd /path/to/git/localrepo
+	2. svn mkdir --parents protocol:///path/to/repo/PROJECT/trunk -m "Importing git repo"
+	3. git svn init protocol:///path/to/repo/PROJECT -s
+	4. git svn fetch
+	5. git rebase trunk
+	5.1.  git status
+	5.2.  git add (conflicted-files)
+	5.3.  git rebase --continue
+	5.4.  (repeat 5.1.)
+	6. git svn dcommit
 
-Create an appropriate directory in the subversion directory
+After `#3` you'll get a cryptic message like this:
 
-	mkdir my-project
-	svn add my-project
-	svn commit
+	Using higher level of URL: protocol:///path/to/repo/PROJECT => protocol:///path/to/repo
 
-Clone a git repository from the subversion one you just imported
+Just ignore that.
 
-	git svn clone http://some/svn/repo/my-project
+When you run `#5`, you might get conflicts. Resolve these by adding files with state `unmerged` and resuming rebase. Eventually, you'll be done; Then sync back to the svn-repo, using `dcommit`.
 
-Add your working git repository as a remote repository.
-
-	cd my-project
-	git remote add dev /path/to/working/git/repository
-
-Do the magic
-
-	git pull dev master
-	git svn rebase
-	git svn dcommit
+[source](http://stackoverflow.com/questions/661018/pushing-an-existing-git-repository-to-svn)
 
 ### Mirror SVN to Git repositories, With `git svn` ###
 
