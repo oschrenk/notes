@@ -1,6 +1,6 @@
 # Git + SVN #
 
-## Configuring for use with git svn ##
+## Configuration ##
 
 If you still have to work with some svn repositories you might consider setting up a global file for the svn users so that you don't have to do that for each project.
 
@@ -8,13 +8,9 @@ See [Migrate SVN](#migrate-svn) for some more information, but run add `--global
 
     $ git config --global svn.authorsfile ~/Desktop/users.txt
 
-## Basics ##
+## Usecases ##
 
-	git svn init http://code.yoursite.net/project/trunk/ localpath
-	cd localpath
-	git svn fetch --username
-
-## Move from svn to git ##
+### Import SVN to local Git ###
 
 Create an empty directory and prepare the repository
 
@@ -22,7 +18,7 @@ Create an empty directory and prepare the repository
     $ cd project_tmp
     $ git svn init http://code.yoursite.net/project/trunk/ --no-metadata
 
-The `--no-metadata` is for one-shot imports only. Do not use it when you plamn to fetch from the repository again.
+The `--no-metadata` is for one-shot imports only. Do not use it when you plan to fetch from the repository again.
 
 You get an answer like
 
@@ -68,12 +64,34 @@ Basically there are two methods:
 
 I'm using a [Linode](http://www.linode.com/) slice to do the mirroring jobs via crontab.
 
+## Push existing Git repository to SVN ##
 
-## Mirror SVN to GIT repositories ##
+You have an existing Girt repository on your machine and want to push the reposirory with its history to a SVN repository.
+
+Create an appropriate directory in the subversion directory
+
+	mkdir my-project
+	svn add my-project
+	svn commit
+
+Clone a git repository from the subversion one you just imported
+
+	git svn clone http://some/svn/repo/my-project
+
+Add your working git repository as a remote repository.
+
+	cd my-project
+	git remote add dev /path/to/working/git/repository
+
+Do the magic
+
+	git pull dev master
+	git svn rebase
+	git svn dcommit
+
+### Mirror SVN to Git repositories, With `git svn` ###
 
 I use Osmosis as an example. I only wanted the mirror the trunk from the [SVN Repository](http://svn.openstreetmap.org/applications/utils/osmosis/trunk/).
-
-### With git svn ###
 
 #### Local ####
 
@@ -146,7 +164,7 @@ Try it out for the first time. It should ask you to add `github.com` to the list
 	crontab -e
 	00 3 * * * /home/user/scripts/svn2github osmosis
 
-### with svn2git ###
+### Mirror SVN to Git repositories, With `svn2git` ###
 
 ! svn2git can only push to `master` when rebasing
 
@@ -212,35 +230,3 @@ Every morning at 5
 
 	crontab -e
 	00 5 * * * /home/user/scripts/svn2github lejos
-
-## Import Git into subversion ##
-
-Usecase:
-
-- You have an existing svn repository
-- You have a project in git
-- You want to copy/move the git repository into a subdirectory of the svn repository
-
-This is what you do
-
-1. Create an appropiate directory in the subversion directory
-
-	mkdir my-project
-	svn add my-project
-	svn commit
-
-2. Clone a git repository from the subversion one you just imported
-
-	git svn clone http://some/svn/repo/my-project
-
-3. Add your working git repository as a remote repository.
-
-	cd my-project
-	git remote add dev /path/to/working/git/repository
-
-4. Do the magic
-
-	git pull dev master
-	git svn rebase
-	git svn dcommit
-
