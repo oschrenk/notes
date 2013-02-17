@@ -1,6 +1,6 @@
 # Ruby #
 
-	brew install ruby
+Install rubies with [rbenv](rbenv.md)
 
 ## RubyGems ##
 
