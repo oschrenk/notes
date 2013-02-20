@@ -6,7 +6,6 @@
 | :---- | :---- | :---- |
 | [Ecl Emma](http://www.eclemma.org/) | Code coverage | [Update Site](http://update.eclemma.org/) |
 | [EGit](http://www.eclipse.org/egit/) | Git Team Provider | [Update Site](http://download.eclipse.org/egit/updates) |
-| [JAutoDoc](http://jautodoc.sourceforge.net/) | Automatically add Javadoc  | [Update Site](http://jautodoc.sourceforge.net/update/) |
 | [m2eclipse](http://eclipse.org/m2e/) | Apache Maven support in the Eclipse IDE | [Update Site](http://download.eclipse.org/technology/m2e/releases) |
 | [Maven Inspector](http://prapicault.github.com/MavenInspector/) | Provides an eclipse view called "Maven Execution" that presents for a given pom the phases and associated MOJOs | [Update Site](http://prapicault.github.com/MavenInspector/repository)
 | [PMD](http://pmd.sourceforge.net/integrations.html#eclipse) | Static Code analysis | [Update Site](http://pmd.sf.net/eclipse) |
