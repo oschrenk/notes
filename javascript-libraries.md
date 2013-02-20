@@ -68,6 +68,8 @@
 
 [nvd3.js](http://nvd3.org/) A reusable chart library for d3.JS.
 
+[reveal.js](http://lab.hakim.se/reveal-js/) HTML presentations
+
 ## Graphics ##
 
 [raphaël.js](https://github.com/DmitryBaranovskiy/raphael/)
