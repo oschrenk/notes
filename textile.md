@@ -27,7 +27,7 @@ Just add `<notextile>` blocks like so
 
 Especially useful for including header information.
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### Commands aren't replaced leaving `<command>. content` in output ###
 

@@ -133,7 +133,7 @@ After compiling you can immediately run the program on your NXT by running
 
 Without `-r` the application is just linked and uploaded, but not run.
 
-## FAQs/Problems ##
+## Troubleshooting ##
 
 ### Cannot load a comm driver
 

@@ -1,6 +1,6 @@
 # Cygwin #
 
-## FAQ/Errors ##
+## Troubleshooting ##
 
 ### Your group is currently `mkpasswd` ###
 

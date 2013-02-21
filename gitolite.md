@@ -75,7 +75,7 @@ By making use of gitolite's [admin defined commands](http://sitaramc.github.com/
 		RW+ = CREATOR
 		R	= @all
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### fatal: 'gitolite-admin' does not appear to be a git repository ###
 

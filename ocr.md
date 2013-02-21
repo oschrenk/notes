@@ -26,7 +26,7 @@ Convert to multiple pages
 
     convert multipage.tif single%d.tif
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### `sh: gs: command not found` ###
 

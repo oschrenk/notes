@@ -8,6 +8,7 @@
 - **Installation OSX**. `brew install maven`
 - **Create base directories** `mkdir -p src/{main,test}/{java,resources}`
 - **Read Maven project version** `mvn org.apache.maven.plugins:maven-help-plugin:2.1.1:evaluate -Dexpression=project.version`
+- **Directly install artifact from central repo** `mvn dependency:get -DrepoUrl="http://repo1.maven.org/maven2" -DgroupId=commons-io -DartifactId=commons-io -Dversion=1.4`
 
 ## Basics ##
 
@@ -157,7 +158,7 @@ The [Mavenize](#mavenize) way is the better (more complete/correct) choice but s
 
 - [Fluido Skin](http://maven.apache.org/skins/maven-fluido-skin/)
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### MacRoman encoding creeping into build process ###
 

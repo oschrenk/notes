@@ -388,7 +388,7 @@ Display the view with all components in its current state.
 
 # Appendix
 
-## FAQ/Problems
+## Troubleshooting
 
 ### java.lang.RuntimeException: Cannot find FacesContext
 

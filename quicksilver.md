@@ -38,7 +38,7 @@ created.
 the right of it, and you'll be able to choose a shortcut.
 10. Voila! A makeshift trigger that allows you to open QS.
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ## Define directories as content types ##
 

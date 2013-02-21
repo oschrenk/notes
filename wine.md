@@ -17,7 +17,9 @@ After that some dependencies have to be installed
 
 I go the game installed but it just won't start up properly. Only a black screen.
 
-## FAQ ##
+## Troubleshooting ##
+
+### `Runtime Error (at - 1:0)` ###
 
 When trying to install software I get
 
@@ -26,7 +28,5 @@ When trying to install software I get
 
 You need to install winetricks
 
-
 	brew install winetricks
-
 	winetricks mfc42

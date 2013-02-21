@@ -20,6 +20,7 @@
 - [libphonenumber](http://code.google.com/p/libphonenumber/) Google's common Java library for parsing, formatting, storing and validating international phone numbers. Optimized for running on smartphones. A direct port to Javascript is also available.
 - [grep4j](http://code.google.com/p/grep4j/) Grep4j is a simple API made to centralise and facilitate the search of expressions within all the configured files, remote or local, in Unix environments.
 - [jsoup](http://jsoup.org/) Working with real-world HTML. It provides a very convenient API for extracting and manipulating data, using the best of DOM, CSS, and jquery-like methods.
+- [txtmark](https://github.com/rjeschke/txtmark) Yet another markdown processor for the JVM
 
 **Natural Language**
 
@@ -36,3 +37,11 @@
 - [Quartz Scheduler](http://www.quartz-scheduler.org/) Quartz is a full-featured, open source job scheduling service.
 - [Solr](http://lucene.apache.org/) Enterprise search server, with XML/HTTP and JSON/Python/Ruby APIs, hit highlighting, faceted search, caching, replication, distributed search, database integration, web admin and search interfaces
 - [Lucene](http://lucene.apache.org/) Java-based indexing and search implementation, as well as spellchecking, hit highlighting and advanced analysis/tokenization capabilities.
+
+**Daemons**
+
+Daemonize Java applications
+
+- [commons daemon](http://commons.apache.org/daemon/)
+- [YAJSW](http://yajsw.sourceforge.net/)
+- [Java Service Wrapper](http://wrapper.tanukisoftware.com/doc/german/download.jsp)

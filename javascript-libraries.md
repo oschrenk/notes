@@ -44,6 +44,10 @@
 
 > Keymaster is a simple micro-library for defining and dispatching keyboard shortcuts.
 
+[Fine Uploader](http://fineuploader.com/)
+
+> User-friendly file-uploading experience over the web.
+
 ## Visualization ##
 
 [arbor.js]( http://arborjs.org)
@@ -63,6 +67,8 @@
 > network graphs representing the links between your Node.js code and its dependencies.
 
 [nvd3.js](http://nvd3.org/) A reusable chart library for d3.JS.
+
+[reveal.js](http://lab.hakim.se/reveal-js/) HTML presentations
 
 ## Graphics ##
 

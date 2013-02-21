@@ -171,7 +171,7 @@ The load-balancer then forwards everything to mysuperwebapp2. In the meantime up
 
 You can now safely update mysuperwebapp2.
 
-## FAQ/Problems ##
+## Troubleshooting ##
 
 ### Generating war results in `[Errno 63] File name too long` ###
 
