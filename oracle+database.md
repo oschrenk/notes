@@ -36,7 +36,7 @@ Create the view
 1. point your browser `https://<IP>:1158/em` (IP being the IP adress of the machone Oracle runs on, `1158` the default port of Oracle Enterprise Managment)
 2. login (ask your adminstrator for the password) with role sysdba
 3. Change to `Performance` tab
-4. Under `zusätzliche Überwachungs-Links`, click on `SQL-Überwachung`
+4. Under `Additional Monitoring Links` (`zusätzliche Überwachungs-Links`), click on `SQL-Monitoring` (`SQL-Überwachung`)
 5. Click on the particular statement, open the context menu and `close session`
 
 ## Helpful SQL Statements ##
