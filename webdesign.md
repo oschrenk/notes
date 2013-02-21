@@ -20,7 +20,7 @@
 ### Forms ###
 
 - always validate client and server side
-- clients validate not only for users sake but also to reduce work on the ser ver
+- clients validate not only for users sake but also to reduce work on the server
 
 ### User Commits & Rollbacks ###
 
