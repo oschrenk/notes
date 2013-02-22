@@ -81,6 +81,14 @@ A new lightweight refresh mechanism was introduced. Files discovered to be out-o
 
 ### Troubleshooting ###
 
+### Hide toolbar ###
+
+I couldn't hide the toolbar. No context menu would open when right clicking the toolbar itself and no option to hide/show the toolbar was given in `Window` menubar section.
+
+I found a workaround [here](http://blog.redfin.com/devblog/2012/07/hide_eclipse_juno_toolbar.html):
+
+Open `Help > Welcome`. This brings up the welcome screen, which lets you hit the second step: `Window > Show Toolbar`. The `show` command actually hides the toolbar.
+
 #### Delete obsolete workspaces under OS X ####
 
 The used workspaces are stored in
