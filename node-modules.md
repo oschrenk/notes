@@ -39,6 +39,10 @@
 
 - [Mocha](http://visionmedia.github.com/mocha/) Test framework running on node
 
+## Data #
+
+- [Nools](http://c2fo.github.com/nools/) Nools is a rete based rules engine written entirely in javascript.
+
 ## Fun with node.js ##
 
 - [node-serialport](https://github.com/voodootikigod/node-serialport) talk to serial devices
