@@ -28,7 +28,7 @@
 
 > QUnit is a powerful, easy-to-use, JavaScript test suite. It's used by the jQuery project to test its code and plugins but is capable of testing any generic JavaScript code (and even capable of testing JavaScript code on the server-side).
 
-## Algorithms & Datastructures
+## Algorithms & Datastructures ##
 
 [data.js](http://substance.io/#michael/data-js)
 
