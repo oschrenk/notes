@@ -28,6 +28,12 @@
 
 > QUnit is a powerful, easy-to-use, JavaScript test suite. It's used by the jQuery project to test its code and plugins but is capable of testing any generic JavaScript code (and even capable of testing JavaScript code on the server-side).
 
+## Data ##
+
+[lunjr.js](https://github.com/olivernn/lunr.js)
+
+> Lunr.js is a small, full-text search library for use in the browser. It indexes JSON documents and provides a simple search interface for retrieving documents that best match text queries.
+
 ## Algorithms & Datastructures ##
 
 [data.js](http://substance.io/#michael/data-js)
