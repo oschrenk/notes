@@ -132,3 +132,21 @@ You can get the version of homebrew via
 To get the revision just
 
 	brew log -1 --format="%H"
+
+### Error: Failed to import: composer-requirement ###
+
+`brew doctor` gives me
+
+	Error: Failed to import: composer-requirement
+	Error: Failed to import: homebrew-php-requirement
+	Error: Failed to import: phar-building-requirement
+	Error: Failed to import: phar-requirement
+	Error: Failed to import: php-meta-requirement
+	Error: Failed to import: xhgui53-requirement
+	Error: Failed to import: xhgui54-requirement
+	Error: Failed to import: xhprof53-requirement
+	Error: Failed to import: xhprof54-requirement
+
+There was a problem with requirements in the `homebrew-php` tap.The solution is to
+
+	find /usr/local/Library/Formula -type l -name "*requirement.rb" -delete
