@@ -34,6 +34,10 @@
 
 > Lunr.js is a small, full-text search library for use in the browser. It indexes JSON documents and provides a simple search interface for retrieving documents that best match text queries.
 
+[js-xlsx](https://github.com/Niggler/js-xlsx)
+
+> Currently a parser for XLSX files. Cleanroom implementation from the ISO 29500 Office Open XML specifications.
+
 ## Algorithms & Datastructures ##
 
 [data.js](http://substance.io/#michael/data-js)
