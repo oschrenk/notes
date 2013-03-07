@@ -53,9 +53,14 @@ Eclipse doesn't seem to offer a GUI variant of changing adding the nature of a p
 
 To get to "New and Noteworthy" section open the [Download Overview](http://download.eclipse.org/eclipse/downloads/index.html), click on the Milestone (under Stable Build), and click on the "New and Noteworthy" link (that looks like a header)
 
-### Notable Changes in 3.7 ###
+### Notable Changes in 4.3 ###
 
-A new lightweight refresh mechanism was introduced. Files discovered to be out-of-sync by the workspace, for example while accessing the file content by an editor, are automatically asynchronously refreshed. In Eclipse 3.7 and 3.8 you have to enable this yourself via Preferences > General > Workspace and select Refresh on access. In Eclipse SDK 4.2 the mechanism is enabled by default.
+- The new Convert `if-else` to `switch` quick assist (`Ctrl+1`) allows you to convert an `if-else` statement to an equivalent `switch` statement.
+- The compiler can now detect unused type parameters. The Unused type parameter diagnostic is set to Ignore by default and can be enabled on the `Java > Compiler > Errors/Warnings preference page.
+- Performance enhancements (M4)
+- Quick assist to combine Strings
+- Option to inherit null annotations
+- Null annotations analysis for fields
 
 ### Notable Changes in 3.8 ###
 
@@ -70,14 +75,9 @@ A new lightweight refresh mechanism was introduced. Files discovered to be out-o
 - Enhanced diagnostics for detection of incomplete switch statements
 - Toggle Full Screen command is now supported on MacOS X Lion
 
-### Notable Changes in 4.3 ###
+### Notable Changes in 3.7 ###
 
-- The new Convert `if-else` to `switch` quick assist (`Ctrl+1`) allows you to convert an `if-else` statement to an equivalent `switch` statement.
-- The compiler can now detect unused type parameters. The Unused type parameter diagnostic is set to Ignore by default and can be enabled on the `Java > Compiler > Errors/Warnings preference page.
-- Performance enhancements (M4)
-- Quick assist to combine Strings
-- Option to inherit null annotations
-- Null annotations analysis for fields
+A new lightweight refresh mechanism was introduced. Files discovered to be out-of-sync by the workspace, for example while accessing the file content by an editor, are automatically asynchronously refreshed. In Eclipse 3.7 and 3.8 you have to enable this yourself via Preferences > General > Workspace and select Refresh on access. In Eclipse SDK 4.2 the mechanism is enabled by default.
 
 ### Troubleshooting ###
 
