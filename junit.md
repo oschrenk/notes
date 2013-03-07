@@ -3,6 +3,7 @@
 - [nosql-unit](https://github.com/lordofthejars/nosql-unit) NoSQL Unit is a JUnit extension that helps you write NoSQL unit tests.
 - [DbUnit](http://www.dbunit.org/). Open Source. Free. A JUnit extension targeted at database-driven projects that, among other things, puts your database into a known state between test runs
 - [XmlUnit](http://xmlunit.sourceforge.net/) Open Source. Free. A Junit extensions that allows assertions about differences between two pieces of XML.
+- [System Rules](http://stefanbirkner.github.com/system-rules/) Open Source. Free. Collection of JUnit rules for testing code which uses `java.lang.System`.
 
 ## Test Suites
 
