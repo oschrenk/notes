@@ -27,7 +27,7 @@
 | `\d` 			| A digit (same as [0-9])
 | `\D` 			| A non-digit (same as [^0-9])
 | `\w` 			| A word character (same as [_a-zA-Z0-9])
-| `\W` 			|  A non-word character (same as [^_a-zA-Z0-9])
+| `\W` 			| A non-word character (same as [^_a-zA-Z0-9])
 | `\s` 			| A whitespace character
 | `\S` 			| A non-whitespace character
 | `\b` 			| A word boundary
