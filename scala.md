@@ -37,6 +37,17 @@ The send operation is denoted by `!` and is executed asynchronously. An actor ha
 		case Msg2 => ...
 	}
 
+### Case class ###
+
+1. You can do pattern matching on it,
+2. You can construct instances of these classes without using the new keyword. It adds a factory method with the name of the class. This means you can write say, `Var("x")` to construct a Var object instead of the slightly longer new `Var("x")`
+3. All constructor arguments are accessible from outside using automatically generated accessor functions. All arguments in the parameter list of a case class implicitly get a val prefix, so they are maintained as fields.
+4. The `toString` method is automatically redefined to print the name of the case class and all its arguments,
+5. The `equals` method is automatically redefined to compare two instances of the same case class structurally rather than by identity.
+6. The `hashCode` method is automatically redefined to use the hashCodes of constructor arguments.
+
+Most of the time you declare a class as a case class because of point 1, i.e. to be able to do pattern matching on its instances. But of course you can also do it because of one of the other points.
+
 ## Installation ##
 
 	brew install scala
