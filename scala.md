@@ -5,7 +5,9 @@
 - it is object oriented: every value is an object
 - compiles to bytecode for the JVM and CLR
 
-Comparison to Java
+## Comparison to Java ##
+
+### Syntax ###
 
 	// Java/C#
 	public static void main(String[] args) //Body
@@ -17,6 +19,23 @@ Comparison to Java
 - Scala has an `object` construct with which we can declare singletons. In other word our main method is an instance method on a singleton object that is automatically instantiated for us.
 - no return type. In fact there is a return type, Unit which is similar to void, but it’s inferred by the compiler. Should we want to we can explicitly specify the return type by putting a colon and the type after the parameters
 - default access level is public.
+
+### Concurrency ###
+
+> Java's threading model is built around shared memory and locking, a model that is often difficult to reason about
+
+Scala p. 53
+
+> An arguably safer alternative is message pasing architecture, such as the "actors" approach. [...] Actors are concurrency abstractions that can be implemented on top of threads. They communicate by sending messages to each other.
+
+	recipient ! msg
+
+The send operation is denoted by `!` and is executed asynchronously. An actor handles messages that have arrived in its mailbox via a `receive` block.
+
+	receive {
+		case Msg1 => ...
+		case Msg2 => ...
+	}
 
 ## Installation ##
 
