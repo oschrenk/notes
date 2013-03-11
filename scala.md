@@ -86,7 +86,7 @@ Then
 
 Finally in Eclipse use the Import Wizard to import Existing Projects into Workspace
 
-## TDD with JUnit ##
+### TDD with JUnit ###
 
 Add the following dependency to your `build.sbt`
 
@@ -122,7 +122,7 @@ to
 
 ### Unable to find a scala library. Please add the scala container or a scala library jar to the build path. ###
 
-After creating a new Scala project using the Scala IDE. the project complains
+After creating a new Scala project using the Scala IDE the project complains
 
 	Unable to find a scala library. Please add the scala container or a scala library jar to the build path.
 
