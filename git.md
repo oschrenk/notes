@@ -32,6 +32,13 @@ Now you can add global ignores by calling
 
     $ echo .DS_Store >> ~/.gitignore
 
+## Changelog ##
+
+### 1.8.2 ###
+
+- Streamlined behavior for add -u and -A. `-u`/`-A` flags will now operate on the entire source tree to make it consistent with `git commit -a` and others. This is a backwards incompatible change, though hopefully of light impact.
+- Useful `**/` pattern to use in `.gitignore`. `**/` pattern matches zero or more levels of a subdirectory.
+
 ## Basics ##
 
 All Git commands begin with `git` and is followed by a sub-command (and then their respective parameter), e.g. `git add`
