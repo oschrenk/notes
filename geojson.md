@@ -4,6 +4,8 @@ GeoJSON is a format for encoding geographic data structures. It may represent a 
 
 [Specification 1.0](http://www.geojson.org/geojson-spec.html)
 
+The order of elements must follow x, y, z order (or longitude, latitude, altitude for coordinates in a geographic coordinate reference system)
+
 ## Example ##
 
 A street with some metadata
