@@ -1,13 +1,20 @@
 # Scala #
 
+	brew install scala
+
+- [sbt](http://www.scala-sbt.org/) build tool for Scala and Java projects
+- [Scala IDE](http://scala-ide.org/). Eclipse Plugin ([Update Site](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) for Eclipse 4.2 and Scala 2.10)
+
+## Language ##
+
 - statically typed
 - it is functional: functions are values
 - it is object oriented: every value is an object
 - compiles to bytecode for the JVM and CLR
 
-## Comparison to Java ##
+### Comparison to Java ###
 
-### Syntax ###
+#### Syntax ####
 
 	// Java/C#
 	public static void main(String[] args) //Body
@@ -20,7 +27,7 @@
 - no return type. In fact there is a return type, Unit which is similar to void, but it’s inferred by the compiler. Should we want to we can explicitly specify the return type by putting a colon and the type after the parameters
 - default access level is public.
 
-### Concurrency ###
+#### Concurrency ####
 
 > Java's threading model is built around shared memory and locking, a model that is often difficult to reason about
 
@@ -37,13 +44,13 @@ The send operation is denoted by `!` and is executed asynchronously. An actor ha
 		case Msg2 => ...
 	}
 
-### Companion Object ###
+#### Companion Object ####
 
 A companion object is an object with the same name as a class or trait and is defined in the same source file as the associated file or trait.
 
 A companion object differs from other objects as it has access rights to the class/trait that other objects do not. In particular it can access methods and fields that are private in the class/trait.
 
-### Case class ###
+#### Case class ####
 
 1. You can do pattern matching on it,
 2. You can construct instances of these classes without using the new keyword. It adds a factory method with the name of the class. This means you can write say, `Var("x")` to construct a Var object instead of the slightly longer new `Var("x")`
@@ -53,108 +60,6 @@ A companion object differs from other objects as it has access rights to the cla
 6. The `hashCode` method is automatically redefined to use the hashCodes of constructor arguments.
 
 Most of the time you declare a class as a case class because of point 1, i.e. to be able to do pattern matching on its instances. But of course you can also do it because of one of the other points.
-
-## Akka ##
-
-	sealed trait CoffeeRequest
-	case object CappuccinoRequest extends CoffeeRequest
-	case object EspressoRequest extends CoffeeRequest
-
-	import akka.actor.Actor
-	class Barista extends Actor {
-	  def receive = {
-	    case CappuccinoRequest => println("I have to prepare a cappuccino!")
-	    case EspressoRequest => println("Let's prepare an espresso.")
-	  }
-	}
-
-First, we define the types of messages sent between actors. Typically, case classes are used to pass along any parameters. If all the actors needs is an unparameterized message, the message is typically represented as a case object.
-
-In any case, it is crucial that your message is immutable.
-
-### Processing messages ###
-
-So what’s the meaning of this `receive` method? The return type, `PartialFunction[Any, Unit]` may seem strange to you in more than one respect.
-
-The partial function is responsible for processing your message. Whenever another part of your software, actor or not, sends your actor a message, Alla will _eventually_ let it process this message by calling the partial function returned by your actors's `receive` method, passing it the message as an argument.
-
-### Side effecting ###
-
-When processing a message, an actor can do whatever you want it to, aprt from returning a value.
-
-As the return type `Unit` suggests, your partial function is side-effecting. This may surprise, but makes for a concurrent programming model. Actors are where your state is located. As each message is received it is processed in isolation in the actor, so ther is no need to reasin about synchronization or locks.
-
-### Untyped ###
-
-The partial function is not only side-effecting, it's also untyped of type `Any`. This is a design choice in Akka and is usually not a problem with the messages themselves strongly typed.
-
-If you need the strong type system, you may want to look at Akka's experimental [Type Channel](http://doc.akka.io/docs/akka/snapshot/scala/typed-channels.html) feature.
-
-### Asynchronous and non-blocking ###
-
-Sending and processing a message is done in an asynchronous and non-blocking fashion. The sender can immediately continue with his work, even if he waits for an answer.
-
-A message is delivered to the actors _mailbox_, basically a queue. The _dispatcher_ will notice the arrival of a new message in an actor's mailbox. If the actor is not already processing a message, it is now allocated one of the threads from the execution context.
-
-The actor blocks the thread for as long as it takes to process the message. Lengthy operations therefore degrade overall performance, as all the other actors message processing have to be scheduled on one of the remaining threads.
-
-A core principle is therefore to spend as little time in your `Receive` function as possible and to avoid blocking code.
-
-## Installation ##
-
-	brew install scala
-
-### Eclipse IDE ##
-
-- [Update Site](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) for Eclipse 4.2 and Scala 2.10
-
-## Scala Build Tool ##
-
-	brew install sbt
-
-Create Maven style project layout
-
-	mkdir -p src/{main,test}/scala/
-	touch build.sbt
-
-A good starting point for a `build.sbt` with JUnit
-
-	name := "FizzBuzz"
-
-	version := "1.0"
-
-	scalaVersion := "2.9.2"
-
-	// JUnit itself is pulled in as a transitive dependency
-	libraryDependencies += "com.novocode" % "junit-interface" % "0.10-M3" % "test"
-
-The first start of sbt my take a while as plugins/dependencies are being downloaded.
-
-### Create Eclipse project definitions ###
-
-Use [sbteclipse](https://github.com/typesafehub/sbteclipse) to create Eclipseproject definitions.
-
-- sbteclipse requires sbt `0.11.3-2` or `0.12`
-
-Add `sbteclipse` to your plugin definition file. You can use either the global one at `~/.sbt/plugins/plugins.sbt` or the project-specific one at `$PROJECT_DIR/project/plugins.sbt`:
-
-	addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.1.2")
-
-I added it to my global config file.
-
-Then
-
-	sbt
-	> eclipse
-
-Finally in Eclipse use the Import Wizard to import Existing Projects into Workspace
-
-### TDD with JUnit ###
-
-Add the following dependency to your `build.sbt`
-
-	// JUnit itself is pulled in as a transitive dependency
-	libraryDependencies += "com.novocode" % "junit-interface" % "0.10-M3" % "test"<
 
 ## Troubleshooting ##
 
