@@ -61,6 +61,8 @@ To get to "New and Noteworthy" section open the [Download Overview](http://downl
 - Quick assist to combine Strings
 - Option to inherit null annotations
 - Null annotations analysis for fields
+- The File Search page now allows to search for words via a new option
+- The Search dialog can now be configured to open on the last used page, instead of computing the best matching page based on the current selection
 
 ### Notable Changes in 3.8 ###
 
