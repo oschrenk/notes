@@ -56,7 +56,7 @@ To get to "New and Noteworthy" section open the [Download Overview](http://downl
 ### Notable Changes in 4.3 ###
 
 - The new Convert `if-else` to `switch` quick assist (`Ctrl+1`) allows you to convert an `if-else` statement to an equivalent `switch` statement.
-- The compiler can now detect unused type parameters. The Unused type parameter diagnostic is set to Ignore by default and can be enabled on the `Java > Compiler > Errors/Warnings preference page.
+- The compiler can now detect unused type parameters. The Unused type parameter diagnostic is set to Ignore by default and can be enabled on the `Java > Compiler > Errors/Warnings` preference page.
 - Performance enhancements (M4)
 - Quick assist to combine Strings
 - Option to inherit null annotations
