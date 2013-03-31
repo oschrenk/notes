@@ -95,6 +95,35 @@ Relationships
 - `≈` - `&#x2248;` - `&#8776;` - Almost Equal To
 - `≉` - `&#x2249;` - `&#8777;` - Not Almost Equal To
 
+**Greek alphabet**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `α` - `&#xCEB1;` - `&#945;` - Greek Small Letter Alpha
+- `β` - `&#xCEB2;` - `&#946;` - Greek Small Letter Beta
+- `γ` - `&#xCEB3;` - `&#947;` - Greek Small Letter Gamma
+- `δ` - `&#xCEB4;` - `&#948;` - Greek Small Letter Delta
+- `ε` - `&#xCEB5;` - `&#949;` - Greek Small Letter Epsilon
+- `ζ` - `&#xCEB6;` - `&#950;` - Greek Small Letter Zeta
+- `η` - `&#xCEB7;` - `&#951;` - Greek Small Letter Eta
+- `θ` - `&#xCEB8;` - `&#952;` - Greek Small Letter Theta
+- `ι` - `&#xCEB9;` - `&#953;` - Greek Small Letter Iota
+- `κ` - `&#xCEBA;` - `&#954;` - Greek Small Letter Kappa
+- `λ` - `&#xCEBB;` - `&#955;` - Greek Small Letter Lambda
+- `μ` - `&#xCEBC;` - `&#956;` - Greek Small Letter Mu
+- `ν` - `&#xCEBD;` - `&#957;` - Greek Small Letter Nu
+- `ξ` - `&#xCEBE;` - `&#958;` - Greek Small Letter Xi
+- `ο` - `&#xCEBF;` - `&#959;` - Greek Small Letter Omicron
+- `π` - `&#xCF80;` - `&#960;` - Greek Small Letter Pi
+- `ρ` - `&#xCF81;` - `&#961;` - Greek Small Letter Rho
+- `ς` - `&#xCF82;` - `&#962;` - Greek Small Letter Final Sigma
+- `σ` - `&#xCF83;` - `&#963;` - Greek Small Letter Sigma
+- `τ` - `&#xCF84;` - `&#964;` - Greek Small Letter Tau
+- `υ` - `&#xCF85;` - `&#965;` - Greek Small Letter Upsilon
+- `φ` - `&#xCF86;` - `&#966;` - Greek Small Letter Phi
+- `χ` - `&#xCF87;` - `&#967;` - Greek Small Letter Chi
+- `ψ` - `&#xCF88;` - `&#968;` - Greek Small Letter Psi
+- `ω` - `&#xCF89;` - `&#969;` - Greek Small Letter Omega
+
 **Science Symbols**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
