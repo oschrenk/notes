@@ -20,6 +20,20 @@ A good starting point for a `build.sbt` with JUnit
 
 The first start of sbt my take a while as plugins/dependencies are being downloaded.
 
+## Running the Scala Interpreter ##
+
+Start the `sbt` command prompt
+
+	sbt
+
+Start the Scala interpreter inside `sbt` (it will download some dependencies)
+
+	> console
+	...
+	scala >
+
+In order to quit the interpreter and get back to `sbt`, type `ctrl-d`.
+
 ## Create Eclipse project definitions ##
 
 Use [sbteclipse](https://github.com/typesafehub/sbteclipse) to create Eclipseproject definitions.
