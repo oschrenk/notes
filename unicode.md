@@ -82,9 +82,18 @@
 - `ℝ` - `&#x211D;` - `&#8477;` - Real Numbers Symbol - Double-struck Capital R
 - `∅` - `&#x2205;` - `&#8709;` - Empty Set
 
+Relationships
+
 - `≪` - `&#x226A;` - `&#8810;` - Much Less-than
 - `≫` - `&#x226B;` - `&#8811;` - Much Greater-than
-
+- `≡` - `&#x2261;` - `&#8801;` - Identical To
+- `≃` - `&#x2243;` - `&#8771;` - Asymptotically Equal To
+- `≄` - `&#x2244;` - `&#8772;` - Not Asymptotically Equal To
+- `≅` - `&#x2245;` - `&#8773;` - Approximately Equal To
+- `≆` - `&#x2246;` - `&#8774;` - Approximately But Not Actually Equal To
+- `≇` - `&#x2247;` - `&#8775;` - Neither Approximately Nor Actually Equal To
+- `≈` - `&#x2248;` - `&#8776;` - Almost Equal To
+- `≉` - `&#x2249;` - `&#8777;` - Not Almost Equal To
 
 **Science Symbols**
 
