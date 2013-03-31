@@ -82,6 +82,10 @@
 - `ℝ` - `&#x211D;` - `&#8477;` - Real Numbers Symbol - Double-struck Capital R
 - `∅` - `&#x2205;` - `&#8709;` - Empty Set
 
+- `≪` - `&#x226A;` - `&#8810;` - Much Less-than
+- `≫` - `&#x226B;` - `&#8811;` - Much Greater-than
+
+
 **Science Symbols**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
