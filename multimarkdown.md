@@ -1,5 +1,11 @@
 # Multimarkdown #
 
+## Footnotes ##
+
+	Here is some text containing a footnote.[^somesamplefootnote]
+	...
+	[^somesamplefootnote]: Here is the text of the footnote itself.
+
 ## Latex, write letters with markdown ##
 
 	latex input:        mmd-letterhead-header
