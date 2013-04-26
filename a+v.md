@@ -24,7 +24,7 @@ Time format:
 
 ### Extracting audio track ###
 
-#### From AVI Container ####
+#### mp3 from avi ####
 
 Install via
 
@@ -34,11 +34,10 @@ Usage:
 
 	ffmpeg -i file.avi -f mp3 file.mp3
 
-#### From Matroska Video (MKV) files ####
+#### mp3 from mkv files ####
 
 Install via
 
-	sudo port install mkvtoolnix
 	brew install mkvtoolnix
 
 Which took ages (2+ hours, mainly because of Boost).
@@ -61,6 +60,16 @@ Extract tracks with `mkvextract`
 Or just the audio track
 
 	mkvextract tracks MovieFile.mkv 2:theaudio.mp3
+
+#### m4a from mp4 ####
+
+Install via
+
+	brew install ffmpeg
+
+Usage:
+
+	ffmpeg -i input.mp4 -vn -c:a copy output.m4a
 
 ## Video ##
 
