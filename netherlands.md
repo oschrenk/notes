@@ -4,6 +4,39 @@ The University of Amsterdam has a very comphrehensive guide for moving to and li
 
 - [Official Dutch Immigration Welcome page](http://www.newtoholland.nl/NewToHolland/app/en/home?init=true )
 
+## Before you leave ##
+
+- Obtain authenticated originals of all birth certificates, marriages - certificates and other legal documents
+- Apply or renew essential travel documents such as passports and driving - licenses (when applicable)
+- Arrange needed legal requirements such as visas, working permits and/or - residence permits
+- Investigate local health insurance possibilities and regulations
+- Have official translations of important documents made such as birth - certificates, diplomas, etc.
+- Obtain health certificates and any needed vaccinations
+- Arrange travel documents (plane tickets, train tickets, etc.)
+- Arrange pet vaccinations (if required) and transportation
+- Arrange temporary accommodation in your new city
+- Inform municipal and/or tax officials of your departure (if required)
+- Investigate schooling/childcare possibilities
+- Rent, sell or let go of your current home
+- Organise the shipping and/or transfer of all possessions (whether by moving or relocation company)
+
+## Once you arrive ##
+
+- Register with your local embassy or consulate
+- Register with the local municipality *
+- Collect and/or arrange residence permit and/or work permit
+- Arrange a local bank account
+- Arrange local health insurance*
+- Obtain a driving licence or exchange your current licence (if required)
+- Register with a local doctor and dentist
+- Find short-term/long-term accommodation
+- Get connected (arrange telephone, internet, utilities, etc.)
+
+## Settling in ##
+
+- Learn the local language
+- Join a group, club or association to meet others
+
 ## Moving to Amsterdam #
 
 ### Register with your municipality ###
@@ -47,3 +80,31 @@ More information can be found [here](http://www.government.nl/issues/health-issu
 ### Going to the doctor ###
 
 The doctor (huisarts) is usually the first port of call if you have health problems. If necessary, the doctor can then refer you to a specialist. When suffering from illnesses such as flu, a twisted ankle, abdominal pain, psychological problems, chronic illness or gynecological problems, contact the doctor first.
+
+### Housing ###
+
+http://www.expatica.com/nl/housing/renting/Fair-rent-for-all-in-the-Netherlands_15396.html
+
+### Health Care System ###
+
+### Learn the language ###
+
+#### Municipality courses ####
+
+http://translate.google.com/translate?sl=auto&tl=en&js=n&prev=_t&hl=en&ie=UTF-8&eotf=1&u=http%3A%2F%2Fwww.amsterdam.nl%2Fimmigratie%2Finburgering%2Finburgeren-0%2Finburgeren%2F&act=url
+
+#### Private ####
+
+Buch Nederlands in Gang
+
+http://dutchandsuch.nl/dutch-courses/elementary/  320 + 40
+
+
+http://koentact.nl/dutch-language-courses/dutch-group-courses/dutch-evening-group-course 375 + 40
+
+### Finances ###
+
+http://www.reddit.com/r/Netherlands/comments/19mrhy/reading_the_salarisstroken/
+
+
+### Customs ###
