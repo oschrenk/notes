@@ -28,6 +28,10 @@
 
 - [cube](https://github.com/square/cube) A system for time series visualization
 
+## Command Line ##
+
+- [omelette](https://github.com/f/omelette) simple, template based autocompletion tool for Node projects
+
 ## IO ##
 
 - [colors.js](https://github.com/Marak/colors.js) Get color and style in your node.js console
