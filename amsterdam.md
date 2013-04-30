@@ -1,5 +1,22 @@
 # Amsterdam #
 
+## Housing ##
+
+Opinions on neighborhoods from various reddit users
+
+> There is really no reason to live in the center, there are many nice places outside that are still within Amsterdam and where you'll still be able to cycle to centre. I would say **Osdorp is a good option.**
+**IJburg is also fine, but may be a bit far for cycling** unless you're going somewhere in the east.
+Amstelveen may also be a good option. In all these cases, public transport would be mostly tram/metro and those are excellent.
+The one place **not to go would be South-East (Zuid-Oost)**, which is considered unsafe (though I do know people living there who deny this; also unsafe here is nothing compared to unsafe in for example the US). I'm not too fond of North (Noord) either, but I think opinions are divided here.
+
+---
+
+> If these places are not affordable either or you can't find something suitable (the private rent market is quite small, especially for the lower price range) you could go to **Diemen (metro+train connections), Hoofddorp (bus+train connections), Hilversum or Almere (train)**. All of them are very well-connected to Amsterdam. In Almere you can get very nice housing at low prices, it also a substantial city center and it is very safe for a child to grow up (no through traffic in residential neighbourhoods), although the city is considered to be pretty boring.
+
+---
+
+> I would suggest **looking into Noord, Osdorp, Slotervaart, Bijlmer (in that order)**. They are suburbs, maximum 30-40 min away from the city centre and your best bet for affordable housing.
+
 ## Public ##
 
 ### CityPass ###
