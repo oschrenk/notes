@@ -1,6 +1,6 @@
 # Netherlands #
 
-The University of Amsterdam has a very comphrehensive guide for moving to and living in the [Netherlands](http://www.uva.nl/en/about-the-uva/working-at-the-uva/practical-information)
+The University of Amsterdam has a very comprehensive guide for moving to and living in the [Netherlands](http://www.uva.nl/en/about-the-uva/working-at-the-uva/practical-information)
 
 - [Official Dutch Immigration Welcome page](http://www.newtoholland.nl/NewToHolland/app/en/home?init=true )
 
@@ -18,7 +18,7 @@ The University of Amsterdam has a very comphrehensive guide for moving to and li
 - Inform municipal and/or tax officials of your departure (if required)
 - Investigate schooling/childcare possibilities
 - Rent, sell or let go of your current home
-- Organise the shipping and/or transfer of all possessions (whether by moving or relocation company)
+- Organize the shipping and/or transfer of all possessions (whether by moving or relocation company)
 
 ## Once you arrive ##
 
@@ -27,7 +27,7 @@ The University of Amsterdam has a very comphrehensive guide for moving to and li
 - Collect and/or arrange residence permit and/or work permit
 - Arrange a local bank account
 - Arrange local health insurance*
-- Obtain a driving licence or exchange your current licence (if required)
+- Obtain a driving license or exchange your current license (if required)
 - Register with a local doctor and dentist
 - Find short-term/long-term accommodation
 - Get connected (arrange telephone, internet, utilities, etc.)
