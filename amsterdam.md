@@ -1,21 +1,32 @@
 # Amsterdam #
 
-## Housing ##
+## Transportation ##
 
-Opinions on neighborhoods from various reddit users
+[source](http://www.amsterdamtips.com/tips/transport-tickets.php)
 
-> There is really no reason to live in the center, there are many nice places outside that are still within Amsterdam and where you'll still be able to cycle to centre. I would say **Osdorp is a good option.**
-**IJburg is also fine, but may be a bit far for cycling** unless you're going somewhere in the east.
-Amstelveen may also be a good option. In all these cases, public transport would be mostly tram/metro and those are excellent.
-The one place **not to go would be South-East (Zuid-Oost)**, which is considered unsafe (though I do know people living there who deny this; also unsafe here is nothing compared to unsafe in for example the US). I'm not too fond of North (Noord) either, but I think opinions are divided here.
+ The OV-chip card (OV-chipkaart) smart card system is in use for public transport in the Netherlands. This means you need to check-in and check-out when boarding and alighting using the card readers. This applies to trams, the metro and buses in Amsterdam.
 
----
+ There a various types of tickets available:
 
-> If these places are not affordable either or you can't find something suitable (the private rent market is quite small, especially for the lower price range) you could go to **Diemen (metro+train connections), Hoofddorp (bus+train connections), Hilversum or Almere (train)**. All of them are very well-connected to Amsterdam. In Almere you can get very nice housing at low prices, it also a substantial city center and it is very safe for a child to grow up (no through traffic in residential neighbourhoods), although the city is considered to be pretty boring.
+1. **Single-Journey**. A "disposable" OV-chip card and is valid for 1 hour's travel on GVB public transport including any transfers. It costs €2.80 (2013 price).
+2. **"Anonymous" OV-chip card**. Cards costs €7.50. You can load credits onto the "e-purse" of the card . On checking in and out, the correct fare is deducted from your card's balance based on the distance travelled. In Amsterdam this is currently €0.86 for boarding plus €0.145 per km. This is cheaper than using the above single, especially for shorter journeys.
+3. **"Personal" OV-chip card**. For residents who wish to register their details and link the card to a bank account. This card allows to use subscription models to be loaded onto the card. For example a monthly GVB season ticket (€88) or an annual GVB season ticket (€880).
+4. **GVB Night Bus Ticket**. A single ride on a night bus costs €4.50. It is also possible to load 12 night bus rides on an OV-chip card for €34.
+5. **Unlimited GVB Travel Tickets**. Valid for a set period of time and allow you to travel on the GVB network in Amsterdam. The 24 hour disposable ticket can be bought on board trams and buses. The others are available at GVB Tickets & Info office outside Amsterdam central station.
 
----
+	- 24 hours (1 day) €7.50
+	- 48 hours (2 days) €12.00
+	- 72 hours (3 days) €16.50
+	- 96 hours (4 days) €21.00
+	- 120 hours (5 days) €26.00
+	- 144 hours (6 days) €29.50
+	- 168 hours (7 days) €32.00
 
-> I would suggest **looking into Noord, Osdorp, Slotervaart, Bijlmer (in that order)**. They are suburbs, maximum 30-40 min away from the city centre and your best bet for affordable housing.
+### Sales Station ###
+
+	GVB Tickets & Info, Stationsplein at the Centraal Station
+	Monday to Friday: 07:00 - 21:00 and
+	Saturday and Sunday: 08:00 - 21:00.
 
 ## Public ##
 
@@ -81,7 +92,7 @@ recycled bikes
 	1012 Amsterdam
 	http://www.recycledbicycles.org
 	+31654681429
-	Mon, 14:00-18:00; Tue- Fri, 09:30-18:00; Sat, 14:00 - 18:0
+	Mon, 14:00-18:00; Tue- Fri, 09:30-18:00; Sat, 14:00 - 18:00
 
 ## Health ##
 
@@ -114,3 +125,21 @@ Equipment
 - [Fablab waag society](http://fablab.waag.org/)
 
 [^1]: A maximum of 3 hours per day applies to the use of the internet in the Central Library, in the other OBA branches a maximum of 30 minutes per day applies.
+
+## Housing ##
+
+Opinions on neighborhoods from various reddit users
+
+> There is really no reason to live in the center, there are many nice places outside that are still within Amsterdam and where you'll still be able to cycle to centre. I would say **Osdorp is a good option.**
+**IJburg is also fine, but may be a bit far for cycling** unless you're going somewhere in the east.
+Amstelveen may also be a good option. In all these cases, public transport would be mostly tram/metro and those are excellent.
+The one place **not to go would be South-East (Zuid-Oost)**, which is considered unsafe (though I do know people living there who deny this; also unsafe here is nothing compared to unsafe in for example the US). I'm not too fond of North (Noord) either, but I think opinions are divided here.
+
+---
+
+> If these places are not affordable either or you can't find something suitable (the private rent market is quite small, especially for the lower price range) you could go to **Diemen (metro+train connections), Hoofddorp (bus+train connections), Hilversum or Almere (train)**. All of them are very well-connected to Amsterdam. In Almere you can get very nice housing at low prices, it also a substantial city center and it is very safe for a child to grow up (no through traffic in residential neighbourhoods), although the city is considered to be pretty boring.
+
+---
+
+> I would suggest **looking into Noord, Osdorp, Slotervaart, Bijlmer (in that order)**. They are suburbs, maximum 30-40 min away from the city centre and your best bet for affordable housing.
+
