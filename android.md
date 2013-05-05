@@ -5,25 +5,34 @@
 - Android 4.0 is based on Linux kernel 3.0.1
 - Android 4.1 is based on Linux kernel 3.0.31
 
-## SDK ##
+## SDKs ##
 
-### Linux ###
+### SDK ###
 
-Install the NDK
+For OS X
+
+	brew install android-sdk
+
+### Native Development Kit (NDK) ###
+
+For Linux
 
 	wget http://dl.google.com/android/ndk/android-ndk-r8d-linux-x86.tar.bz2
 	tar xjf android-ndk-r8d-linux-x86.tar.bz2
 	rm android-ndk-r8d-linux-x86.tar.bz2
 	export ANDROID_NDK_ROOT=$(find $(pwd) -name "android-ndk-r8d" )
 
-### OS X ###
+For OS X
 
-Install the NDK
+	brew install android-ndk
 
-	wget http://dl.google.com/android/ndk/android-ndk-r8d-darwin-x86.tar.bz2
-	tar xjf android-ndk-r8d-darwin-x86.tar.bz2
-	rm android-ndk-r8d-darwin-x86.tar.bz2
-	export ANDROID_NDK_ROOT=$(find $(pwd) -name "android-ndk-r8d" )
+## Eclipse Plugin ##
+
+Start Eclipse, then select `Help > Install New Software` and add the following URL
+
+	https://dl-ssl.google.com/android/eclipse/
+
+In the Available Software dialog, select the checkbox next to Developer Tools and click `Next` and follow the rest of the instructions.
 
 ## Devices ##
 
