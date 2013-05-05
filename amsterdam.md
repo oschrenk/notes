@@ -2,8 +2,6 @@
 
 ## Transportation ##
 
-[source](http://www.amsterdamtips.com/tips/transport-tickets.php)
-
  The OV-chip card (OV-chipkaart) smart card system is in use for public transport in the Netherlands. This means you need to check-in and check-out when boarding and alighting using the card readers. This applies to trams, the metro and buses in Amsterdam.
 
  There a various types of tickets available:
@@ -100,9 +98,23 @@ recycled bikes
 	+31654681429
 	Mon, 14:00-18:00; Tue- Fri, 09:30-18:00; Sat, 14:00 - 18:00
 
-## Health ##
+## Utilities and Services ##
 
-- [waternet.nl](https://www.waternet.nl/over-waternet/zaken-doen-met-waternet/gegevens-drinkwaterkwaliteit/) Water quality in Amsterdam (2012 4th quarter averaged 8.1 °dH)
+### Energy: Electricity & Gas ###
+
+The energy sector in Netherlands is liberalized and there are a number of companies which you can choose from - the company you select will provide you with both electricity and gas.
+
+Netherlands has some of the highest retail electricity prices in the world. Monthly energy bills will be in the region of €100 to €200, depending on your usage. Meter readings are done on an annual basis.
+
+Netherlands is on 230v mains voltage with 2 pin plugs. Power cuts are extremely rare.
+
+### Water ###
+
+The [quality](https://www.waternet.nl/over-waternet/zaken-doen-met-waternet/gegevens-drinkwaterkwaliteit/) (2012 4th quarter averaged 8.1 °dH)of the drinking water in Netherlands is very good.
+
+The cost of consumption is dependent on the number of official residents in a home - roughly around €42 per person per year. If there is a water meter you will pay per cubic metre consumed.
+
+On top of this you have to pay sewerage and maintenance fees to both Waternet and via city taxes. If you are in rental accommodation you may not have to pay for water, but check with your landlord or agent.
 
 ## Culture ##
 
@@ -148,4 +160,9 @@ The one place **not to go would be South-East (Zuid-Oost)**, which is considered
 ---
 
 > I would suggest **looking into Noord, Osdorp, Slotervaart, Bijlmer (in that order)**. They are suburbs, maximum 30-40 min away from the city centre and your best bet for affordable housing.
+
+## Sources ##
+
+- [Transportation](http://www.amsterdamtips.com/tips/transport-tickets.php)
+- [Utilities and Services](http://www.amsterdamtips.com/tips/utilities-amsterdam.php)
 
