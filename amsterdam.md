@@ -52,11 +52,11 @@ Membership fees:
 	- Reserve materials for € 1,00 each
 	- Free internet and WiFi in the library [^1]
 - Leenpas+. € 52,50 per year / € 42,50 for 19-23 years old and 65+ / € 37,50 for holders Stadspas
-- Borrow books, audio books and e-books free of charge
-- Maximum of 8 items per time and an unlimited number of items per year
-- Borrow 10 CDs, DVDs, games and blu-rays per year free of charge, subsequently for € 1,00 per week
-- Reserve 10 items per year free of charge, subsequently for € 1,00 each
-- Free internet and WiFi in the library [^1]
+	- Borrow books, audio books and e-books free of charge
+	- Maximum of 8 items per time and an unlimited number of items per year
+	- Borrow 10 CDs, DVDs, games and blu-rays per year free of charge, subsequently for € 1,00 per week
+	- Reserve 10 items per year free of charge, subsequently for € 1,00 each
+	- Free internet and WiFi in the library [^1]
 
 #### Library, University of Amsterdam ####
 
