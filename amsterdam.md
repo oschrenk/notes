@@ -116,6 +116,14 @@ The cost of consumption is dependent on the number of official residents in a ho
 
 On top of this you have to pay sewerage and maintenance fees to both Waternet and via city taxes. If you are in rental accommodation you may not have to pay for water, but check with your landlord or agent.
 
+## Healthcare ##
+
+If you are coming to live in the country then it is obligatory to have a basic Dutch health insurance (basisverzekering) policy. The cost of basic Dutch medical insurance is around €110 per month for everyone regardless of age and state of health. As of 2012, there is also a compulsory excess (eigen risico) where you pay the first €220 of certain medical costs. You can also lower your monthly premium by €10-20 by choosing a higher excess.
+
+The basic insurance policy will cover visits to doctors and specialists, medical treatment, hospital care and prescriptions. Dental coverage is only included for those under 22 - so you need to pay extra if dental cover is required.
+
+When you have found somewhere to live you should register with a local general practitioner - either close to your home or place of work. Making an appointment is relatively straight forward and many practices also have a telephone consultation hour (spreekuur) set aside to deal with patient queries. If you require a specialist you will need a referral from your GP.
+
 ## Culture ##
 
 - [zero20](http://www.zero20.nl/) Amsterdam portal
