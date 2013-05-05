@@ -85,6 +85,12 @@ It seems that you can't get an internet access if you are not a student.
 
 ## Bicycle ##
 
+Get a bicycle as quick as you can.
+
+Waterlooplein is a good place to try. Marktplaats or the bulletin boards at the supermarkets are also a good bet.
+
+### Shops ###
+
 recycled bikes
 
 	Recycled Bicycles
