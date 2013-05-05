@@ -5,7 +5,7 @@
 - Android 4.0 is based on Linux kernel 3.0.1
 - Android 4.1 is based on Linux kernel 3.0.31
 
-## SDKs ##
+## Development ##
 
 ### SDK ###
 
@@ -26,13 +26,28 @@ For OS X
 
 	brew install android-ndk
 
-## Eclipse Plugin ##
+### Eclipse Plugin ###
 
 Start Eclipse, then select `Help > Install New Software` and add the following URL
 
 	https://dl-ssl.google.com/android/eclipse/
 
 In the Available Software dialog, select the checkbox next to Developer Tools and click `Next` and follow the rest of the instructions.
+
+### Code Samples ###
+
+To help you understand some fundamental Android APIs and coding practices, a variety of sample code is available from the Android SDK Manager. Each version of the Android platform available from the SDK Manager offers its own set of sample apps.
+
+To download the samples:
+
+- Launch the Android SDK Manager.
+- On Windows, double-click the SDK Manager.exe file at the root of the Android SDK directory.
+- On Mac or Linux, open a terminal to the tools/ directory in the Android SDK, then execute android sdk.
+- Expand the list of packages for the latest Android platform.
+- Select and download Samples for SDK.
+- When the download is complete, you can find the source code for all samples at `<sdk>/samples/android-<version>/` where the `<version>` number corresponds to the platform's API level.
+
+You can easily create new Android projects with the downloaded samples, modify them if you'd like, and then run them on an emulator or device.
 
 ## Devices ##
 
