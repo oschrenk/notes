@@ -87,6 +87,8 @@ Get a bicycle as quick as you can.
 
 Waterlooplein is a good place to try. Marktplaats or the bulletin boards at the supermarkets are also a good bet.
 
+- [ESN-VUniverse E-buy](https://www.facebook.com/groups/210751145651477/) Students selling stuff
+
 ### Shops ###
 
 recycled bikes
