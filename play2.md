@@ -32,7 +32,7 @@ The override field `my.key = ${?MY_KEY_ENV}` simply vanishes if there’s no val
 
 The disadvantage is that you would need to setup this environment variables on each machine your are trying to run the application.
 
-### Using different keys for each mode ###
+### Using different modes with keys ###
 
 There are [three different modes](https://github.com/playframework/Play20/blob/master/framework/src/play/src/main/java/play/Play.java#L18)
 
@@ -48,3 +48,24 @@ You can check the mode the application is running in, by calling `isProd()`, `is
 	(Play.application().isProd())
 		? Play.application().configuration().getString("s3.bucket")
 		: Play.application().configuration().getString("dev.s3.bucket");
+
+### Mode based auto-configuration by extending the `Global` object ###
+
+If you want to auto-configure your application, based on your mode you can change the behavior of Play bey extending the `Global` object.
+
+A `Global` object in your project allows you to handle global settings for your application. This object **must be defined in the default (empty) package**.
+
+	import java.io.File
+	import play.api._
+	import com.typesafe.config.ConfigFactory
+
+	object Global extends GlobalSettings {
+	  override def onLoadConfig(config: Configuration, path: File, classloader: ClassLoader, mode: Mode.Mode): Configuration = {
+	    val modeSpecificConfig = config ++ Configuration(ConfigFactory.load(s"application.${mode.toString.toLowerCase}.conf"))
+	    super.onLoadConfig(modeSpecificConfig, path, classloader, mode)
+	  }
+	}
+
+This allows you to put `application.dev.conf`, `application.test.conf`, and `application.prod.conf` into your `./conf` with environment specific overrides (while keeping common settings in `application.conf`).
+
+[source](http://stackoverflow.com/a/15937831/256853)
