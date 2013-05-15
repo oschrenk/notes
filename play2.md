@@ -8,7 +8,7 @@ This was fairly easy in Play 1.2 by using `%prod` or similar prefixes on your se
 
 ### Specifying alternative configuration file ###
 
-Per default Play 2 loads `conf/application.conf`. You can specify to load another configuration using
+Per default Play 2 loads `conf/application.conf`. You can specify to load another configuration file but this will only work in production mode.
 
 - `start -Dconfig.resource=prod.conf` Searches for configuration file in classpath, so you can put `prod.conf` file into the applications `conf/` directory to be picked up.
 - `start -Dconfig.file=/opt/conf/prod.conf` Specifies a path.
