@@ -25,7 +25,6 @@
 	- Auto-playback feature.
 	- Automatically resume videos.
 - [VLC](http://www.videolan.org/) as a fallback for streams and unfinished video downloads.
-- [Mediathek.app](http://appdrive.net/mediathek/) Easy access to public tv in Germany. Subscribe and download your favorite tv shows.
 
 ## Coding ##
 
