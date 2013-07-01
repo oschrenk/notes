@@ -29,7 +29,7 @@
 
 ## Coding ##
 
-- [Sublime Text](http://www.sublimetext.com/). USD $59. A very powerful and extensible text editor with a strong community.
+- [Sublime Text](http://www.sublimetext.com/). USD $70. A very powerful and extensible text editor with a strong community.
 - [Kaleidoscope 2](http://www.kaleidoscopeapp.com/). USD $70. Bought the beta for $35, not sure if its worth $70. It's a good looking visual diff and merge tool.
 - [GitX-dev](http://rowanj.github.com/gitx/). Free, OpenSOurce. GUI for Git. In the rare cases I need a GUI.
 - [Marked](http://markedapp.com/). USD $3.99. Markdown Preview. I use it together with Sublime Text.
