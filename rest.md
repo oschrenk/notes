@@ -29,3 +29,8 @@ Relying on HTTP status codes and verbs should already help you keep your API cal
 - Unix time, or you’ll have a bad time.
 - Prepend your URLs with the API version, like `/v1/emails/1234`.
 - Lowercase everywhere in URLs.
+
+## Sources ##
+
+- Ronan Berder's [Designing A RESTful API That Doesn't Suck](devo.ps/blog/2013/03/22/designing-a-restful-api-that-doesn-t-suck.html):
+- Vanay Sahni's [Best Practices for Designing a Pragmatic RESTful API](http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api#errors)
