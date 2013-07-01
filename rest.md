@@ -1,13 +1,15 @@
 # REST API Design #
 
-Based on Ronan Berder's [Designing A RESTful API That Doesn't Suck](devo.ps/blog/2013/03/22/designing-a-restful-api-that-doesn-t-suck.html):
 
 - **Design your API for developers first**, they are the main users. In that respect, simplicity and intuitivity matter.
 - **Use HTTP verbs** instead of relying on parameters (e.g. `?action=create`). HTTP verbs map nicely with CRUD:
 	- `POST` for create,
 	- `GET` for read,
 	- `DELETE` for remove,
-	- `PUT` for update (and `PATCH` too).
+	- `PUT` for update,
+	- `PATCH` for partial update
+- **Endpoint names should be plural** It may hurt your inner grammar nazi, but it helps keeping things easy (such as edge cases with odd pluralization)
+- **Use SSL everywhere - all the time**
 - **Use HTTP status codes**, especially for errors (authentication required, error on the server side, incorrect parameters). There are plenty to choose from, here are a few:
 	- `200`: OK
 	- `201`: Created
