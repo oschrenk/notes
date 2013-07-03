@@ -12,6 +12,10 @@
 - it is object oriented: every value is an object
 - compiles to bytecode for the JVM and CLR
 
+### Conventions ###
+
+- Methods include parentheses if it has side effects
+
 ## Functional Programming ##
 
 - Functional languages treat functions a _first-class values_
