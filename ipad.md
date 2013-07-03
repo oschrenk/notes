@@ -1,6 +1,6 @@
 # iPad
 
-## Dimensions ## ##
+## Dimensions ##
 
 On [developer.apple.com/ipod/cases.html](http://developer.apple.com/ipod/cases.html) Apple has released dimensional drawings of all mobile devices.
 
