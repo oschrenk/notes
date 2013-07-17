@@ -1,4 +1,4 @@
-# Boooks #
+# Books #
 
 ## Authors ##
 
