@@ -84,6 +84,11 @@
 
 Relationships
 
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `<` - `&#x003C;` - `&#60;` - Less-than
+- `>` - `&#x226E;` - `&#62;` - Greater-than
+- `≤` - `&#x2264;` - `&#8804;` - Less-than or equal to
+- `≥` - `&#x2265;` - `&#8805;` - Less-than or equal to
 - `≪` - `&#x226A;` - `&#8810;` - Much Less-than
 - `≫` - `&#x226B;` - `&#8811;` - Much Greater-than
 - `≡` - `&#x2261;` - `&#8801;` - Identical To
