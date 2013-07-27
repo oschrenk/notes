@@ -95,6 +95,16 @@ Relationships
 - `≈` - `&#x2248;` - `&#8776;` - Almost Equal To
 - `≉` - `&#x2249;` - `&#8777;` - Not Almost Equal To
 
+Sets
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `⊂` - `&#x2282;` - `&#8834;` - Subset of
+- `⊃` - `&#x2283;` - `&#8835;` - Superset of
+- `∩` - `&#x2229;` - `&#8745;` - Intersection
+- `∪` - `&#x222A;` - `&#8746;` - Union
+- `∈` - `&#x2208;` - `&#8712;` - Element of
+- `∉` - `&#x2209;` - `&#8713;` - Not an element of
+
 **Greek alphabet**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
