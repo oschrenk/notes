@@ -82,7 +82,7 @@
 - `ℝ` - `&#x211D;` - `&#8477;` - Real Numbers Symbol - Double-struck Capital R
 - `∅` - `&#x2205;` - `&#8709;` - Empty Set
 
-Relationships
+**Relationships**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
 - `<` - `&#x003C;` - `&#60;` - Less-than
@@ -100,7 +100,7 @@ Relationships
 - `≈` - `&#x2248;` - `&#8776;` - Almost Equal To
 - `≉` - `&#x2249;` - `&#8777;` - Not Almost Equal To
 
-Sets
+**Sets**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
 - `⊂` - `&#x2282;` - `&#8834;` - Subset of
