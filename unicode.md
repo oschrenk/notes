@@ -65,7 +65,7 @@
 - `⇟`- `&#x21DF;` - `&#8671;` - Page Down,  (`Downwards Arrow With Double Stroke`)
 
 - `←`- `&#x2190;` - `&#8592;` - `Leftwards Arrow`
-- `↑`- `&#x2191;` - `&#8593;` - `Upwards Arrow`
+- `↑`- `&#x2191;` - `&#8593;`q - `Upwards Arrow`
 - `→`- `&#x2192;` - `&#8594;` - `Rightwards Arrow`
 - `↓`- `&#x2193;` - `&#8595;` - `Downwards Arrow`
 
@@ -154,6 +154,14 @@ Sets
 - `€` - `&#x20AC;` - `&#8364;` - Euro
 - `£` - `&#x00A3;` - `&#163;` - Pound
 - `¥` - `&#x00A5;` - `&#165;` - Yen
+
+**Intellectual property**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `©` - `&#xC2A9;` - `&#169;` - Copyright Symbol
+- `®` - `&#xC2AE;` - `&#174;` - Registered trademark symbol
+- `™` - `&#x2122;` - `&#8482;` - Trademark symbol
+
 
 **TODO Symbols**
 
