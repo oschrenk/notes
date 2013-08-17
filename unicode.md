@@ -153,8 +153,13 @@
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
 - `$` - `&#x0024;` - `&#36;` - Dollar
 - `€` - `&#x20AC;` - `&#8364;` - Euro
-- `£` - `&#x00A3;` - `&#163;` - Pound
-- `¥` - `&#x00A5;` - `&#165;` - Yen
+- `¢` - `&#x00A2;` - `&#162;` - Cent
+- `£` - `&#x00A3;` - `&#163;` - Pound Sterling
+- `฿` - `&#x0E3F;` - `&#3647;` - Baht
+- `₩` - `&#x20A9;` - `&#8361;` - Won
+- `₪` - `&#x20AA;` - `&#8362;` - New Sheqel
+- `₹` - `&#x20B9;` - `&#8377;` - Indian Rupee
+- `₺` - `&#x20BA;` - `&#8378;` - Turkish Lira
 
 **Intellectual property**
 
