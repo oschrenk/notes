@@ -184,6 +184,8 @@
 
 ## Favorite characters ##
 
-This characters are not all displayed, as the installed fonts may not support all characters.
+Probably not all of the following characters, if any, are displayed correctly on your machine, as they depend on localized fonts.
 
-- `ꘐ` - `&#x0A610;` - `&#42512;` - [Vai Syllable Ndole Fa](http://shapecatcher.com/unicode/info/42512)
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `ꘐ` - `&#x0A610;` - `&#42512;` - [Vai Syllable Ndole Fa](http://www.charbase.com/a610-unicode-vai-syllable-ndole-fa)
+- `෴` - `&#x00DF4;` - `&#3572;` - [Sinhala Punctuation Kunddaliya](http://www.charbase.com/0df4-unicode-sinhala-punctuation-kunddaliya)
