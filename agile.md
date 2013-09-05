@@ -1,5 +1,18 @@
 # Agile Development #
 
+## Stand-up meeting ##
+
+Purpose is to drive communication and promote discussions inside the team
+
+- Start at a fixed time. Don't delay for late comers
+- Timebox the meeting to 5-15 minutes
+- Team members take turn to speak
+- Keep it short
+	1. What did I do yesterday?
+	2. What will I do today?
+	3. What are the impediments?
+- Asking for clarification is OK, but discussions are to be held after the stand-up.
+
 ## Scrum ##
 
 ### Sprint Planning ###
