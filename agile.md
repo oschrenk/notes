@@ -1,6 +1,8 @@
 # Agile Development #
 
-## Sprint Planning ##
+## Scrum ##
+
+### Sprint Planning ###
 
 - lock requirements during sprints
 	- changes in mid-sprint jeopardize work investment
@@ -27,7 +29,7 @@
 	- at first stories will be missing details too implement
 	- it's a full time job
 
-## Feedback ##
+### Feedback ###
 
 - demo every sprint
 	- alternative is progress reports, which ca be misinterpreted
@@ -45,7 +47,7 @@
 		- good feedback boosts morale
 		- bad feedback is a chance to improve
 
-## Testing ##
+### Testing ###
 
 - test at development time
 	- separate test phase discovers bugs _after_ they're easy to fix
