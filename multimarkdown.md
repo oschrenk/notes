@@ -1,12 +1,14 @@
 # Multimarkdown #
 
-## Footnotes ##
+## Features ##
+
+### Footnotes ###
 
 	Here is some text containing a footnote.[^somesamplefootnote]
 	...
 	[^somesamplefootnote]: Here is the text of the footnote itself.
 
-## Latex, write letters with markdown ##
+### Write letters with markdown using Latex ##
 
 	latex input:        mmd-letterhead-header
 	Title:              Test Letter
@@ -26,7 +28,7 @@
 	latex footer:       mmd-letterhead-footer
 	latex input:        mmd-letterhead-begin-doc
 
-## Mathematics ##
+### Mathematics ###
 
 Example within a paragraph \\({e}^{i\pi }+1=0\\).
 
@@ -34,7 +36,7 @@ And as an equation on it's own:
 
 \\[ {x}_{1,2}=\frac{-b\pm \sqrt{{b}^{2}-4ac}}{2a} \\]
 
-## Bibliography Support ##
+### Bibliography Support ###
 
 Write following into the text
 
