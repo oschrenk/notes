@@ -50,6 +50,7 @@ Here are some great alternatives:
 - [Giorgio Sans](http://www.christianschwartz.com/giorgiosans.shtml). Commercial.
 - [Korolev](http://www.myfonts.com/fonts/device/korolev/). Commercial.
 - [Simple](http://lineto.com/The+Fonts/Font+Categories/Text+Fonts/Simple/Light/). Commercial.
+- [Directors Gothic](http://www.myfonts.com/fonts/lettering-inc/directors-gothic/). Commercial.
 
 **Slab Serif**
 
@@ -59,6 +60,7 @@ Here are some great alternatives:
 
 **Script**
 
+- [Cooper Italic Pro](http://www.myfonts.com/fonts/wordshape/cooper-italic-pro/). Commercial.
 - [Dancing Script](http://www.fontsquirrel.com/fonts/dancing-script-ot). Free.
 - [Lobster Two](http://www.fontsquirrel.com/fonts/lobster-two). Free.
 - [Over at Atlantic City](http://www.dafont.com/over-atlantic-city.font)
