@@ -2,6 +2,7 @@
 
 ## Reading Material ##
 
+- [Designing for Emotion](http://www.abookapart.com/products/designing-for-emotion)
 - [John R. Anderson](http://en.wikipedia.org/wiki/John_Robert_Anderson_(psychologist), [Cognitive psychology and its implications](http://www.goodreads.com/book/show/505756.Cognitive_Psychology_and_its_Implications)
 - [Kathleen M. Galotti](http://apps.carleton.edu/people/kgalotti/), [Cognitive psychology in and out the laboratory](http://www.goodreads.com/book/show/1305883.Cognitive_Psychology)
 - [Daniel Kahneman](http://en.wikipedia.org/wiki/Daniel_Kahneman), [Thinking, Fast and Slow](http://www.goodreads.com/book/show/11468377-thinking-fast-and-slow)
