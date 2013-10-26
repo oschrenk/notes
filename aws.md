@@ -12,11 +12,11 @@ The process can be quite complex, with all the options the offer. The default se
 
 ### Security Groups ###
 
-Security groups define access incoming and outgoing traffic rules to this machine. They can be defined based on ip adresses on port numbers. For a machine that should act as a web server you should define a security group that allows public access to port `80` (`HTTP`) and `443` (`HTTPS`).
+Security groups define access incoming and outgoing traffic rules to this machine. They can be defined based on ip addresses on port numbers. For a machine that should act as a web server you should define a security group that allows public access to port `80` (`HTTP`) and `443` (`HTTPS`).
 
 ### Identity file ###
 
-At the end of the wizard asks you to choose an existing or create a new identity file to access this machine. Download the file to your machine and store it in secure (and backuped) place. I myself put it in `~/.ssh` and rely on a encrypted local and encrypted remote backup.
+At the end of the wizard asks you to choose an existing or create a new identity file to access this machine. Download the file to your machine and store it in secure place. I myself put it in `~/.ssh` and rely on a encrypted local and encrypted remote backup.
 
 I highly recommend to put the host information and the associated key inside your ssh configuration to make access and life easier.
 
