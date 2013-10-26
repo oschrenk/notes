@@ -55,9 +55,9 @@ The second rule lines up with writing commit message
 Git centric approach:
 
 - **commit related changes** a commit should be a wrapper for related changes. Fixing two different bugs should produce  separate commits. Small commits make it easier for other developers to understand the changes and roll them back if something went wrong
-- **seperate formatting changes from code changes** don't change whitespace/formatting with the code
+- **separate formatting changes from code changes** don't change whitespace/formatting with the code
 - **commit often** Committing often keeps your commits small and, again, helps you commit only related changes. Moreover, it allows you to share your code more frequently with others. That way it is easier for everyone to integrate changes regularly and avoid having merge conflicts. Having few large commits and sharing them rarely, in contrast, makes it hard to solve conflicts.
-- **don't commit half done work** You should only commit code when it's completed. This doesn‘t mean you have to complete a whole, large feature before committing. Quite the contrary: split the feature's implementation into logical chunks and remember to commit early and often. But don't commit just to have something in the repository before leaving the office at the end of the day.
+- **don't commit half done work** You should only commit code when it's completed. This doesn't mean you have to complete a whole, large feature before committing. Quite the contrary: split the feature's implementation into logical chunks and remember to commit early and often. But don't commit just to have something in the repository before leaving the office at the end of the day.
 - **test code before you commit** Resist the temptation to commit some- thing that you _think_ is completed. Test it thoroughly to make sure it really is completed and has no side effects (as far as one can tell). While committing half- baked things in your local repository only requires you to forgive yourself, having your code tested is even more important when it comes to pushing/sharing your code with others.
 - **version control is not a backup system** When doing version control, you should pay attention to committing semantically
 - **use branches** Branches are the perfect tool to help you avoid mixing up different lines of development. You should use branches extensively in your development workflows: for new features, bug fixes, ideas.
@@ -384,4 +384,9 @@ Use [Semantic Versioning](http://semver.org/)
 [#Tower:2011]: [Tower](http://www.git-tower.de). [Git Cheat Sheet](http://www.git-tower.com/files/cheatsheet/Git_Cheat_Sheet_grey.pdf) from the guys who made [tower](http://www.git-tower.de) 2011
 
 [#Thoughtbot:2012]: [Thoughtbot, Guides, Code Review](https://github.com/thoughtbot/guides/blob/master/code-review/README.md)
+
+
+Pan Thomakos 2011 http://ablogaboutcode.com/2011/03/23/proper-git-commit-messages-and-an-elegant-git-history/
+Caleb Thompson 2013, http://robots.thoughtbot.com/post/48933156625/5-useful-tips-for-a-better-commit-message
+http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
 
