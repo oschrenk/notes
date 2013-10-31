@@ -100,6 +100,7 @@
 - `≇` - `&#x2247;` - `&#8775;` - Neither Approximately Nor Actually Equal To
 - `≈` - `&#x2248;` - `&#8776;` - Almost Equal To
 - `≉` - `&#x2249;` - `&#8777;` - Not Almost Equal To
+- `≠` - `&#x2260;` - `&#8800;` - Not Equal To
 
 **Sets**
 

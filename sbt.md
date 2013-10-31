@@ -24,7 +24,7 @@ You can mix both but the settings in `.sbt` will take precedence.
 
 Create Maven style project layout
 
-	mkdir -p project src/{main,test}/{scala,java,resources}
+	mkdir -p project src/{main,test}/{scala,resources}
 
 ### project/build.properties ###
 
@@ -44,10 +44,7 @@ A good starting point for a `build.sbt` with a dependency to JUnit
 
 	version := "1.0"
 
-	scalaVersion := "2.9.2"
-
-	// JUnit itself is pulled in as a transitive dependency
-	libraryDependencies += "com.novocode" % "junit-interface" % "0.10-M3" % "test"
+	scalaVersion := "2.10.3"
 
 ### project/Build.scala ###
 

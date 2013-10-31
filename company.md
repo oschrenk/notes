@@ -1,5 +1,15 @@
 # Company #
 
+Why are you writing code
+Because performance is bad
+arialdo martini
+Boyscout rules
+
+Coda Hale Business Value > Money
+http://arialdomartini.wordpress.com/2012/09/03/pre-emptive-commit-comments/
+http://arialdomartini.wordpress.com/2012/09/03/pre-emptive-commit-comments/#more-1798
+http://www.management-issues.com/news/6763/enough-about-leadership-its-time-to-remember-how-to-be-a-good-manager/
+
 ## Code ##
 
 Code is king.
@@ -42,8 +52,8 @@ The second rule lines up with writing commit message
 	- Is there a simpler way to write this code?
 	- Is interdependent functionality contained within one logical module, with a clear boundary?
 - **Security**
-	- Is any untrusted information used without sanitising or checking for - validity?
-	- If information is disclosed or actions are taken, are there checks that the - user is authorised?
+	- Is any untrusted information used without sanitizing or checking for - validity?
+	- If information is disclosed or actions are taken, are there checks that the - user is authorized?
 	- Is it hard to use this code in a way which is insecure?
 	- Is it possible to abuse this code in any way?
 	- Could this code be open sourced?
@@ -69,19 +79,20 @@ Git centric approach:
 
 Git format preferred
 
-- one line summary (max 74 chars)
+- one line summary (max 50 chars)
+- start with a verb
 - then empty line
-- then multiple paragraphs explaining the patch in detail (if needed)
+- then multiple paragraphs (wrap at 72 char) explaining the patch in detail (if needed)
 - don't describe the code, describe the intent and the approach
 - write in imperative, as if you were commanding (eg. write fix instead of fixed)
 - keep the log in a present tense (to be consistent with generated messages from commands like `git merge`)
 
-- [On Commit Messages](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
-- [Writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
+- Peter Hutterer: [On Commit Messages](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
+- Erlang Team, [Writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
 
 Example
 
-	header line: explaining the commit in one line
+	Explain the commit in the header with 50 chars max
 
 	Body of commit message is a few lines of text, explaining things
 	in more detail, possibly giving some background about the issue
@@ -89,11 +100,13 @@ Example
 
 	The body of the commit message can be several paragraphs, and
 	please do proper word-wrap and keep columns shorter than about
-	74 characters or so. That way "git log" will show things
+	72 characters or so. That way "git log" will show things
 	nicely even when it's indented.
 
 	Reported-by: whoever-reported-it
 	Signed-off-by: Your Name <youremail@yourhost.com>
+
+	Fixes #32145
 
 Why write a good commit message? What are the benefits?
 
@@ -133,7 +146,9 @@ In summary: Your project should almost always use the past tense.
 
 - utf8
 - unix line ending
-- delete trailing whitespace
+- no trailing whitespace
+- end with a newline
+
 - agree on company style
 - enforce style
 	- with shared IDE/editor preferences
@@ -141,7 +156,8 @@ In summary: Your project should almost always use the past tense.
 	- pre-commit hooks
 - Limit lines to 80 characters.
 	> Yes, screens have gotten much bigger over the last few years, but your brain hasn't. Use the additional room for split screen, your editor supports that, right?
-	[#Geissendörfer:2011]
+
+[#Geissendörfer:2011]
 
 ### Logging ###
 
@@ -371,11 +387,11 @@ Use [Semantic Versioning](http://semver.org/)
 
 ## Bibliography ##
 
-[#Batchelder:2003]: Ned Batchelder. [Logging Style Guide](http://nedbatchelder.com/text/log-style-guide.html) 2006
+[#Batchelder:2003]: Ned Batchelder. [Logging Style Guide](http://nedbatchelder.com/text/log-style-guide.html) 2003
 
 [#Geissendörfer:2011]: Felix Geissendörfer [Node.js Style Guide](http://nodeguide.com/style.html#line-length) 2011
 
-[#MarkCC:2011]: MarkCC [Things Everyone Should Do: Code Review](http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/) from [scientopia.org](http://scientopia.org/) 2011
+[#MarkCC:2011]: Mark Chu-Carroll [Things Everyone Should Do: Code Review](http://scientopia.org/blogs/goodmath/2011/07/06/things-everyone-should-do-code-review/) from [scientopia.org](http://scientopia.org/) 2011
 
 [#Ottinger:2009]: Tim Ottinger, [Rules for Commenting](http://agileinaflash.blogspot.com/2009/04/rules-for-commenting.html) 2009
 
