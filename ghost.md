@@ -2,7 +2,7 @@
 
 [Ghost](http://ghost.org) is a blogging platform based on node.js.
 
-## Installation ##
+## Preparing the Server ##
 
 On a fresh Ubuntu Server 13.10 installation.
 
@@ -15,13 +15,47 @@ Install dependencies
 	sudo apt-get update
 	sudo apt-get install nodejs
 
+## Using a stable release ##
+
 Install Ghost
 
-	cd
+	cd ~
 	wget https://ghost.org/zip/ghost-0.3.3.zip
 	unzip -d ghost ghost-0.3.3.zip
 	cd ~/ghost
 	npm install
+
+## Building Nightly on development machine ##
+
+Additional requirements
+
+- node 0.10.x
+- ruby and the gems `sass` and `bourbon` - you can use bundle install to install the gems
+- for running functional tests: `phantomjs 1.9.*`` and `casperjs 1.1.*´
+- for building docs: python and pygments
+
+If you're on a Mac
+
+	brew update
+	brew install node
+	brew install phantomjs
+	brew install casperjs --devel
+
+Build the project
+
+	git clone git@github.com:TryGhost/Ghost
+	cd Ghost
+	git submodule update --init
+	npm install -g grunt-cli
+	npm install
+
+Create the Bourbon directory and compile SASS and Handlebar templates
+
+	grunt init
+
+Start the server
+
+	npm start
 
 ## Configuration ##
 
