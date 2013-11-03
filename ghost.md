@@ -51,6 +51,7 @@ To start
 
 To restart
 
+	cd ~/ghost
 	sudo forever restart index.js
 
 ## Themes ##
