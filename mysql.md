@@ -27,3 +27,9 @@ Dump the database
 Import into local devel database
 
 	mysql -u root <database> < file.sql
+
+## Quirks ##
+
+Underscores `_`, and percent signs `%` in `like` have to be escaped.
+
+> SQL pattern matching enables you to use `_` to match any single character and `%` to match an arbitrary number of characters (including zero characters).
