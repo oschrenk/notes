@@ -32,6 +32,20 @@
 | `NOTICE.{md,txt}`       | Notices and attributions required by libraries that the project depends on|
 | `README.{md,txt}`       | Project's readme              |
 
+### Dependencies ###
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.0</version>
+      <type>jar</type>
+      <scope>test</scope>
+      <optional>true</optional>
+    </dependency>
+
+- `type` defaults to `jar`
+- `scope` defaults to `compile`
+
 ## Configuration ##
 
 The settings can be found under `~/.m2/settings.xml`
