@@ -14,22 +14,23 @@
 
 ### Standard Directory Layout ###
 
-| Directory 		| Description                       |
-| :-------------------- | :---------------------------- |
-| `src/main/java`       | Application/Library sources   |
-| `src/main/resources`  | Application/Library resources |
-| `src/main/filters`    | Resource filter files         |
-| `src/main/assembly`   | Assembly descriptors          |
-| `src/main/config`     | Configuration files           |
-| `src/main/scripts`    | Application/Library scripts	|
-| `src/main/webapp`     | Web application sources       |
-| `src/test/java`       | Test sources                  |
-| `src/test/resources`  | Test resources                |
-| `src/test/filters`    | Test resource filter files    |
-| `src/site`            | Site                          |
-| `LICENSE.{md,txt}`    | Project's license             |
-| `NOTICE.{md,txt}`     | Notices and attributions required by libraries that the project depends on|
-| `README.{md,txt}`     | Project's readme              |
+| Directory               | Description                   |
+| :---------------------- | :---------------------------- |
+| `src/main/java`         | Application/Library sources   |
+| `src/main/resources`    | Application/Library resources |
+| `src/main/filters`      | Resource filter files         |
+| `src/main/assembly`     | Assembly descriptors          |
+| `src/main/config`       | Configuration files           |
+| `src/main/scripts`      | Application/Library scripts	  |
+| `src/main/webapp`       | Web application sources       |
+| `src/test/java`         | Test sources                  |
+| `src/test/resources`    | Test resources                |
+| `src/test/filters`      | Test resource filter files    |
+| `src/site`              | Site                          |
+| `CONTRIBUTING.{md,txt}` | Project's license             |
+| `LICENSE.{md,txt}`      | Project's license             |
+| `NOTICE.{md,txt}`       | Notices and attributions required by libraries that the project depends on|
+| `README.{md,txt}`       | Project's readme              |
 
 ## Configuration ##
 
