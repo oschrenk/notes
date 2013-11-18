@@ -120,3 +120,7 @@ Jad Abumrad
 > My greatest weakness is that I tend analyze things too much... or maybe not enough?
 
 Bill Bailey
+
+> I'm already fully occupied with being my little bit of being human, it's very rare that I get around to being German
+
+Volker Pispers
