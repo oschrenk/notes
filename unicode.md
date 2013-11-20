@@ -76,12 +76,24 @@
 - `±` - `&#x00B1;` - `&#177;` - Plus-minus Sign
 - `∈` - `&#x2208;` - `&#8712;` - Element Of
 - `∉` - `&#x2209;` - `&#8713;` - Not An Element Of
-- `∀` - `&#x2200;` - `&#8704;` - For All
-- `∃` - `&#x2203;` - `&#8707;` - THERE EXISTS , exist, Exists
-- `∄` - `&#x2204;` - `&#8708;` - THERE DOES NOT EXIST , nexist, NotExists
 - `ℕ` - `&#x2115;` - `&#8469;` - Natural Numbers Symbol - Double-struck Capital N
 - `ℝ` - `&#x211D;` - `&#8477;` - Real Numbers Symbol - Double-struck Capital R
 - `∅` - `&#x2205;` - `&#8709;` - Empty Set
+
+**Logic symbols**
+
+- `character` - Unicode (Hex) - Unicode (HTML) - Explanation
+- `⇒` - `&#x21D2;` - `&#8658;` - Implies. Rightwards Double Arrow
+- `→` - `&#x2192;` - `&#8594;` - Implies. Rightwards Single Arrow
+- `⇔` - `&#x21D4;` - `&#8660;` - If and only if; iff. Left Right Double Arrow
+- `≡` - `&#x2261;` - `&#8801;` - If and only if; iff. Identical To
+- `↔` - `&#x2194;` - `&#8596;` - If and only if; iff. Left Right Arrow
+- `¬` - `&#xAC;`   - `&#172;`  - Negation. Not. Not Sign
+- `∧` - `&#x2227;` - `&#8743;` - Logical Conjnction. And. Logical And
+- `∨` - `&#x2228;` - `&#8744;` - Logical Disjunction. Or. Logical Or
+- `∀` - `&#x2200;` - `&#8704;` - For All
+- `∃` - `&#x2203;` - `&#8707;` - THERE EXISTS , exist, Exists
+- `∄` - `&#x2204;` - `&#8708;` - THERE DOES NOT EXIST , nexist, NotExists
 
 **Relationships**
 
