@@ -63,3 +63,9 @@ To remove a port forwarding use	the same commands without values
 	VBoxManage setextradata "<vmName>" "VBoxInternal/Devices/<cardname>/0/LUN#0/Config/<serviceName>/Protocol"
 	VBoxManage setextradata "<vmName>" "VBoxInternal/Devices/<cardname>/0/LUN#0/Config/<serviceName>/GuestPort"
 	VBoxManage setextradata "<vmName>" "VBoxInternal/Devices/<cardname>/0/LUN#0/Config/<serviceName>/HostPort"
+
+## Allowing other screen resolutions ##
+
+The screen resolution of the guest system was subpar and I couldn't select all the display resolutions of the host system.
+
+Installing the Guest Additions helped.
