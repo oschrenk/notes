@@ -6,4 +6,4 @@ While I thought that Eclipse has some weird default settings, IntelliJ really ta
 - Show line numbers. `IDE Settings > Editor > Appearance > Show line numbers`
 - Show method separators. `IDE Settings > Editor > Appearance > Show method separators`
 - Show tabs in single row. `Editor > Editor Tabs > Show tabs in single row`
-
+- Enabling navigating over camel case `Editor > Smart Keys > Use "CamelHumps" words`
