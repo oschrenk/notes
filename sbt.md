@@ -107,6 +107,28 @@ Finally in Eclipse use the Import Wizard to import Existing Projects into Worksp
 
 	lazy val appAssemblySettings = assemblySettings ++ Seq(test in assembly := {})
 
+### Configure test output ###
+
+You can enhance the test output by supplying some configuration
+
+	testOptions in Test += Tests.Argument("-oDSFW")
+
+The options:
+
+- `-o` required prefix to pass options
+- `D` show durations
+- `S` show short stack traces
+- `F` show full stack traces
+- `W` without color
+
+Or if you are using more than one test framework, like this:
+
+	testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-oD")
+
+You can also pass arguments for individual runs by placing them after `--`, like this:
+
+	> test-only org.acme.RedSuite -- -oD
+
 ## Sources ##
 
 - [scala-sbt.org/docs](http://www.scala-sbt.org/0.12.4/docs/)
