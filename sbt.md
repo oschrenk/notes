@@ -22,11 +22,9 @@ You can mix both but the settings in `.sbt` will take precedence.
 
 ### Project Layout ###
 
-Create Maven style project layout
+The preferred build style with `Build.scala` lives in `project` directory. In general sources should be organized like a maven project.
 
 	mkdir -p project src/{main,test}/{scala,resources}
-
-### project/build.properties ###
 
 It is *recommended*  to specify the version of SBT that works best
 
@@ -60,7 +58,7 @@ A good starting point for a `build.sbt` with a dependency to JUnit
 
 The `%%` is for cross-compiled libraries (which are compiled against multiple Scala versions) and automatically adds the Scala version to the artifact id.
 
-## Running sbt ##
+## Usage ##
 
 The first start of sbt my take a while as plugins and dependencies are being downloaded or compiled.
 
@@ -80,9 +78,9 @@ In order to quit the interpreter and get back to `sbt`, type `ctrl-d`.
 
 ## Plugins ##
 
-sbt-dependency-graph - display an ASCII graph of hierarchical direct and transitive dependencies
-sbt-dirty-money - clean your Ivy2 cache. If you use publish-local to test plugins
-sbt-release - provides a customizable release process that you can add to your project.
+- [sbt-dependency-graph](https://github.com/jrudolph/sbt-dependency-graph) - display an ASCII graph of hierarchical direct and transitive dependencies
+- [sbt-dirty-money](https://github.com/sbt/sbt-dirty-money) - clean your Ivy2 cache. If you use publish-local to test plugins
+- [sbt-release](https://github.com/sbt/sbt-release) - provides a customizable release process that you can add to your project.
 
 ### Eclipse ###
 
@@ -101,7 +99,7 @@ Then
 	sbt
 	> eclipse
 
-Finally in Eclipse use the Import Wizard to import Existing Projects into Workspace
+Finally in Eclipse use the Import Wizard to import Existing Projects into Workspacest
 
 ## Sources ##
 
