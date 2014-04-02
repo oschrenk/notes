@@ -101,6 +101,12 @@ Then
 
 Finally in Eclipse use the Import Wizard to import Existing Projects into Workspacest
 
+## FAQ ##
+
+### Skip tests for assembly ###
+
+	lazy val appAssemblySettings = assemblySettings ++ Seq(test in assembly := {})
+
 ## Sources ##
 
 - [scala-sbt.org/docs](http://www.scala-sbt.org/0.12.4/docs/)
