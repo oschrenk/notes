@@ -36,7 +36,7 @@ For most small projects just having a `build.sbt` should suffice.
 
 	touch build.sbt
 
-A good starting point for a `build.sbt` with a dependency to JUnit
+A very simple `build.sbt`
 
 	name := "FizzBuzz"
 
