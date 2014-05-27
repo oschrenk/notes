@@ -160,6 +160,7 @@
 - `′` - `&#x2032;` - `&#8242;` - Prime
 - `″` - `&#x2033;` - `&#8243;` - Double Prime
 - `µ` - `&#x00B5;` - `&#181;` - Micro Sign
+- `⌀` - `&#x2300;` - `&#8960;` - Diameter Sign
 
 **Currency Symbols**
 
