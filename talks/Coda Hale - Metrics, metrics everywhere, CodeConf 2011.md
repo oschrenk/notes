@@ -63,7 +63,8 @@ If it could affect your business value, measure it.
 
 If it affects your business values someone gets mailed/woken up
 
-Aggregate it using servives like
+Aggregate it using services like
+
 - [Ganglia](http://ganglia.sourceforge.net/)
 - [Graphite](http://graphite.wikidot.com/)
 - [Cacti](http://www.cacti.net/)
