@@ -22,6 +22,12 @@ Time format:
 
 	minutes.seconds[.hundredths] or EOF-minutes.seconds[.hundredths]
 
+### Joining flac files ###
+
+	brew install shntool
+	shntool join *.flac
+	flac -o out.flac joined.wav
+
 ### Extracting audio track ###
 
 #### mp3 from avi ####
