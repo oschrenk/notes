@@ -28,6 +28,10 @@ Time format:
 	shntool join *.flac
 	flac -o out.flac joined.wav
 
+### convert wav to m4a
+
+	ffmpeg -i joined.wav -acodec alac out.m4a
+
 ### Extracting audio track ###
 
 #### mp3 from avi ####
