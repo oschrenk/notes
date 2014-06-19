@@ -120,7 +120,7 @@ Open Terminal:
 
     $ cd /Users/Shared
     $ mkdir Local
-    $ sudo chown admin:Local Local
+    $ sudo chown -R admin:Local Local
 
 Change the default permissions, if you wish: `sudo chmod 770 Local` (this is optional if you're happy with the default permissions).
 
