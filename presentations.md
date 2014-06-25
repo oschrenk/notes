@@ -12,17 +12,18 @@
 
 ## Colors ##
 
+Use a nice color scheme.
+
 - [colourlovers](http://www.colourlovers.com/)
 - [imagecolorpicker](http://imagecolorpicker.com/)
 - [eyedrop](http://eyedrop.me/)
 
 ## Pictures ##
 
-[Compfight](http://compfight.com/). A service that lets you quickly search Flickr for Creative Commons-licensed photos.
-
-Limit your searches to images with Creative Commons copyright license via the option at the top bar.
-
 Attribute the images you have used!
+
+- [Compfight](http://compfight.com/). A service that lets you quickly search Flickr for Creative Commons-licensed photos. Limit your searches to images with Creative Commons copyright license via the option at the top bar.
+- [splashbase](http://www.splashbase.co/)
 
 ## Icons ##
 
@@ -35,7 +36,7 @@ Icons are awesome!
 
 Avoid the common and ubiquitous fonts like Helvetica, Arial, Garamond, Courier, ...
 
-FInd fonts on sites like
+Find fonts on sites like
 
 - [Font Squirrel](http://www.fontsquirrel.com)
 - [Lost Types](http://losttype.com/)
