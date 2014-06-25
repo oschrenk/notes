@@ -92,9 +92,6 @@ Git format preferred
 - write in imperative, as if you were commanding (eg. write fix instead of fixed)
 - keep the log in a present tense (to be consistent with generated messages from commands like `git merge`)
 
-- Peter Hutterer: [On Commit Messages](http://who-t.blogspot.com/2009/12/on-commit-messages.html)
-- Erlang Team, [Writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
-
 Example
 
 	Explain the commit in the header with 50 chars max
@@ -113,13 +110,13 @@ Example
 
 	Fixes #32145
 
-Why write a good commit message? What are the benefits?
+**Why write a good commit message? What are the benefits?**
 
 - speed up the reviewing process
 - help us write good release notes
 - help future maintainers explain your intentions about code changes
 
-##### On Past/Present tense / imperative mood of commit messages #####
+** On Past/Present tense / imperative mood of commit messages **
 
 There are many threads on stackexchange. A very good answer discussing the why and when can be found [here](http://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages#8059167)
 
@@ -141,6 +138,9 @@ In summary: Your project should almost always use the past tense.
 
 - Use the style of the project if working on OpenSource
 - Use **present tense**. I like the idea of describing the intended change of a commit. It fits my way of thinking since I started working with Git. I also think that using DVCS is the way to go.
+
+
+[#Thomakos:2011] [#Hutterer:2009] [#Erlang] [#Thompson:2013] [#Pope:2008]
 
 ### Architecture ###
 
@@ -390,7 +390,7 @@ Use [Semantic Versioning](http://semver.org/)
 - send emails based on time (after 1d, 1w, 1m)
 - send emails based on activity
 
-## Bibliography ##
+<!-- Bibliography -->
 
 [#Batchelder:2003]: Ned Batchelder. [Logging Style Guide](http://nedbatchelder.com/text/log-style-guide.html) 2003
 
@@ -406,8 +406,14 @@ Use [Semantic Versioning](http://semver.org/)
 
 [#Thoughtbot:2012]: [Thoughtbot, Guides, Code Review](https://github.com/thoughtbot/guides/blob/master/code-review/README.md)
 
+[#Thomakos:2011]: Pan Thomakos, [Proper git commit messages](http://ablogaboutcode.com/2011/03/23/proper-git-commit-messages-and-an-elegant-git-history/) 2011
 
-Pan Thomakos 2011 http://ablogaboutcode.com/2011/03/23/proper-git-commit-messages-and-an-elegant-git-history/
-Caleb Thompson 2013, http://robots.thoughtbot.com/post/48933156625/5-useful-tips-for-a-better-commit-message
-http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+[#Hutterer:2009]: Peter Hutterer, [On Commit Messages](http://who-t.blogspot.com/2009/12/on-commit-messages.html) 2009
+
+[#Erlang]: Erlang Team, [Writing good commit messages](https://github.com/erlang/otp/wiki/Writing-good-commit-messages)
+
+[#Thompson:2013]: Caleb Thompson, [5 Useful tips for better commit messages](http://robots.thoughtbot.com/post/48933156625/5-useful-tips-for-a-better-commit-message), 2013
+
+[#Pope:2008]: Tim Pope, [A note about commit messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html) 2008
+
 
