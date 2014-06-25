@@ -1,14 +1,19 @@
 # Company #
 
-Why are you writing code
-Because performance is bad
-arialdo martini
-Boyscout rules
+Process
 
-Coda Hale Business Value > Money
-http://arialdomartini.wordpress.com/2012/09/03/pre-emptive-commit-comments/
-http://arialdomartini.wordpress.com/2012/09/03/pre-emptive-commit-comments/#more-1798
-http://www.management-issues.com/news/6763/enough-about-leadership-its-time-to-remember-how-to-be-a-good-manager/
+## Process ##
+
+Have a
+
+- Definition of Done
+- Definition of Ready
+
+Ask yourself "Why are you writing (new) code?"
+
+- you want to create?
+- performance is bad?
+- because it is creating business value and therefore money?
 
 ## Code ##
 
