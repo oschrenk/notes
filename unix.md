@@ -62,15 +62,15 @@ It doesn’t stop there. If you like to move around in your command more quickly
 
 `find` has a complex filtering syntax all of its own; the following examples show some of the most useful filters you can apply to retrieve lists of certain files:
 
-- `find -name '*.c'` Find files with names matching a shell-style pattern. Use `-iname` for a case-insensitive search.
-- `find -path '*test*'` Find files with paths matching a shell-style pattern. Use `-ipath` for a case-insensitive search.
-- `find -mtime -5` Find files edited within the last five days. You can use `+5` instead to find files edited before five days ago.
-- `find -newer server.c` Find files more recently modified than `server.c`.
-- `find -type d` Find directories. For files, use `-type f`; for symbolic links, use `-type l`.
+- `find . -name '*.c'` Find files with names matching a shell-style pattern. Use `-iname` for a case-insensitive search.
+- `find . -path '*test*'` Find files with paths matching a shell-style pattern. Use `-ipath` for a case-insensitive search.
+- `find . -mtime -5` Find files edited within the last five days. You can use `+5` instead to find files edited before five days ago.
+- `find . -newer server.c` Find files more recently modified than `server.c`.
+- `find . -type d` Find directories. For files, use `-type f`; for symbolic links, use `-type l`.
 
 You can combine these to get even more powerful filters, for example a filter that shows C source code edited in the last two days.
 
-	$ find -name '*.c' -mtime -2
+	$ find . -name '*.c' -mtime -2
 
 ### Searching in files ###
 
