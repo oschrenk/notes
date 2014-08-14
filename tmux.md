@@ -2,7 +2,7 @@
 
 `tmux` lets you run numerous TTY’s (_TeleTYpewriter_) in the same terminal window. You can run multiple _panes_ in a single window, easily configuring the layout and switching between them.
 
-Installation
+*Installation*
 
 	brew install tmux
 
@@ -37,10 +37,26 @@ One of the most powerful features tmux offers is the ability to split up your cu
 - `Ctrl-b {` (Move the current pane left)
 - `Ctrl-b }` (Move the current pane right)
 
-Now some obviously the default bindings don’t encompass some of features, such as splitting horizontally. I personally rebind the keys so `|` splits the current window vertically, and `-` splits it horizontally. Not the easiest things to type, though easy to remember.
+Now some obviously the default bindings don't encompass some of features, such as splitting horizontally. I personally rebind the keys so `|` splits the current window vertically, and `-` splits it horizontally. Not the easiest things to type, though easy to remember.
 
 You can achieve this by putting the following in `~/.tmux.conf` or by typing it in the interactive prompt (`Ctrl-b :`). Keep in mind if you do the latter it will only be in effect for that session:
 
 	unbind %
 	bind | split-window -h
 	bind – split-window -v
+
+## Other things
+
+### Reloading configuration ###
+
+You can reload the configuration with the source-file command. This can be done either from within tmux, by pressing `Ctrl+b` and then `: to bring up a command prompt, and typing
+
+```
+:source-file ~/.tmux.conf
+```
+
+Or simply from a shell:
+
+```shell
+$ tmux source-file ~/.tmux.conf
+```
