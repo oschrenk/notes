@@ -6,7 +6,6 @@
 
 Install via
 
-	brew pull 6088
 	brew install mp3splt
 
 Usage:
