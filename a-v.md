@@ -21,6 +21,11 @@ Time format:
 
 	minutes.seconds[.hundredths] or EOF-minutes.seconds[.hundredths]
 
+### Splitting m4a files
+
+  brew install mp4box
+  MP4Box -split-chunk 17.5:204.6 input.m4a
+
 ### Joining flac files ###
 
 	brew install shntool
