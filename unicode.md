@@ -4,6 +4,7 @@
 - [Graphemica](http://graphemica.com/) Search unicode characters
 - [Shapecatcher](http://shapecatcher.com/) Find unicode characters by drawing them
 - [Charbase](http://www.charbase.com/) A visual unicode database
+- [notonyourkeyboard](http://notonyourkeyboard.com/) A list ofcharacters that aren't on your keyboard
 - [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
 
 **Typography**
