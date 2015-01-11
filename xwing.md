@@ -1,24 +1,8 @@
 # X-Wing
 
-## Inventory
-
-2 Core Sets
-1 B-Wing
-1 E-Wing
-1 Y-Wing
-1 Millenium Falcon
-1 Tie-Advanced
-1 Tie-Fighter
-1 Phantom
-1 Defender
-1 Interceptor
-1 Slave 1
-
-## Lists
+### Rebel Squads
 
 ### 60 points
-
-### Rebel Squads
 
 1 Han Solo - Millennium Falcon (46)
   - Millennium Falcon (1)
@@ -59,7 +43,21 @@
 1 Ibtisam - B-wing (28)
   - Heavy Laser Cannon (7)
 
-### Imperial Squads
+### 100 Points
+
+1 Horton Salm - Y-wing (25)
+  - R7-T1 (3)
+  - Proton Torpedoes (4)
+  - Munitions Failsafe (1)
+1 Etahn A'baht - E-wing (32)
+  - Outmaneuver (3)
+1 Biggs Darklighter - X-wing (25)
+  - R5-D8 (3)
+  - Shield Upgrade (4)
+
+## Imperial Squads
+
+### 60 points
 
 2 Academy Pilot - TIE Fighter (12)
 
@@ -91,22 +89,6 @@
 1 Winged Gundark - TIE Fighter (15)
 
 ## 100 points
-
-### Rebel Squads
-
-1 Horton Salm - Y-wing (25)
-  - R7-T1 (3)
-  - Proton Torpedoes (4)
-  - Munitions Failsafe (1)
-1 Etahn A'baht - E-wing (32)
-  - Outmaneuver (3)
-1 Biggs Darklighter - X-wing (25)
-  - R5-D8 (3)
-  - Shield Upgrade (4)
-
----
-
-### Imperial Squads
 
 1 Kath Scarlet - Slave 1 (38)
   - Autoblaster (5)
