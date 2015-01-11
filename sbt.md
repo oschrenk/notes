@@ -129,6 +129,23 @@ You can also pass arguments for individual runs by placing them after `--`, like
 
 	> test-only org.acme.RedSuite -- -oD
 
+### java.lang.OutOfMemoryError: PermGen space ###
+
+When compiling compiler-interface for Scala 2.10.1-RC3 using sbt I got
+
+	[info] 'compiler-interface' not yet compiled for Scala 2.10.1-RC3. Compiling...
+	sbt appears to be exiting abnormally.
+	  The log file for this session is at /var/folders/ld/w3p3zcjj4j10q_wnw_vt7rm40000gp/T/sbt3740649230551384318.log
+	java.lang.OutOfMemoryError: PermGen space
+
+	Error during sbt execution: java.lang.OutOfMemoryError: PermGen space
+
+Scala needs a lot of memory
+
+	echo "export SBT_OPTS=-XX:MaxPermSize=256M" > $HOME/.sbtconfig
+
+helped.
+
 ## Sources ##
 
 - [scala-sbt.org/docs](http://www.scala-sbt.org/0.12.4/docs/)
