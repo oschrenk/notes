@@ -47,7 +47,7 @@
 - `⏏` - `&#x23CF;` - `&#9167;` - the Eject symbol
 - `␣` - `&#x2423;` - `&#9251;` - Space (`Open Box`)
 - `←`- `&#x2190;` - `&#8592;` - `Leftwards Arrow`
-- `↑`- `&#x2191;` - `&#8593;`q - `Upwards Arrow`
+- `↑`- `&#x2191;` - `&#8593;` - `Upwards Arrow`
 - `→`- `&#x2192;` - `&#8594;` - `Rightwards Arrow`
 - `↓`- `&#x2193;` - `&#8595;` - `Downwards Arrow`
 
