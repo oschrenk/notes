@@ -2,17 +2,19 @@
 
 `tmux` lets you run numerous TTY’s (_TeleTYpewriter_) in the same terminal window. You can run multiple _panes_ in a single window, easily configuring the layout and switching between them.
 
-Installation
+*Installation*
 
 	brew install tmux
 
 ## Default keybindings & Functionality ##
 
-The default keybindings for tmux are actually pretty intuitive, though if you’re used to screen you’ll likely get a little peeved with the default action binding of C-b, though this is easily changed to mimic screens behavior:
+You can interact with `tmux` by pressing the `prefix` keyboard shortcut and then issuing a command. By default this prefix is `Ctrl+b`. For me `Ctrl+t` feels more natural to remember.
 
-*NOTE* If you’re like me the Ctrl-b binding isn’t horribly intuitive especially if you’re used to screen. You can rebind this by putting the following in ~/.tmux.conf:
+You can rebind this by putting the following in `~/.tmux.conf`:
 
-	set -g prefix Ctrl-a
+	set -g prefix Ctrl-t
+
+Some of the most used commands:
 
 - `Ctrl-b c` Create new window
 - `Ctrl-b d` Detach current client
@@ -21,7 +23,8 @@ The default keybindings for tmux are actually pretty intuitive, though if you’
 - `Ctrl-b p` Move to the previous window
 - `Ctrl-b &` Kill the current window
 - `Ctrl-b ,` Rename the current window
-- `Ctrl-b %` Split the current window into two panes
+- `Ctrl-b %` Split the window vertically
+- `Ctrl-b :` Split the window horizontally
 - `Ctrl-b q` Show pane numbers (used to switch between panes)
 - `Ctrl-b o` Switch to the next pane
 - `Ctrl-b ?` List all keybindings
@@ -30,17 +33,32 @@ The default keybindings for tmux are actually pretty intuitive, though if you’
 
 One of the most powerful features tmux offers is the ability to split up your current window into “panes”. Anyone whose familiar with tiling windows managers will feel quite at home.
 
-- `Ctrl-b %` (Split the window vertically)
-- `Ctrl-b :` “split-window” (Split window horizontally)
-- `Ctrl-b o` (Goto next pane)
-- `Ctrl-b q` (Show pane numbers, when the numbers show up type the key to goto - that pane)
-- `Ctrl-b {` (Move the current pane left)
-- `Ctrl-b }` (Move the current pane right)
+- `Ctrl-b %` Split window vertically
+- `Ctrl-b :` Split window horizontally
+- `Ctrl-b o` Goto next pane
+- `Ctrl-b q` Show pane numbers, when the numbers show up type the key to goto - that pane
+- `Ctrl-b {` Move the current pane left
+- `Ctrl-b }` Move the current pane right
 
-Now some obviously the default bindings don’t encompass some of features, such as splitting horizontally. I personally rebind the keys so `|` splits the current window vertically, and `-` splits it horizontally. Not the easiest things to type, though easy to remember.
-
-You can achieve this by putting the following in `~/.tmux.conf` or by typing it in the interactive prompt (`Ctrl-b :`). Keep in mind if you do the latter it will only be in effect for that session:
+I personally rebind the keys so `|` splits the current window vertically, and `-` splits it horizontally. You can achieve this by putting the following in `~/.tmux.conf`
 
 	unbind %
 	bind | split-window -h
+	unbind :
 	bind – split-window -v
+
+## Other things
+
+### Reloading configuration ###
+
+You can reload the configuration with the source-file command. This can be done either from within tmux, by pressing the prefix shortcut and then `:` to bring up a command prompt, and typing
+
+```
+:source-file ~/.tmux.conf
+```
+
+Or simply from a shell:
+
+```shell
+$ tmux source-file ~/.tmux.conf
+```

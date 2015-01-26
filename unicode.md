@@ -4,6 +4,7 @@
 - [Graphemica](http://graphemica.com/) Search unicode characters
 - [Shapecatcher](http://shapecatcher.com/) Find unicode characters by drawing them
 - [Charbase](http://www.charbase.com/) A visual unicode database
+- [notonyourkeyboard](http://notonyourkeyboard.com/) A list ofcharacters that aren't on your keyboard
 - [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
 
 **Typography**
@@ -46,6 +47,10 @@
 - `⌽` - `&#x233D;` - `&#9021;` - a possible substitute for the Power symbol
 - `⏏` - `&#x23CF;` - `&#9167;` - the Eject symbol
 - `␣` - `&#x2423;` - `&#9251;` - Space (`Open Box`)
+- `←`- `&#x2190;` - `&#8592;` - `Leftwards Arrow`
+- `↑`- `&#x2191;` - `&#8593;`q - `Upwards Arrow`
+- `→`- `&#x2192;` - `&#8594;` - `Rightwards Arrow`
+- `↓`- `&#x2193;` - `&#8595;` - `Downwards Arrow`
 
 **Control Pictures Block**
 

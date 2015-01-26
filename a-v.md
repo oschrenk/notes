@@ -6,7 +6,6 @@
 
 Install via
 
-	brew pull 6088
 	brew install mp3splt
 
 Usage:
@@ -21,6 +20,11 @@ Which pumps out the named files into the same directory
 Time format:
 
 	minutes.seconds[.hundredths] or EOF-minutes.seconds[.hundredths]
+
+### Splitting m4a files
+
+  brew install mp4box
+  MP4Box -split-chunk 17.5:204.6 input.m4a
 
 ### Joining flac files ###
 
