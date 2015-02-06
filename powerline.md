@@ -1,7 +1,6 @@
 # Powerline #
 
-- [powerline](https://github.com/Lokaltog/powerline)
-- [powerline-bash](https://github.com/milkbikis/powerline-bash)
+- [powerline](https://github.com/powerline/powerline)
 
 I used a patched version of Menlo for Powerline from [here](https://gist.github.com/1595572) and used it with [bash-powerline](https://github.com/milkbikis/powerline-bash) but the glyphs in powerline for vim are broken despite having the font set in my `.vimrc`
 
