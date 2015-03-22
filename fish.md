@@ -59,6 +59,13 @@ Expressions can be grouped using parentheses.
 
 - `( EXPRESSION )` returns the value of `EXPRESSION`.
 
- Note that parentheses will usually require escaping with `\(` to avoid being interpreted as a command substitution.
+Note that parentheses will usually require escaping with `\(` to avoid being interpreted as a command substitution.
 
+Parentheses and the `-o` and `-a` operators can be combined to produce more complicated expressions. In this example, success is printed if there is a `/foo` or `/bar` file as well as a `/baz` or `/bat` file.
+
+```
+if test \( -f /foo -o -f /bar \) -a \( -f /baz -o -f /bat \)
+    echo Success.
+end.
+```
 
