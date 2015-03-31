@@ -1,8 +1,19 @@
 # iPhone #
 
-[Dimensional Drawings of all mobile devices](https://developer.apple.com/resources/cases/)
+## Privacy Settings
+
+- Spotlight Search
+- Disable location services
+- do not track
+- block cookies
+- private surfing
+- switch search engine
+- limit ad tracking
+- disconnect kids
 
 ## Measurements ##
+
+[Dimensional Drawings of all mobile devices](https://developer.apple.com/resources/cases/)
 
 The hit-region of a user interface element is recommended to be 44×44 pixels
 
