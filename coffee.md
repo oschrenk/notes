@@ -52,6 +52,24 @@ pour 30 seconds, 160gr of 80 degree
 wait 30 seconds
 Press
 
+#### Hungarian
+
+1st place:  Szabolcs Schubert (Madal Cafe, Budapest)
+2nd place: Gergő Horvath (Madal Cafe, Budapest)
+3rd place:  Levente Onczay
+
+Judges: Sandor Toth / Adam Torok / Gergely Boross
+Szabolcs Schubert’s winning recipe:
+– 16,5g coffee
+– Grind: Guatemala 5 – 5,5 setting
+– 85c water
+– water: Norda
+– standard method
+– 40g water, 25 seconds blooming, stir 10 times
+– 190g water pouring until 1:10 while making sure that it circulates within the AeroPress as much as possible
+– Stir again between 1:10 and 1:25
+– Press slowly with minimum pressure until 2:40
+
 #### Japan
 
 ##### 1 Tetsu Kasuya of COFFEE FACTORY (Champion)
