@@ -52,6 +52,45 @@ pour 30 seconds, 160gr of 80 degree
 wait 30 seconds
 Press
 
+#### Mexico
+
+Ben Richardson, Pablo & Rustys
+
+20g / 225g / 64 & 80c
+
+- RO water charged at 74 degress
+- 20g of sorted coffee in standard position
+- 50g water 30sec bloom
+- add 110g more water
+- plunge slow at :55 for a 1:15 stop, leave some slurry
+- add 65g of water at 80 degrees for 1.4 brew strength
+- hold temp by covering then aerate at last minute before serving
+
+
+2nd place Joseph Liu, Hunch
+
+18,7g /250g / 76-79c
+
+- Aim to produce a brew with sweet yellow peach, apple acidity, hint of begamot, slightly flora jasmine and black tea
+- Non-inverted Method
+- 18.6-18.7g sieved and sorted Ethiopian Duromina coffee (meaning improve people's lives)
+- 250g soft mineral at 76-79 degrees on the night (originally 80 degrees at home in Melbourne) - 55g 40s bloom
+- Press very slowly
+- 2:45 total time
+- Wash cup and serve
+
+3rd place Mac Dixon, Auction Rooms
+
+22,5g / 255g / 97c
+
+- Inverted method 22.5g coffee
+- Course grind Slow pour 125g water over 15 seconds
+- water at 97 Degrees
+- Stir for 20 seconds Steep for 30 seconds
+- Push slowly over 25 seconds
+- Dilute concentrate with 130g water at 97 Degrees
+- Stir and serve.
+
 #### Hungarian
 
 1st place:  Szabolcs Schubert (Madal Cafe, Budapest)
