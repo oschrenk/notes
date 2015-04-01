@@ -94,6 +94,51 @@ Add another 50 grams of water within 30 seconds, and add the 2 grams of fines
 Add the remaining 100 grams quickly, and wait until one minute
 Set over server and press slowly for 50 seconds
 
+### World Championship, 2014
+
+
+1st: Shuichi Sasaki (Paul Bassett Coffee) – 2014 Japanese Aeropress Champion
+-----------------
+
+Brewing Method: Traditional
+Coffee Volume: 16.5 Grams
+Coffee Grind: Medium Coarse, EK43 Grind at 9.5
+Water Volume: 250 mL
+
+Total Time: 120 s
+
+0. Rinse normal paper filter, in standard position.
+1. 40g of blooming water for 25 seconds,
+2. stir 5 times.
+3. 20s pour adding 210g of water, stir once.
+4. Plunge very slowly for 75 seconds.
+5. Leave 45g
+
+2nd Place: Martin Karabiňoš, Dublin Cafe, Slovakia
+-----------------
+
+Brewing Method: Traditional
+Coffee Volume: 18.5 Grams
+Coffee Grind: 6.2 EK
+Water Volume: 80ml + 135ml
+
+
+80g of water at 35C for 3 minutes, stir well and close AeroPress.
+135g of water at 92C, stir once and push slowly for 30 seconds.
+
+
+
+3rd. Jeff Verellen (CaffeNation) – 2014 Belgium Aeropress Champion
+--------------
+Picking: unripes, too big, too small, ears.
+Grind: setting 8 on EK
+Sieving: using sowden softbrew filter, banging and shaking it to get rid if the superfines. You can also lose some of the chaff this way.
+Water: spa blue, soft 33 dry rest mineral water, ph 6.6.
+17,5gr ground coffee.
+30 second soft bloom, at 82c, wet all the grounds nice and even, shake lightly around if not arounds 40gr water.
+1 minute extremely slow pour, 230gr water, at 76c
+30 second soft plunge.
+
 ## Resources
 
 http://worldaeropresschampionship.com/
