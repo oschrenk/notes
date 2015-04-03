@@ -2,15 +2,15 @@
 
 ## Grinding
 
-
-I have to correct one of my posts. I have written:
 "The Handground works with 125microns per step. The regular espresso range start at 400 microns and ends at 800 microns. This means that 2 or maybe 3 of the grindings settings for the handground are espresso settings."
 The burr cone is moving by 125microns with each step. In fact this is not the same as saying that the grind size is chaning by 125microns because we are looking at conical burrs, not flat ones. In fact the grind size would change by 125*f microns, where f is:
 f = sqrt[1/(1+(2H/(D_2-D_1))^2)]
 H = height of the burr cone
 D_2 = lower diameter of the burr cone
 D_1 = upper diameter of the burr cone
-Are the exact measurements of the burr cone used in the handground availabe somewhere? I would love to calculate the correct grind levels and compare them to the following general list:
+
+There are general recommendations about the burr cone settings.
+
 - Turkish (approx. 100 microns)
 - Mokka (approx. 200 microns)
 - Espresso (approx. 300 microns)
@@ -22,11 +22,11 @@ Are the exact measurements of the burr cone used in the handground availabe some
 
 ## Aeropress
 
-### Recipes from the 2015 Aeropress Championship
+### Recipes
 
-#### Dutch
+#### Dutch 2015 Aeropress Championship
 
-1: Floris van der Burg
+##### 1st place: Floris van der Burg
 
 19 gram koffie
 200 ml water
@@ -34,7 +34,7 @@ Bloom de koffie koud met 30 gram water van 15 graden, 2 minuten
 Schenk in 30 seconden 160 gram water op van 72 graden
 Wacht 30 seconden en druk de koffie in 30 seconden door.
 
-2: Mieke Boden
+##### 2nd place: Mieke Boden
 
 Door hoog te doseren en grof te malen heb ik geprobeerd zo veel mogelijk fruit uit de koffie te halen en een chocolade explosie op het eind te krijgen.
 23.6 gram koffie, grof gemalen
@@ -42,7 +42,7 @@ Schenk water van 74 graden op de koffie
 Gebruik twee papieren filters
 Doe dit in totaal 1.45 minuten
 
-3. Francesco Graccoti
+##### 3rd place: Francesco Graccoti
 
 20grams, fines sifted
 inverted
@@ -52,9 +52,10 @@ pour 30 seconds, 160gr of 80 degree
 wait 30 seconds
 Press
 
-#### Mexico
+#### Mexican 2015 Aeropress Championship
 
-Ben Richardson, Pablo & Rustys
+
+##### 1st place: Ben Richardson, Pablo & Rustys
 
 20g / 225g / 64 & 80c
 
@@ -67,7 +68,7 @@ Ben Richardson, Pablo & Rustys
 - hold temp by covering then aerate at last minute before serving
 
 
-2nd place Joseph Liu, Hunch
+##### 2nd place: Joseph Liu, Hunch
 
 18,7g /250g / 76-79c
 
@@ -79,7 +80,7 @@ Ben Richardson, Pablo & Rustys
 - 2:45 total time
 - Wash cup and serve
 
-3rd place Mac Dixon, Auction Rooms
+##### 3rd place: Mac Dixon, Auction Rooms
 
 22,5g / 255g / 97c
 
@@ -91,7 +92,8 @@ Ben Richardson, Pablo & Rustys
 - Dilute concentrate with 130g water at 97 Degrees
 - Stir and serve.
 
-#### Hungarian
+#### Hungarian 2015 Aeropress Championship
+
 
 1st place:  Szabolcs Schubert (Madal Cafe, Budapest)
 2nd place: Gergő Horvath (Madal Cafe, Budapest)
@@ -109,7 +111,8 @@ Szabolcs Schubert’s winning recipe:
 – Stir again between 1:10 and 1:25
 – Press slowly with minimum pressure until 2:40
 
-#### Japan
+#### Japanese 2015 Aeropress Championship
+
 
 ##### 1 Tetsu Kasuya of COFFEE FACTORY (Champion)
 
@@ -151,8 +154,7 @@ Add another 50 grams of water within 30 seconds, and add the 2 grams of fines
 Add the remaining 100 grams quickly, and wait until one minute
 Set over server and press slowly for 50 seconds
 
-### World Championship, 2014
-
+### 2014 Aeropress World Championship
 
 1st: Shuichi Sasaki (Paul Bassett Coffee) – 2014 Japanese Aeropress Champion
 -----------------
@@ -179,11 +181,8 @@ Coffee Volume: 18.5 Grams
 Coffee Grind: 6.2 EK
 Water Volume: 80ml + 135ml
 
-
 80g of water at 35C for 3 minutes, stir well and close AeroPress.
 135g of water at 92C, stir once and push slowly for 30 seconds.
-
-
 
 3rd. Jeff Verellen (CaffeNation) – 2014 Belgium Aeropress Champion
 --------------
