@@ -164,3 +164,14 @@ use `~` if you want to replace, sort of like `$` in a shell script
 ```
 let [[head & tail] coll]]
 ```
+
+## Resources
+
+http://www.braveclojure.com/
+
+http://blog.juxt.pro/posts/course-notes.html
+http://clojure-doc.org/articles/tutorials/growing_a_dsl_with_clojure.html
+
+## Libraries
+
+https://github.com/cgrand/enlive
