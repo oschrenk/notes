@@ -171,6 +171,8 @@ http://www.braveclojure.com/
 
 http://blog.juxt.pro/posts/course-notes.html
 http://clojure-doc.org/articles/tutorials/growing_a_dsl_with_clojure.html
+http://wtfleming.github.io//2015/04/15/adventures-with-core-async-part-one-channels-messages
+http://www.alexeberts.com/exploring-the-clojurescript-repl/
 
 ## Libraries
 
