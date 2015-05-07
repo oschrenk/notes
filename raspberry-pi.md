@@ -1,6 +1,10 @@
 # Raspberry Pi #
 
+Find your Pi on the network
 
+```
+sudo nmap -sP 192.168.11.0/24 | awk '/^Nmap/{ip=$NF}/B8:27/{print ip}'
+```
 
 ## Hardware ##
 
