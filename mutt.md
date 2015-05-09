@@ -51,11 +51,11 @@ end if build.with? "sidebar-patch"
 
 Then install `mutt` with
 
-TODO explain patches
-
 ```
 brew install mutt --with-sidebbar-patch --with-confirm-attachment-patch --with-s-lang
 ```
+
+
 
 ## Configuration
 
@@ -64,6 +64,113 @@ brew install mutt --with-sidebbar-patch --with-confirm-attachment-patch --with-s
 ```
 touch ~/.offlineimaprc
 ```
+
+Edit the file and add
+
+```
+[general]
+ui = TTY.TTYUI
+accounts = platzhaltr
+pythonfile=~/.mutt/offlineimap.py
+fsync = False
+
+[Account platzhaltr]
+localrepository = platzhaltr-local
+remoterepository = platzhaltr-remote
+status_backend = sqlite
+postsynchook = notmuch new
+
+[Repository platzhaltr-local]
+type = Maildir
+localfolders = ~/.mail/platzhaltr
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail',
+                            }.get(folder, folder)
+
+[Repository platzhaltr-remote]
+maxconnections = 1
+type = Gmail
+remoteuser = oliver.schrenk@platzhaltr.com
+remotepasseval = get_keychain_pass(account="oliver.schrenk@platzhaltr.com", server="imap.gmail.com")
+realdelete = no
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'flagged',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive',
+                            }.get(folder, folder)
+```
+
+Then we need to create `.mutt/offlineimap.py`
+
+```
+mkdir ~/.mutt/
+touch ~/.mutt/offlineimap.py
+```
+
+Edit this file
+
+```python
+#!/usr/bin/python
+
+import re, subprocess
+
+def get_keychain_pass(account=None, server=None):
+    params = {
+        'security': '/usr/bin/security',
+        'command': 'find-internet-password',
+        'account': account,
+        'server': server,
+        'keychain': '/Users/`whoami`/Library/Keychains/login.keychain',
+    }
+
+    command = "sudo -u `whoami` %(security)s -v %(command)s -g -a %(account)s -s %(server)s %(keychain)s" %params
+    output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)
+    outtext = [l for l in output.splitlines()
+                     if l.startswith('password: ')][0]
+
+    return re.match(r'password: "(.*)"', outtext).group(1)
+```
+
+Create a directory for `platzhalter`
+
+```
+mkdir -p ~/.mail/platzhaltr
+```
+
+Create passwords in your keychain
+
+```
+security add-generic-password -U -s "imap.gmail.com" -a "oliver.schrenk@platzhaltr.com" -w "password" "/Users/oliver/Library/Keychains/login.keychain"
+security add-generic-password -U -s "smtp.gmail.com" -a "oliver.schrenk@platzhaltr.com" -w "password" "/Users/oliver/Library/Keychains/login.keychain"
+
+```
+
+You need certificate. Any dummy will do
+
+http://mercurial.selenic.com/wiki/CACertificates#Mac_OS_X_10.6_and_higher
+
+```
+openssl req -new -x509 -extensions v3_ca -keyout /dev/null -out dummycert.pem -days 3650
+cp dummycert.pem ~/.mutt/dummycert.pem
+```
+
+You need to setup notmuch
+
+```
+notmuch setup
+```
+
+which creates `~/.notmuch-config`
+
+Create `/User/oliver/.mail`
+
+```
+mkdir ~/.mail
+
 
 
 ## Resources
