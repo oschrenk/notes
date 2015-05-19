@@ -190,3 +190,10 @@ http://www.maclife.com/article/columns/terminal_101_using_mutt_email_client
 http://garbage.world/posts/email/
 http://baptiste-wicht.com/posts/2014/07/a-mutt-journey-download-mails-with-offlineimap.html
 https://wiki.archlinux.org/index.php/OfflineIMAP
+
+Mutt for exchange
+- https://gist.github.com/dapplebeforedawn/8778724
+
+ical inivitations for mutt
+https://github.com/marvinthepa/mutt-ical
+
