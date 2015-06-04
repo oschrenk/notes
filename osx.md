@@ -166,6 +166,20 @@ Second column is process id
 
     $ sudo kill -15 <pid>
 
+### Recurring popup asking to accept incoming network connections
+
+From
+
+- http://apple.stackexchange.com/questions/3271/how-to-get-rid-of-firewall-accept-incoming-connections-dialog
+- http://superuser.com/questions/100013/why-does-the-mac-os-x-firewall-dialog-recurringly-pop-up-and-disappear-by-itself
+
+What helped was to codesign myself
+
+```
+sudo codesign --force --deep --sign - /path/to/application.app/
+```
+
+
 ## Report problems ##
 
 Apple offers a [bug reporting tool](https://bugreport.apple.com/) whre you can submit your bugs.
