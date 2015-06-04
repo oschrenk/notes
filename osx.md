@@ -166,6 +166,6 @@ Second column is process id
 
     $ sudo kill -15 <pid>
 
-### Report problems ###
+## Report problems ##
 
 Apple offers a [bug reporting tool](https://bugreport.apple.com/) whre you can submit your bugs.
