@@ -178,3 +178,5 @@ http://www.alexeberts.com/exploring-the-clojurescript-repl/
 
 - [instaparse](https://github.com/Engelberg/instaparse) Build parsers
 - [enlive](https://github.com/cgrand/enlive) CSS selector engine
+- [thi.ng/color](https://github.com/thi-ng/color) Color conversion & manipulation
+- [geom](https://github.com/thi-ng/geom) 2D/3D geometry toolkit
