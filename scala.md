@@ -164,12 +164,16 @@ Traits resemble interfaces in Java, but are more powerful because they can conta
 	trait Planar {
 		def height: Int
 		def width: Int
-		def surface: height * width
+		def surface: Int = height * width
 	}
 
 Classes, objects and traits can inherit at most one class but arbitrary many traits.
 
 	class Square extends Shape with Planar with Movable
+
+Cannot have a constructor
+
+*Sealed traits* allow to enumerate all the possible classes that extend a trait and have the compiler warn if a pattern matching expression is missing a case. All subtypes have to be defined in the same file. The majority of cases should use the sealed trait pattern.
 
 #### Case class ####
 
