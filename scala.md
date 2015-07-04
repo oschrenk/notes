@@ -186,6 +186,10 @@ Cannot have a constructor
 
 Most of the time you declare a class as a case class because of point 1, i.e. to be able to do pattern matching on its instances. But of course you can also do it because of one of the other points.
 
+#### Case object ####
+
+- if you have a class without constructor arguments, you can define it as `case object`
+
 #### Companion Object ####
 
 A companion object is an object with the same name as a class or trait and is defined in the same source file as the associated file or trait.
