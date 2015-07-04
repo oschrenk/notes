@@ -16,6 +16,12 @@
 
 - Methods include parentheses if it has side effects
 
+### Companion objects
+
+- provide means to associate functionality with a class without associating it to a any instance
+- has same name as its associated class
+- must be defined in the same file
+
 ## Functional Programming ##
 
 - Functional languages treat functions a _first-class values_
