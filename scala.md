@@ -26,6 +26,7 @@
 
 - Functional languages treat functions a _first-class values_
 - Anonymous Functions are Syntactic Sugar.
+- *function application syntax* an object can be "called" like a function if it has the `apply` method
 
 ### Tail recursion ###
 
