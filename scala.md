@@ -3,7 +3,7 @@
 	brew install scala
 
 - [sbt](http://www.scala-sbt.org/) build tool for Scala and Java projects
-- [Scala IDE](http://scala-ide.org/). Eclipse Plugin ([Update Site](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) for Eclipse 4.2 and Scala 2.10)
+- [Scala IDE](http://scala-ide.org/) Eclipse Plugin
 
 ## Language ##
 
