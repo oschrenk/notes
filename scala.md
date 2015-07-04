@@ -190,6 +190,17 @@ Most of the time you declare a class as a case class because of point 1, i.e. to
 
 - if you have a class without constructor arguments, you can define it as `case object`
 
+#### Pattern matching ####
+
+- like an extended `if` expression that allows to evaluate an expression depending on the _shape_ of the data
+
+You can use different types of patterns to match against:
+
+- a name. Will match any value and bind it to the given name.
+- `_` (underscore), matches any value, and ignores it.
+- a literal
+- another cases class use constructor style syntax
+
 #### Companion Object ####
 
 A companion object is an object with the same name as a class or trait and is defined in the same source file as the associated file or trait.
