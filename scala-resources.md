@@ -5,3 +5,4 @@
 - [dlwh/puck](https://github.com/dlwh/puck) lightning-fast parser for natural languages using GPUsa
 - [dlwh/epic](https://github.com/dlwh/epic) performance statistical parser
 - [scopt/scopt](https://github.com/scopt/scopt) simple scala command line options parsing
+- [sameersingh/scalaplot](https://github.com/sameersingh/scalaplot) plot graphs with gnuplot as backend

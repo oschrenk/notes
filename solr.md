@@ -158,3 +158,6 @@ There are currently three cache implementations
 
 - used by Lucene
 - not conifurable
+
+
+http://engineering.bloomreach.com/solr-compute-cloud-an-elastic-solr-infrastructure/

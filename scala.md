@@ -3,7 +3,7 @@
 	brew install scala
 
 - [sbt](http://www.scala-sbt.org/) build tool for Scala and Java projects
-- [Scala IDE](http://scala-ide.org/). Eclipse Plugin ([Update Site](http://download.scala-ide.org/sdk/e38/scala210/dev/site/) for Eclipse 4.2 and Scala 2.10)
+- [Scala IDE](http://scala-ide.org/) Eclipse Plugin
 
 ## Language ##
 
@@ -16,10 +16,17 @@
 
 - Methods include parentheses if it has side effects
 
+### Companion objects
+
+- provide means to associate functionality with a class without associating it to a any instance
+- has same name as its associated class
+- must be defined in the same file
+
 ## Functional Programming ##
 
 - Functional languages treat functions a _first-class values_
 - Anonymous Functions are Syntactic Sugar.
+- *function application syntax* an object can be "called" like a function if it has the `apply` method
 
 ### Tail recursion ###
 
@@ -157,12 +164,16 @@ Traits resemble interfaces in Java, but are more powerful because they can conta
 	trait Planar {
 		def height: Int
 		def width: Int
-		def surface: height * width
+		def surface: Int = height * width
 	}
 
 Classes, objects and traits can inherit at most one class but arbitrary many traits.
 
 	class Square extends Shape with Planar with Movable
+
+Cannot have a constructor
+
+*Sealed traits* allow to enumerate all the possible classes that extend a trait and have the compiler warn if a pattern matching expression is missing a case. All subtypes have to be defined in the same file. The majority of cases should use the sealed trait pattern.
 
 #### Case class ####
 
@@ -174,6 +185,21 @@ Classes, objects and traits can inherit at most one class but arbitrary many tra
 6. The `hashCode` method is automatically redefined to use the hashCodes of constructor arguments.
 
 Most of the time you declare a class as a case class because of point 1, i.e. to be able to do pattern matching on its instances. But of course you can also do it because of one of the other points.
+
+#### Case object ####
+
+- if you have a class without constructor arguments, you can define it as `case object`
+
+#### Pattern matching ####
+
+- like an extended `if` expression that allows to evaluate an expression depending on the _shape_ of the data
+
+You can use different types of patterns to match against:
+
+- a name. Will match any value and bind it to the given name.
+- `_` (underscore), matches any value, and ignores it.
+- a literal
+- another cases class use constructor style syntax
 
 #### Companion Object ####
 
