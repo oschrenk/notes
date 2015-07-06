@@ -98,3 +98,13 @@ To split a movie
 To join videos
 
 	catmovie movie1.mov movie2.mov movie3.mov ‑self‑contained ‑o bigmovie.mov
+
+### Split mp4 movie
+
+First `--ss` quick seeks, second one mvoes accurately.
+
+    ffmpeg -ss 01:29:00 -i video.mp4 -ss 00:00:40 -t 00:0l:21 -c copy clip.mp4
+
+## Create gif
+
+    ffmpeg -i clip3.mp4 -s 600x400 -pix_fmt rgb24 -f gif - | gifsicle --optimize=3 --delay=3 > out.gif
