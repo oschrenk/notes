@@ -143,7 +143,7 @@ Runs **previous command but replacing all instances of foo with bar**
 
 `-l` means that only lines that match will be displayed
 
-**Batch rename files, replacing *foo* with *bar***
+**Batch rename files, replacing `foo` with `bar`**
 
     for file in *.*; do mv $file `echo $file | sed 's/bar/foo/g'` ; done
 
