@@ -42,7 +42,6 @@ Taken from [here](http://www.thegeekstuff.com/2009/06/15-practical-crontab-examp
 
 ## Twice a Day ##
 
-
 	00 11,16 * * * /home/ramesh/bin/incremental-backup
 
 This example executes the specified incremental backup shell script (incremental-backup) at 11:00 and 16:00 on every day. The comma separated value in a field specifies that the command needs to be executed in all the mentioned time.
@@ -53,6 +52,6 @@ This example executes the specified incremental backup shell script (incremental
 * `*` – Every month
 * `*` – Every day of the week
 
-## Every 10 Minutes ## ##
+## Every 10 Minutes ##
 
 	*/10 * * * * /home/ramesh/check-disk-space
