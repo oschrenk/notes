@@ -99,6 +99,37 @@ To join videos
 
 	catmovie movie1.mov movie2.mov movie3.mov ‑self‑contained ‑o bigmovie.mov
 
+### Delete audio track or subtitle or attachment from mkv
+
+First you have to list the content of the container
+
+    mkvmerge -i input.mkv
+    Track ID 0: video (MPEG-4p10/AVC/h.264)
+    Track ID 1: audio (AAC)
+    Track ID 2: audio (AAC)
+    Track ID 3: subtitles (SubRip/SRT)
+    Track ID 4: audio (AC-3/E-AC-3)
+    Track ID 5: audio (AC-3/E-AC-3)
+    Track ID 6: subtitles (SubStationAlpha)
+    Attachment ID 1: type 'text/plain', size 52 bytes, file name 'foo.txt'
+    Attachment ID 2: type 'image/jpeg', size 34832 bytes, file name 'title.jpg'
+    Attachment ID 3: type 'application/x-truetype-font', size 46037 bytes, file name 'font1.ttf'
+    Attachment ID 4: type 'application/x-truetype-font', size 76703 bytes, file name 'font2.ttf'
+
+You select the audio tracks to keep with a comma separated list
+
+    mkvmerge -o output.mkv --atracks 2,3 input.mkv
+
+You select the subtitles to remove with a comma separated list
+
+    mkvmerge -o output.mkv input.mkv --subtitle-tracks 3,4  # remove tracks 3 and 4
+    mkvmerge -o output.mkv input.mkv -s '!3'                # remove all subtitles except 3
+
+You select attachments to keep with a comma separated list
+
+    mkvmerge -o output.mkv input.mkv --attachments 3,4      # keep attachment 3 and 4
+    mkvmerge -o output.mkv input.mkv --no-attachments       # remove all attachments
+
 ### Split mp4 movie
 
 First `--ss` quick seeks, second one mvoes accurately.
