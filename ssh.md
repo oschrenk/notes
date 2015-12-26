@@ -76,7 +76,17 @@ You can easily change the passphrase of your key by calling
 
 ### Copy SSH key to server ###
 
-    cat ~/.ssh/id_rsa.pub | ssh account@remoteserver.com "cat - >> .ssh/authorized_keys"
+The best way is to rely on `ssh-copy-id`
+
+    ssh-copy-id <user>@<hostname>
+
+If the command does not exist, you can always try manually
+
+    cat ~/.ssh/id_rsa.pub | ssh <user>@<hostname> "cat - >> .ssh/authorized_keys"
+
+Which might fail, if `.ssh` directory doesn't exist. To create it on the fly and to give it sensible permission (`read-write` for owner only), try
+
+    cat ~/.ssh/id_rsa.pub | ssh <user>@<hostname> 'umask 0077; mkdir -p .ssh; cat >> .ssh/authorized_keys && echo "Key copied"'
 
 ### Verify SSH Host fingerprint ###
 
