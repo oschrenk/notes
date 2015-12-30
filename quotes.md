@@ -1,5 +1,8 @@
 # Quotes #
 
+“Don't blame others as an excuse for your not working hard enough.”
+- unknown
+
 > &#8220;The only way to get rid of a temptation is to yield to it.&#8221;
 
 Oscar Wilde, The Picture of Dorian Gray, 1891
