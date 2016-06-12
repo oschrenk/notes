@@ -40,7 +40,7 @@
 - `⌃` - `&#x2303;` - `&#8963;` - Control Key symbol, (`Up Arrowhead`)
 - `⌥` - `&#x2325;` - `&#8997;` - Option Key symbol
 - `⇧` - `&#x21E7;` - `&#8679;` - Shift Key
-- `⇪` - `&#x8681;` - the Caps Lock Key symbol
+- `⇪` - `&#x21E9;` - `&#8682;` - the Caps Lock Key symbol
 - `⎋` - `&#x238B;` - `&#9099;` - the Escape Key (`BROKEN CIRCLE WITH NORTHWEST ARROW`, or an escape character from ISO 9995-7).
 - `⏎` - `&#x23CE;` - `&#9166;` - the Return Key symbol
 - `⇥` - `&#x21E5;` - `&#8677;` - Tab forward, (`Rightwards Arrow To Bar`)
