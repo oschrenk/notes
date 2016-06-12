@@ -37,11 +37,13 @@
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
 - `` - `&#xF8FF;` - `&#63743;` - differs from OS to OS, on Mac its an Apple
 - `⌘` - `&#x2318;` - `&#8984;` - Command Key symbol
+- `⌃` - `&#x2303;` - `&#8963;` - Control Key symbol, (`Up Arrowhead`)
 - `⌥` - `&#x2325;` - `&#8997;` - Option Key symbol
 - `⇧` - `&#x21E7;` - `&#8679;` - Shift Key
 - `⇪` - `&#x8681;` - the Caps Lock Key symbol
 - `⎋` - `&#x238B;` - `&#9099;` - the Escape Key (`BROKEN CIRCLE WITH NORTHWEST ARROW`, or an escape character from ISO 9995-7).
 - `⏎` - `&#x23CE;` - `&#9166;` - the Return Key symbol
+- `⇥` - `&#x21E5;` - `&#8677;` - Tab forward, (`Rightwards Arrow To Bar`)
 - `⌫` - `&#x232B;` - `&#9003;` - the Delete Key symbol
 - `⌦` - `&#x2326;` - `&#8998;` - the Forward Delete Key symbol (`Erase To The Right`)
 - `⌽` - `&#x233D;` - `&#9021;` - a possible substitute for the Power symbol
