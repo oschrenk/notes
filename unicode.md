@@ -1,10 +1,10 @@
 # Characters #
 
-- [UniSearcher](http://www.isthisthingon.org/unicode/index.php) Search unicode characters
-- [Graphemica](http://graphemica.com/) Search unicode characters
-- [Shapecatcher](http://shapecatcher.com/) Find unicode characters by drawing them
-- [Charbase](http://www.charbase.com/) A visual unicode database
-- [notonyourkeyboard](http://notonyourkeyboard.com/) A list ofcharacters that aren't on your keyboard
+- [UniSearcher](http://www.isthisthingon.org/unicode/index.php) Search Unicode characters
+- [Graphemica](http://graphemica.com/) Search Unicode characters
+- [Shapecatcher](http://shapecatcher.com/) Find Unicode characters by drawing them
+- [Charbase](http://www.charbase.com/) A visual Unicode database
+- [notonyourkeyboard](http://notonyourkeyboard.com/) A list of characters that aren't on your keyboard
 - [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
 
 **Typography**
