@@ -58,6 +58,10 @@
 - `→`- `&#x2192;` - `&#8594;` - `Rightwards Arrow`
 - `↓`- `&#x2193;` - `&#8595;` - `Downwards Arrow`
 
+**Engineering symbols**
+
+- `⏻` - Power Symbol
+
 **Control Pictures Block**
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
