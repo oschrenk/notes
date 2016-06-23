@@ -1,4 +1,4 @@
-# Characters #
+# Unicode
 
 - [UniSearcher](http://www.isthisthingon.org/unicode/index.php) Search Unicode characters
 - [Graphemica](http://graphemica.com/) Search Unicode characters
@@ -7,7 +7,9 @@
 - [notonyourkeyboard](http://notonyourkeyboard.com/) A list of characters that aren't on your keyboard
 - [List of useful symbols](http://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols)
 
-**Typography**
+- [Great blog post](http://unicodepowersymbol.com/we-did-it-how-a-comment-on-hackernews-lead-to-4-%C2%BD-new-unicode-characters/) on how to create a proposal for new characters
+
+## Characters
 
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
 - `§` - `&#x00A7;` - `&#167;` - Section Sign
