@@ -11,6 +11,8 @@
 
 ## Characters
 
+**Typography**
+
 - `character` - Unicode (Hex) - Unicode (HTML) - Explanation
 - `§` - `&#x00A7;` - `&#167;` - Section Sign
 - `¶` - `&#x00B6;` - `&#182;` - Pilcrow Sign
