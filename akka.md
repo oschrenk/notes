@@ -1,16 +1,20 @@
 # Akka #
 
-	sealed trait CoffeeRequest
-	case object CappuccinoRequest extends CoffeeRequest
-	case object EspressoRequest extends CoffeeRequest
+## Recveiving messages
 
-	import akka.actor.Actor
-	class Barista extends Actor {
-	  def receive = {
-	    case CappuccinoRequest => println("I have to prepare a cappuccino!")
-	    case EspressoRequest => println("Let's prepare an espresso.")
-	  }
-	}
+```
+sealed trait CoffeeRequest
+case object CappuccinoRequest extends CoffeeRequest
+case object EspressoRequest extends CoffeeRequest
+
+import akka.actor.Actor
+class Barista extends Actor {
+  def receive = {
+    case CappuccinoRequest => println("I have to prepare a cappuccino!")
+    case EspressoRequest => println("Let's prepare an espresso.")
+  }
+}
+```
 
 First, we define the types of messages sent between actors. Typically, case classes are used to pass along any parameters. If all the actors needs is an unparameterized message, the message is typically represented as a case object.
 
