@@ -47,3 +47,12 @@ A message is delivered to the actors _mailbox_, basically a queue. The _dispatch
 The actor blocks the thread for as long as it takes to process the message. Lengthy operations therefore degrade overall performance, as all the other actors message processing have to be scheduled on one of the remaining threads.
 
 A core principle is therefore to spend as little time in your `Receive` function as possible and to avoid blocking code.
+
+## Supervisor
+
+There are two different supervisor strategies, the `OneForOneStrategy` and the `AllForOneStrategy`.
+
+- `OneForOneStrategy` Strategy only affects the worker where error originated
+- `AllForOneStrategy` Strategy will affect all child workers
+
+Choosing the former means that the way you want to deal with an error in one of your children will only affect the child actor from which the error originated, whereas the latter will affect all of your child actors. Which of those strategies is best depends a lot on your individual application.
