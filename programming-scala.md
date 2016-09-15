@@ -51,7 +51,7 @@ final case object BaseCase extends RecursiveExample
 
 Tail recursion
 
-You may be concerned that recursive calls will consume excessive stack space. Scala can apply an optimisation, called _tail recursion_ to stop them consuming stack space. A tail call is a methidcall where the caller immediately returns the value eg.
+You may be concerned that recursive calls will consume excessive stack space. Scala can apply an optimisation, called _tail recursion_ to stop them consuming stack space. A tail call is a method call where the caller immediately returns the value eg.
 
 ```
 def method1: Int = 1
@@ -62,3 +62,19 @@ Due to limitations of the JVM, Scala can only optimise tail calls where the call
 
 Any non-tail recursion function can be transformed into a tail recursive version by adding an accumulator. This transforms stack allocation into heap allocation, which sometimes is a win, sometimes its not.
 
+## Generics
+
+Generics allow us to **abstract over types**
+
+    case class Box[A](value: A)
+    Box(2) //if we omit type, Scala will infer
+    def generic[A](in: A): A = in
+    generic[String]("foo")
+    generic(1)
+
+The syntax `Box[A]` is called **type parameter**.
+
+
+## Functions
+
+Functions allow us to **abstract over method**, turning methods into values that can be passed around
