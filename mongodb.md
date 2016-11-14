@@ -1,3 +1,5 @@
+@mongo @shell
+
 # MongoDB #
 
 	brew install mongodb
@@ -54,3 +56,39 @@ You can directly connect to a database by issuing
 | `db.foo.drop()` |	drop the entire foo collection |
 | `db.foo.remove()` | remove all objects from the collection |
 | `db.foo.remove( { name : "sara" } )`	|	remove objects from the collection where name is sara |
+
+## Working with Mongo Shell
+
+*connecting to replica set*
+
+prefix a comma separated list of hosts with the name of the replica set
+
+```shell
+mongo --quiet -u readonly -p <pass> --host <rs_name>/<host1>:34339,<host2>:34332 my_db --eval 'db.collection_name.find({})'
+```
+
+*testing things*
+
+```shell
+test `mongo --quiet -u readonly -p <pass> --host <rs_name>/<host1>:34339,<host2>:34332 my_db --eval 'db.my_collection.find({creationDate: {$lt: new Date((new Date())-1000*60*60*24*14)}, "status": "Success"}).count() > 0' | grep -E '(true|false)'` = false
+```
+
+*querying things*
+
+Getting proper output with mongo shell is hard
+
+1. the shell limits your output to 20 documents
+2. it prints log output to stdout
+
+To solve (1) we wrap the query in a `printjson` statement, to solve (2) we silently curse at mongo and  just know that for our settings it prints 3 useless lines at the beginning and cut them off.
+
+```shell
+mongo --quiet -u readonly -p <pass> --host <rs_name>/<host1>:34339,<host2>:34332 my_db --eval 'printjson(db.my_collection.find({images: {"$exists": true}}, {images:1}).limit(40).toArray())' | tail -n +4 > images.json
+```
+
+For profit you can go on and filter out all urls (which ij this case requires [jq](https://stedolan.github.io/jq/)
+
+```shell
+cat images.json | jq '.[].images' | jq '.[]' | jq --raw-output '.url' > urls.txt
+```
+
