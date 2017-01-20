@@ -2,6 +2,17 @@
 
 ## Audio ##
 
+### Conversions
+
+`wav` to `mp3`
+
+    # qscale range is 0-9 where a lower value is a higher quality
+    ffmpeg -i input.wav -codec:a libmp3lame -qscale:a 2 output.mp3
+
+`wav` to `m4a`
+
+    ffmpeg -i joined.wav -acodec alac out.m4a
+
 ### Splitting Mp3 ###
 
 Install via
@@ -31,10 +42,6 @@ Time format:
 	brew install shntool
 	shntool join *.flac
 	flac -o out.flac joined.wav
-
-### convert wav to m4a
-
-	ffmpeg -i joined.wav -acodec alac out.m4a
 
 ### Extracting audio track ###
 
