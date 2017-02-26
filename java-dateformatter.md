@@ -1,5 +1,7 @@
 # DateTimeFormatter
 
+See also [List of patterns](http://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html#patterns)
+
 ```
  Symbol  Meaning                     Presentation      Examples
  ------  -------                     ------------      -------
