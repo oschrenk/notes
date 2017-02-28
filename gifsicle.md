@@ -1,3 +1,0 @@
-# gifsicle
-
-	brew install gifsicle
