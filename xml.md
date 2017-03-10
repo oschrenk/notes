@@ -1,5 +1,12 @@
 # XML
 
+## Pretty
+
+```
+# brew install xmlstarlet
+xmlstarlet format --indent-spaces 2
+```
+
 ## Useful XPATH expressions
 
 *Selecting distinct/unique attributes*
