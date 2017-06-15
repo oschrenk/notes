@@ -81,25 +81,6 @@ Useful plugins
 - [sbt-dirty-money](https://github.com/sbt/sbt-dirty-money) - clean your Ivy2 cache. If you use publish-local to test plugins
 - [sbt-release](https://github.com/sbt/sbt-release) - provides a customizable release process that you can add to your project.
 
-### Eclipse ###
-
-Use [sbteclipse](https://github.com/typesafehub/sbteclipse) to create Eclipseproject definitions.
-
-- sbteclipse requires sbt `0.11.3-2` or `0.12`
-
-Add `sbteclipse` to your plugin definition file. You can use either the global one at `~/.sbt/plugins/plugins.sbt` or the project-specific one at `$PROJECT_DIR/project/plugins.sbt`:
-
-	addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "2.1.2")
-
-I added it to my global config file.
-
-Then
-
-	sbt
-	> eclipse
-
-Finally in Eclipse use the Import Wizard to import Existing Projects into Workspacest
-
 ## FAQ ##
 
 ### Skip tests for assembly ###
