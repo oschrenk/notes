@@ -4,15 +4,32 @@
 
 	brew install sbt
 
-## Global Setup ##
+## Configuration ##
 
-### Multiple versions ###
+### Global settings ###
 
-You can have `~/.sbt-0.11/plugins/plugins.sbt` for SBT `0.11` and `~/.sbt-0.12/plugins/plugins.sbt` for SBT `0.12`. That's crucial when working with two or more versions of sbt.
+Settings that should be applied to all projects can go in `~/.sbt/0.13/global.sbt` (or any file in `~/.sbt/0.13` with a `.sbt` extension). Plugins that are defined globally in `~/.sbt/0.13/plugins/` are available to these settings.
 
-### .sbtrc ###
+### Global plugins ###
 
-Each line in `.sbtrc` and `~/.sbtrc` is evaluated as a command before the project is loaded.
+Any `.sbt` file in `~/.sbt/0.13/plugins/` is picked up. I prefer to create one file per plugin eg `~/.sbt/0.13/plugins/ensime.sbt`
+
+To add a plugin globally, create `~/.sbt/0.13/plugins/<id>.sbt` containing the dependency definitions eg
+
+```
+addSbtPlugin("org.ensime" % "sbt-ensime" % "1.12.5")
+```
+
+### Aliases and .sbtrc ###
+
+If you want to execute commands before sbt starts up and the project is loaded, you can create a `.sbtrc` file. This is useful to define aliases, for example:
+
+```
+alias c=compile
+alias tc=test:compile
+```
+
+First commands in `~/.sbtrc` (if exists) are evaluated and then commands in the local directory
 
 ## Project Setup ##
 
