@@ -163,6 +163,12 @@ Scala needs a lot of memory
 
 helped.
 
+## Appendix
+
+### Terminology
+
+* **base directory** is the directory containing the project. So if you created a project hello containing `hello/build.sbt`, `hello` is your base directory.
+
 ## Sources ##
 
 - [scala-sbt.org/docs](http://www.scala-sbt.org/0.12.4/docs/)
