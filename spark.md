@@ -14,6 +14,20 @@ SparkContext
 ClusterManager
 core
 shuffle
+executor
+
+partiton = chunk of rdd
+executor = core of a node, with some memory
+record
+
+static allocation:
+
+eqach spark application get;s an independet set of exeucutor vms
+
+
+stage
+
+
 
 
 ## Tuning Spark
