@@ -73,21 +73,9 @@ The `%%` is for cross-compiled libraries (which are compiled against multiple Sc
 
 The first start of sbt my take a while as plugins and dependencies are being downloaded or compiled.
 
-### Running the Scala Interpreter ###
-
-Start the `sbt` command prompt
-
-	sbt
-
-Start the Scala interpreter inside `sbt` (it will download some dependencies)
-
-	> console
-	...
-	scala >
-
-In order to quit the interpreter and get back to `sbt`, type `ctrl-d`.
-
 ## Plugins ##
+
+Useful plugins
 
 - [sbt-dependency-graph](https://github.com/jrudolph/sbt-dependency-graph) - display an ASCII graph of hierarchical direct and transitive dependencies
 - [sbt-dirty-money](https://github.com/sbt/sbt-dirty-money) - clean your Ivy2 cache. If you use publish-local to test plugins
