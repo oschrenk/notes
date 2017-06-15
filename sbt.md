@@ -33,43 +33,37 @@ First commands in `~/.sbtrc` (if exists) are evaluated and then commands in the 
 
 ## Project Setup ##
 
-sbt supports two types of project definitions, one using a `build.sbt` file in the project root, and the other is having a `Build.scala` in a `project` subdirectory.
+### Sources ###
 
-You can mix both but the settings in `.sbt` will take precedence.
+sbt uses the same directory structure as Maven for source files by default (all paths are relative to the base directory) and `project` directory to hold files specific to your build process.
 
-### Project Layout ###
-
-The preferred build style with `Build.scala` lives in `project` directory. In general sources should be organized like a maven project.
-
-	mkdir -p project src/{main,test}/{scala,resources}
-
-It is *recommended*  to specify the version of SBT that works best
-
-	echo "sbt.version=0.12.4" > project/build.properties
+```
+mkdir -p project src/{main,test}/{scala,resources}
+```
 
 ### build.sbt ###
 
-For most small projects just having a `build.sbt` should suffice.
+The build definition is described in `build.sbt` (actually any files named `*.sbt`) in the projects base directory.
+
+It is *recommended* to specify the version of SBT for a project
+
+```
+echo "sbt.version=0.13.15" > project/build.properties
+```
+
+It is *recommended* use a `build.sbt` file in the project root to specify your build and have `project/*.scala` to define helper objects.
+
+For most small projects just having the `build.sbt` should suffice.
 
 	touch build.sbt
 
 A very simple `build.sbt`
 
-	name := "FizzBuzz"
-
-	version := "1.0"
-
-	scalaVersion := "2.10.3"
-
-### project/Build.scala ###
-
-### Mixing build.sbt and project/Build.scala ###
-
-- In `.scala` files, you can add settings to `Build.settings` for sbt to find, and they are automatically build-scoped.
-- In `.scala` files, you can add settings to Project.settings for sbt to find, and they are automatically project-scoped.
-- Any Build object you write in a `.scala` file will have its contents imported and available to `.sbt` files.
-- The settings in `.sbt` files are appended to the settings in `.scala` files.
-- The settings in `.sbt` files are project-scoped unless you explicitly specify another scope.
+```
+name := "FizzBuzz"
+version := "1.0"
+scalaVersion := "2.12.2"
+```
 
 ## Dependency Managment ##
 
