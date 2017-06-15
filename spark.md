@@ -3,8 +3,18 @@
 ## Terminology:
 
 * **Application** A program built on Spark, consisting of a driver program and executors in the cluster.
-* **Driver** A process running the main() function of the application (and providing the SparkContext).
+* **Driver** A process running the main() function of the application and providing the SparkContext.
 * **Executor** A process launched for an application on a worker node.
+partition
+* **Slice** Synonym for partition
+RDD
+Job
+Task
+SparkContext
+ClusterManager
+core
+shuffle
+
 
 ## Tuning Spark
 
