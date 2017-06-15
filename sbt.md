@@ -31,7 +31,7 @@ alias tc=test:compile
 
 First commands in `~/.sbtrc` (if exists) are evaluated and then commands in the local directory
 
-## Project Setup ##
+## Project structure ##
 
 ### Sources ###
 
@@ -45,24 +45,27 @@ mkdir -p project src/{main,test}/{scala,resources}
 
 The build definition is described in `build.sbt` (actually any files named `*.sbt`) in the projects base directory.
 
+It is *recommended* to use a `build.sbt` file in the project root to specify your build and have `project/*.scala` to define helper objects.
+
+
+## Build definition
+
 It is *recommended* to specify the version of SBT for a project
 
 ```
 echo "sbt.version=0.13.15" > project/build.properties
 ```
 
-It is *recommended* use a `build.sbt` file in the project root to specify your build and have `project/*.scala` to define helper objects.
-
 For most small projects just having the `build.sbt` should suffice.
 
-	touch build.sbt
-
-A very simple `build.sbt`
+A very simple `build.sbt`:
 
 ```
-name := "FizzBuzz"
-version := "1.0"
-scalaVersion := "2.12.2"
+lazy val root = (project in file("."))
+  .settings(
+    name := "Hello",
+    scalaVersion := "2.12.1"
+  )
 ```
 
 ## Dependency Managment ##
