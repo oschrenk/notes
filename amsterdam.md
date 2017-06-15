@@ -171,6 +171,15 @@ The one place **not to go would be South-East (Zuid-Oost)**, which is considered
 
 > I would suggest **looking into Noord, Osdorp, Slotervaart, Bijlmer (in that order)**. They are suburbs, maximum 30-40 min away from the city centre and your best bet for affordable housing.
 
+## Things
+
+### Printing
+
+http://www.repros.nl/
+http://www.typique.nl/KUNST.html
+http://letterpressamsterdam.com/
+http://www.drukkerijjoachimsthal.nl/
+
 ## Sources ##
 
 - [Transportation](http://www.amsterdamtips.com/tips/transport-tickets.php)
