@@ -171,6 +171,18 @@ The one place **not to go would be South-East (Zuid-Oost)**, which is considered
 
 > I would suggest **looking into Noord, Osdorp, Slotervaart, Bijlmer (in that order)**. They are suburbs, maximum 30-40 min away from the city centre and your best bet for affordable housing.
 
+### Source
+
+https://kamernet.nl/
+http://www.funda.nl/
+https://www.pararius.com/english
+https://www.marktplaats.nl/z/huizen-en-kamers/huizen-te-huur.html?categoryId=2143
+http://housingspots.nl/
+
+Rent averages
+http://rentindicator.com/city-rent-averages/netherlands-rent-averages/amsterdam-rent-averages/?utm_source=AMS_Reddit&utm_campaign=Reddit_Amsterdam&utm_medium=text_link&utm_term=subreddit_Amsterdam
+
+
 ## Things
 
 ### Printing
