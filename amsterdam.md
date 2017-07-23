@@ -173,11 +173,23 @@ The one place **not to go would be South-East (Zuid-Oost)**, which is considered
 
 ### Source
 
+*Aggregators*
+
 https://kamernet.nl/
 http://www.funda.nl/
 https://www.pararius.com/english
 https://www.marktplaats.nl/z/huizen-en-kamers/huizen-te-huur.html?categoryId=2143
 http://housingspots.nl/
+
+*Agencies*
+
+http://valeriusrentals.nl/
+http://www.postvastgoed.com/
+https://www.vandesteege.nl
+https://www.degratismakelaar.nl/
+
+
+*Overview*
 
 Rent averages
 http://rentindicator.com/city-rent-averages/netherlands-rent-averages/amsterdam-rent-averages/?utm_source=AMS_Reddit&utm_campaign=Reddit_Amsterdam&utm_medium=text_link&utm_term=subreddit_Amsterdam
