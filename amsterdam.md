@@ -181,6 +181,15 @@ https://www.pararius.com/english
 https://www.marktplaats.nl/z/huizen-en-kamers/huizen-te-huur.html?categoryId=2143
 http://housingspots.nl/
 
+
+https://www.stadgenoot.nl/huren/aanbod/?dt=wonen
+https://www.eigenhaard.nl/te-huur-en-te-koop/wonen
+
+
+Free sector
+
+https://www.rooftrack.nl/
+
 *Agencies*
 
 http://valeriusrentals.nl/
@@ -188,6 +197,11 @@ http://www.postvastgoed.com/
 https://www.vandesteege.nl
 https://www.degratismakelaar.nl/
 http://www.brinkborgh.nl/huurwoningen
+
+*Social*
+
+??? HOw do I qualify
+https://www.woningnetregioamsterdam.nl/
 
 
 *Overview*
