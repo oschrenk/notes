@@ -81,3 +81,36 @@ You might want to cancel and check your internet connectivity
 npm install -g react-native-cli
 ```
 
+### Error: ENOENT: no such file or directory, uv_chdir
+
+You don't have an `ios` directory.
+
+That took some googling. My project didn't have an ios (or android directory).
+I still don't know how that works. There seems to be two different ways of creating
+an initial project but I don't see how you migrate from an expo app to a native app.
+
+
+```
+react-native upgrade
+```
+
+Beware this created all the right files, but messed up my `app.json`
+
+### Error: Missing app.json. See https://docs.expo.io/
+
+Well. The file is actually there, so wth.
+
+The file has the wrong structure. See https://github.com/expo/expo/issues/337#issuecomment-313206465
+
+
+> looks like that was generated with react-native init and not create-react-native-app,
+> because it doesn't have an "expo" section. we should provide a better error message in this case.
+> app.json in a project created with create-react-native-app looks like this:
+```
+{
+  "expo": {
+    "sdkVersion": "18.0.0"
+  }
+}
+```
+
