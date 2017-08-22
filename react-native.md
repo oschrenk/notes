@@ -45,6 +45,11 @@ npm run ios
 $ and then press i
 ```
 
+## Resources
+
+[Blog, React Native Training](https://medium.com/react-native-training)
+
+
 ## FAQ
 
 ### ERROR: npm 5 is not supported yet
@@ -69,3 +74,10 @@ For me that's not working. Don't know why yet. Possibly because I'm in an cafe t
 This is taking much longer than it should.
 You might want to cancel and check your internet connectivity
 ```
+
+### fish: Unknown command 'react-native'
+
+```
+npm install -g react-native-cli
+```
+
