@@ -6,14 +6,21 @@
 
 ## Usage ##
 
-Start the database. If you used the `homebrew` installation and didn't create launch agents you have to start _mongoDB_ manually. Open a terminal and run
+To have launchd start mongodb now and restart at login:
 
-	mongod run --config /usr/local/etc/mongod.conf
+```
+brew services start mongodb
+```
+
+Or, if you don't want/need a background service you can just run:
+
+```
+mongod --config /usr/local/etc/mongod.conf
+```
 
 For just trying out some stuff you can use the mongo shell
 
 	mongo
-	>
 
 You can directly connect to a database by issuing
 
