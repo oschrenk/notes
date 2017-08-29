@@ -187,6 +187,60 @@ that this is the case, like I did, how you even notice.
 
 They strongly recommend to use `reate-react-native-app`, or what they call a CRNA app. This makes use of Expo client, and app that is used as a platform fr your app. If you want other people to use your app, you have to tell them to install the Expo app and import your app. Yeah, that's not going to happen. While maybe nice for quick prototyping, you might program yourself intoa corner by relying on Expo imports.
 
+
+- **Use Expo**: You actually can open a CRNA project with the Expo XDE app if you want all the features of Expo including push notifications and IPA / APK files for the App Store / Play Store.
+- **Eject to ExpoKit**: ExpoKit is a native library that includes React Native and the Expo APIs. This path creates Xcode and Android Studio projects with ExpoKit so that most Expo APIs keep working if you were using them before. You then build IPA / APK files the way you would as any other native app.
+- **Eject to bare React Native**: This path gives you a plain React Native project with separate Xcode and Android Studio projects. All modules that come with React Native will work but Expo APIs won't work (use ExpoKit above for that) because this is bare React Native.
+
+#### Eject to ExpoKit
+
+Requires an Expo account
+
+Using ExpoKit will allow you to continue using Expo APIs along with building your own native code, but it requires an Expo account and use of Expo developer tools.
+
+https://docs.expo.io/versions/latest/guides/building-standalone-apps.html
+
+> Warning: Standalone apps are currently in beta!
+
+Note: We currently don’t support Apple’s two-factor authentication, so you’ll have to temporarily turn off 2FA on your Apple ID account to use exp build. The GitHub issue for 2FA support is #160
+
+https://expo.canny.io/feature-requests/p/allow-to-build-ios-binaries-when-using-apples-2fa
+
+Can't use Epo if you applied for a newer Apple Developer account as that one forces 2fa.
+
+And even if that works, you need to supply them with AppleID and password. Yeah...... not doing that.
+
+And
+
+> Expo takes your code and builds it on their servers and then serves it to you.
+- https://news.ycombinator.com/item?id=13860963
+
+#### Eject to bare React Native
+
+Make sure that it doesn't contain `ios` or `android` dir
+
+```
+npm run eject
+```
+
+And answer the questions.
+
+
+
+### Code Signing Error
+
+```
+Code Signing Error: Signing for "Arkham" requires a development team. Select a development team in the project editor.
+Code Signing Error: Code signing is required for product type 'Application' in SDK 'iOS 11.0'
+```
+
+1. Ad your AppleID to active acounts in your Xcode
+2. In the project editor
+a) General > Signing. Change the team
+b)  Build Settings > Signing. Change identity and Development Team
+3. On your phone. Under General > Device Managment. Trust your phone
+
+
 ## Toolkits
 
 [Airbnb, Lottie](https://airbnb.design/lottie/)  renders After Effects animations in real time
