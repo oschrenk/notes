@@ -91,7 +91,6 @@ That took some googling. My project didn't have an ios (or android directory).
 I still don't know how that works. There seems to be two different ways of creating
 an initial project but I don't see how you migrate from an expo app to a native app.
 
-
 ```
 react-native upgrade
 ```
@@ -165,14 +164,11 @@ According to https://stackoverflow.com/a/42418038 it needs very different fields
 
 So add `name` (in TitleCase) and `displayName` to the `app.json`
 
-
 ### error: bundling failed: "Cannot find entry file index.ios.js in any of the roots
 
 Now it compiles  but it doesn't run. This is so tiring.
 
-Yeah. Upgrading react seems to break things.
-
-https://stackoverflow.com/questions/45594935/expo-io-module-jstimersexecution-is-not-a-registered-callable-module
+Yeah. Upgrading react seems to [break](https://stackoverflow.com/questions/45594935/expo-io-module-jstimersexecution-is-not-a-registered-callable-module) things.
 
 When I upgraded to a newer react version to solve other issues, I upgraded to a react version not compatible
 to expo, so upgrade that
@@ -191,3 +187,6 @@ that this is the case, like I did, how you even notice.
 
 They strongly recommend to use `reate-react-native-app`, or what they call a CRNA app. This makes use of Expo client, and app that is used as a platform fr your app. If you want other people to use your app, you have to tell them to install the Expo app and import your app. Yeah, that's not going to happen. While maybe nice for quick prototyping, you might program yourself intoa corner by relying on Expo imports.
 
+## Toolkits
+
+[Airbnb, Lottie](https://airbnb.design/lottie/)  renders After Effects animations in real time
