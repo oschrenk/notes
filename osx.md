@@ -6,6 +6,14 @@
 
 * **Consistency**. `cmd+,` opens the settings of an application.`cmd+q` closes the application. `cmd+w` closes a window and only the window (!) - closing the last window doesn't close the application.
 
+## Applications
+
+To find the bundle identifier
+
+```
+mdls -name kMDItemCFBundleIdentifier -r /Applications/VOX.app
+```
+
 ## 10.8. Mountain Lion ##
 
 ### Noteworthy ###
