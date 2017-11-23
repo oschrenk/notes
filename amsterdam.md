@@ -175,6 +175,7 @@ The one place **not to go would be South-East (Zuid-Oost)**, which is considered
 
 *Aggregators*
 
+https://esteon.com
 https://kamernet.nl/
 http://www.funda.nl/
 https://www.pararius.com/english
@@ -192,6 +193,7 @@ https://www.rooftrack.nl/
 
 *Agencies*
 
+https://www.fortemakelaars.nl/aanbod/woningaanbod/
 http://valeriusrentals.nl/
 http://www.postvastgoed.com/
 https://www.vandesteege.nl
