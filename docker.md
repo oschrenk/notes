@@ -2,11 +2,19 @@
 
 You can think about containers as a process in a box. The box contains everything the process might need, so it has the file system, system libraries, shell and such, but by default none of it is started or run.
 
+**Run `hello world` container**
+
+```
+docker run hello-world
+```
+
+**Run local Dockerfile**
+
+## Installation
+
+
 ```
 brew cask install docker
-
-# run hello world containmer
-docker run hello-world
 ```
 
 ## Terminology
