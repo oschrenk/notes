@@ -1,5 +1,41 @@
 # Ansible
 
+## Use locally
+
+Execute adhoc command
+
+```
+# all
+# -i "localhost"
+#   short for `--inventory` specify comma seperated hosts
+# -c local
+    short for `--connection` specify connection type
+# -m shell
+    short for `--module-name` specify module to execute
+# -a 'echo hello world'
+    short for `--args` specify module arguments
+ansible all -i "localhost," -c local -m shell -a 'echo hello world'
+```
+
+But nobody wants or does that
+
+```
+# create a playbook
+touch helloworld.yml
+
+# content
+---
+- hosts: all
+  tasks:
+    - shell: echo "hello world"
+```
+
+And execute with
+
+```
+ansible-playbook -i "localhost," -c local helloworld.yml
+```
+
 * **Role** A role is a collection of tasks and templates. For example you can have a role that installs nginx.
 * **Inventory** An inventory is a list of hosts, eventually assembled into groups, on which you will run ansible playbooks
 * **Playbook** The playbook is the pivot between and inventory and roles. This is where you basically tell Ansible: _please install roles foo, bar and baz on machines alice, bob and charlie_.
@@ -34,3 +70,5 @@ ansible-foobar/
 
 https://github.com/enginyoyen/ansible-best-practises
 http://docs.ansible.com/ansible/latest/playbooks_best_practices.html
+
+kkk
