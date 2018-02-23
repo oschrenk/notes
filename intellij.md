@@ -1,7 +1,5 @@
 # IntelliJ IDEA #
 
-While I thought that Eclipse has some weird default settings, IntelliJ really takes the cake. The out-of-box experience is so bad that I disregarded the IDE for several years, trying it every other year. Which is a shame, as it is quite a good piece of software but the defaults especially the keyboard shortcuts are just awful.
-
 - Disallow placement of caret after end of line. `IDE Settings > Editor > Virtual Space > Allow placement of caret after end of line`
 - Allow selection of parts of a camel cased word via keyboard `IDE Settings > Editor > Smart Keys > Use "CamelHumps" words`
 - Disallow selection of parts of a camel cased word when clicking on it `IDE Settings > Editor > Mouse > Honor "CamelHumps" word settings when selecting using double click`
