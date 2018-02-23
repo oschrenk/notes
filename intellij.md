@@ -1,5 +1,7 @@
 # IntelliJ IDEA #
 
+Show "Type info" shortcut: Ctrl+Shift+p
+
 - Disallow placement of caret after end of line. `IDE Settings > Editor > Virtual Space > Allow placement of caret after end of line`
 - Allow selection of parts of a camel cased word via keyboard `IDE Settings > Editor > Smart Keys > Use "CamelHumps" words`
 - Disallow selection of parts of a camel cased word when clicking on it `IDE Settings > Editor > Mouse > Honor "CamelHumps" word settings when selecting using double click`
