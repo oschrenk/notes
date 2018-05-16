@@ -25,11 +25,24 @@ aws ec2 describe-instances --instance-id i-0332d9bea36886653 --output text --que
 
 ### Create Volume
 
+* 512 gb
+* `gp2` for general purpose ssd
+
 ```
-# 512 gb
-# gp2 for general purpose ssd
-aws ec2 create-volume --availability-zone eu-west-1c --size 512 --volume-type gp2 | jq -r .VolumeId
+aws ec2 create-volume --availability-zone eu-west-1c --size 512 --volume-type gp2 --tag-specifications 'ResourceType=volume,Tags=[{Key=created-by,Value=oschrenk},{Key=purpose,Value=storage}]' | jq -r .VolumeId
 vol-05c06d9bdf6c92a8c
+```
+
+### List volumes with tag
+
+```
+aws ec2 describe-volumes --filters Name=tag-key,Values="created-by" Name=tag-value,Values="oschrenk" | jq -r .Volumes[].VolumeId
+```
+
+### Delete volume
+
+```
+aws ec2 delete-volume --volume-id vol-07efd77a8f712eff4
 ```
 
 ### Attach volume to instance
@@ -44,15 +57,35 @@ Connect to the instance via ssh
 ssh ec2-user@...
 ```
 
+list the available disks
+
 ```
-sudo mkfs.ext4 /dev/sdf
-sudo mount /dev/sdf /mnt
+lsblk
 ```
 
+Check if the volume has any data using the following command.
 
+```
+sudo file -s /dev/xvdf
+```
+If the above command output shows `/dev/xvdf: data`, it means your volume is empty.
 
+Format drive
+
+```
+sudo mkfs -t ext4 /dev/xvdf
+```
+
+Mount
+
+```
+sudo mkdir /mnt/storage
+sudo mount /dev/xvdf /mnt/storage
+sudo chmod u+rw /mnt/storage/
+```
 
 ## Instances
+
 ### Choose the Template
 
 You can use [describe-instances](https://docs.aws.amazon.com/cli/latest/reference/ec2/describe-instances.html)  to list and filter image types
@@ -76,6 +109,20 @@ aws ec2 describe-images --owners self amazon \
 
 [Amazon EC2 Instance Types Overview](https://aws.amazon.com/ec2/instance-types/)
 
+### List instances
+
+*by key*
+
+```
+aws ec2 describe-instances --filters "Name=key-name,Values=oschrenk" --query="Reservations[].Instances[].InstanceId" | jq -r .[]
+```
+
+*by tag*
+
+```
+aws ec2 describe-instances --filters Name=tag-key,Values="created-by" Name=tag-value,Values="oschrenk" --query="Reservations[].Instances[].InstanceId" | jq -r .[]
+```
+
 ### Choose the Instance Type
 
 ???
@@ -95,7 +142,7 @@ aws ec2 run-instances --image-id ami-3bfab942 --count 1 --instance-type x1e.2xla
 i-0332d9bea36886653
 ```
 
-### Comnnect to an instance
+### Connect to an instance
 
 Get the public dns name
 
@@ -109,7 +156,6 @@ aws ec2 describe-instances \
 Connect via ssh
 
 ### List all instances I created
-
 
 
 ## Security Groups
