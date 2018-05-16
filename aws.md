@@ -3,7 +3,7 @@
 [AWS Service Health Dashboard](http://status.aws.amazon.com/)
 
 ## I am
-To later filter for things created by you, this is your owner id. Well….. un fortunately that is some sort of group not you yourself. Ugh.
+To later filter for things created by you, this is your owner id. Well….. un fortunately that is some sort of group not yourself. Ugh.
 
 ```
 aws iam get-user | jq -r .User.Arn | cut -d ':' -f 5
