@@ -95,9 +95,10 @@ You can use [describe-instances](https://docs.aws.amazon.com/cli/latest/referenc
 aws ec2 describe-images --owners self amazon --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=virtualization-type,Values=hvm" | jq '.Images[] | select(.Platform  != "windows")'
 ```
 
+Too much useless output. Need to find better things.
+
 ```
 # latest amazon linux (not sure yet whjat the output means)
-# giving up for now as the one being offered in the launcher  is ami-3bfab942
 aws ec2 describe-images --owners self amazon \
 --filters "Name=root-device-type,Values=ebs" "Name=architecture,Values=x86_64" "Name=virtualization-type,Values=hvm" "Name=description,Values=Amazon Linux AMI*" \
 --query 'Images[*].[CreationDate,ImageId, Description]' --output text | grep -v test | grep -v Minimal | sort -r | head -4
@@ -107,7 +108,8 @@ aws ec2 describe-images --owners self amazon \
 2018-03-07T07:04:49.000Z        ami-3bfab942    Amazon Linux AMI 2017.09.1.20180307 x86_64 HVM GP2
 ```
 
-[Amazon EC2 Instance Types Overview](https://aws.amazon.com/ec2/instance-types/)
+Also not that useful. Giving up for now as the one being offered in the launcher is `ami-3bfab942` but what qualifies that one?
+
 
 ### List instances
 
@@ -125,21 +127,66 @@ aws ec2 describe-instances --filters Name=tag-key,Values="created-by" Name=tag-v
 
 ### Choose the Instance Type
 
-???
+[Amazon EC2 Instance Types Overview](https://aws.amazon.com/ec2/instance-types/)
+
+* *T2* instances provide a baseline level of CPU performance with the ability to burst above the baseline.
+
+| Model | vCPU | CPU Credits / hour | Mem (GiB) |  Storage |
+| --- | --- | --- | --- | --- |
+| t2.nano | 1 | 3 | 0.5 | EBS-Only |
+| t2.micro | 1 | 6 | 1 | EBS-Only |
+| t2.small | 1 | 12 | 2 | EBS-Only |
+| t2.medium | 2 | 24 | 4 | EBS-Only |
+| t2.large | 2 | 36 | 8 | EBS-Only |
+| t2.xlarge | 4 | 54 | 16 | EBS-Only |
+| t2.2xlarge | 8 | 81 | 32 | EBS-Only |
+
+*M5* instances are the latest generation of General Purpose Instances.
+
+| Model | vCPU | Mem (GiB) | SSD Storage (GB) | Dedicated EBS Bandwidth (Mbps) |
+| --- | --- | --- | --- | --- |
+| m5.large | 2 | 8 | EBS-only | Up to 2,120  |
+| m5.xlarge | 4 | 16 | EBS-only | Up to 2,120  |
+| m5.2xlarge | 8 | 32 | EBS-only | Up to 2,120  |
+| m5.4xlarge | 16 | 64 | EBS-only | 2,120  |
+| m5.12xlarge | 48 | 192 | EBS-only | 5,000  |
+| m5.24xlarge  | 96  | 384  | EBS-only  | 10,000  |
+
+*M4* M4 instances provide a balance of compute, memory, and network resources, and it is a good choice for many applications.
+
+| Model | vCPU | Mem (GiB) | SSD Storage (GB) | Dedicated EBS Bandwidth (Mbps) |
+| --- | --- | --- | --- | --- |
+| m4.large | 2 | 8 | EBS-only | 450  |
+| m4.xlarge | 4 | 16 | EBS-only | 750  |
+| m4.2xlarge | 8 | 32 | EBS-only | 1,000  |
+| m4.4xlarge | 16 | 64 | EBS-only | 2,000  |
+| m4.10xlarge | 40 | 160 | EBS-only | 4,000  |
+| m4.16xlarge  | 64  | 256  | EBS-only  | 10,000  |
 
 ### Create a KeyPair
 
-???
+Go to `https://eu-west-1.console.aws.amazon.com/ec2/v2/home?region=eu-west-1#KeyPairs` and "Create Key Pai". The keyfile is autoamticall being downloaded.
 
 ### Choose security group
 
 ### Choose subnet
 
 ### Create an instance
+
+https://docs.aws.amazon.com/cli/latest/reference/ec2/run-instances.html
+
 ```
 # I like to only return the instance id
 aws ec2 run-instances --image-id ami-3bfab942 --count 1 --instance-type x1e.2xlarge --key-name oschrenk | jq -r .Instances[].InstanceId
 i-0332d9bea36886653
+```
+
+Medium instance already attached to my "public ssh" security group tagged with a name
+
+
+```
+aws ec2 run-instances --image-id ami-3bfab942 --count 1 --instance-type t2.medium --key-name oschrenk --security-groups public-ssh --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=PrettyName},{Key=owner,Value=oschrenk}]' | jq -r .Instances[].InstanceId
+
 ```
 
 ### Connect to an instance
@@ -154,8 +201,6 @@ aws ec2 describe-instances \
 ```
 
 Connect via ssh
-
-### List all instances I created
 
 
 ## Security Groups
@@ -298,4 +343,3 @@ See Virtual Private Cloud
 
 
 ### Billing
-> There is no cost for any instance usage while an instance is not in the running state.
