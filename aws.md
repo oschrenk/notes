@@ -1,5 +1,7 @@
 # AWS
 
+Ubuntu Image selector: https://cloud-images.ubuntu.com/locator/ec2/
+
 [AWS Service Health Dashboard](http://status.aws.amazon.com/)
 
 ## I am
