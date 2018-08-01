@@ -107,6 +107,11 @@ Garden of Life. 300mg Magnesium Oxide. 75 mg Magnesium Glycinate.
 Garden of Life. 20 Iron Sulfate.
 
 ## Vitamin B12
+No steadfast rules exist for taking vitamin B-12. For this reason, take the vitamin at the time that’s most convenient for you
+
+You’ll typically see two types of vitamin B12 supplements on the market:  methylcobalamin and cyanocobalamin. (Another type, hydroxycobalamin, is also available, but much less common on the market). Don’t let these names confuse you … just remember to be sure you choose methylcobalamin above all other types. You’ll see this listed on the nutrition panel of the supplement on the back; it may also read “methyl” instead of methycobalamin.
+https://www.onegreenplanet.org/natural-health/the-top-things-to-look-for-when-choosing-a-vitamin-b12-supplement/
+
 ## Selenium
 ## Vitamin D
 ## Tryptophan
