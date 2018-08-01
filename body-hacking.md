@@ -128,6 +128,8 @@ Tips for making tryptophan work for you:
 * Take all the above with fruit juice
 * Make sure you take it on an empty stomach.
 
+https://draxe.com/tryptophan/
+
 ## Melatonin
 
 Tryptophan > Serotonin > Melatonin
