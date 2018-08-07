@@ -341,7 +341,11 @@ See Elastic Block Storage
 *VPC*
 See Virtual Private Cloud
 
+## IAM
 
+I want a machine instance to have selective access to a single docker image hosted by ECS.
 
+I need to to know the region, the account, the repository name.
 
-### Billing
+* where do I find the account number
+* repository is <group>/<project>
