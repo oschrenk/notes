@@ -79,6 +79,17 @@ If you have set up your keyboard to don't use dead keys, you can use OS C 10.7 f
 
 - `Command + Shift + G`. Change folder in (save) dialogs
 
+### Change to random mac address
+
+```
+# random hex address
+openssl rand -hex 6 | sed 's/\(..\)/\1:/g; s/.$//'
+
+# change the address
+sudo ifconfig en1 ether aa:bb:cc:dd:ee:ff
+```
+
+
 ### List known WLAN ###
 
 	defaults read /Library/Preferences/SystemConfiguration/com.apple.airport.preferences RememberedNetworks | egrep -o '(SSID_STR|_timeStamp).+' | sed 's/^.*= \(.*\);$/\1/' | sed 's/^"\(.*\)"$/\1/' | sed 's/\([0-9]\{4\}-..-..\).*/\1/'
