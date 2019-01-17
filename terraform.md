@@ -53,6 +53,53 @@ But let's step up our game. Let's name the machine.
 Change the resource
 
 
+## Workflow
+
+1. load desired configuration
+2. load the .tfstate file
+3. calculate diff between current and desired state
+4. use API calls to apply changes to match desired state
+5. update state file
+
+##
+
+one recommendations was to have separate accounts for each environment
+
+always use remote state. it's an artifact state doesn;t belong thre
+
+## Glossary
+
+plan is the diff between what exists in your infrastructure and what you want to apply
+
+workspace
+module:
+a collection of resources
+Blackbox of infrastructure with inout and output variables eg. Java app. Inout: Path to app, output path to loadbalancer.le
+variable: dynaimic configured inouts
+  can be typed!!!
+  named
+  description
+  defaults
+resource configuration for a specific entity (instance, load balancer, ...)
+  they take inouts and can produce outputs. they may interpolate vsriables
+
+  ```
+  resource "<type>" "<id>" {
+    ... = "..."  // inputs
+
+  }
+  ```
+output = take created outoputs and use them somewhere
+data =
+data elements allow you to pull information form your provider and pull
+values
+
+hcl hashicorp configuration  languagek
+.tf
+.tfvars
+.tfstate -
+  state file Terraform oeprates from this file as the single source of truth
+
 ## Resources
 
 https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180
