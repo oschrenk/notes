@@ -5,3 +5,8 @@ See whishlist on https://www.darkswordminiatures.com
 ## Paints
 
 Great sets: https://scale75.com/en/65-scalecolor-range
+
+## Artists
+
+https://www.patreon.com/themethofcookingart
+https://www.patreon.com/sergiocalvominiatures
