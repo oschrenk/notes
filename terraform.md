@@ -1,20 +1,23 @@
 # Terraform
 
+Terraform can create infrastructure across a wide variety of platforms, or what it calls providers, including AWS, Azure, Google Cloud, DigitalOcean, and many others.
+
 ```
 brew install terraform
+
+# or via tfenv
+brew install tfenv
+tfenv install ...
 ```
 
-## Requirements
-
-AWS account with access key
-
-## Basics
+## Syntax
 
 > Terraform code is written in a language called HCL in files with the extension “.tf”. It is a declarative language, so your goal is to describe the infrastructure you want, and Terraform will figure out how to create it.
 
-> Terraform can create infrastructure across a wide variety of platforms, or what it calls providers, including AWS, Azure, Google Cloud, DigitalOcean, and many others.
 
-## Deploy a single server
+## Usage
+
+### Example: Deploy a server
 
 Create a file called `main.tf` with this content:
 
@@ -24,7 +27,7 @@ provider "aws" {
 }
 ```
 
-This tells Terraform that you are going to be using the AWS provider and that you wish to deploy your infrastructure in the “eu-west-1” region
+This tells Terraform that you are going to be using the AWS provider and that you wish to deploy your infrastructure in the `eu-west-1` region
 
 Add
 
@@ -61,44 +64,16 @@ Change the resource
 4. use API calls to apply changes to match desired state
 5. update state file
 
-##
+## Good practices
 
-one recommendations was to have separate accounts for each environment
-
-always use remote state. it's an artifact state doesn;t belong thre
+* always use remote state.
 
 ## Glossary
 
-plan is the diff between what exists in your infrastructure and what you want to apply
-
-workspace
-module:
-a collection of resources
-Blackbox of infrastructure with inout and output variables eg. Java app. Inout: Path to app, output path to loadbalancer.le
-variable: dynaimic configured inouts
-  can be typed!!!
-  named
-  description
-  defaults
-resource configuration for a specific entity (instance, load balancer, ...)
-  they take inouts and can produce outputs. they may interpolate vsriables
-
-  ```
-  resource "<type>" "<id>" {
-    ... = "..."  // inputs
-
-  }
-  ```
-output = take created outoputs and use them somewhere
-data =
-data elements allow you to pull information form your provider and pull
-values
-
-hcl hashicorp configuration  languagek
-.tf
-.tfvars
-.tfstate -
-  state file Terraform oeprates from this file as the single source of truth
+* `plan`. is the diff between what exists in your infrastructure and what you want to apply
+* `workspace`
+* `module`: A collection of resources. Blackbox of infrastructure with input and output variables
+* `variable`: Dynamic configured input. Can be typed. Supports default values.
 
 ## Resources
 
