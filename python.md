@@ -55,3 +55,14 @@ printer_control = struct.pack("<13B",
 ```
 
 Little Endian encoded 13 unsigned chars
+
+
+## pip
+
+### Install package from local
+
+```
+git clone git@gitlab.com:oschrenk/doc-fzf.git
+pip3 install -r requirements.txt
+pip3 install -e .
+```
