@@ -12,12 +12,6 @@ A streaming platform has three key capabilities:
 * Queue: a pool of consumers may read from a server and each record goes to one of them
 * Publish-Subscribe: the record is broadcast to all consumers
 
-A Queue le’s you divide data over multiple consumers, letting you scale. Unfortunately a queue is not multi subscriber, once one process reads the data it’s gone.
-
-Publish-subscribe allows you broadcast data to multiple processes, but has no way of scaling processing since every message goes to every subscriber.
-
-The advantage of Kafka’s model is that every topic has both these properties—it can scale processing and is also multi-subscriber—there is no need to choose one or the other.
-
 *Concepts*:
 * Kafka is run as a cluster on one or more servers that can span multiple datacenters.
 * The Kafka cluster stores streams of/records/in categories called/topics/.
