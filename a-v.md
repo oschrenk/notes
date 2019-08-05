@@ -13,6 +13,13 @@
 
     ffmpeg -i joined.wav -acodec alac out.m4a
 
+`aif` to `mp3`
+
+```
+# qscale range is 0-9 where a lower value is a higher quality
+ffmpeg -i input.aifc -codec:a libmp3lame -qscale:a 0 output.mp3
+```
+
 ### Splitting Mp3 ###
 
 Install via
