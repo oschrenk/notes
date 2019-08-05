@@ -75,6 +75,33 @@ Change the resource
 * `module`: A collection of resources. Blackbox of infrastructure with input and output variables
 * `variable`: Dynamic configured input. Can be typed. Supports default values.
 
+## FAQ
+
+### Error: Error locking state: Error acquiring the state lock: ConditionalCheckFailedException: The conditional request failed
+
+It can happen for various reasons that a process could not finish and kept the lock file eg. having bad wifi connection
+
+```
+Error: Error locking state: Error acquiring the state lock: ConditionalCheckFailedException: The conditional request failed
+        status code: 400, request id: F9TE3PDI83CDTAVNVP54Q35BMVVV4KQNSO5AEMVJF66Q9ASUAAJG
+Lock Info:
+  ID:        302f9199-fb46-62f2-59b8-df17f579e0d6
+  Path:      <<bucket>>/terraform/terraform.tfstate
+  Operation: OperationTypeApply
+  Who:       schrenko@ELSAMSM-161721.science.regn.net
+  Version:   0.11.14
+  Created:   2019-06-18 13:21:11.110219 +0000 UTC
+  Info:
+
+
+Terraform acquires a state lock to protect the state from being written
+by multiple users at the same time. Please resolve the issue above and try
+again. For most commands, you can disable locking with the "-lock=false"
+flag, but this is not recommended.
+```
+
+Run `terraform force-unlock <lock-id>` and confirm with `yes` if you are sure
+
 ## Resources
 
 https://blog.gruntwork.io/an-introduction-to-terraform-f17df9c6d180
