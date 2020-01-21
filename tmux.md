@@ -62,3 +62,7 @@ Or simply from a shell:
 ```shell
 $ tmux source-file ~/.tmux.conf
 ```
+
+## Resources
+
+https://thevaluable.dev/tmux-boost-productivity-terminal/
