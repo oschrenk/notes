@@ -142,11 +142,20 @@ You select attachments to keep with a comma separated list
     mkvmerge -o output.mkv input.mkv --attachments 3,4      # keep attachment 3 and 4
     mkvmerge -o output.mkv input.mkv --no-attachments       # remove all attachments
 
-### Split mp4 movie
+### Split mp4
 
-First `--ss` quick seeks, second one mvoes accurately.
 
-    ffmpeg -ss 01:29:00 -i video.mp4 -ss 00:00:40 -t 00:0l:21 -c copy clip.mp4
+```
+ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
+```
+* `-i` input file
+* `-ss` Used with -i, this seeks in the input file (input.mp4) to position.
+* `00:01:00`: This is the time your trimmed video will start with.
+
+* `-to` This specifies duration from start (00:01:40) to end (00:02:12).
+* `00:02:00` This is the time your trimmed video will end with.
+* `-c copy` This is an option to trim via stream copy. (NB: Very fast)
+```
 
 ## Create gif
 
