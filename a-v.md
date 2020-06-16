@@ -83,7 +83,7 @@ Output will be something like:
 
 Extract tracks with `mkvextract`
 
-	mkvextract tracks MovieFile.mkv 1:thesubtitles.srt 2:theaudio.mp3 3:thevideo.mp4
+	mkvextract tracks MovieFile.mkv 1:thesubtitles.srt 2:theaudio.mp3 3:[thevideo mp4](thevideo.mp4)
 
 Or just the audio track
 
@@ -99,17 +99,15 @@ Usage:
 
 	ffmpeg -i input.mp4 -vn -c:a copy output.m4a
 
-## Video ##
+## Video
 
-### Split Quicktime movies ###
+### Split mov
 
-[http://www.3am.pair.com/QTCoffee.html](http://www.3am.pair.com/QTCoffee.html)
+```
+splitmovie video.mov -splitAt 1:06.5 -splitAt 1:32.02 -self-contained -o movie.mov
+```
 
-To split a movie
-
-	splitmovie video.mov -splitAt 1:06.5 -splitAt 1:32.02 -self-contained -o movie.mov
-
-To join videos
+### Join mov
 
 	catmovie movie1.mov movie2.mov movie3.mov ‑self‑contained ‑o bigmovie.mov
 
